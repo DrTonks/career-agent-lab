@@ -1,0 +1,40 @@
+{
+  "name": "career-agent-lab",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Career expert agents and a controlled skills baseline",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit",
+    "test": "npm run build --silent && node --test --test-isolation=none dist/tests/*.test.js",
+    "cli": "npm run build --silent && node dist/src/cli.js",
+    "synthetic": "npm run build --silent && node dist/scripts/synthetic.js",
+    "benchmark": "npm run build --silent && node dist/scripts/benchmark.js",
+    "compare": "npm run build --silent && node dist/scripts/compare.js",
+    "compare:analyze": "npm run build --silent && node dist/scripts/compare-analyze.js",
+    "analyze": "npm run build --silent && node dist/scripts/analyze.js",
+    "review:blind": "npm run build --silent && node dist/scripts/blind-review.js",
+    "archive:experiment": "npm run build --silent && node dist/scripts/archive-experiment.js",
+    "public:check": "npm run build --silent && node dist/scripts/check-public.js",
+    "format": "prettier --write src scripts tests package.json tsconfig.json",
+    "format:check": "prettier --check src scripts tests package.json tsconfig.json",
+    "check": "npm run typecheck && npm test && npm run build"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "4.3.1",
+    "@langchain/core": "1.2.17",
+    "@langchain/langgraph": "1.5.0",
+    "@langchain/langgraph-checkpoint": "1.2.0",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "prettier": "3.9.10",
+    "tsx": "^4.20.0",
+    "typescript": "7.0.2"
+  }
+}
