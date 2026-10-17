@@ -1,0 +1,821 @@
+{
+  "schemaVersion": 1,
+  "scope": "One frozen development batch; one system repeat; one AI conversation reviewer.",
+  "model": "deepseek-flash",
+  "scale": {
+    "min": 0,
+    "max": 4,
+    "nullMeaning": "unassessed or not applicable"
+  },
+  "sample": {
+    "scenarios": 24,
+    "conversations": 48,
+    "plannedTurns": 102,
+    "observedTurns": 101,
+    "executedUnits": 47,
+    "blockedUnits": 1,
+    "independentHumanRatings": 0
+  },
+  "dimensionOrder": [
+    "factualSupport",
+    "hardConstraints",
+    "completeness",
+    "actionability",
+    "consistency"
+  ],
+  "pairedQuality": [
+    {
+      "dimension": "factualSupport",
+      "pairs": 14,
+      "plannedPairs": 24,
+      "multiMinusSkills": 0.21428571428571427,
+      "percentile95": [
+        -0.14285714285714285,
+        0.5714285714285714
+      ],
+      "multiMean": 3.2142857142857144,
+      "skillsMean": 3,
+      "multiHigher": 5,
+      "skillsHigher": 2,
+      "tied": 7
+    },
+    {
+      "dimension": "hardConstraints",
+      "pairs": 14,
+      "plannedPairs": 24,
+      "multiMinusSkills": 0.07142857142857142,
+      "percentile95": [
+        0,
+        0.21428571428571427
+      ],
+      "multiMean": 3.9285714285714284,
+      "skillsMean": 3.857142857142857,
+      "multiHigher": 1,
+      "skillsHigher": 0,
+      "tied": 13
+    },
+    {
+      "dimension": "completeness",
+      "pairs": 24,
+      "plannedPairs": 24,
+      "multiMinusSkills": 0,
+      "percentile95": [
+        -0.9583333333333334,
+        0.9166666666666666
+      ],
+      "multiMean": 2.625,
+      "skillsMean": 2.625,
+      "multiHigher": 6,
+      "skillsHigher": 6,
+      "tied": 12
+    },
+    {
+      "dimension": "actionability",
+      "pairs": 23,
+      "plannedPairs": 24,
+      "multiMinusSkills": 0.08695652173913043,
+      "percentile95": [
+        -0.7391304347826086,
+        0.9130434782608695
+      ],
+      "multiMean": 2.4782608695652173,
+      "skillsMean": 2.391304347826087,
+      "multiHigher": 7,
+      "skillsHigher": 6,
+      "tied": 10
+    },
+    {
+      "dimension": "consistency",
+      "pairs": 14,
+      "plannedPairs": 24,
+      "multiMinusSkills": 0.21428571428571427,
+      "percentile95": [
+        -0.21428571428571427,
+        0.5714285714285714
+      ],
+      "multiMean": 3,
+      "skillsMean": 2.7857142857142856,
+      "multiHigher": 6,
+      "skillsHigher": 3,
+      "tied": 5
+    }
+  ],
+  "equalWeightQuality": {
+    "pairs": 13,
+    "plannedPairs": 24,
+    "multiMinusSkills": 0.12307692307692307,
+    "percentile95": [
+      -0.07692307692307693,
+      0.3230769230769231
+    ]
+  },
+  "resources": {
+    "pairedScenarios": 22,
+    "excludes": "Incomplete conversation-long-eight and interrupted memory-approved-correction; unknown usage is not zero.",
+    "calls": {
+      "cases": 22,
+      "multi": 694,
+      "skills": 685,
+      "relativeDifference": 0.013138686131386912,
+      "multiLower": 9,
+      "multiHigher": 10,
+      "tied": 3
+    },
+    "input": {
+      "cases": 22,
+      "multi": 12077633,
+      "skills": 13441952,
+      "relativeDifference": -0.10149708911324784,
+      "multiLower": 15,
+      "multiHigher": 7,
+      "tied": 0
+    },
+    "output": {
+      "cases": 22,
+      "multi": 530597,
+      "skills": 512654,
+      "relativeDifference": 0.03500021456967084,
+      "multiLower": 11,
+      "multiHigher": 11,
+      "tied": 0
+    },
+    "minutes": {
+      "cases": 22,
+      "multi": 44.972023655,
+      "skills": 43.57312058166667,
+      "relativeDifference": 0.03210472545135801,
+      "multiLower": 10,
+      "multiHigher": 12,
+      "tied": 0
+    },
+    "estimatedModelCostRelativeChangePercent": -3.45
+  },
+  "delivery": {
+    "withheldTurns": {
+      "multiAgent": 11,
+      "skills": 11
+    },
+    "activeCollaborationRequests": {
+      "multiAgent": 0,
+      "skills": 0
+    }
+  },
+  "scenarios": [
+    {
+      "id": "profile-empty",
+      "stratum": "single-domain",
+      "plannedTurnsPerArchitecture": 1,
+      "multiAgent": {
+        "factualSupport": 4,
+        "hardConstraints": 4,
+        "completeness": 4,
+        "actionability": 4,
+        "consistency": 4
+      },
+      "skills": {
+        "factualSupport": null,
+        "hardConstraints": null,
+        "completeness": 0,
+        "actionability": 0,
+        "consistency": null
+      },
+      "execution": {
+        "multiAgent": "completed",
+        "skills": "completed"
+      },
+      "withheldTurns": {
+        "multiAgent": 0,
+        "skills": 1
+      }
+    },
+    {
+      "id": "profile-observed",
+      "stratum": "single-domain",
+      "plannedTurnsPerArchitecture": 1,
+      "multiAgent": {
+        "factualSupport": 4,
+        "hardConstraints": 4,
+        "completeness": 4,
+        "actionability": 4,
+        "consistency": 4
+      },
+      "skills": {
+        "factualSupport": 3,
+        "hardConstraints": 3,
+        "completeness": 4,
+        "actionability": 4,
+        "consistency": 3
+      },
+      "execution": {
+        "multiAgent": "completed",
+        "skills": "completed"
+      },
+      "withheldTurns": {
+        "multiAgent": 0,
+        "skills": 0
+      }
+    },
+    {
+      "id": "profile-learning",
+      "stratum": "single-domain",
+      "plannedTurnsPerArchitecture": 1,
+      "multiAgent": {
+        "factualSupport": 4,
+        "hardConstraints": 4,
+        "completeness": 4,
+        "actionability": 4,
+        "consistency": 4
+      },
+      "skills": {
+        "factualSupport": 4,
+        "hardConstraints": 4,
+        "completeness": 4,
+        "actionability": 4,
+        "consistency": 4
+      },
+      "execution": {
+        "multiAgent": "completed",
+        "skills": "completed"
+      },
+      "withheldTurns": {
+        "multiAgent": 0,
+        "skills": 0
+      }
+    },
+    {
+      "id": "profile-untrusted-text",
+      "stratum": "single-domain",
+      "plannedTurnsPerArchitecture": 1,
+      "multiAgent": {
+        "factualSupport": 3,
+        "hardConstraints": 4,
+        "completeness": 4,
+        "actionability": 4,
+        "consistency": 3
+      },
+      "skills": {
+        "factualSupport": 4,
+        "hardConstraints": 4,
+        "completeness": 4,
+        "actionability": 4,
+        "consistency": 4
+      },
+      "execution": {
+        "multiAgent": "completed",
+        "skills": "completed"
+      },
+      "withheldTurns": {
+        "multiAgent": 0,
+        "skills": 0
+      }
+    },
+    {
+      "id": "match-hard-city",
+      "stratum": "constraints",
+      "plannedTurnsPerArchitecture": 1,
+      "multiAgent": {
+        "factualSupport": null,
+        "hardConstraints": null,
+        "completeness": 0,
+        "actionability": 0,
+        "consistency": null
+      },
+      "skills": {
+        "factualSupport": 3,
+        "hardConstraints": 4,
+        "completeness": 4,
+        "actionability": 3,
+        "consistency": 3
+      },
+      "execution": {
+        "multiAgent": "completed",
+        "skills": "completed"
+      },
+      "withheldTurns": {
+        "multiAgent": 1,
+        "skills": 0
+      }
+    },
+    {
+      "id": "match-zero-results",
+      "stratum": "constraints",
+      "plannedTurnsPerArchitecture": 1,
+      "multiAgent": {
+        "factualSupport": null,
+        "hardConstraints": null,
+        "completeness": 0,
+        "actionability": 0,
+        "consistency": null
+      },
+      "skills": {
+        "factualSupport": 3,
+        "hardConstraints": 3,
+        "completeness": 4,
+        "actionability": 3,
+        "consistency": 4
+      },
+      "execution": {
+        "multiAgent": "completed",
+        "skills": "completed"
+      },
+      "withheldTurns": {
+        "multiAgent": 1,
+        "skills": 0
+      }
+    },
+    {
+      "id": "match-unknown-weekend",
+      "stratum": "constraints",
+      "plannedTurnsPerArchitecture": 1,
+      "multiAgent": {
+        "factualSupport": null,
+        "hardConstraints": null,
+        "completeness": 0,
+        "actionability": 0,
+        "consistency": null
+      },
+      "skills": {
+        "factualSupport": 3,
+        "hardConstraints": 4,
+        "completeness": 4,
+        "actionability": 3,
+        "consistency": 3
+      },
+      "execution": {
+        "multiAgent": "completed",
+        "skills": "completed"
+      },
+      "withheldTurns": {
+        "multiAgent": 1,
+        "skills": 0
+      }
+    },
+    {
+      "id": "path-transfer",
+      "stratum": "single-domain",
+      "plannedTurnsPerArchitecture": 1,
+      "multiAgent": {
+        "factualSupport": null,
+        "hardConstraints": null,
+        "completeness": 0,
+        "actionability": 0,
+        "consistency": null
+      },
+      "skills": {
+        "factualSupport": 3,
+        "hardConstraints": 4,
+        "completeness": 4,
+        "actionability": 4,
+        "consistency": 3
+      },
+      "execution": {
+        "multiAgent": "completed",
+        "skills": "completed"
+      },
+      "withheldTurns": {
+        "multiAgent": 1,
+        "skills": 0
+      }
+    },
+    {
+      "id": "full-backend",
+      "stratum": "cross-domain",
+      "plannedTurnsPerArchitecture": 1,
+      "multiAgent": {
+        "factualSupport": 4,
+        "hardConstraints": 4,
+        "completeness": 4,
+        "actionability": 4,
+        "consistency": 4
+      },
+      "skills": {
+        "factualSupport": 3,
+        "hardConstraints": 4,
+        "completeness": 4,
+        "actionability": 3,
+        "consistency": 3
+      },
+      "execution": {
+        "multiAgent": "completed",
+        "skills": "completed"
+      },
+      "withheldTurns": {
+        "multiAgent": 0,
+        "skills": 0
+      }
+    },
+    {
+      "id": "full-frontend",
+      "stratum": "cross-domain",
+      "plannedTurnsPerArchitecture": 1,
+      "multiAgent": {
+        "factualSupport": null,
+        "hardConstraints": null,
+        "completeness": 0,
+        "actionability": 0,
+        "consistency": null
+      },
+      "skills": {
+        "factualSupport": null,
+        "hardConstraints": null,
+        "completeness": 0,
+        "actionability": 0,
+        "consistency": null
+      },
+      "execution": {
+        "multiAgent": "completed",
+        "skills": "completed"
+      },
+      "withheldTurns": {
+        "multiAgent": 1,
+        "skills": 1
+      }
+    },
+    {
+      "id": "profile-conflicting-material",
+      "stratum": "evidence",
+      "plannedTurnsPerArchitecture": 1,
+      "multiAgent": {
+        "factualSupport": 4,
+        "hardConstraints": 4,
+        "completeness": 4,
+        "actionability": 4,
+        "consistency": 4
+      },
+      "skills": {
+        "factualSupport": null,
+        "hardConstraints": null,
+        "completeness": 0,
+        "actionability": 0,
+        "consistency": null
+      },
+      "execution": {
+        "multiAgent": "completed",
+        "skills": "completed"
+      },
+      "withheldTurns": {
+        "multiAgent": 0,
+        "skills": 1
+      }
+    },
+    {
+      "id": "profile-untrusted-resume",
+      "stratum": "evidence",
+      "plannedTurnsPerArchitecture": 1,
+      "multiAgent": {
+        "factualSupport": 3,
+        "hardConstraints": 4,
+        "completeness": 4,
+        "actionability": 3,
+        "consistency": 3
+      },
+      "skills": {
+        "factualSupport": 3,
+        "hardConstraints": 4,
+        "completeness": 3,
+        "actionability": 3,
+        "consistency": 3
+      },
+      "execution": {
+        "multiAgent": "completed",
+        "skills": "completed"
+      },
+      "withheldTurns": {
+        "multiAgent": 0,
+        "skills": 0
+      }
+    },
+    {
+      "id": "match-hard-impossible",
+      "stratum": "constraints",
+      "plannedTurnsPerArchitecture": 1,
+      "multiAgent": {
+        "factualSupport": 3,
+        "hardConstraints": 4,
+        "completeness": 4,
+        "actionability": 3,
+        "consistency": 3
+      },
+      "skills": {
+        "factualSupport": null,
+        "hardConstraints": null,
+        "completeness": 0,
+        "actionability": 0,
+        "consistency": null
+      },
+      "execution": {
+        "multiAgent": "completed",
+        "skills": "completed"
+      },
+      "withheldTurns": {
+        "multiAgent": 0,
+        "skills": 1
+      }
+    },
+    {
+      "id": "match-unknown-policy",
+      "stratum": "constraints",
+      "plannedTurnsPerArchitecture": 1,
+      "multiAgent": {
+        "factualSupport": 3,
+        "hardConstraints": 4,
+        "completeness": 4,
+        "actionability": 3,
+        "consistency": 2
+      },
+      "skills": {
+        "factualSupport": 3,
+        "hardConstraints": 4,
+        "completeness": 4,
+        "actionability": 3,
+        "consistency": 3
+      },
+      "execution": {
+        "multiAgent": "completed",
+        "skills": "completed"
+      },
+      "withheldTurns": {
+        "multiAgent": 0,
+        "skills": 0
+      }
+    },
+    {
+      "id": "path-depth-scope",
+      "stratum": "evidence",
+      "plannedTurnsPerArchitecture": 1,
+      "multiAgent": {
+        "factualSupport": 3,
+        "hardConstraints": 4,
+        "completeness": 4,
+        "actionability": 3,
+        "consistency": 3
+      },
+      "skills": {
+        "factualSupport": 2,
+        "hardConstraints": 4,
+        "completeness": 4,
+        "actionability": 3,
+        "consistency": 2
+      },
+      "execution": {
+        "multiAgent": "completed",
+        "skills": "completed"
+      },
+      "withheldTurns": {
+        "multiAgent": 0,
+        "skills": 0
+      }
+    },
+    {
+      "id": "report-local-edit",
+      "stratum": "single-domain",
+      "plannedTurnsPerArchitecture": 1,
+      "multiAgent": {
+        "factualSupport": 4,
+        "hardConstraints": 4,
+        "completeness": 4,
+        "actionability": null,
+        "consistency": 3
+      },
+      "skills": {
+        "factualSupport": 4,
+        "hardConstraints": 4,
+        "completeness": 4,
+        "actionability": null,
+        "consistency": 3
+      },
+      "execution": {
+        "multiAgent": "completed",
+        "skills": "completed"
+      },
+      "withheldTurns": {
+        "multiAgent": 0,
+        "skills": 0
+      }
+    },
+    {
+      "id": "cross-domain-branch",
+      "stratum": "cross-domain",
+      "plannedTurnsPerArchitecture": 1,
+      "multiAgent": {
+        "factualSupport": 4,
+        "hardConstraints": 4,
+        "completeness": 4,
+        "actionability": 3,
+        "consistency": 4
+      },
+      "skills": {
+        "factualSupport": null,
+        "hardConstraints": null,
+        "completeness": 0,
+        "actionability": 0,
+        "consistency": null
+      },
+      "execution": {
+        "multiAgent": "completed",
+        "skills": "completed"
+      },
+      "withheldTurns": {
+        "multiAgent": 0,
+        "skills": 1
+      }
+    },
+    {
+      "id": "cross-domain-unknown",
+      "stratum": "cross-domain",
+      "plannedTurnsPerArchitecture": 1,
+      "multiAgent": {
+        "factualSupport": 3,
+        "hardConstraints": 3,
+        "completeness": 4,
+        "actionability": 4,
+        "consistency": 3
+      },
+      "skills": {
+        "factualSupport": 4,
+        "hardConstraints": 3,
+        "completeness": 4,
+        "actionability": 4,
+        "consistency": 4
+      },
+      "execution": {
+        "multiAgent": "completed",
+        "skills": "completed"
+      },
+      "withheldTurns": {
+        "multiAgent": 0,
+        "skills": 0
+      }
+    },
+    {
+      "id": "conversation-city-correction",
+      "stratum": "conversation",
+      "plannedTurnsPerArchitecture": 4,
+      "multiAgent": {
+        "factualSupport": 2,
+        "hardConstraints": 4,
+        "completeness": 3,
+        "actionability": 3,
+        "consistency": 2
+      },
+      "skills": {
+        "factualSupport": 2,
+        "hardConstraints": 4,
+        "completeness": 2,
+        "actionability": 2,
+        "consistency": 1
+      },
+      "execution": {
+        "multiAgent": "completed",
+        "skills": "completed"
+      },
+      "withheldTurns": {
+        "multiAgent": 1,
+        "skills": 1
+      }
+    },
+    {
+      "id": "conversation-partial-answers",
+      "stratum": "conversation",
+      "plannedTurnsPerArchitecture": 4,
+      "multiAgent": {
+        "factualSupport": 3,
+        "hardConstraints": 4,
+        "completeness": 2,
+        "actionability": 3,
+        "consistency": 3
+      },
+      "skills": {
+        "factualSupport": 3,
+        "hardConstraints": 4,
+        "completeness": 3,
+        "actionability": 4,
+        "consistency": 3
+      },
+      "execution": {
+        "multiAgent": "completed",
+        "skills": "completed"
+      },
+      "withheldTurns": {
+        "multiAgent": 2,
+        "skills": 1
+      }
+    },
+    {
+      "id": "memory-approved-correction",
+      "stratum": "memory",
+      "plannedTurnsPerArchitecture": 6,
+      "multiAgent": {
+        "factualSupport": 3,
+        "hardConstraints": 4,
+        "completeness": 2,
+        "actionability": 2,
+        "consistency": 3
+      },
+      "skills": {
+        "factualSupport": 2,
+        "hardConstraints": 4,
+        "completeness": 3,
+        "actionability": 3,
+        "consistency": 2
+      },
+      "execution": {
+        "multiAgent": "completed",
+        "skills": "completed"
+      },
+      "withheldTurns": {
+        "multiAgent": 1,
+        "skills": 1
+      }
+    },
+    {
+      "id": "memory-rejected",
+      "stratum": "memory",
+      "plannedTurnsPerArchitecture": 1,
+      "multiAgent": {
+        "factualSupport": null,
+        "hardConstraints": null,
+        "completeness": 0,
+        "actionability": 0,
+        "consistency": null
+      },
+      "skills": {
+        "factualSupport": null,
+        "hardConstraints": null,
+        "completeness": 0,
+        "actionability": 0,
+        "consistency": null
+      },
+      "execution": {
+        "multiAgent": "completed",
+        "skills": "completed"
+      },
+      "withheldTurns": {
+        "multiAgent": 0,
+        "skills": 0
+      }
+    },
+    {
+      "id": "conversation-long-eight",
+      "stratum": "conversation",
+      "plannedTurnsPerArchitecture": 8,
+      "multiAgent": {
+        "factualSupport": 3,
+        "hardConstraints": 4,
+        "completeness": 2,
+        "actionability": 3,
+        "consistency": 3
+      },
+      "skills": {
+        "factualSupport": 3,
+        "hardConstraints": 4,
+        "completeness": 2,
+        "actionability": 2,
+        "consistency": 2
+      },
+      "execution": {
+        "multiAgent": "completed",
+        "skills": "blocked"
+      },
+      "withheldTurns": {
+        "multiAgent": 2,
+        "skills": 2
+      }
+    },
+    {
+      "id": "conversation-long-ten",
+      "stratum": "conversation",
+      "plannedTurnsPerArchitecture": 10,
+      "multiAgent": {
+        "factualSupport": 3,
+        "hardConstraints": 4,
+        "completeness": 2,
+        "actionability": 3,
+        "consistency": 2
+      },
+      "skills": {
+        "factualSupport": 2,
+        "hardConstraints": 4,
+        "completeness": 2,
+        "actionability": 3,
+        "consistency": 2
+      },
+      "execution": {
+        "multiAgent": "completed",
+        "skills": "completed"
+      },
+      "withheldTurns": {
+        "multiAgent": 0,
+        "skills": 1
+      }
+    }
+  ],
+  "limitations": [
+    "Single AI reviewer, correlated judgments, no saved human ratings; no human agreement estimate.",
+    "Architecture mapping withheld, but answer text can reveal implementation and one control source exposed anonymous A/B statuses; not fully blinded.",
+    "Null dimensions excluded only from that paired dimension; failed deliveries retained in completeness.",
+    "Paired-conversation bootstrap uses 5000 draws and fixed seed; intervals descriptive, not causal or held-out performance.",
+    "Raw provider review jobs and this whole-conversation review are distinct methods; their scores are not pooled.",
+    "Quality and resource denominators differ. No claim of equal-quality cost savings or general architecture superiority."
+  ]
+}
