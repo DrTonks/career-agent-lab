@@ -16,7 +16,7 @@
 
 ## 预览
 
-[在线演示(未接入大模型)](https://career-planner.tonks.top/)
+[在线演示](https://career-planner.tonks.top/)
 
 **从首页直接提出目标。** 上传简历或选择快捷问题，即可开始画像、岗位、路径和报告的协作流程。
 
@@ -26,13 +26,20 @@
 
 ![总控分派与专家交付](docs/assets/screenshots/expert-collaboration.jpg)
 
-<details>
-<summary>展开查看：工具返回与交接依据</summary>
-
-岗位专家展示输入范围、知识范围、上游画像引用及实际业务调用的返回摘要，完整产物按需展开。这里展示可核查的执行记录，不模拟模型内部思维链。
+**工具返回与交接依据**：岗位专家展示输入范围、知识范围、上游画像引用及实际业务调用的返回摘要，完整产物按需展开。这里展示可核查的执行记录，不模拟模型内部思维链。
 
 ![岗位专家：输入、工具返回与画像版本引用](docs/assets/screenshots/expert-tool-evidence.jpg)
 
+<details>
+<summary>展开查看：各模块的智能助手协作规划（包含Github项目经历与用户画像补强）</summary>
+
+![岗位探索](docs/assets/screenshots/job.jpg)
+
+![能力评估](docs/assets/screenshots/student.jpg)
+
+![职业规划](docs/assets/screenshots/match.jpg)
+
+![生涯报告](docs/assets/screenshots/report.jpg)
 </details>
 
 ## 功能
