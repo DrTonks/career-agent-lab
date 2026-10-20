@@ -16,7 +16,7 @@
 
 ## 预览
 
-[在线演示](https://career-planner.tonks.top/)
+[在线演示平台：微光职引 · 职业规划智能体](https://career-planner.tonks.top/)
 
 **从首页直接提出目标。** 上传简历或选择快捷问题，即可开始画像、岗位、路径和报告的协作流程。
 
@@ -44,7 +44,7 @@
 
 ## 功能
 
-| 能力 | 说明 |
+| Agent能力 | 说明 |
 | --- | --- |
 | 能力画像 | 基于简历与具体行为建立12维描述性画像，区分“信息未知”和“明确缺失”，给出需要补充的材料 |
 | 岗位匹配 | 按城市、学历、经验、薪资、工作制等条件筛选岗位，解释匹配理由、技能差距与待核实条件 |
@@ -53,8 +53,6 @@
 | 多轮追问 | 补充材料、修改城市或目标后继续对话，保留未解决问题，重新检查受影响的结论 |
 | 长期记忆 | 按用户和领域保存带来源的事实，支持审批写入、纠正、撤回、到期和整体遗忘 |
 | 执行恢复 | 持久化计划、工具结果和状态，在允许的故障边界内恢复任务，保留失败原因 |
-
-画像分数是描述性估计，不是心理测量或录用概率。岗位条件缺失时保留待核实状态，不自动视为符合；无依据的个人事实不会由领域规则代填。
 
 ## 系统架构
 
@@ -128,8 +126,7 @@ Copy-Item .env.example .env
 npm run build
 npm run cli -- run --case evals/examples/profile.json --architecture multi-agent --live --events
 ```
-
-默认使用 BM25；显式传入 `--live` 才会调用模型服务。`.env`、本地索引、模型缓存和运行库不进入 Git。完整规划、多轮续接、审批、容量配置和混合检索用法见[运行指南](docs/architecture/runtime-usage.md)。
+完整规划、多轮续接、审批、容量配置和混合检索用法见[运行指南](docs/architecture/runtime-usage.md)。
 
 ```powershell
 npm run cli -- inspect --run RUN_ID --user USER_ID
@@ -168,9 +165,5 @@ npm run check
 npm run format:check
 npm run public:check
 ```
-
-当前提供 CLI 与智能体核心，仍在完善交付核验。生产鉴权、Web API、文件解析、OCR 和视觉输入尚未包含；具体边界见[实现状态](docs/development/implementation-status.md)。核验未完成时保留草稿并明确返回状态，不把草稿冒充已交付建议。
-
-Web 展示可以在独立前后端中实现。本仓库聚焦智能体核心，不包含 Web 页面、云端任务队列或部署配置。
 
 架构对照的最终结论与汇总统计集中在 [docs/evaluation/](docs/evaluation/README.md)；关于多智能体设计取舍、真实对话观察和面试表达，见[架构选择说明](docs/evaluation/multi-agent-rationale.md)。
