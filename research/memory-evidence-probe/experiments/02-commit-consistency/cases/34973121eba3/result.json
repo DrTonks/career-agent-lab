@@ -1,0 +1,349 @@
+{
+  "caseId": "34973121eba3",
+  "contextHash": "46c37a53a912d97c0e5f15893d70641288f659fc08f24660f9df129e528258b4",
+  "records": {
+    "answer-first": {
+      "status": "ok",
+      "decision": {
+        "patches": [
+          {
+            "memoryId": "report-job",
+            "expectedVersion": 1,
+            "values": {
+              "recommend": null
+            },
+            "refs": [
+              "d-f9a65bfdb5c6",
+              "d-6ed00ef61ddc",
+              "d-e7558e80b774"
+            ],
+            "status": "uncertain",
+            "text": "{\"recommend\": null}"
+          }
+        ],
+        "answer": "每周天数未知，资格是否满足无法确定；按任务约定，事实未知时不得猜值，仅当所有证据允许的状态给出相同结论时输出确定值，否则输出null并标记uncertain。原recommend=true缺乏依据，应修订为null。",
+        "externalAction": "none",
+        "needsEvidence": true
+      },
+      "finalMemories": [
+        {
+          "id": "profile-days",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"days\": null}",
+          "values": {
+            "days": null
+          },
+          "refs": [
+            "d-e7558e80b774"
+          ],
+          "status": "uncertain"
+        },
+        {
+          "id": "profile-hours",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"hours\": 6}",
+          "values": {
+            "hours": 6
+          },
+          "refs": [
+            "d-e7558e80b774"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-applied",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"applied\": true}",
+          "values": {
+            "applied": true
+          },
+          "refs": [
+            "d-e7558e80b774"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "match-job",
+          "role": "match",
+          "version": 1,
+          "text": "{\"eligible\": true}",
+          "values": {
+            "eligible": true
+          },
+          "refs": [
+            "d-f9a65bfdb5c6",
+            "d-6ed00ef61ddc",
+            "d-cf25cbc75e04"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "path-job",
+          "role": "path",
+          "version": 1,
+          "text": "{\"next\": \"wait\"}",
+          "values": {
+            "next": "wait"
+          },
+          "refs": [
+            "d-f9a65bfdb5c6",
+            "d-6ed00ef61ddc",
+            "d-cf25cbc75e04"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "report-job",
+          "role": "report",
+          "version": 2,
+          "text": "{\"recommend\": null}",
+          "values": {
+            "recommend": null
+          },
+          "refs": [
+            "d-f9a65bfdb5c6",
+            "d-6ed00ef61ddc",
+            "d-e7558e80b774"
+          ],
+          "status": "uncertain"
+        }
+      ]
+    },
+    "original": {
+      "status": "ok",
+      "decision": {
+        "patches": [
+          {
+            "memoryId": "report-job",
+            "expectedVersion": 1,
+            "values": {
+              "recommend": null
+            },
+            "refs": [
+              "d-f9a65bfdb5c6",
+              "d-6ed00ef61ddc",
+              "d-e7558e80b774"
+            ],
+            "status": "uncertain",
+            "text": "{\"recommend\": null}"
+          }
+        ],
+        "answer": "每周天数未知，可能满足也可能不满足资格；申请仍在途。按任务约定，资格满足时建议wait，不满足时建议withdraw，两种可能结论不同，因此recommend应为null并标记uncertain。",
+        "externalAction": "none",
+        "needsEvidence": true
+      },
+      "finalMemories": [
+        {
+          "id": "profile-days",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"days\": null}",
+          "values": {
+            "days": null
+          },
+          "refs": [
+            "d-e7558e80b774"
+          ],
+          "status": "uncertain"
+        },
+        {
+          "id": "profile-hours",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"hours\": 6}",
+          "values": {
+            "hours": 6
+          },
+          "refs": [
+            "d-e7558e80b774"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-applied",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"applied\": true}",
+          "values": {
+            "applied": true
+          },
+          "refs": [
+            "d-e7558e80b774"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "match-job",
+          "role": "match",
+          "version": 1,
+          "text": "{\"eligible\": true}",
+          "values": {
+            "eligible": true
+          },
+          "refs": [
+            "d-f9a65bfdb5c6",
+            "d-6ed00ef61ddc",
+            "d-cf25cbc75e04"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "path-job",
+          "role": "path",
+          "version": 1,
+          "text": "{\"next\": \"wait\"}",
+          "values": {
+            "next": "wait"
+          },
+          "refs": [
+            "d-f9a65bfdb5c6",
+            "d-6ed00ef61ddc",
+            "d-cf25cbc75e04"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "report-job",
+          "role": "report",
+          "version": 2,
+          "text": "{\"recommend\": null}",
+          "values": {
+            "recommend": null
+          },
+          "refs": [
+            "d-f9a65bfdb5c6",
+            "d-6ed00ef61ddc",
+            "d-e7558e80b774"
+          ],
+          "status": "uncertain"
+        }
+      ]
+    },
+    "review": {
+      "status": "ok",
+      "decision": {
+        "patches": [
+          {
+            "memoryId": "report-job",
+            "expectedVersion": 1,
+            "values": {
+              "recommend": null
+            },
+            "refs": [
+              "d-f9a65bfdb5c6",
+              "d-6ed00ef61ddc",
+              "d-e7558e80b774"
+            ],
+            "status": "uncertain",
+            "text": "{\"recommend\":null}"
+          }
+        ],
+        "answer": "每周天数未知，可能满足也可能不满足资格；申请仍在途。按任务约定，资格满足时建议wait，不满足时建议withdraw，两种可能结论不同，因此recommend应为null并标记uncertain。",
+        "needsEvidence": true,
+        "externalAction": "none"
+      },
+      "finalMemories": [
+        {
+          "id": "profile-days",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"days\": null}",
+          "values": {
+            "days": null
+          },
+          "refs": [
+            "d-e7558e80b774"
+          ],
+          "status": "uncertain"
+        },
+        {
+          "id": "profile-hours",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"hours\": 6}",
+          "values": {
+            "hours": 6
+          },
+          "refs": [
+            "d-e7558e80b774"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-applied",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"applied\": true}",
+          "values": {
+            "applied": true
+          },
+          "refs": [
+            "d-e7558e80b774"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "match-job",
+          "role": "match",
+          "version": 1,
+          "text": "{\"eligible\": true}",
+          "values": {
+            "eligible": true
+          },
+          "refs": [
+            "d-f9a65bfdb5c6",
+            "d-6ed00ef61ddc",
+            "d-cf25cbc75e04"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "path-job",
+          "role": "path",
+          "version": 1,
+          "text": "{\"next\": \"wait\"}",
+          "values": {
+            "next": "wait"
+          },
+          "refs": [
+            "d-f9a65bfdb5c6",
+            "d-6ed00ef61ddc",
+            "d-cf25cbc75e04"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "report-job",
+          "role": "report",
+          "version": 2,
+          "text": "{\"recommend\":null}",
+          "values": {
+            "recommend": null
+          },
+          "refs": [
+            "d-f9a65bfdb5c6",
+            "d-6ed00ef61ddc",
+            "d-e7558e80b774"
+          ],
+          "status": "uncertain"
+        }
+      ],
+      "reviewStatus": "accepted",
+      "fallback": false
+    }
+  },
+  "stages": [
+    "answer-first",
+    "decide",
+    "review"
+  ],
+  "elapsedMs": 2952.1066250000003,
+  "physicalUsage": {
+    "attempts": 3,
+    "inputTokens": 8540,
+    "outputTokens": 385
+  }
+}

@@ -1,0 +1,2590 @@
+{
+  "primaryJudge": "deepseek",
+  "secondaryJudge": "gpt",
+  "judges": {
+    "deepseek": {
+      "aggregate": {
+        "deepseek": {
+          "O": {
+            "n": 54,
+            "strict": 2,
+            "structure": 2,
+            "meaning": 40,
+            "evidence": 47,
+            "failures": 0,
+            "leaks": 0,
+            "interruptions": 6,
+            "actionTarget": 13,
+            "fit": 12,
+            "states": 0,
+            "repairN": 18,
+            "repairCode": 0,
+            "groundedRepair": 0
+          },
+          "B": {
+            "n": 54,
+            "strict": 29,
+            "structure": 30,
+            "meaning": 39,
+            "evidence": 47,
+            "failures": 1,
+            "leaks": 0,
+            "interruptions": 4,
+            "actionTarget": 31,
+            "fit": 33,
+            "states": 46,
+            "repairN": 18,
+            "repairCode": 12,
+            "groundedRepair": 11
+          },
+          "L": {
+            "n": 54,
+            "strict": 29,
+            "structure": 29,
+            "meaning": 39,
+            "evidence": 45,
+            "failures": 1,
+            "leaks": 0,
+            "interruptions": 5,
+            "actionTarget": 33,
+            "fit": 30,
+            "states": 48,
+            "repairN": 18,
+            "repairCode": 12,
+            "groundedRepair": 11
+          },
+          "N": {
+            "n": 54,
+            "strict": 31,
+            "structure": 32,
+            "meaning": 38,
+            "evidence": 43,
+            "failures": 3,
+            "leaks": 0,
+            "interruptions": 5,
+            "actionTarget": 34,
+            "fit": 33,
+            "states": 46,
+            "repairN": 18,
+            "repairCode": 12,
+            "groundedRepair": 11
+          }
+        },
+        "gpt": {
+          "O": {
+            "n": 54,
+            "strict": 13,
+            "structure": 15,
+            "meaning": 51,
+            "evidence": 54,
+            "failures": 0,
+            "leaks": 0,
+            "interruptions": 0,
+            "actionTarget": 33,
+            "fit": 20,
+            "states": 0,
+            "repairN": 18,
+            "repairCode": 18,
+            "groundedRepair": 18
+          },
+          "B": {
+            "n": 54,
+            "strict": 42,
+            "structure": 43,
+            "meaning": 52,
+            "evidence": 54,
+            "failures": 0,
+            "leaks": 0,
+            "interruptions": 0,
+            "actionTarget": 48,
+            "fit": 45,
+            "states": 50,
+            "repairN": 18,
+            "repairCode": 17,
+            "groundedRepair": 17
+          },
+          "L": {
+            "n": 54,
+            "strict": 43,
+            "structure": 44,
+            "meaning": 53,
+            "evidence": 54,
+            "failures": 0,
+            "leaks": 0,
+            "interruptions": 0,
+            "actionTarget": 48,
+            "fit": 46,
+            "states": 47,
+            "repairN": 18,
+            "repairCode": 16,
+            "groundedRepair": 16
+          },
+          "N": {
+            "n": 54,
+            "strict": 43,
+            "structure": 45,
+            "meaning": 52,
+            "evidence": 54,
+            "failures": 0,
+            "leaks": 0,
+            "interruptions": 0,
+            "actionTarget": 49,
+            "fit": 47,
+            "states": 47,
+            "repairN": 18,
+            "repairCode": 16,
+            "groundedRepair": 16
+          }
+        }
+      },
+      "byCondition": {
+        "deepseek": {
+          "O/wide": {
+            "n": 27,
+            "strict": 0,
+            "structure": 0,
+            "meaning": 22,
+            "evidence": 26,
+            "failures": 0,
+            "leaks": 0,
+            "interruptions": 2,
+            "actionTarget": 7,
+            "fit": 4,
+            "states": 0,
+            "repairN": 9,
+            "repairCode": 0,
+            "groundedRepair": 0
+          },
+          "O/tight": {
+            "n": 27,
+            "strict": 2,
+            "structure": 2,
+            "meaning": 18,
+            "evidence": 21,
+            "failures": 0,
+            "leaks": 0,
+            "interruptions": 4,
+            "actionTarget": 6,
+            "fit": 8,
+            "states": 0,
+            "repairN": 9,
+            "repairCode": 0,
+            "groundedRepair": 0
+          },
+          "B/wide": {
+            "n": 27,
+            "strict": 17,
+            "structure": 17,
+            "meaning": 23,
+            "evidence": 26,
+            "failures": 0,
+            "leaks": 0,
+            "interruptions": 0,
+            "actionTarget": 18,
+            "fit": 19,
+            "states": 25,
+            "repairN": 9,
+            "repairCode": 7,
+            "groundedRepair": 6
+          },
+          "B/tight": {
+            "n": 27,
+            "strict": 12,
+            "structure": 13,
+            "meaning": 16,
+            "evidence": 21,
+            "failures": 1,
+            "leaks": 0,
+            "interruptions": 4,
+            "actionTarget": 13,
+            "fit": 14,
+            "states": 21,
+            "repairN": 9,
+            "repairCode": 5,
+            "groundedRepair": 5
+          },
+          "L/wide": {
+            "n": 27,
+            "strict": 16,
+            "structure": 16,
+            "meaning": 22,
+            "evidence": 25,
+            "failures": 0,
+            "leaks": 0,
+            "interruptions": 1,
+            "actionTarget": 20,
+            "fit": 16,
+            "states": 27,
+            "repairN": 9,
+            "repairCode": 8,
+            "groundedRepair": 7
+          },
+          "L/tight": {
+            "n": 27,
+            "strict": 13,
+            "structure": 13,
+            "meaning": 17,
+            "evidence": 20,
+            "failures": 1,
+            "leaks": 0,
+            "interruptions": 4,
+            "actionTarget": 13,
+            "fit": 14,
+            "states": 21,
+            "repairN": 9,
+            "repairCode": 4,
+            "groundedRepair": 4
+          },
+          "N/wide": {
+            "n": 27,
+            "strict": 18,
+            "structure": 18,
+            "meaning": 23,
+            "evidence": 25,
+            "failures": 0,
+            "leaks": 0,
+            "interruptions": 1,
+            "actionTarget": 20,
+            "fit": 19,
+            "states": 26,
+            "repairN": 9,
+            "repairCode": 7,
+            "groundedRepair": 6
+          },
+          "N/tight": {
+            "n": 27,
+            "strict": 13,
+            "structure": 14,
+            "meaning": 15,
+            "evidence": 18,
+            "failures": 3,
+            "leaks": 0,
+            "interruptions": 4,
+            "actionTarget": 14,
+            "fit": 14,
+            "states": 20,
+            "repairN": 9,
+            "repairCode": 5,
+            "groundedRepair": 5
+          }
+        },
+        "gpt": {
+          "O/wide": {
+            "n": 27,
+            "strict": 7,
+            "structure": 8,
+            "meaning": 26,
+            "evidence": 27,
+            "failures": 0,
+            "leaks": 0,
+            "interruptions": 0,
+            "actionTarget": 17,
+            "fit": 9,
+            "states": 0,
+            "repairN": 9,
+            "repairCode": 9,
+            "groundedRepair": 9
+          },
+          "O/tight": {
+            "n": 27,
+            "strict": 6,
+            "structure": 7,
+            "meaning": 25,
+            "evidence": 27,
+            "failures": 0,
+            "leaks": 0,
+            "interruptions": 0,
+            "actionTarget": 16,
+            "fit": 11,
+            "states": 0,
+            "repairN": 9,
+            "repairCode": 9,
+            "groundedRepair": 9
+          },
+          "B/wide": {
+            "n": 27,
+            "strict": 20,
+            "structure": 20,
+            "meaning": 26,
+            "evidence": 27,
+            "failures": 0,
+            "leaks": 0,
+            "interruptions": 0,
+            "actionTarget": 22,
+            "fit": 21,
+            "states": 25,
+            "repairN": 9,
+            "repairCode": 8,
+            "groundedRepair": 8
+          },
+          "B/tight": {
+            "n": 27,
+            "strict": 22,
+            "structure": 23,
+            "meaning": 26,
+            "evidence": 27,
+            "failures": 0,
+            "leaks": 0,
+            "interruptions": 0,
+            "actionTarget": 26,
+            "fit": 24,
+            "states": 25,
+            "repairN": 9,
+            "repairCode": 9,
+            "groundedRepair": 9
+          },
+          "L/wide": {
+            "n": 27,
+            "strict": 21,
+            "structure": 22,
+            "meaning": 26,
+            "evidence": 27,
+            "failures": 0,
+            "leaks": 0,
+            "interruptions": 0,
+            "actionTarget": 24,
+            "fit": 23,
+            "states": 22,
+            "repairN": 9,
+            "repairCode": 8,
+            "groundedRepair": 8
+          },
+          "L/tight": {
+            "n": 27,
+            "strict": 22,
+            "structure": 22,
+            "meaning": 27,
+            "evidence": 27,
+            "failures": 0,
+            "leaks": 0,
+            "interruptions": 0,
+            "actionTarget": 24,
+            "fit": 23,
+            "states": 25,
+            "repairN": 9,
+            "repairCode": 8,
+            "groundedRepair": 8
+          },
+          "N/wide": {
+            "n": 27,
+            "strict": 21,
+            "structure": 22,
+            "meaning": 26,
+            "evidence": 27,
+            "failures": 0,
+            "leaks": 0,
+            "interruptions": 0,
+            "actionTarget": 24,
+            "fit": 23,
+            "states": 22,
+            "repairN": 9,
+            "repairCode": 8,
+            "groundedRepair": 8
+          },
+          "N/tight": {
+            "n": 27,
+            "strict": 22,
+            "structure": 23,
+            "meaning": 26,
+            "evidence": 27,
+            "failures": 0,
+            "leaks": 0,
+            "interruptions": 0,
+            "actionTarget": 25,
+            "fit": 24,
+            "states": 25,
+            "repairN": 9,
+            "repairCode": 8,
+            "groundedRepair": 8
+          }
+        }
+      },
+      "receiptPairs": {
+        "deepseek": {
+          "O/wide": {
+            "M46": false,
+            "T71": false,
+            "P85": false
+          },
+          "O/tight": {
+            "M46": false,
+            "T71": false,
+            "P85": false
+          },
+          "B/wide": {
+            "M46": false,
+            "T71": false,
+            "P85": false
+          },
+          "B/tight": {
+            "M46": false,
+            "T71": false,
+            "P85": false
+          },
+          "L/wide": {
+            "M46": false,
+            "T71": false,
+            "P85": false
+          },
+          "L/tight": {
+            "M46": false,
+            "T71": false,
+            "P85": false
+          },
+          "N/wide": {
+            "M46": false,
+            "T71": false,
+            "P85": false
+          },
+          "N/tight": {
+            "M46": false,
+            "T71": false,
+            "P85": false
+          }
+        },
+        "gpt": {
+          "O/wide": {
+            "M46": false,
+            "T71": false,
+            "P85": false
+          },
+          "O/tight": {
+            "M46": false,
+            "T71": false,
+            "P85": false
+          },
+          "B/wide": {
+            "M46": false,
+            "T71": false,
+            "P85": false
+          },
+          "B/tight": {
+            "M46": false,
+            "T71": false,
+            "P85": false
+          },
+          "L/wide": {
+            "M46": false,
+            "T71": false,
+            "P85": false
+          },
+          "L/tight": {
+            "M46": false,
+            "T71": false,
+            "P85": false
+          },
+          "N/wide": {
+            "M46": false,
+            "T71": false,
+            "P85": false
+          },
+          "N/tight": {
+            "M46": false,
+            "T71": false,
+            "P85": false
+          }
+        }
+      },
+      "withinModelContrasts": {
+        "deepseek": {
+          "O -> L": {
+            "win": 28,
+            "loss": 1,
+            "tie": 25
+          },
+          "L -> N": {
+            "win": 5,
+            "loss": 3,
+            "tie": 46
+          },
+          "B -> N": {
+            "win": 5,
+            "loss": 3,
+            "tie": 46
+          },
+          "O -> N": {
+            "win": 31,
+            "loss": 2,
+            "tie": 21
+          }
+        },
+        "gpt": {
+          "O -> L": {
+            "win": 30,
+            "loss": 0,
+            "tie": 24
+          },
+          "L -> N": {
+            "win": 1,
+            "loss": 1,
+            "tie": 52
+          },
+          "B -> N": {
+            "win": 1,
+            "loss": 0,
+            "tie": 53
+          },
+          "O -> N": {
+            "win": 30,
+            "loss": 0,
+            "tie": 24
+          }
+        }
+      },
+      "deepseekToGpt": {
+        "O": {
+          "win": 11,
+          "loss": 0,
+          "tie": 43
+        },
+        "B": {
+          "win": 15,
+          "loss": 2,
+          "tie": 37
+        },
+        "L": {
+          "win": 16,
+          "loss": 2,
+          "tie": 36
+        },
+        "N": {
+          "win": 15,
+          "loss": 3,
+          "tie": 36
+        }
+      },
+      "byJob": {
+        "deepseek": {
+          "O": {
+            "M46": {
+              "n": 18,
+              "strict": 0,
+              "structure": 0,
+              "meaning": 11,
+              "evidence": 15,
+              "failures": 0,
+              "leaks": 0,
+              "interruptions": 1,
+              "actionTarget": 3,
+              "fit": 3,
+              "states": 0,
+              "repairN": 6,
+              "repairCode": 0,
+              "groundedRepair": 0
+            },
+            "T71": {
+              "n": 18,
+              "strict": 2,
+              "structure": 2,
+              "meaning": 16,
+              "evidence": 18,
+              "failures": 0,
+              "leaks": 0,
+              "interruptions": 2,
+              "actionTarget": 7,
+              "fit": 4,
+              "states": 0,
+              "repairN": 6,
+              "repairCode": 0,
+              "groundedRepair": 0
+            },
+            "P85": {
+              "n": 18,
+              "strict": 0,
+              "structure": 0,
+              "meaning": 13,
+              "evidence": 14,
+              "failures": 0,
+              "leaks": 0,
+              "interruptions": 3,
+              "actionTarget": 3,
+              "fit": 5,
+              "states": 0,
+              "repairN": 6,
+              "repairCode": 0,
+              "groundedRepair": 0
+            }
+          },
+          "B": {
+            "M46": {
+              "n": 18,
+              "strict": 7,
+              "structure": 8,
+              "meaning": 11,
+              "evidence": 15,
+              "failures": 0,
+              "leaks": 0,
+              "interruptions": 1,
+              "actionTarget": 9,
+              "fit": 10,
+              "states": 14,
+              "repairN": 6,
+              "repairCode": 4,
+              "groundedRepair": 3
+            },
+            "T71": {
+              "n": 18,
+              "strict": 11,
+              "structure": 11,
+              "meaning": 13,
+              "evidence": 16,
+              "failures": 1,
+              "leaks": 0,
+              "interruptions": 1,
+              "actionTarget": 11,
+              "fit": 11,
+              "states": 16,
+              "repairN": 6,
+              "repairCode": 4,
+              "groundedRepair": 4
+            },
+            "P85": {
+              "n": 18,
+              "strict": 11,
+              "structure": 11,
+              "meaning": 15,
+              "evidence": 16,
+              "failures": 0,
+              "leaks": 0,
+              "interruptions": 2,
+              "actionTarget": 11,
+              "fit": 12,
+              "states": 16,
+              "repairN": 6,
+              "repairCode": 4,
+              "groundedRepair": 4
+            }
+          },
+          "L": {
+            "M46": {
+              "n": 18,
+              "strict": 8,
+              "structure": 8,
+              "meaning": 13,
+              "evidence": 15,
+              "failures": 0,
+              "leaks": 0,
+              "interruptions": 1,
+              "actionTarget": 9,
+              "fit": 9,
+              "states": 15,
+              "repairN": 6,
+              "repairCode": 4,
+              "groundedRepair": 3
+            },
+            "T71": {
+              "n": 18,
+              "strict": 12,
+              "structure": 12,
+              "meaning": 15,
+              "evidence": 17,
+              "failures": 0,
+              "leaks": 0,
+              "interruptions": 1,
+              "actionTarget": 14,
+              "fit": 12,
+              "states": 17,
+              "repairN": 6,
+              "repairCode": 5,
+              "groundedRepair": 5
+            },
+            "P85": {
+              "n": 18,
+              "strict": 9,
+              "structure": 9,
+              "meaning": 11,
+              "evidence": 13,
+              "failures": 1,
+              "leaks": 0,
+              "interruptions": 3,
+              "actionTarget": 10,
+              "fit": 9,
+              "states": 16,
+              "repairN": 6,
+              "repairCode": 3,
+              "groundedRepair": 3
+            }
+          },
+          "N": {
+            "M46": {
+              "n": 18,
+              "strict": 9,
+              "structure": 10,
+              "meaning": 11,
+              "evidence": 14,
+              "failures": 1,
+              "leaks": 0,
+              "interruptions": 1,
+              "actionTarget": 11,
+              "fit": 10,
+              "states": 15,
+              "repairN": 6,
+              "repairCode": 4,
+              "groundedRepair": 3
+            },
+            "T71": {
+              "n": 18,
+              "strict": 11,
+              "structure": 11,
+              "meaning": 14,
+              "evidence": 16,
+              "failures": 1,
+              "leaks": 0,
+              "interruptions": 1,
+              "actionTarget": 12,
+              "fit": 11,
+              "states": 16,
+              "repairN": 6,
+              "repairCode": 4,
+              "groundedRepair": 4
+            },
+            "P85": {
+              "n": 18,
+              "strict": 11,
+              "structure": 11,
+              "meaning": 13,
+              "evidence": 13,
+              "failures": 1,
+              "leaks": 0,
+              "interruptions": 3,
+              "actionTarget": 11,
+              "fit": 12,
+              "states": 15,
+              "repairN": 6,
+              "repairCode": 4,
+              "groundedRepair": 4
+            }
+          }
+        },
+        "gpt": {
+          "O": {
+            "M46": {
+              "n": 18,
+              "strict": 3,
+              "structure": 5,
+              "meaning": 15,
+              "evidence": 18,
+              "failures": 0,
+              "leaks": 0,
+              "interruptions": 0,
+              "actionTarget": 11,
+              "fit": 7,
+              "states": 0,
+              "repairN": 6,
+              "repairCode": 6,
+              "groundedRepair": 6
+            },
+            "T71": {
+              "n": 18,
+              "strict": 6,
+              "structure": 6,
+              "meaning": 18,
+              "evidence": 18,
+              "failures": 0,
+              "leaks": 0,
+              "interruptions": 0,
+              "actionTarget": 12,
+              "fit": 7,
+              "states": 0,
+              "repairN": 6,
+              "repairCode": 6,
+              "groundedRepair": 6
+            },
+            "P85": {
+              "n": 18,
+              "strict": 4,
+              "structure": 4,
+              "meaning": 18,
+              "evidence": 18,
+              "failures": 0,
+              "leaks": 0,
+              "interruptions": 0,
+              "actionTarget": 10,
+              "fit": 6,
+              "states": 0,
+              "repairN": 6,
+              "repairCode": 6,
+              "groundedRepair": 6
+            }
+          },
+          "B": {
+            "M46": {
+              "n": 18,
+              "strict": 12,
+              "structure": 13,
+              "meaning": 16,
+              "evidence": 18,
+              "failures": 0,
+              "leaks": 0,
+              "interruptions": 0,
+              "actionTarget": 15,
+              "fit": 13,
+              "states": 17,
+              "repairN": 6,
+              "repairCode": 6,
+              "groundedRepair": 6
+            },
+            "T71": {
+              "n": 18,
+              "strict": 16,
+              "structure": 16,
+              "meaning": 18,
+              "evidence": 18,
+              "failures": 0,
+              "leaks": 0,
+              "interruptions": 0,
+              "actionTarget": 18,
+              "fit": 16,
+              "states": 17,
+              "repairN": 6,
+              "repairCode": 6,
+              "groundedRepair": 6
+            },
+            "P85": {
+              "n": 18,
+              "strict": 14,
+              "structure": 14,
+              "meaning": 18,
+              "evidence": 18,
+              "failures": 0,
+              "leaks": 0,
+              "interruptions": 0,
+              "actionTarget": 15,
+              "fit": 16,
+              "states": 16,
+              "repairN": 6,
+              "repairCode": 5,
+              "groundedRepair": 5
+            }
+          },
+          "L": {
+            "M46": {
+              "n": 18,
+              "strict": 13,
+              "structure": 14,
+              "meaning": 17,
+              "evidence": 18,
+              "failures": 0,
+              "leaks": 0,
+              "interruptions": 0,
+              "actionTarget": 16,
+              "fit": 14,
+              "states": 17,
+              "repairN": 6,
+              "repairCode": 6,
+              "groundedRepair": 6
+            },
+            "T71": {
+              "n": 18,
+              "strict": 16,
+              "structure": 16,
+              "meaning": 18,
+              "evidence": 18,
+              "failures": 0,
+              "leaks": 0,
+              "interruptions": 0,
+              "actionTarget": 18,
+              "fit": 16,
+              "states": 17,
+              "repairN": 6,
+              "repairCode": 6,
+              "groundedRepair": 6
+            },
+            "P85": {
+              "n": 18,
+              "strict": 14,
+              "structure": 14,
+              "meaning": 18,
+              "evidence": 18,
+              "failures": 0,
+              "leaks": 0,
+              "interruptions": 0,
+              "actionTarget": 14,
+              "fit": 16,
+              "states": 13,
+              "repairN": 6,
+              "repairCode": 4,
+              "groundedRepair": 4
+            }
+          },
+          "N": {
+            "M46": {
+              "n": 18,
+              "strict": 13,
+              "structure": 15,
+              "meaning": 16,
+              "evidence": 18,
+              "failures": 0,
+              "leaks": 0,
+              "interruptions": 0,
+              "actionTarget": 17,
+              "fit": 15,
+              "states": 16,
+              "repairN": 6,
+              "repairCode": 6,
+              "groundedRepair": 6
+            },
+            "T71": {
+              "n": 18,
+              "strict": 16,
+              "structure": 16,
+              "meaning": 18,
+              "evidence": 18,
+              "failures": 0,
+              "leaks": 0,
+              "interruptions": 0,
+              "actionTarget": 18,
+              "fit": 16,
+              "states": 15,
+              "repairN": 6,
+              "repairCode": 6,
+              "groundedRepair": 6
+            },
+            "P85": {
+              "n": 18,
+              "strict": 14,
+              "structure": 14,
+              "meaning": 18,
+              "evidence": 18,
+              "failures": 0,
+              "leaks": 0,
+              "interruptions": 0,
+              "actionTarget": 14,
+              "fit": 16,
+              "states": 16,
+              "repairN": 6,
+              "repairCode": 4,
+              "groundedRepair": 4
+            }
+          }
+        }
+      }
+    },
+    "gpt": {
+      "aggregate": {
+        "deepseek": {
+          "O": {
+            "n": 54,
+            "strict": 2,
+            "structure": 2,
+            "meaning": 21,
+            "evidence": 28,
+            "failures": 0,
+            "leaks": 5,
+            "interruptions": 22,
+            "actionTarget": 13,
+            "fit": 12,
+            "states": 0,
+            "repairN": 18,
+            "repairCode": 0,
+            "groundedRepair": 0
+          },
+          "B": {
+            "n": 54,
+            "strict": 18,
+            "structure": 30,
+            "meaning": 23,
+            "evidence": 38,
+            "failures": 1,
+            "leaks": 3,
+            "interruptions": 19,
+            "actionTarget": 31,
+            "fit": 33,
+            "states": 46,
+            "repairN": 18,
+            "repairCode": 12,
+            "groundedRepair": 7
+          },
+          "L": {
+            "n": 54,
+            "strict": 12,
+            "structure": 29,
+            "meaning": 19,
+            "evidence": 34,
+            "failures": 1,
+            "leaks": 6,
+            "interruptions": 20,
+            "actionTarget": 33,
+            "fit": 30,
+            "states": 48,
+            "repairN": 18,
+            "repairCode": 12,
+            "groundedRepair": 7
+          },
+          "N": {
+            "n": 54,
+            "strict": 16,
+            "structure": 32,
+            "meaning": 21,
+            "evidence": 35,
+            "failures": 3,
+            "leaks": 4,
+            "interruptions": 21,
+            "actionTarget": 34,
+            "fit": 33,
+            "states": 46,
+            "repairN": 18,
+            "repairCode": 12,
+            "groundedRepair": 6
+          }
+        },
+        "gpt": {
+          "O": {
+            "n": 54,
+            "strict": 13,
+            "structure": 15,
+            "meaning": 50,
+            "evidence": 54,
+            "failures": 0,
+            "leaks": 0,
+            "interruptions": 5,
+            "actionTarget": 33,
+            "fit": 20,
+            "states": 0,
+            "repairN": 18,
+            "repairCode": 18,
+            "groundedRepair": 17
+          },
+          "B": {
+            "n": 54,
+            "strict": 33,
+            "structure": 43,
+            "meaning": 42,
+            "evidence": 54,
+            "failures": 0,
+            "leaks": 0,
+            "interruptions": 3,
+            "actionTarget": 48,
+            "fit": 45,
+            "states": 50,
+            "repairN": 18,
+            "repairCode": 17,
+            "groundedRepair": 12
+          },
+          "L": {
+            "n": 54,
+            "strict": 39,
+            "structure": 44,
+            "meaning": 45,
+            "evidence": 54,
+            "failures": 0,
+            "leaks": 0,
+            "interruptions": 3,
+            "actionTarget": 48,
+            "fit": 46,
+            "states": 47,
+            "repairN": 18,
+            "repairCode": 16,
+            "groundedRepair": 12
+          },
+          "N": {
+            "n": 54,
+            "strict": 40,
+            "structure": 45,
+            "meaning": 46,
+            "evidence": 54,
+            "failures": 0,
+            "leaks": 0,
+            "interruptions": 1,
+            "actionTarget": 49,
+            "fit": 47,
+            "states": 47,
+            "repairN": 18,
+            "repairCode": 16,
+            "groundedRepair": 13
+          }
+        }
+      },
+      "byCondition": {
+        "deepseek": {
+          "O/wide": {
+            "n": 27,
+            "strict": 0,
+            "structure": 0,
+            "meaning": 10,
+            "evidence": 16,
+            "failures": 0,
+            "leaks": 2,
+            "interruptions": 10,
+            "actionTarget": 7,
+            "fit": 4,
+            "states": 0,
+            "repairN": 9,
+            "repairCode": 0,
+            "groundedRepair": 0
+          },
+          "O/tight": {
+            "n": 27,
+            "strict": 2,
+            "structure": 2,
+            "meaning": 11,
+            "evidence": 12,
+            "failures": 0,
+            "leaks": 3,
+            "interruptions": 12,
+            "actionTarget": 6,
+            "fit": 8,
+            "states": 0,
+            "repairN": 9,
+            "repairCode": 0,
+            "groundedRepair": 0
+          },
+          "B/wide": {
+            "n": 27,
+            "strict": 12,
+            "structure": 17,
+            "meaning": 16,
+            "evidence": 24,
+            "failures": 0,
+            "leaks": 0,
+            "interruptions": 6,
+            "actionTarget": 18,
+            "fit": 19,
+            "states": 25,
+            "repairN": 9,
+            "repairCode": 7,
+            "groundedRepair": 4
+          },
+          "B/tight": {
+            "n": 27,
+            "strict": 6,
+            "structure": 13,
+            "meaning": 7,
+            "evidence": 14,
+            "failures": 1,
+            "leaks": 3,
+            "interruptions": 13,
+            "actionTarget": 13,
+            "fit": 14,
+            "states": 21,
+            "repairN": 9,
+            "repairCode": 5,
+            "groundedRepair": 3
+          },
+          "L/wide": {
+            "n": 27,
+            "strict": 7,
+            "structure": 16,
+            "meaning": 12,
+            "evidence": 17,
+            "failures": 0,
+            "leaks": 2,
+            "interruptions": 8,
+            "actionTarget": 20,
+            "fit": 16,
+            "states": 27,
+            "repairN": 9,
+            "repairCode": 8,
+            "groundedRepair": 4
+          },
+          "L/tight": {
+            "n": 27,
+            "strict": 5,
+            "structure": 13,
+            "meaning": 7,
+            "evidence": 17,
+            "failures": 1,
+            "leaks": 4,
+            "interruptions": 12,
+            "actionTarget": 13,
+            "fit": 14,
+            "states": 21,
+            "repairN": 9,
+            "repairCode": 4,
+            "groundedRepair": 3
+          },
+          "N/wide": {
+            "n": 27,
+            "strict": 9,
+            "structure": 18,
+            "meaning": 12,
+            "evidence": 21,
+            "failures": 0,
+            "leaks": 2,
+            "interruptions": 8,
+            "actionTarget": 20,
+            "fit": 19,
+            "states": 26,
+            "repairN": 9,
+            "repairCode": 7,
+            "groundedRepair": 3
+          },
+          "N/tight": {
+            "n": 27,
+            "strict": 7,
+            "structure": 14,
+            "meaning": 9,
+            "evidence": 14,
+            "failures": 3,
+            "leaks": 2,
+            "interruptions": 13,
+            "actionTarget": 14,
+            "fit": 14,
+            "states": 20,
+            "repairN": 9,
+            "repairCode": 5,
+            "groundedRepair": 3
+          }
+        },
+        "gpt": {
+          "O/wide": {
+            "n": 27,
+            "strict": 7,
+            "structure": 8,
+            "meaning": 26,
+            "evidence": 27,
+            "failures": 0,
+            "leaks": 0,
+            "interruptions": 1,
+            "actionTarget": 17,
+            "fit": 9,
+            "states": 0,
+            "repairN": 9,
+            "repairCode": 9,
+            "groundedRepair": 9
+          },
+          "O/tight": {
+            "n": 27,
+            "strict": 6,
+            "structure": 7,
+            "meaning": 24,
+            "evidence": 27,
+            "failures": 0,
+            "leaks": 0,
+            "interruptions": 4,
+            "actionTarget": 16,
+            "fit": 11,
+            "states": 0,
+            "repairN": 9,
+            "repairCode": 9,
+            "groundedRepair": 8
+          },
+          "B/wide": {
+            "n": 27,
+            "strict": 18,
+            "structure": 20,
+            "meaning": 23,
+            "evidence": 27,
+            "failures": 0,
+            "leaks": 0,
+            "interruptions": 3,
+            "actionTarget": 22,
+            "fit": 21,
+            "states": 25,
+            "repairN": 9,
+            "repairCode": 8,
+            "groundedRepair": 8
+          },
+          "B/tight": {
+            "n": 27,
+            "strict": 15,
+            "structure": 23,
+            "meaning": 19,
+            "evidence": 27,
+            "failures": 0,
+            "leaks": 0,
+            "interruptions": 0,
+            "actionTarget": 26,
+            "fit": 24,
+            "states": 25,
+            "repairN": 9,
+            "repairCode": 9,
+            "groundedRepair": 4
+          },
+          "L/wide": {
+            "n": 27,
+            "strict": 20,
+            "structure": 22,
+            "meaning": 23,
+            "evidence": 27,
+            "failures": 0,
+            "leaks": 0,
+            "interruptions": 1,
+            "actionTarget": 24,
+            "fit": 23,
+            "states": 22,
+            "repairN": 9,
+            "repairCode": 8,
+            "groundedRepair": 6
+          },
+          "L/tight": {
+            "n": 27,
+            "strict": 19,
+            "structure": 22,
+            "meaning": 22,
+            "evidence": 27,
+            "failures": 0,
+            "leaks": 0,
+            "interruptions": 2,
+            "actionTarget": 24,
+            "fit": 23,
+            "states": 25,
+            "repairN": 9,
+            "repairCode": 8,
+            "groundedRepair": 6
+          },
+          "N/wide": {
+            "n": 27,
+            "strict": 20,
+            "structure": 22,
+            "meaning": 23,
+            "evidence": 27,
+            "failures": 0,
+            "leaks": 0,
+            "interruptions": 1,
+            "actionTarget": 24,
+            "fit": 23,
+            "states": 22,
+            "repairN": 9,
+            "repairCode": 8,
+            "groundedRepair": 7
+          },
+          "N/tight": {
+            "n": 27,
+            "strict": 20,
+            "structure": 23,
+            "meaning": 23,
+            "evidence": 27,
+            "failures": 0,
+            "leaks": 0,
+            "interruptions": 0,
+            "actionTarget": 25,
+            "fit": 24,
+            "states": 25,
+            "repairN": 9,
+            "repairCode": 8,
+            "groundedRepair": 6
+          }
+        }
+      },
+      "receiptPairs": {
+        "deepseek": {
+          "O/wide": {
+            "M46": false,
+            "T71": false,
+            "P85": false
+          },
+          "O/tight": {
+            "M46": false,
+            "T71": false,
+            "P85": false
+          },
+          "B/wide": {
+            "M46": false,
+            "T71": false,
+            "P85": false
+          },
+          "B/tight": {
+            "M46": false,
+            "T71": false,
+            "P85": false
+          },
+          "L/wide": {
+            "M46": false,
+            "T71": false,
+            "P85": false
+          },
+          "L/tight": {
+            "M46": false,
+            "T71": false,
+            "P85": false
+          },
+          "N/wide": {
+            "M46": false,
+            "T71": false,
+            "P85": false
+          },
+          "N/tight": {
+            "M46": false,
+            "T71": false,
+            "P85": false
+          }
+        },
+        "gpt": {
+          "O/wide": {
+            "M46": false,
+            "T71": false,
+            "P85": false
+          },
+          "O/tight": {
+            "M46": false,
+            "T71": false,
+            "P85": false
+          },
+          "B/wide": {
+            "M46": false,
+            "T71": false,
+            "P85": false
+          },
+          "B/tight": {
+            "M46": false,
+            "T71": false,
+            "P85": false
+          },
+          "L/wide": {
+            "M46": false,
+            "T71": false,
+            "P85": false
+          },
+          "L/tight": {
+            "M46": false,
+            "T71": false,
+            "P85": false
+          },
+          "N/wide": {
+            "M46": false,
+            "T71": false,
+            "P85": false
+          },
+          "N/tight": {
+            "M46": false,
+            "T71": false,
+            "P85": false
+          }
+        }
+      },
+      "withinModelContrasts": {
+        "deepseek": {
+          "O -> L": {
+            "win": 11,
+            "loss": 1,
+            "tie": 42
+          },
+          "L -> N": {
+            "win": 7,
+            "loss": 3,
+            "tie": 44
+          },
+          "B -> N": {
+            "win": 4,
+            "loss": 6,
+            "tie": 44
+          },
+          "O -> N": {
+            "win": 16,
+            "loss": 2,
+            "tie": 36
+          }
+        },
+        "gpt": {
+          "O -> L": {
+            "win": 28,
+            "loss": 2,
+            "tie": 24
+          },
+          "L -> N": {
+            "win": 4,
+            "loss": 3,
+            "tie": 47
+          },
+          "B -> N": {
+            "win": 8,
+            "loss": 1,
+            "tie": 45
+          },
+          "O -> N": {
+            "win": 28,
+            "loss": 1,
+            "tie": 25
+          }
+        }
+      },
+      "deepseekToGpt": {
+        "O": {
+          "win": 11,
+          "loss": 0,
+          "tie": 43
+        },
+        "B": {
+          "win": 19,
+          "loss": 4,
+          "tie": 31
+        },
+        "L": {
+          "win": 29,
+          "loss": 2,
+          "tie": 23
+        },
+        "N": {
+          "win": 25,
+          "loss": 1,
+          "tie": 28
+        }
+      },
+      "byJob": {
+        "deepseek": {
+          "O": {
+            "M46": {
+              "n": 18,
+              "strict": 0,
+              "structure": 0,
+              "meaning": 5,
+              "evidence": 11,
+              "failures": 0,
+              "leaks": 2,
+              "interruptions": 9,
+              "actionTarget": 3,
+              "fit": 3,
+              "states": 0,
+              "repairN": 6,
+              "repairCode": 0,
+              "groundedRepair": 0
+            },
+            "T71": {
+              "n": 18,
+              "strict": 2,
+              "structure": 2,
+              "meaning": 11,
+              "evidence": 11,
+              "failures": 0,
+              "leaks": 1,
+              "interruptions": 6,
+              "actionTarget": 7,
+              "fit": 4,
+              "states": 0,
+              "repairN": 6,
+              "repairCode": 0,
+              "groundedRepair": 0
+            },
+            "P85": {
+              "n": 18,
+              "strict": 0,
+              "structure": 0,
+              "meaning": 5,
+              "evidence": 6,
+              "failures": 0,
+              "leaks": 2,
+              "interruptions": 7,
+              "actionTarget": 3,
+              "fit": 5,
+              "states": 0,
+              "repairN": 6,
+              "repairCode": 0,
+              "groundedRepair": 0
+            }
+          },
+          "B": {
+            "M46": {
+              "n": 18,
+              "strict": 5,
+              "structure": 8,
+              "meaning": 6,
+              "evidence": 13,
+              "failures": 0,
+              "leaks": 1,
+              "interruptions": 9,
+              "actionTarget": 9,
+              "fit": 10,
+              "states": 14,
+              "repairN": 6,
+              "repairCode": 4,
+              "groundedRepair": 3
+            },
+            "T71": {
+              "n": 18,
+              "strict": 8,
+              "structure": 11,
+              "meaning": 9,
+              "evidence": 12,
+              "failures": 1,
+              "leaks": 0,
+              "interruptions": 6,
+              "actionTarget": 11,
+              "fit": 11,
+              "states": 16,
+              "repairN": 6,
+              "repairCode": 4,
+              "groundedRepair": 2
+            },
+            "P85": {
+              "n": 18,
+              "strict": 5,
+              "structure": 11,
+              "meaning": 8,
+              "evidence": 13,
+              "failures": 0,
+              "leaks": 2,
+              "interruptions": 4,
+              "actionTarget": 11,
+              "fit": 12,
+              "states": 16,
+              "repairN": 6,
+              "repairCode": 4,
+              "groundedRepair": 2
+            }
+          },
+          "L": {
+            "M46": {
+              "n": 18,
+              "strict": 4,
+              "structure": 8,
+              "meaning": 6,
+              "evidence": 14,
+              "failures": 0,
+              "leaks": 1,
+              "interruptions": 7,
+              "actionTarget": 9,
+              "fit": 9,
+              "states": 15,
+              "repairN": 6,
+              "repairCode": 4,
+              "groundedRepair": 2
+            },
+            "T71": {
+              "n": 18,
+              "strict": 6,
+              "structure": 12,
+              "meaning": 9,
+              "evidence": 13,
+              "failures": 0,
+              "leaks": 0,
+              "interruptions": 5,
+              "actionTarget": 14,
+              "fit": 12,
+              "states": 17,
+              "repairN": 6,
+              "repairCode": 5,
+              "groundedRepair": 3
+            },
+            "P85": {
+              "n": 18,
+              "strict": 2,
+              "structure": 9,
+              "meaning": 4,
+              "evidence": 7,
+              "failures": 1,
+              "leaks": 5,
+              "interruptions": 8,
+              "actionTarget": 10,
+              "fit": 9,
+              "states": 16,
+              "repairN": 6,
+              "repairCode": 3,
+              "groundedRepair": 2
+            }
+          },
+          "N": {
+            "M46": {
+              "n": 18,
+              "strict": 5,
+              "structure": 10,
+              "meaning": 6,
+              "evidence": 11,
+              "failures": 1,
+              "leaks": 2,
+              "interruptions": 9,
+              "actionTarget": 11,
+              "fit": 10,
+              "states": 15,
+              "repairN": 6,
+              "repairCode": 4,
+              "groundedRepair": 3
+            },
+            "T71": {
+              "n": 18,
+              "strict": 7,
+              "structure": 11,
+              "meaning": 9,
+              "evidence": 13,
+              "failures": 1,
+              "leaks": 0,
+              "interruptions": 6,
+              "actionTarget": 12,
+              "fit": 11,
+              "states": 16,
+              "repairN": 6,
+              "repairCode": 4,
+              "groundedRepair": 2
+            },
+            "P85": {
+              "n": 18,
+              "strict": 4,
+              "structure": 11,
+              "meaning": 6,
+              "evidence": 11,
+              "failures": 1,
+              "leaks": 2,
+              "interruptions": 6,
+              "actionTarget": 11,
+              "fit": 12,
+              "states": 15,
+              "repairN": 6,
+              "repairCode": 4,
+              "groundedRepair": 1
+            }
+          }
+        },
+        "gpt": {
+          "O": {
+            "M46": {
+              "n": 18,
+              "strict": 5,
+              "structure": 5,
+              "meaning": 17,
+              "evidence": 18,
+              "failures": 0,
+              "leaks": 0,
+              "interruptions": 0,
+              "actionTarget": 11,
+              "fit": 7,
+              "states": 0,
+              "repairN": 6,
+              "repairCode": 6,
+              "groundedRepair": 6
+            },
+            "T71": {
+              "n": 18,
+              "strict": 6,
+              "structure": 6,
+              "meaning": 15,
+              "evidence": 18,
+              "failures": 0,
+              "leaks": 0,
+              "interruptions": 0,
+              "actionTarget": 12,
+              "fit": 7,
+              "states": 0,
+              "repairN": 6,
+              "repairCode": 6,
+              "groundedRepair": 5
+            },
+            "P85": {
+              "n": 18,
+              "strict": 2,
+              "structure": 4,
+              "meaning": 18,
+              "evidence": 18,
+              "failures": 0,
+              "leaks": 0,
+              "interruptions": 5,
+              "actionTarget": 10,
+              "fit": 6,
+              "states": 0,
+              "repairN": 6,
+              "repairCode": 6,
+              "groundedRepair": 6
+            }
+          },
+          "B": {
+            "M46": {
+              "n": 18,
+              "strict": 9,
+              "structure": 13,
+              "meaning": 13,
+              "evidence": 18,
+              "failures": 0,
+              "leaks": 0,
+              "interruptions": 3,
+              "actionTarget": 15,
+              "fit": 13,
+              "states": 17,
+              "repairN": 6,
+              "repairCode": 6,
+              "groundedRepair": 4
+            },
+            "T71": {
+              "n": 18,
+              "strict": 14,
+              "structure": 16,
+              "meaning": 16,
+              "evidence": 18,
+              "failures": 0,
+              "leaks": 0,
+              "interruptions": 0,
+              "actionTarget": 18,
+              "fit": 16,
+              "states": 17,
+              "repairN": 6,
+              "repairCode": 6,
+              "groundedRepair": 5
+            },
+            "P85": {
+              "n": 18,
+              "strict": 10,
+              "structure": 14,
+              "meaning": 13,
+              "evidence": 18,
+              "failures": 0,
+              "leaks": 0,
+              "interruptions": 0,
+              "actionTarget": 15,
+              "fit": 16,
+              "states": 16,
+              "repairN": 6,
+              "repairCode": 5,
+              "groundedRepair": 3
+            }
+          },
+          "L": {
+            "M46": {
+              "n": 18,
+              "strict": 11,
+              "structure": 14,
+              "meaning": 13,
+              "evidence": 18,
+              "failures": 0,
+              "leaks": 0,
+              "interruptions": 3,
+              "actionTarget": 16,
+              "fit": 14,
+              "states": 17,
+              "repairN": 6,
+              "repairCode": 6,
+              "groundedRepair": 4
+            },
+            "T71": {
+              "n": 18,
+              "strict": 14,
+              "structure": 16,
+              "meaning": 16,
+              "evidence": 18,
+              "failures": 0,
+              "leaks": 0,
+              "interruptions": 0,
+              "actionTarget": 18,
+              "fit": 16,
+              "states": 17,
+              "repairN": 6,
+              "repairCode": 6,
+              "groundedRepair": 4
+            },
+            "P85": {
+              "n": 18,
+              "strict": 14,
+              "structure": 14,
+              "meaning": 16,
+              "evidence": 18,
+              "failures": 0,
+              "leaks": 0,
+              "interruptions": 0,
+              "actionTarget": 14,
+              "fit": 16,
+              "states": 13,
+              "repairN": 6,
+              "repairCode": 4,
+              "groundedRepair": 4
+            }
+          },
+          "N": {
+            "M46": {
+              "n": 18,
+              "strict": 15,
+              "structure": 15,
+              "meaning": 17,
+              "evidence": 18,
+              "failures": 0,
+              "leaks": 0,
+              "interruptions": 1,
+              "actionTarget": 17,
+              "fit": 15,
+              "states": 16,
+              "repairN": 6,
+              "repairCode": 6,
+              "groundedRepair": 6
+            },
+            "T71": {
+              "n": 18,
+              "strict": 14,
+              "structure": 16,
+              "meaning": 16,
+              "evidence": 18,
+              "failures": 0,
+              "leaks": 0,
+              "interruptions": 0,
+              "actionTarget": 18,
+              "fit": 16,
+              "states": 15,
+              "repairN": 6,
+              "repairCode": 6,
+              "groundedRepair": 4
+            },
+            "P85": {
+              "n": 18,
+              "strict": 11,
+              "structure": 14,
+              "meaning": 13,
+              "evidence": 18,
+              "failures": 0,
+              "leaks": 0,
+              "interruptions": 0,
+              "actionTarget": 14,
+              "fit": 16,
+              "states": 16,
+              "repairN": 6,
+              "repairCode": 4,
+              "groundedRepair": 3
+            }
+          }
+        }
+      }
+    }
+  },
+  "judgeAgreement": {
+    "n": 432,
+    "strictAgreed": 361,
+    "meaningOKAgreed": 317,
+    "evidenceOKAgreed": 375,
+    "unrelatedPreservedAgreed": 399,
+    "hypothesisLeakAgreed": 414,
+    "unneededInterruptionAgreed": 358
+  },
+  "usage": {
+    "deepseek": {
+      "write/old": {
+        "calls": 4,
+        "errors": 0,
+        "input": 1216,
+        "output": 393,
+        "cachedInput": 128,
+        "reasoningOutput": 0,
+        "latencyMs": 0
+      },
+      "write/guarded": {
+        "calls": 4,
+        "errors": 0,
+        "input": 1120,
+        "output": 319,
+        "cachedInput": 128,
+        "reasoningOutput": 0,
+        "latencyMs": 0
+      },
+      "dev/L/wide": {
+        "calls": 18,
+        "errors": 0,
+        "input": 58647,
+        "output": 2017,
+        "cachedInput": 4352,
+        "reasoningOutput": 0,
+        "latencyMs": 0
+      },
+      "dev/O/wide": {
+        "calls": 18,
+        "errors": 0,
+        "input": 55862,
+        "output": 2162,
+        "cachedInput": 1920,
+        "reasoningOutput": 0,
+        "latencyMs": 0
+      },
+      "dev/B/wide": {
+        "calls": 18,
+        "errors": 0,
+        "input": 57862,
+        "output": 2045,
+        "cachedInput": 9340,
+        "reasoningOutput": 0,
+        "latencyMs": 0
+      },
+      "dev/N/wide": {
+        "calls": 18,
+        "errors": 0,
+        "input": 59785,
+        "output": 2118,
+        "cachedInput": 10240,
+        "reasoningOutput": 0,
+        "latencyMs": 0
+      },
+      "dev/B/tight": {
+        "calls": 36,
+        "errors": 0,
+        "input": 37434,
+        "output": 2366,
+        "cachedInput": 16512,
+        "reasoningOutput": 0,
+        "latencyMs": 0
+      },
+      "dev/O/tight": {
+        "calls": 36,
+        "errors": 0,
+        "input": 37844,
+        "output": 2457,
+        "cachedInput": 10752,
+        "reasoningOutput": 0,
+        "latencyMs": 0
+      },
+      "dev/N/tight": {
+        "calls": 36,
+        "errors": 0,
+        "input": 39293,
+        "output": 2303,
+        "cachedInput": 19968,
+        "reasoningOutput": 0,
+        "latencyMs": 0
+      },
+      "dev/L/tight": {
+        "calls": 36,
+        "errors": 0,
+        "input": 38964,
+        "output": 2420,
+        "cachedInput": 15744,
+        "reasoningOutput": 0,
+        "latencyMs": 0
+      },
+      "holdout/L/wide": {
+        "calls": 54,
+        "errors": 0,
+        "input": 177387,
+        "output": 6722,
+        "cachedInput": 13568,
+        "reasoningOutput": 0,
+        "latencyMs": 0
+      },
+      "holdout/O/wide": {
+        "calls": 54,
+        "errors": 0,
+        "input": 168971,
+        "output": 6825,
+        "cachedInput": 4992,
+        "reasoningOutput": 0,
+        "latencyMs": 0
+      },
+      "holdout/N/wide": {
+        "calls": 54,
+        "errors": 0,
+        "input": 179822,
+        "output": 6380,
+        "cachedInput": 14592,
+        "reasoningOutput": 0,
+        "latencyMs": 0
+      },
+      "holdout/B/wide": {
+        "calls": 54,
+        "errors": 0,
+        "input": 174841,
+        "output": 6476,
+        "cachedInput": 12800,
+        "reasoningOutput": 0,
+        "latencyMs": 0
+      },
+      "holdout/N/tight": {
+        "calls": 105,
+        "errors": 0,
+        "input": 113214,
+        "output": 7194,
+        "cachedInput": 49664,
+        "reasoningOutput": 0,
+        "latencyMs": 0
+      },
+      "holdout/B/tight": {
+        "calls": 105,
+        "errors": 0,
+        "input": 110678,
+        "output": 7650,
+        "cachedInput": 42364,
+        "reasoningOutput": 0,
+        "latencyMs": 0
+      },
+      "holdout/L/tight": {
+        "calls": 108,
+        "errors": 0,
+        "input": 116780,
+        "output": 7639,
+        "cachedInput": 48000,
+        "reasoningOutput": 0,
+        "latencyMs": 0
+      },
+      "holdout/O/tight": {
+        "calls": 108,
+        "errors": 0,
+        "input": 112200,
+        "output": 7498,
+        "cachedInput": 32384,
+        "reasoningOutput": 0,
+        "latencyMs": 0
+      }
+    },
+    "gpt": {
+      "write/old": {
+        "calls": 4,
+        "errors": 0,
+        "input": 1330,
+        "output": 1193,
+        "cachedInput": 0,
+        "reasoningOutput": 662,
+        "latencyMs": 33685
+      },
+      "write/guarded": {
+        "calls": 4,
+        "errors": 0,
+        "input": 1234,
+        "output": 988,
+        "cachedInput": 0,
+        "reasoningOutput": 677,
+        "latencyMs": 22300
+      },
+      "dev/L/wide": {
+        "calls": 18,
+        "errors": 0,
+        "input": 72757,
+        "output": 2844,
+        "cachedInput": 0,
+        "reasoningOutput": 663,
+        "latencyMs": 81985
+      },
+      "dev/O/wide": {
+        "calls": 18,
+        "errors": 0,
+        "input": 70051,
+        "output": 3423,
+        "cachedInput": 0,
+        "reasoningOutput": 609,
+        "latencyMs": 98772
+      },
+      "dev/B/wide": {
+        "calls": 18,
+        "errors": 0,
+        "input": 71688,
+        "output": 3408,
+        "cachedInput": 0,
+        "reasoningOutput": 1300,
+        "latencyMs": 94783
+      },
+      "dev/N/wide": {
+        "calls": 18,
+        "errors": 0,
+        "input": 73756,
+        "output": 3250,
+        "cachedInput": 0,
+        "reasoningOutput": 1114,
+        "latencyMs": 92505
+      },
+      "dev/B/tight": {
+        "calls": 36,
+        "errors": 0,
+        "input": 43276,
+        "output": 4539,
+        "cachedInput": 7260,
+        "reasoningOutput": 2127,
+        "latencyMs": 143254
+      },
+      "dev/O/tight": {
+        "calls": 36,
+        "errors": 0,
+        "input": 43858,
+        "output": 4215,
+        "cachedInput": 7296,
+        "reasoningOutput": 1110,
+        "latencyMs": 137417
+      },
+      "dev/N/tight": {
+        "calls": 36,
+        "errors": 0,
+        "input": 44911,
+        "output": 5085,
+        "cachedInput": 7707,
+        "reasoningOutput": 2735,
+        "latencyMs": 158041
+      },
+      "dev/L/tight": {
+        "calls": 36,
+        "errors": 0,
+        "input": 45379,
+        "output": 4284,
+        "cachedInput": 8818,
+        "reasoningOutput": 1929,
+        "latencyMs": 138404
+      },
+      "holdout/L/wide": {
+        "calls": 54,
+        "errors": 0,
+        "input": 219379,
+        "output": 9894,
+        "cachedInput": 0,
+        "reasoningOutput": 2946,
+        "latencyMs": 280586
+      },
+      "holdout/O/wide": {
+        "calls": 54,
+        "errors": 0,
+        "input": 210717,
+        "output": 10146,
+        "cachedInput": 0,
+        "reasoningOutput": 1927,
+        "latencyMs": 287107
+      },
+      "holdout/N/wide": {
+        "calls": 54,
+        "errors": 0,
+        "input": 220443,
+        "output": 9499,
+        "cachedInput": 0,
+        "reasoningOutput": 2786,
+        "latencyMs": 284810
+      },
+      "holdout/B/wide": {
+        "calls": 54,
+        "errors": 0,
+        "input": 216032,
+        "output": 8864,
+        "cachedInput": 0,
+        "reasoningOutput": 2218,
+        "latencyMs": 263714
+      },
+      "holdout/N/tight": {
+        "calls": 108,
+        "errors": 0,
+        "input": 132985,
+        "output": 12320,
+        "cachedInput": 23403,
+        "reasoningOutput": 5014,
+        "latencyMs": 424726
+      },
+      "holdout/B/tight": {
+        "calls": 108,
+        "errors": 0,
+        "input": 130965,
+        "output": 12138,
+        "cachedInput": 23067,
+        "reasoningOutput": 4736,
+        "latencyMs": 423832
+      },
+      "holdout/L/tight": {
+        "calls": 108,
+        "errors": 0,
+        "input": 136944,
+        "output": 12576,
+        "cachedInput": 24205,
+        "reasoningOutput": 5072,
+        "latencyMs": 437957
+      },
+      "holdout/O/tight": {
+        "calls": 108,
+        "errors": 0,
+        "input": 132882,
+        "output": 13058,
+        "cachedInput": 23216,
+        "reasoningOutput": 4027,
+        "latencyMs": 442202
+      }
+    }
+  },
+  "judgeUsage": {
+    "deepseek": {
+      "calls": 27,
+      "input": 132787,
+      "output": 38980,
+      "cachedInput": 7424,
+      "reasoningOutput": 0
+    },
+    "gpt": {
+      "calls": 27,
+      "input": 141055,
+      "output": 50453,
+      "cachedInput": 0,
+      "reasoningOutput": 7028
+    }
+  },
+  "metadata": {
+    "deepseek": {
+      "returnedModels": {},
+      "finishReasons": {},
+      "cells": {
+        "dev": {
+          "ok": 69,
+          "failed": 3
+        },
+        "holdout": {
+          "ok": 211,
+          "failed": 5
+        }
+      }
+    },
+    "gpt": {
+      "returnedModels": {
+        "gpt-6.1-sol": 872
+      },
+      "finishReasons": {
+        "stop": 872
+      },
+      "cells": {
+        "dev": {
+          "ok": 72
+        },
+        "holdout": {
+          "ok": 216
+        }
+      },
+      "firstAttemptInfrastructureFailures": [
+        {
+          "id": "K23-06/tight/L/match-1",
+          "state": "error",
+          "error": "SQLite lock during concurrent dev/holdout write; response unavailable in journal; counted as infrastructure failure without retry",
+          "attempt": 1
+        },
+        {
+          "id": "P85-09/tight/B/report-1",
+          "state": "error",
+          "error": "Network failure: TypeError UND_ERR_SOCKET",
+          "attempt": 1
+        },
+        {
+          "id": "P85-09/tight/L/report-1",
+          "state": "error",
+          "error": "Network failure: TypeError UND_ERR_SOCKET",
+          "attempt": 1
+        },
+        {
+          "id": "P85-09/tight/N/report-1",
+          "state": "error",
+          "error": "Network failure: TypeError UND_ERR_SOCKET",
+          "attempt": 1
+        },
+        {
+          "id": "P85-09/tight/O/report-1",
+          "state": "error",
+          "error": "Network failure: TypeError UND_ERR_SOCKET",
+          "attempt": 1
+        }
+      ],
+      "usageCaveat": "Five failed attempts had no response usage; measured totals exclude that unknown usage."
+    }
+  },
+  "manifests": {
+    "deepseek": {
+      "legacy": "aa87b05d99f49f50988bc02d11fa62261360ec7002b99262f10b78fc745bc0a0",
+      "protocol": "31044ce564e7361f8f164589317eea3ee9e6179453009a12e4fa3fac97fbefa9",
+      "runner": "f491b3089ebe264c9d75f92e1b3d132d15c1eb01d580a2f3a41e857216f339db",
+      "files": [
+        "a429a2f53289000497c932e59c4ff4c1f01cadee373f1d5fd9ab99be7c77d165",
+        "ddb644fab1869824a71b35d1788d2dff6cf768629cbce3bdb786b0b22b31b404",
+        "ec384a644ce4fd4c57969e326d66f31740fe34139e0aa3ca990e0719edd75851"
+      ],
+      "host": [
+        "06c641b1ef5e6e58e684260d3a6288598382e5af508d8ff6a50c2f4adf0cbc56",
+        "3b7a76246cb8fdba84d2e4a4a74a5bf395079e7f0b661474c3deb5d264baa583",
+        "d5ff0b21284ffda9ddbd74719421d963f1a89bcdfa906d52b7a45df710d65b67",
+        "a1c1660649e7aaddd4c8616db3b55bd496738840590e8aa4d672ae6acc8fd550"
+      ],
+      "mode": "live",
+      "model": "deepseek-flash",
+      "baseUrl": "[REDACTED_URL]",
+      "responseLimit": 1100,
+      "hook": null,
+      "budgets": {
+        "wide": 20000,
+        "tight": 2800
+      }
+    },
+    "gpt": {
+      "legacy": "aa87b05d99f49f50988bc02d11fa62261360ec7002b99262f10b78fc745bc0a0",
+      "protocol": "31044ce564e7361f8f164589317eea3ee9e6179453009a12e4fa3fac97fbefa9",
+      "runner": "5ce9dafd4513ef582ff2fb63fd9f4211c0025b1f5755f99024e605837b06deb1",
+      "adapter": "34522ad6a86018cf3daf68d89b9200dd1edb003ac8e35a8e63038839a60788b9",
+      "reasoningEffort": "medium",
+      "files": [
+        "a429a2f53289000497c932e59c4ff4c1f01cadee373f1d5fd9ab99be7c77d165",
+        "ddb644fab1869824a71b35d1788d2dff6cf768629cbce3bdb786b0b22b31b404",
+        "ec384a644ce4fd4c57969e326d66f31740fe34139e0aa3ca990e0719edd75851"
+      ],
+      "host": [
+        "06c641b1ef5e6e58e684260d3a6288598382e5af508d8ff6a50c2f4adf0cbc56",
+        "3b7a76246cb8fdba84d2e4a4a74a5bf395079e7f0b661474c3deb5d264baa583",
+        "d5ff0b21284ffda9ddbd74719421d963f1a89bcdfa906d52b7a45df710d65b67",
+        "a1c1660649e7aaddd4c8616db3b55bd496738840590e8aa4d672ae6acc8fd550"
+      ],
+      "mode": "live",
+      "model": "gpt-6.1-sol",
+      "baseUrl": "https://api.openai.com/v1",
+      "responseLimit": 8192,
+      "hook": null,
+      "budgets": {
+        "wide": 20000,
+        "tight": 2800
+      }
+    }
+  },
+  "contextUsage": {
+    "deepseek/B/tight/match": {
+      "cells": 26,
+      "reread": 26,
+      "firstPassRemoved": 353,
+      "finalVisibleSources": 113
+    },
+    "deepseek/B/tight/report": {
+      "cells": 26,
+      "reread": 26,
+      "firstPassRemoved": 431,
+      "finalVisibleSources": 130
+    },
+    "deepseek/L/tight/match": {
+      "cells": 26,
+      "reread": 26,
+      "firstPassRemoved": 352,
+      "finalVisibleSources": 112
+    },
+    "deepseek/L/tight/report": {
+      "cells": 26,
+      "reread": 26,
+      "firstPassRemoved": 430,
+      "finalVisibleSources": 130
+    },
+    "deepseek/N/tight/match": {
+      "cells": 24,
+      "reread": 24,
+      "firstPassRemoved": 331,
+      "finalVisibleSources": 104
+    },
+    "deepseek/N/tight/report": {
+      "cells": 24,
+      "reread": 24,
+      "firstPassRemoved": 406,
+      "finalVisibleSources": 120
+    },
+    "deepseek/O/tight/match": {
+      "cells": 27,
+      "reread": 27,
+      "firstPassRemoved": 366,
+      "finalVisibleSources": 117
+    },
+    "deepseek/O/tight/report": {
+      "cells": 27,
+      "reread": 27,
+      "firstPassRemoved": 416,
+      "finalVisibleSources": 133
+    },
+    "deepseek/B/wide/match": {
+      "cells": 27,
+      "reread": 0,
+      "firstPassRemoved": 0,
+      "finalVisibleSources": 123
+    },
+    "deepseek/B/wide/report": {
+      "cells": 27,
+      "reread": 0,
+      "firstPassRemoved": 0,
+      "finalVisibleSources": 150
+    },
+    "deepseek/L/wide/match": {
+      "cells": 27,
+      "reread": 0,
+      "firstPassRemoved": 0,
+      "finalVisibleSources": 123
+    },
+    "deepseek/L/wide/report": {
+      "cells": 27,
+      "reread": 0,
+      "firstPassRemoved": 0,
+      "finalVisibleSources": 150
+    },
+    "deepseek/N/wide/match": {
+      "cells": 27,
+      "reread": 0,
+      "firstPassRemoved": 0,
+      "finalVisibleSources": 123
+    },
+    "deepseek/N/wide/report": {
+      "cells": 27,
+      "reread": 0,
+      "firstPassRemoved": 0,
+      "finalVisibleSources": 150
+    },
+    "deepseek/O/wide/match": {
+      "cells": 27,
+      "reread": 0,
+      "firstPassRemoved": 0,
+      "finalVisibleSources": 123
+    },
+    "deepseek/O/wide/report": {
+      "cells": 27,
+      "reread": 0,
+      "firstPassRemoved": 0,
+      "finalVisibleSources": 150
+    },
+    "gpt/B/tight/match": {
+      "cells": 27,
+      "reread": 27,
+      "firstPassRemoved": 366,
+      "finalVisibleSources": 117
+    },
+    "gpt/B/tight/report": {
+      "cells": 27,
+      "reread": 27,
+      "firstPassRemoved": 447,
+      "finalVisibleSources": 135
+    },
+    "gpt/L/tight/match": {
+      "cells": 27,
+      "reread": 27,
+      "firstPassRemoved": 366,
+      "finalVisibleSources": 117
+    },
+    "gpt/L/tight/report": {
+      "cells": 27,
+      "reread": 27,
+      "firstPassRemoved": 447,
+      "finalVisibleSources": 135
+    },
+    "gpt/N/tight/match": {
+      "cells": 27,
+      "reread": 27,
+      "firstPassRemoved": 368,
+      "finalVisibleSources": 117
+    },
+    "gpt/N/tight/report": {
+      "cells": 27,
+      "reread": 27,
+      "firstPassRemoved": 457,
+      "finalVisibleSources": 135
+    },
+    "gpt/O/tight/match": {
+      "cells": 27,
+      "reread": 27,
+      "firstPassRemoved": 366,
+      "finalVisibleSources": 117
+    },
+    "gpt/O/tight/report": {
+      "cells": 27,
+      "reread": 27,
+      "firstPassRemoved": 418,
+      "finalVisibleSources": 135
+    },
+    "gpt/B/wide/match": {
+      "cells": 27,
+      "reread": 0,
+      "firstPassRemoved": 0,
+      "finalVisibleSources": 123
+    },
+    "gpt/B/wide/report": {
+      "cells": 27,
+      "reread": 0,
+      "firstPassRemoved": 0,
+      "finalVisibleSources": 150
+    },
+    "gpt/L/wide/match": {
+      "cells": 27,
+      "reread": 0,
+      "firstPassRemoved": 0,
+      "finalVisibleSources": 123
+    },
+    "gpt/L/wide/report": {
+      "cells": 27,
+      "reread": 0,
+      "firstPassRemoved": 0,
+      "finalVisibleSources": 150
+    },
+    "gpt/N/wide/match": {
+      "cells": 27,
+      "reread": 0,
+      "firstPassRemoved": 0,
+      "finalVisibleSources": 123
+    },
+    "gpt/N/wide/report": {
+      "cells": 27,
+      "reread": 0,
+      "firstPassRemoved": 0,
+      "finalVisibleSources": 150
+    },
+    "gpt/O/wide/match": {
+      "cells": 27,
+      "reread": 0,
+      "firstPassRemoved": 0,
+      "finalVisibleSources": 123
+    },
+    "gpt/O/wide/report": {
+      "cells": 27,
+      "reread": 0,
+      "firstPassRemoved": 0,
+      "finalVisibleSources": 150
+    }
+  }
+}

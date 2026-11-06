@@ -1,0 +1,56 @@
+{
+  "phase": "A2-commit-consistency-prepared",
+  "provider": "deepseek",
+  "arms": [
+    "original",
+    "answer-first",
+    "review"
+  ],
+  "cases": 96,
+  "newCases": 72,
+  "regressions": 24,
+  "families": 8,
+  "completionLimit": 3072,
+  "caseCaps": {
+    "attempts": 3,
+    "inputTokens": 250000,
+    "outputTokens": 9216
+  },
+  "workers": 4,
+  "readLimit": 3,
+  "memoryLimit": 16,
+  "physicalMaximumCalls": 288,
+  "standaloneMaximumCalls": {
+    "original": 96,
+    "answer-first": 96,
+    "review": 192
+  },
+  "design": "Same deterministic source-bound packet for every arm, no stochastic evidence-selection stage. New cases fully cross 3 jobs x 3 target roles x 8 families. Previous A1 24 cases are a separately reported seen regression set. Family variants are correlated; no IID significance claim. This is a fixed-target local diagnostic, not end-to-end performance.",
+  "orderIntervention": "Only move answer to the first key of the baseline system-message JSON example. All other instructions, values and user payload are byte-identical. Report actual top-level key-order adherence; nonadherent cases remain in intent-to-treat scoring.",
+  "reviewIntervention": "One additional model call with exactly the same evidence plus the original candidate. Returns a final verdict; host constructs patch with target ID/version. This combines additional compute, changed schema and programmatic commit construction, not an isolated order effect. It can still write a semantically wrong value.",
+  "sharing": "Original and review share one physical first candidate, so repair/harm is measured relative to that exact candidate. Original and answer-first are independent calls on identical evidence. First two calls alternate order by case index; review always follows its candidate. No replay presented as independent resampling.",
+  "failurePolicy": "Keep all cases and paid failures. Invalid first JSON/schema skips review (no usable candidate). Valid candidate with invalid commit may still be reviewed. Invalid review/schema/commit or transport failure locally falls back to original state and keeps its own failure in audit. Valid but wrong reviews are NOT rolled back using gold. No quality retries or unregistered resume.",
+  "metrics": [
+    "value AND status correct with no collateral changes",
+    "paired repair/harm/ties",
+    "split/family/job/role breakdown",
+    "unknown false certainty",
+    "known over-null",
+    "key-order adherence",
+    "review rejection and fallback",
+    "write count and unchanged-value writes",
+    "physical and standalone allocated usage",
+    "manual-AI semantic consistency audit"
+  ],
+  "semanticAudit": "Export every response and reference state for local/subagent audit. No claim of automated natural-language entailment scoring; pending semantic audit is explicitly separate from deterministic field scoring. No GPT judging calls.",
+  "decision": "This preparatory protocol does not authorize new GPT calls. A2 may demonstrate a basic submission repair only. Active probe gains require subsequent matched-compute comparisons. Progress toward that stage requires positive net repairs on new cases, no increase in false certainty for missing/open-unknown cases, at least 90% new-case field/status correctness, and review of remaining semantic errors. These are engineering screening criteria, not statistical proof; no guarantee the next run will meet them.",
+  "disabled": [
+    "GPT",
+    "active-probes",
+    "branch-rehearsal",
+    "automatic-dependency-extraction",
+    "cross-event-reuse",
+    "context-compression",
+    "external-actions"
+  ]
+}

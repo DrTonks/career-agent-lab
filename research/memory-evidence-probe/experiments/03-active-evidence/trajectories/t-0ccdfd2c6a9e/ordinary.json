@@ -1,0 +1,1230 @@
+{
+  "trajectoryId": "t-0ccdfd2c6a9e",
+  "arm": "ordinary",
+  "records": [
+    {
+      "eventId": "e-199bfb6b20b8",
+      "arm": "ordinary",
+      "calls": 1,
+      "reads": [],
+      "skipped": [],
+      "errors": [],
+      "extraError": null,
+      "extra": null,
+      "certificate": null,
+      "obligations": [],
+      "decisions": [],
+      "before": {
+        "match": {
+          "id": "match",
+          "role": "match",
+          "version": 2,
+          "values": {
+            "eligible": true
+          },
+          "status": "current",
+          "refs": [
+            "initial-t-0ccdfd2c6a9e",
+            "d-05ec54587130"
+          ],
+          "text": "每周5天、每天8小时，总时长40小时，满足至少4天且至少34小时，资格为true。"
+        },
+        "path": {
+          "id": "path",
+          "role": "path",
+          "version": 2,
+          "values": {
+            "next": "wait"
+          },
+          "status": "current",
+          "refs": [
+            "initial-t-0ccdfd2c6a9e",
+            "d-05ec54587130"
+          ],
+          "text": "每周5天、每天8小时，总时长40小时，满足至少4天且至少34小时，资格符合；申请在途，建议wait。"
+        },
+        "report": {
+          "id": "report",
+          "role": "report",
+          "version": 2,
+          "values": {
+            "recommend": true
+          },
+          "status": "current",
+          "refs": [
+            "initial-t-0ccdfd2c6a9e",
+            "d-05ec54587130"
+          ],
+          "text": "每周5天、每天8小时，总时长40小时，满足至少4天且至少34小时，资格为true，因此recommend为true。"
+        }
+      },
+      "scheduledCandidates": [
+        "match",
+        "path",
+        "report"
+      ],
+      "remainingCandidates": [
+        "match",
+        "path",
+        "report"
+      ],
+      "proposedPlan": {
+        "answer": "候选组合中(3,6)(3,7)不满足至少4天，(5,6)(5,7)均满足至少4天且总时长≥34小时，故资格确定true；申请在途，next=wait，recommend=true，旧记忆结论仍成立。",
+        "readIds": [],
+        "reviewIds": []
+      },
+      "plan": {
+        "answer": "候选组合中(3,6)(3,7)不满足至少4天，(5,6)(5,7)均满足至少4天且总时长≥34小时，故资格确定true；申请在途，next=wait，recommend=true，旧记忆结论仍成立。",
+        "readIds": [],
+        "reviewIds": []
+      },
+      "state": {
+        "scope": "scope-4451ab30bc57",
+        "rule": {
+          "id": "d-05ec54587130",
+          "text": "来源系统规则原件，第1版，作用域scope-4451ab30bc57，岗位“钟表藏品测绘助理”。完整资格条件为每周至少4天，且每周总排班时长至少34小时；总排班时长=每周天数×每天小时数，两项须同时满足，无认证替代或其他隐含条件。本版从载有它的本轮事件开始生效，并替代同作用域此前规则。天数为非负整数，每天小时数为非负数。行动约定：符合且没有在途申请为apply，符合且申请在途为wait；不符合且申请在途为withdraw，不符合且没有在途申请为none。报告recommend与资格一致。原文穷尽的全部可能情形结论相同则可确定目标，否则目标值为null且status=uncertain；确定目标status=current。这里只维护建议，不执行外部操作；已撤回申请不得再次建议撤回。",
+          "minDays": 4,
+          "minHours": 34
+        },
+        "facts": {
+          "days": {
+            "value": null,
+            "alternatives": [
+              3,
+              5
+            ],
+            "version": 2
+          },
+          "hours": {
+            "value": null,
+            "alternatives": [
+              6,
+              7
+            ],
+            "version": 2
+          },
+          "applied": {
+            "value": true,
+            "alternatives": null,
+            "version": 1
+          }
+        },
+        "memories": {
+          "match": {
+            "id": "match",
+            "role": "match",
+            "version": 2,
+            "values": {
+              "eligible": true
+            },
+            "status": "current",
+            "refs": [
+              "initial-t-0ccdfd2c6a9e",
+              "d-05ec54587130"
+            ],
+            "text": "每周5天、每天8小时，总时长40小时，满足至少4天且至少34小时，资格为true。"
+          },
+          "path": {
+            "id": "path",
+            "role": "path",
+            "version": 2,
+            "values": {
+              "next": "wait"
+            },
+            "status": "current",
+            "refs": [
+              "initial-t-0ccdfd2c6a9e",
+              "d-05ec54587130"
+            ],
+            "text": "每周5天、每天8小时，总时长40小时，满足至少4天且至少34小时，资格符合；申请在途，建议wait。"
+          },
+          "report": {
+            "id": "report",
+            "role": "report",
+            "version": 2,
+            "values": {
+              "recommend": true
+            },
+            "status": "current",
+            "refs": [
+              "initial-t-0ccdfd2c6a9e",
+              "d-05ec54587130"
+            ],
+            "text": "每周5天、每天8小时，总时长40小时，满足至少4天且至少34小时，资格为true，因此recommend为true。"
+          }
+        },
+        "sources": [
+          {
+            "id": "initial-t-0ccdfd2c6a9e",
+            "text": "{\"days\":5,\"hours\":8,\"applied\":true}"
+          },
+          {
+            "id": "d-05ec54587130",
+            "text": "来源系统规则原件，第1版，作用域scope-4451ab30bc57，岗位“钟表藏品测绘助理”。完整资格条件为每周至少4天，且每周总排班时长至少34小时；总排班时长=每周天数×每天小时数，两项须同时满足，无认证替代或其他隐含条件。本版从载有它的本轮事件开始生效，并替代同作用域此前规则。天数为非负整数，每天小时数为非负数。行动约定：符合且没有在途申请为apply，符合且申请在途为wait；不符合且申请在途为withdraw，不符合且没有在途申请为none。报告recommend与资格一致。原文穷尽的全部可能情形结论相同则可确定目标，否则目标值为null且status=uncertain；确定目标status=current。这里只维护建议，不执行外部操作；已撤回申请不得再次建议撤回。",
+            "minDays": 4,
+            "minHours": 34
+          },
+          {
+            "id": "e-199bfb6b20b8",
+            "text": "来源系统第1轮观测，观测版本1，作用域scope-4451ab30bc57。排班协调消息先列出尚未核定的候选。随后归档的原始回执在档案目录中；若读取了本人核定回执，按回执的后续核定内容处理。本人每周排班天数尚未确定，全部且仅有的候选为3、5；候选穷尽所有可能。本人每天排班小时数尚未确定，全部且仅有的候选为6、7；候选穷尽所有可能。以上不同字段的候选可独立组合，不存在未说明的组合限制。"
+          }
+        ],
+        "pending": []
+      },
+      "restarted": false
+    },
+    {
+      "eventId": "e-026b5c15d9fa",
+      "arm": "ordinary",
+      "calls": 4,
+      "reads": [],
+      "skipped": [],
+      "errors": [],
+      "extraError": null,
+      "extra": null,
+      "certificate": null,
+      "obligations": [],
+      "decisions": [
+        {
+          "role": "match",
+          "answer": {
+            "answer": "资格条件为每周至少6天且总时长至少40小时；候选天数3或5均不满足至少6天，所有可能情形均不符合，故eligible为false。",
+            "values": {
+              "eligible": false
+            },
+            "status": "current",
+            "refs": [
+              "d-26d8058c09a3",
+              "e-199bfb6b20b8"
+            ]
+          }
+        },
+        {
+          "role": "path",
+          "answer": {
+            "answer": "所有候选天数3或5均低于新版最低6天，资格均不符合；申请在途，故建议withdraw。",
+            "values": {
+              "next": "withdraw"
+            },
+            "status": "current",
+            "refs": [
+              "d-26d8058c09a3",
+              "e-026b5c15d9fa",
+              "e-199bfb6b20b8"
+            ]
+          }
+        },
+        {
+          "role": "report",
+          "answer": {
+            "answer": "所有可能情形天数均低于6，均不符合资格，故recommend为false。",
+            "values": {
+              "recommend": false
+            },
+            "status": "current",
+            "refs": [
+              "d-26d8058c09a3",
+              "e-026b5c15d9fa",
+              "e-199bfb6b20b8"
+            ]
+          }
+        }
+      ],
+      "before": {
+        "match": {
+          "id": "match",
+          "role": "match",
+          "version": 2,
+          "values": {
+            "eligible": true
+          },
+          "status": "current",
+          "refs": [
+            "initial-t-0ccdfd2c6a9e",
+            "d-05ec54587130"
+          ],
+          "text": "每周5天、每天8小时，总时长40小时，满足至少4天且至少34小时，资格为true。"
+        },
+        "path": {
+          "id": "path",
+          "role": "path",
+          "version": 2,
+          "values": {
+            "next": "wait"
+          },
+          "status": "current",
+          "refs": [
+            "initial-t-0ccdfd2c6a9e",
+            "d-05ec54587130"
+          ],
+          "text": "每周5天、每天8小时，总时长40小时，满足至少4天且至少34小时，资格符合；申请在途，建议wait。"
+        },
+        "report": {
+          "id": "report",
+          "role": "report",
+          "version": 2,
+          "values": {
+            "recommend": true
+          },
+          "status": "current",
+          "refs": [
+            "initial-t-0ccdfd2c6a9e",
+            "d-05ec54587130"
+          ],
+          "text": "每周5天、每天8小时，总时长40小时，满足至少4天且至少34小时，资格为true，因此recommend为true。"
+        }
+      },
+      "scheduledCandidates": [
+        "match",
+        "path",
+        "report"
+      ],
+      "remainingCandidates": [
+        "match",
+        "path",
+        "report"
+      ],
+      "proposedPlan": {
+        "answer": "新版规则要求每周至少6天且总时长至少40小时；所有候选组合（3/5天×6/7小时）均不满足天数条件，故资格为false。申请在途，行动应为withdraw，recommend为false。旧记忆的eligible/next/recommend均基于旧规则，已失效，需复核更新。",
+        "readIds": [],
+        "reviewIds": [
+          "match",
+          "path",
+          "report"
+        ]
+      },
+      "plan": {
+        "answer": "新版规则要求每周至少6天且总时长至少40小时；所有候选组合（3/5天×6/7小时）均不满足天数条件，故资格为false。申请在途，行动应为withdraw，recommend为false。旧记忆的eligible/next/recommend均基于旧规则，已失效，需复核更新。",
+        "readIds": [],
+        "reviewIds": [
+          "match",
+          "path",
+          "report"
+        ]
+      },
+      "state": {
+        "scope": "scope-4451ab30bc57",
+        "rule": {
+          "id": "d-26d8058c09a3",
+          "text": "来源系统规则原件，第2版，作用域scope-4451ab30bc57，岗位“钟表藏品测绘助理”。完整资格条件为每周至少6天，且每周总排班时长至少40小时；总排班时长=每周天数×每天小时数，两项须同时满足，无认证替代或其他隐含条件。本版从载有它的本轮事件开始生效，并替代同作用域此前规则。天数为非负整数，每天小时数为非负数。行动约定：符合且没有在途申请为apply，符合且申请在途为wait；不符合且申请在途为withdraw，不符合且没有在途申请为none。报告recommend与资格一致。原文穷尽的全部可能情形结论相同则可确定目标，否则目标值为null且status=uncertain；确定目标status=current。这里只维护建议，不执行外部操作；已撤回申请不得再次建议撤回。",
+          "minDays": 6,
+          "minHours": 40
+        },
+        "facts": {
+          "days": {
+            "value": null,
+            "alternatives": [
+              3,
+              5
+            ],
+            "version": 2
+          },
+          "hours": {
+            "value": null,
+            "alternatives": [
+              6,
+              7
+            ],
+            "version": 2
+          },
+          "applied": {
+            "value": true,
+            "alternatives": null,
+            "version": 1
+          }
+        },
+        "memories": {
+          "match": {
+            "id": "match",
+            "role": "match",
+            "version": 3,
+            "values": {
+              "eligible": false
+            },
+            "status": "current",
+            "refs": [
+              "d-26d8058c09a3",
+              "e-199bfb6b20b8"
+            ],
+            "text": "资格条件为每周至少6天且总时长至少40小时；候选天数3或5均不满足至少6天，所有可能情形均不符合，故eligible为false。"
+          },
+          "path": {
+            "id": "path",
+            "role": "path",
+            "version": 3,
+            "values": {
+              "next": "withdraw"
+            },
+            "status": "current",
+            "refs": [
+              "d-26d8058c09a3",
+              "e-026b5c15d9fa",
+              "e-199bfb6b20b8"
+            ],
+            "text": "所有候选天数3或5均低于新版最低6天，资格均不符合；申请在途，故建议withdraw。"
+          },
+          "report": {
+            "id": "report",
+            "role": "report",
+            "version": 3,
+            "values": {
+              "recommend": false
+            },
+            "status": "current",
+            "refs": [
+              "d-26d8058c09a3",
+              "e-026b5c15d9fa",
+              "e-199bfb6b20b8"
+            ],
+            "text": "所有可能情形天数均低于6，均不符合资格，故recommend为false。"
+          }
+        },
+        "sources": [
+          {
+            "id": "initial-t-0ccdfd2c6a9e",
+            "text": "{\"days\":5,\"hours\":8,\"applied\":true}"
+          },
+          {
+            "id": "d-05ec54587130",
+            "text": "来源系统规则原件，第1版，作用域scope-4451ab30bc57，岗位“钟表藏品测绘助理”。完整资格条件为每周至少4天，且每周总排班时长至少34小时；总排班时长=每周天数×每天小时数，两项须同时满足，无认证替代或其他隐含条件。本版从载有它的本轮事件开始生效，并替代同作用域此前规则。天数为非负整数，每天小时数为非负数。行动约定：符合且没有在途申请为apply，符合且申请在途为wait；不符合且申请在途为withdraw，不符合且没有在途申请为none。报告recommend与资格一致。原文穷尽的全部可能情形结论相同则可确定目标，否则目标值为null且status=uncertain；确定目标status=current。这里只维护建议，不执行外部操作；已撤回申请不得再次建议撤回。",
+            "minDays": 4,
+            "minHours": 34
+          },
+          {
+            "id": "e-199bfb6b20b8",
+            "text": "来源系统第1轮观测，观测版本1，作用域scope-4451ab30bc57。排班协调消息先列出尚未核定的候选。随后归档的原始回执在档案目录中；若读取了本人核定回执，按回执的后续核定内容处理。本人每周排班天数尚未确定，全部且仅有的候选为3、5；候选穷尽所有可能。本人每天排班小时数尚未确定，全部且仅有的候选为6、7；候选穷尽所有可能。以上不同字段的候选可独立组合，不存在未说明的组合限制。"
+          },
+          {
+            "id": "e-026b5c15d9fa",
+            "text": "来源系统第2轮观测，观测版本2，作用域scope-4451ab30bc57。本岗位新版规则原件已发布并随本事件提供，旧版从本轮起失效。"
+          },
+          {
+            "id": "d-26d8058c09a3",
+            "text": "来源系统规则原件，第2版，作用域scope-4451ab30bc57，岗位“钟表藏品测绘助理”。完整资格条件为每周至少6天，且每周总排班时长至少40小时；总排班时长=每周天数×每天小时数，两项须同时满足，无认证替代或其他隐含条件。本版从载有它的本轮事件开始生效，并替代同作用域此前规则。天数为非负整数，每天小时数为非负数。行动约定：符合且没有在途申请为apply，符合且申请在途为wait；不符合且申请在途为withdraw，不符合且没有在途申请为none。报告recommend与资格一致。原文穷尽的全部可能情形结论相同则可确定目标，否则目标值为null且status=uncertain；确定目标status=current。这里只维护建议，不执行外部操作；已撤回申请不得再次建议撤回。",
+            "minDays": 6,
+            "minHours": 40
+          }
+        ],
+        "pending": []
+      },
+      "restarted": false
+    },
+    {
+      "eventId": "e-faee818e47bc",
+      "arm": "ordinary",
+      "calls": 1,
+      "reads": [],
+      "skipped": [],
+      "errors": [],
+      "extraError": null,
+      "extra": null,
+      "certificate": null,
+      "obligations": [],
+      "decisions": [],
+      "before": {
+        "match": {
+          "id": "match",
+          "role": "match",
+          "version": 3,
+          "values": {
+            "eligible": false
+          },
+          "status": "current",
+          "refs": [
+            "d-26d8058c09a3",
+            "e-199bfb6b20b8"
+          ],
+          "text": "资格条件为每周至少6天且总时长至少40小时；候选天数3或5均不满足至少6天，所有可能情形均不符合，故eligible为false。"
+        },
+        "path": {
+          "id": "path",
+          "role": "path",
+          "version": 3,
+          "values": {
+            "next": "withdraw"
+          },
+          "status": "current",
+          "refs": [
+            "d-26d8058c09a3",
+            "e-026b5c15d9fa",
+            "e-199bfb6b20b8"
+          ],
+          "text": "所有候选天数3或5均低于新版最低6天，资格均不符合；申请在途，故建议withdraw。"
+        },
+        "report": {
+          "id": "report",
+          "role": "report",
+          "version": 3,
+          "values": {
+            "recommend": false
+          },
+          "status": "current",
+          "refs": [
+            "d-26d8058c09a3",
+            "e-026b5c15d9fa",
+            "e-199bfb6b20b8"
+          ],
+          "text": "所有可能情形天数均低于6，均不符合资格，故recommend为false。"
+        }
+      },
+      "scheduledCandidates": [
+        "match",
+        "path",
+        "report"
+      ],
+      "remainingCandidates": [
+        "match",
+        "path",
+        "report"
+      ],
+      "proposedPlan": {
+        "answer": "旧结论仍成立：天数候选3或5均低于最低6天，资格确定不符合；已申请在途，故next=withdraw、recommend=false。小时数失效不影响该结论，无需复核。",
+        "readIds": [],
+        "reviewIds": []
+      },
+      "plan": {
+        "answer": "旧结论仍成立：天数候选3或5均低于最低6天，资格确定不符合；已申请在途，故next=withdraw、recommend=false。小时数失效不影响该结论，无需复核。",
+        "readIds": [],
+        "reviewIds": []
+      },
+      "state": {
+        "scope": "scope-4451ab30bc57",
+        "rule": {
+          "id": "d-26d8058c09a3",
+          "text": "来源系统规则原件，第2版，作用域scope-4451ab30bc57，岗位“钟表藏品测绘助理”。完整资格条件为每周至少6天，且每周总排班时长至少40小时；总排班时长=每周天数×每天小时数，两项须同时满足，无认证替代或其他隐含条件。本版从载有它的本轮事件开始生效，并替代同作用域此前规则。天数为非负整数，每天小时数为非负数。行动约定：符合且没有在途申请为apply，符合且申请在途为wait；不符合且申请在途为withdraw，不符合且没有在途申请为none。报告recommend与资格一致。原文穷尽的全部可能情形结论相同则可确定目标，否则目标值为null且status=uncertain；确定目标status=current。这里只维护建议，不执行外部操作；已撤回申请不得再次建议撤回。",
+          "minDays": 6,
+          "minHours": 40
+        },
+        "facts": {
+          "days": {
+            "value": null,
+            "alternatives": [
+              3,
+              5
+            ],
+            "version": 2
+          },
+          "hours": {
+            "value": null,
+            "alternatives": null,
+            "version": 3
+          },
+          "applied": {
+            "value": true,
+            "alternatives": null,
+            "version": 1
+          }
+        },
+        "memories": {
+          "match": {
+            "id": "match",
+            "role": "match",
+            "version": 3,
+            "values": {
+              "eligible": false
+            },
+            "status": "current",
+            "refs": [
+              "d-26d8058c09a3",
+              "e-199bfb6b20b8"
+            ],
+            "text": "资格条件为每周至少6天且总时长至少40小时；候选天数3或5均不满足至少6天，所有可能情形均不符合，故eligible为false。"
+          },
+          "path": {
+            "id": "path",
+            "role": "path",
+            "version": 3,
+            "values": {
+              "next": "withdraw"
+            },
+            "status": "current",
+            "refs": [
+              "d-26d8058c09a3",
+              "e-026b5c15d9fa",
+              "e-199bfb6b20b8"
+            ],
+            "text": "所有候选天数3或5均低于新版最低6天，资格均不符合；申请在途，故建议withdraw。"
+          },
+          "report": {
+            "id": "report",
+            "role": "report",
+            "version": 3,
+            "values": {
+              "recommend": false
+            },
+            "status": "current",
+            "refs": [
+              "d-26d8058c09a3",
+              "e-026b5c15d9fa",
+              "e-199bfb6b20b8"
+            ],
+            "text": "所有可能情形天数均低于6，均不符合资格，故recommend为false。"
+          }
+        },
+        "sources": [
+          {
+            "id": "initial-t-0ccdfd2c6a9e",
+            "text": "{\"days\":5,\"hours\":8,\"applied\":true}"
+          },
+          {
+            "id": "d-05ec54587130",
+            "text": "来源系统规则原件，第1版，作用域scope-4451ab30bc57，岗位“钟表藏品测绘助理”。完整资格条件为每周至少4天，且每周总排班时长至少34小时；总排班时长=每周天数×每天小时数，两项须同时满足，无认证替代或其他隐含条件。本版从载有它的本轮事件开始生效，并替代同作用域此前规则。天数为非负整数，每天小时数为非负数。行动约定：符合且没有在途申请为apply，符合且申请在途为wait；不符合且申请在途为withdraw，不符合且没有在途申请为none。报告recommend与资格一致。原文穷尽的全部可能情形结论相同则可确定目标，否则目标值为null且status=uncertain；确定目标status=current。这里只维护建议，不执行外部操作；已撤回申请不得再次建议撤回。",
+            "minDays": 4,
+            "minHours": 34
+          },
+          {
+            "id": "e-199bfb6b20b8",
+            "text": "来源系统第1轮观测，观测版本1，作用域scope-4451ab30bc57。排班协调消息先列出尚未核定的候选。随后归档的原始回执在档案目录中；若读取了本人核定回执，按回执的后续核定内容处理。本人每周排班天数尚未确定，全部且仅有的候选为3、5；候选穷尽所有可能。本人每天排班小时数尚未确定，全部且仅有的候选为6、7；候选穷尽所有可能。以上不同字段的候选可独立组合，不存在未说明的组合限制。"
+          },
+          {
+            "id": "e-026b5c15d9fa",
+            "text": "来源系统第2轮观测，观测版本2，作用域scope-4451ab30bc57。本岗位新版规则原件已发布并随本事件提供，旧版从本轮起失效。"
+          },
+          {
+            "id": "d-26d8058c09a3",
+            "text": "来源系统规则原件，第2版，作用域scope-4451ab30bc57，岗位“钟表藏品测绘助理”。完整资格条件为每周至少6天，且每周总排班时长至少40小时；总排班时长=每周天数×每天小时数，两项须同时满足，无认证替代或其他隐含条件。本版从载有它的本轮事件开始生效，并替代同作用域此前规则。天数为非负整数，每天小时数为非负数。行动约定：符合且没有在途申请为apply，符合且申请在途为wait；不符合且申请在途为withdraw，不符合且没有在途申请为none。报告recommend与资格一致。原文穷尽的全部可能情形结论相同则可确定目标，否则目标值为null且status=uncertain；确定目标status=current。这里只维护建议，不执行外部操作；已撤回申请不得再次建议撤回。",
+            "minDays": 6,
+            "minHours": 40
+          },
+          {
+            "id": "e-faee818e47bc",
+            "text": "来源系统第3轮观测，观测版本3，作用域scope-4451ab30bc57。本轮复核发现对应旧观测已失效，新的具体事实尚未核定；本轮档案尚无本人该字段的确认值。本人每天排班小时数尚未确定，目前没有具体值，也未提供穷尽候选；旧值不能继续作为本轮事实。"
+          }
+        ],
+        "pending": []
+      },
+      "restarted": false
+    },
+    {
+      "eventId": "e-585e996a65eb",
+      "arm": "ordinary",
+      "calls": 2,
+      "reads": [],
+      "skipped": [],
+      "errors": [],
+      "extraError": null,
+      "extra": null,
+      "certificate": null,
+      "obligations": [],
+      "decisions": [
+        {
+          "role": "path",
+          "answer": {
+            "answer": "当前无在途申请；天数候选3或5均不满足至少6天，资格确定不符合，故建议none。",
+            "values": {
+              "next": "none"
+            },
+            "status": "current",
+            "refs": [
+              "d-26d8058c09a3",
+              "e-199bfb6b20b8",
+              "e-585e996a65eb"
+            ]
+          }
+        }
+      ],
+      "before": {
+        "match": {
+          "id": "match",
+          "role": "match",
+          "version": 3,
+          "values": {
+            "eligible": false
+          },
+          "status": "current",
+          "refs": [
+            "d-26d8058c09a3",
+            "e-199bfb6b20b8"
+          ],
+          "text": "资格条件为每周至少6天且总时长至少40小时；候选天数3或5均不满足至少6天，所有可能情形均不符合，故eligible为false。"
+        },
+        "path": {
+          "id": "path",
+          "role": "path",
+          "version": 3,
+          "values": {
+            "next": "withdraw"
+          },
+          "status": "current",
+          "refs": [
+            "d-26d8058c09a3",
+            "e-026b5c15d9fa",
+            "e-199bfb6b20b8"
+          ],
+          "text": "所有候选天数3或5均低于新版最低6天，资格均不符合；申请在途，故建议withdraw。"
+        },
+        "report": {
+          "id": "report",
+          "role": "report",
+          "version": 3,
+          "values": {
+            "recommend": false
+          },
+          "status": "current",
+          "refs": [
+            "d-26d8058c09a3",
+            "e-026b5c15d9fa",
+            "e-199bfb6b20b8"
+          ],
+          "text": "所有可能情形天数均低于6，均不符合资格，故recommend为false。"
+        }
+      },
+      "scheduledCandidates": [
+        "path"
+      ],
+      "remainingCandidates": [
+        "path"
+      ],
+      "proposedPlan": {
+        "answer": "资格仍可确定不符合：天数候选3或5均低于最低6天，故recommend=false；申请已撤回且当前无在途申请，next应为none，旧记忆path的withdraw已失效。",
+        "readIds": [],
+        "reviewIds": [
+          "path"
+        ]
+      },
+      "plan": {
+        "answer": "资格仍可确定不符合：天数候选3或5均低于最低6天，故recommend=false；申请已撤回且当前无在途申请，next应为none，旧记忆path的withdraw已失效。",
+        "readIds": [],
+        "reviewIds": [
+          "path"
+        ]
+      },
+      "state": {
+        "scope": "scope-4451ab30bc57",
+        "rule": {
+          "id": "d-26d8058c09a3",
+          "text": "来源系统规则原件，第2版，作用域scope-4451ab30bc57，岗位“钟表藏品测绘助理”。完整资格条件为每周至少6天，且每周总排班时长至少40小时；总排班时长=每周天数×每天小时数，两项须同时满足，无认证替代或其他隐含条件。本版从载有它的本轮事件开始生效，并替代同作用域此前规则。天数为非负整数，每天小时数为非负数。行动约定：符合且没有在途申请为apply，符合且申请在途为wait；不符合且申请在途为withdraw，不符合且没有在途申请为none。报告recommend与资格一致。原文穷尽的全部可能情形结论相同则可确定目标，否则目标值为null且status=uncertain；确定目标status=current。这里只维护建议，不执行外部操作；已撤回申请不得再次建议撤回。",
+          "minDays": 6,
+          "minHours": 40
+        },
+        "facts": {
+          "days": {
+            "value": null,
+            "alternatives": [
+              3,
+              5
+            ],
+            "version": 2
+          },
+          "hours": {
+            "value": null,
+            "alternatives": null,
+            "version": 3
+          },
+          "applied": {
+            "value": false,
+            "alternatives": null,
+            "version": 2
+          }
+        },
+        "memories": {
+          "match": {
+            "id": "match",
+            "role": "match",
+            "version": 3,
+            "values": {
+              "eligible": false
+            },
+            "status": "current",
+            "refs": [
+              "d-26d8058c09a3",
+              "e-199bfb6b20b8"
+            ],
+            "text": "资格条件为每周至少6天且总时长至少40小时；候选天数3或5均不满足至少6天，所有可能情形均不符合，故eligible为false。"
+          },
+          "path": {
+            "id": "path",
+            "role": "path",
+            "version": 4,
+            "values": {
+              "next": "none"
+            },
+            "status": "current",
+            "refs": [
+              "d-26d8058c09a3",
+              "e-199bfb6b20b8",
+              "e-585e996a65eb"
+            ],
+            "text": "当前无在途申请；天数候选3或5均不满足至少6天，资格确定不符合，故建议none。"
+          },
+          "report": {
+            "id": "report",
+            "role": "report",
+            "version": 3,
+            "values": {
+              "recommend": false
+            },
+            "status": "current",
+            "refs": [
+              "d-26d8058c09a3",
+              "e-026b5c15d9fa",
+              "e-199bfb6b20b8"
+            ],
+            "text": "所有可能情形天数均低于6，均不符合资格，故recommend为false。"
+          }
+        },
+        "sources": [
+          {
+            "id": "initial-t-0ccdfd2c6a9e",
+            "text": "{\"days\":5,\"hours\":8,\"applied\":true}"
+          },
+          {
+            "id": "d-05ec54587130",
+            "text": "来源系统规则原件，第1版，作用域scope-4451ab30bc57，岗位“钟表藏品测绘助理”。完整资格条件为每周至少4天，且每周总排班时长至少34小时；总排班时长=每周天数×每天小时数，两项须同时满足，无认证替代或其他隐含条件。本版从载有它的本轮事件开始生效，并替代同作用域此前规则。天数为非负整数，每天小时数为非负数。行动约定：符合且没有在途申请为apply，符合且申请在途为wait；不符合且申请在途为withdraw，不符合且没有在途申请为none。报告recommend与资格一致。原文穷尽的全部可能情形结论相同则可确定目标，否则目标值为null且status=uncertain；确定目标status=current。这里只维护建议，不执行外部操作；已撤回申请不得再次建议撤回。",
+            "minDays": 4,
+            "minHours": 34
+          },
+          {
+            "id": "e-199bfb6b20b8",
+            "text": "来源系统第1轮观测，观测版本1，作用域scope-4451ab30bc57。排班协调消息先列出尚未核定的候选。随后归档的原始回执在档案目录中；若读取了本人核定回执，按回执的后续核定内容处理。本人每周排班天数尚未确定，全部且仅有的候选为3、5；候选穷尽所有可能。本人每天排班小时数尚未确定，全部且仅有的候选为6、7；候选穷尽所有可能。以上不同字段的候选可独立组合，不存在未说明的组合限制。"
+          },
+          {
+            "id": "e-026b5c15d9fa",
+            "text": "来源系统第2轮观测，观测版本2，作用域scope-4451ab30bc57。本岗位新版规则原件已发布并随本事件提供，旧版从本轮起失效。"
+          },
+          {
+            "id": "d-26d8058c09a3",
+            "text": "来源系统规则原件，第2版，作用域scope-4451ab30bc57，岗位“钟表藏品测绘助理”。完整资格条件为每周至少6天，且每周总排班时长至少40小时；总排班时长=每周天数×每天小时数，两项须同时满足，无认证替代或其他隐含条件。本版从载有它的本轮事件开始生效，并替代同作用域此前规则。天数为非负整数，每天小时数为非负数。行动约定：符合且没有在途申请为apply，符合且申请在途为wait；不符合且申请在途为withdraw，不符合且没有在途申请为none。报告recommend与资格一致。原文穷尽的全部可能情形结论相同则可确定目标，否则目标值为null且status=uncertain；确定目标status=current。这里只维护建议，不执行外部操作；已撤回申请不得再次建议撤回。",
+            "minDays": 6,
+            "minHours": 40
+          },
+          {
+            "id": "e-faee818e47bc",
+            "text": "来源系统第3轮观测，观测版本3，作用域scope-4451ab30bc57。本轮复核发现对应旧观测已失效，新的具体事实尚未核定；本轮档案尚无本人该字段的确认值。本人每天排班小时数尚未确定，目前没有具体值，也未提供穷尽候选；旧值不能继续作为本轮事实。"
+          },
+          {
+            "id": "e-585e996a65eb",
+            "text": "来源系统第4轮观测，观测版本4，作用域scope-4451ab30bc57。此前在途的申请已由本人完成撤回，来源系统核实撤回成功，当前无任何在途申请，撤回事项无待办。这条回执不改变排班或当前资格规则。本人目前没有在途申请。"
+          }
+        ],
+        "pending": []
+      },
+      "restarted": true
+    },
+    {
+      "eventId": "e-4aa6628bb985",
+      "arm": "ordinary",
+      "calls": 4,
+      "reads": [],
+      "skipped": [],
+      "errors": [],
+      "extraError": null,
+      "extra": null,
+      "certificate": null,
+      "obligations": [],
+      "decisions": [
+        {
+          "role": "match",
+          "answer": {
+            "answer": "所有可能情形（天数6或7、小时8或9）均满足至少6天且总时长至少40小时，资格确定符合。",
+            "values": {
+              "eligible": true
+            },
+            "status": "current",
+            "refs": [
+              "d-26d8058c09a3",
+              "e-4aa6628bb985"
+            ]
+          }
+        },
+        {
+          "role": "path",
+          "answer": {
+            "answer": "所有可能情形（天数6或7、小时8或9）均满足至少6天且总时长至少40小时，资格确定符合；当前无在途申请，故建议apply。",
+            "values": {
+              "next": "apply"
+            },
+            "status": "current",
+            "refs": [
+              "d-26d8058c09a3",
+              "e-4aa6628bb985",
+              "e-585e996a65eb"
+            ]
+          }
+        },
+        {
+          "role": "report",
+          "answer": {
+            "answer": "所有可能情形（天数6或7、小时8或9）均满足至少6天且总时长至少40小时，资格确定符合，故recommend为true。",
+            "values": {
+              "recommend": true
+            },
+            "status": "current",
+            "refs": [
+              "d-26d8058c09a3",
+              "e-4aa6628bb985"
+            ]
+          }
+        }
+      ],
+      "before": {
+        "match": {
+          "id": "match",
+          "role": "match",
+          "version": 3,
+          "values": {
+            "eligible": false
+          },
+          "status": "current",
+          "refs": [
+            "d-26d8058c09a3",
+            "e-199bfb6b20b8"
+          ],
+          "text": "资格条件为每周至少6天且总时长至少40小时；候选天数3或5均不满足至少6天，所有可能情形均不符合，故eligible为false。"
+        },
+        "path": {
+          "id": "path",
+          "role": "path",
+          "version": 4,
+          "values": {
+            "next": "none"
+          },
+          "status": "current",
+          "refs": [
+            "d-26d8058c09a3",
+            "e-199bfb6b20b8",
+            "e-585e996a65eb"
+          ],
+          "text": "当前无在途申请；天数候选3或5均不满足至少6天，资格确定不符合，故建议none。"
+        },
+        "report": {
+          "id": "report",
+          "role": "report",
+          "version": 3,
+          "values": {
+            "recommend": false
+          },
+          "status": "current",
+          "refs": [
+            "d-26d8058c09a3",
+            "e-026b5c15d9fa",
+            "e-199bfb6b20b8"
+          ],
+          "text": "所有可能情形天数均低于6，均不符合资格，故recommend为false。"
+        }
+      },
+      "scheduledCandidates": [
+        "match",
+        "path",
+        "report"
+      ],
+      "remainingCandidates": [
+        "match",
+        "path",
+        "report"
+      ],
+      "proposedPlan": {
+        "answer": "按第2版规则，天数候选6或7均≥6，且各组合总时长48/54/56/63小时均≥40，所有可能情形均符合资格；当前无在途申请，故next=apply、recommend=true。旧记忆的false/none基于已失效的旧候选，应更新。",
+        "readIds": [],
+        "reviewIds": [
+          "match",
+          "path",
+          "report"
+        ]
+      },
+      "plan": {
+        "answer": "按第2版规则，天数候选6或7均≥6，且各组合总时长48/54/56/63小时均≥40，所有可能情形均符合资格；当前无在途申请，故next=apply、recommend=true。旧记忆的false/none基于已失效的旧候选，应更新。",
+        "readIds": [],
+        "reviewIds": [
+          "match",
+          "path",
+          "report"
+        ]
+      },
+      "state": {
+        "scope": "scope-4451ab30bc57",
+        "rule": {
+          "id": "d-26d8058c09a3",
+          "text": "来源系统规则原件，第2版，作用域scope-4451ab30bc57，岗位“钟表藏品测绘助理”。完整资格条件为每周至少6天，且每周总排班时长至少40小时；总排班时长=每周天数×每天小时数，两项须同时满足，无认证替代或其他隐含条件。本版从载有它的本轮事件开始生效，并替代同作用域此前规则。天数为非负整数，每天小时数为非负数。行动约定：符合且没有在途申请为apply，符合且申请在途为wait；不符合且申请在途为withdraw，不符合且没有在途申请为none。报告recommend与资格一致。原文穷尽的全部可能情形结论相同则可确定目标，否则目标值为null且status=uncertain；确定目标status=current。这里只维护建议，不执行外部操作；已撤回申请不得再次建议撤回。",
+          "minDays": 6,
+          "minHours": 40
+        },
+        "facts": {
+          "days": {
+            "value": null,
+            "alternatives": [
+              6,
+              7
+            ],
+            "version": 3
+          },
+          "hours": {
+            "value": null,
+            "alternatives": [
+              8,
+              9
+            ],
+            "version": 4
+          },
+          "applied": {
+            "value": false,
+            "alternatives": null,
+            "version": 2
+          }
+        },
+        "memories": {
+          "match": {
+            "id": "match",
+            "role": "match",
+            "version": 4,
+            "values": {
+              "eligible": true
+            },
+            "status": "current",
+            "refs": [
+              "d-26d8058c09a3",
+              "e-4aa6628bb985"
+            ],
+            "text": "所有可能情形（天数6或7、小时8或9）均满足至少6天且总时长至少40小时，资格确定符合。"
+          },
+          "path": {
+            "id": "path",
+            "role": "path",
+            "version": 5,
+            "values": {
+              "next": "apply"
+            },
+            "status": "current",
+            "refs": [
+              "d-26d8058c09a3",
+              "e-4aa6628bb985",
+              "e-585e996a65eb"
+            ],
+            "text": "所有可能情形（天数6或7、小时8或9）均满足至少6天且总时长至少40小时，资格确定符合；当前无在途申请，故建议apply。"
+          },
+          "report": {
+            "id": "report",
+            "role": "report",
+            "version": 4,
+            "values": {
+              "recommend": true
+            },
+            "status": "current",
+            "refs": [
+              "d-26d8058c09a3",
+              "e-4aa6628bb985"
+            ],
+            "text": "所有可能情形（天数6或7、小时8或9）均满足至少6天且总时长至少40小时，资格确定符合，故recommend为true。"
+          }
+        },
+        "sources": [
+          {
+            "id": "initial-t-0ccdfd2c6a9e",
+            "text": "{\"days\":5,\"hours\":8,\"applied\":true}"
+          },
+          {
+            "id": "d-05ec54587130",
+            "text": "来源系统规则原件，第1版，作用域scope-4451ab30bc57，岗位“钟表藏品测绘助理”。完整资格条件为每周至少4天，且每周总排班时长至少34小时；总排班时长=每周天数×每天小时数，两项须同时满足，无认证替代或其他隐含条件。本版从载有它的本轮事件开始生效，并替代同作用域此前规则。天数为非负整数，每天小时数为非负数。行动约定：符合且没有在途申请为apply，符合且申请在途为wait；不符合且申请在途为withdraw，不符合且没有在途申请为none。报告recommend与资格一致。原文穷尽的全部可能情形结论相同则可确定目标，否则目标值为null且status=uncertain；确定目标status=current。这里只维护建议，不执行外部操作；已撤回申请不得再次建议撤回。",
+            "minDays": 4,
+            "minHours": 34
+          },
+          {
+            "id": "e-199bfb6b20b8",
+            "text": "来源系统第1轮观测，观测版本1，作用域scope-4451ab30bc57。排班协调消息先列出尚未核定的候选。随后归档的原始回执在档案目录中；若读取了本人核定回执，按回执的后续核定内容处理。本人每周排班天数尚未确定，全部且仅有的候选为3、5；候选穷尽所有可能。本人每天排班小时数尚未确定，全部且仅有的候选为6、7；候选穷尽所有可能。以上不同字段的候选可独立组合，不存在未说明的组合限制。"
+          },
+          {
+            "id": "e-026b5c15d9fa",
+            "text": "来源系统第2轮观测，观测版本2，作用域scope-4451ab30bc57。本岗位新版规则原件已发布并随本事件提供，旧版从本轮起失效。"
+          },
+          {
+            "id": "d-26d8058c09a3",
+            "text": "来源系统规则原件，第2版，作用域scope-4451ab30bc57，岗位“钟表藏品测绘助理”。完整资格条件为每周至少6天，且每周总排班时长至少40小时；总排班时长=每周天数×每天小时数，两项须同时满足，无认证替代或其他隐含条件。本版从载有它的本轮事件开始生效，并替代同作用域此前规则。天数为非负整数，每天小时数为非负数。行动约定：符合且没有在途申请为apply，符合且申请在途为wait；不符合且申请在途为withdraw，不符合且没有在途申请为none。报告recommend与资格一致。原文穷尽的全部可能情形结论相同则可确定目标，否则目标值为null且status=uncertain；确定目标status=current。这里只维护建议，不执行外部操作；已撤回申请不得再次建议撤回。",
+            "minDays": 6,
+            "minHours": 40
+          },
+          {
+            "id": "e-faee818e47bc",
+            "text": "来源系统第3轮观测，观测版本3，作用域scope-4451ab30bc57。本轮复核发现对应旧观测已失效，新的具体事实尚未核定；本轮档案尚无本人该字段的确认值。本人每天排班小时数尚未确定，目前没有具体值，也未提供穷尽候选；旧值不能继续作为本轮事实。"
+          },
+          {
+            "id": "e-585e996a65eb",
+            "text": "来源系统第4轮观测，观测版本4，作用域scope-4451ab30bc57。此前在途的申请已由本人完成撤回，来源系统核实撤回成功，当前无任何在途申请，撤回事项无待办。这条回执不改变排班或当前资格规则。本人目前没有在途申请。"
+          },
+          {
+            "id": "e-4aa6628bb985",
+            "text": "来源系统第5轮观测，观测版本5，作用域scope-4451ab30bc57。排班仍在多份方案间协调，最终安排尚未核定。本人每周排班天数尚未确定，全部且仅有的候选为6、7；候选穷尽所有可能。本人每天排班小时数尚未确定，全部且仅有的候选为8、9；候选穷尽所有可能。以上不同字段的候选可独立组合，不存在未说明的组合限制。"
+          }
+        ],
+        "pending": []
+      },
+      "restarted": false
+    },
+    {
+      "eventId": "e-b336070df28e",
+      "arm": "ordinary",
+      "calls": 0,
+      "reads": [],
+      "skipped": [],
+      "errors": [],
+      "extraError": null,
+      "extra": null,
+      "certificate": null,
+      "obligations": [],
+      "decisions": [],
+      "before": {
+        "match": {
+          "id": "match",
+          "role": "match",
+          "version": 4,
+          "values": {
+            "eligible": true
+          },
+          "status": "current",
+          "refs": [
+            "d-26d8058c09a3",
+            "e-4aa6628bb985"
+          ],
+          "text": "所有可能情形（天数6或7、小时8或9）均满足至少6天且总时长至少40小时，资格确定符合。"
+        },
+        "path": {
+          "id": "path",
+          "role": "path",
+          "version": 5,
+          "values": {
+            "next": "apply"
+          },
+          "status": "current",
+          "refs": [
+            "d-26d8058c09a3",
+            "e-4aa6628bb985",
+            "e-585e996a65eb"
+          ],
+          "text": "所有可能情形（天数6或7、小时8或9）均满足至少6天且总时长至少40小时，资格确定符合；当前无在途申请，故建议apply。"
+        },
+        "report": {
+          "id": "report",
+          "role": "report",
+          "version": 4,
+          "values": {
+            "recommend": true
+          },
+          "status": "current",
+          "refs": [
+            "d-26d8058c09a3",
+            "e-4aa6628bb985"
+          ],
+          "text": "所有可能情形（天数6或7、小时8或9）均满足至少6天且总时长至少40小时，资格确定符合，故recommend为true。"
+        }
+      },
+      "scheduledCandidates": [],
+      "noRelevantChange": true,
+      "state": {
+        "scope": "scope-4451ab30bc57",
+        "rule": {
+          "id": "d-26d8058c09a3",
+          "text": "来源系统规则原件，第2版，作用域scope-4451ab30bc57，岗位“钟表藏品测绘助理”。完整资格条件为每周至少6天，且每周总排班时长至少40小时；总排班时长=每周天数×每天小时数，两项须同时满足，无认证替代或其他隐含条件。本版从载有它的本轮事件开始生效，并替代同作用域此前规则。天数为非负整数，每天小时数为非负数。行动约定：符合且没有在途申请为apply，符合且申请在途为wait；不符合且申请在途为withdraw，不符合且没有在途申请为none。报告recommend与资格一致。原文穷尽的全部可能情形结论相同则可确定目标，否则目标值为null且status=uncertain；确定目标status=current。这里只维护建议，不执行外部操作；已撤回申请不得再次建议撤回。",
+          "minDays": 6,
+          "minHours": 40
+        },
+        "facts": {
+          "days": {
+            "value": null,
+            "alternatives": [
+              6,
+              7
+            ],
+            "version": 3
+          },
+          "hours": {
+            "value": null,
+            "alternatives": [
+              8,
+              9
+            ],
+            "version": 4
+          },
+          "applied": {
+            "value": false,
+            "alternatives": null,
+            "version": 2
+          }
+        },
+        "memories": {
+          "match": {
+            "id": "match",
+            "role": "match",
+            "version": 4,
+            "values": {
+              "eligible": true
+            },
+            "status": "current",
+            "refs": [
+              "d-26d8058c09a3",
+              "e-4aa6628bb985"
+            ],
+            "text": "所有可能情形（天数6或7、小时8或9）均满足至少6天且总时长至少40小时，资格确定符合。"
+          },
+          "path": {
+            "id": "path",
+            "role": "path",
+            "version": 5,
+            "values": {
+              "next": "apply"
+            },
+            "status": "current",
+            "refs": [
+              "d-26d8058c09a3",
+              "e-4aa6628bb985",
+              "e-585e996a65eb"
+            ],
+            "text": "所有可能情形（天数6或7、小时8或9）均满足至少6天且总时长至少40小时，资格确定符合；当前无在途申请，故建议apply。"
+          },
+          "report": {
+            "id": "report",
+            "role": "report",
+            "version": 4,
+            "values": {
+              "recommend": true
+            },
+            "status": "current",
+            "refs": [
+              "d-26d8058c09a3",
+              "e-4aa6628bb985"
+            ],
+            "text": "所有可能情形（天数6或7、小时8或9）均满足至少6天且总时长至少40小时，资格确定符合，故recommend为true。"
+          }
+        },
+        "sources": [
+          {
+            "id": "initial-t-0ccdfd2c6a9e",
+            "text": "{\"days\":5,\"hours\":8,\"applied\":true}"
+          },
+          {
+            "id": "d-05ec54587130",
+            "text": "来源系统规则原件，第1版，作用域scope-4451ab30bc57，岗位“钟表藏品测绘助理”。完整资格条件为每周至少4天，且每周总排班时长至少34小时；总排班时长=每周天数×每天小时数，两项须同时满足，无认证替代或其他隐含条件。本版从载有它的本轮事件开始生效，并替代同作用域此前规则。天数为非负整数，每天小时数为非负数。行动约定：符合且没有在途申请为apply，符合且申请在途为wait；不符合且申请在途为withdraw，不符合且没有在途申请为none。报告recommend与资格一致。原文穷尽的全部可能情形结论相同则可确定目标，否则目标值为null且status=uncertain；确定目标status=current。这里只维护建议，不执行外部操作；已撤回申请不得再次建议撤回。",
+            "minDays": 4,
+            "minHours": 34
+          },
+          {
+            "id": "e-199bfb6b20b8",
+            "text": "来源系统第1轮观测，观测版本1，作用域scope-4451ab30bc57。排班协调消息先列出尚未核定的候选。随后归档的原始回执在档案目录中；若读取了本人核定回执，按回执的后续核定内容处理。本人每周排班天数尚未确定，全部且仅有的候选为3、5；候选穷尽所有可能。本人每天排班小时数尚未确定，全部且仅有的候选为6、7；候选穷尽所有可能。以上不同字段的候选可独立组合，不存在未说明的组合限制。"
+          },
+          {
+            "id": "e-026b5c15d9fa",
+            "text": "来源系统第2轮观测，观测版本2，作用域scope-4451ab30bc57。本岗位新版规则原件已发布并随本事件提供，旧版从本轮起失效。"
+          },
+          {
+            "id": "d-26d8058c09a3",
+            "text": "来源系统规则原件，第2版，作用域scope-4451ab30bc57，岗位“钟表藏品测绘助理”。完整资格条件为每周至少6天，且每周总排班时长至少40小时；总排班时长=每周天数×每天小时数，两项须同时满足，无认证替代或其他隐含条件。本版从载有它的本轮事件开始生效，并替代同作用域此前规则。天数为非负整数，每天小时数为非负数。行动约定：符合且没有在途申请为apply，符合且申请在途为wait；不符合且申请在途为withdraw，不符合且没有在途申请为none。报告recommend与资格一致。原文穷尽的全部可能情形结论相同则可确定目标，否则目标值为null且status=uncertain；确定目标status=current。这里只维护建议，不执行外部操作；已撤回申请不得再次建议撤回。",
+            "minDays": 6,
+            "minHours": 40
+          },
+          {
+            "id": "e-faee818e47bc",
+            "text": "来源系统第3轮观测，观测版本3，作用域scope-4451ab30bc57。本轮复核发现对应旧观测已失效，新的具体事实尚未核定；本轮档案尚无本人该字段的确认值。本人每天排班小时数尚未确定，目前没有具体值，也未提供穷尽候选；旧值不能继续作为本轮事实。"
+          },
+          {
+            "id": "e-585e996a65eb",
+            "text": "来源系统第4轮观测，观测版本4，作用域scope-4451ab30bc57。此前在途的申请已由本人完成撤回，来源系统核实撤回成功，当前无任何在途申请，撤回事项无待办。这条回执不改变排班或当前资格规则。本人目前没有在途申请。"
+          },
+          {
+            "id": "e-4aa6628bb985",
+            "text": "来源系统第5轮观测，观测版本5，作用域scope-4451ab30bc57。排班仍在多份方案间协调，最终安排尚未核定。本人每周排班天数尚未确定，全部且仅有的候选为6、7；候选穷尽所有可能。本人每天排班小时数尚未确定，全部且仅有的候选为8、9；候选穷尽所有可能。以上不同字段的候选可独立组合，不存在未说明的组合限制。"
+          }
+        ],
+        "pending": []
+      },
+      "restarted": false
+    }
+  ]
+}

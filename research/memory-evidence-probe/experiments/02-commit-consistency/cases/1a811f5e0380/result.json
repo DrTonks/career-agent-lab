@@ -1,0 +1,334 @@
+{
+  "caseId": "1a811f5e0380",
+  "contextHash": "04a7cfebdb7eb82a1c12f5bef3137adb0b46ad278c1b4e8062c027497a946b46",
+  "records": {
+    "answer-first": {
+      "status": "ok",
+      "decision": {
+        "patches": [],
+        "answer": "按当前有效规则复核：每周4天、每天6小时，总时长24小时，满足每周至少2天且总时长至少18小时，eligible应为true；原记忆值正确，无需修订。",
+        "externalAction": "none",
+        "needsEvidence": false
+      },
+      "finalMemories": [
+        {
+          "id": "profile-days",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"days\": 4}",
+          "values": {
+            "days": 4
+          },
+          "refs": [
+            "d-a8913eed1bc4"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-hours",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"hours\": 6}",
+          "values": {
+            "hours": 6
+          },
+          "refs": [
+            "d-a8913eed1bc4"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-applied",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"applied\": true}",
+          "values": {
+            "applied": true
+          },
+          "refs": [
+            "d-a8913eed1bc4"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "match-job",
+          "role": "match",
+          "version": 1,
+          "text": "{\"eligible\": true}",
+          "values": {
+            "eligible": true
+          },
+          "refs": [
+            "d-71fe6d6a010c",
+            "d-84ab6e0ca0c2",
+            "d-34785c4ee682"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "path-job",
+          "role": "path",
+          "version": 1,
+          "text": "{\"next\": \"wait\"}",
+          "values": {
+            "next": "wait"
+          },
+          "refs": [
+            "d-71fe6d6a010c",
+            "d-84ab6e0ca0c2",
+            "d-34785c4ee682"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "report-job",
+          "role": "report",
+          "version": 1,
+          "text": "{\"recommend\": true}",
+          "values": {
+            "recommend": true
+          },
+          "refs": [
+            "d-71fe6d6a010c",
+            "d-84ab6e0ca0c2",
+            "d-34785c4ee682"
+          ],
+          "status": "current"
+        }
+      ]
+    },
+    "original": {
+      "status": "ok",
+      "decision": {
+        "patches": [
+          {
+            "memoryId": "match-job",
+            "expectedVersion": 1,
+            "values": {
+              "eligible": true
+            },
+            "refs": [
+              "d-71fe6d6a010c",
+              "d-84ab6e0ca0c2",
+              "d-a8913eed1bc4"
+            ],
+            "status": "current",
+            "text": "{\"eligible\": true}"
+          }
+        ],
+        "answer": "资格满足：每周4天≥2天，每周总时长4×6=24小时≥18小时，两项条件同时满足，eligible为true。",
+        "externalAction": "none",
+        "needsEvidence": false
+      },
+      "finalMemories": [
+        {
+          "id": "profile-days",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"days\": 4}",
+          "values": {
+            "days": 4
+          },
+          "refs": [
+            "d-a8913eed1bc4"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-hours",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"hours\": 6}",
+          "values": {
+            "hours": 6
+          },
+          "refs": [
+            "d-a8913eed1bc4"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-applied",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"applied\": true}",
+          "values": {
+            "applied": true
+          },
+          "refs": [
+            "d-a8913eed1bc4"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "match-job",
+          "role": "match",
+          "version": 2,
+          "text": "{\"eligible\": true}",
+          "values": {
+            "eligible": true
+          },
+          "refs": [
+            "d-71fe6d6a010c",
+            "d-84ab6e0ca0c2",
+            "d-a8913eed1bc4"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "path-job",
+          "role": "path",
+          "version": 1,
+          "text": "{\"next\": \"wait\"}",
+          "values": {
+            "next": "wait"
+          },
+          "refs": [
+            "d-71fe6d6a010c",
+            "d-84ab6e0ca0c2",
+            "d-34785c4ee682"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "report-job",
+          "role": "report",
+          "version": 1,
+          "text": "{\"recommend\": true}",
+          "values": {
+            "recommend": true
+          },
+          "refs": [
+            "d-71fe6d6a010c",
+            "d-84ab6e0ca0c2",
+            "d-34785c4ee682"
+          ],
+          "status": "current"
+        }
+      ]
+    },
+    "review": {
+      "status": "ok",
+      "decision": {
+        "patches": [
+          {
+            "memoryId": "match-job",
+            "expectedVersion": 1,
+            "values": {
+              "eligible": true
+            },
+            "refs": [
+              "d-71fe6d6a010c",
+              "d-84ab6e0ca0c2",
+              "d-a8913eed1bc4"
+            ],
+            "status": "current",
+            "text": "{\"eligible\":true}"
+          }
+        ],
+        "answer": "资格满足：每周4天≥2天，每周总时长4×6=24小时≥18小时，两项条件同时满足，eligible为true。",
+        "needsEvidence": false,
+        "externalAction": "none"
+      },
+      "finalMemories": [
+        {
+          "id": "profile-days",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"days\": 4}",
+          "values": {
+            "days": 4
+          },
+          "refs": [
+            "d-a8913eed1bc4"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-hours",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"hours\": 6}",
+          "values": {
+            "hours": 6
+          },
+          "refs": [
+            "d-a8913eed1bc4"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-applied",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"applied\": true}",
+          "values": {
+            "applied": true
+          },
+          "refs": [
+            "d-a8913eed1bc4"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "match-job",
+          "role": "match",
+          "version": 2,
+          "text": "{\"eligible\":true}",
+          "values": {
+            "eligible": true
+          },
+          "refs": [
+            "d-71fe6d6a010c",
+            "d-84ab6e0ca0c2",
+            "d-a8913eed1bc4"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "path-job",
+          "role": "path",
+          "version": 1,
+          "text": "{\"next\": \"wait\"}",
+          "values": {
+            "next": "wait"
+          },
+          "refs": [
+            "d-71fe6d6a010c",
+            "d-84ab6e0ca0c2",
+            "d-34785c4ee682"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "report-job",
+          "role": "report",
+          "version": 1,
+          "text": "{\"recommend\": true}",
+          "values": {
+            "recommend": true
+          },
+          "refs": [
+            "d-71fe6d6a010c",
+            "d-84ab6e0ca0c2",
+            "d-34785c4ee682"
+          ],
+          "status": "current"
+        }
+      ],
+      "reviewStatus": "accepted",
+      "fallback": false
+    }
+  },
+  "stages": [
+    "answer-first",
+    "decide",
+    "review"
+  ],
+  "elapsedMs": 3172.7434580000045,
+  "physicalUsage": {
+    "attempts": 3,
+    "inputTokens": 8564,
+    "outputTokens": 273
+  }
+}

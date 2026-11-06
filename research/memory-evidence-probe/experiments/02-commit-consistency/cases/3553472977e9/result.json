@@ -1,0 +1,357 @@
+{
+  "caseId": "3553472977e9",
+  "contextHash": "e5b8597239526846246a9b8bb814484c4b44c7cd224eda5dfbb9bd3f2325ca28",
+  "records": {
+    "answer-first": {
+      "status": "ok",
+      "decision": {
+        "patches": [
+          {
+            "memoryId": "match-job",
+            "expectedVersion": 1,
+            "values": {
+              "eligible": null
+            },
+            "refs": [
+              "d-c4243f49fba8",
+              "d-29891da232bf",
+              "d-f2c8719a17a3",
+              "profile-days",
+              "profile-hours"
+            ],
+            "status": "uncertain",
+            "text": "{\"eligible\": null}"
+          }
+        ],
+        "answer": "资格取决于每周天数，而该值尚未确定（可能不足也可能达到），因此无法确定是否满足每周至少2天且总时长至少13小时的条件；eligible 应改为 null 并标记 uncertain。",
+        "externalAction": "none",
+        "needsEvidence": true
+      },
+      "finalMemories": [
+        {
+          "id": "profile-days",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"days\": null}",
+          "values": {
+            "days": null
+          },
+          "refs": [
+            "d-f2c8719a17a3"
+          ],
+          "status": "uncertain"
+        },
+        {
+          "id": "profile-hours",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"hours\": 4}",
+          "values": {
+            "hours": 4
+          },
+          "refs": [
+            "d-f2c8719a17a3"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-applied",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"applied\": true}",
+          "values": {
+            "applied": true
+          },
+          "refs": [
+            "d-f2c8719a17a3"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "match-job",
+          "role": "match",
+          "version": 2,
+          "text": "{\"eligible\": null}",
+          "values": {
+            "eligible": null
+          },
+          "refs": [
+            "d-c4243f49fba8",
+            "d-29891da232bf",
+            "d-f2c8719a17a3",
+            "profile-days",
+            "profile-hours"
+          ],
+          "status": "uncertain"
+        },
+        {
+          "id": "path-job",
+          "role": "path",
+          "version": 1,
+          "text": "{\"next\": \"wait\"}",
+          "values": {
+            "next": "wait"
+          },
+          "refs": [
+            "d-c4243f49fba8",
+            "d-29891da232bf",
+            "d-4ea6e6c12f73"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "report-job",
+          "role": "report",
+          "version": 1,
+          "text": "{\"recommend\": true}",
+          "values": {
+            "recommend": true
+          },
+          "refs": [
+            "d-c4243f49fba8",
+            "d-29891da232bf",
+            "d-4ea6e6c12f73"
+          ],
+          "status": "current"
+        }
+      ]
+    },
+    "original": {
+      "status": "ok",
+      "decision": {
+        "patches": [
+          {
+            "memoryId": "match-job",
+            "expectedVersion": 1,
+            "values": {
+              "eligible": null
+            },
+            "refs": [
+              "d-c4243f49fba8",
+              "d-29891da232bf",
+              "d-f2c8719a17a3",
+              "e-3553472977e9"
+            ],
+            "status": "uncertain",
+            "text": "{\"eligible\": null}"
+          }
+        ],
+        "answer": "每周天数尚未确定，可能不足也可能达到资格要求；每天4小时，总时长是否达到每周13小时无法确定，因此资格结论为null并标记uncertain。",
+        "externalAction": "none",
+        "needsEvidence": true
+      },
+      "finalMemories": [
+        {
+          "id": "profile-days",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"days\": null}",
+          "values": {
+            "days": null
+          },
+          "refs": [
+            "d-f2c8719a17a3"
+          ],
+          "status": "uncertain"
+        },
+        {
+          "id": "profile-hours",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"hours\": 4}",
+          "values": {
+            "hours": 4
+          },
+          "refs": [
+            "d-f2c8719a17a3"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-applied",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"applied\": true}",
+          "values": {
+            "applied": true
+          },
+          "refs": [
+            "d-f2c8719a17a3"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "match-job",
+          "role": "match",
+          "version": 2,
+          "text": "{\"eligible\": null}",
+          "values": {
+            "eligible": null
+          },
+          "refs": [
+            "d-c4243f49fba8",
+            "d-29891da232bf",
+            "d-f2c8719a17a3",
+            "e-3553472977e9"
+          ],
+          "status": "uncertain"
+        },
+        {
+          "id": "path-job",
+          "role": "path",
+          "version": 1,
+          "text": "{\"next\": \"wait\"}",
+          "values": {
+            "next": "wait"
+          },
+          "refs": [
+            "d-c4243f49fba8",
+            "d-29891da232bf",
+            "d-4ea6e6c12f73"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "report-job",
+          "role": "report",
+          "version": 1,
+          "text": "{\"recommend\": true}",
+          "values": {
+            "recommend": true
+          },
+          "refs": [
+            "d-c4243f49fba8",
+            "d-29891da232bf",
+            "d-4ea6e6c12f73"
+          ],
+          "status": "current"
+        }
+      ]
+    },
+    "review": {
+      "status": "ok",
+      "decision": {
+        "patches": [
+          {
+            "memoryId": "match-job",
+            "expectedVersion": 1,
+            "values": {
+              "eligible": null
+            },
+            "refs": [
+              "d-c4243f49fba8",
+              "d-29891da232bf",
+              "d-f2c8719a17a3",
+              "e-3553472977e9"
+            ],
+            "status": "uncertain",
+            "text": "{\"eligible\":null}"
+          }
+        ],
+        "answer": "每周天数尚未确定，可能不足也可能达到资格要求；每天4小时，总时长是否达到每周13小时无法确定，因此资格结论为null并标记uncertain。",
+        "needsEvidence": true,
+        "externalAction": "none"
+      },
+      "finalMemories": [
+        {
+          "id": "profile-days",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"days\": null}",
+          "values": {
+            "days": null
+          },
+          "refs": [
+            "d-f2c8719a17a3"
+          ],
+          "status": "uncertain"
+        },
+        {
+          "id": "profile-hours",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"hours\": 4}",
+          "values": {
+            "hours": 4
+          },
+          "refs": [
+            "d-f2c8719a17a3"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-applied",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"applied\": true}",
+          "values": {
+            "applied": true
+          },
+          "refs": [
+            "d-f2c8719a17a3"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "match-job",
+          "role": "match",
+          "version": 2,
+          "text": "{\"eligible\":null}",
+          "values": {
+            "eligible": null
+          },
+          "refs": [
+            "d-c4243f49fba8",
+            "d-29891da232bf",
+            "d-f2c8719a17a3",
+            "e-3553472977e9"
+          ],
+          "status": "uncertain"
+        },
+        {
+          "id": "path-job",
+          "role": "path",
+          "version": 1,
+          "text": "{\"next\": \"wait\"}",
+          "values": {
+            "next": "wait"
+          },
+          "refs": [
+            "d-c4243f49fba8",
+            "d-29891da232bf",
+            "d-4ea6e6c12f73"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "report-job",
+          "role": "report",
+          "version": 1,
+          "text": "{\"recommend\": true}",
+          "values": {
+            "recommend": true
+          },
+          "refs": [
+            "d-c4243f49fba8",
+            "d-29891da232bf",
+            "d-4ea6e6c12f73"
+          ],
+          "status": "current"
+        }
+      ],
+      "reviewStatus": "accepted",
+      "fallback": false
+    }
+  },
+  "stages": [
+    "answer-first",
+    "decide",
+    "review"
+  ],
+  "elapsedMs": 3160.088125000002,
+  "physicalUsage": {
+    "attempts": 3,
+    "inputTokens": 8662,
+    "outputTokens": 368
+  }
+}

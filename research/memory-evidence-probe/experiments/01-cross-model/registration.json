@@ -1,0 +1,60 @@
+{
+  "date": "2026-11-05T06:49:16.504437+00:00",
+  "title": "行动反馈驱动的条件式记忆探针",
+  "status": "registered before GPT dev/holdout predictions",
+  "model": "gpt-6.1-sol",
+  "endpoint": "https://api.openai.com/v1/chat/completions",
+  "reasoning_effort": "medium",
+  "max_completion_tokens": 8192,
+  "temperature": "omitted: reasoning model",
+  "repeats": 1,
+  "matrix": {
+    "dev": 72,
+    "holdout": 216,
+    "jobs": 4,
+    "arms": [
+      "O",
+      "B",
+      "L",
+      "N"
+    ],
+    "budgets": {
+      "wide": 20000,
+      "tight": 2800
+    }
+  },
+  "data": "../advice-repair-v2/data (unchanged)",
+  "baseline": "../../var/advice-repair-v2/study/experiment.sqlite (frozen DeepSeek predictions, not rerun)",
+  "primary": "Same strict fit/action/target plus blind semantic-grounding review as v2. Include protocol failures. Receipt pairs require both stale and synchronized cases correct.",
+  "contrasts": [
+    "L - O: action-label repair",
+    "N - L: guarded probe change",
+    "N - B: probe contribution over static evidence card",
+    "GPT - DeepSeek within each arm/context"
+  ],
+  "review": "Pool 432 holdout answers, random blind IDs, same original semantic rubric. DeepSeek primary judge; GPT secondary judge for sensitivity. Hide model/arm/context/action label. Retain both scores and disagreement. No prompt adjustment based on holdout.",
+  "limitations": [
+    "Synthetic 3-job holdout, repeated contexts are not independent samples",
+    "GPT medium vs DeepSeek thinking disabled; no equal-compute claim",
+    "Model selects among three hand-designed query slots; not open-ended probe invention",
+    "Single run; cannot prove global originality or broad generalization"
+  ],
+  "v2_sha256": {
+    "protocol.mjs": "31044ce564e7361f8f164589317eea3ee9e6179453009a12e4fa3fac97fbefa9",
+    "run.mjs": "f491b3089ebe264c9d75f92e1b3d132d15c1eb01d580a2f3a41e857216f339db",
+    "data/jobs.json": "a429a2f53289000497c932e59c4ff4c1f01cadee373f1d5fd9ab99be7c77d165",
+    "data/initial.json": "ddb644fab1869824a71b35d1788d2dff6cf768629cbce3bdb786b0b22b31b404",
+    "data/branches.jsonl": "ec384a644ce4fd4c57969e326d66f31740fe34139e0aa3ca990e0719edd75851",
+    "judge/key.jsonl": "7968de8994c42866d56d20918986117aec68795663f0b341ab8932509ab93c07",
+    "judge/review.mjs": "01e1eac61ca0c4baebd84d10a66dc0bda3df67b7edf04e368d35063b844f9ada",
+    "judge/adjudicate.mjs": "3fb2f4782712967f91003459dc75e9d057571bfedd9107e72c804795589beebc"
+  },
+  "new_sha256": {
+    "run.mjs": "5ce9dafd4513ef582ff2fb63fd9f4211c0025b1f5755f99024e605837b06deb1",
+    "openai-provider.mjs": "34522ad6a86018cf3daf68d89b9200dd1edb003ac8e35a8e63038839a60788b9"
+  },
+  "reviewImplementationSha256": {
+    "adjudicate.mjs": "0bd342bde2fd0e780ad60894a29ff1e7f2aca25edf99d229f290e621019b134f",
+    "pool.mjs": "34e51f3bbc7320a35d6abeae24d35e248ab55475244927ed6f9f628ea49d86e3"
+  }
+}

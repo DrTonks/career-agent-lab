@@ -1,0 +1,32 @@
+{
+  "status": "completed-AI-audit-not-human-proof",
+  "coverage": {
+    "new": 216,
+    "regression": 72,
+    "total": 288
+  },
+  "deterministicScoreDisagreements": 0,
+  "standardizedAnswerVsCommitConflicts": {
+    "original": 9,
+    "answer-first": 0,
+    "review": 0
+  },
+  "doNotMergeOverallLabels": "New audit judgment includes source consistency; regression label measures answer/write consistency separately from evidence assessment. Overall labels cannot be summed as a single metric.",
+  "importantRemainingIssues": [
+    "New report tasks can confuse eligible recommendation with applying again while an application is pending.",
+    "Regression review 1704cdfaf7c9 fixes true value but retains incorrect uncertain status.",
+    "Regression answer-first 988cdd0950c9 has an arithmetic error while final null/uncertain is correct."
+  ],
+  "numericScreenPassed": [
+    "answer-first",
+    "review"
+  ],
+  "activeProbeExperimentPerformed": false,
+  "decision": "Use answer-first as the candidate common baseline in subsequent matched-budget probe experiments; no universal non-degradation claim. Do not add review to every target by default.",
+  "limitations": [
+    "AI reviewers not blinded; not independent human evaluation or formal proof.",
+    "One sample per condition and shared synthetic families.",
+    "No claim of active probe, full workflow, or compression benefit."
+  ],
+  "gptCalls": 0
+}

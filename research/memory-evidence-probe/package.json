@@ -1,0 +1,19 @@
+{
+  "name": "memory-evidence-probe-research",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "dependencies": {
+    "zod": "4.6.7"
+  },
+  "scripts": {
+    "verify": "python3 scripts/verify.py",
+    "check:privacy": "python3 scripts/privacy-check.py",
+    "test:runtime": "node --test runtime/engine.test.mjs",
+    "live:register": "node runtime/run.mjs --register",
+    "live:run": "node runtime/run.mjs --live"
+  }
+}

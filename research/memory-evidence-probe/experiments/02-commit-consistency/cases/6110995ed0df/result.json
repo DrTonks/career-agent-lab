@@ -1,0 +1,394 @@
+{
+  "caseId": "6110995ed0df",
+  "contextHash": "414b0e9f17cfe37099bb287d90d8884eb8eee5175b7407c1ac3ad07fcaa17a5e",
+  "records": {
+    "original": {
+      "status": "ok",
+      "decision": {
+        "patches": [
+          {
+            "memoryId": "report-job",
+            "expectedVersion": 1,
+            "values": {
+              "recommend": null
+            },
+            "refs": [
+              "d-932df8940aad",
+              "d-2109115f9036",
+              "d-fbf9b10ea48f",
+              "e-6110995ed0df"
+            ],
+            "status": "uncertain",
+            "text": "{\"recommend\": null}"
+          }
+        ],
+        "answer": "现场准入认证状态尚未核实，资格是否满足无法确定；按任务约定事实未知时不得猜值，recommend置为null并标记uncertain。",
+        "externalAction": "none",
+        "needsEvidence": true
+      },
+      "finalMemories": [
+        {
+          "id": "profile-days",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"days\": 4}",
+          "values": {
+            "days": 4
+          },
+          "refs": [
+            "d-fbf9b10ea48f"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-hours",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"hours\": 4}",
+          "values": {
+            "hours": 4
+          },
+          "refs": [
+            "d-fbf9b10ea48f"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-applied",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"applied\": true}",
+          "values": {
+            "applied": true
+          },
+          "refs": [
+            "d-fbf9b10ea48f"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "match-job",
+          "role": "match",
+          "version": 1,
+          "text": "{\"eligible\": true}",
+          "values": {
+            "eligible": true
+          },
+          "refs": [
+            "d-8e349546873c",
+            "d-2109115f9036",
+            "d-bf5d73df49fb"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "path-job",
+          "role": "path",
+          "version": 1,
+          "text": "{\"next\": \"wait\"}",
+          "values": {
+            "next": "wait"
+          },
+          "refs": [
+            "d-8e349546873c",
+            "d-2109115f9036",
+            "d-bf5d73df49fb"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "report-job",
+          "role": "report",
+          "version": 2,
+          "text": "{\"recommend\": null}",
+          "values": {
+            "recommend": null
+          },
+          "refs": [
+            "d-932df8940aad",
+            "d-2109115f9036",
+            "d-fbf9b10ea48f",
+            "e-6110995ed0df"
+          ],
+          "status": "uncertain"
+        },
+        {
+          "id": "profile-permit",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"permit\": null}",
+          "values": {
+            "permit": null
+          },
+          "refs": [
+            "d-fbf9b10ea48f"
+          ],
+          "status": "uncertain"
+        }
+      ]
+    },
+    "answer-first": {
+      "status": "ok",
+      "decision": {
+        "patches": [
+          {
+            "memoryId": "report-job",
+            "expectedVersion": 1,
+            "values": {
+              "recommend": null
+            },
+            "refs": [
+              "d-932df8940aad",
+              "d-2109115f9036",
+              "d-fbf9b10ea48f",
+              "e-6110995ed0df"
+            ],
+            "status": "uncertain",
+            "text": "{\"recommend\": null}"
+          }
+        ],
+        "answer": "现场准入认证状态尚未核实，资格是否满足无法确定；按任务约定，事实未知时不得猜值，仅当所有证据允许的状态给出相同结论时输出确定值，否则输出null并标记uncertain。原recommend=true缺乏依据，应修订为null。",
+        "externalAction": "none",
+        "needsEvidence": true
+      },
+      "finalMemories": [
+        {
+          "id": "profile-days",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"days\": 4}",
+          "values": {
+            "days": 4
+          },
+          "refs": [
+            "d-fbf9b10ea48f"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-hours",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"hours\": 4}",
+          "values": {
+            "hours": 4
+          },
+          "refs": [
+            "d-fbf9b10ea48f"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-applied",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"applied\": true}",
+          "values": {
+            "applied": true
+          },
+          "refs": [
+            "d-fbf9b10ea48f"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "match-job",
+          "role": "match",
+          "version": 1,
+          "text": "{\"eligible\": true}",
+          "values": {
+            "eligible": true
+          },
+          "refs": [
+            "d-8e349546873c",
+            "d-2109115f9036",
+            "d-bf5d73df49fb"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "path-job",
+          "role": "path",
+          "version": 1,
+          "text": "{\"next\": \"wait\"}",
+          "values": {
+            "next": "wait"
+          },
+          "refs": [
+            "d-8e349546873c",
+            "d-2109115f9036",
+            "d-bf5d73df49fb"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "report-job",
+          "role": "report",
+          "version": 2,
+          "text": "{\"recommend\": null}",
+          "values": {
+            "recommend": null
+          },
+          "refs": [
+            "d-932df8940aad",
+            "d-2109115f9036",
+            "d-fbf9b10ea48f",
+            "e-6110995ed0df"
+          ],
+          "status": "uncertain"
+        },
+        {
+          "id": "profile-permit",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"permit\": null}",
+          "values": {
+            "permit": null
+          },
+          "refs": [
+            "d-fbf9b10ea48f"
+          ],
+          "status": "uncertain"
+        }
+      ]
+    },
+    "review": {
+      "status": "ok",
+      "decision": {
+        "patches": [
+          {
+            "memoryId": "report-job",
+            "expectedVersion": 1,
+            "values": {
+              "recommend": null
+            },
+            "refs": [
+              "d-932df8940aad",
+              "d-2109115f9036",
+              "d-fbf9b10ea48f",
+              "e-6110995ed0df"
+            ],
+            "status": "uncertain",
+            "text": "{\"recommend\":null}"
+          }
+        ],
+        "answer": "现场准入认证状态尚未核实，资格是否满足无法确定；按任务约定事实未知时不得猜值，recommend置为null并标记uncertain。",
+        "needsEvidence": true,
+        "externalAction": "none"
+      },
+      "finalMemories": [
+        {
+          "id": "profile-days",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"days\": 4}",
+          "values": {
+            "days": 4
+          },
+          "refs": [
+            "d-fbf9b10ea48f"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-hours",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"hours\": 4}",
+          "values": {
+            "hours": 4
+          },
+          "refs": [
+            "d-fbf9b10ea48f"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-applied",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"applied\": true}",
+          "values": {
+            "applied": true
+          },
+          "refs": [
+            "d-fbf9b10ea48f"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "match-job",
+          "role": "match",
+          "version": 1,
+          "text": "{\"eligible\": true}",
+          "values": {
+            "eligible": true
+          },
+          "refs": [
+            "d-8e349546873c",
+            "d-2109115f9036",
+            "d-bf5d73df49fb"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "path-job",
+          "role": "path",
+          "version": 1,
+          "text": "{\"next\": \"wait\"}",
+          "values": {
+            "next": "wait"
+          },
+          "refs": [
+            "d-8e349546873c",
+            "d-2109115f9036",
+            "d-bf5d73df49fb"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "report-job",
+          "role": "report",
+          "version": 2,
+          "text": "{\"recommend\":null}",
+          "values": {
+            "recommend": null
+          },
+          "refs": [
+            "d-932df8940aad",
+            "d-2109115f9036",
+            "d-fbf9b10ea48f",
+            "e-6110995ed0df"
+          ],
+          "status": "uncertain"
+        },
+        {
+          "id": "profile-permit",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"permit\": null}",
+          "values": {
+            "permit": null
+          },
+          "refs": [
+            "d-fbf9b10ea48f"
+          ],
+          "status": "uncertain"
+        }
+      ],
+      "reviewStatus": "accepted",
+      "fallback": false
+    }
+  },
+  "stages": [
+    "decide",
+    "answer-first",
+    "review"
+  ],
+  "elapsedMs": 3394.083749999998,
+  "physicalUsage": {
+    "attempts": 3,
+    "inputTokens": 8611,
+    "outputTokens": 381
+  }
+}

@@ -1,0 +1,583 @@
+{
+  "caseId": "9be57ed10b17",
+  "contextHash": "a0cbff7299baf8215f67f5ed8ec76ef26887f28b77f80f015b8e5aa06317ae0e",
+  "records": {
+    "answer-first": {
+      "status": "ok",
+      "decision": {
+        "patches": [
+          {
+            "memoryId": "match-job",
+            "expectedVersion": 1,
+            "values": {
+              "eligible": true
+            },
+            "refs": [
+              "d-75b12325711f",
+              "d-58a1a4ff4d21",
+              "d-3ba8c01cbc22"
+            ],
+            "status": "current",
+            "text": "{\"eligible\": true}"
+          }
+        ],
+        "answer": "按当前有效原件复核：资格规则为每周至少3天且天数×每天小时数至少14小时。本轮登记每周3或4天（未定，选项穷尽）、每天5小时。两种可能下均满足：3×5=15≥14且3≥3；4×5=20≥14且4≥3。故eligible确定为true，维持原值并更新来源与文字。",
+        "externalAction": "none",
+        "needsEvidence": false
+      },
+      "finalMemories": [
+        {
+          "id": "profile-days",
+          "role": "profile",
+          "version": 2,
+          "text": "本轮days记录：None。",
+          "values": {
+            "days": null
+          },
+          "refs": [
+            "d-3ba8c01cbc22"
+          ],
+          "status": "uncertain"
+        },
+        {
+          "id": "profile-hours",
+          "role": "profile",
+          "version": 2,
+          "text": "本轮hours记录：5。",
+          "values": {
+            "hours": 5
+          },
+          "refs": [
+            "d-3ba8c01cbc22"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-applied",
+          "role": "profile",
+          "version": 2,
+          "text": "本轮applied记录：False。",
+          "values": {
+            "applied": false
+          },
+          "refs": [
+            "d-3ba8c01cbc22"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "match-job",
+          "role": "match",
+          "version": 2,
+          "text": "{\"eligible\": true}",
+          "values": {
+            "eligible": true
+          },
+          "refs": [
+            "d-75b12325711f",
+            "d-58a1a4ff4d21",
+            "d-3ba8c01cbc22"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "path-job",
+          "role": "path",
+          "version": 1,
+          "text": "{\"next\": \"apply\"}",
+          "values": {
+            "next": "apply"
+          },
+          "refs": [
+            "d-58a1a4ff4d21",
+            "d-75b12325711f",
+            "d-f28791141b60"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "report-job",
+          "role": "report",
+          "version": 1,
+          "text": "{\"recommend\": true}",
+          "values": {
+            "recommend": true
+          },
+          "refs": [
+            "d-58a1a4ff4d21",
+            "d-75b12325711f",
+            "d-f28791141b60"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-note-0",
+          "role": "profile",
+          "version": 1,
+          "text": "课程笔记目录，不影响岗位资格。",
+          "values": {
+            "note": "0"
+          },
+          "refs": [
+            "d-f28791141b60"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-note-1",
+          "role": "profile",
+          "version": 1,
+          "text": "课程笔记目录，不影响岗位资格。",
+          "values": {
+            "note": "1"
+          },
+          "refs": [
+            "d-f28791141b60"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-note-2",
+          "role": "profile",
+          "version": 1,
+          "text": "课程笔记目录，不影响岗位资格。",
+          "values": {
+            "note": "2"
+          },
+          "refs": [
+            "d-f28791141b60"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-note-3",
+          "role": "profile",
+          "version": 1,
+          "text": "课程笔记目录，不影响岗位资格。",
+          "values": {
+            "note": "3"
+          },
+          "refs": [
+            "d-f28791141b60"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-note-4",
+          "role": "profile",
+          "version": 1,
+          "text": "课程笔记目录，不影响岗位资格。",
+          "values": {
+            "note": "4"
+          },
+          "refs": [
+            "d-f28791141b60"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-note-5",
+          "role": "profile",
+          "version": 1,
+          "text": "课程笔记目录，不影响岗位资格。",
+          "values": {
+            "note": "5"
+          },
+          "refs": [
+            "d-f28791141b60"
+          ],
+          "status": "current"
+        }
+      ]
+    },
+    "original": {
+      "status": "ok",
+      "decision": {
+        "patches": [
+          {
+            "memoryId": "match-job",
+            "expectedVersion": 1,
+            "values": {
+              "eligible": true
+            },
+            "refs": [
+              "d-75b12325711f",
+              "d-58a1a4ff4d21",
+              "d-3ba8c01cbc22"
+            ],
+            "status": "current",
+            "text": "{\"eligible\": true}"
+          }
+        ],
+        "answer": "按资格规则：每周至少3天且天数×每天小时数至少14小时。本轮每天5小时，每周3或4天（穷尽可能）。3天×5小时=15≥14，4天×5小时=20≥14，且3天、4天均满足至少3天；所有可能状态均符合，故eligible确定为true。",
+        "externalAction": "none",
+        "needsEvidence": false
+      },
+      "finalMemories": [
+        {
+          "id": "profile-days",
+          "role": "profile",
+          "version": 2,
+          "text": "本轮days记录：None。",
+          "values": {
+            "days": null
+          },
+          "refs": [
+            "d-3ba8c01cbc22"
+          ],
+          "status": "uncertain"
+        },
+        {
+          "id": "profile-hours",
+          "role": "profile",
+          "version": 2,
+          "text": "本轮hours记录：5。",
+          "values": {
+            "hours": 5
+          },
+          "refs": [
+            "d-3ba8c01cbc22"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-applied",
+          "role": "profile",
+          "version": 2,
+          "text": "本轮applied记录：False。",
+          "values": {
+            "applied": false
+          },
+          "refs": [
+            "d-3ba8c01cbc22"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "match-job",
+          "role": "match",
+          "version": 2,
+          "text": "{\"eligible\": true}",
+          "values": {
+            "eligible": true
+          },
+          "refs": [
+            "d-75b12325711f",
+            "d-58a1a4ff4d21",
+            "d-3ba8c01cbc22"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "path-job",
+          "role": "path",
+          "version": 1,
+          "text": "{\"next\": \"apply\"}",
+          "values": {
+            "next": "apply"
+          },
+          "refs": [
+            "d-58a1a4ff4d21",
+            "d-75b12325711f",
+            "d-f28791141b60"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "report-job",
+          "role": "report",
+          "version": 1,
+          "text": "{\"recommend\": true}",
+          "values": {
+            "recommend": true
+          },
+          "refs": [
+            "d-58a1a4ff4d21",
+            "d-75b12325711f",
+            "d-f28791141b60"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-note-0",
+          "role": "profile",
+          "version": 1,
+          "text": "课程笔记目录，不影响岗位资格。",
+          "values": {
+            "note": "0"
+          },
+          "refs": [
+            "d-f28791141b60"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-note-1",
+          "role": "profile",
+          "version": 1,
+          "text": "课程笔记目录，不影响岗位资格。",
+          "values": {
+            "note": "1"
+          },
+          "refs": [
+            "d-f28791141b60"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-note-2",
+          "role": "profile",
+          "version": 1,
+          "text": "课程笔记目录，不影响岗位资格。",
+          "values": {
+            "note": "2"
+          },
+          "refs": [
+            "d-f28791141b60"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-note-3",
+          "role": "profile",
+          "version": 1,
+          "text": "课程笔记目录，不影响岗位资格。",
+          "values": {
+            "note": "3"
+          },
+          "refs": [
+            "d-f28791141b60"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-note-4",
+          "role": "profile",
+          "version": 1,
+          "text": "课程笔记目录，不影响岗位资格。",
+          "values": {
+            "note": "4"
+          },
+          "refs": [
+            "d-f28791141b60"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-note-5",
+          "role": "profile",
+          "version": 1,
+          "text": "课程笔记目录，不影响岗位资格。",
+          "values": {
+            "note": "5"
+          },
+          "refs": [
+            "d-f28791141b60"
+          ],
+          "status": "current"
+        }
+      ]
+    },
+    "review": {
+      "status": "ok",
+      "decision": {
+        "patches": [
+          {
+            "memoryId": "match-job",
+            "expectedVersion": 1,
+            "values": {
+              "eligible": true
+            },
+            "refs": [
+              "d-75b12325711f",
+              "d-58a1a4ff4d21",
+              "d-3ba8c01cbc22"
+            ],
+            "status": "current",
+            "text": "{\"eligible\":true}"
+          }
+        ],
+        "answer": "按资格规则：每周至少3天且天数×每天小时数至少14小时。本轮每天5小时，每周3或4天（穷尽可能）。3天×5小时=15≥14，4天×5小时=20≥14，且3天、4天均满足至少3天；所有可能状态均符合，故eligible确定为true。",
+        "needsEvidence": false,
+        "externalAction": "none"
+      },
+      "finalMemories": [
+        {
+          "id": "profile-days",
+          "role": "profile",
+          "version": 2,
+          "text": "本轮days记录：None。",
+          "values": {
+            "days": null
+          },
+          "refs": [
+            "d-3ba8c01cbc22"
+          ],
+          "status": "uncertain"
+        },
+        {
+          "id": "profile-hours",
+          "role": "profile",
+          "version": 2,
+          "text": "本轮hours记录：5。",
+          "values": {
+            "hours": 5
+          },
+          "refs": [
+            "d-3ba8c01cbc22"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-applied",
+          "role": "profile",
+          "version": 2,
+          "text": "本轮applied记录：False。",
+          "values": {
+            "applied": false
+          },
+          "refs": [
+            "d-3ba8c01cbc22"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "match-job",
+          "role": "match",
+          "version": 2,
+          "text": "{\"eligible\":true}",
+          "values": {
+            "eligible": true
+          },
+          "refs": [
+            "d-75b12325711f",
+            "d-58a1a4ff4d21",
+            "d-3ba8c01cbc22"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "path-job",
+          "role": "path",
+          "version": 1,
+          "text": "{\"next\": \"apply\"}",
+          "values": {
+            "next": "apply"
+          },
+          "refs": [
+            "d-58a1a4ff4d21",
+            "d-75b12325711f",
+            "d-f28791141b60"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "report-job",
+          "role": "report",
+          "version": 1,
+          "text": "{\"recommend\": true}",
+          "values": {
+            "recommend": true
+          },
+          "refs": [
+            "d-58a1a4ff4d21",
+            "d-75b12325711f",
+            "d-f28791141b60"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-note-0",
+          "role": "profile",
+          "version": 1,
+          "text": "课程笔记目录，不影响岗位资格。",
+          "values": {
+            "note": "0"
+          },
+          "refs": [
+            "d-f28791141b60"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-note-1",
+          "role": "profile",
+          "version": 1,
+          "text": "课程笔记目录，不影响岗位资格。",
+          "values": {
+            "note": "1"
+          },
+          "refs": [
+            "d-f28791141b60"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-note-2",
+          "role": "profile",
+          "version": 1,
+          "text": "课程笔记目录，不影响岗位资格。",
+          "values": {
+            "note": "2"
+          },
+          "refs": [
+            "d-f28791141b60"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-note-3",
+          "role": "profile",
+          "version": 1,
+          "text": "课程笔记目录，不影响岗位资格。",
+          "values": {
+            "note": "3"
+          },
+          "refs": [
+            "d-f28791141b60"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-note-4",
+          "role": "profile",
+          "version": 1,
+          "text": "课程笔记目录，不影响岗位资格。",
+          "values": {
+            "note": "4"
+          },
+          "refs": [
+            "d-f28791141b60"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-note-5",
+          "role": "profile",
+          "version": 1,
+          "text": "课程笔记目录，不影响岗位资格。",
+          "values": {
+            "note": "5"
+          },
+          "refs": [
+            "d-f28791141b60"
+          ],
+          "status": "current"
+        }
+      ],
+      "reviewStatus": "accepted",
+      "fallback": false
+    }
+  },
+  "stages": [
+    "answer-first",
+    "decide",
+    "review"
+  ],
+  "elapsedMs": 3884.7483749999956,
+  "physicalUsage": {
+    "attempts": 3,
+    "inputTokens": 8394,
+    "outputTokens": 471
+  }
+}

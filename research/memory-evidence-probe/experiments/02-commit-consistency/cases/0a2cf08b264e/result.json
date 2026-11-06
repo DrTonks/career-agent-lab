@@ -1,0 +1,392 @@
+{
+  "caseId": "0a2cf08b264e",
+  "contextHash": "8cdcbef1195a7d6220b343380c45efb9505410c86fbd104cfdb617f25b0cc371",
+  "records": {
+    "answer-first": {
+      "status": "ok",
+      "decision": {
+        "patches": [
+          {
+            "memoryId": "match-job",
+            "expectedVersion": 1,
+            "values": {
+              "eligible": null
+            },
+            "refs": [
+              "d-6cdb40cca5e1",
+              "d-76a12bc96d3b",
+              "e-0a2cf08b264e"
+            ],
+            "status": "uncertain",
+            "text": "{\"eligible\": null}"
+          }
+        ],
+        "answer": "依据现行规则，天数5≥3、总时长5×5=25≥21均满足，但现场准入认证状态尚未核实，资格无法确定为true；应将eligible改为null并标记uncertain。",
+        "externalAction": "none",
+        "needsEvidence": true
+      },
+      "finalMemories": [
+        {
+          "id": "profile-days",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"days\": 5}",
+          "values": {
+            "days": 5
+          },
+          "refs": [
+            "d-76a12bc96d3b"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-hours",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"hours\": 5}",
+          "values": {
+            "hours": 5
+          },
+          "refs": [
+            "d-76a12bc96d3b"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-applied",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"applied\": false}",
+          "values": {
+            "applied": false
+          },
+          "refs": [
+            "d-76a12bc96d3b"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "match-job",
+          "role": "match",
+          "version": 2,
+          "text": "{\"eligible\": null}",
+          "values": {
+            "eligible": null
+          },
+          "refs": [
+            "d-6cdb40cca5e1",
+            "d-76a12bc96d3b",
+            "e-0a2cf08b264e"
+          ],
+          "status": "uncertain"
+        },
+        {
+          "id": "path-job",
+          "role": "path",
+          "version": 1,
+          "text": "{\"next\": \"apply\"}",
+          "values": {
+            "next": "apply"
+          },
+          "refs": [
+            "d-270c5e7ee185",
+            "d-3be6a71a0a81",
+            "d-0c11f4908cc7"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "report-job",
+          "role": "report",
+          "version": 1,
+          "text": "{\"recommend\": true}",
+          "values": {
+            "recommend": true
+          },
+          "refs": [
+            "d-270c5e7ee185",
+            "d-3be6a71a0a81",
+            "d-0c11f4908cc7"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-permit",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"permit\": null}",
+          "values": {
+            "permit": null
+          },
+          "refs": [
+            "d-76a12bc96d3b"
+          ],
+          "status": "uncertain"
+        }
+      ]
+    },
+    "original": {
+      "status": "ok",
+      "decision": {
+        "patches": [
+          {
+            "memoryId": "match-job",
+            "expectedVersion": 1,
+            "values": {
+              "eligible": null
+            },
+            "refs": [
+              "d-6cdb40cca5e1",
+              "d-3be6a71a0a81",
+              "d-76a12bc96d3b",
+              "e-0a2cf08b264e"
+            ],
+            "status": "uncertain",
+            "text": "{\"eligible\": null}"
+          }
+        ],
+        "answer": "资格无法确定：现行规则要求每周至少3天且总时长至少21小时，并须持有效现场准入认证。天数5、每天5小时（总25小时）满足前两项，但现场准入认证状态尚未核实，因此eligible记为null并标记uncertain。",
+        "externalAction": "none",
+        "needsEvidence": true
+      },
+      "finalMemories": [
+        {
+          "id": "profile-days",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"days\": 5}",
+          "values": {
+            "days": 5
+          },
+          "refs": [
+            "d-76a12bc96d3b"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-hours",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"hours\": 5}",
+          "values": {
+            "hours": 5
+          },
+          "refs": [
+            "d-76a12bc96d3b"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-applied",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"applied\": false}",
+          "values": {
+            "applied": false
+          },
+          "refs": [
+            "d-76a12bc96d3b"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "match-job",
+          "role": "match",
+          "version": 2,
+          "text": "{\"eligible\": null}",
+          "values": {
+            "eligible": null
+          },
+          "refs": [
+            "d-6cdb40cca5e1",
+            "d-3be6a71a0a81",
+            "d-76a12bc96d3b",
+            "e-0a2cf08b264e"
+          ],
+          "status": "uncertain"
+        },
+        {
+          "id": "path-job",
+          "role": "path",
+          "version": 1,
+          "text": "{\"next\": \"apply\"}",
+          "values": {
+            "next": "apply"
+          },
+          "refs": [
+            "d-270c5e7ee185",
+            "d-3be6a71a0a81",
+            "d-0c11f4908cc7"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "report-job",
+          "role": "report",
+          "version": 1,
+          "text": "{\"recommend\": true}",
+          "values": {
+            "recommend": true
+          },
+          "refs": [
+            "d-270c5e7ee185",
+            "d-3be6a71a0a81",
+            "d-0c11f4908cc7"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-permit",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"permit\": null}",
+          "values": {
+            "permit": null
+          },
+          "refs": [
+            "d-76a12bc96d3b"
+          ],
+          "status": "uncertain"
+        }
+      ]
+    },
+    "review": {
+      "status": "ok",
+      "decision": {
+        "patches": [
+          {
+            "memoryId": "match-job",
+            "expectedVersion": 1,
+            "values": {
+              "eligible": null
+            },
+            "refs": [
+              "d-6cdb40cca5e1",
+              "d-3be6a71a0a81",
+              "d-76a12bc96d3b",
+              "e-0a2cf08b264e"
+            ],
+            "status": "uncertain",
+            "text": "{\"eligible\":null}"
+          }
+        ],
+        "answer": "资格无法确定：现行规则要求每周至少3天且总时长至少21小时，并须持有效现场准入认证。天数5、每天5小时（总25小时）满足前两项，但现场准入认证状态尚未核实，因此eligible记为null并标记uncertain。",
+        "needsEvidence": true,
+        "externalAction": "none"
+      },
+      "finalMemories": [
+        {
+          "id": "profile-days",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"days\": 5}",
+          "values": {
+            "days": 5
+          },
+          "refs": [
+            "d-76a12bc96d3b"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-hours",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"hours\": 5}",
+          "values": {
+            "hours": 5
+          },
+          "refs": [
+            "d-76a12bc96d3b"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-applied",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"applied\": false}",
+          "values": {
+            "applied": false
+          },
+          "refs": [
+            "d-76a12bc96d3b"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "match-job",
+          "role": "match",
+          "version": 2,
+          "text": "{\"eligible\":null}",
+          "values": {
+            "eligible": null
+          },
+          "refs": [
+            "d-6cdb40cca5e1",
+            "d-3be6a71a0a81",
+            "d-76a12bc96d3b",
+            "e-0a2cf08b264e"
+          ],
+          "status": "uncertain"
+        },
+        {
+          "id": "path-job",
+          "role": "path",
+          "version": 1,
+          "text": "{\"next\": \"apply\"}",
+          "values": {
+            "next": "apply"
+          },
+          "refs": [
+            "d-270c5e7ee185",
+            "d-3be6a71a0a81",
+            "d-0c11f4908cc7"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "report-job",
+          "role": "report",
+          "version": 1,
+          "text": "{\"recommend\": true}",
+          "values": {
+            "recommend": true
+          },
+          "refs": [
+            "d-270c5e7ee185",
+            "d-3be6a71a0a81",
+            "d-0c11f4908cc7"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-permit",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"permit\": null}",
+          "values": {
+            "permit": null
+          },
+          "refs": [
+            "d-76a12bc96d3b"
+          ],
+          "status": "uncertain"
+        }
+      ],
+      "reviewStatus": "accepted",
+      "fallback": false
+    }
+  },
+  "stages": [
+    "answer-first",
+    "decide",
+    "review"
+  ],
+  "elapsedMs": 3436.5723750000034,
+  "physicalUsage": {
+    "attempts": 3,
+    "inputTokens": 8754,
+    "outputTokens": 423
+  }
+}

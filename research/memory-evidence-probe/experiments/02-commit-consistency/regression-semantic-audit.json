@@ -1,0 +1,3895 @@
+{
+  "title": "A2 seen-regression semantic consistency audit",
+  "reviewer": {
+    "type": "AI subagent semantic review",
+    "humanReview": false,
+    "formalProof": false,
+    "externalModelAPICalls": 0,
+    "blinded": false,
+    "priorContext": "Reviewer previously reviewed V5 methods/data/writer artifacts. This audit saw V9 arms, sources and gold.",
+    "incidentalOutOfScopeRead": "During initial schema inspection, context/result for new-development case c9b7bb3d1803 was opened once. It is excluded from all annotations and counts; subsequent case reads were restricted to the 24 seen-regression IDs."
+  },
+  "scope": {
+    "split": "seen-regression",
+    "expectedCases": 24,
+    "expectedRecords": 72,
+    "reviewedCases": 24,
+    "reviewedRecords": 72,
+    "coverage": 1.0,
+    "unreviewed": [],
+    "frozenFilesModified": false,
+    "originalResponsesOrScoresModified": false,
+    "targetOnly": "Consistency concerns answer and the requested final target memory value/status/text, not all stale non-target memories."
+  },
+  "method": {
+    "semanticJudgments": "AI reviewer actually read all 72 answers, final target text/value/status and each case visible original sources and input memories. Labels and case-specific explanations were manually specified by the AI after reading, not inferred by regex or answer keyword matching. Script only packages copied records, verifies field comparisons and aggregates annotations.",
+    "consistent": "Explicit or clearly implied final target value and certainty in answer agree with committed final target. This does not imply correctness against evidence.",
+    "conflict": "Answer declares a target value or certainty incompatible with the committed target.",
+    "unclear": "Answer does not support a clear comparison or usable answer/final state is absent.",
+    "correctnessSeparate": "Evidence correctness is independently recorded for prose, committed value and committed status. Arithmetic errors in explanation and incorrect uncertainty are retained even when final consistency is satisfied.",
+    "review": "Review shares original candidate. Accepted review with retained erroneous status is not counted as complete repair. No fallback occurred among these 24 review records.",
+    "independence": "Seen cases and repeated role/family variants are not independent samples; no statistical or generalization claim."
+  },
+  "protocolSha256": "55c5aaea0f34280957056b66fb8616a6f658150d2deb18b5ea2818656bc79c2a",
+  "goldSha256": "3b65aa0be437c49400f2793ab68963eac8df63a593891c423b5646dc0f6db6ea",
+  "summary": {
+    "records": 72,
+    "consistency": {
+      "consistent": 68,
+      "conflict": 4
+    },
+    "answerEvidenceAssessment": {
+      "correct": 69,
+      "partially_correct_status_error": 2,
+      "correct_conclusion_arithmetic_error": 1
+    },
+    "issueTypes": {
+      "none": 66,
+      "correct_prose_value_but_wrong_commit_and_wrong_prose_status": 1,
+      "prose_and_commit_share_wrong_uncertainty": 1,
+      "prose_arithmetic_error_without_wrong_commit": 1,
+      "correct_prose_wrong_commit": 3
+    },
+    "targetValueAndStatusCorrect": 67,
+    "proseTargetValueConclusionCorrect": 72,
+    "proseTargetUncertaintyCorrect": 70,
+    "fallbackCount": 0
+  },
+  "byArm": {
+    "original": {
+      "records": 24,
+      "consistency": {
+        "consistent": 20,
+        "conflict": 4
+      },
+      "answerEvidenceAssessment": {
+        "correct": 23,
+        "partially_correct_status_error": 1
+      },
+      "issueTypes": {
+        "none": 20,
+        "correct_prose_value_but_wrong_commit_and_wrong_prose_status": 1,
+        "correct_prose_wrong_commit": 3
+      },
+      "targetValueAndStatusCorrect": 20,
+      "proseTargetValueConclusionCorrect": 24,
+      "proseTargetUncertaintyCorrect": 23,
+      "fallbackCount": 0
+    },
+    "answer-first": {
+      "records": 24,
+      "consistency": {
+        "consistent": 24
+      },
+      "answerEvidenceAssessment": {
+        "correct": 23,
+        "correct_conclusion_arithmetic_error": 1
+      },
+      "issueTypes": {
+        "none": 23,
+        "prose_arithmetic_error_without_wrong_commit": 1
+      },
+      "targetValueAndStatusCorrect": 24,
+      "proseTargetValueConclusionCorrect": 24,
+      "proseTargetUncertaintyCorrect": 24,
+      "fallbackCount": 0
+    },
+    "review": {
+      "records": 24,
+      "consistency": {
+        "consistent": 24
+      },
+      "answerEvidenceAssessment": {
+        "correct": 23,
+        "partially_correct_status_error": 1
+      },
+      "issueTypes": {
+        "none": 23,
+        "prose_and_commit_share_wrong_uncertainty": 1
+      },
+      "targetValueAndStatusCorrect": 23,
+      "proseTargetValueConclusionCorrect": 24,
+      "proseTargetUncertaintyCorrect": 23,
+      "fallbackCount": 0
+    }
+  },
+  "findings": [
+    "Original has 4 answer/commit conflicts: three pure correct-prose/wrong-value rule-revision cases, plus one unknown-invariant case whose prose also wrongly demands uncertainty.",
+    "Review removes those value conflicts but leaves unknown-invariant report true/uncertain: semantically aligned with its retained answer, still wrong against evidence.",
+    "Answer-first has no answer/commit conflicts and all 24 target values/statuses are correct, but one joint-unknown explanation contains a wrong product (4×3 reported as15 rather than12).",
+    "All 72 have correct prose target-value conclusions; this must not be conflated with entirely correct prose: 2 retain wrong uncertainty and 1 has an arithmetic error.",
+    "No unclear records or review fallbacks in this split. This is an AI subagent audit, not human validation or automated formal entailment proof."
+  ],
+  "cases": [
+    {
+      "caseId": "cc971f83693c",
+      "family": "known_boundary",
+      "role": "match",
+      "evidenceAssessment": "顾遥每周2天少于3天，2×5=10也低于14；资格确定为false。",
+      "visibleSources": [
+        {
+          "id": "e-cc971f83693c",
+          "text": "请复核顾遥的馆藏数字化助理相关当前目标。本轮安排已登记，按当前有效原件维护结论。"
+        },
+        {
+          "id": "d-9a791cd012af",
+          "title": "馆藏数字化助理资格原件",
+          "text": "馆藏数字化助理完整资格规则：每周至少3天，且天数乘每天小时数至少14小时。两条件须同时满足，没有其他隐含条件。",
+          "kind": "rule",
+          "scope": "cc971f83693c/job",
+          "effectiveAt": "2032-07-01"
+        },
+        {
+          "id": "d-51926f32f4a2",
+          "title": "行动与报告约定",
+          "text": "建议字段next：符合且未申请用apply；符合且已申请用wait；不符合且已申请用withdraw；不符合且未申请用none。报告recommend与资格一致。事实未确定时不能猜值；若原文允许的全部可能状态下输出相同，则输出该确定值，否则输出null且status=uncertain。只改当前目标，不实际执行申请。最新有效原件可纠正尚未同步的上游记忆。",
+          "kind": "rule",
+          "scope": "cc971f83693c/policy",
+          "effectiveAt": "2032-07-01"
+        },
+        {
+          "id": "d-1565b52edefa",
+          "title": "本轮本人确认登记",
+          "text": "顾遥本轮每周2天；每天5小时。申请已提交且仍在途。 未确定字段的各选项可独立组合。",
+          "kind": "observation",
+          "scope": "cc971f83693c/person",
+          "supersedes": "d-5267091596f1",
+          "effectiveAt": "2032-07-03"
+        }
+      ],
+      "contextSha256": "52a21047ede11342152dc49b26c49b6e2548fcd4ce5e8b6582fc5a6f784dfc76",
+      "resultSha256": "339ba0933bc614be77e10d4b8446e11e7150c591fe5e9b62331b8407f515c642"
+    },
+    {
+      "caseId": "e45120b643ba",
+      "family": "known_boundary",
+      "role": "path",
+      "evidenceAssessment": "孟溪2天低于3天、2×6=12低于17；申请在途，确定应withdraw。",
+      "visibleSources": [
+        {
+          "id": "e-e45120b643ba",
+          "text": "请复核孟溪的展陈技术助理相关当前目标。本轮安排已登记，按当前有效原件维护结论。"
+        },
+        {
+          "id": "d-c4c16060c828",
+          "title": "行动与报告约定",
+          "text": "建议字段next：符合且未申请用apply；符合且已申请用wait；不符合且已申请用withdraw；不符合且未申请用none。报告recommend与资格一致。事实未确定时不能猜值；若原文允许的全部可能状态下输出相同，则输出该确定值，否则输出null且status=uncertain。只改当前目标，不实际执行申请。最新有效原件可纠正尚未同步的上游记忆。",
+          "kind": "rule",
+          "scope": "e45120b643ba/policy",
+          "effectiveAt": "2032-07-01"
+        },
+        {
+          "id": "d-645105cc7413",
+          "title": "展陈技术助理资格原件",
+          "text": "展陈技术助理完整资格规则：每周至少3天，且天数乘每天小时数至少17小时。两条件须同时满足，没有其他隐含条件。",
+          "kind": "rule",
+          "scope": "e45120b643ba/job",
+          "effectiveAt": "2032-07-01"
+        },
+        {
+          "id": "d-b7f8699f9206",
+          "title": "本轮本人确认登记",
+          "text": "孟溪本轮每周2天；每天6小时。申请已提交且仍在途。 未确定字段的各选项可独立组合。",
+          "kind": "observation",
+          "scope": "e45120b643ba/person",
+          "supersedes": "d-9b86cdf38a2b",
+          "effectiveAt": "2032-07-03"
+        }
+      ],
+      "contextSha256": "f71da0ee428d7d12f005cc5f271a9055289ecc5ac02d72e26b82fd5dc3bc04fe",
+      "resultSha256": "78f38af5505a3cae4a42aea7877217c98045035f7c5acb47d223f6d84232e12a"
+    },
+    {
+      "caseId": "d4e65f29dc69",
+      "family": "known_boundary",
+      "role": "report",
+      "evidenceAssessment": "唐序2天低于3天、2×4=8低于11；recommend确定false。",
+      "visibleSources": [
+        {
+          "id": "e-d4e65f29dc69",
+          "text": "请复核唐序的田野资料整理助理相关当前目标。本轮安排已登记，按当前有效原件维护结论。"
+        },
+        {
+          "id": "d-0b31ba83de95",
+          "title": "行动与报告约定",
+          "text": "建议字段next：符合且未申请用apply；符合且已申请用wait；不符合且已申请用withdraw；不符合且未申请用none。报告recommend与资格一致。事实未确定时不能猜值；若原文允许的全部可能状态下输出相同，则输出该确定值，否则输出null且status=uncertain。只改当前目标，不实际执行申请。最新有效原件可纠正尚未同步的上游记忆。",
+          "kind": "rule",
+          "scope": "d4e65f29dc69/policy",
+          "effectiveAt": "2032-07-01"
+        },
+        {
+          "id": "d-2d3e1fe473cd",
+          "title": "田野资料整理助理资格原件",
+          "text": "田野资料整理助理完整资格规则：每周至少3天，且天数乘每天小时数至少11小时。两条件须同时满足，没有其他隐含条件。",
+          "kind": "rule",
+          "scope": "d4e65f29dc69/job",
+          "effectiveAt": "2032-07-01"
+        },
+        {
+          "id": "d-9a109b30dbb2",
+          "title": "本轮本人确认登记",
+          "text": "唐序本轮每周2天；每天4小时。申请已提交且仍在途。 未确定字段的各选项可独立组合。",
+          "kind": "observation",
+          "scope": "d4e65f29dc69/person",
+          "supersedes": "d-c819b2804d96",
+          "effectiveAt": "2032-07-03"
+        }
+      ],
+      "contextSha256": "27ecbae344bc2a6eaaee2f00132f6ee476661d0308bafc0384fa4e031f2efecf",
+      "resultSha256": "d23daf9a43247759d0e9d3f4a4db46fa1c86af520d01445b74b14091c64db858"
+    },
+    {
+      "caseId": "9be57ed10b17",
+      "family": "unknown_invariant",
+      "role": "match",
+      "evidenceAssessment": "穷尽选项3或4天、每天5小时均达到3天及14小时；eligible确定true，上游days未定不使目标未定。",
+      "visibleSources": [
+        {
+          "id": "e-9be57ed10b17",
+          "text": "请复核顾遥的馆藏数字化助理相关当前目标。本轮安排已登记，按当前有效原件维护结论。"
+        },
+        {
+          "id": "d-75b12325711f",
+          "title": "馆藏数字化助理资格原件",
+          "text": "馆藏数字化助理完整资格规则：每周至少3天，且天数乘每天小时数至少14小时。两条件须同时满足，没有其他隐含条件。",
+          "kind": "rule",
+          "scope": "9be57ed10b17/job",
+          "effectiveAt": "2032-07-01"
+        },
+        {
+          "id": "d-58a1a4ff4d21",
+          "title": "行动与报告约定",
+          "text": "建议字段next：符合且未申请用apply；符合且已申请用wait；不符合且已申请用withdraw；不符合且未申请用none。报告recommend与资格一致。事实未确定时不能猜值；若原文允许的全部可能状态下输出相同，则输出该确定值，否则输出null且status=uncertain。只改当前目标，不实际执行申请。最新有效原件可纠正尚未同步的上游记忆。",
+          "kind": "rule",
+          "scope": "9be57ed10b17/policy",
+          "effectiveAt": "2032-07-01"
+        },
+        {
+          "id": "d-3ba8c01cbc22",
+          "title": "本轮本人确认登记",
+          "text": "顾遥本轮每周3或4天，尚未确定是哪一种，所列选项穷尽所有可能；每天5小时。无在途申请。 未确定字段的各选项可独立组合。",
+          "kind": "observation",
+          "scope": "9be57ed10b17/person",
+          "supersedes": "d-f28791141b60",
+          "effectiveAt": "2032-07-03"
+        }
+      ],
+      "contextSha256": "38cee9a7af4f6e4127f87a27070876d8619d683d14e54aaa3225370932f31d94",
+      "resultSha256": "1d08bb8f311e2b4c820eb06f5bc8853f7f2b83a36b447b5a945d286b111adf93"
+    },
+    {
+      "caseId": "e223d7865d9c",
+      "family": "unknown_invariant",
+      "role": "path",
+      "evidenceAssessment": "穷尽选项3或4天、每天6小时均达17小时且天数合格；无在途申请，next确定apply。",
+      "visibleSources": [
+        {
+          "id": "e-e223d7865d9c",
+          "text": "请复核孟溪的展陈技术助理相关当前目标。本轮安排已登记，按当前有效原件维护结论。"
+        },
+        {
+          "id": "d-a335d2ca5df1",
+          "title": "行动与报告约定",
+          "text": "建议字段next：符合且未申请用apply；符合且已申请用wait；不符合且已申请用withdraw；不符合且未申请用none。报告recommend与资格一致。事实未确定时不能猜值；若原文允许的全部可能状态下输出相同，则输出该确定值，否则输出null且status=uncertain。只改当前目标，不实际执行申请。最新有效原件可纠正尚未同步的上游记忆。",
+          "kind": "rule",
+          "scope": "e223d7865d9c/policy",
+          "effectiveAt": "2032-07-01"
+        },
+        {
+          "id": "d-eee24cff7368",
+          "title": "展陈技术助理资格原件",
+          "text": "展陈技术助理完整资格规则：每周至少3天，且天数乘每天小时数至少17小时。两条件须同时满足，没有其他隐含条件。",
+          "kind": "rule",
+          "scope": "e223d7865d9c/job",
+          "effectiveAt": "2032-07-01"
+        },
+        {
+          "id": "d-b9090a4540f8",
+          "title": "本轮本人确认登记",
+          "text": "孟溪本轮每周3或4天，尚未确定是哪一种，所列选项穷尽所有可能；每天6小时。无在途申请。 未确定字段的各选项可独立组合。",
+          "kind": "observation",
+          "scope": "e223d7865d9c/person",
+          "supersedes": "d-422368990f41",
+          "effectiveAt": "2032-07-03"
+        }
+      ],
+      "contextSha256": "56bfc05472ab501c4eb75e9bf81e4033c4d903565a541628d9110eaf46f24e43",
+      "resultSha256": "f452861863e590d297ac6b40f5344ac3811f05d6bf7b940ffe993e4b438f8d45"
+    },
+    {
+      "caseId": "1704cdfaf7c9",
+      "family": "unknown_invariant",
+      "role": "report",
+      "evidenceAssessment": "穷尽选项3或4天、每天4小时产生12或16小时，均达11且天数合格；recommend必须true/current。上游days=null不否定目标不变量，needsEvidence不应为true。",
+      "visibleSources": [
+        {
+          "id": "e-1704cdfaf7c9",
+          "text": "请复核唐序的田野资料整理助理相关当前目标。本轮安排已登记，按当前有效原件维护结论。"
+        },
+        {
+          "id": "d-424ea260fc06",
+          "title": "行动与报告约定",
+          "text": "建议字段next：符合且未申请用apply；符合且已申请用wait；不符合且已申请用withdraw；不符合且未申请用none。报告recommend与资格一致。事实未确定时不能猜值；若原文允许的全部可能状态下输出相同，则输出该确定值，否则输出null且status=uncertain。只改当前目标，不实际执行申请。最新有效原件可纠正尚未同步的上游记忆。",
+          "kind": "rule",
+          "scope": "1704cdfaf7c9/policy",
+          "effectiveAt": "2032-07-01"
+        },
+        {
+          "id": "d-fc1ff778ae10",
+          "title": "田野资料整理助理资格原件",
+          "text": "田野资料整理助理完整资格规则：每周至少3天，且天数乘每天小时数至少11小时。两条件须同时满足，没有其他隐含条件。",
+          "kind": "rule",
+          "scope": "1704cdfaf7c9/job",
+          "effectiveAt": "2032-07-01"
+        },
+        {
+          "id": "d-9e913488237b",
+          "title": "本轮本人确认登记",
+          "text": "唐序本轮每周3或4天，尚未确定是哪一种，所列选项穷尽所有可能；每天4小时。无在途申请。 未确定字段的各选项可独立组合。",
+          "kind": "observation",
+          "scope": "1704cdfaf7c9/person",
+          "supersedes": "d-7762e00d7cbe",
+          "effectiveAt": "2032-07-03"
+        }
+      ],
+      "contextSha256": "4b64d0526d0edac55ec6e0c551ae450dd374aea12d75c165bef9fb222b443560",
+      "resultSha256": "0b2098c4034e27842bbabfbd764bf33cbeaf1dbbfb4fcf2df10455d6b7d6f5c9"
+    },
+    {
+      "caseId": "8c0e7cc8577c",
+      "family": "unknown_divergent",
+      "role": "match",
+      "evidenceAssessment": "2×5=10且2天不合格，3×5=15且3天合格；eligible在可能状态间分歧，应null/uncertain。",
+      "visibleSources": [
+        {
+          "id": "e-8c0e7cc8577c",
+          "text": "请复核顾遥的馆藏数字化助理相关当前目标。本轮安排已登记，按当前有效原件维护结论。"
+        },
+        {
+          "id": "d-b0ea3f316fd2",
+          "title": "馆藏数字化助理资格原件",
+          "text": "馆藏数字化助理完整资格规则：每周至少3天，且天数乘每天小时数至少14小时。两条件须同时满足，没有其他隐含条件。",
+          "kind": "rule",
+          "scope": "8c0e7cc8577c/job",
+          "effectiveAt": "2032-07-01"
+        },
+        {
+          "id": "d-075cdffa30dd",
+          "title": "行动与报告约定",
+          "text": "建议字段next：符合且未申请用apply；符合且已申请用wait；不符合且已申请用withdraw；不符合且未申请用none。报告recommend与资格一致。事实未确定时不能猜值；若原文允许的全部可能状态下输出相同，则输出该确定值，否则输出null且status=uncertain。只改当前目标，不实际执行申请。最新有效原件可纠正尚未同步的上游记忆。",
+          "kind": "rule",
+          "scope": "8c0e7cc8577c/policy",
+          "effectiveAt": "2032-07-01"
+        },
+        {
+          "id": "d-a3a0b20b81a6",
+          "title": "本轮本人确认登记",
+          "text": "顾遥本轮每周2或3天，尚未确定是哪一种，所列选项穷尽所有可能；每天5小时。申请已提交且仍在途。 未确定字段的各选项可独立组合。",
+          "kind": "observation",
+          "scope": "8c0e7cc8577c/person",
+          "supersedes": "d-b521ad8a6aac",
+          "effectiveAt": "2032-07-03"
+        }
+      ],
+      "contextSha256": "6f5226d4f337b40e6ac3d600c38f7157c66150a21ec569ba6fe9d74f66b151e0",
+      "resultSha256": "32138cdeb2c4963ddc49a3e5ccf709b09b1d637ef640896a98d26a948e94d553"
+    },
+    {
+      "caseId": "50a16444a6db",
+      "family": "unknown_divergent",
+      "role": "path",
+      "evidenceAssessment": "2天不合格且申请在途应withdraw；3天、18小时合格且在途应wait；next分歧，应null/uncertain。",
+      "visibleSources": [
+        {
+          "id": "e-50a16444a6db",
+          "text": "请复核孟溪的展陈技术助理相关当前目标。本轮安排已登记，按当前有效原件维护结论。"
+        },
+        {
+          "id": "d-3f84dd4d96ba",
+          "title": "行动与报告约定",
+          "text": "建议字段next：符合且未申请用apply；符合且已申请用wait；不符合且已申请用withdraw；不符合且未申请用none。报告recommend与资格一致。事实未确定时不能猜值；若原文允许的全部可能状态下输出相同，则输出该确定值，否则输出null且status=uncertain。只改当前目标，不实际执行申请。最新有效原件可纠正尚未同步的上游记忆。",
+          "kind": "rule",
+          "scope": "50a16444a6db/policy",
+          "effectiveAt": "2032-07-01"
+        },
+        {
+          "id": "d-4ec91115d740",
+          "title": "展陈技术助理资格原件",
+          "text": "展陈技术助理完整资格规则：每周至少3天，且天数乘每天小时数至少17小时。两条件须同时满足，没有其他隐含条件。",
+          "kind": "rule",
+          "scope": "50a16444a6db/job",
+          "effectiveAt": "2032-07-01"
+        },
+        {
+          "id": "d-4511a608c4c3",
+          "title": "本轮本人确认登记",
+          "text": "孟溪本轮每周2或3天，尚未确定是哪一种，所列选项穷尽所有可能；每天6小时。申请已提交且仍在途。 未确定字段的各选项可独立组合。",
+          "kind": "observation",
+          "scope": "50a16444a6db/person",
+          "supersedes": "d-5694b76ff2d0",
+          "effectiveAt": "2032-07-03"
+        }
+      ],
+      "contextSha256": "0a2e0f48623ea3f65e14220eb608d236d1b42e08ef762abd68e5bea98fac5d99",
+      "resultSha256": "deae52221a7892bbb567c27b28116c576514ebd6e291c7bf73d1ae41e65b849f"
+    },
+    {
+      "caseId": "c4ce43e7d762",
+      "family": "unknown_divergent",
+      "role": "report",
+      "evidenceAssessment": "2天/8小时不合格，3天/12小时合格；recommend分歧，应null/uncertain。",
+      "visibleSources": [
+        {
+          "id": "e-c4ce43e7d762",
+          "text": "请复核唐序的田野资料整理助理相关当前目标。本轮安排已登记，按当前有效原件维护结论。"
+        },
+        {
+          "id": "d-0a4e1a914eb6",
+          "title": "行动与报告约定",
+          "text": "建议字段next：符合且未申请用apply；符合且已申请用wait；不符合且已申请用withdraw；不符合且未申请用none。报告recommend与资格一致。事实未确定时不能猜值；若原文允许的全部可能状态下输出相同，则输出该确定值，否则输出null且status=uncertain。只改当前目标，不实际执行申请。最新有效原件可纠正尚未同步的上游记忆。",
+          "kind": "rule",
+          "scope": "c4ce43e7d762/policy",
+          "effectiveAt": "2032-07-01"
+        },
+        {
+          "id": "d-fa3fa139b545",
+          "title": "田野资料整理助理资格原件",
+          "text": "田野资料整理助理完整资格规则：每周至少3天，且天数乘每天小时数至少11小时。两条件须同时满足，没有其他隐含条件。",
+          "kind": "rule",
+          "scope": "c4ce43e7d762/job",
+          "effectiveAt": "2032-07-01"
+        },
+        {
+          "id": "d-0f746bacdb68",
+          "title": "本轮本人确认登记",
+          "text": "唐序本轮每周2或3天，尚未确定是哪一种，所列选项穷尽所有可能；每天4小时。申请已提交且仍在途。 未确定字段的各选项可独立组合。",
+          "kind": "observation",
+          "scope": "c4ce43e7d762/person",
+          "supersedes": "d-34e56d9157fd",
+          "effectiveAt": "2032-07-03"
+        }
+      ],
+      "contextSha256": "01afb06edbc6ec09345b94ebb10908b8a333754f356763c563aa284895bd726b",
+      "resultSha256": "76a58e6e15ad4c88f7c0826c2a97f64dbc214e7104cb81cce6e103393be9da7c"
+    },
+    {
+      "caseId": "988cdd0950c9",
+      "family": "joint_unknown",
+      "role": "match",
+      "evidenceAssessment": "独立组合为(3,3)=9、(3,5)=15、(4,3)=12、(4,5)=20；低于和达到14的情形均存在，eligible应null/uncertain。",
+      "visibleSources": [
+        {
+          "id": "e-988cdd0950c9",
+          "text": "请复核顾遥的馆藏数字化助理相关当前目标。本轮安排已登记，按当前有效原件维护结论。"
+        },
+        {
+          "id": "d-10c0d0802ce5",
+          "title": "馆藏数字化助理资格原件",
+          "text": "馆藏数字化助理完整资格规则：每周至少3天，且天数乘每天小时数至少14小时。两条件须同时满足，没有其他隐含条件。",
+          "kind": "rule",
+          "scope": "988cdd0950c9/job",
+          "effectiveAt": "2032-07-01"
+        },
+        {
+          "id": "d-7800d21e9e52",
+          "title": "行动与报告约定",
+          "text": "建议字段next：符合且未申请用apply；符合且已申请用wait；不符合且已申请用withdraw；不符合且未申请用none。报告recommend与资格一致。事实未确定时不能猜值；若原文允许的全部可能状态下输出相同，则输出该确定值，否则输出null且status=uncertain。只改当前目标，不实际执行申请。最新有效原件可纠正尚未同步的上游记忆。",
+          "kind": "rule",
+          "scope": "988cdd0950c9/policy",
+          "effectiveAt": "2032-07-01"
+        },
+        {
+          "id": "d-fda7fda7e6aa",
+          "title": "本轮本人确认登记",
+          "text": "顾遥本轮每周3或4天，尚未确定是哪一种，所列选项穷尽所有可能；每天3或5小时，尚未确定是哪一种，所列选项穷尽所有可能。无在途申请。 未确定字段的各选项可独立组合。",
+          "kind": "observation",
+          "scope": "988cdd0950c9/person",
+          "supersedes": "d-ea049a5d6ae1",
+          "effectiveAt": "2032-07-03"
+        }
+      ],
+      "contextSha256": "7869f11948d226a655b84055c9ea338b69ebb6df8df05b4b00e392115b340352",
+      "resultSha256": "38f7ad652a0ef8c214521399b416bb83238306a544b0c3b0110bf1c3dced0855"
+    },
+    {
+      "caseId": "2d4b44efb3cb",
+      "family": "joint_unknown",
+      "role": "path",
+      "evidenceAssessment": "独立组合工时为12、18、16、24，门槛17，既有合格也有不合格；无在途申请使next候选仅apply/none，应null/uncertain。",
+      "visibleSources": [
+        {
+          "id": "e-2d4b44efb3cb",
+          "text": "请复核孟溪的展陈技术助理相关当前目标。本轮安排已登记，按当前有效原件维护结论。"
+        },
+        {
+          "id": "d-5d8434c1e3d4",
+          "title": "行动与报告约定",
+          "text": "建议字段next：符合且未申请用apply；符合且已申请用wait；不符合且已申请用withdraw；不符合且未申请用none。报告recommend与资格一致。事实未确定时不能猜值；若原文允许的全部可能状态下输出相同，则输出该确定值，否则输出null且status=uncertain。只改当前目标，不实际执行申请。最新有效原件可纠正尚未同步的上游记忆。",
+          "kind": "rule",
+          "scope": "2d4b44efb3cb/policy",
+          "effectiveAt": "2032-07-01"
+        },
+        {
+          "id": "d-c85bb6fce208",
+          "title": "展陈技术助理资格原件",
+          "text": "展陈技术助理完整资格规则：每周至少3天，且天数乘每天小时数至少17小时。两条件须同时满足，没有其他隐含条件。",
+          "kind": "rule",
+          "scope": "2d4b44efb3cb/job",
+          "effectiveAt": "2032-07-01"
+        },
+        {
+          "id": "d-5d872caeec3d",
+          "title": "本轮本人确认登记",
+          "text": "孟溪本轮每周3或4天，尚未确定是哪一种，所列选项穷尽所有可能；每天4或6小时，尚未确定是哪一种，所列选项穷尽所有可能。无在途申请。 未确定字段的各选项可独立组合。",
+          "kind": "observation",
+          "scope": "2d4b44efb3cb/person",
+          "supersedes": "d-ce1bae696a4b",
+          "effectiveAt": "2032-07-03"
+        }
+      ],
+      "contextSha256": "b7ba509e77506ecdecaab01d077f9151596e5ecc2218d3308a2be04f5d0edf0e",
+      "resultSha256": "4b7f160d72d42ab7b13fc351393f79514027c55196e20e30969f1d77c336dcd9"
+    },
+    {
+      "caseId": "3571fcd848d9",
+      "family": "joint_unknown",
+      "role": "report",
+      "evidenceAssessment": "独立组合工时为6、12、8、16，门槛11，合格与不合格均可能；recommend应null/uncertain。",
+      "visibleSources": [
+        {
+          "id": "e-3571fcd848d9",
+          "text": "请复核唐序的田野资料整理助理相关当前目标。本轮安排已登记，按当前有效原件维护结论。"
+        },
+        {
+          "id": "d-28fe56346302",
+          "title": "行动与报告约定",
+          "text": "建议字段next：符合且未申请用apply；符合且已申请用wait；不符合且已申请用withdraw；不符合且未申请用none。报告recommend与资格一致。事实未确定时不能猜值；若原文允许的全部可能状态下输出相同，则输出该确定值，否则输出null且status=uncertain。只改当前目标，不实际执行申请。最新有效原件可纠正尚未同步的上游记忆。",
+          "kind": "rule",
+          "scope": "3571fcd848d9/policy",
+          "effectiveAt": "2032-07-01"
+        },
+        {
+          "id": "d-4bc59a4d5d0c",
+          "title": "田野资料整理助理资格原件",
+          "text": "田野资料整理助理完整资格规则：每周至少3天，且天数乘每天小时数至少11小时。两条件须同时满足，没有其他隐含条件。",
+          "kind": "rule",
+          "scope": "3571fcd848d9/job",
+          "effectiveAt": "2032-07-01"
+        },
+        {
+          "id": "d-77ab90eba5d2",
+          "title": "本轮本人确认登记",
+          "text": "唐序本轮每周3或4天，尚未确定是哪一种，所列选项穷尽所有可能；每天2或4小时，尚未确定是哪一种，所列选项穷尽所有可能。无在途申请。 未确定字段的各选项可独立组合。",
+          "kind": "observation",
+          "scope": "3571fcd848d9/person",
+          "supersedes": "d-8053c19f0de1",
+          "effectiveAt": "2032-07-03"
+        }
+      ],
+      "contextSha256": "ff713347096d99d3d859c9f7e392bc2f001ea6c9e7333ec1d2b74ee0e9d07d4d",
+      "resultSha256": "92f723a554624ee0e23b1c61052e4b53f7a30056f0abde581c9723a690e7a1e0"
+    },
+    {
+      "caseId": "fec305f41cdb",
+      "family": "archive_resolution",
+      "role": "match",
+      "evidenceAssessment": "本人最新原件已核定2天，每天5小时，虽上游days仍null，原件可纠正未同步记忆；eligible确定false。",
+      "visibleSources": [
+        {
+          "id": "e-fec305f41cdb",
+          "text": "请复核顾遥的馆藏数字化助理相关当前目标。本轮安排已登记，按当前有效原件维护结论。每周天数曾有两天或三天两个提案，已经在本轮本人确认登记中核定。"
+        },
+        {
+          "id": "d-982b64db12d3",
+          "title": "馆藏数字化助理资格原件",
+          "text": "馆藏数字化助理完整资格规则：每周至少3天，且天数乘每天小时数至少14小时。两条件须同时满足，没有其他隐含条件。",
+          "kind": "rule",
+          "scope": "fec305f41cdb/job",
+          "effectiveAt": "2032-07-01"
+        },
+        {
+          "id": "d-c8e8e8238367",
+          "title": "行动与报告约定",
+          "text": "建议字段next：符合且未申请用apply；符合且已申请用wait；不符合且已申请用withdraw；不符合且未申请用none。报告recommend与资格一致。事实未确定时不能猜值；若原文允许的全部可能状态下输出相同，则输出该确定值，否则输出null且status=uncertain。只改当前目标，不实际执行申请。最新有效原件可纠正尚未同步的上游记忆。",
+          "kind": "rule",
+          "scope": "fec305f41cdb/policy",
+          "effectiveAt": "2032-07-01"
+        },
+        {
+          "id": "d-29e0fcdb600e",
+          "title": "本轮本人确认登记",
+          "text": "顾遥本轮每周2天；每天5小时。申请已提交且仍在途。 未确定字段的各选项可独立组合。",
+          "kind": "observation",
+          "scope": "fec305f41cdb/person",
+          "supersedes": "d-1828dafe0b0c",
+          "effectiveAt": "2032-07-03"
+        }
+      ],
+      "contextSha256": "46cc60f0f7a86f7e96ffb415913453d0e53f938f34ac9aafe2ea6514bbc6801e",
+      "resultSha256": "bf4988aa712a193b6e932b34d24a4d237184c69392d24c78fe12adc3c948c37f"
+    },
+    {
+      "caseId": "ed55fb9cf18e",
+      "family": "archive_resolution",
+      "role": "path",
+      "evidenceAssessment": "本人最新原件核定2天、每天6小时且申请在途；不合格，应withdraw/current，不能受未同步days=null阻碍。",
+      "visibleSources": [
+        {
+          "id": "e-ed55fb9cf18e",
+          "text": "请复核孟溪的展陈技术助理相关当前目标。本轮安排已登记，按当前有效原件维护结论。每周天数曾有两天或三天两个提案，已经在本轮本人确认登记中核定。"
+        },
+        {
+          "id": "d-7d3035e98f15",
+          "title": "行动与报告约定",
+          "text": "建议字段next：符合且未申请用apply；符合且已申请用wait；不符合且已申请用withdraw；不符合且未申请用none。报告recommend与资格一致。事实未确定时不能猜值；若原文允许的全部可能状态下输出相同，则输出该确定值，否则输出null且status=uncertain。只改当前目标，不实际执行申请。最新有效原件可纠正尚未同步的上游记忆。",
+          "kind": "rule",
+          "scope": "ed55fb9cf18e/policy",
+          "effectiveAt": "2032-07-01"
+        },
+        {
+          "id": "d-685d6f74543b",
+          "title": "展陈技术助理资格原件",
+          "text": "展陈技术助理完整资格规则：每周至少3天，且天数乘每天小时数至少17小时。两条件须同时满足，没有其他隐含条件。",
+          "kind": "rule",
+          "scope": "ed55fb9cf18e/job",
+          "effectiveAt": "2032-07-01"
+        },
+        {
+          "id": "d-ddbaade43990",
+          "title": "本轮本人确认登记",
+          "text": "孟溪本轮每周2天；每天6小时。申请已提交且仍在途。 未确定字段的各选项可独立组合。",
+          "kind": "observation",
+          "scope": "ed55fb9cf18e/person",
+          "supersedes": "d-056e9169ea4c",
+          "effectiveAt": "2032-07-03"
+        }
+      ],
+      "contextSha256": "c5913248430f50bfc5690b2ba9c8ea69b56f9b19473b8f325a1053af6c205d03",
+      "resultSha256": "ce37ee3b65f5c2fd14a854e0a4c763bdc80cf4e2551ffd367f7446130bcf6f24"
+    },
+    {
+      "caseId": "21d62cfc0601",
+      "family": "archive_resolution",
+      "role": "report",
+      "evidenceAssessment": "本人最新原件核定2天、每天4小时；不合格，recommend=false/current，不能受未同步days=null阻碍。",
+      "visibleSources": [
+        {
+          "id": "e-21d62cfc0601",
+          "text": "请复核唐序的田野资料整理助理相关当前目标。本轮安排已登记，按当前有效原件维护结论。每周天数曾有两天或三天两个提案，已经在本轮本人确认登记中核定。"
+        },
+        {
+          "id": "d-d13b89ae58d0",
+          "title": "行动与报告约定",
+          "text": "建议字段next：符合且未申请用apply；符合且已申请用wait；不符合且已申请用withdraw；不符合且未申请用none。报告recommend与资格一致。事实未确定时不能猜值；若原文允许的全部可能状态下输出相同，则输出该确定值，否则输出null且status=uncertain。只改当前目标，不实际执行申请。最新有效原件可纠正尚未同步的上游记忆。",
+          "kind": "rule",
+          "scope": "21d62cfc0601/policy",
+          "effectiveAt": "2032-07-01"
+        },
+        {
+          "id": "d-11ce489f76ec",
+          "title": "田野资料整理助理资格原件",
+          "text": "田野资料整理助理完整资格规则：每周至少3天，且天数乘每天小时数至少11小时。两条件须同时满足，没有其他隐含条件。",
+          "kind": "rule",
+          "scope": "21d62cfc0601/job",
+          "effectiveAt": "2032-07-01"
+        },
+        {
+          "id": "d-941d8c9218c8",
+          "title": "本轮本人确认登记",
+          "text": "唐序本轮每周2天；每天4小时。申请已提交且仍在途。 未确定字段的各选项可独立组合。",
+          "kind": "observation",
+          "scope": "21d62cfc0601/person",
+          "supersedes": "d-4be254b2a205",
+          "effectiveAt": "2032-07-03"
+        }
+      ],
+      "contextSha256": "4b899de56fbffbffada05f016812a41fd0742386f6de71690a3001520cac59a8",
+      "resultSha256": "06312d00982045ccb7d546fb1acf3e240b9a94190b1e86360ad25f48bf3a410e"
+    },
+    {
+      "caseId": "bd01bda0e21c",
+      "family": "rule_revision",
+      "role": "match",
+      "evidenceAssessment": "新原件替代旧规则，现门槛21小时；4×5=20不足，eligible应false/current。",
+      "visibleSources": [
+        {
+          "id": "e-bd01bda0e21c",
+          "text": "请复核顾遥的馆藏数字化助理相关当前目标。本轮安排已登记，按当前有效原件维护结论。本岗位新规则已生效。"
+        },
+        {
+          "id": "d-4e9ed6186116",
+          "title": "馆藏数字化助理新资格原件",
+          "text": "馆藏数字化助理完整资格规则：每周至少3天，且天数乘每天小时数至少21小时。两条件须同时满足，没有其他隐含条件。从本轮起替代旧版。",
+          "kind": "rule",
+          "scope": "bd01bda0e21c/job",
+          "supersedes": "d-b92c134f4a26",
+          "effectiveAt": "2032-07-03"
+        },
+        {
+          "id": "d-56ec62796012",
+          "title": "行动与报告约定",
+          "text": "建议字段next：符合且未申请用apply；符合且已申请用wait；不符合且已申请用withdraw；不符合且未申请用none。报告recommend与资格一致。事实未确定时不能猜值；若原文允许的全部可能状态下输出相同，则输出该确定值，否则输出null且status=uncertain。只改当前目标，不实际执行申请。最新有效原件可纠正尚未同步的上游记忆。",
+          "kind": "rule",
+          "scope": "bd01bda0e21c/policy",
+          "effectiveAt": "2032-07-01"
+        },
+        {
+          "id": "d-7fc6406a8c1c",
+          "title": "本轮本人确认登记",
+          "text": "顾遥本轮每周4天；每天5小时。无在途申请。 未确定字段的各选项可独立组合。",
+          "kind": "observation",
+          "scope": "bd01bda0e21c/person",
+          "supersedes": "d-2e9e3a7b5640",
+          "effectiveAt": "2032-07-03"
+        }
+      ],
+      "contextSha256": "bda103aa07cbc1a905c1be0ec19da1da4d25b4d61a4ba4f9c9fbafc596de8629",
+      "resultSha256": "f7f351a9765cc684af0c38fb38cb36b47ddd440a8c36969a314a1b5fe04b7d98"
+    },
+    {
+      "caseId": "724c448642e1",
+      "family": "rule_revision",
+      "role": "path",
+      "evidenceAssessment": "新原件门槛25小时，4×6=24不足；没有在途申请，应none/current。",
+      "visibleSources": [
+        {
+          "id": "e-724c448642e1",
+          "text": "请复核孟溪的展陈技术助理相关当前目标。本轮安排已登记，按当前有效原件维护结论。本岗位新规则已生效。"
+        },
+        {
+          "id": "d-4f27b712b3b9",
+          "title": "行动与报告约定",
+          "text": "建议字段next：符合且未申请用apply；符合且已申请用wait；不符合且已申请用withdraw；不符合且未申请用none。报告recommend与资格一致。事实未确定时不能猜值；若原文允许的全部可能状态下输出相同，则输出该确定值，否则输出null且status=uncertain。只改当前目标，不实际执行申请。最新有效原件可纠正尚未同步的上游记忆。",
+          "kind": "rule",
+          "scope": "724c448642e1/policy",
+          "effectiveAt": "2032-07-01"
+        },
+        {
+          "id": "d-b88fa71fe1bd",
+          "title": "展陈技术助理新资格原件",
+          "text": "展陈技术助理完整资格规则：每周至少3天，且天数乘每天小时数至少25小时。两条件须同时满足，没有其他隐含条件。从本轮起替代旧版。",
+          "kind": "rule",
+          "scope": "724c448642e1/job",
+          "supersedes": "d-c591690c4264",
+          "effectiveAt": "2032-07-03"
+        },
+        {
+          "id": "d-582c08c16bf0",
+          "title": "本轮本人确认登记",
+          "text": "孟溪本轮每周4天；每天6小时。无在途申请。 未确定字段的各选项可独立组合。",
+          "kind": "observation",
+          "scope": "724c448642e1/person",
+          "supersedes": "d-16dd55a25b3f",
+          "effectiveAt": "2032-07-03"
+        }
+      ],
+      "contextSha256": "b6b3d2c2d2f90044e261b95d69ca7d987f5572728f30c4c3e707be47d7df23b6",
+      "resultSha256": "f8f7feb300f3bc9b4e7ce30b01f82597c2d89179a53dc2093a8f12dfd28a00c8"
+    },
+    {
+      "caseId": "a066ba69c2f1",
+      "family": "rule_revision",
+      "role": "report",
+      "evidenceAssessment": "新原件门槛17小时，4×4=16不足；recommend应false/current。",
+      "visibleSources": [
+        {
+          "id": "e-a066ba69c2f1",
+          "text": "请复核唐序的田野资料整理助理相关当前目标。本轮安排已登记，按当前有效原件维护结论。本岗位新规则已生效。"
+        },
+        {
+          "id": "d-f43dc34572bf",
+          "title": "行动与报告约定",
+          "text": "建议字段next：符合且未申请用apply；符合且已申请用wait；不符合且已申请用withdraw；不符合且未申请用none。报告recommend与资格一致。事实未确定时不能猜值；若原文允许的全部可能状态下输出相同，则输出该确定值，否则输出null且status=uncertain。只改当前目标，不实际执行申请。最新有效原件可纠正尚未同步的上游记忆。",
+          "kind": "rule",
+          "scope": "a066ba69c2f1/policy",
+          "effectiveAt": "2032-07-01"
+        },
+        {
+          "id": "d-edbd2299dc3a",
+          "title": "田野资料整理助理新资格原件",
+          "text": "田野资料整理助理完整资格规则：每周至少3天，且天数乘每天小时数至少17小时。两条件须同时满足，没有其他隐含条件。从本轮起替代旧版。",
+          "kind": "rule",
+          "scope": "a066ba69c2f1/job",
+          "supersedes": "d-62c8cecdd0da",
+          "effectiveAt": "2032-07-03"
+        },
+        {
+          "id": "d-955b818366a3",
+          "title": "本轮本人确认登记",
+          "text": "唐序本轮每周4天；每天4小时。无在途申请。 未确定字段的各选项可独立组合。",
+          "kind": "observation",
+          "scope": "a066ba69c2f1/person",
+          "supersedes": "d-9b9021e3949f",
+          "effectiveAt": "2032-07-03"
+        }
+      ],
+      "contextSha256": "23836ba38b4236513d68188e34221c6d75e316bdca6ef896edf77c742c049f0c",
+      "resultSha256": "3201deb95238144f291dd3cc64e7cab639957ed671f486dec2c4db8b7779bab3"
+    },
+    {
+      "caseId": "a89041236587",
+      "family": "other_scope",
+      "role": "match",
+      "evidenceAssessment": "仅本人岗位原件适用：4天≥3且20小时≥14；其他机构通知不适用，eligible=true/current。",
+      "visibleSources": [
+        {
+          "id": "e-a89041236587",
+          "text": "请复核顾遥的馆藏数字化助理相关当前目标。本轮安排已登记，按当前有效原件维护结论。另一机构同名岗位的通知不是本人的岗位规则。"
+        },
+        {
+          "id": "d-11cdfa1a2160",
+          "title": "馆藏数字化助理资格原件",
+          "text": "馆藏数字化助理完整资格规则：每周至少3天，且天数乘每天小时数至少14小时。两条件须同时满足，没有其他隐含条件。",
+          "kind": "rule",
+          "scope": "a89041236587/job",
+          "effectiveAt": "2032-07-01"
+        },
+        {
+          "id": "d-f30cb1b24105",
+          "title": "行动与报告约定",
+          "text": "建议字段next：符合且未申请用apply；符合且已申请用wait；不符合且已申请用withdraw；不符合且未申请用none。报告recommend与资格一致。事实未确定时不能猜值；若原文允许的全部可能状态下输出相同，则输出该确定值，否则输出null且status=uncertain。只改当前目标，不实际执行申请。最新有效原件可纠正尚未同步的上游记忆。",
+          "kind": "rule",
+          "scope": "a89041236587/policy",
+          "effectiveAt": "2032-07-01"
+        },
+        {
+          "id": "d-4280fa6c1b45",
+          "title": "本轮本人确认登记",
+          "text": "顾遥本轮每周4天；每天5小时。无在途申请。 未确定字段的各选项可独立组合。",
+          "kind": "observation",
+          "scope": "a89041236587/person",
+          "supersedes": "d-91e3f6679274",
+          "effectiveAt": "2032-07-03"
+        }
+      ],
+      "contextSha256": "d0a1fb799623d97a14bbf2851e951e3678dd8125cc19f139b3989ed01f05c1e1",
+      "resultSha256": "138a0b4af421b02caa3b075aeeed8f4801a32f1d5c9e56b5f6741708c780898c"
+    },
+    {
+      "caseId": "4bb3b4f73bdf",
+      "family": "other_scope",
+      "role": "path",
+      "evidenceAssessment": "本人岗位4天≥3且24小时≥17，无在途申请；next=apply/current，其他机构规则不适用。",
+      "visibleSources": [
+        {
+          "id": "e-4bb3b4f73bdf",
+          "text": "请复核孟溪的展陈技术助理相关当前目标。本轮安排已登记，按当前有效原件维护结论。另一机构同名岗位的通知不是本人的岗位规则。"
+        },
+        {
+          "id": "d-713c21e78791",
+          "title": "行动与报告约定",
+          "text": "建议字段next：符合且未申请用apply；符合且已申请用wait；不符合且已申请用withdraw；不符合且未申请用none。报告recommend与资格一致。事实未确定时不能猜值；若原文允许的全部可能状态下输出相同，则输出该确定值，否则输出null且status=uncertain。只改当前目标，不实际执行申请。最新有效原件可纠正尚未同步的上游记忆。",
+          "kind": "rule",
+          "scope": "4bb3b4f73bdf/policy",
+          "effectiveAt": "2032-07-01"
+        },
+        {
+          "id": "d-9470de2e083c",
+          "title": "展陈技术助理资格原件",
+          "text": "展陈技术助理完整资格规则：每周至少3天，且天数乘每天小时数至少17小时。两条件须同时满足，没有其他隐含条件。",
+          "kind": "rule",
+          "scope": "4bb3b4f73bdf/job",
+          "effectiveAt": "2032-07-01"
+        },
+        {
+          "id": "d-531161e57eda",
+          "title": "本轮本人确认登记",
+          "text": "孟溪本轮每周4天；每天6小时。无在途申请。 未确定字段的各选项可独立组合。",
+          "kind": "observation",
+          "scope": "4bb3b4f73bdf/person",
+          "supersedes": "d-1c0df22ee589",
+          "effectiveAt": "2032-07-03"
+        }
+      ],
+      "contextSha256": "10b6afc5c569d83632bba05dd65e8cf0aebf15d82ec6c7058710eaa4bb3dd1cf",
+      "resultSha256": "cd29e52cd35e665c1955543bc0cc058b6db7f449b22ff67b8c853fed4f33d5c4"
+    },
+    {
+      "caseId": "894b1e898fe4",
+      "family": "other_scope",
+      "role": "report",
+      "evidenceAssessment": "本人岗位4天≥3且16小时≥11；recommend=true/current，其他机构规则不适用。",
+      "visibleSources": [
+        {
+          "id": "e-894b1e898fe4",
+          "text": "请复核唐序的田野资料整理助理相关当前目标。本轮安排已登记，按当前有效原件维护结论。另一机构同名岗位的通知不是本人的岗位规则。"
+        },
+        {
+          "id": "d-3b1b673c01c2",
+          "title": "行动与报告约定",
+          "text": "建议字段next：符合且未申请用apply；符合且已申请用wait；不符合且已申请用withdraw；不符合且未申请用none。报告recommend与资格一致。事实未确定时不能猜值；若原文允许的全部可能状态下输出相同，则输出该确定值，否则输出null且status=uncertain。只改当前目标，不实际执行申请。最新有效原件可纠正尚未同步的上游记忆。",
+          "kind": "rule",
+          "scope": "894b1e898fe4/policy",
+          "effectiveAt": "2032-07-01"
+        },
+        {
+          "id": "d-fec244e6c3d7",
+          "title": "田野资料整理助理资格原件",
+          "text": "田野资料整理助理完整资格规则：每周至少3天，且天数乘每天小时数至少11小时。两条件须同时满足，没有其他隐含条件。",
+          "kind": "rule",
+          "scope": "894b1e898fe4/job",
+          "effectiveAt": "2032-07-01"
+        },
+        {
+          "id": "d-e753bfc77f35",
+          "title": "本轮本人确认登记",
+          "text": "唐序本轮每周4天；每天4小时。无在途申请。 未确定字段的各选项可独立组合。",
+          "kind": "observation",
+          "scope": "894b1e898fe4/person",
+          "supersedes": "d-ad09739c6aba",
+          "effectiveAt": "2032-07-03"
+        }
+      ],
+      "contextSha256": "8abd88a63354d2eebcbd18b46738457e84224ea7fcb791cfc7c9cbd83a6e7fec",
+      "resultSha256": "5d735826d9670900cedb3899988ca75846661a12dd45ec46c45d8b0bffe20dd4"
+    },
+    {
+      "caseId": "28ca80ed1a35",
+      "family": "corrupt_summary",
+      "role": "match",
+      "evidenceAssessment": "原件要求3天及14小时，不是摘要声称的100小时；4天/20小时合格，eligible=true，错误记忆正文应被替换。",
+      "visibleSources": [
+        {
+          "id": "e-28ca80ed1a35",
+          "text": "请复核顾遥的馆藏数字化助理相关当前目标。本轮安排已登记，按当前有效原件维护结论。"
+        },
+        {
+          "id": "d-da502df84034",
+          "title": "馆藏数字化助理资格原件",
+          "text": "馆藏数字化助理完整资格规则：每周至少3天，且天数乘每天小时数至少14小时。两条件须同时满足，没有其他隐含条件。",
+          "kind": "rule",
+          "scope": "28ca80ed1a35/job",
+          "effectiveAt": "2032-07-01"
+        },
+        {
+          "id": "d-f4eda5badd4f",
+          "title": "行动与报告约定",
+          "text": "建议字段next：符合且未申请用apply；符合且已申请用wait；不符合且已申请用withdraw；不符合且未申请用none。报告recommend与资格一致。事实未确定时不能猜值；若原文允许的全部可能状态下输出相同，则输出该确定值，否则输出null且status=uncertain。只改当前目标，不实际执行申请。最新有效原件可纠正尚未同步的上游记忆。",
+          "kind": "rule",
+          "scope": "28ca80ed1a35/policy",
+          "effectiveAt": "2032-07-01"
+        },
+        {
+          "id": "d-43c69b556004",
+          "title": "本轮本人确认登记",
+          "text": "顾遥本轮每周4天；每天5小时。无在途申请。 未确定字段的各选项可独立组合。",
+          "kind": "observation",
+          "scope": "28ca80ed1a35/person",
+          "supersedes": "d-d9e3cd619c1f",
+          "effectiveAt": "2032-07-03"
+        }
+      ],
+      "contextSha256": "c83486bd61a4bd4b5e74138183ca273eaa8a08bb9cf6ddd6681df17d938be603",
+      "resultSha256": "96c53d8fa9854528d3b78ef20657d976f1cfacb4df618694ec2dd303cfeaf207"
+    },
+    {
+      "caseId": "e7ca05283319",
+      "family": "corrupt_summary",
+      "role": "path",
+      "evidenceAssessment": "原件要求3天及17小时，4天/24小时合格且无在途申请，next=apply；100小时旧摘要应被替换。",
+      "visibleSources": [
+        {
+          "id": "e-e7ca05283319",
+          "text": "请复核孟溪的展陈技术助理相关当前目标。本轮安排已登记，按当前有效原件维护结论。"
+        },
+        {
+          "id": "d-bb506b6004cd",
+          "title": "行动与报告约定",
+          "text": "建议字段next：符合且未申请用apply；符合且已申请用wait；不符合且已申请用withdraw；不符合且未申请用none。报告recommend与资格一致。事实未确定时不能猜值；若原文允许的全部可能状态下输出相同，则输出该确定值，否则输出null且status=uncertain。只改当前目标，不实际执行申请。最新有效原件可纠正尚未同步的上游记忆。",
+          "kind": "rule",
+          "scope": "e7ca05283319/policy",
+          "effectiveAt": "2032-07-01"
+        },
+        {
+          "id": "d-e1bb08aae299",
+          "title": "展陈技术助理资格原件",
+          "text": "展陈技术助理完整资格规则：每周至少3天，且天数乘每天小时数至少17小时。两条件须同时满足，没有其他隐含条件。",
+          "kind": "rule",
+          "scope": "e7ca05283319/job",
+          "effectiveAt": "2032-07-01"
+        },
+        {
+          "id": "d-2c02612f16b1",
+          "title": "本轮本人确认登记",
+          "text": "孟溪本轮每周4天；每天6小时。无在途申请。 未确定字段的各选项可独立组合。",
+          "kind": "observation",
+          "scope": "e7ca05283319/person",
+          "supersedes": "d-31fe9c7224c3",
+          "effectiveAt": "2032-07-03"
+        }
+      ],
+      "contextSha256": "60932655abf8ee077f8f4b0d41473c17d18c213bb8eedee60b2e4d9012407fe9",
+      "resultSha256": "f646d18972258c68e34f139170fa7021441b36e97797701c110f123f9f2bf4e9"
+    },
+    {
+      "caseId": "2b2ddd479695",
+      "family": "corrupt_summary",
+      "role": "report",
+      "evidenceAssessment": "原件要求3天及11小时，4天/16小时合格，recommend=true；100小时旧摘要应被替换。",
+      "visibleSources": [
+        {
+          "id": "e-2b2ddd479695",
+          "text": "请复核唐序的田野资料整理助理相关当前目标。本轮安排已登记，按当前有效原件维护结论。"
+        },
+        {
+          "id": "d-c02533f38f34",
+          "title": "行动与报告约定",
+          "text": "建议字段next：符合且未申请用apply；符合且已申请用wait；不符合且已申请用withdraw；不符合且未申请用none。报告recommend与资格一致。事实未确定时不能猜值；若原文允许的全部可能状态下输出相同，则输出该确定值，否则输出null且status=uncertain。只改当前目标，不实际执行申请。最新有效原件可纠正尚未同步的上游记忆。",
+          "kind": "rule",
+          "scope": "2b2ddd479695/policy",
+          "effectiveAt": "2032-07-01"
+        },
+        {
+          "id": "d-fee821fbba31",
+          "title": "田野资料整理助理资格原件",
+          "text": "田野资料整理助理完整资格规则：每周至少3天，且天数乘每天小时数至少11小时。两条件须同时满足，没有其他隐含条件。",
+          "kind": "rule",
+          "scope": "2b2ddd479695/job",
+          "effectiveAt": "2032-07-01"
+        },
+        {
+          "id": "d-b29cdbaa94b2",
+          "title": "本轮本人确认登记",
+          "text": "唐序本轮每周4天；每天4小时。无在途申请。 未确定字段的各选项可独立组合。",
+          "kind": "observation",
+          "scope": "2b2ddd479695/person",
+          "supersedes": "d-9fa0b090cc3b",
+          "effectiveAt": "2032-07-03"
+        }
+      ],
+      "contextSha256": "ec0e38b69f504b02512562ea0712dbf5b0b74d8705b74f73470412f2cc99eb9b",
+      "resultSha256": "b138de7a6b8315b54ea1fb5af20ad1883e1a3d1f2fc1447464cc647a9fe6f8ae"
+    }
+  ],
+  "annotations": [
+    {
+      "caseId": "cc971f83693c",
+      "arm": "original",
+      "family": "known_boundary",
+      "role": "match",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "顾遥每周2天少于3天，2×5=10也低于14；资格确定为false。",
+      "notes": [],
+      "answer": "不符合：每周2天未达至少3天，且2×5=10小时未达至少14小时。",
+      "finalTarget": {
+        "id": "match-job",
+        "role": "match",
+        "version": 2,
+        "text": "{\"eligible\": false}",
+        "values": {
+          "eligible": false
+        },
+        "refs": [
+          "d-9a791cd012af",
+          "d-1565b52edefa"
+        ],
+        "status": "current"
+      },
+      "needsEvidence": false,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": null,
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "cc971f83693c",
+      "arm": "answer-first",
+      "family": "known_boundary",
+      "role": "match",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "顾遥每周2天少于3天，2×5=10也低于14；资格确定为false。",
+      "notes": [],
+      "answer": "按当前有效原件复核：每周2天不满足“至少3天”，且2×5=10小时不足14小时，两项均不满足，eligible应为false。",
+      "finalTarget": {
+        "id": "match-job",
+        "role": "match",
+        "version": 2,
+        "text": "{\"eligible\": false}",
+        "values": {
+          "eligible": false
+        },
+        "refs": [
+          "d-9a791cd012af",
+          "d-51926f32f4a2",
+          "d-1565b52edefa"
+        ],
+        "status": "current"
+      },
+      "needsEvidence": false,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": null,
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "cc971f83693c",
+      "arm": "review",
+      "family": "known_boundary",
+      "role": "match",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "顾遥每周2天少于3天，2×5=10也低于14；资格确定为false。",
+      "notes": [],
+      "answer": "不符合：每周2天未达至少3天，且2×5=10小时未达至少14小时。",
+      "finalTarget": {
+        "id": "match-job",
+        "role": "match",
+        "version": 2,
+        "text": "{\"eligible\":false}",
+        "values": {
+          "eligible": false
+        },
+        "refs": [
+          "d-9a791cd012af",
+          "d-1565b52edefa"
+        ],
+        "status": "current"
+      },
+      "needsEvidence": false,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": "accepted",
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "e45120b643ba",
+      "arm": "original",
+      "family": "known_boundary",
+      "role": "path",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "孟溪2天低于3天、2×6=12低于17；申请在途，确定应withdraw。",
+      "notes": [],
+      "answer": "孟溪每周2天、每天6小时，不满足展陈技术助理“每周至少3天且天数×小时数至少17小时”的资格要求；申请已提交且在途，按约定next应为withdraw。",
+      "finalTarget": {
+        "id": "path-job",
+        "role": "path",
+        "version": 2,
+        "text": "{\"next\": \"withdraw\"}",
+        "values": {
+          "next": "withdraw"
+        },
+        "refs": [
+          "d-c4c16060c828",
+          "d-645105cc7413",
+          "d-b7f8699f9206"
+        ],
+        "status": "current"
+      },
+      "needsEvidence": false,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": null,
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "e45120b643ba",
+      "arm": "answer-first",
+      "family": "known_boundary",
+      "role": "path",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "孟溪2天低于3天、2×6=12低于17；申请在途，确定应withdraw。",
+      "notes": [],
+      "answer": "孟溪每周2天、每天6小时，不满足每周至少3天且总时长至少17小时的要求；申请已提交且在途，按约定next应为withdraw。",
+      "finalTarget": {
+        "id": "path-job",
+        "role": "path",
+        "version": 2,
+        "text": "{\"next\": \"withdraw\"}",
+        "values": {
+          "next": "withdraw"
+        },
+        "refs": [
+          "d-c4c16060c828",
+          "d-645105cc7413",
+          "d-b7f8699f9206"
+        ],
+        "status": "current"
+      },
+      "needsEvidence": false,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": null,
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "e45120b643ba",
+      "arm": "review",
+      "family": "known_boundary",
+      "role": "path",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "孟溪2天低于3天、2×6=12低于17；申请在途，确定应withdraw。",
+      "notes": [],
+      "answer": "孟溪每周2天、每天6小时，不满足展陈技术助理“每周至少3天且天数×小时数至少17小时”的资格要求；申请已提交且在途，按约定next应为withdraw。",
+      "finalTarget": {
+        "id": "path-job",
+        "role": "path",
+        "version": 2,
+        "text": "{\"next\":\"withdraw\"}",
+        "values": {
+          "next": "withdraw"
+        },
+        "refs": [
+          "d-c4c16060c828",
+          "d-645105cc7413",
+          "d-b7f8699f9206"
+        ],
+        "status": "current"
+      },
+      "needsEvidence": false,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": "accepted",
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "d4e65f29dc69",
+      "arm": "original",
+      "family": "known_boundary",
+      "role": "report",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "唐序2天低于3天、2×4=8低于11；recommend确定false。",
+      "notes": [],
+      "answer": "唐序本轮每周2天、每天4小时，不满足每周至少3天的资格条件，报告recommend应为false。",
+      "finalTarget": {
+        "id": "report-job",
+        "role": "report",
+        "version": 2,
+        "text": "{\"recommend\": false}",
+        "values": {
+          "recommend": false
+        },
+        "refs": [
+          "d-2d3e1fe473cd",
+          "d-0b31ba83de95",
+          "d-9a109b30dbb2"
+        ],
+        "status": "current"
+      },
+      "needsEvidence": false,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": null,
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "d4e65f29dc69",
+      "arm": "answer-first",
+      "family": "known_boundary",
+      "role": "report",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "唐序2天低于3天、2×4=8低于11；recommend确定false。",
+      "notes": [],
+      "answer": "按当前有效原件复核：唐序每周2天、每天4小时，不满足“每周至少3天”的条件，因此不符合田野资料整理助理资格，报告recommend应为false。原记忆recommend=true与资格不一致，需修订。",
+      "finalTarget": {
+        "id": "report-job",
+        "role": "report",
+        "version": 2,
+        "text": "{\"recommend\": false}",
+        "values": {
+          "recommend": false
+        },
+        "refs": [
+          "d-2d3e1fe473cd",
+          "d-9a109b30dbb2",
+          "d-0b31ba83de95"
+        ],
+        "status": "current"
+      },
+      "needsEvidence": false,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": null,
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "d4e65f29dc69",
+      "arm": "review",
+      "family": "known_boundary",
+      "role": "report",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "唐序2天低于3天、2×4=8低于11；recommend确定false。",
+      "notes": [],
+      "answer": "唐序本轮每周2天、每天4小时，不满足每周至少3天的资格条件，报告recommend应为false。",
+      "finalTarget": {
+        "id": "report-job",
+        "role": "report",
+        "version": 2,
+        "text": "{\"recommend\":false}",
+        "values": {
+          "recommend": false
+        },
+        "refs": [
+          "d-2d3e1fe473cd",
+          "d-0b31ba83de95",
+          "d-9a109b30dbb2"
+        ],
+        "status": "current"
+      },
+      "needsEvidence": false,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": "accepted",
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "9be57ed10b17",
+      "arm": "original",
+      "family": "unknown_invariant",
+      "role": "match",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "穷尽选项3或4天、每天5小时均达到3天及14小时；eligible确定true，上游days未定不使目标未定。",
+      "notes": [],
+      "answer": "按资格规则：每周至少3天且天数×每天小时数至少14小时。本轮每天5小时，每周3或4天（穷尽可能）。3天×5小时=15≥14，4天×5小时=20≥14，且3天、4天均满足至少3天；所有可能状态均符合，故eligible确定为true。",
+      "finalTarget": {
+        "id": "match-job",
+        "role": "match",
+        "version": 2,
+        "text": "{\"eligible\": true}",
+        "values": {
+          "eligible": true
+        },
+        "refs": [
+          "d-75b12325711f",
+          "d-58a1a4ff4d21",
+          "d-3ba8c01cbc22"
+        ],
+        "status": "current"
+      },
+      "needsEvidence": false,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": null,
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "9be57ed10b17",
+      "arm": "answer-first",
+      "family": "unknown_invariant",
+      "role": "match",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "穷尽选项3或4天、每天5小时均达到3天及14小时；eligible确定true，上游days未定不使目标未定。",
+      "notes": [],
+      "answer": "按当前有效原件复核：资格规则为每周至少3天且天数×每天小时数至少14小时。本轮登记每周3或4天（未定，选项穷尽）、每天5小时。两种可能下均满足：3×5=15≥14且3≥3；4×5=20≥14且4≥3。故eligible确定为true，维持原值并更新来源与文字。",
+      "finalTarget": {
+        "id": "match-job",
+        "role": "match",
+        "version": 2,
+        "text": "{\"eligible\": true}",
+        "values": {
+          "eligible": true
+        },
+        "refs": [
+          "d-75b12325711f",
+          "d-58a1a4ff4d21",
+          "d-3ba8c01cbc22"
+        ],
+        "status": "current"
+      },
+      "needsEvidence": false,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": null,
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "9be57ed10b17",
+      "arm": "review",
+      "family": "unknown_invariant",
+      "role": "match",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "穷尽选项3或4天、每天5小时均达到3天及14小时；eligible确定true，上游days未定不使目标未定。",
+      "notes": [],
+      "answer": "按资格规则：每周至少3天且天数×每天小时数至少14小时。本轮每天5小时，每周3或4天（穷尽可能）。3天×5小时=15≥14，4天×5小时=20≥14，且3天、4天均满足至少3天；所有可能状态均符合，故eligible确定为true。",
+      "finalTarget": {
+        "id": "match-job",
+        "role": "match",
+        "version": 2,
+        "text": "{\"eligible\":true}",
+        "values": {
+          "eligible": true
+        },
+        "refs": [
+          "d-75b12325711f",
+          "d-58a1a4ff4d21",
+          "d-3ba8c01cbc22"
+        ],
+        "status": "current"
+      },
+      "needsEvidence": false,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": "accepted",
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "e223d7865d9c",
+      "arm": "original",
+      "family": "unknown_invariant",
+      "role": "path",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "穷尽选项3或4天、每天6小时均达17小时且天数合格；无在途申请，next确定apply。",
+      "notes": [],
+      "answer": "按当前有效原件复核：展陈技术助理资格要求每周至少3天且天数×每天小时数≥17小时。本轮登记为每周3或4天（未定，选项穷尽）、每天6小时、无在途申请。两种可能天数下均满足资格（3×6=18≥17，4×6=24≥17），且未申请，故next确定为apply。原值apply不变，仅更新来源引用为本轮有效原件。",
+      "finalTarget": {
+        "id": "path-job",
+        "role": "path",
+        "version": 2,
+        "text": "{\"next\": \"apply\"}",
+        "values": {
+          "next": "apply"
+        },
+        "refs": [
+          "d-a335d2ca5df1",
+          "d-eee24cff7368",
+          "d-b9090a4540f8"
+        ],
+        "status": "current"
+      },
+      "needsEvidence": false,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": null,
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "e223d7865d9c",
+      "arm": "answer-first",
+      "family": "unknown_invariant",
+      "role": "path",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "穷尽选项3或4天、每天6小时均达17小时且天数合格；无在途申请，next确定apply。",
+      "notes": [],
+      "answer": "已按当前有效原件复核展陈技术助理目标：每周3或4天（未定，穷尽选项）且每天6小时，两种可能均满足每周至少3天且总工时≥17小时，资格结论一致为符合；无在途申请，故next应为apply。",
+      "finalTarget": {
+        "id": "path-job",
+        "role": "path",
+        "version": 2,
+        "text": "{\"next\": \"apply\"}",
+        "values": {
+          "next": "apply"
+        },
+        "refs": [
+          "d-a335d2ca5df1",
+          "d-eee24cff7368",
+          "d-b9090a4540f8"
+        ],
+        "status": "current"
+      },
+      "needsEvidence": false,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": null,
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "e223d7865d9c",
+      "arm": "review",
+      "family": "unknown_invariant",
+      "role": "path",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "穷尽选项3或4天、每天6小时均达17小时且天数合格；无在途申请，next确定apply。",
+      "notes": [],
+      "answer": "按当前有效原件复核：展陈技术助理资格要求每周至少3天且天数×每天小时数≥17小时。本轮登记为每周3或4天（未定，选项穷尽）、每天6小时、无在途申请。两种可能天数下均满足资格（3×6=18≥17，4×6=24≥17），且未申请，故next确定为apply。原值apply不变，仅更新来源引用为本轮有效原件。",
+      "finalTarget": {
+        "id": "path-job",
+        "role": "path",
+        "version": 2,
+        "text": "{\"next\":\"apply\"}",
+        "values": {
+          "next": "apply"
+        },
+        "refs": [
+          "d-a335d2ca5df1",
+          "d-eee24cff7368",
+          "d-b9090a4540f8"
+        ],
+        "status": "current"
+      },
+      "needsEvidence": false,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": "accepted",
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "1704cdfaf7c9",
+      "arm": "original",
+      "family": "unknown_invariant",
+      "role": "report",
+      "label": "conflict",
+      "answerEvidenceAssessment": "partially_correct_status_error",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": false,
+      "finalValueCorrect": false,
+      "finalStatusCorrect": false,
+      "targetValueAndStatusCorrect": false,
+      "issueType": "correct_prose_value_but_wrong_commit_and_wrong_prose_status",
+      "rationale": "正文多次推出recommend=true，结尾明确“维持recommend=true并标记为uncertain”，实际却提交null/uncertain。正文的值推论正确，但uncertain及needsEvidence=true本身也错误；不是纯正文全对而字段错。",
+      "evidenceRationale": "穷尽选项3或4天、每天4小时产生12或16小时，均达11且天数合格；recommend必须true/current。上游days=null不否定目标不变量，needsEvidence不应为true。",
+      "notes": [],
+      "answer": "资格条件为每周至少3天且天数×每天小时数至少11小时。本轮每周3或4天尚未确定，每天4小时：若3天则12小时且满足天数条件，若4天则16小时且满足，两种可能均符合资格，故recommend应为true。但当前上游profile-days为null/uncertain，未反映原件中3或4天的穷尽选项；按规则事实未确定时不能猜值，且全部可能状态结论相同才可输出确定值。此处两种可能均符合，结论一致为true，故维持recommend=true并标记为uncertain，引用本轮确认登记原件。",
+      "finalTarget": {
+        "id": "report-job",
+        "role": "report",
+        "version": 2,
+        "text": "{\"recommend\": null}",
+        "values": {
+          "recommend": null
+        },
+        "refs": [
+          "d-424ea260fc06",
+          "d-fc1ff778ae10",
+          "d-9e913488237b"
+        ],
+        "status": "uncertain"
+      },
+      "needsEvidence": true,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": null,
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "1704cdfaf7c9",
+      "arm": "answer-first",
+      "family": "unknown_invariant",
+      "role": "report",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "正文明确两种天数均合格，提交true/current且needsEvidence=false，正确区分上游未定与目标确定。",
+      "evidenceRationale": "穷尽选项3或4天、每天4小时产生12或16小时，均达11且天数合格；recommend必须true/current。上游days=null不否定目标不变量，needsEvidence不应为true。",
+      "notes": [],
+      "answer": "按当前有效原件复核：每周天数可能为3或4，每天4小时。两种可能均满足“每周至少3天”且“天数×小时数≥11”（3×4=12，4×4=16），因此资格结论在全部可能状态下一致为符合，recommend应为true。原值已正确，无需修订事实；仅补充本次证据引用。",
+      "finalTarget": {
+        "id": "report-job",
+        "role": "report",
+        "version": 2,
+        "text": "{\"recommend\": true}",
+        "values": {
+          "recommend": true
+        },
+        "refs": [
+          "d-424ea260fc06",
+          "d-fc1ff778ae10",
+          "d-9e913488237b"
+        ],
+        "status": "current"
+      },
+      "needsEvidence": false,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": null,
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "1704cdfaf7c9",
+      "arm": "review",
+      "family": "unknown_invariant",
+      "role": "report",
+      "label": "consistent",
+      "answerEvidenceAssessment": "partially_correct_status_error",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": false,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": false,
+      "targetValueAndStatusCorrect": false,
+      "issueType": "prose_and_commit_share_wrong_uncertainty",
+      "rationale": "复核提交true/uncertain，与保留正文最后声明true且uncertain相符，故一致性标consistent；但穷尽状态均合格，目标应current，needsEvidence也不应true。只修复值，没有完整修复状态；一致不等于正确。",
+      "evidenceRationale": "穷尽选项3或4天、每天4小时产生12或16小时，均达11且天数合格；recommend必须true/current。上游days=null不否定目标不变量，needsEvidence不应为true。",
+      "notes": [],
+      "answer": "资格条件为每周至少3天且天数×每天小时数至少11小时。本轮每周3或4天尚未确定，每天4小时：若3天则12小时且满足天数条件，若4天则16小时且满足，两种可能均符合资格，故recommend应为true。但当前上游profile-days为null/uncertain，未反映原件中3或4天的穷尽选项；按规则事实未确定时不能猜值，且全部可能状态结论相同才可输出确定值。此处两种可能均符合，结论一致为true，故维持recommend=true并标记为uncertain，引用本轮确认登记原件。",
+      "finalTarget": {
+        "id": "report-job",
+        "role": "report",
+        "version": 2,
+        "text": "{\"recommend\":true}",
+        "values": {
+          "recommend": true
+        },
+        "refs": [
+          "d-424ea260fc06",
+          "d-fc1ff778ae10",
+          "d-9e913488237b"
+        ],
+        "status": "uncertain"
+      },
+      "needsEvidence": true,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": "accepted",
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "8c0e7cc8577c",
+      "arm": "original",
+      "family": "unknown_divergent",
+      "role": "match",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "2×5=10且2天不合格，3×5=15且3天合格；eligible在可能状态间分歧，应null/uncertain。",
+      "notes": [],
+      "answer": "资格无法确定：每周天数可能为2或3，每天5小时。若为3天则满足每周至少3天且15小时≥14小时；若为2天则不满足每周至少3天（10小时亦不足14小时）。两种可能状态结论不同，故eligible记为null、status=uncertain。",
+      "finalTarget": {
+        "id": "match-job",
+        "role": "match",
+        "version": 2,
+        "text": "{\"eligible\": null}",
+        "values": {
+          "eligible": null
+        },
+        "refs": [
+          "d-b0ea3f316fd2",
+          "d-075cdffa30dd",
+          "d-a3a0b20b81a6"
+        ],
+        "status": "uncertain"
+      },
+      "needsEvidence": true,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": null,
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "8c0e7cc8577c",
+      "arm": "answer-first",
+      "family": "unknown_divergent",
+      "role": "match",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "2×5=10且2天不合格，3×5=15且3天合格；eligible在可能状态间分歧，应null/uncertain。",
+      "notes": [],
+      "answer": "资格规则要求每周至少3天且天数×每天小时数≥14。本轮登记为每周2或3天（未定）、每天5小时：若为2天，则2<3且10<14，不符合；若为3天，则3≥3且15≥14，符合。两种可能状态结论不同，故eligible无法确定为true或false，应置null并标记uncertain。",
+      "finalTarget": {
+        "id": "match-job",
+        "role": "match",
+        "version": 2,
+        "text": "{\"eligible\": null}",
+        "values": {
+          "eligible": null
+        },
+        "refs": [
+          "d-b0ea3f316fd2",
+          "d-075cdffa30dd",
+          "d-a3a0b20b81a6"
+        ],
+        "status": "uncertain"
+      },
+      "needsEvidence": true,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": null,
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "8c0e7cc8577c",
+      "arm": "review",
+      "family": "unknown_divergent",
+      "role": "match",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "2×5=10且2天不合格，3×5=15且3天合格；eligible在可能状态间分歧，应null/uncertain。",
+      "notes": [],
+      "answer": "资格无法确定：每周天数可能为2或3，每天5小时。若为3天则满足每周至少3天且15小时≥14小时；若为2天则不满足每周至少3天（10小时亦不足14小时）。两种可能状态结论不同，故eligible记为null、status=uncertain。",
+      "finalTarget": {
+        "id": "match-job",
+        "role": "match",
+        "version": 2,
+        "text": "{\"eligible\":null}",
+        "values": {
+          "eligible": null
+        },
+        "refs": [
+          "d-b0ea3f316fd2",
+          "d-075cdffa30dd",
+          "d-a3a0b20b81a6"
+        ],
+        "status": "uncertain"
+      },
+      "needsEvidence": true,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": "accepted",
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "50a16444a6db",
+      "arm": "original",
+      "family": "unknown_divergent",
+      "role": "path",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "2天不合格且申请在途应withdraw；3天、18小时合格且在途应wait；next分歧，应null/uncertain。",
+      "notes": [],
+      "answer": "孟溪每周天数可能为2或3天，每天6小时，申请已提交且在途。若为3天则满足资格（3×6=18≥17），对应next=wait；若为2天则不满足（2×6=12<17），对应next=withdraw。两种可能状态结论不同，故next无法确定，记为null且status=uncertain。",
+      "finalTarget": {
+        "id": "path-job",
+        "role": "path",
+        "version": 2,
+        "text": "{\"next\": null}",
+        "values": {
+          "next": null
+        },
+        "refs": [
+          "d-3f84dd4d96ba",
+          "d-4ec91115d740",
+          "d-4511a608c4c3"
+        ],
+        "status": "uncertain"
+      },
+      "needsEvidence": true,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": null,
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "50a16444a6db",
+      "arm": "answer-first",
+      "family": "unknown_divergent",
+      "role": "path",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "2天不合格且申请在途应withdraw；3天、18小时合格且在途应wait；next分歧，应null/uncertain。",
+      "notes": [],
+      "answer": "已按当前有效原件复核 path-job：每周天数可能为2或3，每天6小时；若为2天则不满足“至少3天”，若为3天则满足且总时数18≥17。两种可能下资格结论不同，故next无法确定，应置null并标记uncertain；申请已提交且在途，不重复办理。",
+      "finalTarget": {
+        "id": "path-job",
+        "role": "path",
+        "version": 2,
+        "text": "{\"next\": null}",
+        "values": {
+          "next": null
+        },
+        "refs": [
+          "d-3f84dd4d96ba",
+          "d-4ec91115d740",
+          "d-4511a608c4c3"
+        ],
+        "status": "uncertain"
+      },
+      "needsEvidence": true,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": null,
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "50a16444a6db",
+      "arm": "review",
+      "family": "unknown_divergent",
+      "role": "path",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "2天不合格且申请在途应withdraw；3天、18小时合格且在途应wait；next分歧，应null/uncertain。",
+      "notes": [],
+      "answer": "孟溪每周天数可能为2或3天，每天6小时，申请已提交且在途。若为3天则满足资格（3×6=18≥17），对应next=wait；若为2天则不满足（2×6=12<17），对应next=withdraw。两种可能状态结论不同，故next无法确定，记为null且status=uncertain。",
+      "finalTarget": {
+        "id": "path-job",
+        "role": "path",
+        "version": 2,
+        "text": "{\"next\":null}",
+        "values": {
+          "next": null
+        },
+        "refs": [
+          "d-3f84dd4d96ba",
+          "d-4ec91115d740",
+          "d-4511a608c4c3"
+        ],
+        "status": "uncertain"
+      },
+      "needsEvidence": true,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": "accepted",
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "c4ce43e7d762",
+      "arm": "original",
+      "family": "unknown_divergent",
+      "role": "report",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "2天/8小时不合格，3天/12小时合格；recommend分歧，应null/uncertain。",
+      "notes": [],
+      "answer": "资格要求每周至少3天且天数×每天小时数≥11小时。本轮每天4小时，每周天数可能为2或3：若为2天则不满足（2<3且8<11），若为3天则满足（3≥3且12≥11）。两种可能状态下recommend不同，故不能确定，输出null且status=uncertain。",
+      "finalTarget": {
+        "id": "report-job",
+        "role": "report",
+        "version": 2,
+        "text": "{\"recommend\": null}",
+        "values": {
+          "recommend": null
+        },
+        "refs": [
+          "d-0a4e1a914eb6",
+          "d-fa3fa139b545",
+          "d-0f746bacdb68"
+        ],
+        "status": "uncertain"
+      },
+      "needsEvidence": true,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": null,
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "c4ce43e7d762",
+      "arm": "answer-first",
+      "family": "unknown_divergent",
+      "role": "report",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "2天/8小时不合格，3天/12小时合格；recommend分歧，应null/uncertain。",
+      "notes": [],
+      "answer": "按当前有效原件复核：资格要求每周至少3天且天数×每天小时数至少11小时。本轮登记为每周2或3天（未定，选项穷尽）、每天4小时。若为2天则不满足（2<3，且8<11）；若为3天则满足（3≥3，12≥11）。原文允许的全部可能状态下recommend并不相同，故不能确定，应置null并标uncertain。",
+      "finalTarget": {
+        "id": "report-job",
+        "role": "report",
+        "version": 2,
+        "text": "{\"recommend\": null}",
+        "values": {
+          "recommend": null
+        },
+        "refs": [
+          "d-fa3fa139b545",
+          "d-0a4e1a914eb6",
+          "d-0f746bacdb68"
+        ],
+        "status": "uncertain"
+      },
+      "needsEvidence": true,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": null,
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "c4ce43e7d762",
+      "arm": "review",
+      "family": "unknown_divergent",
+      "role": "report",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "2天/8小时不合格，3天/12小时合格；recommend分歧，应null/uncertain。",
+      "notes": [],
+      "answer": "资格要求每周至少3天且天数×每天小时数≥11小时。本轮每天4小时，每周天数可能为2或3：若为2天则不满足（2<3且8<11），若为3天则满足（3≥3且12≥11）。两种可能状态下recommend不同，故不能确定，输出null且status=uncertain。",
+      "finalTarget": {
+        "id": "report-job",
+        "role": "report",
+        "version": 2,
+        "text": "{\"recommend\":null}",
+        "values": {
+          "recommend": null
+        },
+        "refs": [
+          "d-0a4e1a914eb6",
+          "d-fa3fa139b545",
+          "d-0f746bacdb68"
+        ],
+        "status": "uncertain"
+      },
+      "needsEvidence": true,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": "accepted",
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "988cdd0950c9",
+      "arm": "original",
+      "family": "joint_unknown",
+      "role": "match",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "独立组合为(3,3)=9、(3,5)=15、(4,3)=12、(4,5)=20；低于和达到14的情形均存在，eligible应null/uncertain。",
+      "notes": [],
+      "answer": "资格无法确定：规则要求每周至少3天且天数×每天小时数至少14小时。本轮登记为每周3或4天、每天3或5小时，各选项可独立组合。组合中(3天,3小时)=9小时不满足14小时，而(4天,5小时)=20小时满足，故全部可能状态下结论不一致，eligible应为null且status=uncertain。",
+      "finalTarget": {
+        "id": "match-job",
+        "role": "match",
+        "version": 2,
+        "text": "{\"eligible\": null}",
+        "values": {
+          "eligible": null
+        },
+        "refs": [
+          "d-10c0d0802ce5",
+          "d-7800d21e9e52",
+          "d-fda7fda7e6aa"
+        ],
+        "status": "uncertain"
+      },
+      "needsEvidence": true,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": null,
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "988cdd0950c9",
+      "arm": "answer-first",
+      "family": "joint_unknown",
+      "role": "match",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct_conclusion_arithmetic_error",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "prose_arithmetic_error_without_wrong_commit",
+      "rationale": "正文将四组合乘积列为9、15、15、20，其中4×3应12而非15。正文和字段的最终null/uncertain结论一致且正确，但解释有明确算术错误，不能把全文记为完全正确。",
+      "evidenceRationale": "独立组合为(3,3)=9、(3,5)=15、(4,3)=12、(4,5)=20；低于和达到14的情形均存在，eligible应null/uncertain。",
+      "notes": [],
+      "answer": "已按当前有效原件复核资格：每周天数可能为3或4，每天小时数可能为3或5，独立组合下天数×小时数可能为9、15、15、20；其中(3天,3小时)组合为9小时，不满足至少14小时，因此并非所有可能状态都符合资格，eligible不能确定为true，应改为null并标记uncertain。",
+      "finalTarget": {
+        "id": "match-job",
+        "role": "match",
+        "version": 2,
+        "text": "{\"eligible\": null}",
+        "values": {
+          "eligible": null
+        },
+        "refs": [
+          "d-10c0d0802ce5",
+          "d-fda7fda7e6aa"
+        ],
+        "status": "uncertain"
+      },
+      "needsEvidence": true,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": null,
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "988cdd0950c9",
+      "arm": "review",
+      "family": "joint_unknown",
+      "role": "match",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "独立组合为(3,3)=9、(3,5)=15、(4,3)=12、(4,5)=20；低于和达到14的情形均存在，eligible应null/uncertain。",
+      "notes": [],
+      "answer": "资格无法确定：规则要求每周至少3天且天数×每天小时数至少14小时。本轮登记为每周3或4天、每天3或5小时，各选项可独立组合。组合中(3天,3小时)=9小时不满足14小时，而(4天,5小时)=20小时满足，故全部可能状态下结论不一致，eligible应为null且status=uncertain。",
+      "finalTarget": {
+        "id": "match-job",
+        "role": "match",
+        "version": 2,
+        "text": "{\"eligible\":null}",
+        "values": {
+          "eligible": null
+        },
+        "refs": [
+          "d-10c0d0802ce5",
+          "d-7800d21e9e52",
+          "d-fda7fda7e6aa"
+        ],
+        "status": "uncertain"
+      },
+      "needsEvidence": true,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": "accepted",
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "2d4b44efb3cb",
+      "arm": "original",
+      "family": "joint_unknown",
+      "role": "path",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "独立组合工时为12、18、16、24，门槛17，既有合格也有不合格；无在途申请使next候选仅apply/none，应null/uncertain。",
+      "notes": [
+        "正文称next无法确定为apply/wait/none，其中wait在无在途申请下不是可行结果；该句是排除确定性的措辞而非明确断言wait可行，记为表述不精确，不改正确的null/uncertain判定。"
+      ],
+      "answer": "资格条件为每周至少3天且天数×每天小时数至少17小时。本轮登记显示每周3或4天、每天4或6小时，各选项可独立组合：3天×4小时=12小时不满足，3天×6小时=18小时满足，4天×4小时=16小时不满足，4天×6小时=24小时满足。因此资格结果不确定，next无法确定为apply/wait/none，按规则输出null且status=uncertain。无在途申请，无需外部补救。",
+      "finalTarget": {
+        "id": "path-job",
+        "role": "path",
+        "version": 2,
+        "text": "{\"next\": null}",
+        "values": {
+          "next": null
+        },
+        "refs": [
+          "d-5d8434c1e3d4",
+          "d-c85bb6fce208",
+          "d-5d872caeec3d"
+        ],
+        "status": "uncertain"
+      },
+      "needsEvidence": true,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": null,
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "2d4b44efb3cb",
+      "arm": "answer-first",
+      "family": "joint_unknown",
+      "role": "path",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "独立组合工时为12、18、16、24，门槛17，既有合格也有不合格；无在途申请使next候选仅apply/none，应null/uncertain。",
+      "notes": [
+        "解释仅显式给出低于门槛的最小组合，未列达到门槛的组合；可见原件中的其他组合足以支持最终不确定结论，未把解释简略判为冲突。"
+      ],
+      "answer": "已按当前有效原件复核展陈技术助理目标：每周3或4天、每天4或6小时，各选项可独立组合。资格条件为每周至少3天且天数×每天小时数至少17小时。所有可能组合中天数均≥3，且最小乘积3×4=12<17，因此资格结果不确定，next无法确定，应置null并标记uncertain；无在途申请，不执行申请。",
+      "finalTarget": {
+        "id": "path-job",
+        "role": "path",
+        "version": 2,
+        "text": "{\"next\": null}",
+        "values": {
+          "next": null
+        },
+        "refs": [
+          "d-5d8434c1e3d4",
+          "d-c85bb6fce208",
+          "d-5d872caeec3d"
+        ],
+        "status": "uncertain"
+      },
+      "needsEvidence": true,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": null,
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "2d4b44efb3cb",
+      "arm": "review",
+      "family": "joint_unknown",
+      "role": "path",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "独立组合工时为12、18、16、24，门槛17，既有合格也有不合格；无在途申请使next候选仅apply/none，应null/uncertain。",
+      "notes": [
+        "正文称next无法确定为apply/wait/none，其中wait在无在途申请下不是可行结果；该句是排除确定性的措辞而非明确断言wait可行，记为表述不精确，不改正确的null/uncertain判定。"
+      ],
+      "answer": "资格条件为每周至少3天且天数×每天小时数至少17小时。本轮登记显示每周3或4天、每天4或6小时，各选项可独立组合：3天×4小时=12小时不满足，3天×6小时=18小时满足，4天×4小时=16小时不满足，4天×6小时=24小时满足。因此资格结果不确定，next无法确定为apply/wait/none，按规则输出null且status=uncertain。无在途申请，无需外部补救。",
+      "finalTarget": {
+        "id": "path-job",
+        "role": "path",
+        "version": 2,
+        "text": "{\"next\":null}",
+        "values": {
+          "next": null
+        },
+        "refs": [
+          "d-5d8434c1e3d4",
+          "d-c85bb6fce208",
+          "d-5d872caeec3d"
+        ],
+        "status": "uncertain"
+      },
+      "needsEvidence": true,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": "accepted",
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "3571fcd848d9",
+      "arm": "original",
+      "family": "joint_unknown",
+      "role": "report",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "独立组合工时为6、12、8、16，门槛11，合格与不合格均可能；recommend应null/uncertain。",
+      "notes": [],
+      "answer": "资格条件为每周至少3天且天数×每天小时数至少11小时。本轮登记为每周3或4天、每天2或4小时，各选项可独立组合：3天×2小时=6小时不满足，3天×4小时=12小时满足，4天×2小时=8小时不满足，4天×4小时=16小时满足。由于全部可能状态并非一致，recommend无法确定，修订为null并标记uncertain。",
+      "finalTarget": {
+        "id": "report-job",
+        "role": "report",
+        "version": 2,
+        "text": "{\"recommend\": null}",
+        "values": {
+          "recommend": null
+        },
+        "refs": [
+          "d-28fe56346302",
+          "d-4bc59a4d5d0c",
+          "d-77ab90eba5d2"
+        ],
+        "status": "uncertain"
+      },
+      "needsEvidence": true,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": null,
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "3571fcd848d9",
+      "arm": "answer-first",
+      "family": "joint_unknown",
+      "role": "report",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "独立组合工时为6、12、8、16，门槛11，合格与不合格均可能；recommend应null/uncertain。",
+      "notes": [],
+      "answer": "根据资格原件与本人确认登记复核：每周天数可能为3或4，每天小时数可能为2或4，各选项可独立组合。资格要求每周至少3天且天数×小时数≥11。全部可能组合为(3,2)=6、(3,4)=12、(4,2)=8、(4,4)=16，其中(3,2)与(4,2)不满足乘积条件，故并非所有可能状态都符合，也并非所有可能状态都不符合，资格未确定。按报告约定，事实未确定时不能猜值，recommend应输出null且status=uncertain。",
+      "finalTarget": {
+        "id": "report-job",
+        "role": "report",
+        "version": 2,
+        "text": "{\"recommend\": null}",
+        "values": {
+          "recommend": null
+        },
+        "refs": [
+          "d-28fe56346302",
+          "d-4bc59a4d5d0c",
+          "d-77ab90eba5d2"
+        ],
+        "status": "uncertain"
+      },
+      "needsEvidence": true,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": null,
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "3571fcd848d9",
+      "arm": "review",
+      "family": "joint_unknown",
+      "role": "report",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "独立组合工时为6、12、8、16，门槛11，合格与不合格均可能；recommend应null/uncertain。",
+      "notes": [],
+      "answer": "资格条件为每周至少3天且天数×每天小时数至少11小时。本轮登记为每周3或4天、每天2或4小时，各选项可独立组合：3天×2小时=6小时不满足，3天×4小时=12小时满足，4天×2小时=8小时不满足，4天×4小时=16小时满足。由于全部可能状态并非一致，recommend无法确定，修订为null并标记uncertain。",
+      "finalTarget": {
+        "id": "report-job",
+        "role": "report",
+        "version": 2,
+        "text": "{\"recommend\":null}",
+        "values": {
+          "recommend": null
+        },
+        "refs": [
+          "d-28fe56346302",
+          "d-4bc59a4d5d0c",
+          "d-77ab90eba5d2"
+        ],
+        "status": "uncertain"
+      },
+      "needsEvidence": true,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": "accepted",
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "fec305f41cdb",
+      "arm": "original",
+      "family": "archive_resolution",
+      "role": "match",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "本人最新原件已核定2天，每天5小时，虽上游days仍null，原件可纠正未同步记忆；eligible确定false。",
+      "notes": [],
+      "answer": "顾遥本轮每周2天、每天5小时，不满足“每周至少3天”的资格条件，因此馆藏数字化助理资格为不符合。",
+      "finalTarget": {
+        "id": "match-job",
+        "role": "match",
+        "version": 2,
+        "text": "{\"eligible\": false}",
+        "values": {
+          "eligible": false
+        },
+        "refs": [
+          "d-982b64db12d3",
+          "d-c8e8e8238367",
+          "d-29e0fcdb600e"
+        ],
+        "status": "current"
+      },
+      "needsEvidence": false,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": null,
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "fec305f41cdb",
+      "arm": "answer-first",
+      "family": "archive_resolution",
+      "role": "match",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "本人最新原件已核定2天，每天5小时，虽上游days仍null，原件可纠正未同步记忆；eligible确定false。",
+      "notes": [],
+      "answer": "根据本轮本人确认登记，顾遥每周2天、每天5小时，不满足馆藏数字化助理“每周至少3天且天数×小时数至少14小时”的资格规则，因此eligible应为false。",
+      "finalTarget": {
+        "id": "match-job",
+        "role": "match",
+        "version": 2,
+        "text": "{\"eligible\": false}",
+        "values": {
+          "eligible": false
+        },
+        "refs": [
+          "d-982b64db12d3",
+          "d-29e0fcdb600e"
+        ],
+        "status": "current"
+      },
+      "needsEvidence": false,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": null,
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "fec305f41cdb",
+      "arm": "review",
+      "family": "archive_resolution",
+      "role": "match",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "本人最新原件已核定2天，每天5小时，虽上游days仍null，原件可纠正未同步记忆；eligible确定false。",
+      "notes": [],
+      "answer": "顾遥本轮每周2天、每天5小时，不满足“每周至少3天”的资格条件，因此馆藏数字化助理资格为不符合。",
+      "finalTarget": {
+        "id": "match-job",
+        "role": "match",
+        "version": 2,
+        "text": "{\"eligible\":false}",
+        "values": {
+          "eligible": false
+        },
+        "refs": [
+          "d-982b64db12d3",
+          "d-c8e8e8238367",
+          "d-29e0fcdb600e"
+        ],
+        "status": "current"
+      },
+      "needsEvidence": false,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": "accepted",
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "ed55fb9cf18e",
+      "arm": "original",
+      "family": "archive_resolution",
+      "role": "path",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "本人最新原件核定2天、每天6小时且申请在途；不合格，应withdraw/current，不能受未同步days=null阻碍。",
+      "notes": [],
+      "answer": "按本轮本人确认登记：每周2天、每天6小时，不满足展陈技术助理“每周至少3天且天数×小时数至少17小时”的资格要求；申请已提交且在途，故next应为withdraw。",
+      "finalTarget": {
+        "id": "path-job",
+        "role": "path",
+        "version": 2,
+        "text": "{\"next\": \"withdraw\"}",
+        "values": {
+          "next": "withdraw"
+        },
+        "refs": [
+          "d-7d3035e98f15",
+          "d-685d6f74543b",
+          "d-ddbaade43990"
+        ],
+        "status": "current"
+      },
+      "needsEvidence": false,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": null,
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "ed55fb9cf18e",
+      "arm": "answer-first",
+      "family": "archive_resolution",
+      "role": "path",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "本人最新原件核定2天、每天6小时且申请在途；不合格，应withdraw/current，不能受未同步days=null阻碍。",
+      "notes": [],
+      "answer": "根据本轮本人确认登记，孟溪每周2天、每天6小时，不满足展陈技术助理“每周至少3天且总时长至少17小时”的资格要求；申请已提交且仍在途，按行动约定应为withdraw。原next=apply需修订。",
+      "finalTarget": {
+        "id": "path-job",
+        "role": "path",
+        "version": 2,
+        "text": "{\"next\": \"withdraw\"}",
+        "values": {
+          "next": "withdraw"
+        },
+        "refs": [
+          "d-7d3035e98f15",
+          "d-685d6f74543b",
+          "d-ddbaade43990"
+        ],
+        "status": "current"
+      },
+      "needsEvidence": false,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": null,
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "ed55fb9cf18e",
+      "arm": "review",
+      "family": "archive_resolution",
+      "role": "path",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "本人最新原件核定2天、每天6小时且申请在途；不合格，应withdraw/current，不能受未同步days=null阻碍。",
+      "notes": [],
+      "answer": "按本轮本人确认登记：每周2天、每天6小时，不满足展陈技术助理“每周至少3天且天数×小时数至少17小时”的资格要求；申请已提交且在途，故next应为withdraw。",
+      "finalTarget": {
+        "id": "path-job",
+        "role": "path",
+        "version": 2,
+        "text": "{\"next\":\"withdraw\"}",
+        "values": {
+          "next": "withdraw"
+        },
+        "refs": [
+          "d-7d3035e98f15",
+          "d-685d6f74543b",
+          "d-ddbaade43990"
+        ],
+        "status": "current"
+      },
+      "needsEvidence": false,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": "accepted",
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "21d62cfc0601",
+      "arm": "original",
+      "family": "archive_resolution",
+      "role": "report",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "本人最新原件核定2天、每天4小时；不合格，recommend=false/current，不能受未同步days=null阻碍。",
+      "notes": [],
+      "answer": "按本轮本人确认登记，唐序每周2天、每天4小时，不满足“每周至少3天”的资格条件，因此报告recommend应为false。",
+      "finalTarget": {
+        "id": "report-job",
+        "role": "report",
+        "version": 2,
+        "text": "{\"recommend\": false}",
+        "values": {
+          "recommend": false
+        },
+        "refs": [
+          "d-11ce489f76ec",
+          "d-d13b89ae58d0",
+          "d-941d8c9218c8"
+        ],
+        "status": "current"
+      },
+      "needsEvidence": false,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": null,
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "21d62cfc0601",
+      "arm": "answer-first",
+      "family": "archive_resolution",
+      "role": "report",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "本人最新原件核定2天、每天4小时；不合格，recommend=false/current，不能受未同步days=null阻碍。",
+      "notes": [],
+      "answer": "根据本轮本人确认登记，唐序每周2天、每天4小时，不满足“每周至少3天”的资格条件，因此报告recommend应为false。",
+      "finalTarget": {
+        "id": "report-job",
+        "role": "report",
+        "version": 2,
+        "text": "{\"recommend\": false}",
+        "values": {
+          "recommend": false
+        },
+        "refs": [
+          "d-11ce489f76ec",
+          "d-d13b89ae58d0",
+          "d-941d8c9218c8"
+        ],
+        "status": "current"
+      },
+      "needsEvidence": false,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": null,
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "21d62cfc0601",
+      "arm": "review",
+      "family": "archive_resolution",
+      "role": "report",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "本人最新原件核定2天、每天4小时；不合格，recommend=false/current，不能受未同步days=null阻碍。",
+      "notes": [],
+      "answer": "按本轮本人确认登记，唐序每周2天、每天4小时，不满足“每周至少3天”的资格条件，因此报告recommend应为false。",
+      "finalTarget": {
+        "id": "report-job",
+        "role": "report",
+        "version": 2,
+        "text": "{\"recommend\":false}",
+        "values": {
+          "recommend": false
+        },
+        "refs": [
+          "d-11ce489f76ec",
+          "d-d13b89ae58d0",
+          "d-941d8c9218c8"
+        ],
+        "status": "current"
+      },
+      "needsEvidence": false,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": "accepted",
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "bd01bda0e21c",
+      "arm": "original",
+      "family": "rule_revision",
+      "role": "match",
+      "label": "conflict",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": false,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": false,
+      "issueType": "correct_prose_wrong_commit",
+      "rationale": "正文正确说20<21故eligible=false，最终仍写eligible=true/current。",
+      "evidenceRationale": "新原件替代旧规则，现门槛21小时；4×5=20不足，eligible应false/current。",
+      "notes": [],
+      "answer": "按新资格规则复核：每周4天（≥3天），4×5=20小时，未达到至少21小时，故不符合资格，eligible应为false。",
+      "finalTarget": {
+        "id": "match-job",
+        "role": "match",
+        "version": 2,
+        "text": "{\"eligible\": true}",
+        "values": {
+          "eligible": true
+        },
+        "refs": [
+          "d-4e9ed6186116",
+          "d-7fc6406a8c1c",
+          "d-56ec62796012"
+        ],
+        "status": "current"
+      },
+      "needsEvidence": false,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": null,
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "bd01bda0e21c",
+      "arm": "answer-first",
+      "family": "rule_revision",
+      "role": "match",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "新原件替代旧规则，现门槛21小时；4×5=20不足，eligible应false/current。",
+      "notes": [],
+      "answer": "按新资格规则复核：每周4天满足至少3天；4×5=20小时，未达到至少21小时，故不符合资格。原eligible=true应修订为false。",
+      "finalTarget": {
+        "id": "match-job",
+        "role": "match",
+        "version": 2,
+        "text": "{\"eligible\": false}",
+        "values": {
+          "eligible": false
+        },
+        "refs": [
+          "d-4e9ed6186116",
+          "d-7fc6406a8c1c",
+          "d-56ec62796012"
+        ],
+        "status": "current"
+      },
+      "needsEvidence": false,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": null,
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "bd01bda0e21c",
+      "arm": "review",
+      "family": "rule_revision",
+      "role": "match",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "共享original候选的正确正文被保留，复核将错误字段改为正文和有效新规则支持的值，状态current正确。",
+      "evidenceRationale": "新原件替代旧规则，现门槛21小时；4×5=20不足，eligible应false/current。",
+      "notes": [],
+      "answer": "按新资格规则复核：每周4天（≥3天），4×5=20小时，未达到至少21小时，故不符合资格，eligible应为false。",
+      "finalTarget": {
+        "id": "match-job",
+        "role": "match",
+        "version": 2,
+        "text": "{\"eligible\":false}",
+        "values": {
+          "eligible": false
+        },
+        "refs": [
+          "d-4e9ed6186116",
+          "d-7fc6406a8c1c",
+          "d-56ec62796012"
+        ],
+        "status": "current"
+      },
+      "needsEvidence": false,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": "accepted",
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "724c448642e1",
+      "arm": "original",
+      "family": "rule_revision",
+      "role": "path",
+      "label": "conflict",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": false,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": false,
+      "issueType": "correct_prose_wrong_commit",
+      "rationale": "正文正确说24<25且未申请故next=none，最终仍写next=apply/current。",
+      "evidenceRationale": "新原件门槛25小时，4×6=24不足；没有在途申请，应none/current。",
+      "notes": [],
+      "answer": "按新资格规则复核：每周4天（≥3天），4×6=24小时，未达25小时，故不符合资格；且无在途申请（applied=false）。依据行动约定，不符合且未申请应取next=none，而非apply。建议将path-job的next修订为none。",
+      "finalTarget": {
+        "id": "path-job",
+        "role": "path",
+        "version": 2,
+        "text": "{\"next\": \"apply\"}",
+        "values": {
+          "next": "apply"
+        },
+        "refs": [
+          "d-4f27b712b3b9",
+          "d-b88fa71fe1bd",
+          "d-582c08c16bf0"
+        ],
+        "status": "current"
+      },
+      "needsEvidence": false,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": null,
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "724c448642e1",
+      "arm": "answer-first",
+      "family": "rule_revision",
+      "role": "path",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "新原件门槛25小时，4×6=24不足；没有在途申请，应none/current。",
+      "notes": [],
+      "answer": "按新资格规则复核：每周4天满足至少3天；4×6=24小时，未达至少25小时，故不符合资格。当前无在途申请，按行动约定next应为none。原值apply需修订。",
+      "finalTarget": {
+        "id": "path-job",
+        "role": "path",
+        "version": 2,
+        "text": "{\"next\": \"none\"}",
+        "values": {
+          "next": "none"
+        },
+        "refs": [
+          "d-4f27b712b3b9",
+          "d-b88fa71fe1bd",
+          "d-582c08c16bf0"
+        ],
+        "status": "current"
+      },
+      "needsEvidence": false,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": null,
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "724c448642e1",
+      "arm": "review",
+      "family": "rule_revision",
+      "role": "path",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "共享original候选的正确正文被保留，复核将错误字段改为正文和有效新规则支持的值，状态current正确。",
+      "evidenceRationale": "新原件门槛25小时，4×6=24不足；没有在途申请，应none/current。",
+      "notes": [],
+      "answer": "按新资格规则复核：每周4天（≥3天），4×6=24小时，未达25小时，故不符合资格；且无在途申请（applied=false）。依据行动约定，不符合且未申请应取next=none，而非apply。建议将path-job的next修订为none。",
+      "finalTarget": {
+        "id": "path-job",
+        "role": "path",
+        "version": 2,
+        "text": "{\"next\":\"none\"}",
+        "values": {
+          "next": "none"
+        },
+        "refs": [
+          "d-4f27b712b3b9",
+          "d-b88fa71fe1bd",
+          "d-582c08c16bf0"
+        ],
+        "status": "current"
+      },
+      "needsEvidence": false,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": "accepted",
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "a066ba69c2f1",
+      "arm": "original",
+      "family": "rule_revision",
+      "role": "report",
+      "label": "conflict",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": false,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": false,
+      "issueType": "correct_prose_wrong_commit",
+      "rationale": "正文正确说16<17故recommend=false，最终仍写recommend=true/current。",
+      "evidenceRationale": "新原件门槛17小时，4×4=16不足；recommend应false/current。",
+      "notes": [],
+      "answer": "按新资格规则复核：每周4天满足至少3天；4×4=16小时，未达到至少17小时，故不符合资格，recommend应为false。",
+      "finalTarget": {
+        "id": "report-job",
+        "role": "report",
+        "version": 2,
+        "text": "{\"recommend\": true}",
+        "values": {
+          "recommend": true
+        },
+        "refs": [
+          "d-f43dc34572bf",
+          "d-edbd2299dc3a",
+          "d-955b818366a3"
+        ],
+        "status": "current"
+      },
+      "needsEvidence": false,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": null,
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "a066ba69c2f1",
+      "arm": "answer-first",
+      "family": "rule_revision",
+      "role": "report",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "新原件门槛17小时，4×4=16不足；recommend应false/current。",
+      "notes": [],
+      "answer": "按新资格规则复核：每周4天满足至少3天，4×4=16小时不足17小时，资格不成立，recommend应为false。",
+      "finalTarget": {
+        "id": "report-job",
+        "role": "report",
+        "version": 2,
+        "text": "{\"recommend\": false}",
+        "values": {
+          "recommend": false
+        },
+        "refs": [
+          "d-edbd2299dc3a",
+          "d-955b818366a3",
+          "d-f43dc34572bf"
+        ],
+        "status": "current"
+      },
+      "needsEvidence": false,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": null,
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "a066ba69c2f1",
+      "arm": "review",
+      "family": "rule_revision",
+      "role": "report",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "共享original候选的正确正文被保留，复核将错误字段改为正文和有效新规则支持的值，状态current正确。",
+      "evidenceRationale": "新原件门槛17小时，4×4=16不足；recommend应false/current。",
+      "notes": [],
+      "answer": "按新资格规则复核：每周4天满足至少3天；4×4=16小时，未达到至少17小时，故不符合资格，recommend应为false。",
+      "finalTarget": {
+        "id": "report-job",
+        "role": "report",
+        "version": 2,
+        "text": "{\"recommend\":false}",
+        "values": {
+          "recommend": false
+        },
+        "refs": [
+          "d-f43dc34572bf",
+          "d-edbd2299dc3a",
+          "d-955b818366a3"
+        ],
+        "status": "current"
+      },
+      "needsEvidence": false,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": "accepted",
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "a89041236587",
+      "arm": "original",
+      "family": "other_scope",
+      "role": "match",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "仅本人岗位原件适用：4天≥3且20小时≥14；其他机构通知不适用，eligible=true/current。",
+      "notes": [],
+      "answer": "顾遥本轮每周4天、每天5小时，满足馆藏数字化助理资格规则（每周至少3天，且4×5=20≥14小时），资格结论为符合，维持eligible=true。",
+      "finalTarget": {
+        "id": "match-job",
+        "role": "match",
+        "version": 2,
+        "text": "{\"eligible\": true}",
+        "values": {
+          "eligible": true
+        },
+        "refs": [
+          "d-11cdfa1a2160",
+          "d-f30cb1b24105",
+          "d-4280fa6c1b45"
+        ],
+        "status": "current"
+      },
+      "needsEvidence": false,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": null,
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "a89041236587",
+      "arm": "answer-first",
+      "family": "other_scope",
+      "role": "match",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "仅本人岗位原件适用：4天≥3且20小时≥14；其他机构通知不适用，eligible=true/current。",
+      "notes": [],
+      "answer": "资格规则：每周至少3天且天数×每天小时数至少14小时。本轮登记为每周4天、每天5小时，4≥3且4×5=20≥14，两条件均满足，eligible应为true。原值已正确，无需修订事实；仅更新引用至本轮有效原件。",
+      "finalTarget": {
+        "id": "match-job",
+        "role": "match",
+        "version": 2,
+        "text": "{\"eligible\": true}",
+        "values": {
+          "eligible": true
+        },
+        "refs": [
+          "d-11cdfa1a2160",
+          "d-f30cb1b24105",
+          "d-4280fa6c1b45"
+        ],
+        "status": "current"
+      },
+      "needsEvidence": false,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": null,
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "a89041236587",
+      "arm": "review",
+      "family": "other_scope",
+      "role": "match",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "仅本人岗位原件适用：4天≥3且20小时≥14；其他机构通知不适用，eligible=true/current。",
+      "notes": [],
+      "answer": "顾遥本轮每周4天、每天5小时，满足馆藏数字化助理资格规则（每周至少3天，且4×5=20≥14小时），资格结论为符合，维持eligible=true。",
+      "finalTarget": {
+        "id": "match-job",
+        "role": "match",
+        "version": 2,
+        "text": "{\"eligible\":true}",
+        "values": {
+          "eligible": true
+        },
+        "refs": [
+          "d-11cdfa1a2160",
+          "d-f30cb1b24105",
+          "d-4280fa6c1b45"
+        ],
+        "status": "current"
+      },
+      "needsEvidence": false,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": "accepted",
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "4bb3b4f73bdf",
+      "arm": "original",
+      "family": "other_scope",
+      "role": "path",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "本人岗位4天≥3且24小时≥17，无在途申请；next=apply/current，其他机构规则不适用。",
+      "notes": [],
+      "answer": "按当前有效原件复核：每周4天满足至少3天；4×6=24小时满足至少17小时，资格符合；无在途申请，故next应为apply。原值apply正确，仅将来源更新为本轮确认登记d-531161e57eda。",
+      "finalTarget": {
+        "id": "path-job",
+        "role": "path",
+        "version": 2,
+        "text": "{\"next\": \"apply\"}",
+        "values": {
+          "next": "apply"
+        },
+        "refs": [
+          "d-713c21e78791",
+          "d-9470de2e083c",
+          "d-531161e57eda"
+        ],
+        "status": "current"
+      },
+      "needsEvidence": false,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": null,
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "4bb3b4f73bdf",
+      "arm": "answer-first",
+      "family": "other_scope",
+      "role": "path",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "本人岗位4天≥3且24小时≥17，无在途申请；next=apply/current，其他机构规则不适用。",
+      "notes": [
+        "patches为空，保留原先已正确的值/状态；最终refs仍含旧本人来源，未同步引用。本次值/状态一致性不将引用未刷新记为结论冲突。"
+      ],
+      "answer": "按当前有效原件复核：每周4天满足至少3天；4×6=24小时满足至少17小时，资格符合；无在途申请，故next应为apply。原值apply正确，无需修订。",
+      "finalTarget": {
+        "id": "path-job",
+        "role": "path",
+        "version": 1,
+        "text": "{\"next\": \"apply\"}",
+        "values": {
+          "next": "apply"
+        },
+        "refs": [
+          "d-713c21e78791",
+          "d-9470de2e083c",
+          "d-1c0df22ee589"
+        ],
+        "status": "current"
+      },
+      "needsEvidence": false,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": null,
+      "fallback": false,
+      "patchCount": 0
+    },
+    {
+      "caseId": "4bb3b4f73bdf",
+      "arm": "review",
+      "family": "other_scope",
+      "role": "path",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "本人岗位4天≥3且24小时≥17，无在途申请；next=apply/current，其他机构规则不适用。",
+      "notes": [],
+      "answer": "按当前有效原件复核：每周4天满足至少3天；4×6=24小时满足至少17小时，资格符合；无在途申请，故next应为apply。原值apply正确，仅将来源更新为本轮确认登记d-531161e57eda。",
+      "finalTarget": {
+        "id": "path-job",
+        "role": "path",
+        "version": 2,
+        "text": "{\"next\":\"apply\"}",
+        "values": {
+          "next": "apply"
+        },
+        "refs": [
+          "d-713c21e78791",
+          "d-9470de2e083c",
+          "d-531161e57eda"
+        ],
+        "status": "current"
+      },
+      "needsEvidence": false,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": "accepted",
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "894b1e898fe4",
+      "arm": "original",
+      "family": "other_scope",
+      "role": "report",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "本人岗位4天≥3且16小时≥11；recommend=true/current，其他机构规则不适用。",
+      "notes": [],
+      "answer": "按当前有效原件复核：每周4天满足至少3天；4×4=16小时满足至少11小时，两条件同时满足，recommend保持true。",
+      "finalTarget": {
+        "id": "report-job",
+        "role": "report",
+        "version": 2,
+        "text": "{\"recommend\": true}",
+        "values": {
+          "recommend": true
+        },
+        "refs": [
+          "d-3b1b673c01c2",
+          "d-fec244e6c3d7",
+          "d-e753bfc77f35"
+        ],
+        "status": "current"
+      },
+      "needsEvidence": false,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": null,
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "894b1e898fe4",
+      "arm": "answer-first",
+      "family": "other_scope",
+      "role": "report",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "本人岗位4天≥3且16小时≥11；recommend=true/current，其他机构规则不适用。",
+      "notes": [
+        "patches为空，保留原先已正确的值/状态；最终refs仍含旧本人来源，未同步引用。本次值/状态一致性不将引用未刷新记为结论冲突。"
+      ],
+      "answer": "按当前有效原件复核：每周4天满足至少3天；4×4=16小时满足至少11小时，资格符合，report的recommend应为true，与现有值一致，无需修订。",
+      "finalTarget": {
+        "id": "report-job",
+        "role": "report",
+        "version": 1,
+        "text": "{\"recommend\": true}",
+        "values": {
+          "recommend": true
+        },
+        "refs": [
+          "d-3b1b673c01c2",
+          "d-fec244e6c3d7",
+          "d-ad09739c6aba"
+        ],
+        "status": "current"
+      },
+      "needsEvidence": false,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": null,
+      "fallback": false,
+      "patchCount": 0
+    },
+    {
+      "caseId": "894b1e898fe4",
+      "arm": "review",
+      "family": "other_scope",
+      "role": "report",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "本人岗位4天≥3且16小时≥11；recommend=true/current，其他机构规则不适用。",
+      "notes": [],
+      "answer": "按当前有效原件复核：每周4天满足至少3天；4×4=16小时满足至少11小时，两条件同时满足，recommend保持true。",
+      "finalTarget": {
+        "id": "report-job",
+        "role": "report",
+        "version": 2,
+        "text": "{\"recommend\":true}",
+        "values": {
+          "recommend": true
+        },
+        "refs": [
+          "d-3b1b673c01c2",
+          "d-fec244e6c3d7",
+          "d-e753bfc77f35"
+        ],
+        "status": "current"
+      },
+      "needsEvidence": false,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": "accepted",
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "28ca80ed1a35",
+      "arm": "original",
+      "family": "corrupt_summary",
+      "role": "match",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "原件要求3天及14小时，不是摘要声称的100小时；4天/20小时合格，eligible=true，错误记忆正文应被替换。",
+      "notes": [
+        "检查最终目标text，错误100小时摘要已被替换；review使用简洁JSON正文，未保留原错误断言。"
+      ],
+      "answer": "顾遥符合馆藏数字化助理资格：每周4天（≥3天），4×5=20小时（≥14小时）。",
+      "finalTarget": {
+        "id": "match-job",
+        "role": "match",
+        "version": 2,
+        "text": "按馆藏数字化助理资格原件：每周至少3天，且天数乘每天小时数至少14小时。本轮登记为每周4天、每天5小时，4×5=20≥14，且4≥3，两条件均满足，故符合资格。",
+        "values": {
+          "eligible": true
+        },
+        "refs": [
+          "d-da502df84034",
+          "d-43c69b556004"
+        ],
+        "status": "current"
+      },
+      "needsEvidence": false,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": null,
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "28ca80ed1a35",
+      "arm": "answer-first",
+      "family": "corrupt_summary",
+      "role": "match",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "原件要求3天及14小时，不是摘要声称的100小时；4天/20小时合格，eligible=true，错误记忆正文应被替换。",
+      "notes": [
+        "检查最终目标text，错误100小时摘要已被替换；review使用简洁JSON正文，未保留原错误断言。"
+      ],
+      "answer": "按当前有效原件复核：资格规则为每周至少3天且天数×每天小时数至少14小时；本轮登记为每周4天、每天5小时，4×5=20≥14，两条件均满足，故eligible应为true。原记忆正文中“每周必须100小时”的摘要与原件不符，应更正。",
+      "finalTarget": {
+        "id": "match-job",
+        "role": "match",
+        "version": 2,
+        "text": "按馆藏数字化助理资格原件：每周至少3天且天数×每天小时数至少14小时。本轮登记每周4天、每天5小时，4×5=20≥14，两条件均满足，故符合资格（eligible=true）。原“每周必须100小时”的摘要与原件不符，已更正。",
+        "values": {
+          "eligible": true
+        },
+        "refs": [
+          "d-da502df84034",
+          "d-43c69b556004"
+        ],
+        "status": "current"
+      },
+      "needsEvidence": false,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": null,
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "28ca80ed1a35",
+      "arm": "review",
+      "family": "corrupt_summary",
+      "role": "match",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "原件要求3天及14小时，不是摘要声称的100小时；4天/20小时合格，eligible=true，错误记忆正文应被替换。",
+      "notes": [
+        "检查最终目标text，错误100小时摘要已被替换；review使用简洁JSON正文，未保留原错误断言。"
+      ],
+      "answer": "顾遥符合馆藏数字化助理资格：每周4天（≥3天），4×5=20小时（≥14小时）。",
+      "finalTarget": {
+        "id": "match-job",
+        "role": "match",
+        "version": 2,
+        "text": "{\"eligible\":true}",
+        "values": {
+          "eligible": true
+        },
+        "refs": [
+          "d-da502df84034",
+          "d-43c69b556004"
+        ],
+        "status": "current"
+      },
+      "needsEvidence": false,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": "accepted",
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "e7ca05283319",
+      "arm": "original",
+      "family": "corrupt_summary",
+      "role": "path",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "原件要求3天及17小时，4天/24小时合格且无在途申请，next=apply；100小时旧摘要应被替换。",
+      "notes": [
+        "检查最终目标text，错误100小时摘要已被替换；review使用简洁JSON正文，未保留原错误断言。"
+      ],
+      "answer": "孟溪符合展陈技术助理资格：每周4天、每天6小时（4×6=24≥17，且4≥3），且无在途申请，故next应为apply。上轮关于“每周必须100小时”的摘要与资格原件不符，已按当前有效原件纠正。",
+      "finalTarget": {
+        "id": "path-job",
+        "role": "path",
+        "version": 2,
+        "text": "孟溪每周4天、每天6小时，满足展陈技术助理资格（至少3天且天数×小时数≥17，4×6=24）；当前无在途申请，按行动约定next应为apply。上轮“每周必须100小时”的摘要与资格原件不符，已纠正。",
+        "values": {
+          "next": "apply"
+        },
+        "refs": [
+          "d-bb506b6004cd",
+          "d-e1bb08aae299",
+          "d-2c02612f16b1"
+        ],
+        "status": "current"
+      },
+      "needsEvidence": false,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": null,
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "e7ca05283319",
+      "arm": "answer-first",
+      "family": "corrupt_summary",
+      "role": "path",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "原件要求3天及17小时，4天/24小时合格且无在途申请，next=apply；100小时旧摘要应被替换。",
+      "notes": [
+        "检查最终目标text，错误100小时摘要已被替换；review使用简洁JSON正文，未保留原错误断言。"
+      ],
+      "answer": "按当前有效原件复核：每周4天、每天6小时，满足“至少3天且天数×小时数≥17”（4×6=24）；无在途申请，故next应为apply。原记忆正文中“每周必须100小时”的摘要与资格原件不符，应修订。",
+      "finalTarget": {
+        "id": "path-job",
+        "role": "path",
+        "version": 2,
+        "text": "展陈技术助理资格：每周至少3天且天数×小时数至少17小时。本轮登记每周4天、每天6小时（4×6=24），符合资格；无在途申请，故next=apply。原“每周必须100小时”的摘要与资格原件不符，已纠正。",
+        "values": {
+          "next": "apply"
+        },
+        "refs": [
+          "d-bb506b6004cd",
+          "d-e1bb08aae299",
+          "d-2c02612f16b1"
+        ],
+        "status": "current"
+      },
+      "needsEvidence": false,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": null,
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "e7ca05283319",
+      "arm": "review",
+      "family": "corrupt_summary",
+      "role": "path",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "原件要求3天及17小时，4天/24小时合格且无在途申请，next=apply；100小时旧摘要应被替换。",
+      "notes": [
+        "检查最终目标text，错误100小时摘要已被替换；review使用简洁JSON正文，未保留原错误断言。"
+      ],
+      "answer": "孟溪符合展陈技术助理资格：每周4天、每天6小时（4×6=24≥17，且4≥3），且无在途申请，故next应为apply。上轮关于“每周必须100小时”的摘要与资格原件不符，已按当前有效原件纠正。",
+      "finalTarget": {
+        "id": "path-job",
+        "role": "path",
+        "version": 2,
+        "text": "{\"next\":\"apply\"}",
+        "values": {
+          "next": "apply"
+        },
+        "refs": [
+          "d-bb506b6004cd",
+          "d-e1bb08aae299",
+          "d-2c02612f16b1"
+        ],
+        "status": "current"
+      },
+      "needsEvidence": false,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": "accepted",
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "2b2ddd479695",
+      "arm": "original",
+      "family": "corrupt_summary",
+      "role": "report",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "原件要求3天及11小时，4天/16小时合格，recommend=true；100小时旧摘要应被替换。",
+      "notes": [
+        "检查最终目标text，错误100小时摘要已被替换；review使用简洁JSON正文，未保留原错误断言。"
+      ],
+      "answer": "唐序符合田野资料整理助理资格，recommend应为true。",
+      "finalTarget": {
+        "id": "report-job",
+        "role": "report",
+        "version": 2,
+        "text": "按当前有效原件：每周4天、每天4小时，满足每周至少3天且天数乘小时数16≥11，资格符合，recommend为true。上轮“每周必须100小时”的摘要与资格原件不符，已纠正。",
+        "values": {
+          "recommend": true
+        },
+        "refs": [
+          "d-fee821fbba31",
+          "d-b29cdbaa94b2",
+          "d-c02533f38f34"
+        ],
+        "status": "current"
+      },
+      "needsEvidence": false,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": null,
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "2b2ddd479695",
+      "arm": "answer-first",
+      "family": "corrupt_summary",
+      "role": "report",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "原件要求3天及11小时，4天/16小时合格，recommend=true；100小时旧摘要应被替换。",
+      "notes": [
+        "检查最终目标text，错误100小时摘要已被替换；review使用简洁JSON正文，未保留原错误断言。"
+      ],
+      "answer": "按当前有效原件复核：每周4天满足至少3天；4×4=16小时满足至少11小时，资格符合，recommend应为true。原记忆正文中“每周必须100小时”的摘要与资格原件不符，应修订。",
+      "finalTarget": {
+        "id": "report-job",
+        "role": "report",
+        "version": 2,
+        "text": "按当前有效原件：每周4天、每天4小时，满足每周至少3天且天数乘小时数至少11小时，资格符合，recommend为true。原“每周必须100小时”的摘要与资格原件不符，已纠正。",
+        "values": {
+          "recommend": true
+        },
+        "refs": [
+          "d-fee821fbba31",
+          "d-b29cdbaa94b2",
+          "d-c02533f38f34"
+        ],
+        "status": "current"
+      },
+      "needsEvidence": false,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": null,
+      "fallback": false,
+      "patchCount": 1
+    },
+    {
+      "caseId": "2b2ddd479695",
+      "arm": "review",
+      "family": "corrupt_summary",
+      "role": "report",
+      "label": "consistent",
+      "answerEvidenceAssessment": "correct",
+      "proseTargetValueConclusionCorrect": true,
+      "proseTargetUncertaintyCorrect": true,
+      "finalValueCorrect": true,
+      "finalStatusCorrect": true,
+      "targetValueAndStatusCorrect": true,
+      "issueType": "none",
+      "rationale": "已实读正文、目标记忆正文和最终值/状态：目标结论相符，且与上述原件判断一致。",
+      "evidenceRationale": "原件要求3天及11小时，4天/16小时合格，recommend=true；100小时旧摘要应被替换。",
+      "notes": [
+        "检查最终目标text，错误100小时摘要已被替换；review使用简洁JSON正文，未保留原错误断言。"
+      ],
+      "answer": "唐序符合田野资料整理助理资格，recommend应为true。",
+      "finalTarget": {
+        "id": "report-job",
+        "role": "report",
+        "version": 2,
+        "text": "{\"recommend\":true}",
+        "values": {
+          "recommend": true
+        },
+        "refs": [
+          "d-fee821fbba31",
+          "d-b29cdbaa94b2",
+          "d-c02533f38f34"
+        ],
+        "status": "current"
+      },
+      "needsEvidence": false,
+      "externalAction": "none",
+      "executionStatus": "ok",
+      "reviewStatus": "accepted",
+      "fallback": false,
+      "patchCount": 1
+    }
+  ]
+}

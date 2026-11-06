@@ -1,0 +1,1242 @@
+{
+  "trajectoryId": "t-492a104c765f",
+  "arm": "ordinary",
+  "records": [
+    {
+      "eventId": "e-a3ce533ca54f",
+      "arm": "ordinary",
+      "calls": 0,
+      "reads": [],
+      "skipped": [],
+      "errors": [],
+      "extraError": null,
+      "extra": null,
+      "certificate": null,
+      "obligations": [],
+      "decisions": [],
+      "before": {
+        "match": {
+          "id": "match",
+          "role": "match",
+          "version": 2,
+          "values": {
+            "eligible": true
+          },
+          "status": "current",
+          "refs": [
+            "initial-t-492a104c765f",
+            "d-15ff8cd3efc2"
+          ],
+          "text": "每周5天、每天8小时，合计40小时，满足至少3天且至少32小时，资格为符合。"
+        },
+        "path": {
+          "id": "path",
+          "role": "path",
+          "version": 2,
+          "values": {
+            "next": "wait"
+          },
+          "status": "current",
+          "refs": [
+            "initial-t-492a104c765f",
+            "d-15ff8cd3efc2"
+          ],
+          "text": "每周5天、每天8小时，合计40小时，满足至少3天且至少32小时，资格符合；申请在途，故建议wait。"
+        },
+        "report": {
+          "id": "report",
+          "role": "report",
+          "version": 2,
+          "values": {
+            "recommend": true
+          },
+          "status": "current",
+          "refs": [
+            "initial-t-492a104c765f",
+            "d-15ff8cd3efc2"
+          ],
+          "text": "每周5天、每天8小时，合计40小时，满足至少3天且至少32小时，资格符合，故recommend为true。"
+        }
+      },
+      "scheduledCandidates": [],
+      "noRelevantChange": true,
+      "state": {
+        "scope": "scope-98d770782abe",
+        "rule": {
+          "id": "d-15ff8cd3efc2",
+          "text": "来源系统规则原件，第1版，作用域scope-98d770782abe，岗位“木版年画编目助理”。完整资格条件为每周至少3天，且每周总排班时长至少32小时；总排班时长=每周天数×每天小时数，两项须同时满足，无认证替代或其他隐含条件。本版从载有它的本轮事件开始生效，并替代同作用域此前规则。天数为非负整数，每天小时数为非负数。行动约定：符合且没有在途申请为apply，符合且申请在途为wait；不符合且申请在途为withdraw，不符合且没有在途申请为none。报告recommend与资格一致。原文穷尽的全部可能情形结论相同则可确定目标，否则目标值为null且status=uncertain；确定目标status=current。这里只维护建议，不执行外部操作；已撤回申请不得再次建议撤回。",
+          "minDays": 3,
+          "minHours": 32
+        },
+        "facts": {
+          "days": {
+            "value": 5,
+            "alternatives": null,
+            "version": 1
+          },
+          "hours": {
+            "value": 8,
+            "alternatives": null,
+            "version": 1
+          },
+          "applied": {
+            "value": true,
+            "alternatives": null,
+            "version": 1
+          }
+        },
+        "memories": {
+          "match": {
+            "id": "match",
+            "role": "match",
+            "version": 2,
+            "values": {
+              "eligible": true
+            },
+            "status": "current",
+            "refs": [
+              "initial-t-492a104c765f",
+              "d-15ff8cd3efc2"
+            ],
+            "text": "每周5天、每天8小时，合计40小时，满足至少3天且至少32小时，资格为符合。"
+          },
+          "path": {
+            "id": "path",
+            "role": "path",
+            "version": 2,
+            "values": {
+              "next": "wait"
+            },
+            "status": "current",
+            "refs": [
+              "initial-t-492a104c765f",
+              "d-15ff8cd3efc2"
+            ],
+            "text": "每周5天、每天8小时，合计40小时，满足至少3天且至少32小时，资格符合；申请在途，故建议wait。"
+          },
+          "report": {
+            "id": "report",
+            "role": "report",
+            "version": 2,
+            "values": {
+              "recommend": true
+            },
+            "status": "current",
+            "refs": [
+              "initial-t-492a104c765f",
+              "d-15ff8cd3efc2"
+            ],
+            "text": "每周5天、每天8小时，合计40小时，满足至少3天且至少32小时，资格符合，故recommend为true。"
+          }
+        },
+        "sources": [
+          {
+            "id": "initial-t-492a104c765f",
+            "text": "{\"days\":5,\"hours\":8,\"applied\":true}"
+          },
+          {
+            "id": "d-15ff8cd3efc2",
+            "text": "来源系统规则原件，第1版，作用域scope-98d770782abe，岗位“木版年画编目助理”。完整资格条件为每周至少3天，且每周总排班时长至少32小时；总排班时长=每周天数×每天小时数，两项须同时满足，无认证替代或其他隐含条件。本版从载有它的本轮事件开始生效，并替代同作用域此前规则。天数为非负整数，每天小时数为非负数。行动约定：符合且没有在途申请为apply，符合且申请在途为wait；不符合且申请在途为withdraw，不符合且没有在途申请为none。报告recommend与资格一致。原文穷尽的全部可能情形结论相同则可确定目标，否则目标值为null且status=uncertain；确定目标status=current。这里只维护建议，不执行外部操作；已撤回申请不得再次建议撤回。",
+            "minDays": 3,
+            "minHours": 32
+          }
+        ],
+        "pending": []
+      },
+      "restarted": false
+    },
+    {
+      "eventId": "e-ef9bac9e76f8",
+      "arm": "ordinary",
+      "calls": 1,
+      "reads": [],
+      "skipped": [],
+      "errors": [],
+      "extraError": null,
+      "extra": null,
+      "certificate": null,
+      "obligations": [],
+      "decisions": [],
+      "before": {
+        "match": {
+          "id": "match",
+          "role": "match",
+          "version": 2,
+          "values": {
+            "eligible": true
+          },
+          "status": "current",
+          "refs": [
+            "initial-t-492a104c765f",
+            "d-15ff8cd3efc2"
+          ],
+          "text": "每周5天、每天8小时，合计40小时，满足至少3天且至少32小时，资格为符合。"
+        },
+        "path": {
+          "id": "path",
+          "role": "path",
+          "version": 2,
+          "values": {
+            "next": "wait"
+          },
+          "status": "current",
+          "refs": [
+            "initial-t-492a104c765f",
+            "d-15ff8cd3efc2"
+          ],
+          "text": "每周5天、每天8小时，合计40小时，满足至少3天且至少32小时，资格符合；申请在途，故建议wait。"
+        },
+        "report": {
+          "id": "report",
+          "role": "report",
+          "version": 2,
+          "values": {
+            "recommend": true
+          },
+          "status": "current",
+          "refs": [
+            "initial-t-492a104c765f",
+            "d-15ff8cd3efc2"
+          ],
+          "text": "每周5天、每天8小时，合计40小时，满足至少3天且至少32小时，资格符合，故recommend为true。"
+        }
+      },
+      "scheduledCandidates": [
+        "match",
+        "path",
+        "report"
+      ],
+      "remainingCandidates": [
+        "match",
+        "path",
+        "report"
+      ],
+      "proposedPlan": {
+        "answer": "所有可能情形（4天或5天，每天9小时）均满足至少3天且总时长至少32小时，资格为符合；申请在途，故next=wait，recommend=true。旧记忆结论仍成立，无需复核。",
+        "readIds": [],
+        "reviewIds": []
+      },
+      "plan": {
+        "answer": "所有可能情形（4天或5天，每天9小时）均满足至少3天且总时长至少32小时，资格为符合；申请在途，故next=wait，recommend=true。旧记忆结论仍成立，无需复核。",
+        "readIds": [],
+        "reviewIds": []
+      },
+      "state": {
+        "scope": "scope-98d770782abe",
+        "rule": {
+          "id": "d-15ff8cd3efc2",
+          "text": "来源系统规则原件，第1版，作用域scope-98d770782abe，岗位“木版年画编目助理”。完整资格条件为每周至少3天，且每周总排班时长至少32小时；总排班时长=每周天数×每天小时数，两项须同时满足，无认证替代或其他隐含条件。本版从载有它的本轮事件开始生效，并替代同作用域此前规则。天数为非负整数，每天小时数为非负数。行动约定：符合且没有在途申请为apply，符合且申请在途为wait；不符合且申请在途为withdraw，不符合且没有在途申请为none。报告recommend与资格一致。原文穷尽的全部可能情形结论相同则可确定目标，否则目标值为null且status=uncertain；确定目标status=current。这里只维护建议，不执行外部操作；已撤回申请不得再次建议撤回。",
+          "minDays": 3,
+          "minHours": 32
+        },
+        "facts": {
+          "days": {
+            "value": null,
+            "alternatives": [
+              4,
+              5
+            ],
+            "version": 2
+          },
+          "hours": {
+            "value": 9,
+            "alternatives": null,
+            "version": 2
+          },
+          "applied": {
+            "value": true,
+            "alternatives": null,
+            "version": 1
+          }
+        },
+        "memories": {
+          "match": {
+            "id": "match",
+            "role": "match",
+            "version": 2,
+            "values": {
+              "eligible": true
+            },
+            "status": "current",
+            "refs": [
+              "initial-t-492a104c765f",
+              "d-15ff8cd3efc2"
+            ],
+            "text": "每周5天、每天8小时，合计40小时，满足至少3天且至少32小时，资格为符合。"
+          },
+          "path": {
+            "id": "path",
+            "role": "path",
+            "version": 2,
+            "values": {
+              "next": "wait"
+            },
+            "status": "current",
+            "refs": [
+              "initial-t-492a104c765f",
+              "d-15ff8cd3efc2"
+            ],
+            "text": "每周5天、每天8小时，合计40小时，满足至少3天且至少32小时，资格符合；申请在途，故建议wait。"
+          },
+          "report": {
+            "id": "report",
+            "role": "report",
+            "version": 2,
+            "values": {
+              "recommend": true
+            },
+            "status": "current",
+            "refs": [
+              "initial-t-492a104c765f",
+              "d-15ff8cd3efc2"
+            ],
+            "text": "每周5天、每天8小时，合计40小时，满足至少3天且至少32小时，资格符合，故recommend为true。"
+          }
+        },
+        "sources": [
+          {
+            "id": "initial-t-492a104c765f",
+            "text": "{\"days\":5,\"hours\":8,\"applied\":true}"
+          },
+          {
+            "id": "d-15ff8cd3efc2",
+            "text": "来源系统规则原件，第1版，作用域scope-98d770782abe，岗位“木版年画编目助理”。完整资格条件为每周至少3天，且每周总排班时长至少32小时；总排班时长=每周天数×每天小时数，两项须同时满足，无认证替代或其他隐含条件。本版从载有它的本轮事件开始生效，并替代同作用域此前规则。天数为非负整数，每天小时数为非负数。行动约定：符合且没有在途申请为apply，符合且申请在途为wait；不符合且申请在途为withdraw，不符合且没有在途申请为none。报告recommend与资格一致。原文穷尽的全部可能情形结论相同则可确定目标，否则目标值为null且status=uncertain；确定目标status=current。这里只维护建议，不执行外部操作；已撤回申请不得再次建议撤回。",
+            "minDays": 3,
+            "minHours": 32
+          },
+          {
+            "id": "e-ef9bac9e76f8",
+            "text": "来源系统第2轮观测，观测版本2，作用域scope-98d770782abe。排班仍在多份方案间协调，最终安排尚未核定。本人每周排班天数尚未确定，全部且仅有的候选为4、5；候选穷尽所有可能。本人每天排班小时数为9小时。"
+          }
+        ],
+        "pending": []
+      },
+      "restarted": false
+    },
+    {
+      "eventId": "e-4fb2786cbdbc",
+      "arm": "ordinary",
+      "calls": 4,
+      "reads": [],
+      "skipped": [],
+      "errors": [],
+      "extraError": null,
+      "extra": null,
+      "certificate": null,
+      "obligations": [],
+      "decisions": [
+        {
+          "role": "match",
+          "answer": {
+            "answer": "新版规则要求每周至少47小时；候选天数4或5、每天9小时，总时长分别为36或45小时，均不满足，故资格确定为false。",
+            "values": {
+              "eligible": false
+            },
+            "status": "current",
+            "refs": [
+              "d-2ef2fd5d74bb",
+              "e-ef9bac9e76f8"
+            ]
+          }
+        },
+        {
+          "role": "path",
+          "answer": {
+            "answer": "新版规则要求每周至少47小时；候选天数4或5、每天9小时，总时长分别为36或45小时，均不符合，且申请在途，故建议withdraw。",
+            "values": {
+              "next": "withdraw"
+            },
+            "status": "current",
+            "refs": [
+              "d-2ef2fd5d74bb",
+              "e-ef9bac9e76f8",
+              "e-4fb2786cbdbc"
+            ]
+          }
+        },
+        {
+          "role": "report",
+          "answer": {
+            "answer": "新版规则要求每周至少47小时；候选天数4或5、每天9小时，总时长分别为36或45小时，均不满足，故recommend确定为false。",
+            "values": {
+              "recommend": false
+            },
+            "status": "current",
+            "refs": [
+              "d-2ef2fd5d74bb",
+              "e-ef9bac9e76f8",
+              "e-4fb2786cbdbc"
+            ]
+          }
+        }
+      ],
+      "before": {
+        "match": {
+          "id": "match",
+          "role": "match",
+          "version": 2,
+          "values": {
+            "eligible": true
+          },
+          "status": "current",
+          "refs": [
+            "initial-t-492a104c765f",
+            "d-15ff8cd3efc2"
+          ],
+          "text": "每周5天、每天8小时，合计40小时，满足至少3天且至少32小时，资格为符合。"
+        },
+        "path": {
+          "id": "path",
+          "role": "path",
+          "version": 2,
+          "values": {
+            "next": "wait"
+          },
+          "status": "current",
+          "refs": [
+            "initial-t-492a104c765f",
+            "d-15ff8cd3efc2"
+          ],
+          "text": "每周5天、每天8小时，合计40小时，满足至少3天且至少32小时，资格符合；申请在途，故建议wait。"
+        },
+        "report": {
+          "id": "report",
+          "role": "report",
+          "version": 2,
+          "values": {
+            "recommend": true
+          },
+          "status": "current",
+          "refs": [
+            "initial-t-492a104c765f",
+            "d-15ff8cd3efc2"
+          ],
+          "text": "每周5天、每天8小时，合计40小时，满足至少3天且至少32小时，资格符合，故recommend为true。"
+        }
+      },
+      "scheduledCandidates": [
+        "match",
+        "path",
+        "report"
+      ],
+      "remainingCandidates": [
+        "match",
+        "path",
+        "report"
+      ],
+      "proposedPlan": {
+        "answer": "新版规则要求每周至少3天且总时长至少47小时；天数候选为4或5、每天9小时，两种情形总时长分别为36和45小时，均不满足47小时，故资格不符且申请在途，建议withdraw，recommend为false。旧记忆基于旧规则已失效。",
+        "readIds": [],
+        "reviewIds": [
+          "match",
+          "path",
+          "report"
+        ]
+      },
+      "plan": {
+        "answer": "新版规则要求每周至少3天且总时长至少47小时；天数候选为4或5、每天9小时，两种情形总时长分别为36和45小时，均不满足47小时，故资格不符且申请在途，建议withdraw，recommend为false。旧记忆基于旧规则已失效。",
+        "readIds": [],
+        "reviewIds": [
+          "match",
+          "path",
+          "report"
+        ]
+      },
+      "state": {
+        "scope": "scope-98d770782abe",
+        "rule": {
+          "id": "d-2ef2fd5d74bb",
+          "text": "来源系统规则原件，第2版，作用域scope-98d770782abe，岗位“木版年画编目助理”。完整资格条件为每周至少3天，且每周总排班时长至少47小时；总排班时长=每周天数×每天小时数，两项须同时满足，无认证替代或其他隐含条件。本版从载有它的本轮事件开始生效，并替代同作用域此前规则。天数为非负整数，每天小时数为非负数。行动约定：符合且没有在途申请为apply，符合且申请在途为wait；不符合且申请在途为withdraw，不符合且没有在途申请为none。报告recommend与资格一致。原文穷尽的全部可能情形结论相同则可确定目标，否则目标值为null且status=uncertain；确定目标status=current。这里只维护建议，不执行外部操作；已撤回申请不得再次建议撤回。",
+          "minDays": 3,
+          "minHours": 47
+        },
+        "facts": {
+          "days": {
+            "value": null,
+            "alternatives": [
+              4,
+              5
+            ],
+            "version": 2
+          },
+          "hours": {
+            "value": 9,
+            "alternatives": null,
+            "version": 2
+          },
+          "applied": {
+            "value": true,
+            "alternatives": null,
+            "version": 1
+          }
+        },
+        "memories": {
+          "match": {
+            "id": "match",
+            "role": "match",
+            "version": 3,
+            "values": {
+              "eligible": false
+            },
+            "status": "current",
+            "refs": [
+              "d-2ef2fd5d74bb",
+              "e-ef9bac9e76f8"
+            ],
+            "text": "新版规则要求每周至少47小时；候选天数4或5、每天9小时，总时长分别为36或45小时，均不满足，故资格确定为false。"
+          },
+          "path": {
+            "id": "path",
+            "role": "path",
+            "version": 3,
+            "values": {
+              "next": "withdraw"
+            },
+            "status": "current",
+            "refs": [
+              "d-2ef2fd5d74bb",
+              "e-ef9bac9e76f8",
+              "e-4fb2786cbdbc"
+            ],
+            "text": "新版规则要求每周至少47小时；候选天数4或5、每天9小时，总时长分别为36或45小时，均不符合，且申请在途，故建议withdraw。"
+          },
+          "report": {
+            "id": "report",
+            "role": "report",
+            "version": 3,
+            "values": {
+              "recommend": false
+            },
+            "status": "current",
+            "refs": [
+              "d-2ef2fd5d74bb",
+              "e-ef9bac9e76f8",
+              "e-4fb2786cbdbc"
+            ],
+            "text": "新版规则要求每周至少47小时；候选天数4或5、每天9小时，总时长分别为36或45小时，均不满足，故recommend确定为false。"
+          }
+        },
+        "sources": [
+          {
+            "id": "initial-t-492a104c765f",
+            "text": "{\"days\":5,\"hours\":8,\"applied\":true}"
+          },
+          {
+            "id": "d-15ff8cd3efc2",
+            "text": "来源系统规则原件，第1版，作用域scope-98d770782abe，岗位“木版年画编目助理”。完整资格条件为每周至少3天，且每周总排班时长至少32小时；总排班时长=每周天数×每天小时数，两项须同时满足，无认证替代或其他隐含条件。本版从载有它的本轮事件开始生效，并替代同作用域此前规则。天数为非负整数，每天小时数为非负数。行动约定：符合且没有在途申请为apply，符合且申请在途为wait；不符合且申请在途为withdraw，不符合且没有在途申请为none。报告recommend与资格一致。原文穷尽的全部可能情形结论相同则可确定目标，否则目标值为null且status=uncertain；确定目标status=current。这里只维护建议，不执行外部操作；已撤回申请不得再次建议撤回。",
+            "minDays": 3,
+            "minHours": 32
+          },
+          {
+            "id": "e-ef9bac9e76f8",
+            "text": "来源系统第2轮观测，观测版本2，作用域scope-98d770782abe。排班仍在多份方案间协调，最终安排尚未核定。本人每周排班天数尚未确定，全部且仅有的候选为4、5；候选穷尽所有可能。本人每天排班小时数为9小时。"
+          },
+          {
+            "id": "e-4fb2786cbdbc",
+            "text": "来源系统第3轮观测，观测版本3，作用域scope-98d770782abe。本岗位新版规则原件已发布并随本事件提供，旧版从本轮起失效。"
+          },
+          {
+            "id": "d-2ef2fd5d74bb",
+            "text": "来源系统规则原件，第2版，作用域scope-98d770782abe，岗位“木版年画编目助理”。完整资格条件为每周至少3天，且每周总排班时长至少47小时；总排班时长=每周天数×每天小时数，两项须同时满足，无认证替代或其他隐含条件。本版从载有它的本轮事件开始生效，并替代同作用域此前规则。天数为非负整数，每天小时数为非负数。行动约定：符合且没有在途申请为apply，符合且申请在途为wait；不符合且申请在途为withdraw，不符合且没有在途申请为none。报告recommend与资格一致。原文穷尽的全部可能情形结论相同则可确定目标，否则目标值为null且status=uncertain；确定目标status=current。这里只维护建议，不执行外部操作；已撤回申请不得再次建议撤回。",
+            "minDays": 3,
+            "minHours": 47
+          }
+        ],
+        "pending": []
+      },
+      "restarted": false
+    },
+    {
+      "eventId": "e-6d41bb0b9428",
+      "arm": "ordinary",
+      "calls": 2,
+      "reads": [],
+      "skipped": [],
+      "errors": [],
+      "extraError": null,
+      "extra": null,
+      "certificate": null,
+      "obligations": [],
+      "decisions": [
+        {
+          "role": "path",
+          "answer": {
+            "answer": "资格确定不符（天数候选4或5乘9小时均低于47小时），且申请已撤回、当前无在途申请，故建议none。",
+            "values": {
+              "next": "none"
+            },
+            "status": "current",
+            "refs": [
+              "d-2ef2fd5d74bb",
+              "e-ef9bac9e76f8",
+              "e-6d41bb0b9428"
+            ]
+          }
+        }
+      ],
+      "before": {
+        "match": {
+          "id": "match",
+          "role": "match",
+          "version": 3,
+          "values": {
+            "eligible": false
+          },
+          "status": "current",
+          "refs": [
+            "d-2ef2fd5d74bb",
+            "e-ef9bac9e76f8"
+          ],
+          "text": "新版规则要求每周至少47小时；候选天数4或5、每天9小时，总时长分别为36或45小时，均不满足，故资格确定为false。"
+        },
+        "path": {
+          "id": "path",
+          "role": "path",
+          "version": 3,
+          "values": {
+            "next": "withdraw"
+          },
+          "status": "current",
+          "refs": [
+            "d-2ef2fd5d74bb",
+            "e-ef9bac9e76f8",
+            "e-4fb2786cbdbc"
+          ],
+          "text": "新版规则要求每周至少47小时；候选天数4或5、每天9小时，总时长分别为36或45小时，均不符合，且申请在途，故建议withdraw。"
+        },
+        "report": {
+          "id": "report",
+          "role": "report",
+          "version": 3,
+          "values": {
+            "recommend": false
+          },
+          "status": "current",
+          "refs": [
+            "d-2ef2fd5d74bb",
+            "e-ef9bac9e76f8",
+            "e-4fb2786cbdbc"
+          ],
+          "text": "新版规则要求每周至少47小时；候选天数4或5、每天9小时，总时长分别为36或45小时，均不满足，故recommend确定为false。"
+        }
+      },
+      "scheduledCandidates": [
+        "path"
+      ],
+      "remainingCandidates": [
+        "path"
+      ],
+      "proposedPlan": {
+        "answer": "资格仍确定为不符合：天数候选4或5、每天9小时，总时长36或45小时均低于47小时；且当前无在途申请，故next应为none，旧记忆path的withdraw已因撤回而失效，需复核path。",
+        "readIds": [],
+        "reviewIds": [
+          "path"
+        ]
+      },
+      "plan": {
+        "answer": "资格仍确定为不符合：天数候选4或5、每天9小时，总时长36或45小时均低于47小时；且当前无在途申请，故next应为none，旧记忆path的withdraw已因撤回而失效，需复核path。",
+        "readIds": [],
+        "reviewIds": [
+          "path"
+        ]
+      },
+      "state": {
+        "scope": "scope-98d770782abe",
+        "rule": {
+          "id": "d-2ef2fd5d74bb",
+          "text": "来源系统规则原件，第2版，作用域scope-98d770782abe，岗位“木版年画编目助理”。完整资格条件为每周至少3天，且每周总排班时长至少47小时；总排班时长=每周天数×每天小时数，两项须同时满足，无认证替代或其他隐含条件。本版从载有它的本轮事件开始生效，并替代同作用域此前规则。天数为非负整数，每天小时数为非负数。行动约定：符合且没有在途申请为apply，符合且申请在途为wait；不符合且申请在途为withdraw，不符合且没有在途申请为none。报告recommend与资格一致。原文穷尽的全部可能情形结论相同则可确定目标，否则目标值为null且status=uncertain；确定目标status=current。这里只维护建议，不执行外部操作；已撤回申请不得再次建议撤回。",
+          "minDays": 3,
+          "minHours": 47
+        },
+        "facts": {
+          "days": {
+            "value": null,
+            "alternatives": [
+              4,
+              5
+            ],
+            "version": 2
+          },
+          "hours": {
+            "value": 9,
+            "alternatives": null,
+            "version": 2
+          },
+          "applied": {
+            "value": false,
+            "alternatives": null,
+            "version": 2
+          }
+        },
+        "memories": {
+          "match": {
+            "id": "match",
+            "role": "match",
+            "version": 3,
+            "values": {
+              "eligible": false
+            },
+            "status": "current",
+            "refs": [
+              "d-2ef2fd5d74bb",
+              "e-ef9bac9e76f8"
+            ],
+            "text": "新版规则要求每周至少47小时；候选天数4或5、每天9小时，总时长分别为36或45小时，均不满足，故资格确定为false。"
+          },
+          "path": {
+            "id": "path",
+            "role": "path",
+            "version": 4,
+            "values": {
+              "next": "none"
+            },
+            "status": "current",
+            "refs": [
+              "d-2ef2fd5d74bb",
+              "e-ef9bac9e76f8",
+              "e-6d41bb0b9428"
+            ],
+            "text": "资格确定不符（天数候选4或5乘9小时均低于47小时），且申请已撤回、当前无在途申请，故建议none。"
+          },
+          "report": {
+            "id": "report",
+            "role": "report",
+            "version": 3,
+            "values": {
+              "recommend": false
+            },
+            "status": "current",
+            "refs": [
+              "d-2ef2fd5d74bb",
+              "e-ef9bac9e76f8",
+              "e-4fb2786cbdbc"
+            ],
+            "text": "新版规则要求每周至少47小时；候选天数4或5、每天9小时，总时长分别为36或45小时，均不满足，故recommend确定为false。"
+          }
+        },
+        "sources": [
+          {
+            "id": "initial-t-492a104c765f",
+            "text": "{\"days\":5,\"hours\":8,\"applied\":true}"
+          },
+          {
+            "id": "d-15ff8cd3efc2",
+            "text": "来源系统规则原件，第1版，作用域scope-98d770782abe，岗位“木版年画编目助理”。完整资格条件为每周至少3天，且每周总排班时长至少32小时；总排班时长=每周天数×每天小时数，两项须同时满足，无认证替代或其他隐含条件。本版从载有它的本轮事件开始生效，并替代同作用域此前规则。天数为非负整数，每天小时数为非负数。行动约定：符合且没有在途申请为apply，符合且申请在途为wait；不符合且申请在途为withdraw，不符合且没有在途申请为none。报告recommend与资格一致。原文穷尽的全部可能情形结论相同则可确定目标，否则目标值为null且status=uncertain；确定目标status=current。这里只维护建议，不执行外部操作；已撤回申请不得再次建议撤回。",
+            "minDays": 3,
+            "minHours": 32
+          },
+          {
+            "id": "e-ef9bac9e76f8",
+            "text": "来源系统第2轮观测，观测版本2，作用域scope-98d770782abe。排班仍在多份方案间协调，最终安排尚未核定。本人每周排班天数尚未确定，全部且仅有的候选为4、5；候选穷尽所有可能。本人每天排班小时数为9小时。"
+          },
+          {
+            "id": "e-4fb2786cbdbc",
+            "text": "来源系统第3轮观测，观测版本3，作用域scope-98d770782abe。本岗位新版规则原件已发布并随本事件提供，旧版从本轮起失效。"
+          },
+          {
+            "id": "d-2ef2fd5d74bb",
+            "text": "来源系统规则原件，第2版，作用域scope-98d770782abe，岗位“木版年画编目助理”。完整资格条件为每周至少3天，且每周总排班时长至少47小时；总排班时长=每周天数×每天小时数，两项须同时满足，无认证替代或其他隐含条件。本版从载有它的本轮事件开始生效，并替代同作用域此前规则。天数为非负整数，每天小时数为非负数。行动约定：符合且没有在途申请为apply，符合且申请在途为wait；不符合且申请在途为withdraw，不符合且没有在途申请为none。报告recommend与资格一致。原文穷尽的全部可能情形结论相同则可确定目标，否则目标值为null且status=uncertain；确定目标status=current。这里只维护建议，不执行外部操作；已撤回申请不得再次建议撤回。",
+            "minDays": 3,
+            "minHours": 47
+          },
+          {
+            "id": "e-6d41bb0b9428",
+            "text": "来源系统第4轮观测，观测版本4，作用域scope-98d770782abe。此前在途的申请已由本人完成撤回，来源系统核实撤回成功，当前无任何在途申请，撤回事项无待办。这条回执不改变排班或当前资格规则。本人目前没有在途申请。"
+          }
+        ],
+        "pending": []
+      },
+      "restarted": true
+    },
+    {
+      "eventId": "e-2624971cf113",
+      "arm": "ordinary",
+      "calls": 4,
+      "reads": [
+        "d-2519d5b7f9dd"
+      ],
+      "skipped": [],
+      "errors": [],
+      "extraError": null,
+      "extra": null,
+      "certificate": null,
+      "obligations": [],
+      "decisions": [
+        {
+          "role": "match",
+          "answer": {
+            "answer": "核定回执确认每周4天、每天12小时，总时长48小时且天数≥3，资格为true。",
+            "values": {
+              "eligible": true
+            },
+            "status": "current",
+            "refs": [
+              "d-2ef2fd5d74bb",
+              "e-2624971cf113",
+              "d-2519d5b7f9dd"
+            ]
+          }
+        },
+        {
+          "role": "path",
+          "answer": {
+            "answer": "核定回执确认每周4天、每天12小时，总时长48小时且天数≥3，资格符合；当前无在途申请，故建议apply。",
+            "values": {
+              "next": "apply"
+            },
+            "status": "current",
+            "refs": [
+              "d-2ef2fd5d74bb",
+              "e-2624971cf113",
+              "d-2519d5b7f9dd",
+              "e-6d41bb0b9428"
+            ]
+          }
+        },
+        {
+          "role": "report",
+          "answer": {
+            "answer": "核定回执确认每周4天、每天12小时，总时长48小时且天数≥3，符合资格，recommend为true。",
+            "values": {
+              "recommend": true
+            },
+            "status": "current",
+            "refs": [
+              "d-2ef2fd5d74bb",
+              "e-2624971cf113",
+              "d-2519d5b7f9dd"
+            ]
+          }
+        }
+      ],
+      "before": {
+        "match": {
+          "id": "match",
+          "role": "match",
+          "version": 3,
+          "values": {
+            "eligible": false
+          },
+          "status": "current",
+          "refs": [
+            "d-2ef2fd5d74bb",
+            "e-ef9bac9e76f8"
+          ],
+          "text": "新版规则要求每周至少47小时；候选天数4或5、每天9小时，总时长分别为36或45小时，均不满足，故资格确定为false。"
+        },
+        "path": {
+          "id": "path",
+          "role": "path",
+          "version": 4,
+          "values": {
+            "next": "none"
+          },
+          "status": "current",
+          "refs": [
+            "d-2ef2fd5d74bb",
+            "e-ef9bac9e76f8",
+            "e-6d41bb0b9428"
+          ],
+          "text": "资格确定不符（天数候选4或5乘9小时均低于47小时），且申请已撤回、当前无在途申请，故建议none。"
+        },
+        "report": {
+          "id": "report",
+          "role": "report",
+          "version": 3,
+          "values": {
+            "recommend": false
+          },
+          "status": "current",
+          "refs": [
+            "d-2ef2fd5d74bb",
+            "e-ef9bac9e76f8",
+            "e-4fb2786cbdbc"
+          ],
+          "text": "新版规则要求每周至少47小时；候选天数4或5、每天9小时，总时长分别为36或45小时，均不满足，故recommend确定为false。"
+        }
+      },
+      "scheduledCandidates": [
+        "match",
+        "path",
+        "report"
+      ],
+      "remainingCandidates": [
+        "match",
+        "path",
+        "report"
+      ],
+      "proposedPlan": {
+        "answer": "按本轮事实：天数候选2或4、每天12小时，总时长24或48小时；候选2不满足47小时，候选4满足，故资格不确定，recommend=null；无在途申请，next=null/uncertain。旧记忆基于旧候选4/5×9小时，已不适用。",
+        "readIds": [
+          "d-2519d5b7f9dd"
+        ],
+        "reviewIds": [
+          "match",
+          "path",
+          "report"
+        ]
+      },
+      "plan": {
+        "answer": "按本轮事实：天数候选2或4、每天12小时，总时长24或48小时；候选2不满足47小时，候选4满足，故资格不确定，recommend=null；无在途申请，next=null/uncertain。旧记忆基于旧候选4/5×9小时，已不适用。",
+        "readIds": [
+          "d-2519d5b7f9dd"
+        ],
+        "reviewIds": [
+          "match",
+          "path",
+          "report"
+        ]
+      },
+      "state": {
+        "scope": "scope-98d770782abe",
+        "rule": {
+          "id": "d-2ef2fd5d74bb",
+          "text": "来源系统规则原件，第2版，作用域scope-98d770782abe，岗位“木版年画编目助理”。完整资格条件为每周至少3天，且每周总排班时长至少47小时；总排班时长=每周天数×每天小时数，两项须同时满足，无认证替代或其他隐含条件。本版从载有它的本轮事件开始生效，并替代同作用域此前规则。天数为非负整数，每天小时数为非负数。行动约定：符合且没有在途申请为apply，符合且申请在途为wait；不符合且申请在途为withdraw，不符合且没有在途申请为none。报告recommend与资格一致。原文穷尽的全部可能情形结论相同则可确定目标，否则目标值为null且status=uncertain；确定目标status=current。这里只维护建议，不执行外部操作；已撤回申请不得再次建议撤回。",
+          "minDays": 3,
+          "minHours": 47
+        },
+        "facts": {
+          "days": {
+            "value": 4,
+            "alternatives": null,
+            "version": 4
+          },
+          "hours": {
+            "value": 12,
+            "alternatives": null,
+            "version": 3
+          },
+          "applied": {
+            "value": false,
+            "alternatives": null,
+            "version": 2
+          }
+        },
+        "memories": {
+          "match": {
+            "id": "match",
+            "role": "match",
+            "version": 4,
+            "values": {
+              "eligible": true
+            },
+            "status": "current",
+            "refs": [
+              "d-2ef2fd5d74bb",
+              "e-2624971cf113",
+              "d-2519d5b7f9dd"
+            ],
+            "text": "核定回执确认每周4天、每天12小时，总时长48小时且天数≥3，资格为true。"
+          },
+          "path": {
+            "id": "path",
+            "role": "path",
+            "version": 5,
+            "values": {
+              "next": "apply"
+            },
+            "status": "current",
+            "refs": [
+              "d-2ef2fd5d74bb",
+              "e-2624971cf113",
+              "d-2519d5b7f9dd",
+              "e-6d41bb0b9428"
+            ],
+            "text": "核定回执确认每周4天、每天12小时，总时长48小时且天数≥3，资格符合；当前无在途申请，故建议apply。"
+          },
+          "report": {
+            "id": "report",
+            "role": "report",
+            "version": 4,
+            "values": {
+              "recommend": true
+            },
+            "status": "current",
+            "refs": [
+              "d-2ef2fd5d74bb",
+              "e-2624971cf113",
+              "d-2519d5b7f9dd"
+            ],
+            "text": "核定回执确认每周4天、每天12小时，总时长48小时且天数≥3，符合资格，recommend为true。"
+          }
+        },
+        "sources": [
+          {
+            "id": "initial-t-492a104c765f",
+            "text": "{\"days\":5,\"hours\":8,\"applied\":true}"
+          },
+          {
+            "id": "d-15ff8cd3efc2",
+            "text": "来源系统规则原件，第1版，作用域scope-98d770782abe，岗位“木版年画编目助理”。完整资格条件为每周至少3天，且每周总排班时长至少32小时；总排班时长=每周天数×每天小时数，两项须同时满足，无认证替代或其他隐含条件。本版从载有它的本轮事件开始生效，并替代同作用域此前规则。天数为非负整数，每天小时数为非负数。行动约定：符合且没有在途申请为apply，符合且申请在途为wait；不符合且申请在途为withdraw，不符合且没有在途申请为none。报告recommend与资格一致。原文穷尽的全部可能情形结论相同则可确定目标，否则目标值为null且status=uncertain；确定目标status=current。这里只维护建议，不执行外部操作；已撤回申请不得再次建议撤回。",
+            "minDays": 3,
+            "minHours": 32
+          },
+          {
+            "id": "e-ef9bac9e76f8",
+            "text": "来源系统第2轮观测，观测版本2，作用域scope-98d770782abe。排班仍在多份方案间协调，最终安排尚未核定。本人每周排班天数尚未确定，全部且仅有的候选为4、5；候选穷尽所有可能。本人每天排班小时数为9小时。"
+          },
+          {
+            "id": "e-4fb2786cbdbc",
+            "text": "来源系统第3轮观测，观测版本3，作用域scope-98d770782abe。本岗位新版规则原件已发布并随本事件提供，旧版从本轮起失效。"
+          },
+          {
+            "id": "d-2ef2fd5d74bb",
+            "text": "来源系统规则原件，第2版，作用域scope-98d770782abe，岗位“木版年画编目助理”。完整资格条件为每周至少3天，且每周总排班时长至少47小时；总排班时长=每周天数×每天小时数，两项须同时满足，无认证替代或其他隐含条件。本版从载有它的本轮事件开始生效，并替代同作用域此前规则。天数为非负整数，每天小时数为非负数。行动约定：符合且没有在途申请为apply，符合且申请在途为wait；不符合且申请在途为withdraw，不符合且没有在途申请为none。报告recommend与资格一致。原文穷尽的全部可能情形结论相同则可确定目标，否则目标值为null且status=uncertain；确定目标status=current。这里只维护建议，不执行外部操作；已撤回申请不得再次建议撤回。",
+            "minDays": 3,
+            "minHours": 47
+          },
+          {
+            "id": "e-6d41bb0b9428",
+            "text": "来源系统第4轮观测，观测版本4，作用域scope-98d770782abe。此前在途的申请已由本人完成撤回，来源系统核实撤回成功，当前无任何在途申请，撤回事项无待办。这条回执不改变排班或当前资格规则。本人目前没有在途申请。"
+          },
+          {
+            "id": "e-2624971cf113",
+            "text": "来源系统第5轮观测，观测版本5，作用域scope-98d770782abe。排班协调消息先列出尚未核定的候选。随后归档的原始回执在档案目录中；若读取了本人核定回执，按回执的后续核定内容处理。本人每周排班天数尚未确定，全部且仅有的候选为2、4；候选穷尽所有可能。本人每天排班小时数为12小时。"
+          },
+          {
+            "id": "d-2519d5b7f9dd",
+            "title": "本人排班核定回执",
+            "text": "来源系统登记，记录版本5，第5轮第1号，作用域scope-98d770782abe。此回执在本轮候选登记之后完成核定，覆盖本轮候选；不是另一个假设方案。本人每周排班天数为4天。本人每天排班小时数为12小时。",
+            "scope": "scope-98d770782abe",
+            "observations": {
+              "days": {
+                "value": 4,
+                "alternatives": null
+              },
+              "hours": {
+                "value": 12,
+                "alternatives": null
+              }
+            }
+          }
+        ],
+        "pending": []
+      },
+      "restarted": false
+    },
+    {
+      "eventId": "e-5999ed914589",
+      "arm": "ordinary",
+      "calls": 2,
+      "reads": [],
+      "skipped": [],
+      "errors": [],
+      "extraError": null,
+      "extra": null,
+      "certificate": null,
+      "obligations": [],
+      "decisions": [
+        {
+          "role": "path",
+          "answer": {
+            "answer": "本轮申请在途状态未核定，无法确定next，保持不确定。",
+            "values": {
+              "next": null
+            },
+            "status": "uncertain",
+            "refs": [
+              "d-2ef2fd5d74bb",
+              "e-5999ed914589"
+            ]
+          }
+        }
+      ],
+      "before": {
+        "match": {
+          "id": "match",
+          "role": "match",
+          "version": 4,
+          "values": {
+            "eligible": true
+          },
+          "status": "current",
+          "refs": [
+            "d-2ef2fd5d74bb",
+            "e-2624971cf113",
+            "d-2519d5b7f9dd"
+          ],
+          "text": "核定回执确认每周4天、每天12小时，总时长48小时且天数≥3，资格为true。"
+        },
+        "path": {
+          "id": "path",
+          "role": "path",
+          "version": 5,
+          "values": {
+            "next": "apply"
+          },
+          "status": "current",
+          "refs": [
+            "d-2ef2fd5d74bb",
+            "e-2624971cf113",
+            "d-2519d5b7f9dd",
+            "e-6d41bb0b9428"
+          ],
+          "text": "核定回执确认每周4天、每天12小时，总时长48小时且天数≥3，资格符合；当前无在途申请，故建议apply。"
+        },
+        "report": {
+          "id": "report",
+          "role": "report",
+          "version": 4,
+          "values": {
+            "recommend": true
+          },
+          "status": "current",
+          "refs": [
+            "d-2ef2fd5d74bb",
+            "e-2624971cf113",
+            "d-2519d5b7f9dd"
+          ],
+          "text": "核定回执确认每周4天、每天12小时，总时长48小时且天数≥3，符合资格，recommend为true。"
+        }
+      },
+      "scheduledCandidates": [
+        "path"
+      ],
+      "remainingCandidates": [
+        "path"
+      ],
+      "proposedPlan": {
+        "answer": "资格仍成立：每周4天、每天12小时，总时长48小时且天数≥3，符合规则；但本轮申请是否在途未确定，next无法确定，旧记忆path的apply不再成立，需复核path。",
+        "readIds": [],
+        "reviewIds": [
+          "path"
+        ]
+      },
+      "plan": {
+        "answer": "资格仍成立：每周4天、每天12小时，总时长48小时且天数≥3，符合规则；但本轮申请是否在途未确定，next无法确定，旧记忆path的apply不再成立，需复核path。",
+        "readIds": [],
+        "reviewIds": [
+          "path"
+        ]
+      },
+      "state": {
+        "scope": "scope-98d770782abe",
+        "rule": {
+          "id": "d-2ef2fd5d74bb",
+          "text": "来源系统规则原件，第2版，作用域scope-98d770782abe，岗位“木版年画编目助理”。完整资格条件为每周至少3天，且每周总排班时长至少47小时；总排班时长=每周天数×每天小时数，两项须同时满足，无认证替代或其他隐含条件。本版从载有它的本轮事件开始生效，并替代同作用域此前规则。天数为非负整数，每天小时数为非负数。行动约定：符合且没有在途申请为apply，符合且申请在途为wait；不符合且申请在途为withdraw，不符合且没有在途申请为none。报告recommend与资格一致。原文穷尽的全部可能情形结论相同则可确定目标，否则目标值为null且status=uncertain；确定目标status=current。这里只维护建议，不执行外部操作；已撤回申请不得再次建议撤回。",
+          "minDays": 3,
+          "minHours": 47
+        },
+        "facts": {
+          "days": {
+            "value": 4,
+            "alternatives": null,
+            "version": 4
+          },
+          "hours": {
+            "value": 12,
+            "alternatives": null,
+            "version": 3
+          },
+          "applied": {
+            "value": null,
+            "alternatives": null,
+            "version": 3
+          }
+        },
+        "memories": {
+          "match": {
+            "id": "match",
+            "role": "match",
+            "version": 4,
+            "values": {
+              "eligible": true
+            },
+            "status": "current",
+            "refs": [
+              "d-2ef2fd5d74bb",
+              "e-2624971cf113",
+              "d-2519d5b7f9dd"
+            ],
+            "text": "核定回执确认每周4天、每天12小时，总时长48小时且天数≥3，资格为true。"
+          },
+          "path": {
+            "id": "path",
+            "role": "path",
+            "version": 6,
+            "values": {
+              "next": null
+            },
+            "status": "uncertain",
+            "refs": [
+              "d-2ef2fd5d74bb",
+              "e-5999ed914589"
+            ],
+            "text": "本轮申请在途状态未核定，无法确定next，保持不确定。"
+          },
+          "report": {
+            "id": "report",
+            "role": "report",
+            "version": 4,
+            "values": {
+              "recommend": true
+            },
+            "status": "current",
+            "refs": [
+              "d-2ef2fd5d74bb",
+              "e-2624971cf113",
+              "d-2519d5b7f9dd"
+            ],
+            "text": "核定回执确认每周4天、每天12小时，总时长48小时且天数≥3，符合资格，recommend为true。"
+          }
+        },
+        "sources": [
+          {
+            "id": "initial-t-492a104c765f",
+            "text": "{\"days\":5,\"hours\":8,\"applied\":true}"
+          },
+          {
+            "id": "d-15ff8cd3efc2",
+            "text": "来源系统规则原件，第1版，作用域scope-98d770782abe，岗位“木版年画编目助理”。完整资格条件为每周至少3天，且每周总排班时长至少32小时；总排班时长=每周天数×每天小时数，两项须同时满足，无认证替代或其他隐含条件。本版从载有它的本轮事件开始生效，并替代同作用域此前规则。天数为非负整数，每天小时数为非负数。行动约定：符合且没有在途申请为apply，符合且申请在途为wait；不符合且申请在途为withdraw，不符合且没有在途申请为none。报告recommend与资格一致。原文穷尽的全部可能情形结论相同则可确定目标，否则目标值为null且status=uncertain；确定目标status=current。这里只维护建议，不执行外部操作；已撤回申请不得再次建议撤回。",
+            "minDays": 3,
+            "minHours": 32
+          },
+          {
+            "id": "e-ef9bac9e76f8",
+            "text": "来源系统第2轮观测，观测版本2，作用域scope-98d770782abe。排班仍在多份方案间协调，最终安排尚未核定。本人每周排班天数尚未确定，全部且仅有的候选为4、5；候选穷尽所有可能。本人每天排班小时数为9小时。"
+          },
+          {
+            "id": "e-4fb2786cbdbc",
+            "text": "来源系统第3轮观测，观测版本3，作用域scope-98d770782abe。本岗位新版规则原件已发布并随本事件提供，旧版从本轮起失效。"
+          },
+          {
+            "id": "d-2ef2fd5d74bb",
+            "text": "来源系统规则原件，第2版，作用域scope-98d770782abe，岗位“木版年画编目助理”。完整资格条件为每周至少3天，且每周总排班时长至少47小时；总排班时长=每周天数×每天小时数，两项须同时满足，无认证替代或其他隐含条件。本版从载有它的本轮事件开始生效，并替代同作用域此前规则。天数为非负整数，每天小时数为非负数。行动约定：符合且没有在途申请为apply，符合且申请在途为wait；不符合且申请在途为withdraw，不符合且没有在途申请为none。报告recommend与资格一致。原文穷尽的全部可能情形结论相同则可确定目标，否则目标值为null且status=uncertain；确定目标status=current。这里只维护建议，不执行外部操作；已撤回申请不得再次建议撤回。",
+            "minDays": 3,
+            "minHours": 47
+          },
+          {
+            "id": "e-6d41bb0b9428",
+            "text": "来源系统第4轮观测，观测版本4，作用域scope-98d770782abe。此前在途的申请已由本人完成撤回，来源系统核实撤回成功，当前无任何在途申请，撤回事项无待办。这条回执不改变排班或当前资格规则。本人目前没有在途申请。"
+          },
+          {
+            "id": "e-2624971cf113",
+            "text": "来源系统第5轮观测，观测版本5，作用域scope-98d770782abe。排班协调消息先列出尚未核定的候选。随后归档的原始回执在档案目录中；若读取了本人核定回执，按回执的后续核定内容处理。本人每周排班天数尚未确定，全部且仅有的候选为2、4；候选穷尽所有可能。本人每天排班小时数为12小时。"
+          },
+          {
+            "id": "d-2519d5b7f9dd",
+            "title": "本人排班核定回执",
+            "text": "来源系统登记，记录版本5，第5轮第1号，作用域scope-98d770782abe。此回执在本轮候选登记之后完成核定，覆盖本轮候选；不是另一个假设方案。本人每周排班天数为4天。本人每天排班小时数为12小时。",
+            "scope": "scope-98d770782abe",
+            "observations": {
+              "days": {
+                "value": 4,
+                "alternatives": null
+              },
+              "hours": {
+                "value": 12,
+                "alternatives": null
+              }
+            }
+          },
+          {
+            "id": "e-5999ed914589",
+            "text": "来源系统第6轮观测，观测版本6，作用域scope-98d770782abe。本轮复核发现对应旧观测已失效，新的具体事实尚未核定；本轮档案尚无本人该字段的确认值。本人申请是否仍在途尚未确定，目前没有具体值，也未提供穷尽候选；旧值不能继续作为本轮事实。"
+          }
+        ],
+        "pending": []
+      },
+      "restarted": false
+    }
+  ]
+}

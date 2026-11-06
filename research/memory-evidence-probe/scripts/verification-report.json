@@ -1,0 +1,155 @@
+{
+  "offline": true,
+  "externalAPICalls": 0,
+  "round01": {
+    "judges": {
+      "deepseek": {
+        "deepseek": {
+          "O": {
+            "correct": 2,
+            "total": 54
+          },
+          "B": {
+            "correct": 29,
+            "total": 54
+          },
+          "L": {
+            "correct": 29,
+            "total": 54
+          },
+          "N": {
+            "correct": 31,
+            "total": 54
+          }
+        },
+        "gpt": {
+          "O": {
+            "correct": 13,
+            "total": 54
+          },
+          "B": {
+            "correct": 42,
+            "total": 54
+          },
+          "L": {
+            "correct": 43,
+            "total": 54
+          },
+          "N": {
+            "correct": 43,
+            "total": 54
+          }
+        }
+      },
+      "gpt": {
+        "deepseek": {
+          "O": {
+            "correct": 2,
+            "total": 54
+          },
+          "B": {
+            "correct": 18,
+            "total": 54
+          },
+          "L": {
+            "correct": 12,
+            "total": 54
+          },
+          "N": {
+            "correct": 16,
+            "total": 54
+          }
+        },
+        "gpt": {
+          "O": {
+            "correct": 13,
+            "total": 54
+          },
+          "B": {
+            "correct": 33,
+            "total": 54
+          },
+          "L": {
+            "correct": 39,
+            "total": 54
+          },
+          "N": {
+            "correct": 40,
+            "total": 54
+          }
+        }
+      }
+    },
+    "note": "Stored model-judge flags are preserved, not independently re-judged offline. Both judges retained."
+  },
+  "round02": {
+    "new-development": {
+      "original": {
+        "total": 72,
+        "correct": 66
+      },
+      "answer-first": {
+        "total": 72,
+        "correct": 70
+      },
+      "review": {
+        "total": 72,
+        "correct": 71
+      }
+    },
+    "seen-regression": {
+      "original": {
+        "total": 24,
+        "correct": 20
+      },
+      "answer-first": {
+        "total": 24,
+        "correct": 24
+      },
+      "review": {
+        "total": 24,
+        "correct": 23
+      }
+    }
+  },
+  "round03": {
+    "arms": {
+      "ordinary": {
+        "events": 72,
+        "correct": 52,
+        "evidenceSupported": 49
+      },
+      "extra-review": {
+        "events": 72,
+        "correct": 66,
+        "evidenceSupported": 66
+      },
+      "probe": {
+        "events": 72,
+        "correct": 64,
+        "evidenceSupported": 64
+      }
+    },
+    "probeVsExtraReview": {
+      "wins": 2,
+      "losses": 4,
+      "ties": 66
+    },
+    "genuineWitnesses": 46,
+    "missedTargetOpportunities": 10,
+    "note": "Support recomputed with extracted frozen audit functions; nonblind prose audits remain separate records."
+  },
+  "formalUsage": {
+    "02-commit-consistency": {
+      "physicalCalls": 288,
+      "inputTokens": 827500,
+      "outputTokens": 35844
+    },
+    "03-active-evidence": {
+      "physicalCalls": 638,
+      "inputTokens": 1260053,
+      "outputTokens": 51487
+    }
+  },
+  "verifiedPublicFiles": 301
+}

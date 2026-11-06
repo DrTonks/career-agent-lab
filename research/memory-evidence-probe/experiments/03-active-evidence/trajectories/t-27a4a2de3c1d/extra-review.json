@@ -1,0 +1,1514 @@
+{
+  "trajectoryId": "t-27a4a2de3c1d",
+  "arm": "extra-review",
+  "records": [
+    {
+      "eventId": "e-4089ef95ec72",
+      "arm": "extra-review",
+      "calls": 0,
+      "reads": [],
+      "skipped": [],
+      "errors": [],
+      "extraError": null,
+      "extra": null,
+      "certificate": null,
+      "obligations": [],
+      "decisions": [],
+      "before": {
+        "match": {
+          "id": "match",
+          "role": "match",
+          "version": 2,
+          "values": {
+            "eligible": true
+          },
+          "status": "current",
+          "refs": [
+            "initial-t-27a4a2de3c1d",
+            "d-687b3931b814"
+          ],
+          "text": "每周4天、每天8小时，共32小时，满足至少2天且至少25小时，资格为true。"
+        },
+        "path": {
+          "id": "path",
+          "role": "path",
+          "version": 2,
+          "values": {
+            "next": "wait"
+          },
+          "status": "current",
+          "refs": [
+            "initial-t-27a4a2de3c1d",
+            "d-687b3931b814"
+          ],
+          "text": "每周4天、每天8小时共32小时，满足至少2天且至少25小时，资格符合；申请在途，故建议wait。"
+        },
+        "report": {
+          "id": "report",
+          "role": "report",
+          "version": 2,
+          "values": {
+            "recommend": true
+          },
+          "status": "current",
+          "refs": [
+            "initial-t-27a4a2de3c1d",
+            "d-687b3931b814"
+          ],
+          "text": "每周4天、每天8小时共32小时，满足至少2天且至少25小时，资格符合，recommend为true。"
+        }
+      },
+      "scheduledCandidates": [],
+      "noRelevantChange": true,
+      "state": {
+        "scope": "scope-7995ce4c80ee",
+        "rule": {
+          "id": "d-687b3931b814",
+          "text": "来源系统规则原件，第1版，作用域scope-7995ce4c80ee，岗位“盐沼影像巡检助理”。完整资格条件为每周至少2天，且每周总排班时长至少25小时；总排班时长=每周天数×每天小时数，两项须同时满足，无认证替代或其他隐含条件。本版从载有它的本轮事件开始生效，并替代同作用域此前规则。天数为非负整数，每天小时数为非负数。行动约定：符合且没有在途申请为apply，符合且申请在途为wait；不符合且申请在途为withdraw，不符合且没有在途申请为none。报告recommend与资格一致。原文穷尽的全部可能情形结论相同则可确定目标，否则目标值为null且status=uncertain；确定目标status=current。这里只维护建议，不执行外部操作；已撤回申请不得再次建议撤回。",
+          "minDays": 2,
+          "minHours": 25
+        },
+        "facts": {
+          "days": {
+            "value": 4,
+            "alternatives": null,
+            "version": 1
+          },
+          "hours": {
+            "value": 8,
+            "alternatives": null,
+            "version": 1
+          },
+          "applied": {
+            "value": true,
+            "alternatives": null,
+            "version": 1
+          }
+        },
+        "memories": {
+          "match": {
+            "id": "match",
+            "role": "match",
+            "version": 2,
+            "values": {
+              "eligible": true
+            },
+            "status": "current",
+            "refs": [
+              "initial-t-27a4a2de3c1d",
+              "d-687b3931b814"
+            ],
+            "text": "每周4天、每天8小时，共32小时，满足至少2天且至少25小时，资格为true。"
+          },
+          "path": {
+            "id": "path",
+            "role": "path",
+            "version": 2,
+            "values": {
+              "next": "wait"
+            },
+            "status": "current",
+            "refs": [
+              "initial-t-27a4a2de3c1d",
+              "d-687b3931b814"
+            ],
+            "text": "每周4天、每天8小时共32小时，满足至少2天且至少25小时，资格符合；申请在途，故建议wait。"
+          },
+          "report": {
+            "id": "report",
+            "role": "report",
+            "version": 2,
+            "values": {
+              "recommend": true
+            },
+            "status": "current",
+            "refs": [
+              "initial-t-27a4a2de3c1d",
+              "d-687b3931b814"
+            ],
+            "text": "每周4天、每天8小时共32小时，满足至少2天且至少25小时，资格符合，recommend为true。"
+          }
+        },
+        "sources": [
+          {
+            "id": "initial-t-27a4a2de3c1d",
+            "text": "{\"days\":4,\"hours\":8,\"applied\":true}"
+          },
+          {
+            "id": "d-687b3931b814",
+            "text": "来源系统规则原件，第1版，作用域scope-7995ce4c80ee，岗位“盐沼影像巡检助理”。完整资格条件为每周至少2天，且每周总排班时长至少25小时；总排班时长=每周天数×每天小时数，两项须同时满足，无认证替代或其他隐含条件。本版从载有它的本轮事件开始生效，并替代同作用域此前规则。天数为非负整数，每天小时数为非负数。行动约定：符合且没有在途申请为apply，符合且申请在途为wait；不符合且申请在途为withdraw，不符合且没有在途申请为none。报告recommend与资格一致。原文穷尽的全部可能情形结论相同则可确定目标，否则目标值为null且status=uncertain；确定目标status=current。这里只维护建议，不执行外部操作；已撤回申请不得再次建议撤回。",
+            "minDays": 2,
+            "minHours": 25
+          }
+        ],
+        "pending": []
+      },
+      "restarted": false
+    },
+    {
+      "eventId": "e-d0a8d681344f",
+      "arm": "extra-review",
+      "calls": 5,
+      "reads": [],
+      "skipped": [],
+      "errors": [],
+      "extraError": null,
+      "extra": {
+        "answer": "需普通复核：天数候选3或4，按每天10小时分别总时长30或40小时，均满足至少2天且至少25小时；申请在途，故资格true、next=wait、recommend=true。现有记忆结论与当前规则一致，但历史解释基于旧观测，需按本轮候选复核。",
+        "reviewIds": [
+          "match",
+          "path",
+          "report"
+        ],
+        "readIds": [],
+        "refs": [
+          "d-687b3931b814",
+          "e-d0a8d681344f"
+        ]
+      },
+      "certificate": null,
+      "obligations": [
+        {
+          "id": "5ff8edca5273315e7fa6262136d874391dd1b2945f24e043e6f4d071e385b7ac",
+          "target": "match",
+          "stamp": "af3edf56b7db8e66284b6508d07e92e64e2207f49fdff9fc53fb2b3a0ec4fa28",
+          "ruleId": "d-687b3931b814",
+          "targetVersion": 2,
+          "refs": [
+            "d-687b3931b814",
+            "e-d0a8d681344f"
+          ],
+          "status": "local-review-completed",
+          "kind": "ordinary-review-request",
+          "newTargetVersion": 3,
+          "actuallyRead": [],
+          "assumptionContradictedByObservation": null
+        },
+        {
+          "id": "e4d2031da077f3b534f2501a8ddcdc9e96024ed3bd4571dfbad93d53df47dacb",
+          "target": "path",
+          "stamp": "af3edf56b7db8e66284b6508d07e92e64e2207f49fdff9fc53fb2b3a0ec4fa28",
+          "ruleId": "d-687b3931b814",
+          "targetVersion": 2,
+          "refs": [
+            "d-687b3931b814",
+            "e-d0a8d681344f"
+          ],
+          "status": "local-review-completed",
+          "kind": "ordinary-review-request",
+          "newTargetVersion": 3,
+          "actuallyRead": [],
+          "assumptionContradictedByObservation": null
+        },
+        {
+          "id": "9785e6025f7f4d56dc02ae2993d31bac9329f022eecf3358215c2a250a137f27",
+          "target": "report",
+          "stamp": "af3edf56b7db8e66284b6508d07e92e64e2207f49fdff9fc53fb2b3a0ec4fa28",
+          "ruleId": "d-687b3931b814",
+          "targetVersion": 2,
+          "refs": [
+            "d-687b3931b814",
+            "e-d0a8d681344f"
+          ],
+          "status": "local-review-completed",
+          "kind": "ordinary-review-request",
+          "newTargetVersion": 3,
+          "actuallyRead": [],
+          "assumptionContradictedByObservation": null
+        }
+      ],
+      "decisions": [
+        {
+          "role": "match",
+          "answer": {
+            "answer": "两种候选排班（3天或4天，每天10小时）均满足至少2天且至少25小时，资格可确定为true。",
+            "values": {
+              "eligible": true
+            },
+            "status": "current",
+            "refs": [
+              "e-d0a8d681344f",
+              "d-687b3931b814"
+            ]
+          }
+        },
+        {
+          "role": "path",
+          "answer": {
+            "answer": "两种候选排班（3天或4天，每天10小时）均满足至少2天且至少25小时，资格符合；申请在途，故建议wait。",
+            "values": {
+              "next": "wait"
+            },
+            "status": "current",
+            "refs": [
+              "e-d0a8d681344f",
+              "d-687b3931b814"
+            ]
+          }
+        },
+        {
+          "role": "report",
+          "answer": {
+            "answer": "两种候选排班（3天或4天，每天10小时）均满足至少2天且至少25小时，资格可确定为true，recommend与资格一致为true。",
+            "values": {
+              "recommend": true
+            },
+            "status": "current",
+            "refs": [
+              "e-d0a8d681344f",
+              "d-687b3931b814"
+            ]
+          }
+        }
+      ],
+      "before": {
+        "match": {
+          "id": "match",
+          "role": "match",
+          "version": 2,
+          "values": {
+            "eligible": true
+          },
+          "status": "current",
+          "refs": [
+            "initial-t-27a4a2de3c1d",
+            "d-687b3931b814"
+          ],
+          "text": "每周4天、每天8小时，共32小时，满足至少2天且至少25小时，资格为true。"
+        },
+        "path": {
+          "id": "path",
+          "role": "path",
+          "version": 2,
+          "values": {
+            "next": "wait"
+          },
+          "status": "current",
+          "refs": [
+            "initial-t-27a4a2de3c1d",
+            "d-687b3931b814"
+          ],
+          "text": "每周4天、每天8小时共32小时，满足至少2天且至少25小时，资格符合；申请在途，故建议wait。"
+        },
+        "report": {
+          "id": "report",
+          "role": "report",
+          "version": 2,
+          "values": {
+            "recommend": true
+          },
+          "status": "current",
+          "refs": [
+            "initial-t-27a4a2de3c1d",
+            "d-687b3931b814"
+          ],
+          "text": "每周4天、每天8小时共32小时，满足至少2天且至少25小时，资格符合，recommend为true。"
+        }
+      },
+      "scheduledCandidates": [
+        "match",
+        "path",
+        "report"
+      ],
+      "remainingCandidates": [
+        "match",
+        "path",
+        "report"
+      ],
+      "proposedPlan": {
+        "answer": "旧记忆结论仍成立：两种候选天数(3或4)均满足至少2天且总时长至少25小时，资格为true，recommend为true；申请在途，next为wait。无需读取目录或复核候选。",
+        "readIds": [],
+        "reviewIds": []
+      },
+      "plan": {
+        "answer": "旧记忆结论仍成立：两种候选天数(3或4)均满足至少2天且总时长至少25小时，资格为true，recommend为true；申请在途，next为wait。无需读取目录或复核候选。",
+        "readIds": [],
+        "reviewIds": [
+          "match",
+          "path",
+          "report"
+        ]
+      },
+      "state": {
+        "scope": "scope-7995ce4c80ee",
+        "rule": {
+          "id": "d-687b3931b814",
+          "text": "来源系统规则原件，第1版，作用域scope-7995ce4c80ee，岗位“盐沼影像巡检助理”。完整资格条件为每周至少2天，且每周总排班时长至少25小时；总排班时长=每周天数×每天小时数，两项须同时满足，无认证替代或其他隐含条件。本版从载有它的本轮事件开始生效，并替代同作用域此前规则。天数为非负整数，每天小时数为非负数。行动约定：符合且没有在途申请为apply，符合且申请在途为wait；不符合且申请在途为withdraw，不符合且没有在途申请为none。报告recommend与资格一致。原文穷尽的全部可能情形结论相同则可确定目标，否则目标值为null且status=uncertain；确定目标status=current。这里只维护建议，不执行外部操作；已撤回申请不得再次建议撤回。",
+          "minDays": 2,
+          "minHours": 25
+        },
+        "facts": {
+          "days": {
+            "value": null,
+            "alternatives": [
+              3,
+              4
+            ],
+            "version": 2
+          },
+          "hours": {
+            "value": 10,
+            "alternatives": null,
+            "version": 2
+          },
+          "applied": {
+            "value": true,
+            "alternatives": null,
+            "version": 1
+          }
+        },
+        "memories": {
+          "match": {
+            "id": "match",
+            "role": "match",
+            "version": 3,
+            "values": {
+              "eligible": true
+            },
+            "status": "current",
+            "refs": [
+              "e-d0a8d681344f",
+              "d-687b3931b814"
+            ],
+            "text": "两种候选排班（3天或4天，每天10小时）均满足至少2天且至少25小时，资格可确定为true。"
+          },
+          "path": {
+            "id": "path",
+            "role": "path",
+            "version": 3,
+            "values": {
+              "next": "wait"
+            },
+            "status": "current",
+            "refs": [
+              "e-d0a8d681344f",
+              "d-687b3931b814"
+            ],
+            "text": "两种候选排班（3天或4天，每天10小时）均满足至少2天且至少25小时，资格符合；申请在途，故建议wait。"
+          },
+          "report": {
+            "id": "report",
+            "role": "report",
+            "version": 3,
+            "values": {
+              "recommend": true
+            },
+            "status": "current",
+            "refs": [
+              "e-d0a8d681344f",
+              "d-687b3931b814"
+            ],
+            "text": "两种候选排班（3天或4天，每天10小时）均满足至少2天且至少25小时，资格可确定为true，recommend与资格一致为true。"
+          }
+        },
+        "sources": [
+          {
+            "id": "initial-t-27a4a2de3c1d",
+            "text": "{\"days\":4,\"hours\":8,\"applied\":true}"
+          },
+          {
+            "id": "d-687b3931b814",
+            "text": "来源系统规则原件，第1版，作用域scope-7995ce4c80ee，岗位“盐沼影像巡检助理”。完整资格条件为每周至少2天，且每周总排班时长至少25小时；总排班时长=每周天数×每天小时数，两项须同时满足，无认证替代或其他隐含条件。本版从载有它的本轮事件开始生效，并替代同作用域此前规则。天数为非负整数，每天小时数为非负数。行动约定：符合且没有在途申请为apply，符合且申请在途为wait；不符合且申请在途为withdraw，不符合且没有在途申请为none。报告recommend与资格一致。原文穷尽的全部可能情形结论相同则可确定目标，否则目标值为null且status=uncertain；确定目标status=current。这里只维护建议，不执行外部操作；已撤回申请不得再次建议撤回。",
+            "minDays": 2,
+            "minHours": 25
+          },
+          {
+            "id": "e-d0a8d681344f",
+            "text": "来源系统第2轮观测，观测版本2，作用域scope-7995ce4c80ee。排班仍在多份方案间协调，最终安排尚未核定。本人每周排班天数尚未确定，全部且仅有的候选为3、4；候选穷尽所有可能。本人每天排班小时数为10小时。"
+          }
+        ],
+        "pending": []
+      },
+      "restarted": false
+    },
+    {
+      "eventId": "e-50c10615c653",
+      "arm": "extra-review",
+      "calls": 5,
+      "reads": [],
+      "skipped": [],
+      "errors": [],
+      "extraError": null,
+      "extra": {
+        "answer": "新版规则要求每周至少44小时；候选天数3或4、每天10小时，对应30或40小时，均不满足，故资格确定为false。申请在途，行动应为withdraw，recommend应为false。现有记忆仍基于旧版25小时规则，需按当前规则复核三个候选角色。",
+        "reviewIds": [
+          "match",
+          "path",
+          "report"
+        ],
+        "readIds": [],
+        "refs": [
+          "d-001b809c2d72",
+          "e-50c10615c653",
+          "e-d0a8d681344f"
+        ]
+      },
+      "certificate": null,
+      "obligations": [
+        {
+          "id": "7df61cebc98b5fea8e2aaf972def7b4271e0f92f0cea8aaa17db0e6e93e2875c",
+          "target": "match",
+          "stamp": "0f8f7e2a46e4ecf6b5efbb09180ec978e66bc1645c3a9f011c06df9e1f0ca3bb",
+          "ruleId": "d-001b809c2d72",
+          "targetVersion": 3,
+          "refs": [
+            "d-001b809c2d72",
+            "e-50c10615c653",
+            "e-d0a8d681344f"
+          ],
+          "status": "local-review-completed",
+          "kind": "ordinary-review-request",
+          "newTargetVersion": 4,
+          "actuallyRead": [],
+          "assumptionContradictedByObservation": null
+        },
+        {
+          "id": "e9b9e885853bf949dfeb388208638e2881b566ba0a3d86cd9a052f2240424b28",
+          "target": "path",
+          "stamp": "0f8f7e2a46e4ecf6b5efbb09180ec978e66bc1645c3a9f011c06df9e1f0ca3bb",
+          "ruleId": "d-001b809c2d72",
+          "targetVersion": 3,
+          "refs": [
+            "d-001b809c2d72",
+            "e-50c10615c653",
+            "e-d0a8d681344f"
+          ],
+          "status": "local-review-completed",
+          "kind": "ordinary-review-request",
+          "newTargetVersion": 4,
+          "actuallyRead": [],
+          "assumptionContradictedByObservation": null
+        },
+        {
+          "id": "bda5ad284a6262aa608b49876a0a81093f66a2784a5ae8a067baaf2f66762692",
+          "target": "report",
+          "stamp": "0f8f7e2a46e4ecf6b5efbb09180ec978e66bc1645c3a9f011c06df9e1f0ca3bb",
+          "ruleId": "d-001b809c2d72",
+          "targetVersion": 3,
+          "refs": [
+            "d-001b809c2d72",
+            "e-50c10615c653",
+            "e-d0a8d681344f"
+          ],
+          "status": "local-review-completed",
+          "kind": "ordinary-review-request",
+          "newTargetVersion": 4,
+          "actuallyRead": [],
+          "assumptionContradictedByObservation": null
+        }
+      ],
+      "decisions": [
+        {
+          "role": "match",
+          "answer": {
+            "answer": "新版规则要求每周至少44小时；候选天数3或4、每天10小时，两种情形总时长均不足44小时，故资格确定为false。",
+            "values": {
+              "eligible": false
+            },
+            "status": "current",
+            "refs": [
+              "e-50c10615c653",
+              "d-001b809c2d72",
+              "e-d0a8d681344f"
+            ]
+          }
+        },
+        {
+          "role": "path",
+          "answer": {
+            "answer": "新版规则要求每周至少44小时；候选天数3或4、每天10小时，总时长均不足44小时，资格确定为不符合；申请在途，故建议withdraw。",
+            "values": {
+              "next": "withdraw"
+            },
+            "status": "current",
+            "refs": [
+              "e-50c10615c653",
+              "d-001b809c2d72",
+              "e-d0a8d681344f"
+            ]
+          }
+        },
+        {
+          "role": "report",
+          "answer": {
+            "answer": "新版规则要求每周至少44小时；候选天数3或4、每天10小时，总时长均不足44小时，资格确定为不符合，故recommend为false。",
+            "values": {
+              "recommend": false
+            },
+            "status": "current",
+            "refs": [
+              "e-50c10615c653",
+              "d-001b809c2d72",
+              "e-d0a8d681344f"
+            ]
+          }
+        }
+      ],
+      "before": {
+        "match": {
+          "id": "match",
+          "role": "match",
+          "version": 3,
+          "values": {
+            "eligible": true
+          },
+          "status": "current",
+          "refs": [
+            "e-d0a8d681344f",
+            "d-687b3931b814"
+          ],
+          "text": "两种候选排班（3天或4天，每天10小时）均满足至少2天且至少25小时，资格可确定为true。"
+        },
+        "path": {
+          "id": "path",
+          "role": "path",
+          "version": 3,
+          "values": {
+            "next": "wait"
+          },
+          "status": "current",
+          "refs": [
+            "e-d0a8d681344f",
+            "d-687b3931b814"
+          ],
+          "text": "两种候选排班（3天或4天，每天10小时）均满足至少2天且至少25小时，资格符合；申请在途，故建议wait。"
+        },
+        "report": {
+          "id": "report",
+          "role": "report",
+          "version": 3,
+          "values": {
+            "recommend": true
+          },
+          "status": "current",
+          "refs": [
+            "e-d0a8d681344f",
+            "d-687b3931b814"
+          ],
+          "text": "两种候选排班（3天或4天，每天10小时）均满足至少2天且至少25小时，资格可确定为true，recommend与资格一致为true。"
+        }
+      },
+      "scheduledCandidates": [
+        "match",
+        "path",
+        "report"
+      ],
+      "remainingCandidates": [
+        "match",
+        "path",
+        "report"
+      ],
+      "proposedPlan": {
+        "answer": "新版规则要求每周至少2天且总时长至少44小时；候选天数3或4、每天10小时，两种情形总时长分别为30和40小时，均不满足44小时，资格确定为false。申请在途，故next应为withdraw；recommend应为false。旧记忆中的eligible、next、recommend均需按新规则更新。",
+        "readIds": [],
+        "reviewIds": [
+          "match",
+          "path",
+          "report"
+        ]
+      },
+      "plan": {
+        "answer": "新版规则要求每周至少2天且总时长至少44小时；候选天数3或4、每天10小时，两种情形总时长分别为30和40小时，均不满足44小时，资格确定为false。申请在途，故next应为withdraw；recommend应为false。旧记忆中的eligible、next、recommend均需按新规则更新。",
+        "readIds": [],
+        "reviewIds": [
+          "match",
+          "path",
+          "report"
+        ]
+      },
+      "state": {
+        "scope": "scope-7995ce4c80ee",
+        "rule": {
+          "id": "d-001b809c2d72",
+          "text": "来源系统规则原件，第2版，作用域scope-7995ce4c80ee，岗位“盐沼影像巡检助理”。完整资格条件为每周至少2天，且每周总排班时长至少44小时；总排班时长=每周天数×每天小时数，两项须同时满足，无认证替代或其他隐含条件。本版从载有它的本轮事件开始生效，并替代同作用域此前规则。天数为非负整数，每天小时数为非负数。行动约定：符合且没有在途申请为apply，符合且申请在途为wait；不符合且申请在途为withdraw，不符合且没有在途申请为none。报告recommend与资格一致。原文穷尽的全部可能情形结论相同则可确定目标，否则目标值为null且status=uncertain；确定目标status=current。这里只维护建议，不执行外部操作；已撤回申请不得再次建议撤回。",
+          "minDays": 2,
+          "minHours": 44
+        },
+        "facts": {
+          "days": {
+            "value": null,
+            "alternatives": [
+              3,
+              4
+            ],
+            "version": 2
+          },
+          "hours": {
+            "value": 10,
+            "alternatives": null,
+            "version": 2
+          },
+          "applied": {
+            "value": true,
+            "alternatives": null,
+            "version": 1
+          }
+        },
+        "memories": {
+          "match": {
+            "id": "match",
+            "role": "match",
+            "version": 4,
+            "values": {
+              "eligible": false
+            },
+            "status": "current",
+            "refs": [
+              "e-50c10615c653",
+              "d-001b809c2d72",
+              "e-d0a8d681344f"
+            ],
+            "text": "新版规则要求每周至少44小时；候选天数3或4、每天10小时，两种情形总时长均不足44小时，故资格确定为false。"
+          },
+          "path": {
+            "id": "path",
+            "role": "path",
+            "version": 4,
+            "values": {
+              "next": "withdraw"
+            },
+            "status": "current",
+            "refs": [
+              "e-50c10615c653",
+              "d-001b809c2d72",
+              "e-d0a8d681344f"
+            ],
+            "text": "新版规则要求每周至少44小时；候选天数3或4、每天10小时，总时长均不足44小时，资格确定为不符合；申请在途，故建议withdraw。"
+          },
+          "report": {
+            "id": "report",
+            "role": "report",
+            "version": 4,
+            "values": {
+              "recommend": false
+            },
+            "status": "current",
+            "refs": [
+              "e-50c10615c653",
+              "d-001b809c2d72",
+              "e-d0a8d681344f"
+            ],
+            "text": "新版规则要求每周至少44小时；候选天数3或4、每天10小时，总时长均不足44小时，资格确定为不符合，故recommend为false。"
+          }
+        },
+        "sources": [
+          {
+            "id": "initial-t-27a4a2de3c1d",
+            "text": "{\"days\":4,\"hours\":8,\"applied\":true}"
+          },
+          {
+            "id": "d-687b3931b814",
+            "text": "来源系统规则原件，第1版，作用域scope-7995ce4c80ee，岗位“盐沼影像巡检助理”。完整资格条件为每周至少2天，且每周总排班时长至少25小时；总排班时长=每周天数×每天小时数，两项须同时满足，无认证替代或其他隐含条件。本版从载有它的本轮事件开始生效，并替代同作用域此前规则。天数为非负整数，每天小时数为非负数。行动约定：符合且没有在途申请为apply，符合且申请在途为wait；不符合且申请在途为withdraw，不符合且没有在途申请为none。报告recommend与资格一致。原文穷尽的全部可能情形结论相同则可确定目标，否则目标值为null且status=uncertain；确定目标status=current。这里只维护建议，不执行外部操作；已撤回申请不得再次建议撤回。",
+            "minDays": 2,
+            "minHours": 25
+          },
+          {
+            "id": "e-d0a8d681344f",
+            "text": "来源系统第2轮观测，观测版本2，作用域scope-7995ce4c80ee。排班仍在多份方案间协调，最终安排尚未核定。本人每周排班天数尚未确定，全部且仅有的候选为3、4；候选穷尽所有可能。本人每天排班小时数为10小时。"
+          },
+          {
+            "id": "e-50c10615c653",
+            "text": "来源系统第3轮观测，观测版本3，作用域scope-7995ce4c80ee。本岗位新版规则原件已发布并随本事件提供，旧版从本轮起失效。"
+          },
+          {
+            "id": "d-001b809c2d72",
+            "text": "来源系统规则原件，第2版，作用域scope-7995ce4c80ee，岗位“盐沼影像巡检助理”。完整资格条件为每周至少2天，且每周总排班时长至少44小时；总排班时长=每周天数×每天小时数，两项须同时满足，无认证替代或其他隐含条件。本版从载有它的本轮事件开始生效，并替代同作用域此前规则。天数为非负整数，每天小时数为非负数。行动约定：符合且没有在途申请为apply，符合且申请在途为wait；不符合且申请在途为withdraw，不符合且没有在途申请为none。报告recommend与资格一致。原文穷尽的全部可能情形结论相同则可确定目标，否则目标值为null且status=uncertain；确定目标status=current。这里只维护建议，不执行外部操作；已撤回申请不得再次建议撤回。",
+            "minDays": 2,
+            "minHours": 44
+          }
+        ],
+        "pending": []
+      },
+      "restarted": false
+    },
+    {
+      "eventId": "e-65c8bdc22242",
+      "arm": "extra-review",
+      "calls": 3,
+      "reads": [],
+      "skipped": [],
+      "errors": [],
+      "extraError": null,
+      "extra": {
+        "answer": "当前无在途申请，资格仍为不符合（3或4天×10小时均不足44小时），故path应为none而非withdraw；需复核path记忆。",
+        "reviewIds": [
+          "path"
+        ],
+        "readIds": [],
+        "refs": [
+          "d-001b809c2d72",
+          "e-65c8bdc22242",
+          "e-d0a8d681344f"
+        ]
+      },
+      "certificate": null,
+      "obligations": [
+        {
+          "id": "b9d4ace964456212d055f10889df68437a8746cc491bf5f0f709b196e7093cee",
+          "target": "path",
+          "stamp": "2fbcab4f6e3372493e9e04b9e6e9c5b386a2afa86be574568e471701001f7774",
+          "ruleId": "d-001b809c2d72",
+          "targetVersion": 4,
+          "refs": [
+            "d-001b809c2d72",
+            "e-65c8bdc22242",
+            "e-d0a8d681344f"
+          ],
+          "status": "local-review-completed",
+          "kind": "ordinary-review-request",
+          "newTargetVersion": 5,
+          "actuallyRead": [],
+          "assumptionContradictedByObservation": null
+        }
+      ],
+      "decisions": [
+        {
+          "role": "path",
+          "answer": {
+            "answer": "资格不符合（天数候选3或4、每天10小时，总时长均不足44小时），且申请已撤回、当前无在途申请，故建议none。",
+            "values": {
+              "next": "none"
+            },
+            "status": "current",
+            "refs": [
+              "d-001b809c2d72",
+              "e-d0a8d681344f",
+              "e-65c8bdc22242"
+            ]
+          }
+        }
+      ],
+      "before": {
+        "match": {
+          "id": "match",
+          "role": "match",
+          "version": 4,
+          "values": {
+            "eligible": false
+          },
+          "status": "current",
+          "refs": [
+            "e-50c10615c653",
+            "d-001b809c2d72",
+            "e-d0a8d681344f"
+          ],
+          "text": "新版规则要求每周至少44小时；候选天数3或4、每天10小时，两种情形总时长均不足44小时，故资格确定为false。"
+        },
+        "path": {
+          "id": "path",
+          "role": "path",
+          "version": 4,
+          "values": {
+            "next": "withdraw"
+          },
+          "status": "current",
+          "refs": [
+            "e-50c10615c653",
+            "d-001b809c2d72",
+            "e-d0a8d681344f"
+          ],
+          "text": "新版规则要求每周至少44小时；候选天数3或4、每天10小时，总时长均不足44小时，资格确定为不符合；申请在途，故建议withdraw。"
+        },
+        "report": {
+          "id": "report",
+          "role": "report",
+          "version": 4,
+          "values": {
+            "recommend": false
+          },
+          "status": "current",
+          "refs": [
+            "e-50c10615c653",
+            "d-001b809c2d72",
+            "e-d0a8d681344f"
+          ],
+          "text": "新版规则要求每周至少44小时；候选天数3或4、每天10小时，总时长均不足44小时，资格确定为不符合，故recommend为false。"
+        }
+      },
+      "scheduledCandidates": [
+        "path"
+      ],
+      "remainingCandidates": [
+        "path"
+      ],
+      "proposedPlan": {
+        "answer": "资格仍为不符合（天数3或4、每天10小时，总时长30或40小时均不足44小时），recommend=false；但申请已撤回、当前无在途申请，故next应为none而非withdraw，需复核path。",
+        "readIds": [],
+        "reviewIds": [
+          "path"
+        ]
+      },
+      "plan": {
+        "answer": "资格仍为不符合（天数3或4、每天10小时，总时长30或40小时均不足44小时），recommend=false；但申请已撤回、当前无在途申请，故next应为none而非withdraw，需复核path。",
+        "readIds": [],
+        "reviewIds": [
+          "path"
+        ]
+      },
+      "state": {
+        "scope": "scope-7995ce4c80ee",
+        "rule": {
+          "id": "d-001b809c2d72",
+          "text": "来源系统规则原件，第2版，作用域scope-7995ce4c80ee，岗位“盐沼影像巡检助理”。完整资格条件为每周至少2天，且每周总排班时长至少44小时；总排班时长=每周天数×每天小时数，两项须同时满足，无认证替代或其他隐含条件。本版从载有它的本轮事件开始生效，并替代同作用域此前规则。天数为非负整数，每天小时数为非负数。行动约定：符合且没有在途申请为apply，符合且申请在途为wait；不符合且申请在途为withdraw，不符合且没有在途申请为none。报告recommend与资格一致。原文穷尽的全部可能情形结论相同则可确定目标，否则目标值为null且status=uncertain；确定目标status=current。这里只维护建议，不执行外部操作；已撤回申请不得再次建议撤回。",
+          "minDays": 2,
+          "minHours": 44
+        },
+        "facts": {
+          "days": {
+            "value": null,
+            "alternatives": [
+              3,
+              4
+            ],
+            "version": 2
+          },
+          "hours": {
+            "value": 10,
+            "alternatives": null,
+            "version": 2
+          },
+          "applied": {
+            "value": false,
+            "alternatives": null,
+            "version": 2
+          }
+        },
+        "memories": {
+          "match": {
+            "id": "match",
+            "role": "match",
+            "version": 4,
+            "values": {
+              "eligible": false
+            },
+            "status": "current",
+            "refs": [
+              "e-50c10615c653",
+              "d-001b809c2d72",
+              "e-d0a8d681344f"
+            ],
+            "text": "新版规则要求每周至少44小时；候选天数3或4、每天10小时，两种情形总时长均不足44小时，故资格确定为false。"
+          },
+          "path": {
+            "id": "path",
+            "role": "path",
+            "version": 5,
+            "values": {
+              "next": "none"
+            },
+            "status": "current",
+            "refs": [
+              "d-001b809c2d72",
+              "e-d0a8d681344f",
+              "e-65c8bdc22242"
+            ],
+            "text": "资格不符合（天数候选3或4、每天10小时，总时长均不足44小时），且申请已撤回、当前无在途申请，故建议none。"
+          },
+          "report": {
+            "id": "report",
+            "role": "report",
+            "version": 4,
+            "values": {
+              "recommend": false
+            },
+            "status": "current",
+            "refs": [
+              "e-50c10615c653",
+              "d-001b809c2d72",
+              "e-d0a8d681344f"
+            ],
+            "text": "新版规则要求每周至少44小时；候选天数3或4、每天10小时，总时长均不足44小时，资格确定为不符合，故recommend为false。"
+          }
+        },
+        "sources": [
+          {
+            "id": "initial-t-27a4a2de3c1d",
+            "text": "{\"days\":4,\"hours\":8,\"applied\":true}"
+          },
+          {
+            "id": "d-687b3931b814",
+            "text": "来源系统规则原件，第1版，作用域scope-7995ce4c80ee，岗位“盐沼影像巡检助理”。完整资格条件为每周至少2天，且每周总排班时长至少25小时；总排班时长=每周天数×每天小时数，两项须同时满足，无认证替代或其他隐含条件。本版从载有它的本轮事件开始生效，并替代同作用域此前规则。天数为非负整数，每天小时数为非负数。行动约定：符合且没有在途申请为apply，符合且申请在途为wait；不符合且申请在途为withdraw，不符合且没有在途申请为none。报告recommend与资格一致。原文穷尽的全部可能情形结论相同则可确定目标，否则目标值为null且status=uncertain；确定目标status=current。这里只维护建议，不执行外部操作；已撤回申请不得再次建议撤回。",
+            "minDays": 2,
+            "minHours": 25
+          },
+          {
+            "id": "e-d0a8d681344f",
+            "text": "来源系统第2轮观测，观测版本2，作用域scope-7995ce4c80ee。排班仍在多份方案间协调，最终安排尚未核定。本人每周排班天数尚未确定，全部且仅有的候选为3、4；候选穷尽所有可能。本人每天排班小时数为10小时。"
+          },
+          {
+            "id": "e-50c10615c653",
+            "text": "来源系统第3轮观测，观测版本3，作用域scope-7995ce4c80ee。本岗位新版规则原件已发布并随本事件提供，旧版从本轮起失效。"
+          },
+          {
+            "id": "d-001b809c2d72",
+            "text": "来源系统规则原件，第2版，作用域scope-7995ce4c80ee，岗位“盐沼影像巡检助理”。完整资格条件为每周至少2天，且每周总排班时长至少44小时；总排班时长=每周天数×每天小时数，两项须同时满足，无认证替代或其他隐含条件。本版从载有它的本轮事件开始生效，并替代同作用域此前规则。天数为非负整数，每天小时数为非负数。行动约定：符合且没有在途申请为apply，符合且申请在途为wait；不符合且申请在途为withdraw，不符合且没有在途申请为none。报告recommend与资格一致。原文穷尽的全部可能情形结论相同则可确定目标，否则目标值为null且status=uncertain；确定目标status=current。这里只维护建议，不执行外部操作；已撤回申请不得再次建议撤回。",
+            "minDays": 2,
+            "minHours": 44
+          },
+          {
+            "id": "e-65c8bdc22242",
+            "text": "来源系统第4轮观测，观测版本4，作用域scope-7995ce4c80ee。此前在途的申请已由本人完成撤回，来源系统核实撤回成功，当前无任何在途申请，撤回事项无待办。这条回执不改变排班或当前资格规则。本人目前没有在途申请。"
+          }
+        ],
+        "pending": []
+      },
+      "restarted": true
+    },
+    {
+      "eventId": "e-68250cca4d35",
+      "arm": "extra-review",
+      "calls": 5,
+      "reads": [
+        "d-5d78a4f52c5a"
+      ],
+      "skipped": [],
+      "errors": [],
+      "extraError": null,
+      "extra": {
+        "answer": "当前候选天数1或3、每天15小时，按现行规则均不满足44小时门槛，资格为false；无在途申请，故next=none、recommend=false。需复核记忆是否仍与现行事实一致，并检查同作用域“本人排班核定回执”是否含后续核定内容。",
+        "reviewIds": [
+          "match",
+          "path",
+          "report"
+        ],
+        "readIds": [
+          "d-5d78a4f52c5a"
+        ],
+        "refs": [
+          "d-001b809c2d72",
+          "e-68250cca4d35",
+          "e-65c8bdc22242"
+        ]
+      },
+      "certificate": null,
+      "obligations": [
+        {
+          "id": "6dc80e9ef2568a0d5d2b45591e7716f9c72e889f6672db0db6b2bed4e28d5558",
+          "target": "match",
+          "stamp": "738f3bc33c7d1545876b5cb98228f86632d58c086fff099a0d9a9d703ab635ef",
+          "ruleId": "d-001b809c2d72",
+          "targetVersion": 4,
+          "refs": [
+            "d-001b809c2d72",
+            "e-68250cca4d35",
+            "e-65c8bdc22242"
+          ],
+          "status": "local-review-completed",
+          "kind": "ordinary-review-request",
+          "newTargetVersion": 5,
+          "actuallyRead": [
+            "d-5d78a4f52c5a"
+          ],
+          "assumptionContradictedByObservation": null
+        },
+        {
+          "id": "7856f5aa90918e1b5edacff7f67c84cfc92bc9d959d4ba3b5d1a4e1c60e9609e",
+          "target": "path",
+          "stamp": "738f3bc33c7d1545876b5cb98228f86632d58c086fff099a0d9a9d703ab635ef",
+          "ruleId": "d-001b809c2d72",
+          "targetVersion": 5,
+          "refs": [
+            "d-001b809c2d72",
+            "e-68250cca4d35",
+            "e-65c8bdc22242"
+          ],
+          "status": "local-review-completed",
+          "kind": "ordinary-review-request",
+          "newTargetVersion": 6,
+          "actuallyRead": [
+            "d-5d78a4f52c5a"
+          ],
+          "assumptionContradictedByObservation": null
+        },
+        {
+          "id": "76e6944a53624375bc14952ce8598437a02d00dfe95772c816c9caa6b37557ed",
+          "target": "report",
+          "stamp": "738f3bc33c7d1545876b5cb98228f86632d58c086fff099a0d9a9d703ab635ef",
+          "ruleId": "d-001b809c2d72",
+          "targetVersion": 4,
+          "refs": [
+            "d-001b809c2d72",
+            "e-68250cca4d35",
+            "e-65c8bdc22242"
+          ],
+          "status": "local-review-completed",
+          "kind": "ordinary-review-request",
+          "newTargetVersion": 5,
+          "actuallyRead": [
+            "d-5d78a4f52c5a"
+          ],
+          "assumptionContradictedByObservation": null
+        }
+      ],
+      "decisions": [
+        {
+          "role": "match",
+          "answer": {
+            "answer": "核定回执确认每周3天、每天15小时，总时长45小时且天数≥2，资格符合。",
+            "values": {
+              "eligible": true
+            },
+            "status": "current",
+            "refs": [
+              "d-001b809c2d72",
+              "d-5d78a4f52c5a"
+            ]
+          }
+        },
+        {
+          "role": "path",
+          "answer": {
+            "answer": "核定回执确认每周3天、每天15小时，总时长45小时且天数≥2，资格符合；当前无在途申请，故建议apply。",
+            "values": {
+              "next": "apply"
+            },
+            "status": "current",
+            "refs": [
+              "d-001b809c2d72",
+              "d-5d78a4f52c5a",
+              "e-65c8bdc22242"
+            ]
+          }
+        },
+        {
+          "role": "report",
+          "answer": {
+            "answer": "核定回执确认每周3天、每天15小时，总时长45小时且天数≥2，资格符合，故recommend为true。",
+            "values": {
+              "recommend": true
+            },
+            "status": "current",
+            "refs": [
+              "d-001b809c2d72",
+              "d-5d78a4f52c5a"
+            ]
+          }
+        }
+      ],
+      "before": {
+        "match": {
+          "id": "match",
+          "role": "match",
+          "version": 4,
+          "values": {
+            "eligible": false
+          },
+          "status": "current",
+          "refs": [
+            "e-50c10615c653",
+            "d-001b809c2d72",
+            "e-d0a8d681344f"
+          ],
+          "text": "新版规则要求每周至少44小时；候选天数3或4、每天10小时，两种情形总时长均不足44小时，故资格确定为false。"
+        },
+        "path": {
+          "id": "path",
+          "role": "path",
+          "version": 5,
+          "values": {
+            "next": "none"
+          },
+          "status": "current",
+          "refs": [
+            "d-001b809c2d72",
+            "e-d0a8d681344f",
+            "e-65c8bdc22242"
+          ],
+          "text": "资格不符合（天数候选3或4、每天10小时，总时长均不足44小时），且申请已撤回、当前无在途申请，故建议none。"
+        },
+        "report": {
+          "id": "report",
+          "role": "report",
+          "version": 4,
+          "values": {
+            "recommend": false
+          },
+          "status": "current",
+          "refs": [
+            "e-50c10615c653",
+            "d-001b809c2d72",
+            "e-d0a8d681344f"
+          ],
+          "text": "新版规则要求每周至少44小时；候选天数3或4、每天10小时，总时长均不足44小时，资格确定为不符合，故recommend为false。"
+        }
+      },
+      "scheduledCandidates": [
+        "match",
+        "path",
+        "report"
+      ],
+      "activeEvidenceTrigger": true,
+      "remainingCandidates": [
+        "match",
+        "path",
+        "report"
+      ],
+      "proposedPlan": {
+        "answer": "读取本人核定回执后，天数确定为3、每天15小时，总时长45小时且天数≥2，资格符合；当前无在途申请，故next=apply、recommend=true。旧记忆match/path/report均需按本轮事实更新。",
+        "readIds": [
+          "d-5d78a4f52c5a"
+        ],
+        "reviewIds": [
+          "match",
+          "path",
+          "report"
+        ]
+      },
+      "plan": {
+        "answer": "读取本人核定回执后，天数确定为3、每天15小时，总时长45小时且天数≥2，资格符合；当前无在途申请，故next=apply、recommend=true。旧记忆match/path/report均需按本轮事实更新。",
+        "readIds": [
+          "d-5d78a4f52c5a"
+        ],
+        "reviewIds": [
+          "match",
+          "path",
+          "report"
+        ]
+      },
+      "state": {
+        "scope": "scope-7995ce4c80ee",
+        "rule": {
+          "id": "d-001b809c2d72",
+          "text": "来源系统规则原件，第2版，作用域scope-7995ce4c80ee，岗位“盐沼影像巡检助理”。完整资格条件为每周至少2天，且每周总排班时长至少44小时；总排班时长=每周天数×每天小时数，两项须同时满足，无认证替代或其他隐含条件。本版从载有它的本轮事件开始生效，并替代同作用域此前规则。天数为非负整数，每天小时数为非负数。行动约定：符合且没有在途申请为apply，符合且申请在途为wait；不符合且申请在途为withdraw，不符合且没有在途申请为none。报告recommend与资格一致。原文穷尽的全部可能情形结论相同则可确定目标，否则目标值为null且status=uncertain；确定目标status=current。这里只维护建议，不执行外部操作；已撤回申请不得再次建议撤回。",
+          "minDays": 2,
+          "minHours": 44
+        },
+        "facts": {
+          "days": {
+            "value": 3,
+            "alternatives": null,
+            "version": 4
+          },
+          "hours": {
+            "value": 15,
+            "alternatives": null,
+            "version": 3
+          },
+          "applied": {
+            "value": false,
+            "alternatives": null,
+            "version": 2
+          }
+        },
+        "memories": {
+          "match": {
+            "id": "match",
+            "role": "match",
+            "version": 5,
+            "values": {
+              "eligible": true
+            },
+            "status": "current",
+            "refs": [
+              "d-001b809c2d72",
+              "d-5d78a4f52c5a"
+            ],
+            "text": "核定回执确认每周3天、每天15小时，总时长45小时且天数≥2，资格符合。"
+          },
+          "path": {
+            "id": "path",
+            "role": "path",
+            "version": 6,
+            "values": {
+              "next": "apply"
+            },
+            "status": "current",
+            "refs": [
+              "d-001b809c2d72",
+              "d-5d78a4f52c5a",
+              "e-65c8bdc22242"
+            ],
+            "text": "核定回执确认每周3天、每天15小时，总时长45小时且天数≥2，资格符合；当前无在途申请，故建议apply。"
+          },
+          "report": {
+            "id": "report",
+            "role": "report",
+            "version": 5,
+            "values": {
+              "recommend": true
+            },
+            "status": "current",
+            "refs": [
+              "d-001b809c2d72",
+              "d-5d78a4f52c5a"
+            ],
+            "text": "核定回执确认每周3天、每天15小时，总时长45小时且天数≥2，资格符合，故recommend为true。"
+          }
+        },
+        "sources": [
+          {
+            "id": "initial-t-27a4a2de3c1d",
+            "text": "{\"days\":4,\"hours\":8,\"applied\":true}"
+          },
+          {
+            "id": "d-687b3931b814",
+            "text": "来源系统规则原件，第1版，作用域scope-7995ce4c80ee，岗位“盐沼影像巡检助理”。完整资格条件为每周至少2天，且每周总排班时长至少25小时；总排班时长=每周天数×每天小时数，两项须同时满足，无认证替代或其他隐含条件。本版从载有它的本轮事件开始生效，并替代同作用域此前规则。天数为非负整数，每天小时数为非负数。行动约定：符合且没有在途申请为apply，符合且申请在途为wait；不符合且申请在途为withdraw，不符合且没有在途申请为none。报告recommend与资格一致。原文穷尽的全部可能情形结论相同则可确定目标，否则目标值为null且status=uncertain；确定目标status=current。这里只维护建议，不执行外部操作；已撤回申请不得再次建议撤回。",
+            "minDays": 2,
+            "minHours": 25
+          },
+          {
+            "id": "e-d0a8d681344f",
+            "text": "来源系统第2轮观测，观测版本2，作用域scope-7995ce4c80ee。排班仍在多份方案间协调，最终安排尚未核定。本人每周排班天数尚未确定，全部且仅有的候选为3、4；候选穷尽所有可能。本人每天排班小时数为10小时。"
+          },
+          {
+            "id": "e-50c10615c653",
+            "text": "来源系统第3轮观测，观测版本3，作用域scope-7995ce4c80ee。本岗位新版规则原件已发布并随本事件提供，旧版从本轮起失效。"
+          },
+          {
+            "id": "d-001b809c2d72",
+            "text": "来源系统规则原件，第2版，作用域scope-7995ce4c80ee，岗位“盐沼影像巡检助理”。完整资格条件为每周至少2天，且每周总排班时长至少44小时；总排班时长=每周天数×每天小时数，两项须同时满足，无认证替代或其他隐含条件。本版从载有它的本轮事件开始生效，并替代同作用域此前规则。天数为非负整数，每天小时数为非负数。行动约定：符合且没有在途申请为apply，符合且申请在途为wait；不符合且申请在途为withdraw，不符合且没有在途申请为none。报告recommend与资格一致。原文穷尽的全部可能情形结论相同则可确定目标，否则目标值为null且status=uncertain；确定目标status=current。这里只维护建议，不执行外部操作；已撤回申请不得再次建议撤回。",
+            "minDays": 2,
+            "minHours": 44
+          },
+          {
+            "id": "e-65c8bdc22242",
+            "text": "来源系统第4轮观测，观测版本4，作用域scope-7995ce4c80ee。此前在途的申请已由本人完成撤回，来源系统核实撤回成功，当前无任何在途申请，撤回事项无待办。这条回执不改变排班或当前资格规则。本人目前没有在途申请。"
+          },
+          {
+            "id": "e-68250cca4d35",
+            "text": "来源系统第5轮观测，观测版本5，作用域scope-7995ce4c80ee。排班协调消息先列出尚未核定的候选。随后归档的原始回执在档案目录中；若读取了本人核定回执，按回执的后续核定内容处理。本人每周排班天数尚未确定，全部且仅有的候选为1、3；候选穷尽所有可能。本人每天排班小时数为15小时。"
+          },
+          {
+            "id": "d-5d78a4f52c5a",
+            "title": "本人排班核定回执",
+            "text": "来源系统登记，记录版本5，第5轮第1号，作用域scope-7995ce4c80ee。此回执在本轮候选登记之后完成核定，覆盖本轮候选；不是另一个假设方案。本人每周排班天数为3天。本人每天排班小时数为15小时。",
+            "scope": "scope-7995ce4c80ee",
+            "observations": {
+              "days": {
+                "value": 3,
+                "alternatives": null
+              },
+              "hours": {
+                "value": 15,
+                "alternatives": null
+              }
+            }
+          }
+        ],
+        "pending": []
+      },
+      "restarted": false
+    },
+    {
+      "eventId": "e-c2f481a59fef",
+      "arm": "extra-review",
+      "calls": 2,
+      "reads": [],
+      "skipped": [],
+      "errors": [],
+      "extraError": null,
+      "extra": null,
+      "certificate": null,
+      "obligations": [],
+      "decisions": [
+        {
+          "role": "path",
+          "answer": {
+            "answer": "资格按现行规则核定：每周3天、每天15小时，总时长45小时且天数≥2，符合；但本轮申请是否在途未确定，故next无法确定。",
+            "values": {
+              "next": null
+            },
+            "status": "uncertain",
+            "refs": [
+              "d-001b809c2d72",
+              "d-5d78a4f52c5a",
+              "e-c2f481a59fef"
+            ]
+          }
+        }
+      ],
+      "before": {
+        "match": {
+          "id": "match",
+          "role": "match",
+          "version": 5,
+          "values": {
+            "eligible": true
+          },
+          "status": "current",
+          "refs": [
+            "d-001b809c2d72",
+            "d-5d78a4f52c5a"
+          ],
+          "text": "核定回执确认每周3天、每天15小时，总时长45小时且天数≥2，资格符合。"
+        },
+        "path": {
+          "id": "path",
+          "role": "path",
+          "version": 6,
+          "values": {
+            "next": "apply"
+          },
+          "status": "current",
+          "refs": [
+            "d-001b809c2d72",
+            "d-5d78a4f52c5a",
+            "e-65c8bdc22242"
+          ],
+          "text": "核定回执确认每周3天、每天15小时，总时长45小时且天数≥2，资格符合；当前无在途申请，故建议apply。"
+        },
+        "report": {
+          "id": "report",
+          "role": "report",
+          "version": 5,
+          "values": {
+            "recommend": true
+          },
+          "status": "current",
+          "refs": [
+            "d-001b809c2d72",
+            "d-5d78a4f52c5a"
+          ],
+          "text": "核定回执确认每周3天、每天15小时，总时长45小时且天数≥2，资格符合，故recommend为true。"
+        }
+      },
+      "scheduledCandidates": [
+        "path"
+      ],
+      "remainingCandidates": [
+        "path"
+      ],
+      "proposedPlan": {
+        "answer": "本轮申请在途状态未知，无法确定next；资格按现行规则为不符合（3×15=45小时虽≥44，但每天15小时、每周3天满足天数≥2，实际符合；需注意：45≥44且3≥2，资格符合）。但applied为null且无候选，next无法确定，应保持不确定。",
+        "readIds": [],
+        "reviewIds": [
+          "path"
+        ]
+      },
+      "plan": {
+        "answer": "本轮申请在途状态未知，无法确定next；资格按现行规则为不符合（3×15=45小时虽≥44，但每天15小时、每周3天满足天数≥2，实际符合；需注意：45≥44且3≥2，资格符合）。但applied为null且无候选，next无法确定，应保持不确定。",
+        "readIds": [],
+        "reviewIds": [
+          "path"
+        ]
+      },
+      "state": {
+        "scope": "scope-7995ce4c80ee",
+        "rule": {
+          "id": "d-001b809c2d72",
+          "text": "来源系统规则原件，第2版，作用域scope-7995ce4c80ee，岗位“盐沼影像巡检助理”。完整资格条件为每周至少2天，且每周总排班时长至少44小时；总排班时长=每周天数×每天小时数，两项须同时满足，无认证替代或其他隐含条件。本版从载有它的本轮事件开始生效，并替代同作用域此前规则。天数为非负整数，每天小时数为非负数。行动约定：符合且没有在途申请为apply，符合且申请在途为wait；不符合且申请在途为withdraw，不符合且没有在途申请为none。报告recommend与资格一致。原文穷尽的全部可能情形结论相同则可确定目标，否则目标值为null且status=uncertain；确定目标status=current。这里只维护建议，不执行外部操作；已撤回申请不得再次建议撤回。",
+          "minDays": 2,
+          "minHours": 44
+        },
+        "facts": {
+          "days": {
+            "value": 3,
+            "alternatives": null,
+            "version": 4
+          },
+          "hours": {
+            "value": 15,
+            "alternatives": null,
+            "version": 3
+          },
+          "applied": {
+            "value": null,
+            "alternatives": null,
+            "version": 3
+          }
+        },
+        "memories": {
+          "match": {
+            "id": "match",
+            "role": "match",
+            "version": 5,
+            "values": {
+              "eligible": true
+            },
+            "status": "current",
+            "refs": [
+              "d-001b809c2d72",
+              "d-5d78a4f52c5a"
+            ],
+            "text": "核定回执确认每周3天、每天15小时，总时长45小时且天数≥2，资格符合。"
+          },
+          "path": {
+            "id": "path",
+            "role": "path",
+            "version": 7,
+            "values": {
+              "next": null
+            },
+            "status": "uncertain",
+            "refs": [
+              "d-001b809c2d72",
+              "d-5d78a4f52c5a",
+              "e-c2f481a59fef"
+            ],
+            "text": "资格按现行规则核定：每周3天、每天15小时，总时长45小时且天数≥2，符合；但本轮申请是否在途未确定，故next无法确定。"
+          },
+          "report": {
+            "id": "report",
+            "role": "report",
+            "version": 5,
+            "values": {
+              "recommend": true
+            },
+            "status": "current",
+            "refs": [
+              "d-001b809c2d72",
+              "d-5d78a4f52c5a"
+            ],
+            "text": "核定回执确认每周3天、每天15小时，总时长45小时且天数≥2，资格符合，故recommend为true。"
+          }
+        },
+        "sources": [
+          {
+            "id": "initial-t-27a4a2de3c1d",
+            "text": "{\"days\":4,\"hours\":8,\"applied\":true}"
+          },
+          {
+            "id": "d-687b3931b814",
+            "text": "来源系统规则原件，第1版，作用域scope-7995ce4c80ee，岗位“盐沼影像巡检助理”。完整资格条件为每周至少2天，且每周总排班时长至少25小时；总排班时长=每周天数×每天小时数，两项须同时满足，无认证替代或其他隐含条件。本版从载有它的本轮事件开始生效，并替代同作用域此前规则。天数为非负整数，每天小时数为非负数。行动约定：符合且没有在途申请为apply，符合且申请在途为wait；不符合且申请在途为withdraw，不符合且没有在途申请为none。报告recommend与资格一致。原文穷尽的全部可能情形结论相同则可确定目标，否则目标值为null且status=uncertain；确定目标status=current。这里只维护建议，不执行外部操作；已撤回申请不得再次建议撤回。",
+            "minDays": 2,
+            "minHours": 25
+          },
+          {
+            "id": "e-d0a8d681344f",
+            "text": "来源系统第2轮观测，观测版本2，作用域scope-7995ce4c80ee。排班仍在多份方案间协调，最终安排尚未核定。本人每周排班天数尚未确定，全部且仅有的候选为3、4；候选穷尽所有可能。本人每天排班小时数为10小时。"
+          },
+          {
+            "id": "e-50c10615c653",
+            "text": "来源系统第3轮观测，观测版本3，作用域scope-7995ce4c80ee。本岗位新版规则原件已发布并随本事件提供，旧版从本轮起失效。"
+          },
+          {
+            "id": "d-001b809c2d72",
+            "text": "来源系统规则原件，第2版，作用域scope-7995ce4c80ee，岗位“盐沼影像巡检助理”。完整资格条件为每周至少2天，且每周总排班时长至少44小时；总排班时长=每周天数×每天小时数，两项须同时满足，无认证替代或其他隐含条件。本版从载有它的本轮事件开始生效，并替代同作用域此前规则。天数为非负整数，每天小时数为非负数。行动约定：符合且没有在途申请为apply，符合且申请在途为wait；不符合且申请在途为withdraw，不符合且没有在途申请为none。报告recommend与资格一致。原文穷尽的全部可能情形结论相同则可确定目标，否则目标值为null且status=uncertain；确定目标status=current。这里只维护建议，不执行外部操作；已撤回申请不得再次建议撤回。",
+            "minDays": 2,
+            "minHours": 44
+          },
+          {
+            "id": "e-65c8bdc22242",
+            "text": "来源系统第4轮观测，观测版本4，作用域scope-7995ce4c80ee。此前在途的申请已由本人完成撤回，来源系统核实撤回成功，当前无任何在途申请，撤回事项无待办。这条回执不改变排班或当前资格规则。本人目前没有在途申请。"
+          },
+          {
+            "id": "e-68250cca4d35",
+            "text": "来源系统第5轮观测，观测版本5，作用域scope-7995ce4c80ee。排班协调消息先列出尚未核定的候选。随后归档的原始回执在档案目录中；若读取了本人核定回执，按回执的后续核定内容处理。本人每周排班天数尚未确定，全部且仅有的候选为1、3；候选穷尽所有可能。本人每天排班小时数为15小时。"
+          },
+          {
+            "id": "d-5d78a4f52c5a",
+            "title": "本人排班核定回执",
+            "text": "来源系统登记，记录版本5，第5轮第1号，作用域scope-7995ce4c80ee。此回执在本轮候选登记之后完成核定，覆盖本轮候选；不是另一个假设方案。本人每周排班天数为3天。本人每天排班小时数为15小时。",
+            "scope": "scope-7995ce4c80ee",
+            "observations": {
+              "days": {
+                "value": 3,
+                "alternatives": null
+              },
+              "hours": {
+                "value": 15,
+                "alternatives": null
+              }
+            }
+          },
+          {
+            "id": "e-c2f481a59fef",
+            "text": "来源系统第6轮观测，观测版本6，作用域scope-7995ce4c80ee。本轮复核发现对应旧观测已失效，新的具体事实尚未核定；本轮档案尚无本人该字段的确认值。本人申请是否仍在途尚未确定，目前没有具体值，也未提供穷尽候选；旧值不能继续作为本轮事实。"
+          }
+        ],
+        "pending": []
+      },
+      "restarted": false
+    }
+  ]
+}

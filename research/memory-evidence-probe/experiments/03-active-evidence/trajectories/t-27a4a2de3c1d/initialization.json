@@ -1,0 +1,99 @@
+{
+  "state": {
+    "scope": "scope-7995ce4c80ee",
+    "rule": {
+      "id": "d-687b3931b814",
+      "text": "来源系统规则原件，第1版，作用域scope-7995ce4c80ee，岗位“盐沼影像巡检助理”。完整资格条件为每周至少2天，且每周总排班时长至少25小时；总排班时长=每周天数×每天小时数，两项须同时满足，无认证替代或其他隐含条件。本版从载有它的本轮事件开始生效，并替代同作用域此前规则。天数为非负整数，每天小时数为非负数。行动约定：符合且没有在途申请为apply，符合且申请在途为wait；不符合且申请在途为withdraw，不符合且没有在途申请为none。报告recommend与资格一致。原文穷尽的全部可能情形结论相同则可确定目标，否则目标值为null且status=uncertain；确定目标status=current。这里只维护建议，不执行外部操作；已撤回申请不得再次建议撤回。",
+      "minDays": 2,
+      "minHours": 25
+    },
+    "facts": {
+      "days": {
+        "value": 4,
+        "alternatives": null,
+        "version": 1
+      },
+      "hours": {
+        "value": 8,
+        "alternatives": null,
+        "version": 1
+      },
+      "applied": {
+        "value": true,
+        "alternatives": null,
+        "version": 1
+      }
+    },
+    "memories": {
+      "match": {
+        "id": "match",
+        "role": "match",
+        "version": 2,
+        "values": {
+          "eligible": true
+        },
+        "status": "current",
+        "refs": [
+          "initial-t-27a4a2de3c1d",
+          "d-687b3931b814"
+        ],
+        "text": "每周4天、每天8小时，共32小时，满足至少2天且至少25小时，资格为true。"
+      },
+      "path": {
+        "id": "path",
+        "role": "path",
+        "version": 2,
+        "values": {
+          "next": "wait"
+        },
+        "status": "current",
+        "refs": [
+          "initial-t-27a4a2de3c1d",
+          "d-687b3931b814"
+        ],
+        "text": "每周4天、每天8小时共32小时，满足至少2天且至少25小时，资格符合；申请在途，故建议wait。"
+      },
+      "report": {
+        "id": "report",
+        "role": "report",
+        "version": 2,
+        "values": {
+          "recommend": true
+        },
+        "status": "current",
+        "refs": [
+          "initial-t-27a4a2de3c1d",
+          "d-687b3931b814"
+        ],
+        "text": "每周4天、每天8小时共32小时，满足至少2天且至少25小时，资格符合，recommend为true。"
+      }
+    },
+    "sources": [
+      {
+        "id": "initial-t-27a4a2de3c1d",
+        "text": "{\"days\":4,\"hours\":8,\"applied\":true}"
+      },
+      {
+        "id": "d-687b3931b814",
+        "text": "来源系统规则原件，第1版，作用域scope-7995ce4c80ee，岗位“盐沼影像巡检助理”。完整资格条件为每周至少2天，且每周总排班时长至少25小时；总排班时长=每周天数×每天小时数，两项须同时满足，无认证替代或其他隐含条件。本版从载有它的本轮事件开始生效，并替代同作用域此前规则。天数为非负整数，每天小时数为非负数。行动约定：符合且没有在途申请为apply，符合且申请在途为wait；不符合且申请在途为withdraw，不符合且没有在途申请为none。报告recommend与资格一致。原文穷尽的全部可能情形结论相同则可确定目标，否则目标值为null且status=uncertain；确定目标status=current。这里只维护建议，不执行外部操作；已撤回申请不得再次建议撤回。",
+        "minDays": 2,
+        "minHours": 25
+      }
+    ],
+    "pending": []
+  },
+  "log": [
+    {
+      "role": "match",
+      "status": "ok"
+    },
+    {
+      "role": "path",
+      "status": "ok"
+    },
+    {
+      "role": "report",
+      "status": "ok"
+    }
+  ]
+}

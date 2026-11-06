@@ -1,0 +1,315 @@
+{
+  "mode": "actual",
+  "event": {
+    "id": "e-e57f05c13e4b",
+    "text": "本轮请依据当前有效资料复核目标。前一版加严规则已撤销，现行标准恢复原门槛；旧版记录仅作历史。",
+    "receivedAt": "2033-04-04"
+  },
+  "memories": [
+    {
+      "id": "report-job",
+      "role": "report",
+      "values": {
+        "recommend": false
+      },
+      "refs": [
+        "d-ac5db5900d15",
+        "d-3dd5ffa81446",
+        "d-369ae906c1f5"
+      ],
+      "version": 2,
+      "status": "current",
+      "text": "{\"recommend\": false}"
+    },
+    {
+      "id": "profile-days",
+      "role": "profile",
+      "values": {
+        "days": 4
+      },
+      "refs": [
+        "d-70123c8402c1"
+      ],
+      "version": 2,
+      "status": "current",
+      "text": "{\"days\": 4}"
+    },
+    {
+      "id": "profile-hours",
+      "role": "profile",
+      "values": {
+        "hours": 4
+      },
+      "refs": [
+        "d-70123c8402c1"
+      ],
+      "version": 2,
+      "status": "current",
+      "text": "{\"hours\": 4}"
+    }
+  ],
+  "probe": null,
+  "sources": [
+    {
+      "id": "e-e57f05c13e4b",
+      "text": "本轮请依据当前有效资料复核目标。前一版加严规则已撤销，现行标准恢复原门槛；旧版记录仅作历史。"
+    },
+    {
+      "id": "d-5311a75a58f5",
+      "title": "展品维护记录助理现行规则",
+      "text": "展品维护记录助理的完整资格规则：每周至少2天且每周总时长至少13小时；总时长=天数×每天小时数。上述条件必须同时满足，无其他资格限制。",
+      "kind": "rule",
+      "scope": "e57f05c13e4b/job",
+      "supersedes": "d-d4594f7243aa",
+      "effectiveAt": "2033-04-03"
+    },
+    {
+      "id": "d-3dd5ffa81446",
+      "title": "任务约定",
+      "text": "当前资格不满足且申请仍在途，建议withdraw；不满足且没有在途申请，建议none；满足且尚未申请，建议apply；满足且申请在途，建议wait。已撤回的申请不得重复撤回。报告recommend与资格一致。事实未知时不得猜值；仅当所有证据允许的状态给出相同结论时输出确定值，否则输出null且标记uncertain。旧规则已失效又无法取得新规则时不得继续用旧标准判断。这里只维护建议，不执行外部操作。",
+      "kind": "rule",
+      "scope": "e57f05c13e4b/policy",
+      "effectiveAt": "2033-04-01"
+    },
+    {
+      "id": "d-70123c8402c1",
+      "title": "本人本轮确认登记",
+      "text": "每周4天。每天4小时。申请仍在途。",
+      "kind": "observation",
+      "scope": "e57f05c13e4b/person",
+      "supersedes": "d-369ae906c1f5",
+      "effectiveAt": "2033-04-03"
+    }
+  ],
+  "rules": [
+    "Only sources and the current event are evidence; memory and probes can be stale.",
+    "Hypothetical assignments never authorize factual writes or external actions.",
+    "Return structured outcomes and citations, not private reasoning.",
+    "Missing coverage or unknown consumer fields require verification, not a safe-stop claim."
+  ],
+  "owner": "report",
+  "targetId": "report-job",
+  "targetFields": [
+    "recommend"
+  ],
+  "sourceBindings": {
+    "profile-days": {
+      "target": "profile-days",
+      "createdAtVersion": 1,
+      "sources": [
+        {
+          "id": "d-369ae906c1f5",
+          "hash": "67a4e5e80ba9ac6f6ba43cc4a98929cc46ce2912d051b8db2d8dc7f2fbf76848"
+        }
+      ],
+      "dependencies": []
+    },
+    "profile-hours": {
+      "target": "profile-hours",
+      "createdAtVersion": 1,
+      "sources": [
+        {
+          "id": "d-369ae906c1f5",
+          "hash": "67a4e5e80ba9ac6f6ba43cc4a98929cc46ce2912d051b8db2d8dc7f2fbf76848"
+        }
+      ],
+      "dependencies": []
+    },
+    "profile-applied": {
+      "target": "profile-applied",
+      "createdAtVersion": 1,
+      "sources": [
+        {
+          "id": "d-369ae906c1f5",
+          "hash": "67a4e5e80ba9ac6f6ba43cc4a98929cc46ce2912d051b8db2d8dc7f2fbf76848"
+        }
+      ],
+      "dependencies": []
+    },
+    "match-job": {
+      "target": "match-job",
+      "createdAtVersion": 1,
+      "sources": [
+        {
+          "id": "d-ac5db5900d15",
+          "hash": "415b3948030eeac39ecd6d3fcadfda05ad71c0a3e5d601ec2a11600c642719fd"
+        },
+        {
+          "id": "d-3dd5ffa81446",
+          "hash": "08fc3b86be722a686cb8b0b0ba54e618910fe68a852979250d10d286f70971a7"
+        },
+        {
+          "id": "d-369ae906c1f5",
+          "hash": "67a4e5e80ba9ac6f6ba43cc4a98929cc46ce2912d051b8db2d8dc7f2fbf76848"
+        }
+      ],
+      "dependencies": [
+        {
+          "memoryId": "profile-days",
+          "fields": [
+            "days"
+          ]
+        },
+        {
+          "memoryId": "profile-hours",
+          "fields": [
+            "hours"
+          ]
+        }
+      ]
+    },
+    "path-job": {
+      "target": "path-job",
+      "createdAtVersion": 1,
+      "sources": [
+        {
+          "id": "d-ac5db5900d15",
+          "hash": "415b3948030eeac39ecd6d3fcadfda05ad71c0a3e5d601ec2a11600c642719fd"
+        },
+        {
+          "id": "d-3dd5ffa81446",
+          "hash": "08fc3b86be722a686cb8b0b0ba54e618910fe68a852979250d10d286f70971a7"
+        },
+        {
+          "id": "d-369ae906c1f5",
+          "hash": "67a4e5e80ba9ac6f6ba43cc4a98929cc46ce2912d051b8db2d8dc7f2fbf76848"
+        }
+      ],
+      "dependencies": [
+        {
+          "memoryId": "profile-days",
+          "fields": [
+            "days"
+          ]
+        },
+        {
+          "memoryId": "profile-hours",
+          "fields": [
+            "hours"
+          ]
+        },
+        {
+          "memoryId": "profile-applied",
+          "fields": [
+            "applied"
+          ]
+        }
+      ]
+    },
+    "report-job": {
+      "target": "report-job",
+      "createdAtVersion": 1,
+      "sources": [
+        {
+          "id": "d-ac5db5900d15",
+          "hash": "415b3948030eeac39ecd6d3fcadfda05ad71c0a3e5d601ec2a11600c642719fd"
+        },
+        {
+          "id": "d-3dd5ffa81446",
+          "hash": "08fc3b86be722a686cb8b0b0ba54e618910fe68a852979250d10d286f70971a7"
+        },
+        {
+          "id": "d-369ae906c1f5",
+          "hash": "67a4e5e80ba9ac6f6ba43cc4a98929cc46ce2912d051b8db2d8dc7f2fbf76848"
+        }
+      ],
+      "dependencies": [
+        {
+          "memoryId": "profile-days",
+          "fields": [
+            "days"
+          ]
+        },
+        {
+          "memoryId": "profile-hours",
+          "fields": [
+            "hours"
+          ]
+        }
+      ]
+    }
+  },
+  "retrievalReceipt": {
+    "kind": "retrieval-only-not-semantic-proof",
+    "targetId": "report-job",
+    "versions": {
+      "report-job": 2,
+      "profile-days": 2,
+      "profile-hours": 2
+    },
+    "sourceHashes": {
+      "d-5311a75a58f5": "9a44815e7a08579ed7d8c859daddb8af514062247c434db90c9878aedf08ec99",
+      "d-3dd5ffa81446": "08fc3b86be722a686cb8b0b0ba54e618910fe68a852979250d10d286f70971a7",
+      "d-70123c8402c1": "c028d2672b6f6dbd6d0ffd829e58086702a35c861c6fe99c01b42f9ca5f52ff0"
+    }
+  },
+  "assemblyIssues": [],
+  "localEvidence": {
+    "targetId": "report-job",
+    "originalSources": [
+      {
+        "id": "d-5311a75a58f5",
+        "title": "展品维护记录助理现行规则",
+        "text": "展品维护记录助理的完整资格规则：每周至少2天且每周总时长至少13小时；总时长=天数×每天小时数。上述条件必须同时满足，无其他资格限制。",
+        "kind": "rule",
+        "scope": "e57f05c13e4b/job",
+        "supersedes": "d-d4594f7243aa",
+        "effectiveAt": "2033-04-03"
+      },
+      {
+        "id": "d-3dd5ffa81446",
+        "title": "任务约定",
+        "text": "当前资格不满足且申请仍在途，建议withdraw；不满足且没有在途申请，建议none；满足且尚未申请，建议apply；满足且申请在途，建议wait。已撤回的申请不得重复撤回。报告recommend与资格一致。事实未知时不得猜值；仅当所有证据允许的状态给出相同结论时输出确定值，否则输出null且标记uncertain。旧规则已失效又无法取得新规则时不得继续用旧标准判断。这里只维护建议，不执行外部操作。",
+        "kind": "rule",
+        "scope": "e57f05c13e4b/policy",
+        "effectiveAt": "2033-04-01"
+      }
+    ],
+    "observedSources": [
+      {
+        "id": "e-e57f05c13e4b",
+        "text": "本轮请依据当前有效资料复核目标。前一版加严规则已撤销，现行标准恢复原门槛；旧版记录仅作历史。"
+      },
+      {
+        "id": "d-70123c8402c1",
+        "title": "本人本轮确认登记",
+        "text": "每周4天。每天4小时。申请仍在途。",
+        "kind": "observation",
+        "scope": "e57f05c13e4b/person",
+        "supersedes": "d-369ae906c1f5",
+        "effectiveAt": "2033-04-03"
+      }
+    ],
+    "currentInputs": [
+      {
+        "id": "profile-days",
+        "role": "profile",
+        "values": {
+          "days": 4
+        },
+        "refs": [
+          "d-70123c8402c1"
+        ],
+        "version": 2,
+        "status": "current",
+        "text": "{\"days\": 4}"
+      },
+      {
+        "id": "profile-hours",
+        "role": "profile",
+        "values": {
+          "hours": 4
+        },
+        "refs": [
+          "d-70123c8402c1"
+        ],
+        "version": 2,
+        "status": "current",
+        "text": "{\"hours\": 4}"
+      }
+    ],
+    "unresolvedInputs": [],
+    "derivedConclusions": [],
+    "warning": "来源哈希与依赖可追溯不等于依据完整或结论正确；适用性仍须复核。记忆正文不能替代规则原文。"
+  }
+}

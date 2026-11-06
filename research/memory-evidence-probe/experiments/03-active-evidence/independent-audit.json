@@ -1,0 +1,877 @@
+{
+  "status": "complete-local-independent-audit",
+  "reviewer": "AI code and result audit; not human review",
+  "noModelApisInvoked": true,
+  "changesFrozenFiles": false,
+  "frozenIntegrity": {
+    "registeredFiles": 23,
+    "hashMismatches": [],
+    "unregisteredRelativeImports": []
+  },
+  "completion": {
+    "trajectories": 12,
+    "armEventRecords": 216,
+    "initializationErrors": 0,
+    "initialStatesCorrect": 12,
+    "sharedInitialization": "Each arm cloned same persisted initialization state; 36 physical initialization calls assigned in full to each standalone strategy."
+  },
+  "ledger": {
+    "formal": {
+      "calls": 638,
+      "inputTokens": 1260053,
+      "outputTokens": 51487,
+      "totalTokens": 1311540
+    },
+    "interfaceSmoke": {
+      "calls": 22,
+      "inputTokens": 38008,
+      "outputTokens": 1917,
+      "totalTokens": 39925
+    },
+    "combined": {
+      "calls": 660,
+      "inputTokens": 1298061,
+      "outputTokens": 53404,
+      "totalTokens": 1351465
+    },
+    "initialization": {
+      "calls": 36,
+      "inputTokens": 40474,
+      "outputTokens": 2524,
+      "totalTokens": 42998
+    },
+    "standalone": {
+      "ordinary": {
+        "calls": 202,
+        "inputTokens": 375081,
+        "outputTokens": 15167,
+        "totalTokens": 390248
+      },
+      "extra-review": {
+        "calls": 264,
+        "inputTokens": 499477,
+        "outputTokens": 20571,
+        "totalTokens": 520048
+      },
+      "probe": {
+        "calls": 244,
+        "inputTokens": 466443,
+        "outputTokens": 20797,
+        "totalTokens": 487240
+      }
+    },
+    "callStates": {
+      "ok": 660
+    },
+    "finishReasons": {
+      "stop": 660
+    },
+    "modelEndpointCounts": [
+      {
+        "requested": "deepseek-flash",
+        "returned": "deepseek-flash",
+        "endpoint": "https://api.deepseek.com/chat/completions",
+        "calls": 660
+      }
+    ],
+    "observedGptCalls": 0,
+    "parseFailures": [],
+    "accountingIssues": [],
+    "reuse": "No reused calls; each physical call has exactly one use row. Shared initialization allocated logically in analysis, not duplicated in ledger."
+  },
+  "budgets": {
+    "maximumEvent": {
+      "calls": 5,
+      "inputReservationSum": 47704,
+      "outputReservationSum": 15360
+    },
+    "violations": [],
+    "traceIssues": [],
+    "concurrency": "Four workers own distinct per-trajectory/per-arm SQLite ledgers; each ledger has a sequential scheduler; reservation and use are atomic with WAL/busy_timeout."
+  },
+  "independentScores": {
+    "ordinary": {
+      "events": 72,
+      "roleCorrect": 161,
+      "correct": 52,
+      "evidenceSupportedFullState": 49,
+      "truthAndEvidenceSupportedFullState": 49,
+      "unsupportedKnownConclusions": 52,
+      "luckyPrimarySuccess": 3,
+      "eventErrors": 0,
+      "optionalFailures": 0,
+      "reads": 6,
+      "restartRecords": 12,
+      "calls": 166,
+      "roleCalls": 106,
+      "wrongFreshlyCommittedRole": 17,
+      "wrongCarriedRole": 38
+    },
+    "extra-review": {
+      "events": 72,
+      "roleCorrect": 206,
+      "correct": 66,
+      "evidenceSupportedFullState": 66,
+      "truthAndEvidenceSupportedFullState": 66,
+      "unsupportedKnownConclusions": 0,
+      "luckyPrimarySuccess": 0,
+      "eventErrors": 0,
+      "optionalFailures": 0,
+      "reads": 12,
+      "restartRecords": 12,
+      "calls": 228,
+      "roleCalls": 138,
+      "wrongFreshlyCommittedRole": 6,
+      "wrongCarriedRole": 4
+    },
+    "probe": {
+      "events": 72,
+      "roleCorrect": 197,
+      "correct": 64,
+      "evidenceSupportedFullState": 64,
+      "truthAndEvidenceSupportedFullState": 64,
+      "unsupportedKnownConclusions": 11,
+      "luckyPrimarySuccess": 0,
+      "eventErrors": 0,
+      "optionalFailures": 0,
+      "reads": 11,
+      "restartRecords": 12,
+      "calls": 208,
+      "roleCalls": 117,
+      "wrongFreshlyCommittedRole": 6,
+      "wrongCarriedRole": 13
+    }
+  },
+  "pairedPrimary": {
+    "ordinary -> extra-review": {
+      "wins": 16,
+      "losses": 2,
+      "ties": 54
+    },
+    "ordinary -> probe": {
+      "wins": 12,
+      "losses": 0,
+      "ties": 60
+    },
+    "extra-review -> probe": {
+      "wins": 2,
+      "losses": 4,
+      "ties": 66
+    }
+  },
+  "verificationDiscrepancies": {
+    "primary": [],
+    "evidenceSupport": [],
+    "summary": []
+  },
+  "counterexamples": {
+    "searches": 31,
+    "witnesses": 46,
+    "allLegal": true,
+    "allSemanticCorrect": true,
+    "allRefuteCurrent": true,
+    "availableTargetEvents": 56,
+    "missedTargetEvents": 10,
+    "emptySearchWithOpportunity": 3,
+    "misses": [
+      {
+        "trajectory": "t-1de1b582cd3d",
+        "eventId": "e-e5a7e1c93dae",
+        "role": "path"
+      },
+      {
+        "trajectory": "t-1de1b582cd3d",
+        "eventId": "e-e5a7e1c93dae",
+        "role": "report"
+      },
+      {
+        "trajectory": "t-ae9957729d2f",
+        "eventId": "e-b2f057e4e6f9",
+        "role": "path"
+      },
+      {
+        "trajectory": "t-ae9957729d2f",
+        "eventId": "e-b2f057e4e6f9",
+        "role": "report"
+      },
+      {
+        "trajectory": "t-3b383754136f",
+        "eventId": "e-3cf2f801bf68",
+        "role": "match"
+      },
+      {
+        "trajectory": "t-3b383754136f",
+        "eventId": "e-3cf2f801bf68",
+        "role": "path"
+      },
+      {
+        "trajectory": "t-3b383754136f",
+        "eventId": "e-3cf2f801bf68",
+        "role": "report"
+      },
+      {
+        "trajectory": "t-abac23fb7c45",
+        "eventId": "e-2eaef1d957ab",
+        "role": "match"
+      },
+      {
+        "trajectory": "t-abac23fb7c45",
+        "eventId": "e-2eaef1d957ab",
+        "role": "path"
+      },
+      {
+        "trajectory": "t-abac23fb7c45",
+        "eventId": "e-2eaef1d957ab",
+        "role": "report"
+      }
+    ],
+    "denominatorNote": "Recall conditional on actually executed finite-domain searches and current-known scheduled targets. It is not recall over all changes or open domains."
+  },
+  "outputAudit": {
+    "wrongFreshCommitments": [
+      {
+        "trajectory": "t-ae9957729d2f",
+        "eventId": "e-f57d171512f6",
+        "arm": "ordinary",
+        "role": "match",
+        "answer": {
+          "answer": "每天排班小时数本轮无确认值且无候选，无法判定是否满足每周至少34小时，资格未知。",
+          "values": {
+            "eligible": null
+          },
+          "status": "uncertain",
+          "refs": [
+            "d-36f0b264291a",
+            "e-f57d171512f6"
+          ]
+        },
+        "expected": {
+          "eligible": false
+        },
+        "expectedStatus": "current"
+      },
+      {
+        "trajectory": "t-ae9957729d2f",
+        "eventId": "e-f57d171512f6",
+        "arm": "ordinary",
+        "role": "path",
+        "answer": {
+          "answer": "每天排班小时数本轮无确认值且无候选，无法判定是否满足每周至少34小时，资格未知，故next为null。",
+          "values": {
+            "next": null
+          },
+          "status": "uncertain",
+          "refs": [
+            "d-36f0b264291a",
+            "e-f57d171512f6"
+          ]
+        },
+        "expected": {
+          "next": "withdraw"
+        },
+        "expectedStatus": "current"
+      },
+      {
+        "trajectory": "t-ae9957729d2f",
+        "eventId": "e-f57d171512f6",
+        "arm": "ordinary",
+        "role": "report",
+        "answer": {
+          "answer": "每天排班小时数本轮无确认值且无候选，无法判定是否满足每周至少34小时，资格未知，recommend为null。",
+          "values": {
+            "recommend": null
+          },
+          "status": "uncertain",
+          "refs": [
+            "d-36f0b264291a",
+            "e-f57d171512f6"
+          ]
+        },
+        "expected": {
+          "recommend": false
+        },
+        "expectedStatus": "current"
+      },
+      {
+        "trajectory": "t-ae9957729d2f",
+        "eventId": "e-b8bf16575018",
+        "arm": "ordinary",
+        "role": "path",
+        "answer": {
+          "answer": "每天排班小时数无确认值，无法判定是否满足每周至少34小时，资格未知，next为null。",
+          "values": {
+            "next": null
+          },
+          "status": "uncertain",
+          "refs": [
+            "d-36f0b264291a",
+            "e-f57d171512f6",
+            "e-b8bf16575018"
+          ]
+        },
+        "expected": {
+          "next": "none"
+        },
+        "expectedStatus": "current"
+      },
+      {
+        "trajectory": "t-ae9957729d2f",
+        "eventId": "e-f57d171512f6",
+        "arm": "extra-review",
+        "role": "match",
+        "answer": {
+          "answer": "每天小时数本轮无确认值且无候选，无法确定是否满足每周至少34小时，资格未知。",
+          "values": {
+            "eligible": null
+          },
+          "status": "uncertain",
+          "refs": [
+            "d-36f0b264291a",
+            "e-f57d171512f6"
+          ]
+        },
+        "expected": {
+          "eligible": false
+        },
+        "expectedStatus": "current"
+      },
+      {
+        "trajectory": "t-ae9957729d2f",
+        "eventId": "e-f57d171512f6",
+        "arm": "probe",
+        "role": "match",
+        "answer": {
+          "answer": "每天排班小时数本轮无确认值且无候选，无法确定是否满足每周至少34小时，资格未知。",
+          "values": {
+            "eligible": null
+          },
+          "status": "uncertain",
+          "refs": [
+            "d-36f0b264291a",
+            "e-f57d171512f6"
+          ]
+        },
+        "expected": {
+          "eligible": false
+        },
+        "expectedStatus": "current"
+      },
+      {
+        "trajectory": "t-3b383754136f",
+        "eventId": "e-a04d0c2e5a73",
+        "arm": "ordinary",
+        "role": "path",
+        "answer": {
+          "answer": "当前无在途申请；天数候选2或4与11小时组合均不满足每周至少42小时，故不符合资格，建议none。",
+          "values": {
+            "next": "none"
+          },
+          "status": "current",
+          "refs": [
+            "d-a08383f5177f",
+            "e-a04d0c2e5a73",
+            "e-3cf2f801bf68"
+          ]
+        },
+        "expected": {
+          "next": "apply"
+        },
+        "expectedStatus": "current"
+      },
+      {
+        "trajectory": "t-3b383754136f",
+        "eventId": "e-a04d0c2e5a73",
+        "arm": "probe",
+        "role": "path",
+        "answer": {
+          "answer": "当前无在途申请，且两种可能天数（2或4）乘11小时均不足42小时，资格不符，故next=none。",
+          "values": {
+            "next": "none"
+          },
+          "status": "current",
+          "refs": [
+            "d-a08383f5177f",
+            "e-a04d0c2e5a73",
+            "e-3cf2f801bf68"
+          ]
+        },
+        "expected": {
+          "next": "apply"
+        },
+        "expectedStatus": "current"
+      },
+      {
+        "trajectory": "t-27a4a2de3c1d",
+        "eventId": "e-50c10615c653",
+        "arm": "ordinary",
+        "role": "match",
+        "answer": {
+          "answer": "新版规则要求每周至少2天且总时长至少44小时；天数候选为3或4、每天10小时，两种情形总时长均≥44且天数≥2，资格均为true，故可确定。",
+          "values": {
+            "eligible": true
+          },
+          "status": "current",
+          "refs": [
+            "d-001b809c2d72",
+            "e-d0a8d681344f",
+            "e-50c10615c653"
+          ]
+        },
+        "expected": {
+          "eligible": false
+        },
+        "expectedStatus": "current"
+      },
+      {
+        "trajectory": "t-27a4a2de3c1d",
+        "eventId": "e-50c10615c653",
+        "arm": "ordinary",
+        "role": "path",
+        "answer": {
+          "answer": "新版规则下天数候选3或4、每天10小时均满足至少2天且总时长≥44小时，资格符合且申请在途，建议wait。",
+          "values": {
+            "next": "wait"
+          },
+          "status": "current",
+          "refs": [
+            "d-001b809c2d72",
+            "e-d0a8d681344f",
+            "e-50c10615c653"
+          ]
+        },
+        "expected": {
+          "next": "withdraw"
+        },
+        "expectedStatus": "current"
+      },
+      {
+        "trajectory": "t-27a4a2de3c1d",
+        "eventId": "e-50c10615c653",
+        "arm": "ordinary",
+        "role": "report",
+        "answer": {
+          "answer": "按新版规则，天数候选3或4、每天10小时均满足至少2天且总时长≥44小时，资格为true，故recommend为true。",
+          "values": {
+            "recommend": true
+          },
+          "status": "current",
+          "refs": [
+            "d-001b809c2d72",
+            "e-d0a8d681344f",
+            "e-50c10615c653"
+          ]
+        },
+        "expected": {
+          "recommend": false
+        },
+        "expectedStatus": "current"
+      },
+      {
+        "trajectory": "t-27a4a2de3c1d",
+        "eventId": "e-65c8bdc22242",
+        "arm": "ordinary",
+        "role": "path",
+        "answer": {
+          "answer": "资格符合（天数候选3或4、每天10小时均满足至少2天且总时长≥44小时），且当前无在途申请，故建议apply。",
+          "values": {
+            "next": "apply"
+          },
+          "status": "current",
+          "refs": [
+            "d-001b809c2d72",
+            "e-d0a8d681344f",
+            "e-65c8bdc22242"
+          ]
+        },
+        "expected": {
+          "next": "none"
+        },
+        "expectedStatus": "current"
+      },
+      {
+        "trajectory": "t-5d16683d3383",
+        "eventId": "e-617247097ae0",
+        "arm": "ordinary",
+        "role": "match",
+        "answer": {
+          "answer": "所有候选组合均不满足每周至少2天且总时长至少25小时，资格确定为false。",
+          "values": {
+            "eligible": false
+          },
+          "status": "current",
+          "refs": [
+            "d-395090b29515",
+            "e-617247097ae0"
+          ]
+        },
+        "expected": {
+          "eligible": true
+        },
+        "expectedStatus": "current"
+      },
+      {
+        "trajectory": "t-5d16683d3383",
+        "eventId": "e-617247097ae0",
+        "arm": "ordinary",
+        "role": "path",
+        "answer": {
+          "answer": "所有候选组合均不满足每周至少2天且总时长至少25小时，资格为false；申请在途，故建议withdraw。",
+          "values": {
+            "next": "withdraw"
+          },
+          "status": "current",
+          "refs": [
+            "d-395090b29515",
+            "e-617247097ae0"
+          ]
+        },
+        "expected": {
+          "next": "wait"
+        },
+        "expectedStatus": "current"
+      },
+      {
+        "trajectory": "t-5d16683d3383",
+        "eventId": "e-617247097ae0",
+        "arm": "ordinary",
+        "role": "report",
+        "answer": {
+          "answer": "所有候选组合均不满足每周至少2天且总时长至少25小时，report的recommend确定为false。",
+          "values": {
+            "recommend": false
+          },
+          "status": "current",
+          "refs": [
+            "d-395090b29515",
+            "e-617247097ae0"
+          ]
+        },
+        "expected": {
+          "recommend": true
+        },
+        "expectedStatus": "current"
+      },
+      {
+        "trajectory": "t-5d16683d3383",
+        "eventId": "e-2e5558eda9a0",
+        "arm": "ordinary",
+        "role": "match",
+        "answer": {
+          "answer": "每天小时数无确认值且无候选，无法判定是否满足新版资格，eligible为null。",
+          "values": {
+            "eligible": null
+          },
+          "status": "uncertain",
+          "refs": [
+            "d-ea510812dc8f",
+            "e-2e5558eda9a0"
+          ]
+        },
+        "expected": {
+          "eligible": false
+        },
+        "expectedStatus": "current"
+      },
+      {
+        "trajectory": "t-5d16683d3383",
+        "eventId": "e-2e5558eda9a0",
+        "arm": "ordinary",
+        "role": "path",
+        "answer": {
+          "answer": "每天小时数无确认值且无候选，无法判定资格，建议值不确定。",
+          "values": {
+            "next": null
+          },
+          "status": "uncertain",
+          "refs": [
+            "d-ea510812dc8f",
+            "e-2e5558eda9a0"
+          ]
+        },
+        "expected": {
+          "next": "withdraw"
+        },
+        "expectedStatus": "current"
+      },
+      {
+        "trajectory": "t-5d16683d3383",
+        "eventId": "e-2e5558eda9a0",
+        "arm": "ordinary",
+        "role": "report",
+        "answer": {
+          "answer": "每天小时数无确认值且无候选，无法判定是否满足新版资格，recommend为null。",
+          "values": {
+            "recommend": null
+          },
+          "status": "uncertain",
+          "refs": [
+            "d-ea510812dc8f",
+            "e-2e5558eda9a0"
+          ]
+        },
+        "expected": {
+          "recommend": false
+        },
+        "expectedStatus": "current"
+      },
+      {
+        "trajectory": "t-5d16683d3383",
+        "eventId": "e-2e5558eda9a0",
+        "arm": "extra-review",
+        "role": "match",
+        "answer": {
+          "answer": "每天小时数本轮无确认值且无候选，无法确定是否满足资格，eligible为null。",
+          "values": {
+            "eligible": null
+          },
+          "status": "uncertain",
+          "refs": [
+            "d-ea510812dc8f",
+            "e-2e5558eda9a0"
+          ]
+        },
+        "expected": {
+          "eligible": false
+        },
+        "expectedStatus": "current"
+      },
+      {
+        "trajectory": "t-5d16683d3383",
+        "eventId": "e-2e5558eda9a0",
+        "arm": "extra-review",
+        "role": "path",
+        "answer": {
+          "answer": "每天小时数本轮无确认值且无候选，无法确定是否符合资格，故next为null。",
+          "values": {
+            "next": null
+          },
+          "status": "uncertain",
+          "refs": [
+            "d-ea510812dc8f",
+            "e-2e5558eda9a0"
+          ]
+        },
+        "expected": {
+          "next": "withdraw"
+        },
+        "expectedStatus": "current"
+      },
+      {
+        "trajectory": "t-5d16683d3383",
+        "eventId": "e-2e5558eda9a0",
+        "arm": "extra-review",
+        "role": "report",
+        "answer": {
+          "answer": "每天小时数本轮无确认值且无候选，无法确定是否满足资格，recommend为null。",
+          "values": {
+            "recommend": null
+          },
+          "status": "uncertain",
+          "refs": [
+            "d-ea510812dc8f",
+            "e-2e5558eda9a0"
+          ]
+        },
+        "expected": {
+          "recommend": false
+        },
+        "expectedStatus": "current"
+      },
+      {
+        "trajectory": "t-5d16683d3383",
+        "eventId": "e-d0cd72f30b34",
+        "arm": "extra-review",
+        "role": "path",
+        "answer": {
+          "answer": "每天小时数无确认值，无法判定资格，next为null。",
+          "values": {
+            "next": null
+          },
+          "status": "uncertain",
+          "refs": [
+            "d-ea510812dc8f",
+            "e-2e5558eda9a0",
+            "e-d0cd72f30b34"
+          ]
+        },
+        "expected": {
+          "next": "none"
+        },
+        "expectedStatus": "current"
+      },
+      {
+        "trajectory": "t-5d16683d3383",
+        "eventId": "e-2e5558eda9a0",
+        "arm": "probe",
+        "role": "match",
+        "answer": {
+          "answer": "每天小时数本轮无确认值且无候选，无法确定资格，eligible为null。",
+          "values": {
+            "eligible": null
+          },
+          "status": "uncertain",
+          "refs": [
+            "d-ea510812dc8f",
+            "e-2e5558eda9a0"
+          ]
+        },
+        "expected": {
+          "eligible": false
+        },
+        "expectedStatus": "current"
+      },
+      {
+        "trajectory": "t-5d16683d3383",
+        "eventId": "e-2e5558eda9a0",
+        "arm": "probe",
+        "role": "path",
+        "answer": {
+          "answer": "每天小时数无确认值且无候选，资格无法确定，next为null。",
+          "values": {
+            "next": null
+          },
+          "status": "uncertain",
+          "refs": [
+            "d-ea510812dc8f",
+            "e-2e5558eda9a0"
+          ]
+        },
+        "expected": {
+          "next": "withdraw"
+        },
+        "expectedStatus": "current"
+      },
+      {
+        "trajectory": "t-5d16683d3383",
+        "eventId": "e-2e5558eda9a0",
+        "arm": "probe",
+        "role": "report",
+        "answer": {
+          "answer": "每天小时数本轮无确认值且无候选，资格无法确定，recommend为null。",
+          "values": {
+            "recommend": null
+          },
+          "status": "uncertain",
+          "refs": [
+            "d-ea510812dc8f",
+            "e-2e5558eda9a0"
+          ]
+        },
+        "expected": {
+          "recommend": false
+        },
+        "expectedStatus": "current"
+      },
+      {
+        "trajectory": "t-5d16683d3383",
+        "eventId": "e-d0cd72f30b34",
+        "arm": "probe",
+        "role": "path",
+        "answer": {
+          "answer": "每天小时数无确认值且无候选，资格无法确定，next为null。",
+          "values": {
+            "next": null
+          },
+          "status": "uncertain",
+          "refs": [
+            "d-ea510812dc8f",
+            "e-2e5558eda9a0",
+            "e-d0cd72f30b34"
+          ]
+        },
+        "expected": {
+          "next": "none"
+        },
+        "expectedStatus": "current"
+      },
+      {
+        "trajectory": "t-d907d0469333",
+        "eventId": "e-7e799f74bb91",
+        "arm": "ordinary",
+        "role": "path",
+        "answer": {
+          "answer": "当前无在途申请；天数候选1或3与12小时组合均不满足36小时，资格不符，故next=none。",
+          "values": {
+            "next": "none"
+          },
+          "status": "current",
+          "refs": [
+            "e-7e799f74bb91",
+            "d-4ae708c62fd8",
+            "e-1cc9bed0463c"
+          ]
+        },
+        "expected": {
+          "next": "apply"
+        },
+        "expectedStatus": "current"
+      },
+      {
+        "trajectory": "t-0ccdfd2c6a9e",
+        "eventId": "e-faee818e47bc",
+        "arm": "extra-review",
+        "role": "match",
+        "answer": {
+          "answer": "每天小时数本轮无确认值且无候选，无法判定是否满足每周至少40小时，资格不确定。",
+          "values": {
+            "eligible": null
+          },
+          "status": "uncertain",
+          "refs": [
+            "d-26d8058c09a3",
+            "e-faee818e47bc"
+          ]
+        },
+        "expected": {
+          "eligible": false
+        },
+        "expectedStatus": "current"
+      },
+      {
+        "trajectory": "t-3e942dc27cf5",
+        "eventId": "e-6bbe1363bf30",
+        "arm": "ordinary",
+        "role": "path",
+        "answer": {
+          "answer": "两种候选天数（3或5）乘10小时均不足47小时，资格不符；最新回执确认无在途申请，故建议none。",
+          "values": {
+            "next": "none"
+          },
+          "status": "current",
+          "refs": [
+            "d-58a9ba3cb39b",
+            "e-18c45ea18850",
+            "e-6bbe1363bf30"
+          ]
+        },
+        "expected": {
+          "next": "apply"
+        },
+        "expectedStatus": "current"
+      }
+    ],
+    "coverage": "Read all primary-incorrect freshly committed role answers (all three arms), plus all probe-error plan/extra outputs. Did not semantically annotate every successful answer. Programmatic type/value/status, usage and gold/support checks cover all 216 records.",
+    "findings": [
+      "No transport/schema/parse failures or output truncations. Wrong committed answers show business/threshold inference errors, not schema rejection.",
+      "Open-hour unknown can be overgeneralized: days already below minimum implies certain ineligibility, but models sometimes return null. This common failure occurs outside finite-world probe triggering.",
+      "t-3b383754136f/e-3cf2f801bf68: probe emits no witness while days=4, hours=11 meets minDays=3,minHours=42; text incorrectly treats 4 as below 3. Ordinary planner repeats error; no certificate/skip authorization occurred. Errors persist through subsequent events.",
+      "Wrong freshly committed answers inspected were internally aligned with their wrong value; no answer-versus-field contradiction established in this inspected subset. Old wrong memories persisting without a new write are separately counted."
+    ]
+  },
+  "interpretation": {
+    "conclusion": "Probe mechanism executes meaningful evidence obligations but has not demonstrated independent quality gain over unrestricted extra-review. 64/72 vs 66/72, paired 2 wins/4 losses. Probe spends fewer calls/tokens, but loses quality; this is an observed trade-off, not maintained-quality efficiency.",
+    "standaloneTokenReductionProbeVsExtra": 0.0630864843245239,
+    "obligations": "46 probe obligations all logged completed refers to role writes, not all hypotheses resolved; 15 remain unresolved according to evidence audit. 31 requested evidence completions are per obligation and share 11 distinct reads.",
+    "primaryWrongBranchesWarning": "summary.wrongBranches remains a legacy V10 field checking branches, while V11 emits witnesses. Zero in this field is not semantic verification; independent witness checks above establish 46/46 for this run.",
+    "supportMethod": "Independent Cartesian evaluator uses actual recorded facts/current rule. Open nonnegative days/hours covered by zero and threshold-exceeding representative values; applied uses both booleans. Unread confirmation does not support guesses.",
+    "definitionPrespecified": true,
+    "implementationFrozen": true,
+    "limitations": [
+      "12 correlated synthetic development trajectories and one sample per arm; same sequence templates as V10, not held-out generalization.",
+      "Hand-supplied normalized observations/domains/dependencies; no automatic memory extraction evidence.",
+      "The three roles share one scheduler/model; disk reload is not context compression.",
+      "No GPT/Claude validation for V11. Token totals are usage, not a currency invoice; cache-sensitive monetary fees require provider pricing.",
+      "Enhanced arms differ in read eligibility: probe needs a valid witness while extra-review may freely request read. Results test the complete mechanism, not counterexample wording alone."
+    ]
+  }
+}

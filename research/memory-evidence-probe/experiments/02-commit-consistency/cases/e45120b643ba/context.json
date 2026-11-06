@@ -1,0 +1,340 @@
+{
+  "mode": "actual",
+  "event": {
+    "id": "e-e45120b643ba",
+    "text": "请复核孟溪的展陈技术助理相关当前目标。本轮安排已登记，按当前有效原件维护结论。",
+    "receivedAt": "2032-07-04"
+  },
+  "memories": [
+    {
+      "id": "path-job",
+      "role": "path",
+      "version": 1,
+      "values": {
+        "next": "apply"
+      },
+      "refs": [
+        "d-c4c16060c828",
+        "d-645105cc7413",
+        "d-9b86cdf38a2b"
+      ],
+      "text": "{\"next\": \"apply\"}",
+      "status": "current"
+    },
+    {
+      "id": "profile-days",
+      "role": "profile",
+      "version": 2,
+      "values": {
+        "days": 2
+      },
+      "refs": [
+        "d-b7f8699f9206"
+      ],
+      "text": "本轮days记录：2。",
+      "status": "current"
+    },
+    {
+      "id": "profile-hours",
+      "role": "profile",
+      "version": 2,
+      "values": {
+        "hours": 6
+      },
+      "refs": [
+        "d-b7f8699f9206"
+      ],
+      "text": "本轮hours记录：6。",
+      "status": "current"
+    },
+    {
+      "id": "profile-applied",
+      "role": "profile",
+      "version": 2,
+      "values": {
+        "applied": true
+      },
+      "refs": [
+        "d-b7f8699f9206"
+      ],
+      "text": "本轮applied记录：True。",
+      "status": "current"
+    }
+  ],
+  "probe": null,
+  "sources": [
+    {
+      "id": "e-e45120b643ba",
+      "text": "请复核孟溪的展陈技术助理相关当前目标。本轮安排已登记，按当前有效原件维护结论。"
+    },
+    {
+      "id": "d-c4c16060c828",
+      "title": "行动与报告约定",
+      "text": "建议字段next：符合且未申请用apply；符合且已申请用wait；不符合且已申请用withdraw；不符合且未申请用none。报告recommend与资格一致。事实未确定时不能猜值；若原文允许的全部可能状态下输出相同，则输出该确定值，否则输出null且status=uncertain。只改当前目标，不实际执行申请。最新有效原件可纠正尚未同步的上游记忆。",
+      "kind": "rule",
+      "scope": "e45120b643ba/policy",
+      "effectiveAt": "2032-07-01"
+    },
+    {
+      "id": "d-645105cc7413",
+      "title": "展陈技术助理资格原件",
+      "text": "展陈技术助理完整资格规则：每周至少3天，且天数乘每天小时数至少17小时。两条件须同时满足，没有其他隐含条件。",
+      "kind": "rule",
+      "scope": "e45120b643ba/job",
+      "effectiveAt": "2032-07-01"
+    },
+    {
+      "id": "d-b7f8699f9206",
+      "title": "本轮本人确认登记",
+      "text": "孟溪本轮每周2天；每天6小时。申请已提交且仍在途。 未确定字段的各选项可独立组合。",
+      "kind": "observation",
+      "scope": "e45120b643ba/person",
+      "supersedes": "d-9b86cdf38a2b",
+      "effectiveAt": "2032-07-03"
+    }
+  ],
+  "rules": [
+    "Only sources and the current event are evidence; memory and probes can be stale.",
+    "Hypothetical assignments never authorize factual writes or external actions.",
+    "Return structured outcomes and citations, not private reasoning.",
+    "Missing coverage or unknown consumer fields require verification, not a safe-stop claim."
+  ],
+  "owner": "path",
+  "targetId": "path-job",
+  "targetFields": [
+    "next"
+  ],
+  "sourceBindings": {
+    "profile-days": {
+      "target": "profile-days",
+      "createdAtVersion": 1,
+      "sources": [
+        {
+          "id": "d-9b86cdf38a2b",
+          "hash": "038e6771b003e6fdcdc4773c5b38ab894738a885109290e88526ddcfaf506891"
+        }
+      ],
+      "dependencies": []
+    },
+    "profile-hours": {
+      "target": "profile-hours",
+      "createdAtVersion": 1,
+      "sources": [
+        {
+          "id": "d-9b86cdf38a2b",
+          "hash": "038e6771b003e6fdcdc4773c5b38ab894738a885109290e88526ddcfaf506891"
+        }
+      ],
+      "dependencies": []
+    },
+    "profile-applied": {
+      "target": "profile-applied",
+      "createdAtVersion": 1,
+      "sources": [
+        {
+          "id": "d-9b86cdf38a2b",
+          "hash": "038e6771b003e6fdcdc4773c5b38ab894738a885109290e88526ddcfaf506891"
+        }
+      ],
+      "dependencies": []
+    },
+    "match-job": {
+      "target": "match-job",
+      "createdAtVersion": 1,
+      "sources": [
+        {
+          "id": "d-645105cc7413",
+          "hash": "b3b9aeccdc17adc2f7431f7bb1307b240321e282aba16d6f8ec44d5f9b7cd8cf"
+        },
+        {
+          "id": "d-c4c16060c828",
+          "hash": "f63e6d973d56359870e54eb21ff0ef6265e1a8e79b89bea30b96fc6ca3859a6a"
+        },
+        {
+          "id": "d-9b86cdf38a2b",
+          "hash": "038e6771b003e6fdcdc4773c5b38ab894738a885109290e88526ddcfaf506891"
+        }
+      ],
+      "dependencies": [
+        {
+          "memoryId": "profile-days",
+          "fields": [
+            "days"
+          ]
+        },
+        {
+          "memoryId": "profile-hours",
+          "fields": [
+            "hours"
+          ]
+        }
+      ]
+    },
+    "path-job": {
+      "target": "path-job",
+      "createdAtVersion": 1,
+      "sources": [
+        {
+          "id": "d-c4c16060c828",
+          "hash": "f63e6d973d56359870e54eb21ff0ef6265e1a8e79b89bea30b96fc6ca3859a6a"
+        },
+        {
+          "id": "d-645105cc7413",
+          "hash": "b3b9aeccdc17adc2f7431f7bb1307b240321e282aba16d6f8ec44d5f9b7cd8cf"
+        },
+        {
+          "id": "d-9b86cdf38a2b",
+          "hash": "038e6771b003e6fdcdc4773c5b38ab894738a885109290e88526ddcfaf506891"
+        }
+      ],
+      "dependencies": [
+        {
+          "memoryId": "profile-days",
+          "fields": [
+            "days"
+          ]
+        },
+        {
+          "memoryId": "profile-hours",
+          "fields": [
+            "hours"
+          ]
+        },
+        {
+          "memoryId": "profile-applied",
+          "fields": [
+            "applied"
+          ]
+        }
+      ]
+    },
+    "report-job": {
+      "target": "report-job",
+      "createdAtVersion": 1,
+      "sources": [
+        {
+          "id": "d-c4c16060c828",
+          "hash": "f63e6d973d56359870e54eb21ff0ef6265e1a8e79b89bea30b96fc6ca3859a6a"
+        },
+        {
+          "id": "d-645105cc7413",
+          "hash": "b3b9aeccdc17adc2f7431f7bb1307b240321e282aba16d6f8ec44d5f9b7cd8cf"
+        },
+        {
+          "id": "d-9b86cdf38a2b",
+          "hash": "038e6771b003e6fdcdc4773c5b38ab894738a885109290e88526ddcfaf506891"
+        }
+      ],
+      "dependencies": [
+        {
+          "memoryId": "profile-days",
+          "fields": [
+            "days"
+          ]
+        },
+        {
+          "memoryId": "profile-hours",
+          "fields": [
+            "hours"
+          ]
+        }
+      ]
+    }
+  },
+  "retrievalReceipt": {
+    "kind": "retrieval-only-not-semantic-proof",
+    "targetId": "path-job",
+    "versions": {
+      "path-job": 1,
+      "profile-days": 2,
+      "profile-hours": 2,
+      "profile-applied": 2
+    },
+    "sourceHashes": {
+      "d-c4c16060c828": "f63e6d973d56359870e54eb21ff0ef6265e1a8e79b89bea30b96fc6ca3859a6a",
+      "d-645105cc7413": "b3b9aeccdc17adc2f7431f7bb1307b240321e282aba16d6f8ec44d5f9b7cd8cf",
+      "d-b7f8699f9206": "dec6c193b9fa54a5501efa1ad7e6d75bc83d8a2d27542bbd6d0b030ee79927f6"
+    }
+  },
+  "assemblyIssues": [],
+  "localEvidence": {
+    "targetId": "path-job",
+    "originalSources": [
+      {
+        "id": "d-c4c16060c828",
+        "title": "行动与报告约定",
+        "text": "建议字段next：符合且未申请用apply；符合且已申请用wait；不符合且已申请用withdraw；不符合且未申请用none。报告recommend与资格一致。事实未确定时不能猜值；若原文允许的全部可能状态下输出相同，则输出该确定值，否则输出null且status=uncertain。只改当前目标，不实际执行申请。最新有效原件可纠正尚未同步的上游记忆。",
+        "kind": "rule",
+        "scope": "e45120b643ba/policy",
+        "effectiveAt": "2032-07-01"
+      },
+      {
+        "id": "d-645105cc7413",
+        "title": "展陈技术助理资格原件",
+        "text": "展陈技术助理完整资格规则：每周至少3天，且天数乘每天小时数至少17小时。两条件须同时满足，没有其他隐含条件。",
+        "kind": "rule",
+        "scope": "e45120b643ba/job",
+        "effectiveAt": "2032-07-01"
+      }
+    ],
+    "observedSources": [
+      {
+        "id": "e-e45120b643ba",
+        "text": "请复核孟溪的展陈技术助理相关当前目标。本轮安排已登记，按当前有效原件维护结论。"
+      },
+      {
+        "id": "d-b7f8699f9206",
+        "title": "本轮本人确认登记",
+        "text": "孟溪本轮每周2天；每天6小时。申请已提交且仍在途。 未确定字段的各选项可独立组合。",
+        "kind": "observation",
+        "scope": "e45120b643ba/person",
+        "supersedes": "d-9b86cdf38a2b",
+        "effectiveAt": "2032-07-03"
+      }
+    ],
+    "currentInputs": [
+      {
+        "id": "profile-days",
+        "role": "profile",
+        "version": 2,
+        "values": {
+          "days": 2
+        },
+        "refs": [
+          "d-b7f8699f9206"
+        ],
+        "text": "本轮days记录：2。",
+        "status": "current"
+      },
+      {
+        "id": "profile-hours",
+        "role": "profile",
+        "version": 2,
+        "values": {
+          "hours": 6
+        },
+        "refs": [
+          "d-b7f8699f9206"
+        ],
+        "text": "本轮hours记录：6。",
+        "status": "current"
+      },
+      {
+        "id": "profile-applied",
+        "role": "profile",
+        "version": 2,
+        "values": {
+          "applied": true
+        },
+        "refs": [
+          "d-b7f8699f9206"
+        ],
+        "text": "本轮applied记录：True。",
+        "status": "current"
+      }
+    ],
+    "unresolvedInputs": [],
+    "derivedConclusions": [],
+    "warning": "来源哈希与依赖可追溯不等于依据完整或结论正确；适用性仍须复核。记忆正文不能替代规则原文。"
+  }
+}

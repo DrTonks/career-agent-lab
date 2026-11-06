@@ -1,0 +1,314 @@
+{
+  "mode": "actual",
+  "event": {
+    "id": "e-1704cdfaf7c9",
+    "text": "请复核唐序的田野资料整理助理相关当前目标。本轮安排已登记，按当前有效原件维护结论。",
+    "receivedAt": "2032-07-04"
+  },
+  "memories": [
+    {
+      "id": "report-job",
+      "role": "report",
+      "version": 1,
+      "values": {
+        "recommend": true
+      },
+      "refs": [
+        "d-424ea260fc06",
+        "d-fc1ff778ae10",
+        "d-7762e00d7cbe"
+      ],
+      "text": "{\"recommend\": true}",
+      "status": "current"
+    },
+    {
+      "id": "profile-days",
+      "role": "profile",
+      "version": 2,
+      "values": {
+        "days": null
+      },
+      "refs": [
+        "d-9e913488237b"
+      ],
+      "text": "本轮days记录：None。",
+      "status": "uncertain"
+    },
+    {
+      "id": "profile-hours",
+      "role": "profile",
+      "version": 2,
+      "values": {
+        "hours": 4
+      },
+      "refs": [
+        "d-9e913488237b"
+      ],
+      "text": "本轮hours记录：4。",
+      "status": "current"
+    }
+  ],
+  "probe": null,
+  "sources": [
+    {
+      "id": "e-1704cdfaf7c9",
+      "text": "请复核唐序的田野资料整理助理相关当前目标。本轮安排已登记，按当前有效原件维护结论。"
+    },
+    {
+      "id": "d-424ea260fc06",
+      "title": "行动与报告约定",
+      "text": "建议字段next：符合且未申请用apply；符合且已申请用wait；不符合且已申请用withdraw；不符合且未申请用none。报告recommend与资格一致。事实未确定时不能猜值；若原文允许的全部可能状态下输出相同，则输出该确定值，否则输出null且status=uncertain。只改当前目标，不实际执行申请。最新有效原件可纠正尚未同步的上游记忆。",
+      "kind": "rule",
+      "scope": "1704cdfaf7c9/policy",
+      "effectiveAt": "2032-07-01"
+    },
+    {
+      "id": "d-fc1ff778ae10",
+      "title": "田野资料整理助理资格原件",
+      "text": "田野资料整理助理完整资格规则：每周至少3天，且天数乘每天小时数至少11小时。两条件须同时满足，没有其他隐含条件。",
+      "kind": "rule",
+      "scope": "1704cdfaf7c9/job",
+      "effectiveAt": "2032-07-01"
+    },
+    {
+      "id": "d-9e913488237b",
+      "title": "本轮本人确认登记",
+      "text": "唐序本轮每周3或4天，尚未确定是哪一种，所列选项穷尽所有可能；每天4小时。无在途申请。 未确定字段的各选项可独立组合。",
+      "kind": "observation",
+      "scope": "1704cdfaf7c9/person",
+      "supersedes": "d-7762e00d7cbe",
+      "effectiveAt": "2032-07-03"
+    }
+  ],
+  "rules": [
+    "Only sources and the current event are evidence; memory and probes can be stale.",
+    "Hypothetical assignments never authorize factual writes or external actions.",
+    "Return structured outcomes and citations, not private reasoning.",
+    "Missing coverage or unknown consumer fields require verification, not a safe-stop claim."
+  ],
+  "owner": "report",
+  "targetId": "report-job",
+  "targetFields": [
+    "recommend"
+  ],
+  "sourceBindings": {
+    "profile-days": {
+      "target": "profile-days",
+      "createdAtVersion": 1,
+      "sources": [
+        {
+          "id": "d-7762e00d7cbe",
+          "hash": "87f79f4ad5ba1644cd84e39ac026b65148e6e4e79f6d113ca10057db33b1a5fc"
+        }
+      ],
+      "dependencies": []
+    },
+    "profile-hours": {
+      "target": "profile-hours",
+      "createdAtVersion": 1,
+      "sources": [
+        {
+          "id": "d-7762e00d7cbe",
+          "hash": "87f79f4ad5ba1644cd84e39ac026b65148e6e4e79f6d113ca10057db33b1a5fc"
+        }
+      ],
+      "dependencies": []
+    },
+    "profile-applied": {
+      "target": "profile-applied",
+      "createdAtVersion": 1,
+      "sources": [
+        {
+          "id": "d-7762e00d7cbe",
+          "hash": "87f79f4ad5ba1644cd84e39ac026b65148e6e4e79f6d113ca10057db33b1a5fc"
+        }
+      ],
+      "dependencies": []
+    },
+    "match-job": {
+      "target": "match-job",
+      "createdAtVersion": 1,
+      "sources": [
+        {
+          "id": "d-fc1ff778ae10",
+          "hash": "968967a1fb10774f400066c9b0331eb29a4a707c38752bc6e5ccd48851438fe3"
+        },
+        {
+          "id": "d-424ea260fc06",
+          "hash": "4a87fc0b835f7f3d6486de0554a7e8b4d161578504e2115c5cbc65abeba58e0f"
+        },
+        {
+          "id": "d-7762e00d7cbe",
+          "hash": "87f79f4ad5ba1644cd84e39ac026b65148e6e4e79f6d113ca10057db33b1a5fc"
+        }
+      ],
+      "dependencies": [
+        {
+          "memoryId": "profile-days",
+          "fields": [
+            "days"
+          ]
+        },
+        {
+          "memoryId": "profile-hours",
+          "fields": [
+            "hours"
+          ]
+        }
+      ]
+    },
+    "path-job": {
+      "target": "path-job",
+      "createdAtVersion": 1,
+      "sources": [
+        {
+          "id": "d-424ea260fc06",
+          "hash": "4a87fc0b835f7f3d6486de0554a7e8b4d161578504e2115c5cbc65abeba58e0f"
+        },
+        {
+          "id": "d-fc1ff778ae10",
+          "hash": "968967a1fb10774f400066c9b0331eb29a4a707c38752bc6e5ccd48851438fe3"
+        },
+        {
+          "id": "d-7762e00d7cbe",
+          "hash": "87f79f4ad5ba1644cd84e39ac026b65148e6e4e79f6d113ca10057db33b1a5fc"
+        }
+      ],
+      "dependencies": [
+        {
+          "memoryId": "profile-days",
+          "fields": [
+            "days"
+          ]
+        },
+        {
+          "memoryId": "profile-hours",
+          "fields": [
+            "hours"
+          ]
+        },
+        {
+          "memoryId": "profile-applied",
+          "fields": [
+            "applied"
+          ]
+        }
+      ]
+    },
+    "report-job": {
+      "target": "report-job",
+      "createdAtVersion": 1,
+      "sources": [
+        {
+          "id": "d-424ea260fc06",
+          "hash": "4a87fc0b835f7f3d6486de0554a7e8b4d161578504e2115c5cbc65abeba58e0f"
+        },
+        {
+          "id": "d-fc1ff778ae10",
+          "hash": "968967a1fb10774f400066c9b0331eb29a4a707c38752bc6e5ccd48851438fe3"
+        },
+        {
+          "id": "d-7762e00d7cbe",
+          "hash": "87f79f4ad5ba1644cd84e39ac026b65148e6e4e79f6d113ca10057db33b1a5fc"
+        }
+      ],
+      "dependencies": [
+        {
+          "memoryId": "profile-days",
+          "fields": [
+            "days"
+          ]
+        },
+        {
+          "memoryId": "profile-hours",
+          "fields": [
+            "hours"
+          ]
+        }
+      ]
+    }
+  },
+  "retrievalReceipt": {
+    "kind": "retrieval-only-not-semantic-proof",
+    "targetId": "report-job",
+    "versions": {
+      "report-job": 1,
+      "profile-days": 2,
+      "profile-hours": 2
+    },
+    "sourceHashes": {
+      "d-424ea260fc06": "4a87fc0b835f7f3d6486de0554a7e8b4d161578504e2115c5cbc65abeba58e0f",
+      "d-fc1ff778ae10": "968967a1fb10774f400066c9b0331eb29a4a707c38752bc6e5ccd48851438fe3",
+      "d-9e913488237b": "57a5d2a4d55d6421dbf09c8e3678f98b6850f68b0f252c9edf31b7fc107a0efc"
+    }
+  },
+  "assemblyIssues": [],
+  "localEvidence": {
+    "targetId": "report-job",
+    "originalSources": [
+      {
+        "id": "d-424ea260fc06",
+        "title": "行动与报告约定",
+        "text": "建议字段next：符合且未申请用apply；符合且已申请用wait；不符合且已申请用withdraw；不符合且未申请用none。报告recommend与资格一致。事实未确定时不能猜值；若原文允许的全部可能状态下输出相同，则输出该确定值，否则输出null且status=uncertain。只改当前目标，不实际执行申请。最新有效原件可纠正尚未同步的上游记忆。",
+        "kind": "rule",
+        "scope": "1704cdfaf7c9/policy",
+        "effectiveAt": "2032-07-01"
+      },
+      {
+        "id": "d-fc1ff778ae10",
+        "title": "田野资料整理助理资格原件",
+        "text": "田野资料整理助理完整资格规则：每周至少3天，且天数乘每天小时数至少11小时。两条件须同时满足，没有其他隐含条件。",
+        "kind": "rule",
+        "scope": "1704cdfaf7c9/job",
+        "effectiveAt": "2032-07-01"
+      }
+    ],
+    "observedSources": [
+      {
+        "id": "e-1704cdfaf7c9",
+        "text": "请复核唐序的田野资料整理助理相关当前目标。本轮安排已登记，按当前有效原件维护结论。"
+      },
+      {
+        "id": "d-9e913488237b",
+        "title": "本轮本人确认登记",
+        "text": "唐序本轮每周3或4天，尚未确定是哪一种，所列选项穷尽所有可能；每天4小时。无在途申请。 未确定字段的各选项可独立组合。",
+        "kind": "observation",
+        "scope": "1704cdfaf7c9/person",
+        "supersedes": "d-7762e00d7cbe",
+        "effectiveAt": "2032-07-03"
+      }
+    ],
+    "currentInputs": [
+      {
+        "id": "profile-hours",
+        "role": "profile",
+        "version": 2,
+        "values": {
+          "hours": 4
+        },
+        "refs": [
+          "d-9e913488237b"
+        ],
+        "text": "本轮hours记录：4。",
+        "status": "current"
+      }
+    ],
+    "unresolvedInputs": [
+      {
+        "id": "profile-days",
+        "role": "profile",
+        "version": 2,
+        "values": {
+          "days": null
+        },
+        "refs": [
+          "d-9e913488237b"
+        ],
+        "text": "本轮days记录：None。",
+        "status": "uncertain"
+      }
+    ],
+    "derivedConclusions": [],
+    "warning": "来源哈希与依赖可追溯不等于依据完整或结论正确；适用性仍须复核。记忆正文不能替代规则原文。"
+  }
+}

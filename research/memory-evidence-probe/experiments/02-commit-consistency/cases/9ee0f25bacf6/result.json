@@ -1,0 +1,349 @@
+{
+  "caseId": "9ee0f25bacf6",
+  "contextHash": "5c4fb0458297113688ccb5b86ad784a4eb175761d4a91a333d67ac3901e9b7ed",
+  "records": {
+    "answer-first": {
+      "status": "ok",
+      "decision": {
+        "patches": [
+          {
+            "memoryId": "path-job",
+            "expectedVersion": 2,
+            "values": {
+              "next": "apply"
+            },
+            "refs": [
+              "d-3d0578d90713",
+              "d-dcb16d4e2c72",
+              "d-d97ab838e3fe"
+            ],
+            "status": "current",
+            "text": "{\"next\": \"apply\"}"
+          }
+        ],
+        "answer": "按现行规则复核：每周4天、每天6小时，总时长24小时，满足每周至少2天且总时长至少18小时；且没有在途申请，故建议应为apply，而非none。",
+        "externalAction": "none",
+        "needsEvidence": false
+      },
+      "finalMemories": [
+        {
+          "id": "profile-days",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"days\": 4}",
+          "values": {
+            "days": 4
+          },
+          "refs": [
+            "d-d97ab838e3fe"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-hours",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"hours\": 6}",
+          "values": {
+            "hours": 6
+          },
+          "refs": [
+            "d-d97ab838e3fe"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-applied",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"applied\": false}",
+          "values": {
+            "applied": false
+          },
+          "refs": [
+            "d-d97ab838e3fe"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "match-job",
+          "role": "match",
+          "version": 2,
+          "text": "{\"eligible\": false}",
+          "values": {
+            "eligible": false
+          },
+          "refs": [
+            "d-5e34da20e4ce",
+            "d-dcb16d4e2c72",
+            "d-49d540116f1e"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "path-job",
+          "role": "path",
+          "version": 3,
+          "text": "{\"next\": \"apply\"}",
+          "values": {
+            "next": "apply"
+          },
+          "refs": [
+            "d-3d0578d90713",
+            "d-dcb16d4e2c72",
+            "d-d97ab838e3fe"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "report-job",
+          "role": "report",
+          "version": 2,
+          "text": "{\"recommend\": false}",
+          "values": {
+            "recommend": false
+          },
+          "refs": [
+            "d-5e34da20e4ce",
+            "d-dcb16d4e2c72",
+            "d-49d540116f1e"
+          ],
+          "status": "current"
+        }
+      ]
+    },
+    "original": {
+      "status": "ok",
+      "decision": {
+        "patches": [
+          {
+            "memoryId": "path-job",
+            "expectedVersion": 2,
+            "values": {
+              "next": "apply"
+            },
+            "refs": [
+              "d-3d0578d90713",
+              "d-dcb16d4e2c72",
+              "d-d97ab838e3fe"
+            ],
+            "status": "current",
+            "text": "{\"next\": \"apply\"}"
+          }
+        ],
+        "answer": "按现行规则：每周4天、每天6小时，总时长24小时，满足每周至少2天且总时长至少18小时；且没有在途申请，建议apply。",
+        "externalAction": "none",
+        "needsEvidence": false
+      },
+      "finalMemories": [
+        {
+          "id": "profile-days",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"days\": 4}",
+          "values": {
+            "days": 4
+          },
+          "refs": [
+            "d-d97ab838e3fe"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-hours",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"hours\": 6}",
+          "values": {
+            "hours": 6
+          },
+          "refs": [
+            "d-d97ab838e3fe"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-applied",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"applied\": false}",
+          "values": {
+            "applied": false
+          },
+          "refs": [
+            "d-d97ab838e3fe"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "match-job",
+          "role": "match",
+          "version": 2,
+          "text": "{\"eligible\": false}",
+          "values": {
+            "eligible": false
+          },
+          "refs": [
+            "d-5e34da20e4ce",
+            "d-dcb16d4e2c72",
+            "d-49d540116f1e"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "path-job",
+          "role": "path",
+          "version": 3,
+          "text": "{\"next\": \"apply\"}",
+          "values": {
+            "next": "apply"
+          },
+          "refs": [
+            "d-3d0578d90713",
+            "d-dcb16d4e2c72",
+            "d-d97ab838e3fe"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "report-job",
+          "role": "report",
+          "version": 2,
+          "text": "{\"recommend\": false}",
+          "values": {
+            "recommend": false
+          },
+          "refs": [
+            "d-5e34da20e4ce",
+            "d-dcb16d4e2c72",
+            "d-49d540116f1e"
+          ],
+          "status": "current"
+        }
+      ]
+    },
+    "review": {
+      "status": "ok",
+      "decision": {
+        "patches": [
+          {
+            "memoryId": "path-job",
+            "expectedVersion": 2,
+            "values": {
+              "next": "apply"
+            },
+            "refs": [
+              "d-3d0578d90713",
+              "d-dcb16d4e2c72",
+              "d-d97ab838e3fe"
+            ],
+            "status": "current",
+            "text": "{\"next\":\"apply\"}"
+          }
+        ],
+        "answer": "按现行规则：每周4天、每天6小时，总时长24小时，满足每周至少2天且总时长至少18小时；且没有在途申请，建议apply。",
+        "needsEvidence": false,
+        "externalAction": "none"
+      },
+      "finalMemories": [
+        {
+          "id": "profile-days",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"days\": 4}",
+          "values": {
+            "days": 4
+          },
+          "refs": [
+            "d-d97ab838e3fe"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-hours",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"hours\": 6}",
+          "values": {
+            "hours": 6
+          },
+          "refs": [
+            "d-d97ab838e3fe"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "profile-applied",
+          "role": "profile",
+          "version": 2,
+          "text": "{\"applied\": false}",
+          "values": {
+            "applied": false
+          },
+          "refs": [
+            "d-d97ab838e3fe"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "match-job",
+          "role": "match",
+          "version": 2,
+          "text": "{\"eligible\": false}",
+          "values": {
+            "eligible": false
+          },
+          "refs": [
+            "d-5e34da20e4ce",
+            "d-dcb16d4e2c72",
+            "d-49d540116f1e"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "path-job",
+          "role": "path",
+          "version": 3,
+          "text": "{\"next\":\"apply\"}",
+          "values": {
+            "next": "apply"
+          },
+          "refs": [
+            "d-3d0578d90713",
+            "d-dcb16d4e2c72",
+            "d-d97ab838e3fe"
+          ],
+          "status": "current"
+        },
+        {
+          "id": "report-job",
+          "role": "report",
+          "version": 2,
+          "text": "{\"recommend\": false}",
+          "values": {
+            "recommend": false
+          },
+          "refs": [
+            "d-5e34da20e4ce",
+            "d-dcb16d4e2c72",
+            "d-49d540116f1e"
+          ],
+          "status": "current"
+        }
+      ],
+      "reviewStatus": "accepted",
+      "fallback": false
+    }
+  },
+  "stages": [
+    "answer-first",
+    "decide",
+    "review"
+  ],
+  "elapsedMs": 3060.952665999999,
+  "physicalUsage": {
+    "attempts": 3,
+    "inputTokens": 8978,
+    "outputTokens": 352
+  }
+}

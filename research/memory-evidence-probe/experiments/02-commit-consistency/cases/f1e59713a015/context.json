@@ -1,0 +1,301 @@
+{
+  "mode": "actual",
+  "event": {
+    "id": "e-f1e59713a015",
+    "text": "本轮请依据当前有效资料复核目标。此前标准已明确废止；新的完整资格规则正文暂不可取得，也没有可用的新资格结论。不要把历史记忆当作现行规则。",
+    "receivedAt": "2033-04-04"
+  },
+  "memories": [
+    {
+      "id": "report-job",
+      "role": "report",
+      "values": {
+        "recommend": true
+      },
+      "refs": [
+        "d-d3b4197ae063",
+        "d-57f372b7cc70",
+        "d-73621974b0c7"
+      ],
+      "version": 1,
+      "status": "current",
+      "text": "{\"recommend\": true}"
+    },
+    {
+      "id": "profile-days",
+      "role": "profile",
+      "values": {
+        "days": 4
+      },
+      "refs": [
+        "d-6158896f0bff"
+      ],
+      "version": 2,
+      "status": "current",
+      "text": "{\"days\": 4}"
+    },
+    {
+      "id": "profile-hours",
+      "role": "profile",
+      "values": {
+        "hours": 6
+      },
+      "refs": [
+        "d-6158896f0bff"
+      ],
+      "version": 2,
+      "status": "current",
+      "text": "{\"hours\": 6}"
+    }
+  ],
+  "probe": null,
+  "sources": [
+    {
+      "id": "e-f1e59713a015",
+      "text": "本轮请依据当前有效资料复核目标。此前标准已明确废止；新的完整资格规则正文暂不可取得，也没有可用的新资格结论。不要把历史记忆当作现行规则。"
+    },
+    {
+      "id": "d-57f372b7cc70",
+      "title": "任务约定",
+      "text": "当前资格不满足且申请仍在途，建议withdraw；不满足且没有在途申请，建议none；满足且尚未申请，建议apply；满足且申请在途，建议wait。已撤回的申请不得重复撤回。报告recommend与资格一致。事实未知时不得猜值；仅当所有证据允许的状态给出相同结论时输出确定值，否则输出null且标记uncertain。旧规则已失效又无法取得新规则时不得继续用旧标准判断。这里只维护建议，不执行外部操作。",
+      "kind": "rule",
+      "scope": "f1e59713a015/policy",
+      "effectiveAt": "2033-04-01"
+    },
+    {
+      "id": "d-6158896f0bff",
+      "title": "本人本轮确认登记",
+      "text": "每周4天。每天6小时。申请仍在途。",
+      "kind": "observation",
+      "scope": "f1e59713a015/person",
+      "supersedes": "d-73621974b0c7",
+      "effectiveAt": "2033-04-03"
+    }
+  ],
+  "rules": [
+    "Only sources and the current event are evidence; memory and probes can be stale.",
+    "Hypothetical assignments never authorize factual writes or external actions.",
+    "Return structured outcomes and citations, not private reasoning.",
+    "Missing coverage or unknown consumer fields require verification, not a safe-stop claim."
+  ],
+  "owner": "report",
+  "targetId": "report-job",
+  "targetFields": [
+    "recommend"
+  ],
+  "sourceBindings": {
+    "profile-days": {
+      "target": "profile-days",
+      "createdAtVersion": 1,
+      "sources": [
+        {
+          "id": "d-73621974b0c7",
+          "hash": "a05ffe089027239ac4cd7c4dcaa1f5cb7fd31d30aed1c3fdf418e396db0dffee"
+        }
+      ],
+      "dependencies": []
+    },
+    "profile-hours": {
+      "target": "profile-hours",
+      "createdAtVersion": 1,
+      "sources": [
+        {
+          "id": "d-73621974b0c7",
+          "hash": "a05ffe089027239ac4cd7c4dcaa1f5cb7fd31d30aed1c3fdf418e396db0dffee"
+        }
+      ],
+      "dependencies": []
+    },
+    "profile-applied": {
+      "target": "profile-applied",
+      "createdAtVersion": 1,
+      "sources": [
+        {
+          "id": "d-73621974b0c7",
+          "hash": "a05ffe089027239ac4cd7c4dcaa1f5cb7fd31d30aed1c3fdf418e396db0dffee"
+        }
+      ],
+      "dependencies": []
+    },
+    "match-job": {
+      "target": "match-job",
+      "createdAtVersion": 1,
+      "sources": [
+        {
+          "id": "d-d3b4197ae063",
+          "hash": "12dd81fb76ce2812874b35cff94c88b96341fd9b5be852ad6d0c253c0c2ba045"
+        },
+        {
+          "id": "d-57f372b7cc70",
+          "hash": "d80a6cd5f8b2d0c9262955b4181afaa50ae3234f253aeab63e1aad6cafb824c0"
+        },
+        {
+          "id": "d-73621974b0c7",
+          "hash": "a05ffe089027239ac4cd7c4dcaa1f5cb7fd31d30aed1c3fdf418e396db0dffee"
+        }
+      ],
+      "dependencies": [
+        {
+          "memoryId": "profile-days",
+          "fields": [
+            "days"
+          ]
+        },
+        {
+          "memoryId": "profile-hours",
+          "fields": [
+            "hours"
+          ]
+        }
+      ]
+    },
+    "path-job": {
+      "target": "path-job",
+      "createdAtVersion": 1,
+      "sources": [
+        {
+          "id": "d-d3b4197ae063",
+          "hash": "12dd81fb76ce2812874b35cff94c88b96341fd9b5be852ad6d0c253c0c2ba045"
+        },
+        {
+          "id": "d-57f372b7cc70",
+          "hash": "d80a6cd5f8b2d0c9262955b4181afaa50ae3234f253aeab63e1aad6cafb824c0"
+        },
+        {
+          "id": "d-73621974b0c7",
+          "hash": "a05ffe089027239ac4cd7c4dcaa1f5cb7fd31d30aed1c3fdf418e396db0dffee"
+        }
+      ],
+      "dependencies": [
+        {
+          "memoryId": "profile-days",
+          "fields": [
+            "days"
+          ]
+        },
+        {
+          "memoryId": "profile-hours",
+          "fields": [
+            "hours"
+          ]
+        },
+        {
+          "memoryId": "profile-applied",
+          "fields": [
+            "applied"
+          ]
+        }
+      ]
+    },
+    "report-job": {
+      "target": "report-job",
+      "createdAtVersion": 1,
+      "sources": [
+        {
+          "id": "d-d3b4197ae063",
+          "hash": "12dd81fb76ce2812874b35cff94c88b96341fd9b5be852ad6d0c253c0c2ba045"
+        },
+        {
+          "id": "d-57f372b7cc70",
+          "hash": "d80a6cd5f8b2d0c9262955b4181afaa50ae3234f253aeab63e1aad6cafb824c0"
+        },
+        {
+          "id": "d-73621974b0c7",
+          "hash": "a05ffe089027239ac4cd7c4dcaa1f5cb7fd31d30aed1c3fdf418e396db0dffee"
+        }
+      ],
+      "dependencies": [
+        {
+          "memoryId": "profile-days",
+          "fields": [
+            "days"
+          ]
+        },
+        {
+          "memoryId": "profile-hours",
+          "fields": [
+            "hours"
+          ]
+        }
+      ]
+    }
+  },
+  "retrievalReceipt": {
+    "kind": "retrieval-only-not-semantic-proof",
+    "targetId": "report-job",
+    "versions": {
+      "report-job": 1,
+      "profile-days": 2,
+      "profile-hours": 2
+    },
+    "sourceHashes": {
+      "d-57f372b7cc70": "d80a6cd5f8b2d0c9262955b4181afaa50ae3234f253aeab63e1aad6cafb824c0",
+      "d-6158896f0bff": "7c295ed3153a1b59a7584868c642e1eae473906a924bcb759e325e2224d7bdb3"
+    }
+  },
+  "assemblyIssues": [
+    {
+      "kind": "source-integrity",
+      "id": "d-d3b4197ae063"
+    }
+  ],
+  "localEvidence": {
+    "targetId": "report-job",
+    "originalSources": [
+      {
+        "id": "d-57f372b7cc70",
+        "title": "任务约定",
+        "text": "当前资格不满足且申请仍在途，建议withdraw；不满足且没有在途申请，建议none；满足且尚未申请，建议apply；满足且申请在途，建议wait。已撤回的申请不得重复撤回。报告recommend与资格一致。事实未知时不得猜值；仅当所有证据允许的状态给出相同结论时输出确定值，否则输出null且标记uncertain。旧规则已失效又无法取得新规则时不得继续用旧标准判断。这里只维护建议，不执行外部操作。",
+        "kind": "rule",
+        "scope": "f1e59713a015/policy",
+        "effectiveAt": "2033-04-01"
+      }
+    ],
+    "observedSources": [
+      {
+        "id": "e-f1e59713a015",
+        "text": "本轮请依据当前有效资料复核目标。此前标准已明确废止；新的完整资格规则正文暂不可取得，也没有可用的新资格结论。不要把历史记忆当作现行规则。"
+      },
+      {
+        "id": "d-6158896f0bff",
+        "title": "本人本轮确认登记",
+        "text": "每周4天。每天6小时。申请仍在途。",
+        "kind": "observation",
+        "scope": "f1e59713a015/person",
+        "supersedes": "d-73621974b0c7",
+        "effectiveAt": "2033-04-03"
+      }
+    ],
+    "currentInputs": [
+      {
+        "id": "profile-days",
+        "role": "profile",
+        "values": {
+          "days": 4
+        },
+        "refs": [
+          "d-6158896f0bff"
+        ],
+        "version": 2,
+        "status": "current",
+        "text": "{\"days\": 4}"
+      },
+      {
+        "id": "profile-hours",
+        "role": "profile",
+        "values": {
+          "hours": 6
+        },
+        "refs": [
+          "d-6158896f0bff"
+        ],
+        "version": 2,
+        "status": "current",
+        "text": "{\"hours\": 6}"
+      }
+    ],
+    "unresolvedInputs": [],
+    "derivedConclusions": [],
+    "warning": "来源哈希与依赖可追溯不等于依据完整或结论正确；适用性仍须复核。记忆正文不能替代规则原文。"
+  }
+}

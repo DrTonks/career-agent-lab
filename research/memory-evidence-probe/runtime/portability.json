@@ -1,0 +1,54 @@
+{
+  "algorithmChanged": false,
+  "sourceRun": "V11 active-r1",
+  "changes": [
+    "Relative imports relocated into runtime/.",
+    "hash/equal copied unchanged from shared core; unrelated schemas omitted.",
+    "The shared V10 plan/decide prompts are retained verbatim.",
+    "Provider transport retained; live entrypoint reads DEEPSEEK_API_KEY only.",
+    "Run wrapper uses public package-relative paths and fresh output directories; explicit --live required.",
+    "Pure support audit functions extracted unchanged; public offline verifier uses public data layout.",
+    "Trailing blank lines normalized in public client and extracted support module."
+  ],
+  "historicalModelSettings": {
+    "model": "deepseek-flash",
+    "thinking": {
+      "type": "disabled"
+    },
+    "temperature": 0,
+    "max_tokens": 3072
+  },
+  "liveRunWarning": "New API generations need not reproduce recorded results. Historical data and failures remain unchanged.",
+  "sourceAndPublicHashes": {
+    "engine.mjs": {
+      "sourceRelativePath": "evals/advice-repair-v11/engine.mjs",
+      "sourceSha256": "12be96c8d3648d82da62069eeabd20dad422b812da3987dad5e9842d5b7c923f",
+      "publicSha256": "15719efe54413f722ff26f46fd603c1661a13fb24c5f7b7548bd1fe16ca81299",
+      "allowedImportRelocationOnly": true
+    },
+    "client.mjs": {
+      "sourceRelativePath": "evals/advice-repair-v11/client.mjs",
+      "sourceSha256": "a4839656ef7dd5669ed0e63ee1f666b0c91ac35fb0a53ac76eac303a8d88257d",
+      "publicSha256": "4d4fc265ceb472f6db7f511fa5dc40a166ab6667ca15e59577455b58a32be729",
+      "allowedImportRelocationAndWhitespaceOnly": true
+    },
+    "prompts.mjs": {
+      "sourceRelativePath": "evals/advice-repair-v11/prompts.mjs",
+      "sourceSha256": "d8b43c9f30116954eff626c31c6e2c2645502fce97347cf68473e3f59971ce19",
+      "publicSha256": "bcb06532e9e9438b92a791b054a8138faf438e03eae88bf1801146b8632824a1",
+      "allowedImportRelocationOnly": true
+    },
+    "base-prompts.mjs": {
+      "sourceRelativePath": "evals/advice-repair-v10/prompts.mjs",
+      "sourceSha256": "f39f3823c400099538617709ddf116c647c678e32b3f396aa4cb9fe320a2564d",
+      "publicSha256": "f39f3823c400099538617709ddf116c647c678e32b3f396aa4cb9fe320a2564d",
+      "allowedImportRelocationOnly": true
+    },
+    "transport.mjs": {
+      "sourceRelativePath": "evals/advice-repair-v7/transport.mjs",
+      "sourceSha256": "3bb9eca3502fec3937846721f011851459f35633076131e065a8d1cbc735e73a",
+      "publicSha256": "3bb9eca3502fec3937846721f011851459f35633076131e065a8d1cbc735e73a",
+      "allowedImportRelocationOnly": true
+    }
+  }
+}

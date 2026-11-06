@@ -1,0 +1,46 @@
+{
+  "provider": "deepseek",
+  "arms": [
+    "ordinary",
+    "extra-review",
+    "probe"
+  ],
+  "trajectories": 12,
+  "eventsPerTrajectory": 6,
+  "completionLimit": 3072,
+  "maxCallsPerEvent": 5,
+  "maxConfirmationReadsPerEvent": 1,
+  "physicalCallUpperBound": 1116,
+  "primary": "Each event's three derived values and statuses all correct, no falsely asserted known facts, no ordinary-path execution error. Fact completeness against retrievable confirmation is separately reported; deliberate deferral may retain unknown facts while derived decisions are already determined.",
+  "design": "12 new synthetic development trajectories, six continuous events each; same V10 sequence templates, not an independent held-out generalization test. New jobs, numbers, scopes and documents. Normalized facts and finite domains supplied equally by fictional source service; hand-declared dependencies. Three sequential roles under one model. Each arm gets max 5 calls, 15360 completion tokens, 500000 input reservation units and one document per event. Same limits, not forcibly equal actual tokens. Shared context marks old narrative as historical for all arms.",
+  "probe": "On finite actual uncertainty, one call seeks source-bound counterexamples to current known candidate memories. Structural checks bind target version, rule, observed world and references, but do not calculate semantic truth. Accepted witnesses force local review and may request one real archive. No witness authorizes skipping; normal planner always runs. Neither witness assumptions nor claimed alternative values enter final role prompts or facts. Only actual observations update facts. Obligations are event-local logged tasks; local-review-completed means a role write occurred, not that uncertainty was resolved or hypothesis proved. Pending failed role jobs persist, but unresolved evidence obligations are not carried across events.",
+  "control": "Extra-review receives identical context and worlds, freely reasons and requests reviewIds/readIds with rule/source references. Same abilities to force local reviews and read one archive; no requirement to enumerate counterexamples. Ordinary has normal planner and role decisions. Additional output in both enhanced arms only escalates actions and is not forwarded as advice. Ordinary planner still may omit roles under its existing rules; probe cannot authorize such omissions. Probe reads require at least one valid witness, while extra-review may request a read without a forced role. Thus this tests the whole counterexample-triggered mechanism, not prompt wording alone. Escalation-only is an interface property; changed evidence changes the later planner context, so actual role sets across arms need not be nested.",
+  "initialization": "Three actual DeepSeek calls per trajectory are shared once physically and fully allocated to each standalone strategy. Initialization failures preserved as pending role jobs. All later arm calls independent and no replay. Arm execution order rotates by trajectory.",
+  "failures": "Optional schema/coverage/ref failure falls back locally to ordinary planner and decisions within same 5-call cap, cost retained. Ordinary planner failure falls back to all remaining roles and remains an event error. Failed role writes preserve old memory and pending job. No retries or gold-based rollback.",
+  "metrics": [
+    "full-derived event accuracy",
+    "role accuracy",
+    "false known facts",
+    "fact completeness",
+    "paired wins/losses by trajectory",
+    "actual confirmation reads",
+    "actual role calls",
+    "witness semantic precision and target-level coverage",
+    "evidence obligations and actual local reviews",
+    "optional failures",
+    "physical and standalone provider usage",
+    "evidence-supported conclusions under actual observed states"
+  ],
+  "limits": "12 correlated synthetic trajectories, one sample/arm, no IID significance or production guarantee. Restart tests persistence only, not context compression. Three role calls under one scheduler/model, not autonomous concurrent agents. Normalized input facts/domain metadata and fixed dependencies favour all arms; no automatic extraction claim. No external actions. V11 is DeepSeek-only; historical GPT experiments on earlier versions do not validate this version on GPT or Claude.",
+  "decision": "Independent probe benefit requires improvement over extra-review at comparable actual tokens/calls/reads, or maintained quality with lower work. Primary truth and prespecified evidence support both reported. No significance claim from 72 correlated events. Against V10 results is descriptive across different data, not a causal ablation. All failures retained; no GPT or Word.",
+  "revision": "V11 r1: escalation-only counterexample evidence obligations, historical explanation labeling shared across all arms; fixed protocol before formal calls. Interface diagnostic separately recorded.",
+  "secondaryEvidenceSupport": "Before V11 launch: all final role values and statuses must equal consensus under actually observed facts and active rule. Unread archives do not support guesses. Exact nonnegative domain extrema for open numeric facts, both Boolean states for open applied. Report truth AND support separately, never replace primary.",
+  "interfaceCheck": {
+    "directory": "var/advice-repair-v11/interface-smoke-r1",
+    "attempts": 22,
+    "inputTokens": 38008,
+    "outputTokens": 1917,
+    "passed": true,
+    "scope": "first two events of the first fixed trajectory, all three arms; tests interface not performance; excluded from formal score, included in total spending"
+  }
+}
