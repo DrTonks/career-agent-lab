@@ -12,8 +12,9 @@
   "scripts": {
     "verify": "python3 scripts/verify.py",
     "check:privacy": "python3 scripts/privacy-check.py",
-    "test:runtime": "node --test runtime/engine.test.mjs",
+    "test:runtime": "node --test runtime/engine.test.mjs experiments/04-persistent-probes/source/preflight.test.mjs",
     "live:register": "node runtime/run.mjs --register",
-    "live:run": "node runtime/run.mjs --live"
+    "live:run": "node runtime/run.mjs --live",
+    "verify:round4": "python3 experiments/04-persistent-probes/verify.py experiments/04-persistent-probes && node experiments/04-persistent-probes/source/verify-analysis.mjs experiments/04-persistent-probes"
   }
 }

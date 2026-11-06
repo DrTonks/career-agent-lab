@@ -167,3 +167,7 @@ npm run public:check
 ```
 
 架构对照的最终结论与汇总统计集中在 [docs/evaluation/](docs/evaluation/README.md)；关于多智能体设计取舍、真实对话观察和面试表达，见[架构选择说明](docs/evaluation/multi-agent-rationale.md)。
+
+## 记忆探针创意实验
+
+[让大模型记住何时需要重新考虑建议](research/memory-evidence-probe/README.md)：探索建议生成时主动提出复查问题，并跨事件持续取证。目录包含四轮代表性实验、GPT与DeepSeek同题比较、持续任务机制对照，以及脱敏结果和离线复核脚本。

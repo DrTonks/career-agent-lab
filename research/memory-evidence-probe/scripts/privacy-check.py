@@ -12,7 +12,7 @@ checks={
  'local-username':re.compile('ton'+'ks',re.I),
  'email-address':re.compile(r'[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}'),
 }
-allowed_hosts={'api.deepseek.com','api.openai.com','github.com','www.w3.org','arxiv.org','doi.org','docs.letta.com','docs.mem0.ai','platform.claude.com'}
+allowed_hosts={'api.deepseek.com','api.openai.com','github.com','www.w3.org','arxiv.org','doi.org','docs.letta.com','docs.mem0.ai','platform.claude.com','hindsight.vectorize.io','help.getzep.com','registry.npmjs.org'}
 issues=[];files=0;byte_count=0;urls=set()
 for p in ROOT.rglob('*'):
  if not p.is_file() or any(x in p.parts for x in ('node_modules','__pycache__','.git','live-runs')):continue

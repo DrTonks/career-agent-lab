@@ -7,6 +7,7 @@ import importlib.util
 import json
 from pathlib import Path
 import sys
+import subprocess
 sys.dont_write_bytecode = True
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -116,9 +117,14 @@ def usage():
         out[name]={'physicalCalls':len(calls),'inputTokens':prompt,'outputTokens':completion}
     return out
 
+def persistent_probes():
+    base=ROOT/'experiments/04-persistent-probes'
+    run=subprocess.run([sys.executable,str(base/'verify.py'),str(base)],capture_output=True,text=True,check=True)
+    return json.loads(run.stdout)
+
 def manifest(write=False):
     path=ROOT/'experiments/checksums.json'
-    files=[p for p in ROOT.rglob('*') if p.is_file() and not any(x in p.parts for x in ('__pycache__','node_modules','.git','live-runs'))]
+    files=[p for p in ROOT.rglob('*') if p.is_file() and p.name != '.DS_Store' and not any(x in p.parts for x in ('__pycache__','node_modules','.git','live-runs'))]
     excluded={'experiments/checksums.json','scripts/privacy-report.json','scripts/verification-report.json'}
     hashes={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(files) if str(p.relative_to(ROOT)) not in excluded}
     if write:path.write_text(json.dumps({'sha256':hashes,'scope':'Public release source, data, docs and figures; generated validation reports and this manifest are excluded.'},indent=2)+'\n')
@@ -128,6 +134,6 @@ def manifest(write=False):
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--write-manifest',action='store_true');args=parser.parse_args()
-    result={'offline':True,'externalAPICalls':0,'round01':cross_model(),'round02':commit_consistency(),'round03':active_evidence(),'formalUsage':usage(),'verifiedPublicFiles':manifest(args.write_manifest)}
+    result={'offline':True,'externalAPICalls':0,'round01':cross_model(),'round02':commit_consistency(),'round03':active_evidence(),'round04':persistent_probes(),'formalUsage':usage(),'verifiedPublicFiles':manifest(args.write_manifest)}
     (ROOT/'scripts/verification-report.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
     print(json.dumps(result,ensure_ascii=False,indent=2))
