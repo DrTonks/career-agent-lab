@@ -170,4 +170,4 @@ npm run public:check
 
 ## 记忆探针创意实验
 
-[让大模型记住何时需要重新考虑建议](research/memory-evidence-probe/README.md)：探索建议生成时主动提出复查问题，并跨事件持续取证。目录包含四轮代表性实验、GPT与DeepSeek同题比较、持续任务机制对照，以及脱敏结果和离线复核脚本。
+[基于反例取证与持续复核的长期记忆探针](research/memory-evidence-probe/README.md)：探索建议生成时主动提出复查问题，并跨事件持续取证。目录包含GPT与DeepSeek同题比较、持续任务机制对照、原生多智能体接入和业务反例验证，以及脱敏结果、答辩问答和离线复核脚本。

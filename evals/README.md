@@ -6,4 +6,4 @@
 
 使用方法见[运行指南](../docs/architecture/runtime-usage.md)，开发检查见[开发说明](../docs/development/contributing.md)。可复用入口包括[benchmark](../scripts/benchmark.ts)、[配对运行](../scripts/compare.ts)、[分析](../scripts/compare-analyze.ts)与[归档](../scripts/archive-experiment.ts)。默认CI不发起真实供应商调用。
 
-公开最终结论和统计见[评估目录](../docs/evaluation/README.md)。逐日过程、原始运行和评审材料保存本地，不随本目录发布。
+公开最终结论和统计见[评估目录](../docs/evaluation/README.md)。常规逐日过程保留本地。记忆探针研究按授权公开合成实验的脱敏记录，见 [V16](advice-repair-v16/README.md)、[V17](advice-repair-v17/README.md) 和[研究总览](../research/memory-evidence-probe/README.md)。
