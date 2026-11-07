@@ -1291,6 +1291,8 @@ export class DomainTools {
     return routes.slice(-10);
   }
   validateResult(r: ExpertResult) {
+    if (r.currentAssessment)
+      this.assertEvidence(r.currentAssessment.evidenceIds);
     this.clarifications.attach(r, this.seen, r.status !== "failed");
     this.assertEvidence(r.evidenceIds);
     if (r.status === "failed") return;

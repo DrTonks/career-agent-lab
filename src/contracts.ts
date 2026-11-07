@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { CurrentAssessment } from "./current-assessment.js";
 
 export const Roles = ["profile", "match", "path", "report"] as const;
 export const Role = z.enum(Roles);
@@ -154,6 +155,7 @@ export const ExpertResult = z
     nextActions: z.array(z.string()).max(20),
     artifact: z.record(z.string(), z.unknown()),
     collaboration: CollaborationRequest.optional(),
+    currentAssessment: CurrentAssessment.optional(),
   })
   .strict();
 export type ExpertResult = z.infer<typeof ExpertResult>;
@@ -171,7 +173,7 @@ export interface Artifact {
   failure?: { code: string; retryable: boolean; message: string };
   reuse?: {
     sourceArtifactId: string;
-    policy: "resume-facts-v1" | "resume-facts-v2";
+    policy: "resume-facts-v1" | "resume-facts-v2" | "historical-review-v1";
   };
 }
 export const Job = z.object({

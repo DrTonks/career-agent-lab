@@ -1,3 +1,4 @@
+import { expertReviewContext, type ReviewContext } from "./review-context.js";
 import {
   Annotation,
   StateGraph,
@@ -56,6 +57,7 @@ import {
   ModelProtocolError,
   ExpertProgressError,
 } from "./failures.js";
+import { historicalReviewArtifacts } from "./historical-review.js";
 import { profileFacts } from "./artifact-reuse.js";
 import { continuationContext, followUpInput } from "./follow-up.js";
 import {
@@ -797,6 +799,7 @@ export class Runtime {
     readonly knowledge: Knowledge,
     private provider: ModelProvider,
     readonly cfg: Config,
+    private readonly reviewContext?: ReviewContext,
   ) {
     this.saver = new SqliteSaver(store);
     this.promptHash = hash(
@@ -856,6 +859,7 @@ export class Runtime {
   private signature() {
     return hash({
       config: this.cfg,
+      reviewContext: this.reviewContext,
       model: this.provider.model,
       prompts: this.promptHash,
       knowledge: this.knowledge.snapshotHash,
@@ -1329,6 +1333,10 @@ export class Runtime {
         role: "user",
         content: JSON.stringify({
           type: "TASK_DATA",
+          reviewContext: this.reviewContext,
+          reviewContextNotice: this.reviewContext
+            ? "复查任务为调度线索，不是事实证据。结合当前输入检查适用性，可在专家objective中安排取证和受影响产物更新，保留原有权限与交接约束。"
+            : undefined,
           request: run.request.request,
           constraints: run.request.constraints,
           hasResume: !!run.request.resumeText,
@@ -1343,6 +1351,7 @@ export class Runtime {
             id: a.id,
             expert: a.expert,
             summary: a.result.summary,
+            currentAssessment: a.result.currentAssessment,
             reuse: a.reuse,
           })),
         }),
@@ -1480,6 +1489,8 @@ export class Runtime {
     throw new Error("Planner did not submit a valid plan");
   }
   private priorArtifacts(run: RunRecord): Artifact[] {
+    if (this.reviewContext?.historicalArtifactAccess)
+      return historicalReviewArtifacts(this.store, run);
     const prior = this.store
       .listRuns(run.request.userId)
       .filter(
@@ -1717,6 +1728,7 @@ export class Runtime {
     const previous = await this.saver.getTuple(config);
     const payload = {
       objective: step.objective,
+      reviewContext: expertReviewContext(this.reviewContext, step.expert),
       userRequest: run.request.request,
       inputHistory: tools.historyContext(),
       continuation: continuationContext(run, step.expert),
@@ -1755,6 +1767,7 @@ export class Runtime {
         id: a.id,
         expert: a.expert,
         summary: a.result.summary,
+        currentAssessment: a.result.currentAssessment,
         reuse: a.reuse,
         evidenceId: `artifact:${a.id}`,
         publishedEvidenceIds: (a.publishedEvidence ?? []).map((e) => e.id),
