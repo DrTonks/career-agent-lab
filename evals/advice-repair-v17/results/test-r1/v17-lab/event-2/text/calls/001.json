@@ -1,0 +1,119 @@
+{
+  "number": 1,
+  "label": "v17-lab/2/text",
+  "status": "ok",
+  "messages": [
+    {
+      "role": "system",
+      "content": "你是另一位独立上下文的记忆复核代理。最多2次模型响应，每次1个工具；可以先用condition_check核对，最后review_submit。复核当前状态是否可提交并把close设为true/false。对每个hypothesisId×jobId独立提交预测和claimsRefutation；仅实际改变当前判定才是有效反例。完整读取公开岗位规则、真实原表和假设沙箱；至少N天达标不是所有天达标。旧文本、先前警示、作者预测都不是新事实。所有组具有相同核算工具，不因stateProjection格式不同而减少必要检查。"
+    },
+    {
+      "role": "user",
+      "content": "{\"sources\":[{\"id\":\"event:v17-lab-0\",\"text\":\"已确认连续实习月数为6。下表是已申报的每周出勤安排；有净可用时段的日计为申报出勤日。可用行取并集，扣占用行并集；新行追加，撤销行移除对应记录。其他岗位条件均已满足。\\n|记录ID|类型|星期|开始|结束|\\n|---|---|---|---|---|\\n|base0|可用|周一|09:00|14:00|\\n|base1|可用|周三|09:00|14:00|\\n|base2|可用|周五|09:00|12:30|\"},{\"id\":\"event:v17-lab-1\",\"text\":\"学校调整安排，追加下列记录，其他记录不变。\\n|记录ID|类型|星期|开始|结束|\\n|---|---|---|---|---|\\n|friClass|占用|周五|11:30|12:30|\"},{\"id\":\"event:v17-lab-2\",\"text\":\"追加周三课程，其他不变。\\n|记录ID|类型|星期|开始|结束|\\n|---|---|---|---|---|\\n|wedClass|占用|周三|11:00|14:00|\"}],\"userFacts\":{\"sourceId\":\"profile:v17-lab\",\"months\":6,\"text\":\"学校确认可连续实习6个月。\"},\"publicRules\":[{\"id\":\"v17-lab-a\",\"title\":\"实验预约界面排班实习生\",\"rule\":{\"monthsAtLeast\":3,\"daysAtLeast\":3,\"qualifyingDays\":{\"count\":3,\"hoursAtLeast\":3}},\"sourceId\":\"job:v17-lab-a\",\"sourceType\":\"synthetic-public-rule-card\",\"meaning\":\"以下JSON为岗位公开的全部时间条件；qualifyingDays是至少N天达标，everyWorkingDayHoursAtLeast是每个申报出勤日均达标；其余条件已确认满足。\",\"ruleVersion\":\"8153e6bd9c1ea34d3cc94b6332bdae572d20f3aed9d564c889e178ed2beeeaf7\"},{\"id\":\"v17-lab-b\",\"title\":\"实验预约界面组件实习生\",\"rule\":{\"monthsAtLeast\":3,\"daysAtLeast\":2,\"qualifyingDays\":{\"count\":2,\"hoursAtLeast\":3}},\"sourceId\":\"job:v17-lab-b\",\"sourceType\":\"synthetic-public-rule-card\",\"meaning\":\"以下JSON为岗位公开的全部时间条件；qualifyingDays是至少N天达标，everyWorkingDayHoursAtLeast是每个申报出勤日均达标；其余条件已确认满足。\",\"ruleVersion\":\"0a58ee35c9f833db11f9649e65c21b12338159f5f3aede85f8ec76dab59b6bba\"}],\"hypotheses\":[{\"id\":\"v17-lab-2-fri\",\"description\":\"试演周五新增一小时占用；仅是假设，不修改实际日程。\",\"text\":\"|记录ID|类型|星期|开始|结束|\\n|---|---|---|---|---|\\n|hypoFri|占用|周五|11:30|12:30|\"},{\"id\":\"v17-lab-2-wed\",\"description\":\"试演周三全部时段被占用；仅是假设，不修改实际日程。\",\"text\":\"|记录ID|类型|星期|开始|结束|\\n|---|---|---|---|---|\\n|hypoWed|占用|周三|00:00|24:00|\"}],\"metadata\":{\"factsVersion\":\"0c59739b116d91b6d7f11b21886c66c1dea832a11138d00b5ce42052ffed9308\",\"ruleVersions\":{\"v17-lab-a\":\"8153e6bd9c1ea34d3cc94b6332bdae572d20f3aed9d564c889e178ed2beeeaf7\",\"v17-lab-b\":\"0a58ee35c9f833db11f9649e65c21b12338159f5f3aede85f8ec76dab59b6bba\"},\"evidenceIds\":[\"profile:v17-lab\",\"event:v17-lab-0\",\"event:v17-lab-1\",\"event:v17-lab-2\",\"job:v17-lab-a\",\"job:v17-lab-b\"]},\"authorSummary\":\"当前事实版本0c59739b：连续实习6个月；申报出勤为周一09:00-14:00（5h）、周三09:00-14:00（5h）、周五09:00-12:30（3.5h）。扣除占用：周五friClass 11:30-12:30 → 周五净2.5h；周三wedClass 11:00-14:00 → 周三净2h。周工时9.5小时。旧版本34dfffac的结论（周三5h、周工时12.5h、B岗符合）已失效，不是当前值；更早版本19089d2f（周五3.5h、周工时13.5h、A/B均符合）同样失效。按公开规则原件：A岗要求至少3天、其中至少3天达3小时——仅周一达标（1天），不符；B岗要求至少2天、其中至少2天达3小时——仅周一达标（1天），不符（由旧版符合变为不符）。假设试演（不修改真实日程）：周五再新增11:30-12:30占用不改变净时段（仍2.5h），A、B均不符，不改变当前判定；周三全天占用后周三净时段为0、不计出勤日，达标天数仍为1天，A、B均不符，不改变当前判定（B岗当前已是不符，故不构成反驳）。旧警示“周五再减一小时B岗一定不符”在旧版本下不成立，但当前版本B岗已因周三被占用而不符。\",\"authorCases\":[{\"hypothesisId\":\"v17-lab-2-fri\",\"jobId\":\"v17-lab-a\",\"factsVersion\":\"0c59739b116d91b6d7f11b21886c66c1dea832a11138d00b5ce42052ffed9308\",\"ruleVersion\":\"8153e6bd9c1ea34d3cc94b6332bdae572d20f3aed9d564c889e178ed2beeeaf7\",\"predictedAfter\":\"不符\",\"claimsRefutation\":false},{\"hypothesisId\":\"v17-lab-2-fri\",\"jobId\":\"v17-lab-b\",\"factsVersion\":\"0c59739b116d91b6d7f11b21886c66c1dea832a11138d00b5ce42052ffed9308\",\"ruleVersion\":\"0a58ee35c9f833db11f9649e65c21b12338159f5f3aede85f8ec76dab59b6bba\",\"predictedAfter\":\"不符\",\"claimsRefutation\":false},{\"hypothesisId\":\"v17-lab-2-wed\",\"jobId\":\"v17-lab-a\",\"factsVersion\":\"0c59739b116d91b6d7f11b21886c66c1dea832a11138d00b5ce42052ffed9308\",\"ruleVersion\":\"8153e6bd9c1ea34d3cc94b6332bdae572d20f3aed9d564c889e178ed2beeeaf7\",\"predictedAfter\":\"不符\",\"claimsRefutation\":false},{\"hypothesisId\":\"v17-lab-2-wed\",\"jobId\":\"v17-lab-b\",\"factsVersion\":\"0c59739b116d91b6d7f11b21886c66c1dea832a11138d00b5ce42052ffed9308\",\"ruleVersion\":\"0a58ee35c9f833db11f9649e65c21b12338159f5f3aede85f8ec76dab59b6bba\",\"predictedAfter\":\"不符\",\"claimsRefutation\":false}],\"stateProjection\":{\"summary\":\"当前事实版本0c59739b：连续实习6个月；申报出勤为周一09:00-14:00（5h）、周三09:00-14:00（5h）、周五09:00-12:30（3.5h）。扣除占用：周五friClass 11:30-12:30 → 周五净2.5h；周三wedClass 11:00-14:00 → 周三净2h。周工时9.5小时。旧版本34dfffac的结论（周三5h、周工时12.5h、B岗符合）已失效，不是当前值；更早版本19089d2f（周五3.5h、周工时13.5h、A/B均符合）同样失效。按公开规则原件：A岗要求至少3天、其中至少3天达3小时——仅周一达标（1天），不符；B岗要求至少2天、其中至少2天达3小时——仅周一达标（1天），不符（由旧版符合变为不符）。假设试演（不修改真实日程）：周五再新增11:30-12:30占用不改变净时段（仍2.5h），A、B均不符，不改变当前判定；周三全天占用后周三净时段为0、不计出勤日，达标天数仍为1天，A、B均不符，不改变当前判定（B岗当前已是不符，故不构成反驳）。旧警示“周五再减一小时B岗一定不符”在旧版本下不成立，但当前版本B岗已因周三被占用而不符。\"},\"previousWorkflow\":{\"currentStateCommitted\":false,\"fullyResolved\":false,\"closureReason\":\"ambiguous-or-mismatched-summary\"}}"
+    }
+  ],
+  "tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "review_submit",
+        "description": "Submit a complete source-bound result.",
+        "parameters": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "type": "object",
+          "properties": {
+            "close": {
+              "type": "boolean"
+            },
+            "cases": {
+              "maxItems": 12,
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "hypothesisId": {
+                    "type": "string"
+                  },
+                  "jobId": {
+                    "type": "string"
+                  },
+                  "factsVersion": {
+                    "type": "string"
+                  },
+                  "ruleVersion": {
+                    "type": "string"
+                  },
+                  "predictedAfter": {
+                    "type": "string",
+                    "enum": [
+                      "符合",
+                      "不符",
+                      "待核定"
+                    ]
+                  },
+                  "claimsRefutation": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "hypothesisId",
+                  "jobId",
+                  "factsVersion",
+                  "ruleVersion",
+                  "predictedAfter",
+                  "claimsRefutation"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "note": {
+              "type": "string",
+              "maxLength": 3000
+            }
+          },
+          "required": [
+            "close",
+            "cases",
+            "note"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "condition_check",
+        "description": "Read a deterministic receipt for the current calendar and every listed hypothetical case against the public time-rule cards. The hypothetical cases do not change real facts.",
+        "parameters": {
+          "type": "object",
+          "properties": {},
+          "additionalProperties": false
+        }
+      }
+    }
+  ],
+  "elapsedMs": 541,
+  "response": {
+    "message": {
+      "role": "assistant",
+      "content": "I'll verify the current state with the deterministic receipt before submitting.",
+      "tool_calls": [
+        {
+          "id": "call_00_G4ylADVC1NzzoKpriIx70269",
+          "type": "function",
+          "function": {
+            "name": "condition_check",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    "usage": {
+      "input": 2750,
+      "output": 33,
+      "cachedInput": 2176
+    },
+    "finishReason": "tool_calls"
+  }
+}

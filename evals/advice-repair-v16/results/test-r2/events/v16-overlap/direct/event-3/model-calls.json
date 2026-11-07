@@ -1,0 +1,1862 @@
+[
+  {
+    "id": "f3d7740e-50bc-4779-9e12-244e7ed04202",
+    "requestIdentity": "52d56d8f0565168d9a0af33a6ab9873c3caaa7070e314feb3f2d8833946c4e68",
+    "executionStateHash": "31bb6188b54e1b30d2494d6393f85bbb976a6dcce1d4e7402215a0eb5cf6c7ca",
+    "requestKey": "09a5986eb51006819bc0b47d3c4bb9dd3658dd3df70ab3a14a5089d4ca839e5d",
+    "scope": "plan:0",
+    "role": "orchestrator",
+    "attempt": 0,
+    "mode": "live",
+    "model": "deepseek-flash",
+    "inputEstimate": 15096,
+    "outputReserved": 4096,
+    "promptHash": "8305dd5bc5d192a78d5888023deaaeeb9791def6c3bc07b337178d1d82a829f3",
+    "toolNames": [
+      "plan_submit",
+      "input_history_list",
+      "input_history_read"
+    ],
+    "outputLimit": 4096,
+    "status": "completed",
+    "createdAt": "2026-11-07T04:25:36.481Z",
+    "usage": {
+      "input": 8955,
+      "output": 54,
+      "cachedInput": 2688
+    },
+    "firstTokenMs": 169.94550000003073,
+    "durationMs": 908.3772909999825,
+    "finishReason": "tool_calls",
+    "response": {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_00_cGgeUBbT5vx8D9Q8aimP1769",
+          "type": "function",
+          "function": {
+            "name": "input_history_list",
+            "arguments": "{\"offset\": 0, \"limit\": 10}"
+          }
+        }
+      ]
+    },
+    "streamFrames": 15
+  },
+  {
+    "id": "53605338-18e0-4089-a0d5-1596fd478ba3",
+    "requestIdentity": "1737c95e9163a5cfbca1a1bb7cb28e3d8a349cc970f48b4ee0b2ba49916cb345",
+    "executionStateHash": "7ddf287f3427ccdcf44a1a5603cabfbc7dd9b2d5c71c279dbee6e8768b9beaf2",
+    "requestKey": "4ddd5eceadd625b9e2801569972d84160bbd51737d8250dd5d64770bf6386092",
+    "scope": "plan:1",
+    "role": "orchestrator",
+    "attempt": 0,
+    "mode": "live",
+    "model": "deepseek-flash",
+    "inputEstimate": 16945,
+    "outputReserved": 4096,
+    "promptHash": "609528f90b725cc380a71a34d8c4517256f22ba1cf7c5b228cc7e9add6418fb0",
+    "toolNames": [
+      "plan_submit",
+      "input_history_list",
+      "input_history_read"
+    ],
+    "outputLimit": 4096,
+    "status": "completed",
+    "createdAt": "2026-11-07T04:25:37.397Z",
+    "usage": {
+      "input": 10420,
+      "output": 288,
+      "cachedInput": 8448
+    },
+    "firstTokenMs": 174.9116249999497,
+    "durationMs": 1523.42179199995,
+    "finishReason": "tool_calls",
+    "response": {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_00_ruSGqgHKnh0lz4Y56sSz7593",
+          "type": "function",
+          "function": {
+            "name": "input_history_read",
+            "arguments": "{\"sourceId\": \"input:58b8540b-48b5-49f1-b462-0a8839838755:turn:0:request\", \"offset\": 0, \"maxChars\": 4000}"
+          }
+        },
+        {
+          "id": "call_01_L5takNmiV38UcRiCrI249742",
+          "type": "function",
+          "function": {
+            "name": "input_history_read",
+            "arguments": "{\"sourceId\": \"input:58b8540b-48b5-49f1-b462-0a8839838755:turn:1:request\", \"offset\": 0, \"maxChars\": 4000}"
+          }
+        },
+        {
+          "id": "call_02_mH7irzjBlRyj3vt5dD5O8619",
+          "type": "function",
+          "function": {
+            "name": "input_history_read",
+            "arguments": "{\"sourceId\": \"input:58b8540b-48b5-49f1-b462-0a8839838755:turn:2:request\", \"offset\": 0, \"maxChars\": 4000}"
+          }
+        }
+      ]
+    },
+    "streamFrames": 153
+  },
+  {
+    "id": "2dd7c70a-852e-4445-9372-ad7aa7177d8b",
+    "requestIdentity": "804e50cd91af45eac034ad21b3cac94d10ad05fe0d050295190d32f050531b78",
+    "executionStateHash": "d98a3e3a9c053c1df4efe8250e88e60ae310206e3d2dbce430b8b5fc20d610ce",
+    "requestKey": "df214e3da3f1a8b6038e6a320ecb86e96bb8510071d376d0ed93508f3aff39fc",
+    "scope": "plan:2",
+    "role": "orchestrator",
+    "attempt": 0,
+    "mode": "live",
+    "model": "deepseek-flash",
+    "inputEstimate": 20027,
+    "outputReserved": 4096,
+    "promptHash": "2199d81dd78e06da8bc770c499b929058b99ad868626be5615e467834ee138b1",
+    "toolNames": [
+      "plan_submit",
+      "input_history_list",
+      "input_history_read"
+    ],
+    "outputLimit": 4096,
+    "status": "completed",
+    "createdAt": "2026-11-07T04:25:38.947Z",
+    "usage": {
+      "input": 12394,
+      "output": 1055,
+      "cachedInput": 8448
+    },
+    "firstTokenMs": 189.71191700000782,
+    "durationMs": 6335.713917000103,
+    "finishReason": "tool_calls",
+    "response": {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_00_JVgg5vMXp49As3qNu6Zn7940",
+          "type": "function",
+          "function": {
+            "name": "plan_submit",
+            "arguments": "{\"rationale\": \"本轮新增可用行 extra1（周五16:00-19:00），与已有 course1（周五12:30-15:30）及 lunch2 相邻不重叠，周五可用由 4.5h 增至 6.5h，周工时 18.5→20.5，仍低于 a 的 21h 门槛，故 a 仍不符、b 仍符合，但余量变化需重算。日程重算属 profile 职责；岗位资格核定与候选更新属 match；路径余量/脆弱点属 path；最终报告需综合。画像能力维度无新证据，profile 仅做日程重算与受影响结论更新，不重复解析简历。四步串行依赖。\", \"steps\": [{\"id\": \"s1-profile\", \"expert\": \"profile\", \"objective\": \"按原始日程（turn0 原表）+ turn1 追加 course1（周五12:30-15:30）+ 本轮追加 extra1（周五16:00-19:00）重算可用时段与周工时：可用行取并集、扣除占用行并集、重叠只计一次、未列为可用不可实习。给出逐日可用时段与小时数、周工时、可用天数，并说明周五变化（原 09:00-12:00+15:30-17:00=4.5h，新增 16:00-19:00 后并集为 09:00-12:00+15:30-19:00=6.5h，周工时 18.5→20.5）。能力画像无新证据，沿用历史结论并标注未变（本科应届、成都、Vue/TypeScript/Git、网页组件项目、可连续实习6个月；professionalSkill=50、execution=50，internship=null，其余9维null，completeness=0.17），不重复解析简历。summary 首句写“周工时=数字”。岗位时间条件核定不在本角色职责内。\", \"dependsOn\": []}, {\"id\": \"s2-match\", \"expert\": \"match\", \"objective\": \"基于 s1 重算的日程（周工时=20.5，周一7h、周三7h、周五6.5h，可用3天）与两岗原文，逐项核定 [job:v16-overlap-a] 与 [job:v16-overlap-b] 的实习时间条件（连续时长、每周天数、累计小时、单日小时等原文门槛），给出符合/不符/待核定及理由；原文未提及的条件（坐班/远程/每日最长工时/调休）记为 unknown，不新增门槛。复核硬条件（成都/本科/0经验、技能交集 Vue/TypeScript/Git）。更新模拟候选：仅符合者纳入，不符或待核定移出。summary 写“周工时=20.5”与“核定[岗位ID]=符合/不符/待核定”。两岗为合成样本，不可投递。\", \"dependsOn\": [\"s1-profile\"]}, {\"id\": \"s3-path\", \"expert\": \"path\", \"objective\": \"基于 s2 的核定结果更新路径：说明周工时 18.5→20.5 对候选与起点的影响（a 是否仍因 20.5<21 不符、b 是否仍符合及其余量变化），沿用已有前端类别关系（frontend-junior→frontend-mid→frontend-senior，balanced，score 仅排序权重），不新增原文之外门槛；给出实例锚定与不可达/待核定项，并更新日程再缩减的脆弱点（周五6.5h 相对单日≥4h 的余量）。summary 写“周工时=20.5”与两岗核定结论。\", \"dependsOn\": [\"s2-match\"]}, {\"id\": \"s4-report\", \"expert\": \"report\", \"objective\": \"综合 s1-s3 生成更新版报告：保留用户事实（成都、本科应届、Vue/TypeScript/Git、网页组件项目、可连续实习6个月、作品封面绿色）逐字不变，写入新日程（含 extra1）与周工时=20.5、两岗核定结论、候选与路径；检查与历史产物（周工时=18.5、25 等旧版本）的一致性并标注作废版本；列出证据缺口与限制（合成样本不可投递、unknown 条件、未核验项）。summary 写“周工时=20.5”与“核定[岗位ID]=符合/不符/待核定”。\", \"dependsOn\": [\"s3-path\"]}]}"
+          }
+        }
+      ]
+    },
+    "streamFrames": 1018
+  },
+  {
+    "id": "47ae06d7-23a3-4bf0-8155-732f43cb01eb",
+    "requestIdentity": "4a0d7a19e42f723c910d85beaff63e00fab9286fe02ba9c69446f6b8bdcba117",
+    "executionStateHash": "ab35a7acc401e1d04bb233b84b9791deccb906706ab615ba5a054b5b9ef3e662",
+    "requestKey": "62d5033c15621f1c2f9bc798c8f4d116e193ff2dc129bb228dbb4595bd7e803e",
+    "scope": "expert:s1-profile:turn:0",
+    "role": "profile",
+    "attempt": 0,
+    "mode": "live",
+    "model": "deepseek-flash",
+    "inputEstimate": 18897,
+    "outputReserved": 4096,
+    "promptHash": "59f0cee2dd762e6d9f69738118757e0e28902b6812cb0e47b5dbe943415ccf77",
+    "toolNames": [
+      "input_history_list",
+      "input_history_read",
+      "input_read",
+      "knowledge_search",
+      "knowledge_read",
+      "memory_recall",
+      "memory_propose",
+      "artifact_read",
+      "expert_finish",
+      "collaboration_request",
+      "resume_read",
+      "profile_score"
+    ],
+    "outputLimit": 4096,
+    "status": "completed",
+    "createdAt": "2026-11-07T04:25:45.305Z",
+    "usage": {
+      "input": 10439,
+      "output": 205,
+      "cachedInput": 6144
+    },
+    "firstTokenMs": 143.09699999995064,
+    "durationMs": 1364.700332999928,
+    "finishReason": "tool_calls",
+    "response": {
+      "role": "assistant",
+      "content": "我先读取领域规则和当前输入。",
+      "tool_calls": [
+        {
+          "id": "call_00_wjr57KHxQLMKmou6Z8RD5035",
+          "type": "function",
+          "function": {
+            "name": "knowledge_read",
+            "arguments": "{\"id\": \"rule:profile\", \"offset\": 0, \"maxChars\": 4000}"
+          }
+        },
+        {
+          "id": "call_01_1ea1t1x4LI10gI98Hidq0221",
+          "type": "function",
+          "function": {
+            "name": "input_read",
+            "arguments": "{\"source\": \"request\", \"offset\": 0, \"maxChars\": 4000}"
+          }
+        },
+        {
+          "id": "call_02_N9X6zMnZQNCwxkY88qBk2856",
+          "type": "function",
+          "function": {
+            "name": "input_read",
+            "arguments": "{\"source\": \"resume\", \"offset\": 0, \"maxChars\": 4000}"
+          }
+        }
+      ]
+    },
+    "streamFrames": 74
+  },
+  {
+    "id": "c17b3dbd-7d78-4727-ad51-b4e51e0962ac",
+    "requestIdentity": "58e94aae822635fc604fd5c827e8ca9682dcf7db7b93bdace2fb049ea1f6e0b9",
+    "executionStateHash": "aee4640e1e00115854db25f6047f1db05a3a9f0c7487dd5bb621e37a94094fea",
+    "requestKey": "a72a4ce5a25d672e4e2d9247f7aa33c00167c4262c6183555df4219b07d934bd",
+    "scope": "expert:s1-profile:turn:1",
+    "role": "profile",
+    "attempt": 0,
+    "mode": "live",
+    "model": "deepseek-flash",
+    "inputEstimate": 22353,
+    "outputReserved": 4096,
+    "promptHash": "3b07fe50ef1d6ebd0c946d05084880f810debc514b4924379a00850588f12610",
+    "toolNames": [
+      "input_history_list",
+      "input_history_read",
+      "input_read",
+      "knowledge_search",
+      "knowledge_read",
+      "memory_recall",
+      "memory_propose",
+      "artifact_read",
+      "expert_finish",
+      "collaboration_request",
+      "resume_read",
+      "profile_score"
+    ],
+    "outputLimit": 4096,
+    "status": "completed",
+    "createdAt": "2026-11-07T04:25:46.691Z",
+    "usage": {
+      "input": 12178,
+      "output": 76,
+      "cachedInput": 9600
+    },
+    "firstTokenMs": 183.42937499994878,
+    "durationMs": 951.9802080000518,
+    "finishReason": "tool_calls",
+    "response": {
+      "role": "assistant",
+      "content": "现在读取历史轮次，以核验原始日程表（turn0）和 course1（turn1）。",
+      "tool_calls": [
+        {
+          "id": "call_00_Q2I4IJbIajmTl1tvPFB27457",
+          "type": "function",
+          "function": {
+            "name": "input_history_list",
+            "arguments": "{\"offset\": 0, \"limit\": 10}"
+          }
+        }
+      ]
+    },
+    "streamFrames": 38
+  },
+  {
+    "id": "074090a3-5776-4023-8a42-a5422411cbf2",
+    "requestIdentity": "2184896045891f695697cc4633e262f47179d6b62db56a0ae0f2425e25795ec4",
+    "executionStateHash": "aee4640e1e00115854db25f6047f1db05a3a9f0c7487dd5bb621e37a94094fea",
+    "requestKey": "326a856f7c1e4186d4fe7407c6ab2768dd25cd2b56d4e0276bc1bc4fc47ac5e9",
+    "scope": "expert:s1-profile:turn:2",
+    "role": "profile",
+    "attempt": 0,
+    "mode": "live",
+    "model": "deepseek-flash",
+    "inputEstimate": 24244,
+    "outputReserved": 4096,
+    "promptHash": "3fcbd4ef181fd1ad76d8d621109a14d6878d75f0ddaff741567920208ffbb512",
+    "toolNames": [
+      "input_history_list",
+      "input_history_read",
+      "input_read",
+      "knowledge_search",
+      "knowledge_read",
+      "memory_recall",
+      "memory_propose",
+      "artifact_read",
+      "expert_finish",
+      "collaboration_request",
+      "resume_read",
+      "profile_score"
+    ],
+    "outputLimit": 4096,
+    "status": "completed",
+    "createdAt": "2026-11-07T04:25:47.662Z",
+    "usage": {
+      "input": 13664,
+      "output": 288,
+      "cachedInput": 12160
+    },
+    "firstTokenMs": 254.95787499996368,
+    "durationMs": 1803.7571669999743,
+    "finishReason": "tool_calls",
+    "response": {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_00_pZbKpWWmimsMrBIIhikT7605",
+          "type": "function",
+          "function": {
+            "name": "input_history_read",
+            "arguments": "{\"sourceId\": \"input:58b8540b-48b5-49f1-b462-0a8839838755:turn:0:request\", \"offset\": 0, \"maxChars\": 4000}"
+          }
+        },
+        {
+          "id": "call_01_y1grMlMbXjI0wP7Bu0hp1632",
+          "type": "function",
+          "function": {
+            "name": "input_history_read",
+            "arguments": "{\"sourceId\": \"input:58b8540b-48b5-49f1-b462-0a8839838755:turn:1:request\", \"offset\": 0, \"maxChars\": 4000}"
+          }
+        },
+        {
+          "id": "call_02_8nipGQaU7gJ69UQO7a6Z0585",
+          "type": "function",
+          "function": {
+            "name": "input_history_read",
+            "arguments": "{\"sourceId\": \"input:58b8540b-48b5-49f1-b462-0a8839838755:turn:2:request\", \"offset\": 0, \"maxChars\": 4000}"
+          }
+        }
+      ]
+    },
+    "streamFrames": 153
+  },
+  {
+    "id": "1600a3d5-c788-450e-9959-6c57f326a5b3",
+    "requestIdentity": "0bd2e2546ce5c4fa217843435653dfb0690df7c54382d54042bebfddfbfb354c",
+    "executionStateHash": "b051a0ce51e4effea089aa484b8735e243a8cec404f805c1c2322c51fa329692",
+    "requestKey": "204a024f007171c9dcfb6d36d8af0882f0e4df297ab5dabd54d47001d56fd131",
+    "scope": "expert:s1-profile:turn:3",
+    "role": "profile",
+    "attempt": 0,
+    "mode": "live",
+    "model": "deepseek-flash",
+    "inputEstimate": 27358,
+    "outputReserved": 4096,
+    "promptHash": "e9f48fdec3347b792d2ed6ded4dc1b3d1d1b2d3d72a4c87ade4f2221fc64750a",
+    "toolNames": [
+      "input_history_list",
+      "input_history_read",
+      "input_read",
+      "knowledge_search",
+      "knowledge_read",
+      "memory_recall",
+      "memory_propose",
+      "artifact_read",
+      "expert_finish",
+      "collaboration_request",
+      "resume_read",
+      "profile_score"
+    ],
+    "outputLimit": 4096,
+    "status": "completed",
+    "createdAt": "2026-11-07T04:25:49.488Z",
+    "usage": {
+      "input": 15671,
+      "output": 1371,
+      "cachedInput": 9600
+    },
+    "firstTokenMs": 129.89958299999125,
+    "durationMs": 5254.406624999945,
+    "finishReason": "tool_calls",
+    "response": {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_00_NXv1oegmqlmHfKR2iJNZ5349",
+          "type": "function",
+          "function": {
+            "name": "profile_score",
+            "arguments": "{\"observations\": [{\"dimension\": \"professionalSkill\", \"level\": 2, \"confidence\": 0.6, \"evidenceId\": \"input:58b8540b-48b5-49f1-b462-0a8839838755:resume\", \"quote\": \"本科应届，在成都使用Vue、TypeScript、Git完成过网页组件项目\", \"rationale\": \"有具体技术栈与网页组件项目产物，但未说明复杂度、独立性与结果，按2级（具体实践、职责有限）沿用历史结论。\", \"basis\": \"behavior\"}, {\"dimension\": \"execution\", \"level\": 2, \"confidence\": 0.5, \"evidenceId\": \"input:58b8540b-48b5-49f1-b462-0a8839838755:resume\", \"quote\": \"使用Vue、TypeScript、Git完成过网页组件项目\", \"rationale\": \"有完成项目的行动与结果表述，但无时间范围、规模与可核对产出，按2级沿用。\", \"basis\": \"behavior\"}, {\"dimension\": \"internship\", \"level\": null, \"confidence\": 0.2, \"evidenceId\": \"input:58b8540b-48b5-49f1-b462-0a8839838755:resume\", \"quote\": \"本科应届，在成都使用Vue、TypeScript、Git完成过网页组件项目，其他指定岗位条件已确认满足。\", \"rationale\": \"简历未写企业实习，也无明确“无企业实习”陈述；按规则不记0，保留null。\", \"basis\": \"behavior\"}, {\"dimension\": \"certificate\", \"level\": null, \"confidence\": 0.1, \"evidenceId\": \"input:58b8540b-48b5-49f1-b462-0a8839838755:resume\", \"quote\": \"本科应届，在成都使用Vue、TypeScript、Git完成过网页组件项目，其他指定岗位条件已确认满足。\", \"rationale\": \"无证书名称或取得状态，材料缺失，null。\", \"basis\": \"behavior\"}, {\"dimension\": \"language\", \"level\": null, \"confidence\": 0.1, \"evidenceId\": \"input:58b8540b-48b5-49f1-b462-0a8839838755:resume\", \"quote\": \"本科应届，在成都使用Vue、TypeScript、Git完成过网页组件项目，其他指定岗位条件已确认满足。\", \"rationale\": \"技术栈英文名称不构成外语能力证据，null。\", \"basis\": \"behavior\"}, {\"dimension\": \"innovation\", \"level\": null, \"confidence\": 0.1, \"evidenceId\": \"input:58b8540b-48b5-49f1-b462-0a8839838755:resume\", \"quote\": \"本科应届，在成都使用Vue、TypeScript、Git完成过网页组件项目，其他指定岗位条件已确认满足。\", \"rationale\": \"无新方法及与原方法差异、验证的描述，null。\", \"basis\": \"behavior\"}, {\"dimension\": \"internalMotivation\", \"level\": null, \"confidence\": 0.1, \"evidenceId\": \"input:58b8540b-48b5-49f1-b462-0a8839838755:resume\", \"quote\": \"本科应届，在成都使用Vue、TypeScript、Git完成过网页组件项目，其他指定岗位条件已确认满足。\", \"rationale\": \"无自主目标与持续行动依据，null。\", \"basis\": \"behavior\"}, {\"dimension\": \"learning\", \"level\": null, \"confidence\": 0.1, \"evidenceId\": \"input:58b8540b-48b5-49f1-b462-0a8839838755:resume\", \"quote\": \"本科应届，在成都使用Vue、TypeScript、Git完成过网页组件项目，其他指定岗位条件已确认满足。\", \"rationale\": \"无学习过程、反馈修正或迁移实例，null。\", \"basis\": \"behavior\"}, {\"dimension\": \"stressTolerance\", \"level\": null, \"confidence\": 0.1, \"evidenceId\": \"input:58b8540b-48b5-49f1-b462-0a8839838755:resume\", \"quote\": \"本科应届，在成都使用Vue、TypeScript、Git完成过网页组件项目，其他指定岗位条件已确认满足。\", \"rationale\": \"无压力情境与应对行为，null。\", \"basis\": \"behavior\"}, {\"dimension\": \"communication\", \"level\": null, \"confidence\": 0.1, \"evidenceId\": \"input:58b8540b-48b5-49f1-b462-0a8839838755:resume\", \"quote\": \"本科应届，在成都使用Vue、TypeScript、Git完成过网页组件项目，其他指定岗位条件已确认满足。\", \"rationale\": \"无表达、澄清或协调行为证据，null。\", \"basis\": \"behavior\"}, {\"dimension\": \"leadership\", \"level\": null, \"confidence\": 0.1, \"evidenceId\": \"input:58b8540b-48b5-49f1-b462-0a8839838755:resume\", \"quote\": \"本科应届，在成都使用Vue、TypeScript、Git完成过网页组件项目，其他指定岗位条件已确认满足。\", \"rationale\": \"无组织、分工、决策行为，null。\", \"basis\": \"behavior\"}, {\"dimension\": \"adaptability\", \"level\": null, \"confidence\": 0.1, \"evidenceId\": \"input:58b8540b-48b5-49f1-b462-0a8839838755:resume\", \"quote\": \"本科应届，在成都使用Vue、TypeScript、Git完成过网页组件项目，其他指定岗位条件已确认满足。\", \"rationale\": \"无情境变更与调整行为，null。\", \"basis\": \"behavior\"}]}"
+          }
+        }
+      ]
+    },
+    "streamFrames": 1344
+  },
+  {
+    "id": "2b1f93d2-0aac-4054-ad51-5bd469b2d470",
+    "requestIdentity": "08de143fdee95b97805a0dc4b1df0d2664b64f021a948392c1d2a4b652f1b218",
+    "executionStateHash": "919e79f9876baf7b8390d556c8610dc3272a0525e99b0757701c23cbcfa52c74",
+    "requestKey": "1c03a046f1f1a81c8c20e3c98fc17df1c63825c28e0d42998eba6ab1659449f0",
+    "scope": "expert:s1-profile:turn:4",
+    "role": "profile",
+    "attempt": 0,
+    "mode": "live",
+    "model": "deepseek-flash",
+    "inputEstimate": 32650,
+    "outputReserved": 4096,
+    "promptHash": "0acdc235599f2688c148d86d38e8739438a8ea01ddc91d99b4ca1928da9ea99e",
+    "toolNames": [
+      "input_history_list",
+      "input_history_read",
+      "input_read",
+      "knowledge_search",
+      "knowledge_read",
+      "memory_recall",
+      "memory_propose",
+      "artifact_read",
+      "expert_finish",
+      "collaboration_request",
+      "resume_read",
+      "profile_score"
+    ],
+    "outputLimit": 4096,
+    "status": "completed",
+    "createdAt": "2026-11-07T04:25:54.773Z",
+    "usage": {
+      "input": 18535,
+      "output": 1605,
+      "cachedInput": 9600
+    },
+    "firstTokenMs": 177.56025000009686,
+    "durationMs": 7236.646791000036,
+    "finishReason": "tool_calls",
+    "response": {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_00_r7ZV8NFMNx5m2OY59U2a2688",
+          "type": "function",
+          "function": {
+            "name": "expert_finish",
+            "arguments": "{\"status\": \"succeeded\", \"summary\": \"周工时=20.5。按 turn0 原表 + turn1 course1（周五12:30-15:30）+ 本轮 extra1（周五16:00-19:00）重算：可用行并集=周一/周三/周五各09:00-17:00；占用行并集=周一/周三/周五各12:00-13:00 ∪ 周五12:30-15:30（12:30-13:00 与 lunch2 重叠，只计一次）。逐日可用：周一09:00-12:00、13:00-17:00（7h）；周三同（7h）；周五09:00-12:00、15:30-19:00（6.5h）；周二/周四/周六/周日未列为可用（0h）。可用天数=3，周工时=7+7+6.5=20.5h。周五变化：原 09:00-12:00+15:30-17:00=4.5h，新增 extra1 后并集为 09:00-12:00+15:30-19:00=6.5h（+2h），周工时 18.5→20.5。能力画像本轮无新证据，沿用历史结论并标注未变：本科应届、成都、Vue/TypeScript/Git、网页组件项目、可连续实习6个月；professionalSkill=50、execution=50，internship=null（简历未写企业实习且无明确“无实习”陈述，不记0），其余9维null，completeness=0.17。岗位时间条件核定不在本角色职责内，未读取岗位原文，不核定。\", \"evidenceIds\": [\"rule:profile\", \"input:58b8540b-48b5-49f1-b462-0a8839838755:turn:0:request\", \"input:58b8540b-48b5-49f1-b462-0a8839838755:turn:1:request\", \"input:58b8540b-48b5-49f1-b462-0a8839838755:request\", \"input:58b8540b-48b5-49f1-b462-0a8839838755:resume\"], \"unknowns\": [\"企业实习经历：简历未写，也无明确“无企业实习”陈述，internship 保持 null\", \"证书、语言、创新、内驱、学习、抗压、沟通、领导、适应 9 维无行为证据，保持 null\", \"网页组件项目的规模、本人职责边界、时间范围与可核对结果未提供\", \"岗位时间条件（是否满足岗位排班要求）不在本角色职责内，未核定\"], \"conflicts\": [], \"nextActions\": [\"由 match 角色按周工时=20.5 与逐日时段核定 job:v16-overlap-a / job:v16-overlap-b 的时间条件\", \"如需提升画像完整度，补充网页组件项目的本人职责、技术难点、结果指标与时间范围\", \"如确有企业实习经历，补充公司、岗位、职责与产出，以便 internship 从 null 变为可评分\"], \"artifact\": {\"scores\": {\"professionalSkill\": 50, \"certificate\": null, \"innovation\": null, \"internalMotivation\": null, \"learning\": null, \"stressTolerance\": null, \"communication\": null, \"internship\": null, \"language\": null, \"leadership\": null, \"adaptability\": null, \"execution\": 50}, \"skills\": [\"Vue\", \"TypeScript\", \"Git\"], \"evidence\": [{\"dimension\": \"professionalSkill\", \"evidenceId\": \"input:58b8540b-48b5-49f1-b462-0a8839838755:resume\", \"quote\": \"本科应届，在成都使用Vue、TypeScript、Git完成过网页组件项目\"}, {\"dimension\": \"execution\", \"evidenceId\": \"input:58b8540b-48b5-49f1-b462-0a8839838755:resume\", \"quote\": \"使用Vue、TypeScript、Git完成过网页组件项目\"}, {\"dimension\": \"internship\", \"evidenceId\": \"input:58b8540b-48b5-49f1-b462-0a8839838755:resume\", \"quote\": \"本科应届，在成都使用Vue、TypeScript、Git完成过网页组件项目，其他指定岗位条件已确认满足。\"}], \"facts\": {\"education\": \"本科应届\", \"city\": \"成都\", \"skills\": [\"Vue\", \"TypeScript\", \"Git\"], \"project\": \"网页组件项目（规模、职责、结果未提供）\", \"availability\": {\"可连续实习\": \"6个月（用户自述）\", \"逐日可用时段\": {\"周一\": [\"09:00-12:00\", \"13:00-17:00\"], \"周二\": [], \"周三\": [\"09:00-12:00\", \"13:00-17:00\"], \"周四\": [], \"周五\": [\"09:00-12:00\", \"15:30-19:00\"], \"周六\": [], \"周日\": []}, \"逐日小时\": {\"周一\": 7, \"周二\": 0, \"周三\": 7, \"周四\": 0, \"周五\": 6.5, \"周六\": 0, \"周日\": 0}, \"周工时\": 20.5, \"可用天数\": 3, \"周五变化\": \"原 09:00-12:00+15:30-17:00=4.5h；新增 extra1（16:00-19:00）后并集 09:00-12:00+15:30-19:00=6.5h；周工时 18.5→20.5\", \"计算口径\": \"可用行并集减占用行并集，重叠只计一次；未列为可用的时段不可实习\", \"来源\": [\"turn0 原表 base0/lunch0/base1/lunch1/base2/lunch2\", \"turn1 course1 周五12:30-15:30\", \"本轮 extra1 周五16:00-19:00\"]}}, \"contradictions\": [], \"questions\": [\"网页组件项目中你本人负责哪些部分、用了多长时间、最终结果如何衡量？\", \"是否有企业实习经历（公司、岗位、职责、产出）？\"], \"scoringVersion\": \"anchored-levels-v2-uncalibrated\", \"completeness\": 0.17, \"priorities\": [\"补充网页组件项目的职责与结果，可提升 professionalSkill/execution 的证据等级\", \"补充企业实习信息以解除 internship 的 null\", \"补充任一软维度的具体行为事件（如团队分工、需求澄清、情境变更应对）\"]}}"
+          }
+        }
+      ]
+    },
+    "streamFrames": 1513
+  },
+  {
+    "id": "00ed3449-9222-45b7-8d09-a7459f7b7bb7",
+    "requestIdentity": "198ec97516af0a2dc7f3c09e683004692a5fc8591d003b3e9073cd369a46da35",
+    "executionStateHash": "2984cfa41a8689e928d0b7bb717a42652f4b8f744f2b3a76b752318d06e2ae29",
+    "requestKey": "60ab05defedfa55c67259476cab1c6d9ae44659f0a1b7e47f51bace4298610ef",
+    "scope": "expert:s2-match:turn:0",
+    "role": "match",
+    "attempt": 0,
+    "mode": "live",
+    "model": "deepseek-flash",
+    "inputEstimate": 19144,
+    "outputReserved": 4096,
+    "promptHash": "2531fb14b151e8c525c0cfb29adbbbba4ef19adc97e92558732bda1cea4df2ad",
+    "toolNames": [
+      "input_history_list",
+      "input_history_read",
+      "input_read",
+      "knowledge_search",
+      "knowledge_read",
+      "memory_recall",
+      "memory_propose",
+      "artifact_read",
+      "expert_finish",
+      "collaboration_request",
+      "categories_search",
+      "jobs_search",
+      "jobs_check"
+    ],
+    "outputLimit": 4096,
+    "status": "completed",
+    "createdAt": "2026-11-07T04:26:02.051Z",
+    "usage": {
+      "input": 10550,
+      "output": 206,
+      "cachedInput": 5504
+    },
+    "firstTokenMs": 151.89816700003576,
+    "durationMs": 1410.0935000000754,
+    "finishReason": "tool_calls",
+    "response": {
+      "role": "assistant",
+      "content": "我先读取本领域规则和当前输入。",
+      "tool_calls": [
+        {
+          "id": "call_00_fzwUy8u4ILWpp6mgmm3M6173",
+          "type": "function",
+          "function": {
+            "name": "knowledge_read",
+            "arguments": "{\"id\": \"rule:match\", \"offset\": 0, \"maxChars\": 4000}"
+          }
+        },
+        {
+          "id": "call_01_rpSXOUDTY8jfQsZjPC1v5957",
+          "type": "function",
+          "function": {
+            "name": "input_read",
+            "arguments": "{\"source\": \"request\", \"offset\": 0, \"maxChars\": 4000}"
+          }
+        },
+        {
+          "id": "call_02_TzZI5VfY8mFdNm5KyLdM7440",
+          "type": "function",
+          "function": {
+            "name": "input_read",
+            "arguments": "{\"source\": \"resume\", \"offset\": 0, \"maxChars\": 4000}"
+          }
+        }
+      ]
+    },
+    "streamFrames": 75
+  },
+  {
+    "id": "dd4f548d-fd0d-48e5-af17-033e718d4980",
+    "requestIdentity": "356d765d4ed9f1e52fcc5b628249ee07accc837eaf00907a79a3d19b4d1b215c",
+    "executionStateHash": "ddbd7c4ce7f01fc880f0c0986f571d8ccd56eef0f444313e15d60cab5fba3f7f",
+    "requestKey": "a0271bce48e618debfd7ddc20771860225be7dc2a213261b739804763fc1722f",
+    "scope": "expert:s2-match:turn:1",
+    "role": "match",
+    "attempt": 0,
+    "mode": "live",
+    "model": "deepseek-flash",
+    "inputEstimate": 21212,
+    "outputReserved": 4096,
+    "promptHash": "f99c085556d62054e7b4faa0292b986aed3b1f6103416dcae24315faab892d77",
+    "toolNames": [
+      "input_history_list",
+      "input_history_read",
+      "input_read",
+      "knowledge_search",
+      "knowledge_read",
+      "memory_recall",
+      "memory_propose",
+      "artifact_read",
+      "expert_finish",
+      "collaboration_request",
+      "categories_search",
+      "jobs_search",
+      "jobs_check"
+    ],
+    "outputLimit": 4096,
+    "status": "completed",
+    "createdAt": "2026-11-07T04:26:03.494Z",
+    "usage": {
+      "input": 11653,
+      "output": 149,
+      "cachedInput": 9728
+    },
+    "firstTokenMs": 308.86383299995214,
+    "durationMs": 1344.5856660000281,
+    "finishReason": "tool_calls",
+    "response": {
+      "role": "assistant",
+      "content": "现在读取两个岗位的原文。",
+      "tool_calls": [
+        {
+          "id": "call_00_er1TE7OSp4YBAMDqntw92511",
+          "type": "function",
+          "function": {
+            "name": "knowledge_read",
+            "arguments": "{\"id\": \"job:v16-overlap-a\", \"maxChars\": 4000, \"offset\": 0}"
+          }
+        },
+        {
+          "id": "call_01_6kAVZ3w1fH1fsomh5ufc5623",
+          "type": "function",
+          "function": {
+            "name": "knowledge_read",
+            "arguments": "{\"id\": \"job:v16-overlap-b\", \"maxChars\": 4000, \"offset\": 0}"
+          }
+        }
+      ]
+    },
+    "streamFrames": 60
+  },
+  {
+    "id": "ae48f0a7-64f3-452a-918f-b59f3807d753",
+    "requestIdentity": "c132e15fbfcc6fc82593a870858947a179fedf1f059ee880cff6e5ed7239ac1f",
+    "executionStateHash": "ddbd7c4ce7f01fc880f0c0986f571d8ccd56eef0f444313e15d60cab5fba3f7f",
+    "requestKey": "092caac5e4df98f230eba922f7d2a3c22a3729f35de2f542e77ca20898285c36",
+    "scope": "expert:s2-match:turn:2",
+    "role": "match",
+    "attempt": 0,
+    "mode": "live",
+    "model": "deepseek-flash",
+    "inputEstimate": 22727,
+    "outputReserved": 4096,
+    "promptHash": "f2ec60ddfc89f1aef888f1942bcdf89d9744a10301bfed0faf7eb83ad3200970",
+    "toolNames": [
+      "input_history_list",
+      "input_history_read",
+      "input_read",
+      "knowledge_search",
+      "knowledge_read",
+      "memory_recall",
+      "memory_propose",
+      "artifact_read",
+      "expert_finish",
+      "collaboration_request",
+      "categories_search",
+      "jobs_search",
+      "jobs_check"
+    ],
+    "outputLimit": 4096,
+    "status": "completed",
+    "createdAt": "2026-11-07T04:26:04.871Z",
+    "usage": {
+      "input": 12454,
+      "output": 89,
+      "cachedInput": 11776
+    },
+    "firstTokenMs": 388.15445800009184,
+    "durationMs": 1165.2957500000484,
+    "finishReason": "tool_calls",
+    "response": {
+      "role": "assistant",
+      "content": "现在用 jobs_check 复核硬条件与技能交集。",
+      "tool_calls": [
+        {
+          "id": "call_00_Q3OfOOH3ZJDFRY1bAiSz0525",
+          "type": "function",
+          "function": {
+            "name": "jobs_check",
+            "arguments": "{\"jobIds\": [\"v16-overlap-a\", \"v16-overlap-b\"], \"observedSkills\": [\"Vue\", \"TypeScript\", \"Git\"]}"
+          }
+        }
+      ]
+    },
+    "streamFrames": 52
+  },
+  {
+    "id": "6f0273a2-4c40-49c4-ab9a-35e14d4cb95d",
+    "requestIdentity": "ab5ab7c7697d7a1e8d552dbbe27a83380ee4e03a948422b0818b456d8dbb089e",
+    "executionStateHash": "ddbd7c4ce7f01fc880f0c0986f571d8ccd56eef0f444313e15d60cab5fba3f7f",
+    "requestKey": "30c2103ce8649bf7a5bb1de03cc2b2580bf3a3d89e12bf612c219f47928ffa9f",
+    "scope": "expert:s2-match:turn:3",
+    "role": "match",
+    "attempt": 0,
+    "mode": "live",
+    "model": "deepseek-flash",
+    "inputEstimate": 23780,
+    "outputReserved": 4096,
+    "promptHash": "0cd5615248d849552f72f386a5bcdb01bafd4c97cfa44b131d18f4b184960532",
+    "toolNames": [
+      "input_history_list",
+      "input_history_read",
+      "input_read",
+      "knowledge_search",
+      "knowledge_read",
+      "memory_recall",
+      "memory_propose",
+      "artifact_read",
+      "expert_finish",
+      "collaboration_request",
+      "categories_search",
+      "jobs_search",
+      "jobs_check"
+    ],
+    "outputLimit": 4096,
+    "status": "completed",
+    "createdAt": "2026-11-07T04:26:06.072Z",
+    "usage": {
+      "input": 12945,
+      "output": 1275,
+      "cachedInput": 12416
+    },
+    "firstTokenMs": 188.61066699994262,
+    "durationMs": 7108.658832999994,
+    "finishReason": "tool_calls",
+    "response": {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_00_DXkuFrgWfASnjb4f4aKT9778",
+          "type": "function",
+          "function": {
+            "name": "expert_finish",
+            "arguments": "{\"status\": \"succeeded\", \"summary\": \"周工时=20.5。核定[job:v16-overlap-a]=符合；核定[job:v16-overlap-b]=符合。\\n\\n时间条件逐项核定（依据两岗原文，均为合成样本；口径：可用行取并集、扣除占用行并集、重叠只计一次、未列为可用不可实习）：\\n- 本轮新增 extra1（周五16:00-19:00）。周五可用并集=09:00-12:00+15:30-19:00=6.5h（原4.5h，+2h）；周一、周三各7h不变。可用天数3，周工时18.5→20.5。\\n- v16-overlap-a（连续≥3个月、每周≥3天、累计≥21小时）：连续6个月≥3个月符合；天数3≥3符合；20.5h≥21h？否——20.5<21，小时门槛仍不符 → 不符，移出候选。新增2h后仍差0.5h。\\n- v16-overlap-b（连续≥3个月、每周≥2天、至少两天各达4小时）：连续6个月符合；天数3≥2符合；周一7h、周三7h、周五6.5h，三天均≥4h符合 → 符合，保留候选。\\n- 每日最长工时、坐班/远程、调休：两岗原文均未提及，属 unknown，不据此判定，也不新增门槛。\\n\\n硬条件复核（jobs_check）：两岗城市成都、学历本科、经验0年均 satisfied；薪资与双休为 not_requested（用户未设该门槛），不等于满足。技能交集 Vue/TypeScript/Git 全覆盖，无缺失技能。\\n\\n候选结论：仅保留 v16-overlap-b；v16-overlap-a 因周工时20.5h低于原文21h门槛移出。两岗为合成数据，无真实招聘生命周期，不构成可投递岗位或真实行情。\", \"evidenceIds\": [\"rule:match\", \"input:58b8540b-48b5-49f1-b462-0a8839838755:request\", \"input:58b8540b-48b5-49f1-b462-0a8839838755:resume\", \"job:v16-overlap-a\", \"job:v16-overlap-b\", \"artifact:58b8540b-48b5-49f1-b462-0a8839838755:s1-profile\"], \"unknowns\": [\"两岗原文均未提及每日最长工时、坐班/远程、调休安排，属 unknown，未作为门槛\", \"用户薪资与双休偏好未设置（not_requested），不等于满足\", \"简历未写企业实习经历，internship 维度未核验，不记为0\"], \"conflicts\": [\"历史产物 1d060a4c...:s2-match 记周工时=18.5、核定 a=不符；本轮新增 extra1 后周工时=20.5，但 a 的 21h 门槛仍不满足，结论方向一致、数值已更新\"], \"nextActions\": [\"若希望纳入 v16-overlap-a，需再增加≥0.5h/周的可用时段（如周五延长或新增一天），由用户确认后重算\", \"面试/沟通时核实 v16-overlap-b 的具体排班与到岗方式（原文未写，属 unknown）\", \"两岗为合成样本，仅用于条件推演，不可投递；如需真实岗位请另行检索\"], \"artifact\": {\"rankedJobs\": [{\"id\": \"v16-overlap-b\", \"reason\": \"时间条件全部符合：连续6个月≥3个月；每周可用3天≥2天；周一7h、周三7h、周五6.5h，三天均≥4h（满足“至少两天各达4小时”）。硬条件成都/本科/0经验均 satisfied，技能交集 Vue/TypeScript/Git 全覆盖。\", \"gaps\": [\"每日最长工时、坐班/远程、调休原文未提及，属 unknown，需沟通核实\", \"简历仅有网页组件项目，无企业实习记录，实际协作与维护经验待面谈确认\"]}], \"alternatives\": [], \"rejectedReasons\": [{\"id\": \"v16-overlap-a\", \"reason\": \"时间条件不符：原文要求累计至少21小时/周，本轮重算周工时=20.5h（周一7+周三7+周五6.5），差0.5h；连续≥3个月与每周≥3天两项符合。硬条件与技能交集均满足，仅小时门槛未达。\"}], \"unknownCandidates\": [], \"retrievalStrategy\": \"沿用既有两岗实例（合成样本，版本已核对），未做新类别召回；先读 job 原文逐项核定时间门槛，再用 jobs_check 复核城市/学历/经验与技能交集。\", \"comparisonAxes\": [\"周工时与原文小时门槛的余量\", \"每周可用天数与单日时长分布\", \"连续实习时长\", \"硬条件（城市/学历/经验）\", \"技能交集 Vue/TypeScript/Git\"], \"verificationQuestions\": [\"v16-overlap-b 是否要求固定坐班或可远程？\", \"每日最长工时与调休规则如何？\", \"实际排班是否接受周一/周三/周五三天到岗？\"]}}"
+          }
+        }
+      ]
+    },
+    "streamFrames": 1183
+  },
+  {
+    "id": "d9c71fd8-81f0-4cf7-9a23-e8a8d66bbc99",
+    "requestIdentity": "a96d6a78df858f0c08d39ae9540e233d67a66562d363784e402632f9736f2861",
+    "executionStateHash": "e8291189210ea8d74faad2b1382a0858b2e44a6dd8fae65d001f698dadbed353",
+    "requestKey": "2c79d8c3c0c2ab28f9939fa31770d85f58b6552371271ed350a168ba363a6061",
+    "scope": "expert:s3-path:turn:0",
+    "role": "path",
+    "attempt": 0,
+    "mode": "live",
+    "model": "deepseek-flash",
+    "inputEstimate": 20540,
+    "outputReserved": 4096,
+    "promptHash": "67378ac309d546e4dc54e1e983e1cb777e7a2f947241200db00cc9f31ececf7f",
+    "toolNames": [
+      "input_history_list",
+      "input_history_read",
+      "input_read",
+      "knowledge_search",
+      "knowledge_read",
+      "memory_recall",
+      "memory_propose",
+      "artifact_read",
+      "expert_finish",
+      "collaboration_request",
+      "categories_search",
+      "jobs_search",
+      "jobs_check",
+      "graph_paths"
+    ],
+    "outputLimit": 4096,
+    "status": "completed",
+    "createdAt": "2026-11-07T04:26:13.211Z",
+    "usage": {
+      "input": 11351,
+      "output": 206,
+      "cachedInput": 5632
+    },
+    "firstTokenMs": 184.93058299995027,
+    "durationMs": 1296.6450829999521,
+    "finishReason": "tool_calls",
+    "response": {
+      "role": "assistant",
+      "content": "我先读取本领域规则和当前输入。",
+      "tool_calls": [
+        {
+          "id": "call_00_ERXGskjazyqfzk5SrZUO4799",
+          "type": "function",
+          "function": {
+            "name": "knowledge_read",
+            "arguments": "{\"id\": \"rule:path\", \"offset\": 0, \"maxChars\": 4000}"
+          }
+        },
+        {
+          "id": "call_01_I2NvU2kRUSSsXRIUVgXH2792",
+          "type": "function",
+          "function": {
+            "name": "input_read",
+            "arguments": "{\"source\": \"request\", \"offset\": 0, \"maxChars\": 4000}"
+          }
+        },
+        {
+          "id": "call_02_yzZ4n48tZT37ZWpjYCgy0613",
+          "type": "function",
+          "function": {
+            "name": "input_read",
+            "arguments": "{\"source\": \"resume\", \"offset\": 0, \"maxChars\": 4000}"
+          }
+        }
+      ]
+    },
+    "streamFrames": 75
+  },
+  {
+    "id": "73ef0e59-f6b6-4e95-b79c-8a06b2fa667f",
+    "requestIdentity": "19a2b345348de2af57d8ea7f88d42f1c5a610cf6d16232e238892457dcec5bf9",
+    "executionStateHash": "425ed1bf8f7cb5c24b1fd6714e56ab5c3e2179dcc31a187739a31104a5a53661",
+    "requestKey": "ca420e26e45a3dd81132c6ab570cf4d326faa1d10c706d5c2c6865c81b10904e",
+    "scope": "expert:s3-path:turn:1",
+    "role": "path",
+    "attempt": 0,
+    "mode": "live",
+    "model": "deepseek-flash",
+    "inputEstimate": 22546,
+    "outputReserved": 4096,
+    "promptHash": "a25ac99179096e23f3d018e0b6684e32591a7b322b76c122a19ae7b09cb9db2e",
+    "toolNames": [
+      "input_history_list",
+      "input_history_read",
+      "input_read",
+      "knowledge_search",
+      "knowledge_read",
+      "memory_recall",
+      "memory_propose",
+      "artifact_read",
+      "expert_finish",
+      "collaboration_request",
+      "categories_search",
+      "jobs_search",
+      "jobs_check",
+      "graph_paths"
+    ],
+    "outputLimit": 4096,
+    "status": "completed",
+    "createdAt": "2026-11-07T04:26:14.549Z",
+    "usage": {
+      "input": 12432,
+      "output": 240,
+      "cachedInput": 10496
+    },
+    "firstTokenMs": 142.2772920000134,
+    "durationMs": 1471.6613750000251,
+    "finishReason": "tool_calls",
+    "response": {
+      "role": "assistant",
+      "content": "现在读取岗位原文和 s2 的核定结果。",
+      "tool_calls": [
+        {
+          "id": "call_00_5zUNrG1luUZyZlLEmmZK3273",
+          "type": "function",
+          "function": {
+            "name": "knowledge_read",
+            "arguments": "{\"id\": \"job:v16-overlap-a\", \"maxChars\": 4000, \"offset\": 0}"
+          }
+        },
+        {
+          "id": "call_01_zBnodi5aE1dDwxZzT7QY7095",
+          "type": "function",
+          "function": {
+            "name": "knowledge_read",
+            "arguments": "{\"id\": \"job:v16-overlap-b\", \"maxChars\": 4000, \"offset\": 0}"
+          }
+        },
+        {
+          "id": "call_02_mEDfwtbWOjFhAzc1EcwF4254",
+          "type": "function",
+          "function": {
+            "name": "artifact_read",
+            "arguments": "{\"id\": \"58b8540b-48b5-49f1-b462-0a8839838755:s2-match\", \"maxChars\": 4000, \"offset\": 0}"
+          }
+        }
+      ]
+    },
+    "streamFrames": 109
+  },
+  {
+    "id": "9fde5804-0dd8-4d01-89fb-93f7c7324dd0",
+    "requestIdentity": "bf02db306ded45226e5670f4ce693803eb72459b75f48b00fdea823265241389",
+    "executionStateHash": "425ed1bf8f7cb5c24b1fd6714e56ab5c3e2179dcc31a187739a31104a5a53661",
+    "requestKey": "8a8efb047e0e0a371f4d5f1710d81b0161d7ee4c3848df6fce2d8e98aad8d49a",
+    "scope": "expert:s3-path:turn:2",
+    "role": "path",
+    "attempt": 0,
+    "mode": "live",
+    "model": "deepseek-flash",
+    "inputEstimate": 27335,
+    "outputReserved": 4096,
+    "promptHash": "167a68d0a7ca82f50c01ebfc60e00be7e3377cf3e493396ef1e0acdf307d8326",
+    "toolNames": [
+      "input_history_list",
+      "input_history_read",
+      "input_read",
+      "knowledge_search",
+      "knowledge_read",
+      "memory_recall",
+      "memory_propose",
+      "artifact_read",
+      "expert_finish",
+      "collaboration_request",
+      "categories_search",
+      "jobs_search",
+      "jobs_check",
+      "graph_paths"
+    ],
+    "outputLimit": 4096,
+    "status": "completed",
+    "createdAt": "2026-11-07T04:26:16.063Z",
+    "usage": {
+      "input": 15222,
+      "output": 114,
+      "cachedInput": 12672
+    },
+    "firstTokenMs": 152.75624999997672,
+    "durationMs": 1170.519083000021,
+    "finishReason": "tool_calls",
+    "response": {
+      "role": "assistant",
+      "content": "现在核对日程原文（历史轮次）并检索类别与图谱路线。",
+      "tool_calls": [
+        {
+          "id": "call_00_A0Y9aiuhqaUdnRZZkDVB2368",
+          "type": "function",
+          "function": {
+            "name": "input_history_list",
+            "arguments": "{\"offset\": 0, \"limit\": 10}"
+          }
+        },
+        {
+          "id": "call_01_R5BpW2Ofvs0V6AN68LMo7767",
+          "type": "function",
+          "function": {
+            "name": "categories_search",
+            "arguments": "{\"query\": \"前端开发\", \"limit\": 6}"
+          }
+        }
+      ]
+    },
+    "streamFrames": 45
+  },
+  {
+    "id": "ca149d84-0a14-403b-864b-e4aea0aa7dd9",
+    "requestIdentity": "118ed391031f1032b1b6377a50314ddccd4111a71df8180a5c120fcd0e11a872",
+    "executionStateHash": "425ed1bf8f7cb5c24b1fd6714e56ab5c3e2179dcc31a187739a31104a5a53661",
+    "requestKey": "d8f32203f3e4735ec7582e3de32570e575f42727f649ff6d527c003c72bf1d93",
+    "scope": "expert:s3-path:turn:3",
+    "role": "path",
+    "attempt": 0,
+    "mode": "live",
+    "model": "deepseek-flash",
+    "inputEstimate": 30354,
+    "outputReserved": 4096,
+    "promptHash": "253a4117d098daecc29858d8a4de6f074c69943004f47a5927de2ae110ae636a",
+    "toolNames": [
+      "input_history_list",
+      "input_history_read",
+      "input_read",
+      "knowledge_search",
+      "knowledge_read",
+      "memory_recall",
+      "memory_propose",
+      "artifact_read",
+      "expert_finish",
+      "collaboration_request",
+      "categories_search",
+      "jobs_search",
+      "jobs_check",
+      "graph_paths"
+    ],
+    "outputLimit": 4096,
+    "status": "completed",
+    "createdAt": "2026-11-07T04:26:17.280Z",
+    "usage": {
+      "input": 17331,
+      "output": 338,
+      "cachedInput": 15232
+    },
+    "firstTokenMs": 144.66787500004284,
+    "durationMs": 1615.716167000006,
+    "finishReason": "tool_calls",
+    "response": {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_00_7FVnenxcbpalPUIPMbpP4585",
+          "type": "function",
+          "function": {
+            "name": "input_history_read",
+            "arguments": "{\"sourceId\": \"input:58b8540b-48b5-49f1-b462-0a8839838755:turn:0:request\", \"offset\": 0, \"maxChars\": 4000}"
+          }
+        },
+        {
+          "id": "call_01_uYCS8mlXw5jqxOFpOxs49329",
+          "type": "function",
+          "function": {
+            "name": "input_history_read",
+            "arguments": "{\"sourceId\": \"input:58b8540b-48b5-49f1-b462-0a8839838755:turn:1:request\", \"offset\": 0, \"maxChars\": 4000}"
+          }
+        },
+        {
+          "id": "call_02_6RHnHT9KLh8HyQhzPATy9098",
+          "type": "function",
+          "function": {
+            "name": "input_history_read",
+            "arguments": "{\"sourceId\": \"input:58b8540b-48b5-49f1-b462-0a8839838755:turn:2:request\", \"offset\": 0, \"maxChars\": 4000}"
+          }
+        },
+        {
+          "id": "call_03_0EMeWYEmrDWc6Ql5I0pg5391",
+          "type": "function",
+          "function": {
+            "name": "graph_paths",
+            "arguments": "{\"start\": \"frontend-junior\", \"maxDepth\": 4}"
+          }
+        }
+      ]
+    },
+    "streamFrames": 171
+  },
+  {
+    "id": "1e1723d1-f85e-4436-a533-2c295ff59b40",
+    "requestIdentity": "1fefdb72e82dc44fa75abf856da472398f464dba3eb1e2cc8631b32d8898afdd",
+    "executionStateHash": "b64fc23a47f95d6fad3afe141e11b9305d51b00393c5dc701b0ea8e5953644a0",
+    "requestKey": "ffe7828232d03dff2255bf58460db31ba5a571cbb160fe1a83f63dcbf13d3ee2",
+    "scope": "expert:s3-path:turn:4",
+    "role": "path",
+    "attempt": 0,
+    "mode": "live",
+    "model": "deepseek-flash",
+    "inputEstimate": 36810,
+    "outputReserved": 4096,
+    "promptHash": "d9a36ff7efc089fb5a848ab2f5d9b1414b1c0cf73cd48d8a9b07b2225b4848c2",
+    "toolNames": [
+      "input_history_list",
+      "input_history_read",
+      "input_read",
+      "knowledge_search",
+      "knowledge_read",
+      "memory_recall",
+      "memory_propose",
+      "artifact_read",
+      "expert_finish",
+      "collaboration_request",
+      "categories_search",
+      "jobs_search",
+      "jobs_check",
+      "graph_paths"
+    ],
+    "outputLimit": 4096,
+    "status": "completed",
+    "createdAt": "2026-11-07T04:26:18.952Z",
+    "usage": {
+      "input": 21643,
+      "output": 154,
+      "cachedInput": 10496
+    },
+    "firstTokenMs": 214.2243749999907,
+    "durationMs": 1134.3342079999857,
+    "finishReason": "tool_calls",
+    "response": {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_00_oFyL2d0BOi40HtSqaYAX8291",
+          "type": "function",
+          "function": {
+            "name": "jobs_search",
+            "arguments": "{\"query\": \"前端 实习 Vue TypeScript\", \"categoryIds\": [\"frontend-junior\"], \"limit\": 10}"
+          }
+        },
+        {
+          "id": "call_01_dAqd1YDrK10DWcXMFUDv4997",
+          "type": "function",
+          "function": {
+            "name": "jobs_search",
+            "arguments": "{\"query\": \"中级前端 工程化 性能优化\", \"categoryIds\": [\"frontend-mid\"], \"limit\": 10}"
+          }
+        }
+      ]
+    },
+    "streamFrames": 64
+  },
+  {
+    "id": "4d6f4d12-1ebb-4626-856f-646b366900b5",
+    "requestIdentity": "38320d9e6d667f35d1a5210aebdc10f620a181c22ddee651d228af27acea42b1",
+    "executionStateHash": "b64fc23a47f95d6fad3afe141e11b9305d51b00393c5dc701b0ea8e5953644a0",
+    "requestKey": "bba1189c65bf41d3694c0ea255607374d6a4c6f8caf68a0a471692712bfccef4",
+    "scope": "expert:s3-path:turn:5",
+    "role": "path",
+    "attempt": 0,
+    "mode": "live",
+    "model": "deepseek-flash",
+    "inputEstimate": 41738,
+    "outputReserved": 4096,
+    "promptHash": "80cd908033ee303e3d2b313732e3de0f3d97811b512a22de21813a0a6e4af769",
+    "toolNames": [
+      "input_history_list",
+      "input_history_read",
+      "input_read",
+      "knowledge_search",
+      "knowledge_read",
+      "memory_recall",
+      "memory_propose",
+      "artifact_read",
+      "expert_finish",
+      "collaboration_request",
+      "categories_search",
+      "jobs_search",
+      "jobs_check",
+      "graph_paths"
+    ],
+    "outputLimit": 4096,
+    "status": "completed",
+    "createdAt": "2026-11-07T04:26:20.140Z",
+    "usage": {
+      "input": 24292,
+      "output": 78,
+      "cachedInput": 21760
+    },
+    "firstTokenMs": 141.48908400000073,
+    "durationMs": 704.3994590000948,
+    "finishReason": "tool_calls",
+    "response": {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_00_KOSWYZK7lJ56B2p4wcxm4806",
+          "type": "function",
+          "function": {
+            "name": "jobs_check",
+            "arguments": "{\"jobIds\": [\"v16-overlap-a\", \"v16-overlap-b\"], \"observedSkills\": [\"Vue\", \"TypeScript\", \"Git\"]}"
+          }
+        }
+      ]
+    },
+    "streamFrames": 40
+  },
+  {
+    "id": "431504f4-2b2b-462d-b73c-24406bc4dbcc",
+    "requestIdentity": "d5095ffa9ed9dd938e36f90d54385105b7b4d5746d7c7d91d5b2ecbd722c5fe2",
+    "executionStateHash": "b64fc23a47f95d6fad3afe141e11b9305d51b00393c5dc701b0ea8e5953644a0",
+    "requestKey": "38ead35403789eeeb94d6a1749afae5a23188e4ba323a1c0030672b8a11873ff",
+    "scope": "expert:s3-path:turn:6",
+    "role": "path",
+    "attempt": 0,
+    "mode": "live",
+    "model": "deepseek-flash",
+    "inputEstimate": 42764,
+    "outputReserved": 4096,
+    "promptHash": "b3323b7730bd702cd74dbc44725d13ff3443cbe5ecf44e27382176ebad5a805a",
+    "toolNames": [
+      "input_history_list",
+      "input_history_read",
+      "input_read",
+      "knowledge_search",
+      "knowledge_read",
+      "memory_recall",
+      "memory_propose",
+      "artifact_read",
+      "expert_finish",
+      "collaboration_request",
+      "categories_search",
+      "jobs_search",
+      "jobs_check",
+      "graph_paths"
+    ],
+    "outputLimit": 4096,
+    "status": "completed",
+    "createdAt": "2026-11-07T04:26:20.899Z",
+    "usage": {
+      "input": 24772,
+      "output": 2547,
+      "cachedInput": 24320
+    },
+    "firstTokenMs": 156.39662500005215,
+    "durationMs": 13250.523750000051,
+    "finishReason": "tool_calls",
+    "response": {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_00_Pw9XHvYw2PmjnHww9Met5217",
+          "type": "function",
+          "function": {
+            "name": "expert_finish",
+            "arguments": "{\"status\": \"succeeded\", \"summary\": \"周工时=20.5。核定[job:v16-overlap-a]=不符；核定[job:v16-overlap-b]=符合。\\n\\n日程重算（读原文 turn0 原表 + turn1 course1 + 本轮 extra1）：周一7h、周三7h、周五6.5h（09:00-12:00 + 15:30-19:00），可用3天，周工时18.5→20.5（+2h，仅周五变化）。\\n\\n对候选与起点的影响：a 原文要求每周≥3天且累计≥21h，20.5<21 → 仍不符，差0.5h，继续移出模拟候选；b 要求每周≥2天、至少两天各≥4h，周一7/周三7/周五6.5 三天均达标 → 仍符合，且周五单日余量由0.5h升至2.5h，b 的“两天各4h”门槛现由周一、周三各7h独立满足，周五不再是必需项。起点假设不变：初级前端（画像 professionalSkill/execution=50，internship 未核验），第一阶段仍以 b 类实习积累实践证据。\\n\\n路线（沿用已有前端类别关系，balanced，未新增原文之外门槛）：首选 routeId=calculation:58b8540b-...:82bce314…，frontend-junior→frontend-mid（promotion，score 0.85，“工程化与性能优化能力进阶”）→frontend-senior（promotion，score 0.75，“架构与团队协作要求提升”）；备选为同源短路线 656648ab…（junior→mid）。score 仅为排序权重，非成功率。\\n\\n脆弱点更新：周五6.5h 相对单日≥4h 余量2.5h；日程再缩减约2.5h/周（如周五再被占用2.5h）才会使周五跌破4h，但 b 仍可由周一、周三满足；真正断点是周工时跌破 b 的“两天各4h”即需两天各减至<4h，或可用天数降至1天。a 需再增≥0.5h/周才可能达标。\\n\\n实例锚定：frontend-junior 类别成都/本科/0经验过滤后2条（a、b），均合成样本、actionableVacancies=false，不可投递；frontend-mid 类别检索0条，中级阶段仅类别级建议，不虚构公司职位。\\n\\n不可达/待核定：无不可达目标；每日最长工时、坐班/远程、调休两岗原文未提及（unknown）；企业实习经历未核验。\", \"evidenceIds\": [\"rule:path\", \"input:58b8540b-48b5-49f1-b462-0a8839838755:request\", \"input:58b8540b-48b5-49f1-b462-0a8839838755:resume\", \"input:58b8540b-48b5-49f1-b462-0a8839838755:turn:0:request\", \"input:58b8540b-48b5-49f1-b462-0a8839838755:turn:1:request\", \"job:v16-overlap-a\", \"job:v16-overlap-b\", \"artifact:58b8540b-48b5-49f1-b462-0a8839838755:s2-match\", \"category:frontend-junior\", \"category:frontend-mid\", \"category:frontend-senior\", \"calculation:58b8540b-48b5-49f1-b462-0a8839838755:82bce314b1b2c7bb8802011d0457fd8641a41c9b8517bca87009b280d9df2fe5\", \"calculation:58b8540b-48b5-49f1-b462-0a8839838755:656648ab8e9366c99df800b41db9302ed0d93634c1946712aa1253a93f3d188d\", \"calculation:58b8540b-48b5-49f1-b462-0a8839838755:1f6e04f097fc65cfbecd77ad3e792f034d1d3c155fdd0373256e5e584163b272\", \"calculation:58b8540b-48b5-49f1-b462-0a8839838755:31b8cd177b4cb476d0f441bfc936bb72beb73123d03944d8351d6259214237d1\"], \"unknowns\": [\"两岗原文均未提及每日最长工时、坐班/远程、调休安排，属 unknown，未作为门槛\", \"简历未写企业实习经历，internship 维度未核验，起点“初级前端”为假设\", \"frontend-mid 类别在成都/本科/0经验过滤下检索0条，中级阶段无实例锚定，仅类别级建议\", \"用户薪资与双休偏好未设置（not_requested），不等于满足\"], \"conflicts\": [\"历史路径产物 1d060a4c...:s3-path 记周工时=18.5、周五4.5h、b 余量0.5h；本轮新增 extra1 后周工时=20.5、周五6.5h，数值已更新，a 不符/b 符合的方向不变\", \"历史产物称“日程再缩减约2.5h/周才会跌破 b 的两天各4h”；按当前日程，周五余量已为2.5h，且周一、周三各7h可独立满足两天各4h，该脆弱点表述需按本产物更新\"], \"nextActions\": [\"以 b 类实习（学生服务组件维护方向）作为第一阶段实践载体，按周一/周三/周五排班，优先保证周一、周三各≥4h 以稳住 b 的两天门槛\", \"若希望纳入 a，需再增加≥0.5h/周可用时段（如周五延长或新增一天），由用户确认后重算\", \"第一阶段产出：在现有 Vue/TypeScript/Git 组件项目上补测试与构建配置，形成可展示的工程化作品证据\", \"复盘条件：周工时或可用天数变化、课程/考试占用新增、或获得企业实习经历时，重跑路径与候选核定\", \"两岗为合成样本，仅用于条件推演，不可投递；如需真实岗位另行检索\"], \"artifact\": {\"paths\": [{\"routeId\": \"calculation:58b8540b-48b5-49f1-b462-0a8839838755:82bce314b1b2c7bb8802011d0457fd8641a41c9b8517bca87009b280d9df2fe5\", \"nodes\": [\"frontend-junior\", \"frontend-mid\", \"frontend-senior\"], \"actions\": [\"阶段1（当前，frontend-junior）：以 v16-overlap-b 类实习为实践载体，周工时20.5h、3天，周一/周三各7h 优先保障；产出组件维护与测试记录\", \"阶段1 检验产物：可运行组件库 + 单元测试 + Git 提交历史，覆盖 Vue/TypeScript\", \"阶段2（frontend-mid，前置：工程化与性能优化证据）：补齐构建配置、性能剖析与测试覆盖，形成一份性能优化前后对比报告\", \"阶段2 检验产物：性能指标对比（加载/渲染耗时）与代码评审记录；此阶段无实例锚定，仅类别级建议\", \"阶段3（frontend-senior，前置：架构与团队协作证据）：主导一次模块拆分或技术方案评审，沉淀设计文档\", \"复盘条件：周工时/可用天数变化、新增课程占用、获得企业实习或项目主导经历时重跑\"]}, {\"routeId\": \"calculation:58b8540b-48b5-49f1-b462-0a8839838755:656648ab8e9366c99df800b41db9302ed0d93634c1946712aa1253a93f3d188d\", \"nodes\": [\"frontend-junior\", \"frontend-mid\"], \"actions\": [\"备选短路线：若时间进一步压缩（周工时下降或可用天数减少），先只锁定 junior→mid 一步，集中资源做工程化与测试证据\", \"检验产物：一个带测试与构建流程的 Vue/TypeScript 组件项目\", \"触发切换：周工时跌破 b 的“两天各4h”或可用天数降至1天时，改用本短路线\"]}], \"checkpoints\": [{\"stage\": \"frontend-junior\", \"metric\": \"周工时20.5h、可用3天；周一/周三各7h、周五6.5h\", \"note\": \"b 门槛（≥2天、至少两天各≥4h）由周一、周三独立满足，周五非必需\"}, {\"stage\": \"frontend-mid\", \"metric\": \"具备工程化与性能优化可展示证据（构建配置、测试覆盖、性能对比）\", \"note\": \"类别级建议，无实例锚定\"}, {\"stage\": \"frontend-senior\", \"metric\": \"架构设计与团队协作证据（方案评审、模块拆分文档）\", \"note\": \"类别级建议\"}], \"assumptions\": [\"起点为初级前端：画像 professionalSkill/execution=50，internship 未核验\", \"可连续实习6个月（用户自述，未变）\", \"日程口径：可用行取并集、扣除占用行并集、重叠只计一次、未列为可用不可实习\", \"时间安排为条件性估计，不承诺晋升周期\"], \"instanceAnchors\": [{\"jobId\": \"v16-overlap-b\", \"categoryId\": \"frontend-junior\", \"status\": \"符合\", \"note\": \"合成样本，actionableVacancies=false，不可投递\"}, {\"jobId\": \"v16-overlap-a\", \"categoryId\": \"frontend-junior\", \"status\": \"不符\", \"note\": \"周工时20.5h < 原文21h，差0.5h；合成样本，不可投递\"}, {\"categoryId\": \"frontend-mid\", \"status\": \"类别级建议\", \"note\": \"成都/本科/0经验过滤下检索0条，无实例锚定\"}], \"unreachableTargets\": [], \"fallbacks\": [\"若周五再被占用2.5h，周五降至4h，b 仍由周一、周三满足；若周一或周三任一被压缩至<4h，需重新核定 b\", \"若周工时跌破 b 门槛，退回仅保留类别级路线，不虚构岗位\"], \"reviewTriggers\": [\"周工时或可用天数变化\", \"新增课程/考试占用或撤销行\", \"获得企业实习或项目主导经历\", \"用户改变城市/学历/经验等硬约束\"]}}"
+          }
+        }
+      ]
+    },
+    "streamFrames": 2455
+  },
+  {
+    "id": "e6056336-fb99-45d3-b588-4546df878566",
+    "requestIdentity": "16253943ee1366fdf1e4498020cba84dd5112666ff5fe220783f5fd55d61e6f8",
+    "executionStateHash": "6b9805384724ac771d311f391848a47eee36a5cea9f00732c02672ee695ec67a",
+    "requestKey": "c39558366f180422cb7b490633dba2c6b63f03ad015ba9f5503c8e54695c2cb3",
+    "scope": "expert:s4-report:turn:0",
+    "role": "report",
+    "attempt": 0,
+    "mode": "live",
+    "model": "deepseek-flash",
+    "inputEstimate": 24930,
+    "outputReserved": 4096,
+    "promptHash": "cc52ff20506a9d8f9ee773f5a52704ebb35d448e01ab0cfbb375b8bf5dff989b",
+    "toolNames": [
+      "input_history_list",
+      "input_history_read",
+      "input_read",
+      "knowledge_search",
+      "knowledge_read",
+      "memory_recall",
+      "memory_propose",
+      "artifact_read",
+      "expert_finish",
+      "clarification_update",
+      "collaboration_request",
+      "report_check",
+      "report_edit"
+    ],
+    "outputLimit": 4096,
+    "status": "completed",
+    "createdAt": "2026-11-07T04:26:34.215Z",
+    "usage": {
+      "input": 14210,
+      "output": 206,
+      "cachedInput": 6016
+    },
+    "firstTokenMs": 172.07924999995157,
+    "durationMs": 1342.1162499999627,
+    "finishReason": "tool_calls",
+    "response": {
+      "role": "assistant",
+      "content": "我先读取本领域规则和当前输入。",
+      "tool_calls": [
+        {
+          "id": "call_00_DTg71NkznwlvIn7BaG0t5702",
+          "type": "function",
+          "function": {
+            "name": "knowledge_read",
+            "arguments": "{\"id\": \"rule:report\", \"offset\": 0, \"maxChars\": 4000}"
+          }
+        },
+        {
+          "id": "call_01_RugNCqm94hPrSpSAEaN35221",
+          "type": "function",
+          "function": {
+            "name": "input_read",
+            "arguments": "{\"source\": \"request\", \"offset\": 0, \"maxChars\": 4000}"
+          }
+        },
+        {
+          "id": "call_02_umvQIwjpyLO6JT8A8Lfn3969",
+          "type": "function",
+          "function": {
+            "name": "input_read",
+            "arguments": "{\"source\": \"resume\", \"offset\": 0, \"maxChars\": 4000}"
+          }
+        }
+      ]
+    },
+    "streamFrames": 75
+  },
+  {
+    "id": "cf59a8ec-fb5c-4f4a-ab7a-cdaeebeb9116",
+    "requestIdentity": "405442ec1b519db0fe3b5847181d189d832694ed04f67cf92e58f84e08c14cfc",
+    "executionStateHash": "a87fdd6096497e853609ddc453d9147219274138c6679ab94c3d0437a47d3d2b",
+    "requestKey": "464853ba6d3cf12e90449caaa70068153e7a9d0f8a33756c1b97af0bc2346b49",
+    "scope": "expert:s4-report:turn:1",
+    "role": "report",
+    "attempt": 0,
+    "mode": "live",
+    "model": "deepseek-flash",
+    "inputEstimate": 26934,
+    "outputReserved": 4096,
+    "promptHash": "f652ed36430ed40a3308b1fe31b9aa90e371f92bac296642dc756a3344fc7d8f",
+    "toolNames": [
+      "input_history_list",
+      "input_history_read",
+      "input_read",
+      "knowledge_search",
+      "knowledge_read",
+      "memory_recall",
+      "memory_propose",
+      "artifact_read",
+      "expert_finish",
+      "clarification_update",
+      "collaboration_request",
+      "report_check",
+      "report_edit"
+    ],
+    "outputLimit": 4096,
+    "status": "completed",
+    "createdAt": "2026-11-07T04:26:35.616Z",
+    "usage": {
+      "input": 15276,
+      "output": 69,
+      "cachedInput": 12416
+    },
+    "firstTokenMs": 443.5746250000084,
+    "durationMs": 1032.448166999966,
+    "finishReason": "tool_calls",
+    "response": {
+      "role": "assistant",
+      "content": "现在我来读取历史用户轮次，以核对日程记录和用户事实。",
+      "tool_calls": [
+        {
+          "id": "call_00_D5mLnwUXPoLkBgQ60FGI1633",
+          "type": "function",
+          "function": {
+            "name": "input_history_list",
+            "arguments": "{\"offset\": 0, \"limit\": 10}"
+          }
+        }
+      ]
+    },
+    "streamFrames": 31
+  },
+  {
+    "id": "50680f55-8a3c-4aee-ab31-a8b6df3b2b07",
+    "requestIdentity": "50bf58ab977f8cc26edcb44eec3fc9ec9360e434409940195d4f37f7fcf349ac",
+    "executionStateHash": "a87fdd6096497e853609ddc453d9147219274138c6679ab94c3d0437a47d3d2b",
+    "requestKey": "8cf35fd8cc37c45f0d69a67f023286fde9638788f398328d388a051c48143f8c",
+    "scope": "expert:s4-report:turn:2",
+    "role": "report",
+    "attempt": 0,
+    "mode": "live",
+    "model": "deepseek-flash",
+    "inputEstimate": 28821,
+    "outputReserved": 4096,
+    "promptHash": "29ccd4139ade7475b0497db6230b34e95e3e24194605880d33a854a4e5b0d8a2",
+    "toolNames": [
+      "input_history_list",
+      "input_history_read",
+      "input_read",
+      "knowledge_search",
+      "knowledge_read",
+      "memory_recall",
+      "memory_propose",
+      "artifact_read",
+      "expert_finish",
+      "clarification_update",
+      "collaboration_request",
+      "report_check",
+      "report_edit"
+    ],
+    "outputLimit": 4096,
+    "status": "completed",
+    "createdAt": "2026-11-07T04:26:36.705Z",
+    "usage": {
+      "input": 16755,
+      "output": 288,
+      "cachedInput": 15232
+    },
+    "firstTokenMs": 220.35412499995437,
+    "durationMs": 1742.7564589999383,
+    "finishReason": "tool_calls",
+    "response": {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_00_fvyNMr5kmGmIc9cl4FWJ2967",
+          "type": "function",
+          "function": {
+            "name": "input_history_read",
+            "arguments": "{\"sourceId\": \"input:58b8540b-48b5-49f1-b462-0a8839838755:turn:0:request\", \"offset\": 0, \"maxChars\": 4000}"
+          }
+        },
+        {
+          "id": "call_01_XRevNmvnq8XY6FsghbZE2270",
+          "type": "function",
+          "function": {
+            "name": "input_history_read",
+            "arguments": "{\"sourceId\": \"input:58b8540b-48b5-49f1-b462-0a8839838755:turn:1:request\", \"offset\": 0, \"maxChars\": 4000}"
+          }
+        },
+        {
+          "id": "call_02_suaoP0QFgipTKNjQ7NFh9332",
+          "type": "function",
+          "function": {
+            "name": "input_history_read",
+            "arguments": "{\"sourceId\": \"input:58b8540b-48b5-49f1-b462-0a8839838755:turn:2:request\", \"offset\": 0, \"maxChars\": 4000}"
+          }
+        }
+      ]
+    },
+    "streamFrames": 153
+  },
+  {
+    "id": "e2bbf112-8f50-4be8-81c6-cd7723a5df26",
+    "requestIdentity": "74932f12e17402fdaffe55be9cace39be28dc4d2e4211d97a626185ed6bffec5",
+    "executionStateHash": "51a0732852471f2308e4262dd08ac748e2c4f7875119955cd00e7f444b077d07",
+    "requestKey": "cf1db901d75da8eb8923c0917abb09f2f4103330f9904283ec6df54bff72ee5c",
+    "scope": "expert:s4-report:turn:3",
+    "role": "report",
+    "attempt": 0,
+    "mode": "live",
+    "model": "deepseek-flash",
+    "inputEstimate": 31935,
+    "outputReserved": 4096,
+    "promptHash": "c1bbdcdfb367b10d1bb5528b6e32b8e266cf073dbb0b30765680070e6b9e5e07",
+    "toolNames": [
+      "input_history_list",
+      "input_history_read",
+      "input_read",
+      "knowledge_search",
+      "knowledge_read",
+      "memory_recall",
+      "memory_propose",
+      "artifact_read",
+      "expert_finish",
+      "clarification_update",
+      "collaboration_request",
+      "report_check",
+      "report_edit"
+    ],
+    "outputLimit": 4096,
+    "status": "completed",
+    "createdAt": "2026-11-07T04:26:38.514Z",
+    "usage": {
+      "input": 18765,
+      "output": 237,
+      "cachedInput": 12416
+    },
+    "firstTokenMs": 163.6344579999568,
+    "durationMs": 1524.5243749999208,
+    "finishReason": "tool_calls",
+    "response": {
+      "role": "assistant",
+      "content": "现在我来读取上游产物和岗位原文。",
+      "tool_calls": [
+        {
+          "id": "call_00_9OtFCGnpsmSdWxeATdV70322",
+          "type": "function",
+          "function": {
+            "name": "artifact_read",
+            "arguments": "{\"id\": \"58b8540b-48b5-49f1-b462-0a8839838755:s3-path\", \"offset\": 0, \"maxChars\": 6000}"
+          }
+        },
+        {
+          "id": "call_01_lKINmVeBnyWii35RoF3y0876",
+          "type": "function",
+          "function": {
+            "name": "knowledge_read",
+            "arguments": "{\"id\": \"job:v16-overlap-a\", \"offset\": 0, \"maxChars\": 4000}"
+          }
+        },
+        {
+          "id": "call_02_WP3AwSv5ziabgFtDb7lS1644",
+          "type": "function",
+          "function": {
+            "name": "knowledge_read",
+            "arguments": "{\"id\": \"job:v16-overlap-b\", \"offset\": 0, \"maxChars\": 4000}"
+          }
+        }
+      ]
+    },
+    "streamFrames": 106
+  },
+  {
+    "id": "97f56015-692a-4c14-b42d-14f9f1de8836",
+    "requestIdentity": "b7c376127e100056fb13719c322aac408240cccd5db9116ca268f6403c9b72fc",
+    "executionStateHash": "58603600b1388ee1c3d808a038986b12cef6ee8c9c3796a51dc44b992cbcf94a",
+    "requestKey": "582caf36d07c74ba8a29ad9c88051a6287b9185890a4cd7a32b8421ab83b62ce",
+    "scope": "expert:s4-report:turn:4",
+    "role": "report",
+    "attempt": 0,
+    "mode": "live",
+    "model": "deepseek-flash",
+    "inputEstimate": 40145,
+    "outputReserved": 4096,
+    "promptHash": "e59be7da51b6c1977bf8dd38c43fefbbe9ac9e869c362279aef26b9198b51d62",
+    "toolNames": [
+      "input_history_list",
+      "input_history_read",
+      "input_read",
+      "knowledge_search",
+      "knowledge_read",
+      "memory_recall",
+      "memory_propose",
+      "artifact_read",
+      "expert_finish",
+      "clarification_update",
+      "collaboration_request",
+      "report_check",
+      "report_edit"
+    ],
+    "outputLimit": 4096,
+    "status": "completed",
+    "createdAt": "2026-11-07T04:26:40.105Z",
+    "usage": {
+      "input": 24015,
+      "output": 184,
+      "cachedInput": 12416
+    },
+    "firstTokenMs": 243.75433399993926,
+    "durationMs": 1346.7131669999799,
+    "finishReason": "tool_calls",
+    "response": {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_00_hH0bOeQOgqMfYhrD4nt86184",
+          "type": "function",
+          "function": {
+            "name": "artifact_read",
+            "arguments": "{\"id\": \"58b8540b-48b5-49f1-b462-0a8839838755:s2-match\", \"offset\": 0, \"maxChars\": 4000}"
+          }
+        },
+        {
+          "id": "call_01_yPQXriMAfJP89V0EqO3V9771",
+          "type": "function",
+          "function": {
+            "name": "artifact_read",
+            "arguments": "{\"id\": \"1d060a4c-c257-4c1e-8197-6f913d7d150a:s1-profile\", \"offset\": 0, \"maxChars\": 4000}"
+          }
+        }
+      ]
+    },
+    "streamFrames": 94
+  },
+  {
+    "id": "7880a7e1-198f-469c-b64c-dbc26027d838",
+    "requestIdentity": "9af9165ce0344886d80854b9f04627460d695d74f563608953894ab1cd7837e6",
+    "executionStateHash": "58603600b1388ee1c3d808a038986b12cef6ee8c9c3796a51dc44b992cbcf94a",
+    "requestKey": "c367001b22fe82bda43f9cb58850820c4da1cced02445afe207d4cc7e3adb4f7",
+    "scope": "expert:s4-report:turn:5",
+    "role": "report",
+    "attempt": 0,
+    "mode": "live",
+    "model": "deepseek-flash",
+    "inputEstimate": 44384,
+    "outputReserved": 4096,
+    "promptHash": "b03397d4691b2276815ce3728b908addf67771bf81fb5415e946109ab4ec4edb",
+    "toolNames": [
+      "input_history_list",
+      "input_history_read",
+      "input_read",
+      "knowledge_search",
+      "knowledge_read",
+      "memory_recall",
+      "memory_propose",
+      "artifact_read",
+      "expert_finish",
+      "clarification_update",
+      "collaboration_request",
+      "report_check",
+      "report_edit"
+    ],
+    "outputLimit": 4096,
+    "status": "completed",
+    "createdAt": "2026-11-07T04:26:41.519Z",
+    "usage": {
+      "input": 26517,
+      "output": 98,
+      "cachedInput": 24192
+    },
+    "firstTokenMs": 176.48895899998024,
+    "durationMs": 1212.4674999999115,
+    "finishReason": "tool_calls",
+    "response": {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_00_2gCfejauZc22nXqHEs9V6216",
+          "type": "function",
+          "function": {
+            "name": "artifact_read",
+            "arguments": "{\"id\": \"1d060a4c-c257-4c1e-8197-6f913d7d150a:s2-match\", \"offset\": 0, \"maxChars\": 4000}"
+          }
+        }
+      ]
+    },
+    "streamFrames": 50
+  },
+  {
+    "id": "5305657b-9dec-428a-82a6-a7dd70d5cd9d",
+    "requestIdentity": "263a5a572e874ab07e8fe67e4e335bb941901874b1b04a68dd97b03b313be1ec",
+    "executionStateHash": "58603600b1388ee1c3d808a038986b12cef6ee8c9c3796a51dc44b992cbcf94a",
+    "requestKey": "06e58d4f574d859f7f55d198072d812f98ea6e1bf1fe343540b6e3bfd033910b",
+    "scope": "expert:s4-report:turn:6",
+    "role": "report",
+    "attempt": 0,
+    "mode": "live",
+    "model": "deepseek-flash",
+    "inputEstimate": 48721,
+    "outputReserved": 4096,
+    "promptHash": "dcbc54a98fe23dcd1e978e3dda8e68dfda09852cbb3768db9c9eacebb69fe438",
+    "toolNames": [
+      "input_history_list",
+      "input_history_read",
+      "input_read",
+      "knowledge_search",
+      "knowledge_read",
+      "memory_recall",
+      "memory_propose",
+      "artifact_read",
+      "expert_finish",
+      "clarification_update",
+      "collaboration_request",
+      "report_check",
+      "report_edit"
+    ],
+    "outputLimit": 4096,
+    "status": "completed",
+    "createdAt": "2026-11-07T04:26:42.799Z",
+    "usage": {
+      "input": 28944,
+      "output": 255,
+      "cachedInput": 26496
+    },
+    "firstTokenMs": 167.87570800003596,
+    "durationMs": 1587.2097500000382,
+    "finishReason": "tool_calls",
+    "response": {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_00_qCvfjU57la16UGYJKEXu6600",
+          "type": "function",
+          "function": {
+            "name": "knowledge_read",
+            "arguments": "{\"id\": \"calculation:58b8540b-48b5-49f1-b462-0a8839838755:82bce314b1b2c7bb8802011d0457fd8641a41c9b8517bca87009b280d9df2fe5\", \"offset\": 0, \"maxChars\": 2000}"
+          }
+        },
+        {
+          "id": "call_01_MA9soKes5NxbmzVaaZvy0298",
+          "type": "function",
+          "function": {
+            "name": "knowledge_read",
+            "arguments": "{\"id\": \"calculation:58b8540b-48b5-49f1-b462-0a8839838755:656648ab8e9366c99df800b41db9302ed0d93634c1946712aa1253a93f3d188d\", \"offset\": 0, \"maxChars\": 2000}"
+          }
+        }
+      ]
+    },
+    "streamFrames": 165
+  },
+  {
+    "id": "356dd155-93db-4f5e-afeb-28643fb1d680",
+    "requestIdentity": "3b60083c3aa20609ab351f0376d9a3124bf52915edd8823e3c7564f3a1e8ce2a",
+    "executionStateHash": "58603600b1388ee1c3d808a038986b12cef6ee8c9c3796a51dc44b992cbcf94a",
+    "requestKey": "b2ea379b958c81880603ffa6b9a517cc330eb8b2875e8a274a95111d5cc0046a",
+    "scope": "expert:s4-report:turn:7",
+    "role": "report",
+    "attempt": 0,
+    "mode": "live",
+    "model": "deepseek-flash",
+    "inputEstimate": 50503,
+    "outputReserved": 4096,
+    "promptHash": "5f9b40f5b5929683234bb24ad76020e290ad8f358fd95fc37d7be6fd5742abc1",
+    "toolNames": [
+      "input_history_list",
+      "input_history_read",
+      "input_read",
+      "knowledge_search",
+      "knowledge_read",
+      "memory_recall",
+      "memory_propose",
+      "artifact_read",
+      "expert_finish",
+      "clarification_update",
+      "collaboration_request",
+      "report_check",
+      "report_edit"
+    ],
+    "outputLimit": 4096,
+    "status": "completed",
+    "createdAt": "2026-11-07T04:26:44.458Z",
+    "usage": {
+      "input": 30204,
+      "output": 1341,
+      "cachedInput": 29184
+    },
+    "firstTokenMs": 161.25233300006948,
+    "durationMs": 5850.042500000098,
+    "finishReason": "tool_calls",
+    "response": {
+      "role": "assistant",
+      "content": "现在我来核对续接问题。",
+      "tool_calls": [
+        {
+          "id": "call_00_2okUiLDQ9Q8JOmmCaiFZ3912",
+          "type": "function",
+          "function": {
+            "name": "clarification_update",
+            "arguments": "{\"updates\": [{\"questionId\": \"question:a04f1c954e9e611d194bafcc19cc8681d7dc243bac2551617bcab93fd09612bc\", \"expectedVersion\": 0, \"status\": \"answered\", \"claims\": [{\"subject\": \"domain\", \"text\": \"v16-overlap-a 原文未提及坐班/到岗地点/远程、每日最长工时与调休细则，仅写“具体星期和时段不作额外限制”“不设其他门槛”。\", \"citations\": [{\"evidenceId\": \"job:v16-overlap-a\", \"quote\": \"具体星期和时段不作额外限制。不设其他门槛，其余条件已确认满足。\"}]}, {\"subject\": \"domain\", \"text\": \"v16-overlap-b 原文同样未提及坐班/到岗地点/远程、每日最长工时与调休细则。\", \"citations\": [{\"evidenceId\": \"job:v16-overlap-b\", \"quote\": \"具体星期和时段不作额外限制。不设其他门槛，其余条件已确认满足。\"}]}], \"remaining\": [], \"reason\": \"已直接读取两岗原文，确认这些条件属原文未提及（unknown），不是用户材料缺失。\"}, {\"questionId\": \"question:dd022172003cfb1c2caad4ea2c0ed44ace3315be9e6f6cdbbef1e2d6da9b9b9e\", \"expectedVersion\": 0, \"status\": \"answered\", \"claims\": [{\"subject\": \"domain\", \"text\": \"两岗原文均未出现坐班、到岗地点、远程、每日最长工时或调休条款，属未提及，不据此判定符合或不符合。\", \"citations\": [{\"evidenceId\": \"job:v16-overlap-a\", \"quote\": \"具体星期和时段不作额外限制。不设其他门槛，其余条件已确认满足。\"}, {\"evidenceId\": \"job:v16-overlap-b\", \"quote\": \"具体星期和时段不作额外限制。不设其他门槛，其余条件已确认满足。\"}]}], \"remaining\": [], \"reason\": \"与上一条同源，已读原文确认。\"}, {\"questionId\": \"question:09a3ad698882586cccbf8d8cb73dd6b9cd40bcfe1983edf7429ab85567d9b887\", \"expectedVersion\": 0, \"status\": \"unanswered\", \"claims\": [], \"remaining\": [\"企业实习经历（公司/岗位/时长）：当前简历与本轮原话均未提及，也无明确“无实习”陈述\"], \"reason\": \"当前简历全文（52字）与本轮原话均无企业实习信息；材料未写不等于不具备，不记0，需用户补充。\"}, {\"questionId\": \"question:e408d94b1a1f5192308d197ba5d559ae38fbfd2b7f70fb9f42c69e94d5fcc6dc\", \"expectedVersion\": 0, \"status\": \"unanswered\", \"claims\": [], \"remaining\": [\"企业实习经历（公司/岗位/时长）：起点假设仍待核定\"], \"reason\": \"同上，简历未写企业实习，起点“初级前端”仍为假设。\"}, {\"questionId\": \"question:ed41b3f52bc4795a872fa7dc9c2cfc136394053dbc8d2c04e57eb858d9fed4ec\", \"expectedVersion\": 0, \"status\": \"partial\", \"claims\": [{\"subject\": \"user\", \"text\": \"用户为本科应届，在成都使用 Vue、TypeScript、Git 完成过网页组件项目。\", \"citations\": [{\"evidenceId\": \"input:58b8540b-48b5-49f1-b462-0a8839838755:resume\", \"quote\": \"本科应届，在成都使用Vue、TypeScript、Git完成过网页组件项目\"}]}], \"remaining\": [\"网页组件项目的规模、本人职责、技术难点与可核对结果\"], \"reason\": \"简历确认了项目存在与技术栈，但未写规模、职责、难点与结果。\"}, {\"questionId\": \"question:8b25999ee863bc692bc583c33afefa39be68f41fb428b87a447e362a765a62bb\", \"expectedVersion\": 0, \"status\": \"unanswered\", \"claims\": [], \"remaining\": [\"证书/语言证据\"], \"reason\": \"简历全文未提及证书或语言能力。\"}, {\"questionId\": \"question:6b10e130e83fa76535ea5107b16d3477e48a7020ef8827a6689fe3af608b4fbf\", \"expectedVersion\": 0, \"status\": \"unanswered\", \"claims\": [], \"remaining\": [\"团队协作、压力情境、学习迁移与创新方法的具体行为实例\"], \"reason\": \"简历与本轮原话均无相关行为实例。\"}, {\"questionId\": \"question:9fc1c82c94c81ba1e1fac48002887b56163bfb47a8216df56f5d76b8b2b4de7b\", \"expectedVersion\": 0, \"status\": \"answered\", \"claims\": [{\"subject\": \"state\", \"text\": \"路径产物记录 frontend-mid 类别在成都/本科/0经验过滤下检索0条，中级阶段仅类别级建议、无实例锚定。\", \"citations\": [{\"evidenceId\": \"artifact:58b8540b-48b5-49f1-b462-0a8839838755:s3-path\", \"quote\": \"frontend-mid 类别检索0条，中级阶段仅类别级建议，不虚构公司职位\"}]}], \"remaining\": [], \"reason\": \"该问题为上游路径产物的执行状态，已读产物确认。\"}]}"
+          }
+        }
+      ]
+    },
+    "streamFrames": 1314
+  },
+  {
+    "id": "d36831ae-6ef8-4b17-8265-89a97622ab25",
+    "requestIdentity": "a9d4cd92eed39a32855c149ed4cc62807286f47a9a480c46058a605176eec616",
+    "executionStateHash": "58603600b1388ee1c3d808a038986b12cef6ee8c9c3796a51dc44b992cbcf94a",
+    "requestKey": "e2e0fc8c2d06a9fcaf65705e86905a4277ba10f7c886956a6ba261827133e091",
+    "scope": "expert:s4-report:turn:8",
+    "role": "report",
+    "attempt": 0,
+    "mode": "live",
+    "model": "deepseek-flash",
+    "inputEstimate": 53490,
+    "outputReserved": 4096,
+    "promptHash": "b52fd1eec7575a0dc3481431a816e9f1fba8082df2a9a734174f0c768ccedd48",
+    "toolNames": [
+      "input_history_list",
+      "input_history_read",
+      "input_read",
+      "knowledge_search",
+      "knowledge_read",
+      "memory_recall",
+      "memory_propose",
+      "artifact_read",
+      "expert_finish",
+      "clarification_update",
+      "collaboration_request",
+      "report_check",
+      "report_edit"
+    ],
+    "outputLimit": 4096,
+    "status": "completed",
+    "createdAt": "2026-11-07T04:26:50.386Z",
+    "usage": {
+      "input": 31845,
+      "output": 1247,
+      "cachedInput": 31488
+    },
+    "firstTokenMs": 190.5135419999715,
+    "durationMs": 4705.173249999993,
+    "finishReason": "tool_calls",
+    "response": {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_00_Y12Hg1kL9DjEpzzPvrnu2525",
+          "type": "function",
+          "function": {
+            "name": "clarification_update",
+            "arguments": "{\"updates\": [{\"claims\": [{\"citations\": [{\"evidenceId\": \"job:v16-overlap-a\", \"quote\": \"具体星期和时段不作额外限制。不设其他门槛，其余条件已确认满足。\"}], \"subject\": \"domain\", \"text\": \"v16-overlap-a 原文未提及坐班/到岗地点/远程、每日最长工时与调休细则，仅写“具体星期和时段不作额外限制”“不设其他门槛”。\"}, {\"citations\": [{\"evidenceId\": \"job:v16-overlap-b\", \"quote\": \"具体星期和时段不作额外限制。不设其他门槛，其余条件已确认满足。\"}], \"subject\": \"domain\", \"text\": \"v16-overlap-b 原文同样未提及坐班/到岗地点/远程、每日最长工时与调休细则。\"}], \"expectedVersion\": 0, \"questionId\": \"question:a04f1c954e9e611d194bafcc19cc8681d7dc243bac2551617bcab93fd09612bc\", \"reason\": \"已直接读取两岗原文，确认这些条件属原文未提及（unknown），不是用户材料缺失。\", \"remaining\": [], \"status\": \"answered\"}, {\"claims\": [{\"citations\": [{\"evidenceId\": \"job:v16-overlap-a\", \"quote\": \"具体星期和时段不作额外限制。不设其他门槛，其余条件已确认满足。\"}, {\"evidenceId\": \"job:v16-overlap-b\", \"quote\": \"具体星期和时段不作额外限制。不设其他门槛，其余条件已确认满足。\"}], \"subject\": \"domain\", \"text\": \"两岗原文均未出现坐班、到岗地点、远程、每日最长工时或调休条款，属未提及，不据此判定符合或不符合。\"}], \"expectedVersion\": 0, \"questionId\": \"question:dd022172003cfb1c2caad4ea2c0ed44ace3315be9e6f6cdbbef1e2d6da9b9b9e\", \"reason\": \"与上一条同源，已读原文确认。\", \"remaining\": [], \"status\": \"answered\"}, {\"claims\": [], \"expectedVersion\": 0, \"questionId\": \"question:09a3ad698882586cccbf8d8cb73dd6b9cd40bcfe1983edf7429ab85567d9b887\", \"reason\": \"当前简历全文（52字）与本轮原话均无企业实习信息；材料未写不等于不具备，不记0，需用户补充。\", \"remaining\": [\"企业实习经历（公司/岗位/时长）：当前简历与本轮原话均未提及，也无明确“无实习”陈述\"], \"status\": \"unanswered\"}, {\"claims\": [], \"expectedVersion\": 0, \"questionId\": \"question:e408d94b1a1f5192308d197ba5d559ae38fbfd2b7f70fb9f42c69e94d5fcc6dc\", \"reason\": \"同上，简历未写企业实习，起点“初级前端”仍为假设。\", \"remaining\": [\"企业实习经历（公司/岗位/时长）：起点假设仍待核定\"], \"status\": \"unanswered\"}, {\"claims\": [], \"expectedVersion\": 0, \"questionId\": \"question:ed41b3f52bc4795a872fa7dc9c2cfc136394053dbc8d2c04e57eb858d9fed4ec\", \"reason\": \"简历只确认项目存在与技术栈，未回答规模、职责、难点与结果任一子问题，故不标 partial。\", \"remaining\": [\"网页组件项目的规模、本人职责、技术难点与可核对结果\"], \"status\": \"unanswered\"}, {\"claims\": [], \"expectedVersion\": 0, \"questionId\": \"question:8b25999ee863bc692bc583c33afefa39be68f41fb428b87a447e362a765a62bb\", \"reason\": \"简历全文未提及证书或语言能力。\", \"remaining\": [\"证书/语言证据\"], \"status\": \"unanswered\"}, {\"claims\": [], \"expectedVersion\": 0, \"questionId\": \"question:6b10e130e83fa76535ea5107b16d3477e48a7020ef8827a6689fe3af608b4fbf\", \"reason\": \"简历与本轮原话均无相关行为实例。\", \"remaining\": [\"团队协作、压力情境、学习迁移与创新方法的具体行为实例\"], \"status\": \"unanswered\"}, {\"claims\": [{\"citations\": [{\"evidenceId\": \"artifact:58b8540b-48b5-49f1-b462-0a8839838755:s3-path\", \"quote\": \"frontend-mid 类别检索0条，中级阶段仅类别级建议，不虚构公司职位\"}], \"subject\": \"state\", \"text\": \"路径产物记录 frontend-mid 类别在成都/本科/0经验过滤下检索0条，中级阶段仅类别级建议、无实例锚定。\"}], \"expectedVersion\": 0, \"questionId\": \"question:9fc1c82c94c81ba1e1fac48002887b56163bfb47a8216df56f5d76b8b2b4de7b\", \"reason\": \"该问题为上游路径产物的执行状态，已读产物确认。\", \"remaining\": [], \"status\": \"answered\"}]}"
+          }
+        }
+      ]
+    },
+    "streamFrames": 1219
+  },
+  {
+    "id": "c90735f1-0cc8-494e-8e70-6f34cbef73cf",
+    "requestIdentity": "4a0477f10f818b6781b28f23c186b177d48447f688c4df068d65bf5277bb7cd5",
+    "executionStateHash": "935d1a5eea37eddf53c4ab173f4bcb72b35605597a976e3be90538059522a179",
+    "requestKey": "1ee0897e75145d1f0c119c28e41f60b8b446e458ca6c584a6ecc04eb5bbd59c9",
+    "scope": "expert:s4-report:turn:9",
+    "role": "report",
+    "attempt": 0,
+    "mode": "live",
+    "model": "deepseek-flash",
+    "inputEstimate": 59610,
+    "outputReserved": 4096,
+    "promptHash": "add1118d82494a98ecc597a082a1f56cc248519dbf40dd9095f425b53fda988f",
+    "toolNames": [
+      "input_history_list",
+      "input_history_read",
+      "input_read",
+      "knowledge_search",
+      "knowledge_read",
+      "memory_recall",
+      "memory_propose",
+      "artifact_read",
+      "expert_finish",
+      "clarification_update",
+      "collaboration_request",
+      "report_check",
+      "report_edit"
+    ],
+    "outputLimit": 4096,
+    "status": "completed",
+    "createdAt": "2026-11-07T04:26:55.175Z",
+    "usage": {
+      "input": 35661,
+      "output": 2250,
+      "cachedInput": 12416
+    },
+    "firstTokenMs": 148.53933399997186,
+    "durationMs": 9859.095124999993,
+    "finishReason": "tool_calls",
+    "response": {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_00_lYBWo4zGK42sP92cKvEC3630",
+          "type": "function",
+          "function": {
+            "name": "report_check",
+            "arguments": "{\"markdown\": \"# 生涯报告（更新版 v3）\\n\\n**周工时=20.5。核定[job:v16-overlap-a]=不符；核定[job:v16-overlap-b]=符合。**\\n\\n## 一、个人画像\\n- 用户事实（逐字保留）：本科应届，在成都使用Vue、TypeScript、Git完成过网页组件项目；可连续实习6个月；作品封面绿色（仅记录，不推断设计理由）。\\n- 能力估计：professionalSkill=50、execution=50（2级），internship=null（简历未写企业实习，也无明确“无实习”陈述，不记0），其余9维null；完整度0.17。评分为证据基础上的描述性估计，非录用概率。\\n\\n## 二、岗位匹配（时间条件核定）\\n日程口径：可用行取并集、扣除占用行并集、重叠只计一次、未列为可用不可实习。本轮追加 extra1（周五16:00-19:00），原表、course1、午休均保留。\\n\\n| 日 | 可用时段 | 小时 |\\n|---|---|---|\\n| 周一 | 09:00-12:00、13:00-17:00 | 7 |\\n| 周三 | 09:00-12:00、13:00-17:00 | 7 |\\n| 周五 | 09:00-12:00、15:30-19:00 | 6.5 |\\n\\n合计 20.5h/周、可用3天（18.5→20.5，+2h，仅周五变化）。\\n- **v16-overlap-a（校园物资流转界面实习生）＝不符**：连续6个月≥3个月、3天≥3天符合；20.5h<原文“累计至少21小时”，差0.5h。\\n- **v16-overlap-b（学生服务组件维护实习生）＝符合**：连续6个月符合；3天≥2天符合；周一7h、周三7h、周五6.5h，至少两天各≥4h（三天均达标）。\\n- 硬条件：两岗城市成都、学历本科、经验0年均满足；技能交集 Vue/TypeScript/Git 全覆盖。薪资与双休为用户未设门槛（not_requested），不等于满足。\\n- 候选：仅 v16-overlap-b。两岗均为合成样本（source=synthetic-integration），不可投递，不构成真实行情。\\n\\n## 三、发展路径\\n沿用已有前端类别关系（balanced，未新增原文之外门槛）：\\n- 首选：frontend-junior→frontend-mid（promotion，score 0.85，“工程化与性能优化能力进阶”）→frontend-senior（promotion，score 0.75，“架构与团队协作要求提升”）。\\n- 备选短路线：junior→mid，若时间进一步压缩则只锁定一步。\\n- score 仅为排序权重，非成功率；不承诺晋升周期。frontend-mid 在成都/本科/0经验过滤下检索0条，中级阶段仅类别级建议。\\n\\n## 四、行动计划\\n1. **阶段1（当前）**：以 b 类实习为实践载体，按周一/周三/周五排班，优先保证周一、周三各≥4h。交付物：可运行组件库＋单元测试＋Git 提交历史（覆盖 Vue/TypeScript）。验证：测试通过率与提交记录可展示。\\n2. **阶段2（mid 前置）**：补构建配置、性能剖析与测试覆盖。交付物：性能优化前后对比报告（加载/渲染耗时）。验证：指标对比＋代码评审记录。\\n3. **阶段3（senior 前置）**：主导一次模块拆分或技术方案评审。交付物：设计文档。验证：评审记录。\\n4. **若希望纳入 a**：需再增≥0.5h/周可用时段（如周五延长或新增一天），由用户确认后重算；不得自行放宽岗位门槛。\\n5. **复盘触发**：周工时或可用天数变化、新增课程/考试占用或撤销行、获得企业实习或项目主导经历、硬约束（城市/学历/经验）改变。\\n\\n## 五、限制与待确认\\n- **作废版本**：历史报告“周工时=25、两岗均符合”作废；上一版报告“周工时=18.5、周五4.5h、b 余量0.5h”已被本轮 extra1 取代，仅作历史记录。\\n- **合成样本**：两岗不可投递，不涉及是否仍在招的核实。\\n- **unknown（原文未提及）**：坐班/到岗地点/远程、每日最长工时、调休细则；不据此判定符合或不符合。\\n- **未核验**：企业实习经历（公司/岗位/时长）；网页组件项目的规模、职责、难点与可核对结果；证书/语言证据；团队协作、压力情境、学习迁移与创新方法的行为实例。\\n- **脆弱点**：周五6.5h 相对单日≥4h 余量2.5h；b 的两天门槛现由周一、周三各7h独立满足，周五非必需；若周一或周三任一被压缩至<4h，需重新核定 b。\\n\", \"claims\": [{\"text\": \"用户为本科应届，在成都使用Vue、TypeScript、Git完成过网页组件项目。\", \"evidenceIds\": [\"input:58b8540b-48b5-49f1-b462-0a8839838755:resume\"]}, {\"text\": \"用户可连续实习6个月，日程原表适用于整个实习期间。\", \"evidenceIds\": [\"input:58b8540b-48b5-49f1-b462-0a8839838755:turn:0:request\"]}, {\"text\": \"本轮追加 extra1（周五16:00-19:00），原表、course1 与午休均保留。\", \"evidenceIds\": [\"input:58b8540b-48b5-49f1-b462-0a8839838755:request\", \"input:58b8540b-48b5-49f1-b462-0a8839838755:turn:0:request\", \"input:58b8540b-48b5-49f1-b462-0a8839838755:turn:1:request\"]}, {\"text\": \"周工时=20.5，可用3天：周一7h、周三7h、周五6.5h（09:00-12:00、15:30-19:00）。\", \"evidenceIds\": [\"artifact:58b8540b-48b5-49f1-b462-0a8839838755:s3-path\"]}, {\"text\": \"核定[job:v16-overlap-a]=不符：原文要求每周至少3天、累计至少21小时，20.5h<21h。\", \"evidenceIds\": [\"job:v16-overlap-a\", \"artifact:58b8540b-48b5-49f1-b462-0a8839838755:s3-path\"]}, {\"text\": \"核定[job:v16-overlap-b]=符合：原文要求每周至少2天、至少两天各达4小时，周一7h、周三7h、周五6.5h 均达标。\", \"evidenceIds\": [\"job:v16-overlap-b\", \"artifact:58b8540b-48b5-49f1-b462-0a8839838755:s3-path\"]}, {\"text\": \"两岗原文均未提及坐班/到岗地点/远程、每日最长工时与调休细则，属 unknown，未作为门槛。\", \"evidenceIds\": [\"job:v16-overlap-a\", \"job:v16-overlap-b\"]}, {\"text\": \"画像 professionalSkill=50、execution=50，internship=null，其余9维null，完整度0.17。\", \"evidenceIds\": [\"artifact:1d060a4c-c257-4c1e-8197-6f913d7d150a:s1-profile\"]}, {\"text\": \"路径为 frontend-junior→frontend-mid（score 0.85）→frontend-senior（score 0.75），balanced 模式，score 仅为排序权重。\", \"evidenceIds\": [\"calculation:58b8540b-48b5-49f1-b462-0a8839838755:82bce314b1b2c7bb8802011d0457fd8641a41c9b8517bca87009b280d9df2fe5\"]}, {\"text\": \"备选短路线为 frontend-junior→frontend-mid。\", \"evidenceIds\": [\"calculation:58b8540b-48b5-49f1-b462-0a8839838755:656648ab8e9366c99df800b41db9302ed0d93634c1946712aa1253a93f3d188d\"]}, {\"text\": \"两岗为合成样本，不可投递；frontend-mid 类别在成都/本科/0经验过滤下检索0条，仅类别级建议。\", \"evidenceIds\": [\"job:v16-overlap-a\", \"job:v16-overlap-b\", \"artifact:58b8540b-48b5-49f1-b462-0a8839838755:s3-path\"]}, {\"text\": \"历史报告“周工时=25、两岗均符合”与上一版“周工时=18.5”均已被本轮日程取代，作废。\", \"evidenceIds\": [\"artifact:f6f08298-c7f4-4e86-a07e-376828c4fe0b:s1-report\", \"artifact:1d060a4c-c257-4c1e-8197-6f913d7d150a:s2-match\"]}], \"protectedText\": [\"本科应届，在成都使用Vue、TypeScript、Git完成过网页组件项目\", \"可连续实习6个月\", \"作品封面绿色\"]}"
+          }
+        }
+      ]
+    },
+    "streamFrames": 2202
+  },
+  {
+    "id": "8b6a2b56-05d6-4735-8866-5dcfe4f2426d",
+    "requestIdentity": "65040a5ac077353cd90e9dc7855659e6d71ea5a911bedcec6eb7eb351c5710e9",
+    "executionStateHash": "935d1a5eea37eddf53c4ab173f4bcb72b35605597a976e3be90538059522a179",
+    "requestKey": "8c5bcb6775e9e772fc60aa3d7315dc8f0eb4fd493fb3cdef9f5fcf4712626b29",
+    "scope": "expert:s4-report:turn:10",
+    "role": "report",
+    "attempt": 0,
+    "mode": "live",
+    "model": "deepseek-flash",
+    "inputEstimate": 63465,
+    "outputReserved": 4096,
+    "promptHash": "933ee14dd62c49076a9e5a554d159db8b4fbc899c0bda054fdf2e7e73e6f0587",
+    "toolNames": [
+      "input_history_list",
+      "input_history_read",
+      "input_read",
+      "knowledge_search",
+      "knowledge_read",
+      "memory_recall",
+      "memory_propose",
+      "artifact_read",
+      "expert_finish",
+      "clarification_update",
+      "collaboration_request",
+      "report_check",
+      "report_edit"
+    ],
+    "outputLimit": 4096,
+    "status": "completed",
+    "createdAt": "2026-11-07T04:27:05.117Z",
+    "usage": {
+      "input": 38005,
+      "output": 1414,
+      "cachedInput": 37760
+    },
+    "firstTokenMs": 241.0533750000177,
+    "durationMs": 6169.810792000033,
+    "finishReason": "tool_calls",
+    "response": {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_00_o2tFtILuAalTVVevYz1E9729",
+          "type": "function",
+          "function": {
+            "name": "expert_finish",
+            "arguments": "{\"status\": \"succeeded\", \"summary\": \"周工时=20.5。核定[job:v16-overlap-a]=不符；核定[job:v16-overlap-b]=符合。\\n\\n本轮追加 extra1（周五16:00-19:00），原表、course1、午休保留：周一7h、周三7h、周五6.5h（09:00-12:00、15:30-19:00），可用3天，18.5→20.5（+2h，仅周五变化）。a 因20.5h<原文21h 不符（差0.5h）；b 因3天≥2天且三天均≥4h 符合，候选仅 b。路径沿用 frontend-junior→frontend-mid→frontend-senior（balanced，score 仅排序权重）。\\n\\n用户事实（成都、本科应届、Vue/TypeScript/Git、网页组件项目、可连续实习6个月、作品封面绿色）逐字保留并设为保护文本。\\n\\n一致性：历史报告“周工时=25、两岗均符合”作废；上一版“周工时=18.5、周五4.5h”已被本轮取代，仅作历史记录。限制：两岗为合成样本不可投递；坐班/远程/每日最长工时/调休原文未提及（本轮已直接读原文确认）；企业实习经历、项目规模职责、证书/语言与软素质实例未核验。脆弱点：b 的两天门槛现由周一、周三各7h独立满足，周五非必需。\", \"evidenceIds\": [\"rule:report\", \"input:58b8540b-48b5-49f1-b462-0a8839838755:request\", \"input:58b8540b-48b5-49f1-b462-0a8839838755:resume\", \"input:58b8540b-48b5-49f1-b462-0a8839838755:turn:0:request\", \"input:58b8540b-48b5-49f1-b462-0a8839838755:turn:1:request\", \"input:58b8540b-48b5-49f1-b462-0a8839838755:turn:2:request\", \"job:v16-overlap-a\", \"job:v16-overlap-b\", \"artifact:58b8540b-48b5-49f1-b462-0a8839838755:s3-path\", \"artifact:1d060a4c-c257-4c1e-8197-6f913d7d150a:s1-profile\", \"artifact:1d060a4c-c257-4c1e-8197-6f913d7d150a:s2-match\", \"artifact:f6f08298-c7f4-4e86-a07e-376828c4fe0b:s1-report\", \"calculation:58b8540b-48b5-49f1-b462-0a8839838755:82bce314b1b2c7bb8802011d0457fd8641a41c9b8517bca87009b280d9df2fe5\", \"calculation:58b8540b-48b5-49f1-b462-0a8839838755:656648ab8e9366c99df800b41db9302ed0d93634c1946712aa1253a93f3d188d\"], \"unknowns\": [\"两岗原文未提及坐班/到岗地点/远程、每日最长工时与调休细则，属 unknown，未作为门槛\", \"企业实习经历（公司/岗位/时长）：简历与本轮原话均未提及，也无明确“无实习”陈述，internship 保持 null\", \"网页组件项目的规模、本人职责、技术难点与可核对结果\", \"证书/语言证据\", \"团队协作、压力情境、学习迁移与创新方法的具体行为实例\", \"frontend-mid 类别在成都/本科/0经验过滤下检索0条，中级阶段仅类别级建议\", \"薪资与双休为用户未设门槛（not_requested），不等于满足\"], \"conflicts\": [\"历史报告 f6f08298...:s1-report 记周工时=18.5、周五4.5h；本轮 extra1 后为20.5、周五6.5h，旧值作废（a 不符/b 符合方向不变）\", \"更早历史报告记周工时=25、两岗均符合，已被 course1 与 extra1 两次变更取代，作废\", \"历史产物称“日程再缩减约2.5h/周才会跌破 b 的两天各4h”；按当前日程，周五余量已为2.5h，且周一、周三各7h可独立满足，该表述已更新\"], \"nextActions\": [\"以 b 类实习（学生服务组件维护方向）作为第一阶段实践载体，按周一/周三/周五排班，优先保证周一、周三各≥4h\", \"若希望纳入 a，需再增加≥0.5h/周可用时段（如周五延长或新增一天），由用户确认后重算\", \"阶段1交付物：在现有 Vue/TypeScript/Git 组件项目上补测试与构建配置，形成可展示的工程化作品证据\", \"补充企业实习有无的明确陈述、项目规模/职责/结果、证书与语言证据、软素质行为实例，以提升画像完整度\", \"复盘触发：周工时或可用天数变化、新增课程/考试占用或撤销行、获得企业实习或项目主导经历、硬约束改变\", \"两岗为合成样本，仅用于条件推演，不可投递；如需真实岗位另行检索\"], \"artifact\": {\"draftId\": \"c513da370f1239f64a6aed607a30d0d0f8b862830cf5da4a2045d1a5b7400247\"}}"
+          }
+        }
+      ]
+    },
+    "streamFrames": 1322
+  },
+  {
+    "id": "15472ed9-70e2-475e-af0b-5117ba2327ed",
+    "requestIdentity": "b6ce3c75c966f2b312ca58df93cb77d045ea45d42c57b1bf3a6e70e6abe1ea47",
+    "requestKey": "b6ce3c75c966f2b312ca58df93cb77d045ea45d42c57b1bf3a6e70e6abe1ea47",
+    "scope": "synthesize",
+    "role": "orchestrator",
+    "attempt": 0,
+    "mode": "live",
+    "model": "deepseek-flash",
+    "inputEstimate": 24331,
+    "outputReserved": 4096,
+    "promptHash": "a0de690d489291405c8c9f29a64afacf0f0196fe827ff701b7fb00d858aaa8cb",
+    "toolNames": [],
+    "outputLimit": 4096,
+    "status": "completed",
+    "createdAt": "2026-11-07T04:27:11.368Z",
+    "usage": {
+      "input": 13729,
+      "output": 1013,
+      "cachedInput": 768
+    },
+    "firstTokenMs": 159.61183299997356,
+    "durationMs": 5569.303499999922,
+    "finishReason": "stop",
+    "response": {
+      "role": "assistant",
+      "content": "# 日程核定更新（已追加 extra1）\n\n**周工时=20.5。核定[job:v16-overlap-a]=不符；核定[job:v16-overlap-b]=符合。**\n\n## 一、更新后的可用时段（原表、course1、午休均保留）\n\n| 星期 | 可用时段 | 小时 |\n|---|---|---|\n| 周一 | 09:00-12:00、13:00-17:00 | 7 |\n| 周三 | 09:00-12:00、13:00-17:00 | 7 |\n| 周五 | 09:00-12:00、15:30-19:00 | 6.5 |\n\n- 合计 **20.5h/周**，可用 **3 天**；较上一版 18.5h 增加 2h，变化仅发生在周五。\n- 周五：原 09:00-12:00 + 15:30-17:00 = 4.5h；新增 extra1（16:00-19:00）后并集为 09:00-12:00 + 15:30-19:00 = **6.5h**。extra1 与 course1（12:30-15:30）不重叠，午休 12:00-13:00 仍保留。\n- 计算口径：可用行取并集、扣除占用行并集、重叠只计一次；未列为可用的时段不可实习。\n\n## 二、两岗时间条件核定\n\n- **v16-overlap-a＝不符**：连续 6 个月≥3 个月、每周 3 天≥3 天均符合；但原文要求累计至少 21 小时/周，**20.5h＜21h，差 0.5h**，仍不达标。\n- **v16-overlap-b＝符合**：连续 6 个月符合；3 天≥2 天符合；周一 7h、周三 7h、周五 6.5h，满足“至少两天各达 4 小时”（三天均达标）。\n- 硬条件：两岗城市成都、学历本科、经验 0 年均满足；技能交集 Vue/TypeScript/Git 全覆盖。薪资与双休为用户未设门槛（not_requested），不等于满足。\n- 模拟候选：仅保留 **v16-overlap-b**；a 移出。\n\n## 三、路径与余量变化\n\n- 路线沿用：frontend-junior→frontend-mid（score 0.85）→frontend-senior（score 0.75），balanced 模式；score 仅为排序权重，非成功率，不承诺晋升周期。\n- 周五单日余量由 0.5h 升至 2.5h；b 的“两天各 4h”门槛现由周一、周三各 7h 独立满足，**周五不再是必需项**。\n- 真正断点：周一或周三任一被压缩至＜4h，或可用天数降至 1 天，需重新核定 b。\n- 若希望纳入 a，需再增加 ≥0.5h/周可用时段（如周五延长或新增一天），由你确认后重算；不得自行放宽岗位门槛。\n\n## 四、版本一致性\n\n- 更早报告“周工时=25、两岗均符合”作废。\n- 上一版“周工时=18.5、周五 4.5h、b 余量 0.5h”已被本轮取代，仅作历史记录。\n- a 不符 / b 符合的方向在两次日程变更中保持一致，仅数值更新。\n\n## 五、限制与待确认\n\n- **两岗为合成样本**，仅用于条件推演，不可投递，也不涉及是否仍在招的核实。\n- **unknown（原文未提及）**：坐班/到岗地点/远程、每日最长工时、调休细则；不据此判定符合或不符合。\n- **未核验**：企业实习经历（公司/岗位/时长，简历未写也无明确“无实习”陈述，internship 保持 null）；网页组件项目的规模、本人职责、难点与可核对结果；证书/语言证据；团队协作、压力情境、学习迁移与创新方法的行为实例。\n- 画像完整度 0.17（professionalSkill=50、execution=50，其余 9 维 null），本轮无新能力证据。\n\n**建议的下一步**：以 b 类实习为第一阶段实践载体，排班优先保证周一、周三各≥4h；同时补充企业实习有无的明确陈述与项目职责/结果，以便提升画像完整度并复核起点假设。"
+    },
+    "streamFrames": 1016
+  }
+]

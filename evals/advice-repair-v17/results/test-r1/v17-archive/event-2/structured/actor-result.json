@@ -1,0 +1,314 @@
+{
+  "parsed": {
+    "close": true,
+    "cases": [
+      {
+        "hypothesisId": "v17-archive-2-fri",
+        "jobId": "v17-archive-a",
+        "factsVersion": "a4a10bb364f86234fd5e75326fdd977a8b43a02c30ce0534797df4f1f0acc1eb",
+        "ruleVersion": "df5f70bf712ff4c622c30801244538f6e7972a6e7a3754e9594c3a772e79760c",
+        "predictedAfter": "不符",
+        "claimsRefutation": false
+      },
+      {
+        "hypothesisId": "v17-archive-2-fri",
+        "jobId": "v17-archive-b",
+        "factsVersion": "a4a10bb364f86234fd5e75326fdd977a8b43a02c30ce0534797df4f1f0acc1eb",
+        "ruleVersion": "049dabcacab2d91f5263b923f9874647143a73c532c65d77d9f4f7501afd69f3",
+        "predictedAfter": "不符",
+        "claimsRefutation": false
+      },
+      {
+        "hypothesisId": "v17-archive-2-wed",
+        "jobId": "v17-archive-a",
+        "factsVersion": "a4a10bb364f86234fd5e75326fdd977a8b43a02c30ce0534797df4f1f0acc1eb",
+        "ruleVersion": "df5f70bf712ff4c622c30801244538f6e7972a6e7a3754e9594c3a772e79760c",
+        "predictedAfter": "不符",
+        "claimsRefutation": false
+      },
+      {
+        "hypothesisId": "v17-archive-2-wed",
+        "jobId": "v17-archive-b",
+        "factsVersion": "a4a10bb364f86234fd5e75326fdd977a8b43a02c30ce0534797df4f1f0acc1eb",
+        "ruleVersion": "049dabcacab2d91f5263b923f9874647143a73c532c65d77d9f4f7501afd69f3",
+        "predictedAfter": "不符",
+        "claimsRefutation": false
+      }
+    ],
+    "note": "当前事实版本a4a10bb3：月数6≥3。实际日程净可用：周一09:00-15:00=6h；周三09:00-15:00扣13:00-15:00占用=4h；周五09:00-15:00扣13:00-15:00占用=4h；申报出勤日3天，周工时14h。A岗（月数≥3、达标天数≥2、周工时≥18）：14<18，不符。B岗（月数≥3、达标天数≥2、至少2天≥5h）：仅周一6h达标，达标天数1<2，不符。假设复核（隔离模拟，不改真实日程）：周五追加14:00-15:00占用后周五仍4h、周工时仍14h，两岗判定不变，claimsRefutation=false。周三全天占用后周三净0不计出勤日，仅周一6h，周工时10h、达标天数2（A岗）但周工时10<18仍不符；B岗达标天数1<2仍不符，判定均不变，claimsRefutation=false。作者摘要中周三假设后的具体数值（周工时6h、达标天数1）与核算工具结果（10h、2天）不一致，但结论方向一致，不影响判定。当前状态已完全解析，可关闭。"
+  },
+  "toolLog": [
+    {
+      "name": "condition_check",
+      "result": {
+        "schemaVersion": "business-check-v1",
+        "factsVersion": "a4a10bb364f86234fd5e75326fdd977a8b43a02c30ce0534797df4f1f0acc1eb",
+        "weeklyHours": 14,
+        "dailyHours": {
+          "周一": 6,
+          "周二": 0,
+          "周三": 4,
+          "周四": 0,
+          "周五": 4,
+          "周六": 0,
+          "周日": 0
+        },
+        "judgments": [
+          {
+            "jobId": "v17-archive-a",
+            "ruleVersion": "df5f70bf712ff4c622c30801244538f6e7972a6e7a3754e9594c3a772e79760c",
+            "verdict": "不符",
+            "checks": [
+              {
+                "predicate": "monthsAtLeast",
+                "actual": 6,
+                "required": 3,
+                "satisfied": true
+              },
+              {
+                "predicate": "daysAtLeast",
+                "actual": 3,
+                "required": 2,
+                "satisfied": true
+              },
+              {
+                "predicate": "weeklyHoursAtLeast",
+                "actual": 14,
+                "required": 18,
+                "satisfied": false
+              }
+            ],
+            "weeklyHours": 14
+          },
+          {
+            "jobId": "v17-archive-b",
+            "ruleVersion": "049dabcacab2d91f5263b923f9874647143a73c532c65d77d9f4f7501afd69f3",
+            "verdict": "不符",
+            "checks": [
+              {
+                "predicate": "monthsAtLeast",
+                "actual": 6,
+                "required": 3,
+                "satisfied": true
+              },
+              {
+                "predicate": "daysAtLeast",
+                "actual": 3,
+                "required": 2,
+                "satisfied": true
+              },
+              {
+                "predicate": "count(workingDayHours>=5)",
+                "actual": 1,
+                "required": 2,
+                "satisfied": false
+              }
+            ],
+            "weeklyHours": 14
+          }
+        ],
+        "cases": [
+          {
+            "hypothesisId": "v17-archive-2-fri",
+            "jobId": "v17-archive-a",
+            "factsVersion": "a4a10bb364f86234fd5e75326fdd977a8b43a02c30ce0534797df4f1f0acc1eb",
+            "ruleVersion": "df5f70bf712ff4c622c30801244538f6e7972a6e7a3754e9594c3a772e79760c",
+            "before": "不符",
+            "predictedAfter": "不符",
+            "claimsRefutation": false,
+            "beforeChecks": [
+              {
+                "predicate": "monthsAtLeast",
+                "actual": 6,
+                "required": 3,
+                "satisfied": true
+              },
+              {
+                "predicate": "daysAtLeast",
+                "actual": 3,
+                "required": 2,
+                "satisfied": true
+              },
+              {
+                "predicate": "weeklyHoursAtLeast",
+                "actual": 14,
+                "required": 18,
+                "satisfied": false
+              }
+            ],
+            "afterChecks": [
+              {
+                "predicate": "monthsAtLeast",
+                "actual": 6,
+                "required": 3,
+                "satisfied": true
+              },
+              {
+                "predicate": "daysAtLeast",
+                "actual": 3,
+                "required": 2,
+                "satisfied": true
+              },
+              {
+                "predicate": "weeklyHoursAtLeast",
+                "actual": 14,
+                "required": 18,
+                "satisfied": false
+              }
+            ]
+          },
+          {
+            "hypothesisId": "v17-archive-2-fri",
+            "jobId": "v17-archive-b",
+            "factsVersion": "a4a10bb364f86234fd5e75326fdd977a8b43a02c30ce0534797df4f1f0acc1eb",
+            "ruleVersion": "049dabcacab2d91f5263b923f9874647143a73c532c65d77d9f4f7501afd69f3",
+            "before": "不符",
+            "predictedAfter": "不符",
+            "claimsRefutation": false,
+            "beforeChecks": [
+              {
+                "predicate": "monthsAtLeast",
+                "actual": 6,
+                "required": 3,
+                "satisfied": true
+              },
+              {
+                "predicate": "daysAtLeast",
+                "actual": 3,
+                "required": 2,
+                "satisfied": true
+              },
+              {
+                "predicate": "count(workingDayHours>=5)",
+                "actual": 1,
+                "required": 2,
+                "satisfied": false
+              }
+            ],
+            "afterChecks": [
+              {
+                "predicate": "monthsAtLeast",
+                "actual": 6,
+                "required": 3,
+                "satisfied": true
+              },
+              {
+                "predicate": "daysAtLeast",
+                "actual": 3,
+                "required": 2,
+                "satisfied": true
+              },
+              {
+                "predicate": "count(workingDayHours>=5)",
+                "actual": 1,
+                "required": 2,
+                "satisfied": false
+              }
+            ]
+          },
+          {
+            "hypothesisId": "v17-archive-2-wed",
+            "jobId": "v17-archive-a",
+            "factsVersion": "a4a10bb364f86234fd5e75326fdd977a8b43a02c30ce0534797df4f1f0acc1eb",
+            "ruleVersion": "df5f70bf712ff4c622c30801244538f6e7972a6e7a3754e9594c3a772e79760c",
+            "before": "不符",
+            "predictedAfter": "不符",
+            "claimsRefutation": false,
+            "beforeChecks": [
+              {
+                "predicate": "monthsAtLeast",
+                "actual": 6,
+                "required": 3,
+                "satisfied": true
+              },
+              {
+                "predicate": "daysAtLeast",
+                "actual": 3,
+                "required": 2,
+                "satisfied": true
+              },
+              {
+                "predicate": "weeklyHoursAtLeast",
+                "actual": 14,
+                "required": 18,
+                "satisfied": false
+              }
+            ],
+            "afterChecks": [
+              {
+                "predicate": "monthsAtLeast",
+                "actual": 6,
+                "required": 3,
+                "satisfied": true
+              },
+              {
+                "predicate": "daysAtLeast",
+                "actual": 2,
+                "required": 2,
+                "satisfied": true
+              },
+              {
+                "predicate": "weeklyHoursAtLeast",
+                "actual": 10,
+                "required": 18,
+                "satisfied": false
+              }
+            ]
+          },
+          {
+            "hypothesisId": "v17-archive-2-wed",
+            "jobId": "v17-archive-b",
+            "factsVersion": "a4a10bb364f86234fd5e75326fdd977a8b43a02c30ce0534797df4f1f0acc1eb",
+            "ruleVersion": "049dabcacab2d91f5263b923f9874647143a73c532c65d77d9f4f7501afd69f3",
+            "before": "不符",
+            "predictedAfter": "不符",
+            "claimsRefutation": false,
+            "beforeChecks": [
+              {
+                "predicate": "monthsAtLeast",
+                "actual": 6,
+                "required": 3,
+                "satisfied": true
+              },
+              {
+                "predicate": "daysAtLeast",
+                "actual": 3,
+                "required": 2,
+                "satisfied": true
+              },
+              {
+                "predicate": "count(workingDayHours>=5)",
+                "actual": 1,
+                "required": 2,
+                "satisfied": false
+              }
+            ],
+            "afterChecks": [
+              {
+                "predicate": "monthsAtLeast",
+                "actual": 6,
+                "required": 3,
+                "satisfied": true
+              },
+              {
+                "predicate": "daysAtLeast",
+                "actual": 2,
+                "required": 2,
+                "satisfied": true
+              },
+              {
+                "predicate": "count(workingDayHours>=5)",
+                "actual": 1,
+                "required": 2,
+                "satisfied": false
+              }
+            ]
+          }
+        ],
+        "scope": "Public structured time-rule cards only. Hypotheses are isolated simulations, never actual user facts."
+      }
+    }
+  ],
+  "error": null,
+  "inputHash": "a5d348ae7cade9b8c1e56e9bdf4b3063fab0206fe32d4bb7031aeeeef96f4923"
+}

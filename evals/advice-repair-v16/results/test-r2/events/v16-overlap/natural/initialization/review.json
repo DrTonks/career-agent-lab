@@ -1,0 +1,399 @@
+{
+  "tasks": [
+    {
+      "subject": "user",
+      "field": "availability.weeklyHours",
+      "question": "按当前完整日程原表核算每周有效可实习小时数与可实习天数，并据此核定 v16-overlap-a、v16-overlap-b 的时间条件是否满足（a：每周≥3天且累计≥21小时；b：每周≥2天且至少两天各≥4小时；均需连续≥3个月）。",
+      "targets": [
+        "match",
+        "path",
+        "profile",
+        "report"
+      ],
+      "claimRefs": [
+        "artifact:3cd1d1f3-e840-44c6-b219-fa38b1b41e74:profile",
+        "artifact:3cd1d1f3-e840-44c6-b219-fa38b1b41e74:match",
+        "artifact:3cd1d1f3-e840-44c6-b219-fa38b1b41e74:path",
+        "artifact:3cd1d1f3-e840-44c6-b219-fa38b1b41e74:report"
+      ],
+      "evidenceRefs": [
+        "event:v16-overlap-0",
+        "job:v16-overlap-a",
+        "job:v16-overlap-b"
+      ],
+      "readIds": [
+        "job:v16-overlap-a",
+        "job:v16-overlap-b"
+      ],
+      "action": "wait",
+      "eventQuote": "|base0|可用|周一|09:00|17:00|",
+      "branches": [
+        {
+          "condition": "新增占用行或撤销可用行使每周有效小时数低于21或可实习天数低于3",
+          "consequence": "v16-overlap-a 转为不符并移出候选，需重算并更新匹配/路径/报告"
+        },
+        {
+          "condition": "新增占用行使可实习天数低于2或任一天不足4小时",
+          "consequence": "v16-overlap-b 转为不符并移出候选"
+        }
+      ],
+      "key": "ce44588d239f4c716c25",
+      "watchedIds": [
+        "job:v16-overlap-a",
+        "job:v16-overlap-b"
+      ],
+      "notFact": true,
+      "createdEvent": "v16-overlap-0",
+      "sourceVersions": {
+        "job:v16-overlap-a": "5309a389730db9bc8592515293a33a6cd142cbeee5182a48902f1a593e1c15c4",
+        "job:v16-overlap-b": "b3aab96750272e9e6d34b4623750b156168fef8e9aeaa831a428812061952ccc"
+      },
+      "status": "watching",
+      "binding": {
+        "claimRefs": [
+          "artifact:3cd1d1f3-e840-44c6-b219-fa38b1b41e74:profile",
+          "artifact:3cd1d1f3-e840-44c6-b219-fa38b1b41e74:match",
+          "artifact:3cd1d1f3-e840-44c6-b219-fa38b1b41e74:path",
+          "artifact:3cd1d1f3-e840-44c6-b219-fa38b1b41e74:report"
+        ],
+        "sourceVersions": {
+          "job:v16-overlap-a": "5309a389730db9bc8592515293a33a6cd142cbeee5182a48902f1a593e1c15c4",
+          "job:v16-overlap-b": "b3aab96750272e9e6d34b4623750b156168fef8e9aeaa831a428812061952ccc"
+        }
+      }
+    }
+  ],
+  "active": [],
+  "transitions": [
+    {
+      "key": "ce44588d239f4c716c25",
+      "type": "created",
+      "status": "watching"
+    }
+  ],
+  "errors": [],
+  "checks": [
+    {
+      "id": "schedule:2c38f0dae4b6dc9697e64f52",
+      "schemaVersion": "schedule-check-v1",
+      "factsHash": "5f5545986919d9a54744c20d8f8e1a922728f338dbd13dc45e07d286417ded68",
+      "sourceRefs": [
+        "event:v16-overlap-0"
+      ],
+      "ledger": [
+        {
+          "id": "base0",
+          "kind": "可用",
+          "day": "周一",
+          "start": 540,
+          "end": 1020,
+          "sourceId": "event:v16-overlap-0",
+          "turnIndex": 0,
+          "sourceHash": "52ee216348c786b39311ad5230191ab14b8a00223c626e486a4b4e0cf0b9fefe",
+          "quote": "|base0|可用|周一|09:00|17:00|"
+        },
+        {
+          "id": "lunch0",
+          "kind": "占用",
+          "day": "周一",
+          "start": 720,
+          "end": 780,
+          "sourceId": "event:v16-overlap-0",
+          "turnIndex": 0,
+          "sourceHash": "52ee216348c786b39311ad5230191ab14b8a00223c626e486a4b4e0cf0b9fefe",
+          "quote": "|lunch0|占用|周一|12:00|13:00|"
+        },
+        {
+          "id": "base1",
+          "kind": "可用",
+          "day": "周三",
+          "start": 540,
+          "end": 1020,
+          "sourceId": "event:v16-overlap-0",
+          "turnIndex": 0,
+          "sourceHash": "52ee216348c786b39311ad5230191ab14b8a00223c626e486a4b4e0cf0b9fefe",
+          "quote": "|base1|可用|周三|09:00|17:00|"
+        },
+        {
+          "id": "lunch1",
+          "kind": "占用",
+          "day": "周三",
+          "start": 720,
+          "end": 780,
+          "sourceId": "event:v16-overlap-0",
+          "turnIndex": 0,
+          "sourceHash": "52ee216348c786b39311ad5230191ab14b8a00223c626e486a4b4e0cf0b9fefe",
+          "quote": "|lunch1|占用|周三|12:00|13:00|"
+        },
+        {
+          "id": "base2",
+          "kind": "可用",
+          "day": "周五",
+          "start": 540,
+          "end": 1020,
+          "sourceId": "event:v16-overlap-0",
+          "turnIndex": 0,
+          "sourceHash": "52ee216348c786b39311ad5230191ab14b8a00223c626e486a4b4e0cf0b9fefe",
+          "quote": "|base2|可用|周五|09:00|17:00|"
+        },
+        {
+          "id": "lunch2",
+          "kind": "占用",
+          "day": "周五",
+          "start": 720,
+          "end": 780,
+          "sourceId": "event:v16-overlap-0",
+          "turnIndex": 0,
+          "sourceHash": "52ee216348c786b39311ad5230191ab14b8a00223c626e486a4b4e0cf0b9fefe",
+          "quote": "|lunch2|占用|周五|12:00|13:00|"
+        }
+      ],
+      "intervals": {
+        "周一": [
+          [
+            540,
+            720
+          ],
+          [
+            780,
+            1020
+          ]
+        ],
+        "周二": [],
+        "周三": [
+          [
+            540,
+            720
+          ],
+          [
+            780,
+            1020
+          ]
+        ],
+        "周四": [],
+        "周五": [
+          [
+            540,
+            720
+          ],
+          [
+            780,
+            1020
+          ]
+        ],
+        "周六": [],
+        "周日": []
+      },
+      "dailyHours": {
+        "周一": 7,
+        "周二": 0,
+        "周三": 7,
+        "周四": 0,
+        "周五": 7,
+        "周六": 0,
+        "周日": 0
+      },
+      "weeklyHours": 21,
+      "workingDays": 3,
+      "comparisonOrigin": null,
+      "witness": null,
+      "scope": "Deterministic arithmetic over quoted calendar records only. sourceId is a review log ID; native experts must use input_history_list/read for the indicated turnIndex, not cite the receipt as a native evidence ID. No job eligibility or completeness outside the declared records is certified."
+    }
+  ],
+  "toolLog": [
+    {
+      "tool": "schedule_check",
+      "args": {
+        "compareReceiptId": null,
+        "candidateIntervals": null
+      },
+      "receipt": {
+        "id": "schedule:2c38f0dae4b6dc9697e64f52",
+        "schemaVersion": "schedule-check-v1",
+        "factsHash": "5f5545986919d9a54744c20d8f8e1a922728f338dbd13dc45e07d286417ded68",
+        "sourceRefs": [
+          "event:v16-overlap-0"
+        ],
+        "ledger": [
+          {
+            "id": "base0",
+            "kind": "可用",
+            "day": "周一",
+            "start": 540,
+            "end": 1020,
+            "sourceId": "event:v16-overlap-0",
+            "turnIndex": 0,
+            "sourceHash": "52ee216348c786b39311ad5230191ab14b8a00223c626e486a4b4e0cf0b9fefe",
+            "quote": "|base0|可用|周一|09:00|17:00|"
+          },
+          {
+            "id": "lunch0",
+            "kind": "占用",
+            "day": "周一",
+            "start": 720,
+            "end": 780,
+            "sourceId": "event:v16-overlap-0",
+            "turnIndex": 0,
+            "sourceHash": "52ee216348c786b39311ad5230191ab14b8a00223c626e486a4b4e0cf0b9fefe",
+            "quote": "|lunch0|占用|周一|12:00|13:00|"
+          },
+          {
+            "id": "base1",
+            "kind": "可用",
+            "day": "周三",
+            "start": 540,
+            "end": 1020,
+            "sourceId": "event:v16-overlap-0",
+            "turnIndex": 0,
+            "sourceHash": "52ee216348c786b39311ad5230191ab14b8a00223c626e486a4b4e0cf0b9fefe",
+            "quote": "|base1|可用|周三|09:00|17:00|"
+          },
+          {
+            "id": "lunch1",
+            "kind": "占用",
+            "day": "周三",
+            "start": 720,
+            "end": 780,
+            "sourceId": "event:v16-overlap-0",
+            "turnIndex": 0,
+            "sourceHash": "52ee216348c786b39311ad5230191ab14b8a00223c626e486a4b4e0cf0b9fefe",
+            "quote": "|lunch1|占用|周三|12:00|13:00|"
+          },
+          {
+            "id": "base2",
+            "kind": "可用",
+            "day": "周五",
+            "start": 540,
+            "end": 1020,
+            "sourceId": "event:v16-overlap-0",
+            "turnIndex": 0,
+            "sourceHash": "52ee216348c786b39311ad5230191ab14b8a00223c626e486a4b4e0cf0b9fefe",
+            "quote": "|base2|可用|周五|09:00|17:00|"
+          },
+          {
+            "id": "lunch2",
+            "kind": "占用",
+            "day": "周五",
+            "start": 720,
+            "end": 780,
+            "sourceId": "event:v16-overlap-0",
+            "turnIndex": 0,
+            "sourceHash": "52ee216348c786b39311ad5230191ab14b8a00223c626e486a4b4e0cf0b9fefe",
+            "quote": "|lunch2|占用|周五|12:00|13:00|"
+          }
+        ],
+        "intervals": {
+          "周一": [
+            [
+              540,
+              720
+            ],
+            [
+              780,
+              1020
+            ]
+          ],
+          "周二": [],
+          "周三": [
+            [
+              540,
+              720
+            ],
+            [
+              780,
+              1020
+            ]
+          ],
+          "周四": [],
+          "周五": [
+            [
+              540,
+              720
+            ],
+            [
+              780,
+              1020
+            ]
+          ],
+          "周六": [],
+          "周日": []
+        },
+        "dailyHours": {
+          "周一": 7,
+          "周二": 0,
+          "周三": 7,
+          "周四": 0,
+          "周五": 7,
+          "周六": 0,
+          "周日": 0
+        },
+        "weeklyHours": 21,
+        "workingDays": 3,
+        "comparisonOrigin": null,
+        "witness": null,
+        "scope": "Deterministic arithmetic over quoted calendar records only. sourceId is a review log ID; native experts must use input_history_list/read for the indicated turnIndex, not cite the receipt as a native evidence ID. No job eligibility or completeness outside the declared records is certified."
+      }
+    }
+  ],
+  "rawSubmission": {
+    "tasks": [
+      {
+        "subject": "user",
+        "field": "availability.weeklyHours",
+        "question": "按当前完整日程原表核算每周有效可实习小时数与可实习天数，并据此核定 v16-overlap-a、v16-overlap-b 的时间条件是否满足（a：每周≥3天且累计≥21小时；b：每周≥2天且至少两天各≥4小时；均需连续≥3个月）。",
+        "targets": [
+          "profile",
+          "match",
+          "path",
+          "report"
+        ],
+        "claimRefs": [
+          "artifact:3cd1d1f3-e840-44c6-b219-fa38b1b41e74:profile",
+          "artifact:3cd1d1f3-e840-44c6-b219-fa38b1b41e74:match",
+          "artifact:3cd1d1f3-e840-44c6-b219-fa38b1b41e74:path",
+          "artifact:3cd1d1f3-e840-44c6-b219-fa38b1b41e74:report"
+        ],
+        "evidenceRefs": [
+          "event:v16-overlap-0",
+          "job:v16-overlap-a",
+          "job:v16-overlap-b"
+        ],
+        "readIds": [
+          "job:v16-overlap-a",
+          "job:v16-overlap-b"
+        ],
+        "action": "wait",
+        "eventQuote": "|base0|可用|周一|09:00|17:00|",
+        "branches": [
+          {
+            "condition": "新增占用行或撤销可用行使每周有效小时数低于21或可实习天数低于3",
+            "consequence": "v16-overlap-a 转为不符并移出候选，需重算并更新匹配/路径/报告"
+          },
+          {
+            "condition": "新增占用行使可实习天数低于2或任一天不足4小时",
+            "consequence": "v16-overlap-b 转为不符并移出候选"
+          }
+        ]
+      }
+    ],
+    "closed": [],
+    "receiptIds": [
+      "schedule:2c38f0dae4b6dc9697e64f52"
+    ]
+  },
+  "reply": {
+    "role": "assistant",
+    "content": null,
+    "tool_calls": [
+      {
+        "id": "call_00_fRAJiCGa6jIadjZkMCzc0278",
+        "type": "function",
+        "function": {
+          "name": "review_submit",
+          "arguments": "{\"tasks\": [{\"subject\": \"user\", \"field\": \"availability.weeklyHours\", \"question\": \"按当前完整日程原表核算每周有效可实习小时数与可实习天数，并据此核定 v16-overlap-a、v16-overlap-b 的时间条件是否满足（a：每周≥3天且累计≥21小时；b：每周≥2天且至少两天各≥4小时；均需连续≥3个月）。\", \"targets\": [\"profile\", \"match\", \"path\", \"report\"], \"claimRefs\": [\"artifact:3cd1d1f3-e840-44c6-b219-fa38b1b41e74:profile\", \"artifact:3cd1d1f3-e840-44c6-b219-fa38b1b41e74:match\", \"artifact:3cd1d1f3-e840-44c6-b219-fa38b1b41e74:path\", \"artifact:3cd1d1f3-e840-44c6-b219-fa38b1b41e74:report\"], \"evidenceRefs\": [\"event:v16-overlap-0\", \"job:v16-overlap-a\", \"job:v16-overlap-b\"], \"readIds\": [\"job:v16-overlap-a\", \"job:v16-overlap-b\"], \"action\": \"wait\", \"eventQuote\": \"|base0|可用|周一|09:00|17:00|\", \"branches\": [{\"condition\": \"新增占用行或撤销可用行使每周有效小时数低于21或可实习天数低于3\", \"consequence\": \"v16-overlap-a 转为不符并移出候选，需重算并更新匹配/路径/报告\"}, {\"condition\": \"新增占用行使可实习天数低于2或任一天不足4小时\", \"consequence\": \"v16-overlap-b 转为不符并移出候选\"}]}], \"closed\": [], \"receiptIds\": [\"schedule:2c38f0dae4b6dc9697e64f52\"]}"
+        }
+      }
+    ]
+  },
+  "initialRegistered": true
+}

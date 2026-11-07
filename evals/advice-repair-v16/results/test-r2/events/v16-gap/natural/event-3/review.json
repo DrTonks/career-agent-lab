@@ -1,0 +1,600 @@
+{
+  "tasks": [
+    {
+      "subject": "user",
+      "field": "availability.weeklyHours",
+      "question": "学校新增周五18:00-21:00可用时段后，请依据当前日程原表重新核算每周有效实习小时数与各日可用时段，并据此重核 job:v16-gap-a（每周≥3天、累计≥21小时）与 job:v16-gap-b（每周≥2天、至少两天各≥4小时）的时间条件是否满足；不符或待核定的须移出模拟候选。",
+      "targets": [
+        "match",
+        "path",
+        "report"
+      ],
+      "claimRefs": [
+        "artifact:41f63284-86cf-400c-9e17-4c6edc7c21f5:match",
+        "artifact:41f63284-86cf-400c-9e17-4c6edc7c21f5:path",
+        "artifact:aa2ef093-5eb4-434b-90bf-6342ac31c327:report"
+      ],
+      "evidenceRefs": [
+        "job:v16-gap-a",
+        "job:v16-gap-b",
+        "event:v16-gap-3"
+      ],
+      "readIds": [
+        "job:v16-gap-a",
+        "job:v16-gap-b"
+      ],
+      "action": "dispatch",
+      "eventQuote": "学校新批准了下列可实习时段，请追加到原表；原有可用时段、课程和午休仍保留。",
+      "branches": [
+        {
+          "condition": "新增可用时段使周工时回升至21小时及以上",
+          "consequence": "job:v16-gap-a 的累计≥21小时条件可能重新满足，需从移出状态恢复为候选"
+        },
+        {
+          "condition": "新增可用时段改变某日可用时长",
+          "consequence": "job:v16-gap-b 的“至少两天各≥4小时”条件需按新时段重核"
+        }
+      ],
+      "key": "ce44588d239f4c716c25",
+      "watchedIds": [
+        "job:v16-gap-a",
+        "job:v16-gap-b"
+      ],
+      "notFact": true,
+      "createdEvent": "v16-gap-0",
+      "sourceVersions": {
+        "job:v16-gap-a": "49a22d07b01407e35470b444443da842a98c14bc6ea1ca79a3016f29d5b9d5f4",
+        "job:v16-gap-b": "c0567aa1501d3705f9eece5dd531668797f759d3a0d0c16d650866e7ec7ed675"
+      },
+      "status": "ready",
+      "binding": {
+        "claimRefs": [
+          "artifact:41f63284-86cf-400c-9e17-4c6edc7c21f5:match",
+          "artifact:41f63284-86cf-400c-9e17-4c6edc7c21f5:path",
+          "artifact:aa2ef093-5eb4-434b-90bf-6342ac31c327:report"
+        ],
+        "sourceVersions": {
+          "job:v16-gap-a": "49a22d07b01407e35470b444443da842a98c14bc6ea1ca79a3016f29d5b9d5f4",
+          "job:v16-gap-b": "c0567aa1501d3705f9eece5dd531668797f759d3a0d0c16d650866e7ec7ed675"
+        }
+      },
+      "lastEventQuote": "学校新批准了下列可实习时段，请追加到原表；原有可用时段、课程和午休仍保留。",
+      "activation": {
+        "eventId": "v16-gap-3",
+        "sourceChanged": false,
+        "changedSourceIds": [],
+        "eventQuote": "学校新批准了下列可实习时段，请追加到原表；原有可用时段、课程和午休仍保留。"
+      },
+      "lastExecution": {
+        "runId": "41f63284-86cf-400c-9e17-4c6edc7c21f5",
+        "eventId": "v16-gap-1",
+        "targets": [
+          {
+            "role": "match",
+            "started": true,
+            "artifactId": "41f63284-86cf-400c-9e17-4c6edc7c21f5:match",
+            "failed": false
+          },
+          {
+            "role": "path",
+            "started": true,
+            "artifactId": "41f63284-86cf-400c-9e17-4c6edc7c21f5:path",
+            "failed": false
+          },
+          {
+            "role": "report",
+            "started": true,
+            "artifactId": "41f63284-86cf-400c-9e17-4c6edc7c21f5:report",
+            "failed": false
+          }
+        ],
+        "factsHash": "d56c0e95c6c497b58b0769befe7994f885bf3181dffa303b5c63bac96630d579"
+      },
+      "resolution": null
+    }
+  ],
+  "active": [
+    {
+      "subject": "user",
+      "field": "availability.weeklyHours",
+      "question": "学校新增周五18:00-21:00可用时段后，请依据当前日程原表重新核算每周有效实习小时数与各日可用时段，并据此重核 job:v16-gap-a（每周≥3天、累计≥21小时）与 job:v16-gap-b（每周≥2天、至少两天各≥4小时）的时间条件是否满足；不符或待核定的须移出模拟候选。",
+      "targets": [
+        "match",
+        "path",
+        "report"
+      ],
+      "claimRefs": [
+        "artifact:41f63284-86cf-400c-9e17-4c6edc7c21f5:match",
+        "artifact:41f63284-86cf-400c-9e17-4c6edc7c21f5:path",
+        "artifact:aa2ef093-5eb4-434b-90bf-6342ac31c327:report"
+      ],
+      "evidenceRefs": [
+        "job:v16-gap-a",
+        "job:v16-gap-b",
+        "event:v16-gap-3"
+      ],
+      "readIds": [
+        "job:v16-gap-a",
+        "job:v16-gap-b"
+      ],
+      "action": "dispatch",
+      "eventQuote": "学校新批准了下列可实习时段，请追加到原表；原有可用时段、课程和午休仍保留。",
+      "branches": [
+        {
+          "condition": "新增可用时段使周工时回升至21小时及以上",
+          "consequence": "job:v16-gap-a 的累计≥21小时条件可能重新满足，需从移出状态恢复为候选"
+        },
+        {
+          "condition": "新增可用时段改变某日可用时长",
+          "consequence": "job:v16-gap-b 的“至少两天各≥4小时”条件需按新时段重核"
+        }
+      ],
+      "key": "ce44588d239f4c716c25",
+      "watchedIds": [
+        "job:v16-gap-a",
+        "job:v16-gap-b"
+      ],
+      "notFact": true,
+      "createdEvent": "v16-gap-0",
+      "sourceVersions": {
+        "job:v16-gap-a": "49a22d07b01407e35470b444443da842a98c14bc6ea1ca79a3016f29d5b9d5f4",
+        "job:v16-gap-b": "c0567aa1501d3705f9eece5dd531668797f759d3a0d0c16d650866e7ec7ed675"
+      },
+      "status": "ready",
+      "binding": {
+        "claimRefs": [
+          "artifact:41f63284-86cf-400c-9e17-4c6edc7c21f5:match",
+          "artifact:41f63284-86cf-400c-9e17-4c6edc7c21f5:path",
+          "artifact:aa2ef093-5eb4-434b-90bf-6342ac31c327:report"
+        ],
+        "sourceVersions": {
+          "job:v16-gap-a": "49a22d07b01407e35470b444443da842a98c14bc6ea1ca79a3016f29d5b9d5f4",
+          "job:v16-gap-b": "c0567aa1501d3705f9eece5dd531668797f759d3a0d0c16d650866e7ec7ed675"
+        }
+      },
+      "lastEventQuote": "学校新批准了下列可实习时段，请追加到原表；原有可用时段、课程和午休仍保留。",
+      "activation": {
+        "eventId": "v16-gap-3",
+        "sourceChanged": false,
+        "changedSourceIds": [],
+        "eventQuote": "学校新批准了下列可实习时段，请追加到原表；原有可用时段、课程和午休仍保留。"
+      },
+      "lastExecution": {
+        "runId": "41f63284-86cf-400c-9e17-4c6edc7c21f5",
+        "eventId": "v16-gap-1",
+        "targets": [
+          {
+            "role": "match",
+            "started": true,
+            "artifactId": "41f63284-86cf-400c-9e17-4c6edc7c21f5:match",
+            "failed": false
+          },
+          {
+            "role": "path",
+            "started": true,
+            "artifactId": "41f63284-86cf-400c-9e17-4c6edc7c21f5:path",
+            "failed": false
+          },
+          {
+            "role": "report",
+            "started": true,
+            "artifactId": "41f63284-86cf-400c-9e17-4c6edc7c21f5:report",
+            "failed": false
+          }
+        ],
+        "factsHash": "d56c0e95c6c497b58b0769befe7994f885bf3181dffa303b5c63bac96630d579"
+      },
+      "resolution": null
+    }
+  ],
+  "transitions": [
+    {
+      "key": "ce44588d239f4c716c25",
+      "type": "reactivated",
+      "status": "ready"
+    }
+  ],
+  "errors": [],
+  "checks": [
+    {
+      "id": "schedule:e1a60286a0cac15b992c25fd",
+      "schemaVersion": "schedule-check-v1",
+      "factsHash": "7e62f0ee353772a3e5f386adc8211ce50bfb0a7ab50efb7d0b4e7fa991e4efc9",
+      "sourceRefs": [
+        "event:v16-gap-0",
+        "event:v16-gap-1",
+        "event:v16-gap-3"
+      ],
+      "ledger": [
+        {
+          "id": "base0",
+          "kind": "可用",
+          "day": "周一",
+          "start": 600,
+          "end": 1080,
+          "sourceId": "event:v16-gap-0",
+          "turnIndex": 0,
+          "sourceHash": "6b9bafd745d3893de34467cab4d128109e3cc1d506a0d6dd39c8e121dbf38812",
+          "quote": "|base0|可用|周一|10:00|18:00|"
+        },
+        {
+          "id": "lunch0",
+          "kind": "占用",
+          "day": "周一",
+          "start": 780,
+          "end": 840,
+          "sourceId": "event:v16-gap-0",
+          "turnIndex": 0,
+          "sourceHash": "6b9bafd745d3893de34467cab4d128109e3cc1d506a0d6dd39c8e121dbf38812",
+          "quote": "|lunch0|占用|周一|13:00|14:00|"
+        },
+        {
+          "id": "base1",
+          "kind": "可用",
+          "day": "周三",
+          "start": 600,
+          "end": 1080,
+          "sourceId": "event:v16-gap-0",
+          "turnIndex": 0,
+          "sourceHash": "6b9bafd745d3893de34467cab4d128109e3cc1d506a0d6dd39c8e121dbf38812",
+          "quote": "|base1|可用|周三|10:00|18:00|"
+        },
+        {
+          "id": "lunch1",
+          "kind": "占用",
+          "day": "周三",
+          "start": 780,
+          "end": 840,
+          "sourceId": "event:v16-gap-0",
+          "turnIndex": 0,
+          "sourceHash": "6b9bafd745d3893de34467cab4d128109e3cc1d506a0d6dd39c8e121dbf38812",
+          "quote": "|lunch1|占用|周三|13:00|14:00|"
+        },
+        {
+          "id": "base2",
+          "kind": "可用",
+          "day": "周五",
+          "start": 600,
+          "end": 1080,
+          "sourceId": "event:v16-gap-0",
+          "turnIndex": 0,
+          "sourceHash": "6b9bafd745d3893de34467cab4d128109e3cc1d506a0d6dd39c8e121dbf38812",
+          "quote": "|base2|可用|周五|10:00|18:00|"
+        },
+        {
+          "id": "lunch2",
+          "kind": "占用",
+          "day": "周五",
+          "start": 780,
+          "end": 840,
+          "sourceId": "event:v16-gap-0",
+          "turnIndex": 0,
+          "sourceHash": "6b9bafd745d3893de34467cab4d128109e3cc1d506a0d6dd39c8e121dbf38812",
+          "quote": "|lunch2|占用|周五|13:00|14:00|"
+        },
+        {
+          "id": "course1",
+          "kind": "占用",
+          "day": "周三",
+          "start": 900,
+          "end": 1080,
+          "sourceId": "event:v16-gap-1",
+          "turnIndex": 1,
+          "sourceHash": "fef3e5de68446ad83891f5f189e9447dbe5a4d7a00ad408fcd7430935a3a74d7",
+          "quote": "|course1|占用|周三|15:00|18:00|"
+        },
+        {
+          "id": "extra1",
+          "kind": "可用",
+          "day": "周五",
+          "start": 1080,
+          "end": 1260,
+          "sourceId": "event:v16-gap-3",
+          "turnIndex": 3,
+          "sourceHash": "edd54a1bbf98e019b5aa54aa676fecbcde1f71a24854a5c5fc44158edd357cd7",
+          "quote": "|extra1|可用|周五|18:00|21:00|"
+        }
+      ],
+      "intervals": {
+        "周一": [
+          [
+            600,
+            780
+          ],
+          [
+            840,
+            1080
+          ]
+        ],
+        "周二": [],
+        "周三": [
+          [
+            600,
+            780
+          ],
+          [
+            840,
+            900
+          ]
+        ],
+        "周四": [],
+        "周五": [
+          [
+            600,
+            780
+          ],
+          [
+            840,
+            1260
+          ]
+        ],
+        "周六": [],
+        "周日": []
+      },
+      "dailyHours": {
+        "周一": 7,
+        "周二": 0,
+        "周三": 4,
+        "周四": 0,
+        "周五": 10,
+        "周六": 0,
+        "周日": 0
+      },
+      "weeklyHours": 21,
+      "workingDays": 3,
+      "comparisonOrigin": {
+        "receiptId": "schedule:ccddc3d78d6e43a039ba9349",
+        "factsHash": "d56c0e95c6c497b58b0769befe7994f885bf3181dffa303b5c63bac96630d579"
+      },
+      "witness": {
+        "omitted": [
+          {
+            "day": "周五",
+            "range": [
+              1080,
+              1260
+            ]
+          }
+        ],
+        "unsupported": []
+      },
+      "scope": "Deterministic arithmetic over quoted calendar records only. sourceId is a review log ID; native experts must use input_history_list/read for the indicated turnIndex, not cite the receipt as a native evidence ID. No job eligibility or completeness outside the declared records is certified."
+    }
+  ],
+  "toolLog": [
+    {
+      "tool": "schedule_check",
+      "error": "Choose one comparison"
+    },
+    {
+      "tool": "schedule_check",
+      "args": {
+        "compareReceiptId": "schedule:ccddc3d78d6e43a039ba9349",
+        "candidateIntervals": null
+      },
+      "receipt": {
+        "id": "schedule:e1a60286a0cac15b992c25fd",
+        "schemaVersion": "schedule-check-v1",
+        "factsHash": "7e62f0ee353772a3e5f386adc8211ce50bfb0a7ab50efb7d0b4e7fa991e4efc9",
+        "sourceRefs": [
+          "event:v16-gap-0",
+          "event:v16-gap-1",
+          "event:v16-gap-3"
+        ],
+        "ledger": [
+          {
+            "id": "base0",
+            "kind": "可用",
+            "day": "周一",
+            "start": 600,
+            "end": 1080,
+            "sourceId": "event:v16-gap-0",
+            "turnIndex": 0,
+            "sourceHash": "6b9bafd745d3893de34467cab4d128109e3cc1d506a0d6dd39c8e121dbf38812",
+            "quote": "|base0|可用|周一|10:00|18:00|"
+          },
+          {
+            "id": "lunch0",
+            "kind": "占用",
+            "day": "周一",
+            "start": 780,
+            "end": 840,
+            "sourceId": "event:v16-gap-0",
+            "turnIndex": 0,
+            "sourceHash": "6b9bafd745d3893de34467cab4d128109e3cc1d506a0d6dd39c8e121dbf38812",
+            "quote": "|lunch0|占用|周一|13:00|14:00|"
+          },
+          {
+            "id": "base1",
+            "kind": "可用",
+            "day": "周三",
+            "start": 600,
+            "end": 1080,
+            "sourceId": "event:v16-gap-0",
+            "turnIndex": 0,
+            "sourceHash": "6b9bafd745d3893de34467cab4d128109e3cc1d506a0d6dd39c8e121dbf38812",
+            "quote": "|base1|可用|周三|10:00|18:00|"
+          },
+          {
+            "id": "lunch1",
+            "kind": "占用",
+            "day": "周三",
+            "start": 780,
+            "end": 840,
+            "sourceId": "event:v16-gap-0",
+            "turnIndex": 0,
+            "sourceHash": "6b9bafd745d3893de34467cab4d128109e3cc1d506a0d6dd39c8e121dbf38812",
+            "quote": "|lunch1|占用|周三|13:00|14:00|"
+          },
+          {
+            "id": "base2",
+            "kind": "可用",
+            "day": "周五",
+            "start": 600,
+            "end": 1080,
+            "sourceId": "event:v16-gap-0",
+            "turnIndex": 0,
+            "sourceHash": "6b9bafd745d3893de34467cab4d128109e3cc1d506a0d6dd39c8e121dbf38812",
+            "quote": "|base2|可用|周五|10:00|18:00|"
+          },
+          {
+            "id": "lunch2",
+            "kind": "占用",
+            "day": "周五",
+            "start": 780,
+            "end": 840,
+            "sourceId": "event:v16-gap-0",
+            "turnIndex": 0,
+            "sourceHash": "6b9bafd745d3893de34467cab4d128109e3cc1d506a0d6dd39c8e121dbf38812",
+            "quote": "|lunch2|占用|周五|13:00|14:00|"
+          },
+          {
+            "id": "course1",
+            "kind": "占用",
+            "day": "周三",
+            "start": 900,
+            "end": 1080,
+            "sourceId": "event:v16-gap-1",
+            "turnIndex": 1,
+            "sourceHash": "fef3e5de68446ad83891f5f189e9447dbe5a4d7a00ad408fcd7430935a3a74d7",
+            "quote": "|course1|占用|周三|15:00|18:00|"
+          },
+          {
+            "id": "extra1",
+            "kind": "可用",
+            "day": "周五",
+            "start": 1080,
+            "end": 1260,
+            "sourceId": "event:v16-gap-3",
+            "turnIndex": 3,
+            "sourceHash": "edd54a1bbf98e019b5aa54aa676fecbcde1f71a24854a5c5fc44158edd357cd7",
+            "quote": "|extra1|可用|周五|18:00|21:00|"
+          }
+        ],
+        "intervals": {
+          "周一": [
+            [
+              600,
+              780
+            ],
+            [
+              840,
+              1080
+            ]
+          ],
+          "周二": [],
+          "周三": [
+            [
+              600,
+              780
+            ],
+            [
+              840,
+              900
+            ]
+          ],
+          "周四": [],
+          "周五": [
+            [
+              600,
+              780
+            ],
+            [
+              840,
+              1260
+            ]
+          ],
+          "周六": [],
+          "周日": []
+        },
+        "dailyHours": {
+          "周一": 7,
+          "周二": 0,
+          "周三": 4,
+          "周四": 0,
+          "周五": 10,
+          "周六": 0,
+          "周日": 0
+        },
+        "weeklyHours": 21,
+        "workingDays": 3,
+        "comparisonOrigin": {
+          "receiptId": "schedule:ccddc3d78d6e43a039ba9349",
+          "factsHash": "d56c0e95c6c497b58b0769befe7994f885bf3181dffa303b5c63bac96630d579"
+        },
+        "witness": {
+          "omitted": [
+            {
+              "day": "周五",
+              "range": [
+                1080,
+                1260
+              ]
+            }
+          ],
+          "unsupported": []
+        },
+        "scope": "Deterministic arithmetic over quoted calendar records only. sourceId is a review log ID; native experts must use input_history_list/read for the indicated turnIndex, not cite the receipt as a native evidence ID. No job eligibility or completeness outside the declared records is certified."
+      }
+    }
+  ],
+  "rawSubmission": {
+    "tasks": [
+      {
+        "subject": "user",
+        "field": "availability.weeklyHours",
+        "question": "学校新增周五18:00-21:00可用时段后，请依据当前日程原表重新核算每周有效实习小时数与各日可用时段，并据此重核 job:v16-gap-a（每周≥3天、累计≥21小时）与 job:v16-gap-b（每周≥2天、至少两天各≥4小时）的时间条件是否满足；不符或待核定的须移出模拟候选。",
+        "targets": [
+          "match",
+          "path",
+          "report"
+        ],
+        "claimRefs": [
+          "artifact:41f63284-86cf-400c-9e17-4c6edc7c21f5:match",
+          "artifact:41f63284-86cf-400c-9e17-4c6edc7c21f5:path",
+          "artifact:aa2ef093-5eb4-434b-90bf-6342ac31c327:report"
+        ],
+        "evidenceRefs": [
+          "job:v16-gap-a",
+          "job:v16-gap-b",
+          "event:v16-gap-3"
+        ],
+        "readIds": [
+          "job:v16-gap-a",
+          "job:v16-gap-b"
+        ],
+        "action": "dispatch",
+        "eventQuote": "学校新批准了下列可实习时段，请追加到原表；原有可用时段、课程和午休仍保留。",
+        "branches": [
+          {
+            "condition": "新增可用时段使周工时回升至21小时及以上",
+            "consequence": "job:v16-gap-a 的累计≥21小时条件可能重新满足，需从移出状态恢复为候选"
+          },
+          {
+            "condition": "新增可用时段改变某日可用时长",
+            "consequence": "job:v16-gap-b 的“至少两天各≥4小时”条件需按新时段重核"
+          }
+        ]
+      }
+    ],
+    "closed": [],
+    "receiptIds": [
+      "schedule:e1a60286a0cac15b992c25fd"
+    ]
+  },
+  "reply": {
+    "role": "assistant",
+    "content": "回执确认：周工时=21（周一7h、周三4h、周五10h，共3天）。新增周五18:00-21:00使周五从7h增至10h，周工时由18h回升至21h。据此重核两岗时间条件：job:v16-gap-a 需每周≥3天且累计≥21h → 3天、21h 均达标，转为符合；job:v16-gap-b 需每周≥2天、至少两天各≥4h → 周一7h、周三4h、周五10h 达标，仍符合。旧结论（18h、gap-a 不符）已被新事实取代，需派发 match/path/report 重核。",
+    "tool_calls": [
+      {
+        "id": "call_00_JQA2SWR5DBThgM64VyCd6354",
+        "type": "function",
+        "function": {
+          "name": "review_submit",
+          "arguments": "{\"tasks\": [{\"subject\": \"user\", \"field\": \"availability.weeklyHours\", \"question\": \"学校新增周五18:00-21:00可用时段后，请依据当前日程原表重新核算每周有效实习小时数与各日可用时段，并据此重核 job:v16-gap-a（每周≥3天、累计≥21小时）与 job:v16-gap-b（每周≥2天、至少两天各≥4小时）的时间条件是否满足；不符或待核定的须移出模拟候选。\", \"targets\": [\"match\", \"path\", \"report\"], \"claimRefs\": [\"artifact:41f63284-86cf-400c-9e17-4c6edc7c21f5:match\", \"artifact:41f63284-86cf-400c-9e17-4c6edc7c21f5:path\", \"artifact:aa2ef093-5eb4-434b-90bf-6342ac31c327:report\"], \"evidenceRefs\": [\"job:v16-gap-a\", \"job:v16-gap-b\", \"event:v16-gap-3\"], \"readIds\": [\"job:v16-gap-a\", \"job:v16-gap-b\"], \"action\": \"dispatch\", \"eventQuote\": \"学校新批准了下列可实习时段，请追加到原表；原有可用时段、课程和午休仍保留。\", \"branches\": [{\"condition\": \"新增可用时段使周工时回升至21小时及以上\", \"consequence\": \"job:v16-gap-a 的累计≥21小时条件可能重新满足，需从移出状态恢复为候选\"}, {\"condition\": \"新增可用时段改变某日可用时长\", \"consequence\": \"job:v16-gap-b 的“至少两天各≥4小时”条件需按新时段重核\"}]}], \"closed\": [], \"receiptIds\": [\"schedule:e1a60286a0cac15b992c25fd\"]}"
+        }
+      }
+    ]
+  },
+  "initialRegistered": false
+}

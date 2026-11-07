@@ -1,0 +1,314 @@
+{
+  "parsed": {
+    "close": true,
+    "cases": [
+      {
+        "hypothesisId": "v17-garden-3-fri",
+        "jobId": "v17-garden-a",
+        "factsVersion": "15f82905c56ab0911b64d7032a21fa7a18fa4eca3490a5768206480d0583e8d3",
+        "ruleVersion": "e7aac000dc978e4a2fc61c3f212f1bd84c8c2ebbd0da5772c393b0606f1d1bd4",
+        "predictedAfter": "不符",
+        "claimsRefutation": true
+      },
+      {
+        "hypothesisId": "v17-garden-3-fri",
+        "jobId": "v17-garden-b",
+        "factsVersion": "15f82905c56ab0911b64d7032a21fa7a18fa4eca3490a5768206480d0583e8d3",
+        "ruleVersion": "feefff35e92b66ade72a052d3ff5987e4c136295895a62caaf7d106ba8782b9d",
+        "predictedAfter": "符合",
+        "claimsRefutation": false
+      },
+      {
+        "hypothesisId": "v17-garden-3-wed",
+        "jobId": "v17-garden-a",
+        "factsVersion": "15f82905c56ab0911b64d7032a21fa7a18fa4eca3490a5768206480d0583e8d3",
+        "ruleVersion": "e7aac000dc978e4a2fc61c3f212f1bd84c8c2ebbd0da5772c393b0606f1d1bd4",
+        "predictedAfter": "不符",
+        "claimsRefutation": true
+      },
+      {
+        "hypothesisId": "v17-garden-3-wed",
+        "jobId": "v17-garden-b",
+        "factsVersion": "15f82905c56ab0911b64d7032a21fa7a18fa4eca3490a5768206480d0583e8d3",
+        "ruleVersion": "feefff35e92b66ade72a052d3ff5987e4c136295895a62caaf7d106ba8782b9d",
+        "predictedAfter": "不符",
+        "claimsRefutation": true
+      }
+    ],
+    "note": "当前事实版本15f82905：周三占用记录wedClass已被event:v17-garden-3撤销，净时段为周一09:00-16:00(7h)、周三09:00-16:00(7h)、周五09:00-11:00(2h)，周工时16h，出勤日3天，月数6。A岗：月数6≥3、天数3≥2、周工时16≥16→符合。B岗：至少2天每天≥4h，周一7、周三7达标2天→符合。假设复核（隔离，不改真实日程）：周五加10:00-11:00占用→周五净0h，周工时15h<16，A岗不符（改变判定，构成反驳）；B岗周一/周三仍各7h达标2天，仍符合（不构成反驳）。周三全天占用→仅周一7h、周五2h，周工时9h，出勤日2天，A岗不符（构成反驳）；B岗仅1天≥4h，达标天数1<2，不符（构成反驳）。作者四组预测与claimsRefutation均与核算一致，可提交并关闭。"
+  },
+  "toolLog": [
+    {
+      "name": "condition_check",
+      "result": {
+        "schemaVersion": "business-check-v1",
+        "factsVersion": "15f82905c56ab0911b64d7032a21fa7a18fa4eca3490a5768206480d0583e8d3",
+        "weeklyHours": 16,
+        "dailyHours": {
+          "周一": 7,
+          "周二": 0,
+          "周三": 7,
+          "周四": 0,
+          "周五": 2,
+          "周六": 0,
+          "周日": 0
+        },
+        "judgments": [
+          {
+            "jobId": "v17-garden-a",
+            "ruleVersion": "e7aac000dc978e4a2fc61c3f212f1bd84c8c2ebbd0da5772c393b0606f1d1bd4",
+            "verdict": "符合",
+            "checks": [
+              {
+                "predicate": "monthsAtLeast",
+                "actual": 6,
+                "required": 3,
+                "satisfied": true
+              },
+              {
+                "predicate": "daysAtLeast",
+                "actual": 3,
+                "required": 2,
+                "satisfied": true
+              },
+              {
+                "predicate": "weeklyHoursAtLeast",
+                "actual": 16,
+                "required": 16,
+                "satisfied": true
+              }
+            ],
+            "weeklyHours": 16
+          },
+          {
+            "jobId": "v17-garden-b",
+            "ruleVersion": "feefff35e92b66ade72a052d3ff5987e4c136295895a62caaf7d106ba8782b9d",
+            "verdict": "符合",
+            "checks": [
+              {
+                "predicate": "monthsAtLeast",
+                "actual": 6,
+                "required": 3,
+                "satisfied": true
+              },
+              {
+                "predicate": "daysAtLeast",
+                "actual": 3,
+                "required": 2,
+                "satisfied": true
+              },
+              {
+                "predicate": "count(workingDayHours>=4)",
+                "actual": 2,
+                "required": 2,
+                "satisfied": true
+              }
+            ],
+            "weeklyHours": 16
+          }
+        ],
+        "cases": [
+          {
+            "hypothesisId": "v17-garden-3-fri",
+            "jobId": "v17-garden-a",
+            "factsVersion": "15f82905c56ab0911b64d7032a21fa7a18fa4eca3490a5768206480d0583e8d3",
+            "ruleVersion": "e7aac000dc978e4a2fc61c3f212f1bd84c8c2ebbd0da5772c393b0606f1d1bd4",
+            "before": "符合",
+            "predictedAfter": "不符",
+            "claimsRefutation": true,
+            "beforeChecks": [
+              {
+                "predicate": "monthsAtLeast",
+                "actual": 6,
+                "required": 3,
+                "satisfied": true
+              },
+              {
+                "predicate": "daysAtLeast",
+                "actual": 3,
+                "required": 2,
+                "satisfied": true
+              },
+              {
+                "predicate": "weeklyHoursAtLeast",
+                "actual": 16,
+                "required": 16,
+                "satisfied": true
+              }
+            ],
+            "afterChecks": [
+              {
+                "predicate": "monthsAtLeast",
+                "actual": 6,
+                "required": 3,
+                "satisfied": true
+              },
+              {
+                "predicate": "daysAtLeast",
+                "actual": 3,
+                "required": 2,
+                "satisfied": true
+              },
+              {
+                "predicate": "weeklyHoursAtLeast",
+                "actual": 15,
+                "required": 16,
+                "satisfied": false
+              }
+            ]
+          },
+          {
+            "hypothesisId": "v17-garden-3-fri",
+            "jobId": "v17-garden-b",
+            "factsVersion": "15f82905c56ab0911b64d7032a21fa7a18fa4eca3490a5768206480d0583e8d3",
+            "ruleVersion": "feefff35e92b66ade72a052d3ff5987e4c136295895a62caaf7d106ba8782b9d",
+            "before": "符合",
+            "predictedAfter": "符合",
+            "claimsRefutation": false,
+            "beforeChecks": [
+              {
+                "predicate": "monthsAtLeast",
+                "actual": 6,
+                "required": 3,
+                "satisfied": true
+              },
+              {
+                "predicate": "daysAtLeast",
+                "actual": 3,
+                "required": 2,
+                "satisfied": true
+              },
+              {
+                "predicate": "count(workingDayHours>=4)",
+                "actual": 2,
+                "required": 2,
+                "satisfied": true
+              }
+            ],
+            "afterChecks": [
+              {
+                "predicate": "monthsAtLeast",
+                "actual": 6,
+                "required": 3,
+                "satisfied": true
+              },
+              {
+                "predicate": "daysAtLeast",
+                "actual": 3,
+                "required": 2,
+                "satisfied": true
+              },
+              {
+                "predicate": "count(workingDayHours>=4)",
+                "actual": 2,
+                "required": 2,
+                "satisfied": true
+              }
+            ]
+          },
+          {
+            "hypothesisId": "v17-garden-3-wed",
+            "jobId": "v17-garden-a",
+            "factsVersion": "15f82905c56ab0911b64d7032a21fa7a18fa4eca3490a5768206480d0583e8d3",
+            "ruleVersion": "e7aac000dc978e4a2fc61c3f212f1bd84c8c2ebbd0da5772c393b0606f1d1bd4",
+            "before": "符合",
+            "predictedAfter": "不符",
+            "claimsRefutation": true,
+            "beforeChecks": [
+              {
+                "predicate": "monthsAtLeast",
+                "actual": 6,
+                "required": 3,
+                "satisfied": true
+              },
+              {
+                "predicate": "daysAtLeast",
+                "actual": 3,
+                "required": 2,
+                "satisfied": true
+              },
+              {
+                "predicate": "weeklyHoursAtLeast",
+                "actual": 16,
+                "required": 16,
+                "satisfied": true
+              }
+            ],
+            "afterChecks": [
+              {
+                "predicate": "monthsAtLeast",
+                "actual": 6,
+                "required": 3,
+                "satisfied": true
+              },
+              {
+                "predicate": "daysAtLeast",
+                "actual": 2,
+                "required": 2,
+                "satisfied": true
+              },
+              {
+                "predicate": "weeklyHoursAtLeast",
+                "actual": 9,
+                "required": 16,
+                "satisfied": false
+              }
+            ]
+          },
+          {
+            "hypothesisId": "v17-garden-3-wed",
+            "jobId": "v17-garden-b",
+            "factsVersion": "15f82905c56ab0911b64d7032a21fa7a18fa4eca3490a5768206480d0583e8d3",
+            "ruleVersion": "feefff35e92b66ade72a052d3ff5987e4c136295895a62caaf7d106ba8782b9d",
+            "before": "符合",
+            "predictedAfter": "不符",
+            "claimsRefutation": true,
+            "beforeChecks": [
+              {
+                "predicate": "monthsAtLeast",
+                "actual": 6,
+                "required": 3,
+                "satisfied": true
+              },
+              {
+                "predicate": "daysAtLeast",
+                "actual": 3,
+                "required": 2,
+                "satisfied": true
+              },
+              {
+                "predicate": "count(workingDayHours>=4)",
+                "actual": 2,
+                "required": 2,
+                "satisfied": true
+              }
+            ],
+            "afterChecks": [
+              {
+                "predicate": "monthsAtLeast",
+                "actual": 6,
+                "required": 3,
+                "satisfied": true
+              },
+              {
+                "predicate": "daysAtLeast",
+                "actual": 2,
+                "required": 2,
+                "satisfied": true
+              },
+              {
+                "predicate": "count(workingDayHours>=4)",
+                "actual": 1,
+                "required": 2,
+                "satisfied": false
+              }
+            ]
+          }
+        ],
+        "scope": "Public structured time-rule cards only. Hypotheses are isolated simulations, never actual user facts."
+      }
+    }
+  ],
+  "error": null,
+  "inputHash": "be5e0f664b3780c0e92d5db11bf85fbfe53c93afa6216684bcafd3c71ff43476"
+}

@@ -1,0 +1,195 @@
+{
+  "number": 2,
+  "label": "v17-service/0/author",
+  "status": "ok",
+  "messages": [
+    {
+      "role": "system",
+      "content": "你是长期记忆条目的作者。只根据可见来源产生当前状态。最多2次模型响应，每次1个工具；可以先调用calendar_check，最后memory_submit。当前数字与岗位核定写入currentAssessment，factsVersion、ruleVersion、evidenceIds从上下文复制并核对；历史数字只属于旧版本，不是当前值。summary保留当前结论和必要历史变更依据，明确旧结论已失效，不必抹掉旧数字。岗位JSON规则是公开原件，不是推测条件：qualifyingDays为至少N天达到阈值，everyWorkingDayHoursAtLeast才是每个有出勤时段的日都达标。对每个hypothesisId×jobId给出一个预测：predictedAfter是该假设下判定，claimsRefutation仅在它确实改变当前判定时为true。假设不修改真实日程。不要因旧警示声称一定不符就相信它。所有事实均为合成实验资料。"
+    },
+    {
+      "role": "user",
+      "content": "{\"sources\":[{\"id\":\"event:v17-service-0\",\"text\":\"已确认连续实习月数为6。下表是已申报的每周出勤安排；有净可用时段的日计为申报出勤日。可用行取并集，扣占用行并集；新行追加，撤销行移除对应记录。其他岗位条件均已满足。\\n|记录ID|类型|星期|开始|结束|\\n|---|---|---|---|---|\\n|base0|可用|周一|09:00|16:00|\\n|base1|可用|周三|09:00|16:00|\\n|base2|可用|周五|09:00|13:30|\"}],\"userFacts\":{\"sourceId\":\"profile:v17-service\",\"months\":6,\"text\":\"学校确认可连续实习6个月。\"},\"publicRules\":[{\"id\":\"v17-service-a\",\"title\":\"便民服务界面排班实习生\",\"rule\":{\"monthsAtLeast\":3,\"daysAtLeast\":2,\"everyWorkingDayHoursAtLeast\":4},\"sourceId\":\"job:v17-service-a\",\"sourceType\":\"synthetic-public-rule-card\",\"meaning\":\"以下JSON为岗位公开的全部时间条件；qualifyingDays是至少N天达标，everyWorkingDayHoursAtLeast是每个申报出勤日均达标；其余条件已确认满足。\",\"ruleVersion\":\"49ff1d166ba50259ea7e8f9f15b4ba9e57bcc35559fc4b85515fffcac92f0510\"},{\"id\":\"v17-service-b\",\"title\":\"便民服务界面组件实习生\",\"rule\":{\"monthsAtLeast\":3,\"daysAtLeast\":2,\"qualifyingDays\":{\"count\":2,\"hoursAtLeast\":4}},\"sourceId\":\"job:v17-service-b\",\"sourceType\":\"synthetic-public-rule-card\",\"meaning\":\"以下JSON为岗位公开的全部时间条件；qualifyingDays是至少N天达标，everyWorkingDayHoursAtLeast是每个申报出勤日均达标；其余条件已确认满足。\",\"ruleVersion\":\"feefff35e92b66ade72a052d3ff5987e4c136295895a62caaf7d106ba8782b9d\"}],\"hypotheses\":[{\"id\":\"v17-service-0-fri\",\"description\":\"试演周五新增一小时占用；仅是假设，不修改实际日程。\",\"text\":\"|记录ID|类型|星期|开始|结束|\\n|---|---|---|---|---|\\n|hypoFri|占用|周五|12:30|13:30|\"},{\"id\":\"v17-service-0-wed\",\"description\":\"试演周三全部时段被占用；仅是假设，不修改实际日程。\",\"text\":\"|记录ID|类型|星期|开始|结束|\\n|---|---|---|---|---|\\n|hypoWed|占用|周三|00:00|24:00|\"}],\"metadata\":{\"factsVersion\":\"afc80325935f3227eacaf9f7f120b8229be0cda952b3c3b548dced8d123a5ac3\",\"ruleVersions\":{\"v17-service-a\":\"49ff1d166ba50259ea7e8f9f15b4ba9e57bcc35559fc4b85515fffcac92f0510\",\"v17-service-b\":\"feefff35e92b66ade72a052d3ff5987e4c136295895a62caaf7d106ba8782b9d\"},\"evidenceIds\":[\"profile:v17-service\",\"event:v17-service-0\",\"job:v17-service-a\",\"job:v17-service-b\"]},\"previousMemory\":{\"id\":\"old:v17-service\",\"text\":\"历史报告曾写周工时=25；这是旧版本记录，不是当前事实。旧警示称“周五再减一小时，B岗就一定不符”，该警示待复核。\"}}"
+    },
+    {
+      "role": "assistant",
+      "content": "我先计算当前可见日程的实际工时。",
+      "tool_calls": [
+        {
+          "id": "call_00_BXY4DdhdQtoVrwli1WL61967",
+          "type": "function",
+          "function": {
+            "name": "calendar_check",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_00_BXY4DdhdQtoVrwli1WL61967",
+      "content": "{\"factsVersion\":\"afc80325935f3227eacaf9f7f120b8229be0cda952b3c3b548dced8d123a5ac3\",\"weeklyHours\":18.5,\"dailyHours\":{\"周一\":7,\"周二\":0,\"周三\":7,\"周四\":0,\"周五\":4.5,\"周六\":0,\"周日\":0},\"sourceRefs\":[\"profile:v17-service\",\"event:v17-service-0\",\"job:v17-service-a\",\"job:v17-service-b\"]}"
+    }
+  ],
+  "tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "memory_submit",
+        "description": "Submit a complete source-bound result.",
+        "parameters": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "type": "object",
+          "properties": {
+            "summary": {
+              "type": "string",
+              "maxLength": 4500
+            },
+            "currentAssessment": {
+              "type": "object",
+              "properties": {
+                "schemaVersion": {
+                  "type": "string",
+                  "const": "current-assessment-v1"
+                },
+                "factsVersion": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "weeklyHours": {
+                  "anyOf": [
+                    {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 168
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "judgments": {
+                  "maxItems": 20,
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "jobId": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "ruleVersion": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "verdict": {
+                        "type": "string",
+                        "enum": [
+                          "符合",
+                          "不符",
+                          "待核定"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "jobId",
+                      "ruleVersion",
+                      "verdict"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "evidenceIds": {
+                  "minItems": 1,
+                  "maxItems": 80,
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "required": [
+                "schemaVersion",
+                "factsVersion",
+                "weeklyHours",
+                "judgments",
+                "evidenceIds"
+              ],
+              "additionalProperties": false
+            },
+            "cases": {
+              "maxItems": 12,
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "hypothesisId": {
+                    "type": "string"
+                  },
+                  "jobId": {
+                    "type": "string"
+                  },
+                  "factsVersion": {
+                    "type": "string"
+                  },
+                  "ruleVersion": {
+                    "type": "string"
+                  },
+                  "predictedAfter": {
+                    "type": "string",
+                    "enum": [
+                      "符合",
+                      "不符",
+                      "待核定"
+                    ]
+                  },
+                  "claimsRefutation": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "hypothesisId",
+                  "jobId",
+                  "factsVersion",
+                  "ruleVersion",
+                  "predictedAfter",
+                  "claimsRefutation"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "summary",
+            "currentAssessment",
+            "cases"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  ],
+  "elapsedMs": 4952,
+  "response": {
+    "message": {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_00_M7grja3YRhhpyJFH9vav9738",
+          "type": "function",
+          "function": {
+            "name": "memory_submit",
+            "arguments": "{\"summary\": \"当前事实版本 afc80325935f3227eacaf9f7f120b8229be0cda952b3c3b548dced8d123a5ac3：连续实习6个月；申报出勤日为周一7h、周三7h、周五4.5h，周工时18.5h（旧记录“周工时=25”已失效，仅为历史版本数字）。A岗规则要求至少3个月、至少2天达标且每个申报出勤日均≥4h：三天均≥4h，符合。B岗规则要求至少3个月、至少2天达到≥4h（qualifyingDays为计数条件，非每日条件）：周一、周三、周五共3天达标，符合。旧警示“周五再减一小时B岗就一定不符”经复核不成立：周五12:30-13:30被占用后周五净4.5-1=3.5h，仅使周五不再达标，仍有周一、周三两天达标，B岗仍符合；该假设不改变当前判定。周三全天占用假设下周三净0h，仅周一达标（1天<2天），A、B两岗均变为不符，该假设确实推翻当前判定。\", \"currentAssessment\": {\"schemaVersion\": \"current-assessment-v1\", \"factsVersion\": \"afc80325935f3227eacaf9f7f120b8229be0cda952b3c3b548dced8d123a5ac3\", \"weeklyHours\": 18.5, \"judgments\": [{\"jobId\": \"v17-service-a\", \"ruleVersion\": \"49ff1d166ba50259ea7e8f9f15b4ba9e57bcc35559fc4b85515fffcac92f0510\", \"verdict\": \"符合\"}, {\"jobId\": \"v17-service-b\", \"ruleVersion\": \"feefff35e92b66ade72a052d3ff5987e4c136295895a62caaf7d106ba8782b9d\", \"verdict\": \"符合\"}], \"evidenceIds\": [\"profile:v17-service\", \"event:v17-service-0\", \"job:v17-service-a\", \"job:v17-service-b\"]}, \"cases\": [{\"hypothesisId\": \"v17-service-0-fri\", \"jobId\": \"v17-service-a\", \"factsVersion\": \"afc80325935f3227eacaf9f7f120b8229be0cda952b3c3b548dced8d123a5ac3\", \"ruleVersion\": \"49ff1d166ba50259ea7e8f9f15b4ba9e57bcc35559fc4b85515fffcac92f0510\", \"predictedAfter\": \"符合\", \"claimsRefutation\": false}, {\"hypothesisId\": \"v17-service-0-fri\", \"jobId\": \"v17-service-b\", \"factsVersion\": \"afc80325935f3227eacaf9f7f120b8229be0cda952b3c3b548dced8d123a5ac3\", \"ruleVersion\": \"feefff35e92b66ade72a052d3ff5987e4c136295895a62caaf7d106ba8782b9d\", \"predictedAfter\": \"符合\", \"claimsRefutation\": false}, {\"hypothesisId\": \"v17-service-0-wed\", \"jobId\": \"v17-service-a\", \"factsVersion\": \"afc80325935f3227eacaf9f7f120b8229be0cda952b3c3b548dced8d123a5ac3\", \"ruleVersion\": \"49ff1d166ba50259ea7e8f9f15b4ba9e57bcc35559fc4b85515fffcac92f0510\", \"predictedAfter\": \"不符\", \"claimsRefutation\": true}, {\"hypothesisId\": \"v17-service-0-wed\", \"jobId\": \"v17-service-b\", \"factsVersion\": \"afc80325935f3227eacaf9f7f120b8229be0cda952b3c3b548dced8d123a5ac3\", \"ruleVersion\": \"feefff35e92b66ade72a052d3ff5987e4c136295895a62caaf7d106ba8782b9d\", \"predictedAfter\": \"不符\", \"claimsRefutation\": true}]}"
+          }
+        }
+      ]
+    },
+    "usage": {
+      "input": 1864,
+      "output": 1055,
+      "cachedInput": 640
+    },
+    "finishReason": "tool_calls"
+  }
+}

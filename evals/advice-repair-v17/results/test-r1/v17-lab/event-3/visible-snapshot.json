@@ -1,0 +1,83 @@
+{
+  "trajectory": "v17-lab",
+  "event": 3,
+  "sources": [
+    {
+      "id": "event:v17-lab-0",
+      "text": "已确认连续实习月数为6。下表是已申报的每周出勤安排；有净可用时段的日计为申报出勤日。可用行取并集，扣占用行并集；新行追加，撤销行移除对应记录。其他岗位条件均已满足。\n|记录ID|类型|星期|开始|结束|\n|---|---|---|---|---|\n|base0|可用|周一|09:00|14:00|\n|base1|可用|周三|09:00|14:00|\n|base2|可用|周五|09:00|12:30|"
+    },
+    {
+      "id": "event:v17-lab-1",
+      "text": "学校调整安排，追加下列记录，其他记录不变。\n|记录ID|类型|星期|开始|结束|\n|---|---|---|---|---|\n|friClass|占用|周五|11:30|12:30|"
+    },
+    {
+      "id": "event:v17-lab-2",
+      "text": "追加周三课程，其他不变。\n|记录ID|类型|星期|开始|结束|\n|---|---|---|---|---|\n|wedClass|占用|周三|11:00|14:00|"
+    },
+    {
+      "id": "event:v17-lab-3",
+      "text": "周三课程取消，仅撤销该记录。\n|记录ID|类型|星期|开始|结束|\n|---|---|---|---|---|\n|wedClass|撤销|-|-|-|"
+    }
+  ],
+  "rules": [
+    {
+      "id": "v17-lab-a",
+      "title": "实验预约界面排班实习生",
+      "rule": {
+        "monthsAtLeast": 3,
+        "daysAtLeast": 3,
+        "qualifyingDays": {
+          "count": 3,
+          "hoursAtLeast": 3
+        }
+      },
+      "sourceId": "job:v17-lab-a",
+      "sourceType": "synthetic-public-rule-card",
+      "meaning": "以下JSON为岗位公开的全部时间条件；qualifyingDays是至少N天达标，everyWorkingDayHoursAtLeast是每个申报出勤日均达标；其余条件已确认满足。",
+      "ruleVersion": "8153e6bd9c1ea34d3cc94b6332bdae572d20f3aed9d564c889e178ed2beeeaf7"
+    },
+    {
+      "id": "v17-lab-b",
+      "title": "实验预约界面组件实习生",
+      "rule": {
+        "monthsAtLeast": 3,
+        "daysAtLeast": 2,
+        "qualifyingDays": {
+          "count": 2,
+          "hoursAtLeast": 3
+        }
+      },
+      "sourceId": "job:v17-lab-b",
+      "sourceType": "synthetic-public-rule-card",
+      "meaning": "以下JSON为岗位公开的全部时间条件；qualifyingDays是至少N天达标，everyWorkingDayHoursAtLeast是每个申报出勤日均达标；其余条件已确认满足。",
+      "ruleVersion": "0a58ee35c9f833db11f9649e65c21b12338159f5f3aede85f8ec76dab59b6bba"
+    }
+  ],
+  "userFacts": {
+    "sourceId": "profile:v17-lab",
+    "months": 6,
+    "text": "学校确认可连续实习6个月。"
+  },
+  "hypotheses": [
+    {
+      "id": "v17-lab-3-fri",
+      "description": "试演周五新增一小时占用；仅是假设，不修改实际日程。",
+      "text": "|记录ID|类型|星期|开始|结束|\n|---|---|---|---|---|\n|hypoFri|占用|周五|11:30|12:30|"
+    },
+    {
+      "id": "v17-lab-3-wed",
+      "description": "试演周三全部时段被占用；仅是假设，不修改实际日程。",
+      "text": "|记录ID|类型|星期|开始|结束|\n|---|---|---|---|---|\n|hypoWed|占用|周三|00:00|24:00|"
+    }
+  ],
+  "factsVersion": "34dfffac6efff35de12ab095db6d0c119ac97ec9f0f256e6ba9176bd96cae7a4",
+  "evidenceIds": [
+    "profile:v17-lab",
+    "event:v17-lab-0",
+    "event:v17-lab-1",
+    "event:v17-lab-2",
+    "event:v17-lab-3",
+    "job:v17-lab-a",
+    "job:v17-lab-b"
+  ]
+}

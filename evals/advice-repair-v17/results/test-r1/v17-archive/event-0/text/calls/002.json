@@ -1,0 +1,126 @@
+{
+  "number": 2,
+  "label": "v17-archive/0/text",
+  "status": "ok",
+  "messages": [
+    {
+      "role": "system",
+      "content": "你是另一位独立上下文的记忆复核代理。最多2次模型响应，每次1个工具；可以先用condition_check核对，最后review_submit。复核当前状态是否可提交并把close设为true/false。对每个hypothesisId×jobId独立提交预测和claimsRefutation；仅实际改变当前判定才是有效反例。完整读取公开岗位规则、真实原表和假设沙箱；至少N天达标不是所有天达标。旧文本、先前警示、作者预测都不是新事实。所有组具有相同核算工具，不因stateProjection格式不同而减少必要检查。"
+    },
+    {
+      "role": "user",
+      "content": "{\"sources\":[{\"id\":\"event:v17-archive-0\",\"text\":\"已确认连续实习月数为6。下表是已申报的每周出勤安排；有净可用时段的日计为申报出勤日。可用行取并集，扣占用行并集；新行追加，撤销行移除对应记录。其他岗位条件均已满足。\\n|记录ID|类型|星期|开始|结束|\\n|---|---|---|---|---|\\n|base0|可用|周一|09:00|15:00|\\n|base1|可用|周三|09:00|15:00|\\n|base2|可用|周五|09:00|15:00|\"}],\"userFacts\":{\"sourceId\":\"profile:v17-archive\",\"months\":6,\"text\":\"学校确认可连续实习6个月。\"},\"publicRules\":[{\"id\":\"v17-archive-a\",\"title\":\"档案检索界面排班实习生\",\"rule\":{\"monthsAtLeast\":3,\"daysAtLeast\":2,\"weeklyHoursAtLeast\":18},\"sourceId\":\"job:v17-archive-a\",\"sourceType\":\"synthetic-public-rule-card\",\"meaning\":\"以下JSON为岗位公开的全部时间条件；qualifyingDays是至少N天达标，everyWorkingDayHoursAtLeast是每个申报出勤日均达标；其余条件已确认满足。\",\"ruleVersion\":\"df5f70bf712ff4c622c30801244538f6e7972a6e7a3754e9594c3a772e79760c\"},{\"id\":\"v17-archive-b\",\"title\":\"档案检索界面组件实习生\",\"rule\":{\"monthsAtLeast\":3,\"daysAtLeast\":2,\"qualifyingDays\":{\"count\":2,\"hoursAtLeast\":5}},\"sourceId\":\"job:v17-archive-b\",\"sourceType\":\"synthetic-public-rule-card\",\"meaning\":\"以下JSON为岗位公开的全部时间条件；qualifyingDays是至少N天达标，everyWorkingDayHoursAtLeast是每个申报出勤日均达标；其余条件已确认满足。\",\"ruleVersion\":\"049dabcacab2d91f5263b923f9874647143a73c532c65d77d9f4f7501afd69f3\"}],\"hypotheses\":[{\"id\":\"v17-archive-0-fri\",\"description\":\"试演周五新增一小时占用；仅是假设，不修改实际日程。\",\"text\":\"|记录ID|类型|星期|开始|结束|\\n|---|---|---|---|---|\\n|hypoFri|占用|周五|14:00|15:00|\"},{\"id\":\"v17-archive-0-wed\",\"description\":\"试演周三全部时段被占用；仅是假设，不修改实际日程。\",\"text\":\"|记录ID|类型|星期|开始|结束|\\n|---|---|---|---|---|\\n|hypoWed|占用|周三|00:00|24:00|\"}],\"metadata\":{\"factsVersion\":\"78999689e2fe477bb27100b2b7deec854c4bc18f534aad353112e12100ac0dba\",\"ruleVersions\":{\"v17-archive-a\":\"df5f70bf712ff4c622c30801244538f6e7972a6e7a3754e9594c3a772e79760c\",\"v17-archive-b\":\"049dabcacab2d91f5263b923f9874647143a73c532c65d77d9f4f7501afd69f3\"},\"evidenceIds\":[\"profile:v17-archive\",\"event:v17-archive-0\",\"job:v17-archive-a\",\"job:v17-archive-b\"]},\"authorSummary\":\"当前事实版本78999689：连续实习6个月（≥3个月，满足两岗月数条件）。申报出勤日为周一、周三、周五，各6小时，周工时18小时（旧记录“25小时”已失效，不是当前值）。A岗（档案检索界面排班实习生）：月数6≥3、达标天数3≥2、周工时18≥18，判定符合。B岗（档案检索界面组件实习生）：要求至少2天达到5小时，三天各6小时均达标，判定符合。假设复核：周五新增14:00-15:00占用后，周五净时段为09:00-14:00共5小时，仍≥5小时，三天均达标、周工时15小时；B岗无周工时门槛，仍符合，故旧警示“周五再减一小时B岗一定不符”不成立。周三全天占用后，周三净时段为0，不计为申报出勤日，仅周一、周五两天各6小时达标，周工时12小时；A岗周工时12<18，判定不符；B岗仍满足2天×5小时，判定符合。\",\"authorCases\":[{\"hypothesisId\":\"v17-archive-0-fri\",\"jobId\":\"v17-archive-a\",\"factsVersion\":\"78999689e2fe477bb27100b2b7deec854c4bc18f534aad353112e12100ac0dba\",\"ruleVersion\":\"df5f70bf712ff4c622c30801244538f6e7972a6e7a3754e9594c3a772e79760c\",\"predictedAfter\":\"不符\",\"claimsRefutation\":true},{\"hypothesisId\":\"v17-archive-0-fri\",\"jobId\":\"v17-archive-b\",\"factsVersion\":\"78999689e2fe477bb27100b2b7deec854c4bc18f534aad353112e12100ac0dba\",\"ruleVersion\":\"049dabcacab2d91f5263b923f9874647143a73c532c65d77d9f4f7501afd69f3\",\"predictedAfter\":\"符合\",\"claimsRefutation\":false},{\"hypothesisId\":\"v17-archive-0-wed\",\"jobId\":\"v17-archive-a\",\"factsVersion\":\"78999689e2fe477bb27100b2b7deec854c4bc18f534aad353112e12100ac0dba\",\"ruleVersion\":\"df5f70bf712ff4c622c30801244538f6e7972a6e7a3754e9594c3a772e79760c\",\"predictedAfter\":\"不符\",\"claimsRefutation\":true},{\"hypothesisId\":\"v17-archive-0-wed\",\"jobId\":\"v17-archive-b\",\"factsVersion\":\"78999689e2fe477bb27100b2b7deec854c4bc18f534aad353112e12100ac0dba\",\"ruleVersion\":\"049dabcacab2d91f5263b923f9874647143a73c532c65d77d9f4f7501afd69f3\",\"predictedAfter\":\"符合\",\"claimsRefutation\":false}],\"stateProjection\":{\"summary\":\"当前事实版本78999689：连续实习6个月（≥3个月，满足两岗月数条件）。申报出勤日为周一、周三、周五，各6小时，周工时18小时（旧记录“25小时”已失效，不是当前值）。A岗（档案检索界面排班实习生）：月数6≥3、达标天数3≥2、周工时18≥18，判定符合。B岗（档案检索界面组件实习生）：要求至少2天达到5小时，三天各6小时均达标，判定符合。假设复核：周五新增14:00-15:00占用后，周五净时段为09:00-14:00共5小时，仍≥5小时，三天均达标、周工时15小时；B岗无周工时门槛，仍符合，故旧警示“周五再减一小时B岗一定不符”不成立。周三全天占用后，周三净时段为0，不计为申报出勤日，仅周一、周五两天各6小时达标，周工时12小时；A岗周工时12<18，判定不符；B岗仍满足2天×5小时，判定符合。\"},\"previousWorkflow\":null}"
+    },
+    {
+      "role": "assistant",
+      "content": "I'll verify the current state with the deterministic receipt before submitting.",
+      "tool_calls": [
+        {
+          "id": "call_00_ZqjXHDVoimT8ofOWCgFy5169",
+          "type": "function",
+          "function": {
+            "name": "condition_check",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_00_ZqjXHDVoimT8ofOWCgFy5169",
+      "content": "{\"schemaVersion\":\"business-check-v1\",\"factsVersion\":\"78999689e2fe477bb27100b2b7deec854c4bc18f534aad353112e12100ac0dba\",\"weeklyHours\":18,\"dailyHours\":{\"周一\":6,\"周二\":0,\"周三\":6,\"周四\":0,\"周五\":6,\"周六\":0,\"周日\":0},\"judgments\":[{\"jobId\":\"v17-archive-a\",\"ruleVersion\":\"df5f70bf712ff4c622c30801244538f6e7972a6e7a3754e9594c3a772e79760c\",\"verdict\":\"符合\",\"checks\":[{\"predicate\":\"monthsAtLeast\",\"actual\":6,\"required\":3,\"satisfied\":true},{\"predicate\":\"daysAtLeast\",\"actual\":3,\"required\":2,\"satisfied\":true},{\"predicate\":\"weeklyHoursAtLeast\",\"actual\":18,\"required\":18,\"satisfied\":true}],\"weeklyHours\":18},{\"jobId\":\"v17-archive-b\",\"ruleVersion\":\"049dabcacab2d91f5263b923f9874647143a73c532c65d77d9f4f7501afd69f3\",\"verdict\":\"符合\",\"checks\":[{\"predicate\":\"monthsAtLeast\",\"actual\":6,\"required\":3,\"satisfied\":true},{\"predicate\":\"daysAtLeast\",\"actual\":3,\"required\":2,\"satisfied\":true},{\"predicate\":\"count(workingDayHours>=5)\",\"actual\":3,\"required\":2,\"satisfied\":true}],\"weeklyHours\":18}],\"cases\":[{\"hypothesisId\":\"v17-archive-0-fri\",\"jobId\":\"v17-archive-a\",\"factsVersion\":\"78999689e2fe477bb27100b2b7deec854c4bc18f534aad353112e12100ac0dba\",\"ruleVersion\":\"df5f70bf712ff4c622c30801244538f6e7972a6e7a3754e9594c3a772e79760c\",\"before\":\"符合\",\"predictedAfter\":\"不符\",\"claimsRefutation\":true,\"beforeChecks\":[{\"predicate\":\"monthsAtLeast\",\"actual\":6,\"required\":3,\"satisfied\":true},{\"predicate\":\"daysAtLeast\",\"actual\":3,\"required\":2,\"satisfied\":true},{\"predicate\":\"weeklyHoursAtLeast\",\"actual\":18,\"required\":18,\"satisfied\":true}],\"afterChecks\":[{\"predicate\":\"monthsAtLeast\",\"actual\":6,\"required\":3,\"satisfied\":true},{\"predicate\":\"daysAtLeast\",\"actual\":3,\"required\":2,\"satisfied\":true},{\"predicate\":\"weeklyHoursAtLeast\",\"actual\":17,\"required\":18,\"satisfied\":false}]},{\"hypothesisId\":\"v17-archive-0-fri\",\"jobId\":\"v17-archive-b\",\"factsVersion\":\"78999689e2fe477bb27100b2b7deec854c4bc18f534aad353112e12100ac0dba\",\"ruleVersion\":\"049dabcacab2d91f5263b923f9874647143a73c532c65d77d9f4f7501afd69f3\",\"before\":\"符合\",\"predictedAfter\":\"符合\",\"claimsRefutation\":false,\"beforeChecks\":[{\"predicate\":\"monthsAtLeast\",\"actual\":6,\"required\":3,\"satisfied\":true},{\"predicate\":\"daysAtLeast\",\"actual\":3,\"required\":2,\"satisfied\":true},{\"predicate\":\"count(workingDayHours>=5)\",\"actual\":3,\"required\":2,\"satisfied\":true}],\"afterChecks\":[{\"predicate\":\"monthsAtLeast\",\"actual\":6,\"required\":3,\"satisfied\":true},{\"predicate\":\"daysAtLeast\",\"actual\":3,\"required\":2,\"satisfied\":true},{\"predicate\":\"count(workingDayHours>=5)\",\"actual\":3,\"required\":2,\"satisfied\":true}]},{\"hypothesisId\":\"v17-archive-0-wed\",\"jobId\":\"v17-archive-a\",\"factsVersion\":\"78999689e2fe477bb27100b2b7deec854c4bc18f534aad353112e12100ac0dba\",\"ruleVersion\":\"df5f70bf712ff4c622c30801244538f6e7972a6e7a3754e9594c3a772e79760c\",\"before\":\"符合\",\"predictedAfter\":\"不符\",\"claimsRefutation\":true,\"beforeChecks\":[{\"predicate\":\"monthsAtLeast\",\"actual\":6,\"required\":3,\"satisfied\":true},{\"predicate\":\"daysAtLeast\",\"actual\":3,\"required\":2,\"satisfied\":true},{\"predicate\":\"weeklyHoursAtLeast\",\"actual\":18,\"required\":18,\"satisfied\":true}],\"afterChecks\":[{\"predicate\":\"monthsAtLeast\",\"actual\":6,\"required\":3,\"satisfied\":true},{\"predicate\":\"daysAtLeast\",\"actual\":2,\"required\":2,\"satisfied\":true},{\"predicate\":\"weeklyHoursAtLeast\",\"actual\":12,\"required\":18,\"satisfied\":false}]},{\"hypothesisId\":\"v17-archive-0-wed\",\"jobId\":\"v17-archive-b\",\"factsVersion\":\"78999689e2fe477bb27100b2b7deec854c4bc18f534aad353112e12100ac0dba\",\"ruleVersion\":\"049dabcacab2d91f5263b923f9874647143a73c532c65d77d9f4f7501afd69f3\",\"before\":\"符合\",\"predictedAfter\":\"符合\",\"claimsRefutation\":false,\"beforeChecks\":[{\"predicate\":\"monthsAtLeast\",\"actual\":6,\"required\":3,\"satisfied\":true},{\"predicate\":\"daysAtLeast\",\"actual\":3,\"required\":2,\"satisfied\":true},{\"predicate\":\"count(workingDayHours>=5)\",\"actual\":3,\"required\":2,\"satisfied\":true}],\"afterChecks\":[{\"predicate\":\"monthsAtLeast\",\"actual\":6,\"required\":3,\"satisfied\":true},{\"predicate\":\"daysAtLeast\",\"actual\":2,\"required\":2,\"satisfied\":true},{\"predicate\":\"count(workingDayHours>=5)\",\"actual\":2,\"required\":2,\"satisfied\":true}]}],\"scope\":\"Public structured time-rule cards only. Hypotheses are isolated simulations, never actual user facts.\"}"
+    }
+  ],
+  "tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "review_submit",
+        "description": "Submit a complete source-bound result.",
+        "parameters": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "type": "object",
+          "properties": {
+            "close": {
+              "type": "boolean"
+            },
+            "cases": {
+              "maxItems": 12,
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "hypothesisId": {
+                    "type": "string"
+                  },
+                  "jobId": {
+                    "type": "string"
+                  },
+                  "factsVersion": {
+                    "type": "string"
+                  },
+                  "ruleVersion": {
+                    "type": "string"
+                  },
+                  "predictedAfter": {
+                    "type": "string",
+                    "enum": [
+                      "符合",
+                      "不符",
+                      "待核定"
+                    ]
+                  },
+                  "claimsRefutation": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "hypothesisId",
+                  "jobId",
+                  "factsVersion",
+                  "ruleVersion",
+                  "predictedAfter",
+                  "claimsRefutation"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "note": {
+              "type": "string",
+              "maxLength": 3000
+            }
+          },
+          "required": [
+            "close",
+            "cases",
+            "note"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  ],
+  "elapsedMs": 3366,
+  "response": {
+    "message": {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_00_A8WBhowkhDzqUSvR8OdI3302",
+          "type": "function",
+          "function": {
+            "name": "review_submit",
+            "arguments": "{\"close\": true, \"cases\": [{\"hypothesisId\": \"v17-archive-0-fri\", \"jobId\": \"v17-archive-a\", \"factsVersion\": \"78999689e2fe477bb27100b2b7deec854c4bc18f534aad353112e12100ac0dba\", \"ruleVersion\": \"df5f70bf712ff4c622c30801244538f6e7972a6e7a3754e9594c3a772e79760c\", \"predictedAfter\": \"不符\", \"claimsRefutation\": true}, {\"hypothesisId\": \"v17-archive-0-fri\", \"jobId\": \"v17-archive-b\", \"factsVersion\": \"78999689e2fe477bb27100b2b7deec854c4bc18f534aad353112e12100ac0dba\", \"ruleVersion\": \"049dabcacab2d91f5263b923f9874647143a73c532c65d77d9f4f7501afd69f3\", \"predictedAfter\": \"符合\", \"claimsRefutation\": false}, {\"hypothesisId\": \"v17-archive-0-wed\", \"jobId\": \"v17-archive-a\", \"factsVersion\": \"78999689e2fe477bb27100b2b7deec854c4bc18f534aad353112e12100ac0dba\", \"ruleVersion\": \"df5f70bf712ff4c622c30801244538f6e7972a6e7a3754e9594c3a772e79760c\", \"predictedAfter\": \"不符\", \"claimsRefutation\": true}, {\"hypothesisId\": \"v17-archive-0-wed\", \"jobId\": \"v17-archive-b\", \"factsVersion\": \"78999689e2fe477bb27100b2b7deec854c4bc18f534aad353112e12100ac0dba\", \"ruleVersion\": \"049dabcacab2d91f5263b923f9874647143a73c532c65d77d9f4f7501afd69f3\", \"predictedAfter\": \"符合\", \"claimsRefutation\": false}], \"note\": \"当前事实78999689：周一/周三/周五各6小时，周工时18，月数6。A岗：6≥3、3≥2、18≥18→符合；B岗：6≥3、3≥2、3天≥5小时→符合。假设fri（周五14:00-15:00占用）：周五净5小时，周工时17<18→A不符（有效反例，claimsRefutation=true）；B仍3天≥5小时→符合（无变化，false）。假设wed（周三全天占用）：周三0小时不计出勤日，达标天数2≥2但周工时12<18→A不符（有效反例，true）；B仍2天×6小时≥5→符合（无变化，false）。作者预测与核算一致，可提交并关闭。\"}"
+          }
+        }
+      ]
+    },
+    "usage": {
+      "input": 3789,
+      "output": 742,
+      "cachedInput": 1920
+    },
+    "finishReason": "tool_calls"
+  }
+}

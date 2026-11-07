@@ -1,0 +1,75 @@
+{
+  "trajectory": "v17-service",
+  "event": 2,
+  "sources": [
+    {
+      "id": "event:v17-service-0",
+      "text": "已确认连续实习月数为6。下表是已申报的每周出勤安排；有净可用时段的日计为申报出勤日。可用行取并集，扣占用行并集；新行追加，撤销行移除对应记录。其他岗位条件均已满足。\n|记录ID|类型|星期|开始|结束|\n|---|---|---|---|---|\n|base0|可用|周一|09:00|16:00|\n|base1|可用|周三|09:00|16:00|\n|base2|可用|周五|09:00|13:30|"
+    },
+    {
+      "id": "event:v17-service-1",
+      "text": "学校调整安排，追加下列记录，其他记录不变。\n|记录ID|类型|星期|开始|结束|\n|---|---|---|---|---|\n|friClass|占用|周五|12:30|13:30|"
+    },
+    {
+      "id": "event:v17-service-2",
+      "text": "追加周三课程，其他不变。\n|记录ID|类型|星期|开始|结束|\n|---|---|---|---|---|\n|wedClass|占用|周三|12:00|16:00|"
+    }
+  ],
+  "rules": [
+    {
+      "id": "v17-service-a",
+      "title": "便民服务界面排班实习生",
+      "rule": {
+        "monthsAtLeast": 3,
+        "daysAtLeast": 2,
+        "everyWorkingDayHoursAtLeast": 4
+      },
+      "sourceId": "job:v17-service-a",
+      "sourceType": "synthetic-public-rule-card",
+      "meaning": "以下JSON为岗位公开的全部时间条件；qualifyingDays是至少N天达标，everyWorkingDayHoursAtLeast是每个申报出勤日均达标；其余条件已确认满足。",
+      "ruleVersion": "49ff1d166ba50259ea7e8f9f15b4ba9e57bcc35559fc4b85515fffcac92f0510"
+    },
+    {
+      "id": "v17-service-b",
+      "title": "便民服务界面组件实习生",
+      "rule": {
+        "monthsAtLeast": 3,
+        "daysAtLeast": 2,
+        "qualifyingDays": {
+          "count": 2,
+          "hoursAtLeast": 4
+        }
+      },
+      "sourceId": "job:v17-service-b",
+      "sourceType": "synthetic-public-rule-card",
+      "meaning": "以下JSON为岗位公开的全部时间条件；qualifyingDays是至少N天达标，everyWorkingDayHoursAtLeast是每个申报出勤日均达标；其余条件已确认满足。",
+      "ruleVersion": "feefff35e92b66ade72a052d3ff5987e4c136295895a62caaf7d106ba8782b9d"
+    }
+  ],
+  "userFacts": {
+    "sourceId": "profile:v17-service",
+    "months": 6,
+    "text": "学校确认可连续实习6个月。"
+  },
+  "hypotheses": [
+    {
+      "id": "v17-service-2-fri",
+      "description": "试演周五新增一小时占用；仅是假设，不修改实际日程。",
+      "text": "|记录ID|类型|星期|开始|结束|\n|---|---|---|---|---|\n|hypoFri|占用|周五|12:30|13:30|"
+    },
+    {
+      "id": "v17-service-2-wed",
+      "description": "试演周三全部时段被占用；仅是假设，不修改实际日程。",
+      "text": "|记录ID|类型|星期|开始|结束|\n|---|---|---|---|---|\n|hypoWed|占用|周三|00:00|24:00|"
+    }
+  ],
+  "factsVersion": "6fe797a6620a459ab9e83c9a5f1cc21afbea5a3e38fc86cee42f3c2ad82e22b5",
+  "evidenceIds": [
+    "profile:v17-service",
+    "event:v17-service-0",
+    "event:v17-service-1",
+    "event:v17-service-2",
+    "job:v17-service-a",
+    "job:v17-service-b"
+  ]
+}

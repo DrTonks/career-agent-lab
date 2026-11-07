@@ -1,0 +1,90 @@
+{
+  "parsed": {
+    "summary": "当前事实版本34dfffac：连续实习6个月；申报出勤为周一09:00-14:00（5h）、周三09:00-14:00（5h）、周五09:00-12:30（3.5h），但周五11:30-12:30已被占用记录friClass扣除，周五净可用时段为09:00-11:30（2.5h），周工时12.5小时。旧版本19089d2f的结论（周五3.5h、周工时13.5h、A/B均符合）已失效，不是当前值。按公开规则原件：A岗要求至少3天、其中至少3天达3小时——仅周一、周三达标（2天），不符；B岗要求至少2天、其中至少2天达3小时——周一、周三达标，符合。假设试演（不修改真实日程）：周五再新增11:30-12:30占用不改变净时段（仍2.5h），A岗不符、B岗符合，均不改变当前判定；周三全天占用后周三净时段为0、不计出勤日，达标天数降为1天，A岗不符、B岗不符（B岗由符合变为不符，构成反驳）。旧警示“周五再减一小时B岗一定不符”经复核不成立：B岗仅需2天达标，周一、周三仍达标。",
+    "currentAssessment": {
+      "schemaVersion": "current-assessment-v1",
+      "factsVersion": "34dfffac6efff35de12ab095db6d0c119ac97ec9f0f256e6ba9176bd96cae7a4",
+      "weeklyHours": 12.5,
+      "judgments": [
+        {
+          "jobId": "v17-lab-a",
+          "ruleVersion": "8153e6bd9c1ea34d3cc94b6332bdae572d20f3aed9d564c889e178ed2beeeaf7",
+          "verdict": "不符"
+        },
+        {
+          "jobId": "v17-lab-b",
+          "ruleVersion": "0a58ee35c9f833db11f9649e65c21b12338159f5f3aede85f8ec76dab59b6bba",
+          "verdict": "符合"
+        }
+      ],
+      "evidenceIds": [
+        "profile:v17-lab",
+        "event:v17-lab-0",
+        "event:v17-lab-1",
+        "job:v17-lab-a",
+        "job:v17-lab-b"
+      ]
+    },
+    "cases": [
+      {
+        "hypothesisId": "v17-lab-1-fri",
+        "jobId": "v17-lab-a",
+        "factsVersion": "34dfffac6efff35de12ab095db6d0c119ac97ec9f0f256e6ba9176bd96cae7a4",
+        "ruleVersion": "8153e6bd9c1ea34d3cc94b6332bdae572d20f3aed9d564c889e178ed2beeeaf7",
+        "predictedAfter": "不符",
+        "claimsRefutation": false
+      },
+      {
+        "hypothesisId": "v17-lab-1-fri",
+        "jobId": "v17-lab-b",
+        "factsVersion": "34dfffac6efff35de12ab095db6d0c119ac97ec9f0f256e6ba9176bd96cae7a4",
+        "ruleVersion": "0a58ee35c9f833db11f9649e65c21b12338159f5f3aede85f8ec76dab59b6bba",
+        "predictedAfter": "符合",
+        "claimsRefutation": false
+      },
+      {
+        "hypothesisId": "v17-lab-1-wed",
+        "jobId": "v17-lab-a",
+        "factsVersion": "34dfffac6efff35de12ab095db6d0c119ac97ec9f0f256e6ba9176bd96cae7a4",
+        "ruleVersion": "8153e6bd9c1ea34d3cc94b6332bdae572d20f3aed9d564c889e178ed2beeeaf7",
+        "predictedAfter": "不符",
+        "claimsRefutation": false
+      },
+      {
+        "hypothesisId": "v17-lab-1-wed",
+        "jobId": "v17-lab-b",
+        "factsVersion": "34dfffac6efff35de12ab095db6d0c119ac97ec9f0f256e6ba9176bd96cae7a4",
+        "ruleVersion": "0a58ee35c9f833db11f9649e65c21b12338159f5f3aede85f8ec76dab59b6bba",
+        "predictedAfter": "不符",
+        "claimsRefutation": true
+      }
+    ]
+  },
+  "toolLog": [
+    {
+      "name": "calendar_check",
+      "result": {
+        "factsVersion": "34dfffac6efff35de12ab095db6d0c119ac97ec9f0f256e6ba9176bd96cae7a4",
+        "weeklyHours": 12.5,
+        "dailyHours": {
+          "周一": 5,
+          "周二": 0,
+          "周三": 5,
+          "周四": 0,
+          "周五": 2.5,
+          "周六": 0,
+          "周日": 0
+        },
+        "sourceRefs": [
+          "profile:v17-lab",
+          "event:v17-lab-0",
+          "event:v17-lab-1",
+          "job:v17-lab-a",
+          "job:v17-lab-b"
+        ]
+      }
+    }
+  ],
+  "error": null,
+  "inputHash": "60053f2cd6a1ccda78c553c279b2d8d0d192c04afd8eb70e91c569c8ca199fa6"
+}

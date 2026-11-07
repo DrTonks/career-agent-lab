@@ -1,0 +1,1548 @@
+{
+  "priorArtifacts": [
+    {
+      "id": "7b181f4d-7ea4-4317-ae56-94e457ba34a4:sched",
+      "runId": "7b181f4d-7ea4-4317-ae56-94e457ba34a4",
+      "stepId": "sched",
+      "expert": "profile",
+      "result": {
+        "status": "partial",
+        "summary": "周工时=18。按原表（周一/三/五10:00-18:00可用，各扣13:00-14:00）追加 course1（周三15:00-18:00占用）后：周一10:00-13:00、14:00-18:00（7h）；周三10:00-13:00、14:00-15:00（4h）；周五10:00-13:00、14:00-18:00（7h）；周二/四/六/日无可用时段。工作天数=3，周工时=18。与旧值21h的差异：旧值3×(8-1)=21h未含新课；course1 使周三15:00-18:00（3h）由可用转为占用，21-3=18h，其余记录不变。核定[job:v16-gap-a]=待核定；核定[job:v16-gap-b]=待核定——两岗原文在本角色知识视图仍不可访问（knowledge_read 返回 Evidence missing or not accessible，knowledge_search 无命中），按规则不猜测，移出候选。画像沿用历史：本科应届、成都、经验0年，技能Vue/TypeScript/Git，网页组件项目支持 professionalSkill=50、execution=50（锚点2，低置信度）；其余10维为null（材料未写≠不具备），完整度约17%。本轮无新增画像事实，未提出记忆写入。",
+        "evidenceIds": [
+          "input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:turn:0:request",
+          "input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:request",
+          "input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:resume",
+          "rule:profile",
+          "calculation:7b181f4d-7ea4-4317-ae56-94e457ba34a4:d3f3e792826dd090ad19acfa40122029d95523153e6d79faeb165f9284976965"
+        ],
+        "unknowns": [
+          "job:v16-gap-a 的实习时间条件原文不可访问，无法核定",
+          "job:v16-gap-b 的实习时间条件原文不可访问，无法核定",
+          "是否有企业实习经历（简历与当前陈述均未提及，未确认）",
+          "证书与语言成绩（未提及）",
+          "团队协作/领导/抗压/学习过程等行为证据（未提及）",
+          "job:v16-gap-a 的实习时间条件（每周到岗天数/时长/时段）原文仍不可访问，无法核定",
+          "job:v16-gap-b 的实习时间条件原文仍不可访问，无法核定",
+          "网页组件项目的复杂度、本人职责边界、结果与时间范围"
+        ],
+        "conflicts": [
+          "旧结论“周工时=21”已被本轮追加的 course1（周三15:00-18:00占用）取代，现为周工时=18；旧值未含该课程，非计算错误而是事实更新。"
+        ],
+        "nextActions": [
+          "请总控/知识库管理员确认 job:v16-gap-a、job:v16-gap-b 原文的访问权限或提供可读来源；在可读前两岗一律标注待核定并移出候选。",
+          "下游 match/path/report 使用周工时=18、工作天数=3，并沿用“核定[job:v16-gap-a]=待核定、核定[job:v16-gap-b]=待核定”。",
+          "向用户补充：企业实习经历有无、证书与语言成绩、团队协作/领导/抗压/学习过程的具体行为、网页组件项目的复杂度与本人职责及结果时间范围。"
+        ],
+        "artifact": {
+          "scores": {
+            "professionalSkill": 50,
+            "certificate": null,
+            "innovation": null,
+            "internalMotivation": null,
+            "learning": null,
+            "stressTolerance": null,
+            "communication": null,
+            "internship": null,
+            "language": null,
+            "leadership": null,
+            "adaptability": null,
+            "execution": 50
+          },
+          "skills": [
+            "Vue",
+            "TypeScript",
+            "Git"
+          ],
+          "evidence": [
+            {
+              "dimension": "professionalSkill",
+              "evidenceId": "input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:resume",
+              "quote": "在成都使用Vue、TypeScript、Git完成过网页组件项目"
+            },
+            {
+              "dimension": "execution",
+              "evidenceId": "input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:resume",
+              "quote": "完成过网页组件项目"
+            }
+          ],
+          "facts": {
+            "education": "本科应届",
+            "city": "成都",
+            "experienceYears": 0,
+            "skills": [
+              "Vue",
+              "TypeScript",
+              "Git"
+            ],
+            "project": "网页组件项目（复杂度/职责/结果/时间范围未说明）",
+            "availability": {
+              "周一": [
+                [
+                  600,
+                  780
+                ],
+                [
+                  840,
+                  1080
+                ]
+              ],
+              "周二": [],
+              "周三": [
+                [
+                  600,
+                  780
+                ],
+                [
+                  840,
+                  900
+                ]
+              ],
+              "周四": [],
+              "周五": [
+                [
+                  600,
+                  780
+                ],
+                [
+                  840,
+                  1080
+                ]
+              ],
+              "周六": [],
+              "周日": []
+            },
+            "dailyHours": {
+              "周一": 7,
+              "周二": 0,
+              "周三": 4,
+              "周四": 0,
+              "周五": 7,
+              "周六": 0,
+              "周日": 0
+            },
+            "weeklyHours": 18,
+            "workingDays": 3,
+            "weeklyHoursDelta": "旧值21h（3×(8-1)）未含 course1；course1 使周三15:00-18:00（3h）转为占用，21-3=18h",
+            "continuousInternshipMonths": 6
+          },
+          "jobTimeVerdicts": [
+            {
+              "jobId": "job:v16-gap-a",
+              "verdict": "待核定",
+              "basis": "原文在本角色知识视图不可访问（knowledge_read 返回 Evidence missing or not accessible；knowledge_search 无命中），不猜测"
+            },
+            {
+              "jobId": "job:v16-gap-b",
+              "verdict": "待核定",
+              "basis": "原文在本角色知识视图不可访问（knowledge_read 返回 Evidence missing or not accessible；knowledge_search 无命中），不猜测"
+            }
+          ],
+          "contradictions": [
+            "旧结论周工时=21 被本轮 course1 追加取代为18"
+          ],
+          "questions": [
+            "是否有企业实习经历？",
+            "证书与语言成绩？",
+            "团队协作/领导/抗压/学习过程的具体行为？",
+            "网页组件项目的复杂度、本人职责边界、结果与时间范围？"
+          ],
+          "scoringVersion": "anchored-levels-v2-uncalibrated",
+          "completeness": 0.17,
+          "priorities": [
+            "补齐企业实习与项目职责/结果证据",
+            "补齐证书与语言成绩",
+            "补齐软技能行为证据"
+          ],
+          "openQuestions": {
+            "schemaVersion": "open-questions-v1",
+            "items": [
+              "job:v16-gap-a 的实习时间条件原文不可访问，无法核定",
+              "job:v16-gap-b 的实习时间条件原文不可访问，无法核定",
+              "是否有企业实习经历（简历与当前陈述均未提及，未确认）",
+              "证书与语言成绩（未提及）",
+              "团队协作/领导/抗压/学习过程等行为证据（未提及）",
+              "job:v16-gap-a 的实习时间条件（每周到岗天数/时长/时段）原文仍不可访问，无法核定",
+              "job:v16-gap-b 的实习时间条件原文仍不可访问，无法核定",
+              "网页组件项目的复杂度、本人职责边界、结果与时间范围"
+            ]
+          },
+          "clarifications": [
+            {
+              "questionId": "question:7f4e0931441527aa317718607e981b0489e474f465ee332f13f5373670b880db",
+              "status": "unanswered",
+              "claims": [],
+              "remaining": [
+                "job:v16-gap-a 的实习时间条件（每周到岗天数/时长/时段）原文仍不可访问，无法核定"
+              ],
+              "reason": "本轮再次以 knowledge_read(job:v16-gap-a) 读取，返回 Evidence missing or not accessible；knowledge_search 亦无该岗位原文。无原文即无法核定，按用户规则标注待核定，不猜测。",
+              "schemaVersion": "clarification-v2",
+              "version": 1,
+              "runId": "7b181f4d-7ea4-4317-ae56-94e457ba34a4",
+              "executionId": "sched",
+              "role": "profile",
+              "questionText": "job:v16-gap-a 的实习时间条件（每周到岗天数/时长/时段）原文未读取到，无法核定",
+              "snapshotHash": "99858fc00b5fdd647537689ab4f47faf359227e39459ece5c23108c468f99e96"
+            },
+            {
+              "questionId": "question:9621578c77a654a9b6cd6ba40ce3b4847b41d8b655ff0f88a5603cccc5d594c9",
+              "status": "unanswered",
+              "claims": [],
+              "remaining": [
+                "job:v16-gap-b 的实习时间条件原文仍不可访问，无法核定"
+              ],
+              "reason": "knowledge_read(job:v16-gap-b) 同样返回 Evidence missing or not accessible，检索无命中；标注待核定。",
+              "schemaVersion": "clarification-v2",
+              "version": 1,
+              "runId": "7b181f4d-7ea4-4317-ae56-94e457ba34a4",
+              "executionId": "sched",
+              "role": "profile",
+              "questionText": "job:v16-gap-b 的实习时间条件原文未读取到，无法核定",
+              "snapshotHash": "99858fc00b5fdd647537689ab4f47faf359227e39459ece5c23108c468f99e96"
+            },
+            {
+              "questionId": "question:855800d5db724a3720b6029d15b8e8eed2d67a5b73936cfa738596d256925d38",
+              "status": "unanswered",
+              "claims": [],
+              "remaining": [
+                "是否有企业实习经历（简历与当前陈述均未提及，未确认）"
+              ],
+              "reason": "已完整读取当前简历（52字，nextOffset=null）与本轮请求，均未提及企业实习；材料未写不等于不具备，故保持未确认，不记0分。",
+              "schemaVersion": "clarification-v2",
+              "version": 1,
+              "runId": "7b181f4d-7ea4-4317-ae56-94e457ba34a4",
+              "executionId": "sched",
+              "role": "profile",
+              "questionText": "是否有企业实习经历（简历未提及，未确认）",
+              "snapshotHash": "99858fc00b5fdd647537689ab4f47faf359227e39459ece5c23108c468f99e96"
+            },
+            {
+              "questionId": "question:04d26415eb4e07a04e4b9877f273f06ca4ed6707bfc8d7ec3c37a7e5e20a10ea",
+              "status": "unanswered",
+              "claims": [],
+              "remaining": [
+                "证书与语言成绩（未提及）",
+                "团队协作/领导/抗压/学习过程等行为证据（未提及）"
+              ],
+              "reason": "当前简历仅一句，未含证书、语言成绩或团队协作、领导、抗压、学习过程的行为描述；本轮请求只追加课程占用，未补充这些事实。",
+              "schemaVersion": "clarification-v2",
+              "version": 1,
+              "runId": "7b181f4d-7ea4-4317-ae56-94e457ba34a4",
+              "executionId": "sched",
+              "role": "profile",
+              "questionText": "证书、语言成绩、团队协作/领导/抗压/学习过程等行为证据缺失",
+              "snapshotHash": "99858fc00b5fdd647537689ab4f47faf359227e39459ece5c23108c468f99e96"
+            },
+            {
+              "questionId": "question:aa0bcd74d764f0813f69b5fac8278407a98f3a34bd49193170c88622dac87ce9",
+              "status": "unanswered",
+              "claims": [],
+              "remaining": [
+                "网页组件项目的复杂度、本人职责边界、结果与时间范围"
+              ],
+              "reason": "简历仅写“使用Vue、TypeScript、Git完成过网页组件项目”，未给出复杂度、职责边界、结果与时间范围；本轮无新增信息。",
+              "schemaVersion": "clarification-v2",
+              "version": 1,
+              "runId": "7b181f4d-7ea4-4317-ae56-94e457ba34a4",
+              "executionId": "sched",
+              "role": "profile",
+              "questionText": "网页组件项目的复杂度、本人职责边界、结果与时间范围",
+              "snapshotHash": "99858fc00b5fdd647537689ab4f47faf359227e39459ece5c23108c468f99e96"
+            }
+          ]
+        }
+      },
+      "version": 1,
+      "attempt": 1,
+      "executionId": "sched",
+      "inputArtifactIds": [
+        "ace47f42-e8e5-4d21-b6b4-a9438793711c:profile"
+      ],
+      "publishedEvidence": [
+        {
+          "id": "rule:profile",
+          "sourceId": "knowledge/profile.md",
+          "text": "# 画像评分规范 v2（独立设计，尚未实证校准）\n\n统一维度：professionalSkill 专业技能；certificate 证书；innovation 创新；internalMotivation 内驱；learning 学习；stressTolerance 抗压；communication 沟通；internship 企业实习经历；language 语言；leadership 领导协作；adaptability 适应；execution 执行。\n\n## 事实、缺失与分数\n\n评分是用户材料所支持的描述性估计，不是心理测量、录用概率或独立背景核查。null 表示缺乏充分证据；0 仅用于有明确原文支持的未具备/未发生状态，basis 必须是 explicit_absence。没有写证书或实习不能记0。正分 basis 使用 behavior 或 credential，不能用 explicit_absence。同一维度的同一来源/引文不得重复计权。\n\ninternship 专指企业实习经历，不再标作泛化的“实践能力”。明确“无企业实习”可以是0，但校园项目仍可支持专业技能、执行和其他有行为证据的维度；不得推出整体实践能力为0。个人项目、课程设计不是企业实习，也不能反过来补造实习经历。原数据的同名能力字段可能使用不同口径，没有校准前不能作直接数值匹配。\n\n## 每个维度须先满足的证据条件\n\n| 维度 | 可用证据 | 不能据此推断 |\n| --- | --- | --- |\n| professionalSkill | 具体技术任务、本人操作及产物 | 仅列工具名就精通 |\n| certificate | 证书名称、级别、取得状态 | 培训经历等于取得证书 |\n| innovation | 新方法、与原方法的差异及验证 | 完成普通项目即创新 |\n| internalMotivation | 自主目标、持续行动和选择理由 | “独立完成”即持续内驱 |\n| learning | 学习过程、反馈修正或迁移实例 | 使用某技术即学习能力强 |\n| stressTolerance | 压力情境、应对行为和结果 | 项目按期完成即抗压 |\n| communication | 信息表达、需求澄清、协调行为 | 一起做项目即领导 |\n| internship | 明确企业实习身份、职责与产出 | 校园项目等于企业实习 |\n| language | 具体语言使用或考试证据 | 技术栈英文名称即外语能力 |\n| leadership | 组织、分工、决策、反馈和团队结果 | 团队成员身份即领导 |\n| adaptability | 情境变更、调整行为及结果 | 修复普通缺陷即适应能力 |\n| execution | 具体任务、本人行动及完成结果 | 意愿或计划即已完成 |\n\n满足维度证据条件后才选择锚点等级。锚点0–4对应0/25/50/75/100：1为有限接触/参与且有具体依据；2为具体实践、能说明个人职责但结果或独立性有限；3为独立完成较复杂任务，过程、产物、结果及限制可定位；4为多场景持续表现和可核对影响。证书/语言须按其具体资质解释，不能机械套项目复杂度；当前没有外部资格等级到分数的校准表，证据不足时保留事实、分数null并追问。\n\n不同观察按 confidence 加权平均，由 profile_score 计算；confidence 是描述性权重，不是统计概率。逐字引用校验只能证明原文存在，不能证明维度判断正确。规则文本、岗位要求、系统生成报告不能作为个人得分的事实来源。不得将同一项目的泛化形容词铺到多个软维度。\n\n优先追问本人职责、产物、困难与处理、效果衡量和时间范围。不索要与职业任务无关的敏感身份信息。此版本没有原项目校准集，不假设与岗位画像数值完全对齐；正式评测前在独立开发集明确校准并冻结，不能用测试结果反向调权。\n",
+          "kind": "rule",
+          "version": "db98c36734a950d23a2f15973780799f78b12685fd895761eed818c5e99f2c60",
+          "readTexts": [
+            "# 画像评分规范 v2（独立设计，尚未实证校准）\n\n统一维度：professionalSkill 专业技能；certificate 证书；innovation 创新；internalMotivation 内驱；learning 学习；stressTolerance 抗压；communication 沟通；internship 企业实习经历；language 语言；leadership 领导协作；adaptability 适应；execution 执行。\n\n## 事实、缺失与分数\n\n评分是用户材料所支持的描述性估计，不是心理测量、录用概率或独立背景核查。null 表示缺乏充分证据；0 仅用于有明确原文支持的未具备/未发生状态，basis 必须是 explicit_absence。没有写证书或实习不能记0。正分 basis 使用 behavior 或 credential，不能用 explicit_absence。同一维度的同一来源/引文不得重复计权。\n\ninternship 专指企业实习经历，不再标作泛化的“实践能力”。明确“无企业实习”可以是0，但校园项目仍可支持专业技能、执行和其他有行为证据的维度；不得推出整体实践能力为0。个人项目、课程设计不是企业实习，也不能反过来补造实习经历。原数据的同名能力字段可能使用不同口径，没有校准前不能作直接数值匹配。\n\n## 每个维度须先满足的证据条件\n\n| 维度 | 可用证据 | 不能据此推断 |\n| --- | --- | --- |\n| professionalSkill | 具体技术任务、本人操作及产物 | 仅列工具名就精通 |\n| certificate | 证书名称、级别、取得状态 | 培训经历等于取得证书 |\n| innovation | 新方法、与原方法的差异及验证 | 完成普通项目即创新 |\n| internalMotivation | 自主目标、持续行动和选择理由 | “独立完成”即持续内驱 |\n| learning | 学习过程、反馈修正或迁移实例 | 使用某技术即学习能力强 |\n| stressTolerance | 压力情境、应对行为和结果 | 项目按期完成即抗压 |\n| communication | 信息表达、需求澄清、协调行为 | 一起做项目即领导 |\n| internship | 明确企业实习身份、职责与产出 | 校园项目等于企业实习 |\n| language | 具体语言使用或考试证据 | 技术栈英文名称即外语能力 |\n| leadership | 组织、分工、决策、反馈和团队结果 | 团队成员身份即领导 |\n| adaptability | 情境变更、调整行为及结果 | 修复普通缺陷即适应能力 |\n| execution | 具体任务、本人行动及完成结果 | 意愿或计划即已完成 |\n\n满足维度证据条件后才选择锚点等级。锚点0–4对应0/25/50/75/100：1为有限接触/参与且有具体依据；2为具体实践、能说明个人职责但结果或独立性有限；3为独立完成较复杂任务，过程、产物、结果及限制可定位；4为多场景持续表现和可核对影响。证书/语言须按其具体资质解释，不能机械套项目复杂度；当前没有外部资格等级到分数的校准表，证据不足时保留事实、分数null并追问。\n\n不同观察按 confidence 加权平均，由 profile_score 计算；confidence 是描述性权重，不是统计概率。逐字引用校验只能证明原文存在，不能证明维度判断正确。规则文本、岗位要求、系统生成报告不能作为个人得分的事实来源。不得将同一项目的泛化形容词铺到多个软维度。\n\n优先追问本人职责、产物、困难与处理、效果衡量和时间范围。不索要与职业任务无关的敏感身份信息。此版本没有原项目校准集，不假设与岗位画像数值完全对齐；正式评测前在独立开发集明确校准并冻结，不能用测试结果反向调权。\n"
+          ]
+        },
+        {
+          "id": "input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:request",
+          "sourceId": "input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:request",
+          "text": "学校追加了下列每周课程安排，请据此更新原表和核定；其余记录不变。\n日程原始记录：\n|记录ID|类型|星期|开始|结束|\n|---|---|---|---|---|\n|course1|占用|周三|15:00|18:00|\n请保留周工时与核定格式，只运行必要专家。",
+          "kind": "request",
+          "version": "d8ae2712f8a42b41589fc208d1f50227a8b492713639c9fea17ca93647dc7e3b",
+          "readTexts": [
+            "学校追加了下列每周课程安排，请据此更新原表和核定；其余记录不变。\n日程原始记录：\n|记录ID|类型|星期|开始|结束|\n|---|---|---|---|---|\n|course1|占用|周三|15:00|18:00|\n请保留周工时与核定格式，只运行必要专家。"
+          ]
+        },
+        {
+          "id": "input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:resume",
+          "sourceId": "input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:resume",
+          "text": "本科应届，在成都使用Vue、TypeScript、Git完成过网页组件项目，其他指定岗位条件已确认满足。",
+          "kind": "resume",
+          "version": "5641a23c952c30119fabab0048457cedbf8b79f7b8e232a5f3a0283dff73d254",
+          "readTexts": [
+            "本科应届，在成都使用Vue、TypeScript、Git完成过网页组件项目，其他指定岗位条件已确认满足。"
+          ]
+        },
+        {
+          "id": "input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:turn:0:request",
+          "sourceId": "input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:turn:0:request",
+          "text": "仅核定v16-gap-a和v16-gap-b的实习时间条件，给出模拟候选与行动。只有符合的纳入候选，不符或待核定的移出。首次四个专家协作，后续按最小必要范围更新。每个实际执行的专家summary和最终答复均写“周工时=数字”（当前每周有效小时数）；匹配、路径、报告summary与最终答复还需“核定[岗位ID]=符合/不符/待核定”。可沿用未变历史部分，但要检查其是否被新事实取代。路径使用已有前端类别关系，不增加原文之外的岗位门槛。\n我能连续实习6个月。以下是完整的每周重复日程原表，适用于整个实习期间：可用行取并集，再扣除占用行的并集；没有列为可用的时段不可实习。新行追加到原表；只有明确的撤销行才删除对应记录。原表之外没有其他日程限制。\n日程原始记录：\n|记录ID|类型|星期|开始|结束|\n|---|---|---|---|---|\n|base0|可用|周一|10:00|18:00|\n|lunch0|占用|周一|13:00|14:00|\n|base1|可用|周三|10:00|18:00|\n|lunch1|占用|周三|13:00|14:00|\n|base2|可用|周五|10:00|18:00|\n|lunch2|占用|周五|13:00|14:00|",
+          "kind": "request",
+          "version": "a5edddce1a23a358e66eb4f26a6981b4bf6a3d6278dbf245c93d1060be18a078",
+          "readTexts": [
+            "仅核定v16-gap-a和v16-gap-b的实习时间条件，给出模拟候选与行动。只有符合的纳入候选，不符或待核定的移出。首次四个专家协作，后续按最小必要范围更新。每个实际执行的专家summary和最终答复均写“周工时=数字”（当前每周有效小时数）；匹配、路径、报告summary与最终答复还需“核定[岗位ID]=符合/不符/待核定”。可沿用未变历史部分，但要检查其是否被新事实取代。路径使用已有前端类别关系，不增加原文之外的岗位门槛。\n我能连续实习6个月。以下是完整的每周重复日程原表，适用于整个实习期间：可用行取并集，再扣除占用行的并集；没有列为可用的时段不可实习。新行追加到原表；只有明确的撤销行才删除对应记录。原表之外没有其他日程限制。\n日程原始记录：\n|记录ID|类型|星期|开始|结束|\n|---|---|---|---|---|\n|base0|可用|周一|10:00|18:00|\n|lunch0|占用|周一|13:00|14:00|\n|base1|可用|周三|10:00|18:00|\n|lunch1|占用|周三|13:00|14:00|\n|base2|可用|周五|10:00|18:00|\n|lunch2|占用|周五|13:00|14:00|"
+          ]
+        },
+        {
+          "id": "calculation:7b181f4d-7ea4-4317-ae56-94e457ba34a4:d3f3e792826dd090ad19acfa40122029d95523153e6d79faeb165f9284976965",
+          "sourceId": "calculation:7b181f4d-7ea4-4317-ae56-94e457ba34a4:d3f3e792826dd090ad19acfa40122029d95523153e6d79faeb165f9284976965",
+          "text": "{\"schema\":\"tool-calculation-v1\",\"runId\":\"7b181f4d-7ea4-4317-ae56-94e457ba34a4\",\"executionId\":\"sched\",\"role\":\"profile\",\"constraintVersion\":1,\"datasetVersion\":\"db98c36734a950d23a2f15973780799f78b12685fd895761eed818c5e99f2c60\",\"knowledgeHash\":\"84343ad1b99a3ebde346f304b279fd5d6d08d29cc4b0143a0332a66454d48b03\",\"tool\":\"memory_recall\",\"arguments\":{\"query\":\"实习 日程 周工时 岗位 时间条件\",\"limit\":10,\"includeInactive\":false},\"result\":{\"counts\":{\"totalAvailable\":0,\"totalMatches\":0,\"returnedCount\":0},\"memoryScope\":{\"schema\":\"memory-recall-scope-v1\",\"namespaces\":[\"shared\",\"profile\"],\"snapshot\":\"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\",\"includeInactive\":false,\"query\":\"实习 日程 周工时 岗位 时间条件\",\"mode\":\"lexical-bm25\",\"limit\":10,\"cursor\":null,\"nextCursor\":null},\"dataScope\":\"authorized-memory\"}}",
+          "kind": "calculation",
+          "version": "d3f3e792826dd090ad19acfa40122029d95523153e6d79faeb165f9284976965",
+          "readTexts": [
+            "{\"schema\":\"tool-calculation-v1\",\"runId\":\"7b181f4d-7ea4-4317-ae56-94e457ba34a4\",\"executionId\":\"sched\",\"role\":\"profile\",\"constraintVersion\":1,\"datasetVersion\":\"db98c36734a950d23a2f15973780799f78b12685fd895761eed818c5e99f2c60\",\"knowledgeHash\":\"84343ad1b99a3ebde346f304b279fd5d6d08d29cc4b0143a0332a66454d48b03\",\"tool\":\"memory_recall\",\"arguments\":{\"query\":\"实习 日程 周工时 岗位 时间条件\",\"limit\":10,\"includeInactive\":false},\"result\":{\"counts\":{\"totalAvailable\":0,\"totalMatches\":0,\"returnedCount\":0},\"memoryScope\":{\"schema\":\"memory-recall-scope-v1\",\"namespaces\":[\"shared\",\"profile\"],\"snapshot\":\"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\",\"includeInactive\":false,\"query\":\"实习 日程 周工时 岗位 时间条件\",\"mode\":\"lexical-bm25\",\"limit\":10,\"cursor\":null,\"nextCursor\":null},\"dataScope\":\"authorized-memory\"}}"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7b181f4d-7ea4-4317-ae56-94e457ba34a4:match@2",
+      "runId": "7b181f4d-7ea4-4317-ae56-94e457ba34a4",
+      "stepId": "match",
+      "expert": "match",
+      "result": {
+        "status": "succeeded",
+        "summary": "周工时=18。核定[job:v16-gap-a]=不符；核定[job:v16-gap-b]=符合。\n\n日程重算（原表+course1，其余不变）：周一10:00-13:00、14:00-18:00=7h；周三10:00-13:00、14:00-15:00=4h（course1 占用15:00-18:00，扣3h）；周五10:00-13:00、14:00-18:00=7h；周二/四/六/日无可用。工作天数=3，周工时=7+4+7=18（旧值21h已被新课取代）。\n\njob:v16-gap-a 门槛逐项：连续月数≥3——用户可连续6个月，达标；每周天数≥3——3天，达标；累计小时≥21——仅18h，不达标（差3h）。故不符，移出模拟候选。\njob:v16-gap-b 门槛逐项：连续月数≥3——6个月，达标；每周天数≥2——3天，达标；至少两天各达4小时——周一7h、周五7h（周三4h），达标；原文无累计小时门槛。故符合，纳入模拟候选。\n\n两岗均为合成样本（source=synthetic-integration，recruitmentStatus=not_applicable），不可投递，不代表真实薪资行情。旧结论“a=符合、周工时21”已被本轮新课取代，不再沿用。",
+        "evidenceIds": [
+          "rule:match",
+          "input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:request",
+          "input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:resume",
+          "input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:turn:0:request",
+          "job:v16-gap-a",
+          "job:v16-gap-b"
+        ],
+        "unknowns": [
+          "用户软能力、实习经历、证书等画像字段材料未写（不等于不具备），本次未用于时间条件核定",
+          "两岗为合成样本，无真实招聘生命周期，不可投递"
+        ],
+        "conflicts": [
+          "旧产物（ace47f42…:match）称周工时=21、job:v16-gap-a=符合；本轮 course1（周三15:00-18:00占用）使周三可用由7h降为4h，周工时=18，a 的累计21小时门槛不达标，旧结论作废"
+        ],
+        "nextActions": [
+          "以周工时=18 为准更新路径与报告中的时间条件表述，勿沿用21h",
+          "若希望重新满足 job:v16-gap-a 的21小时门槛，需用户自行新增可用时段（如周二/周四）或撤销部分占用；不得由系统放宽门槛",
+          "模拟候选仅保留 job:v16-gap-b，并注明合成样本不可投递",
+          "如需真实岗位，请另行提供真实招聘信息，本快照不能代表实时行情"
+        ],
+        "artifact": {
+          "rankedJobs": [
+            {
+              "id": "v16-gap-b",
+              "reason": "周工时=18，工作天数=3。原文门槛逐项：连续至少3个月→用户可连续6个月，达标；每周至少2天→3天，达标；至少两天各达4小时→周一7h、周五7h（周三4h），达标；原文未设累计小时门槛。城市成都、本科、经验0年、Vue/TypeScript/Git 均满足（jobs_check eligible=true，薪资与双休为 not_requested，非“满足”）。合成样本，不可投递。",
+              "gaps": [
+                "原文未写具体到岗星期/时段，需在模拟中自行约定",
+                "合成样本无真实招聘生命周期，不可投递、不代表真实薪资行情"
+              ]
+            }
+          ],
+          "alternatives": [],
+          "rejectedReasons": [
+            {
+              "id": "v16-gap-a",
+              "reason": "不符：原文要求累计至少21小时，用户新课后可实习仅18小时（周一7+周三4+周五7），差3小时；连续月数（6≥3）与每周天数（3≥3）达标，但累计小时不达标，故移出模拟候选。"
+            }
+          ],
+          "unknownCandidates": [],
+          "retrievalStrategy": "本轮为指定两岗的时间条件复核，未做类别召回；直接读取 job:v16-gap-a、job:v16-gap-b 原文（版本与 catalog 一致），并用 jobs_check 复核城市/学历/经验等硬条件。日程按原表（turn:0）+ 本轮 course1 重算，未沿用旧结论。",
+          "comparisonAxes": [
+            "连续月数门槛",
+            "每周天数门槛",
+            "累计小时门槛",
+            "单日时长门槛",
+            "硬条件（城市/学历/经验/技能）"
+          ],
+          "verificationQuestions": [
+            "模拟中约定每周到岗星期与时段（如周一、周五各7小时）",
+            "若需满足21小时门槛，是否愿意新增周二或周四可用时段"
+          ],
+          "openQuestions": {
+            "schemaVersion": "open-questions-v1",
+            "items": [
+              "用户软能力、实习经历、证书等画像字段材料未写（不等于不具备），本次未用于时间条件核定",
+              "两岗为合成样本，无真实招聘生命周期，不可投递"
+            ]
+          },
+          "clarifications": [
+            {
+              "questionId": "question:31ef4ec68d0826999a894fbcf10a25bdec45c8445a296a84611079a2f58a2839",
+              "status": "answered",
+              "claims": [
+                {
+                  "subject": "domain",
+                  "text": "两岗原文均标注 source=synthetic-integration，属合成样本；jobs_check 返回 dataScope.source=synthetic、recruitmentStatus=not_applicable，即无真实招聘生命周期，不可投递、不代表真实薪资行情。",
+                  "citations": [
+                    {
+                      "evidenceId": "job:v16-gap-a",
+                      "quote": "\"source\":\"synthetic-integration\""
+                    },
+                    {
+                      "evidenceId": "job:v16-gap-b",
+                      "quote": "\"source\":\"synthetic-integration\""
+                    }
+                  ]
+                }
+              ],
+              "remaining": [],
+              "reason": "已读两岗原文与 jobs_check 数据范围，确认合成属性与不可投递边界。",
+              "schemaVersion": "clarification-v2",
+              "version": 1,
+              "runId": "7b181f4d-7ea4-4317-ae56-94e457ba34a4",
+              "executionId": "match@2",
+              "role": "match",
+              "questionText": "两岗均为合成样本（source=synthetic-integration），无真实招聘生命周期，不能作为可投递岗位或真实薪资行情",
+              "snapshotHash": "99858fc00b5fdd647537689ab4f47faf359227e39459ece5c23108c468f99e96"
+            },
+            {
+              "questionId": "question:80000c0edb11b41dda320d3e6565114bf876152413154313725514b5a2a67861",
+              "status": "answered",
+              "claims": [
+                {
+                  "subject": "domain",
+                  "text": "job:v16-gap-a 原文只给总量与天数门槛（连续至少3个月、每周至少3天、累计至少21小时），并明确“具体星期和时段不作额外限制”。",
+                  "citations": [
+                    {
+                      "evidenceId": "job:v16-gap-a",
+                      "quote": "连续至少3个月，每周至少3天、累计至少21小时"
+                    }
+                  ]
+                },
+                {
+                  "subject": "domain",
+                  "text": "job:v16-gap-b 原文只给连续至少3个月、每周至少2天且至少两天各达4小时，同样“具体星期和时段不作额外限制”。",
+                  "citations": [
+                    {
+                      "evidenceId": "job:v16-gap-b",
+                      "quote": "连续至少3个月，每周至少2天，至少两天各达到4小时"
+                    }
+                  ]
+                },
+                {
+                  "subject": "user",
+                  "text": "用户可连续实习6个月，且原表之外没有其他日程限制。",
+                  "citations": [
+                    {
+                      "evidenceId": "input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:turn:0:request",
+                      "quote": "我能连续实习6个月。"
+                    },
+                    {
+                      "evidenceId": "input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:turn:0:request",
+                      "quote": "原表之外没有其他日程限制。"
+                    }
+                  ]
+                }
+              ],
+              "remaining": [],
+              "reason": "两岗原文均无具体星期/时段限制，用户连续月数与日程边界已由原文确认。",
+              "schemaVersion": "clarification-v2",
+              "version": 1,
+              "runId": "7b181f4d-7ea4-4317-ae56-94e457ba34a4",
+              "executionId": "match@2",
+              "role": "match",
+              "questionText": "岗位原文未写每周具体到岗星期/时段，仅给总量与天数门槛；用户日程已满足，无需进一步核实",
+              "snapshotHash": "99858fc00b5fdd647537689ab4f47faf359227e39459ece5c23108c468f99e96"
+            },
+            {
+              "questionId": "question:b062f67a2bb0694605d421194a211d688d23ed1dad5f1015880d764d9d806230",
+              "status": "answered",
+              "claims": [
+                {
+                  "subject": "user",
+                  "text": "当前简历只写本科应届、在成都使用 Vue/TypeScript/Git 完成过网页组件项目，未写软能力、实习经历、证书；材料未写不等于不具备。",
+                  "citations": [
+                    {
+                      "evidenceId": "input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:resume",
+                      "quote": "本科应届，在成都使用Vue、TypeScript、Git完成过网页组件项目，其他指定岗位条件已确认满足。"
+                    }
+                  ]
+                },
+                {
+                  "subject": "domain",
+                  "text": "两岗原文均声明“不设其他门槛，其余条件已确认满足”，本次核定仅涉时间条件，画像软性字段不参与。",
+                  "citations": [
+                    {
+                      "evidenceId": "job:v16-gap-a",
+                      "quote": "不设其他门槛，其余条件已确认满足。"
+                    },
+                    {
+                      "evidenceId": "job:v16-gap-b",
+                      "quote": "不设其他门槛，其余条件已确认满足。"
+                    }
+                  ]
+                }
+              ],
+              "remaining": [],
+              "reason": "简历原文与岗位原文均支持该边界说明。",
+              "schemaVersion": "clarification-v2",
+              "version": 1,
+              "runId": "7b181f4d-7ea4-4317-ae56-94e457ba34a4",
+              "executionId": "match@2",
+              "role": "match",
+              "questionText": "用户软能力、实习经历、证书等画像字段为null（材料未写），不等于不具备，本次未用于时间条件核定",
+              "snapshotHash": "99858fc00b5fdd647537689ab4f47faf359227e39459ece5c23108c468f99e96"
+            }
+          ]
+        }
+      },
+      "version": 1,
+      "attempt": 2,
+      "executionId": "match@2",
+      "inputArtifactIds": [
+        "7b181f4d-7ea4-4317-ae56-94e457ba34a4:sched",
+        "ace47f42-e8e5-4d21-b6b4-a9438793711c:match"
+      ],
+      "publishedEvidence": [
+        {
+          "id": "rule:match",
+          "sourceId": "knowledge/match.md",
+          "text": "# 匹配检索与决策规范 v1\n\n两级召回：岗位类别 → 具体岗位实例。先硬条件，再 BM25/向量排序，再语义比较与确定性复核。不得用语义相似度抵消硬条件不满足。\n\n城市为规范城市名；月薪要求按下界保守检查；用户学历需达到最低要求；已知经验不足则排除。工作制、学历、经验、薪资资料缺失时记录 unknown。无结果可建议用户调整条件，但不能直接改条件。\n\n排序轴：可证实硬技能、职责与项目迁移、已知实践、用户方向与偏好、可解释技能缺口。岗位要求的软能力不等于简历已经具备。推荐数量由有效候选决定，不强凑 15 个。\n\n至少区分：正式合格候选、硬条件未知待核实、明确不合格。对低信息 JD 降低结论确定性。候选详情保留来源及快照时间，不能宣称实时在招。\n",
+          "kind": "rule",
+          "version": "db98c36734a950d23a2f15973780799f78b12685fd895761eed818c5e99f2c60",
+          "readTexts": [
+            "# 匹配检索与决策规范 v1\n\n两级召回：岗位类别 → 具体岗位实例。先硬条件，再 BM25/向量排序，再语义比较与确定性复核。不得用语义相似度抵消硬条件不满足。\n\n城市为规范城市名；月薪要求按下界保守检查；用户学历需达到最低要求；已知经验不足则排除。工作制、学历、经验、薪资资料缺失时记录 unknown。无结果可建议用户调整条件，但不能直接改条件。\n\n排序轴：可证实硬技能、职责与项目迁移、已知实践、用户方向与偏好、可解释技能缺口。岗位要求的软能力不等于简历已经具备。推荐数量由有效候选决定，不强凑 15 个。\n\n至少区分：正式合格候选、硬条件未知待核实、明确不合格。对低信息 JD 降低结论确定性。候选详情保留来源及快照时间，不能宣称实时在招。\n"
+          ]
+        },
+        {
+          "id": "input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:request",
+          "sourceId": "input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:request",
+          "text": "学校追加了下列每周课程安排，请据此更新原表和核定；其余记录不变。\n日程原始记录：\n|记录ID|类型|星期|开始|结束|\n|---|---|---|---|---|\n|course1|占用|周三|15:00|18:00|\n请保留周工时与核定格式，只运行必要专家。",
+          "kind": "request",
+          "version": "d8ae2712f8a42b41589fc208d1f50227a8b492713639c9fea17ca93647dc7e3b",
+          "readTexts": [
+            "学校追加了下列每周课程安排，请据此更新原表和核定；其余记录不变。\n日程原始记录：\n|记录ID|类型|星期|开始|结束|\n|---|---|---|---|---|\n|course1|占用|周三|15:00|18:00|\n请保留周工时与核定格式，只运行必要专家。"
+          ]
+        },
+        {
+          "id": "input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:resume",
+          "sourceId": "input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:resume",
+          "text": "本科应届，在成都使用Vue、TypeScript、Git完成过网页组件项目，其他指定岗位条件已确认满足。",
+          "kind": "resume",
+          "version": "5641a23c952c30119fabab0048457cedbf8b79f7b8e232a5f3a0283dff73d254",
+          "readTexts": [
+            "本科应届，在成都使用Vue、TypeScript、Git完成过网页组件项目，其他指定岗位条件已确认满足。"
+          ]
+        },
+        {
+          "id": "job:v16-gap-a",
+          "sourceId": "v16-gap-a",
+          "text": "{\"id\":\"v16-gap-a\",\"title\":\"校园空间预约界面实习生\",\"city\":\"成都\",\"categoryId\":\"frontend-junior\",\"family\":\"frontend\",\"level\":\"junior\",\"company\":\"合成校园界面组\",\"source\":\"synthetic-integration\",\"updatedAt\":\"2026-11-07\",\"jd\":\"合成岗位：校园空间预约界面实习生。成都，本科应届，Vue、TypeScript、Git，月薪6000元。连续至少3个月，每周至少3天、累计至少21小时。累计时间按每周日程原表核算，占用时段不计入，重叠可用时段只计一次。具体星期和时段不作额外限制。不设其他门槛，其余条件已确认满足。本数据仅用于模拟核定。\",\"salaryMin\":6000,\"salaryMax\":9000,\"educationRank\":3,\"experienceMin\":0,\"weekendsOff\":true,\"skills\":[\"Vue\",\"TypeScript\",\"Git\"]}",
+          "kind": "job",
+          "version": "db98c36734a950d23a2f15973780799f78b12685fd895761eed818c5e99f2c60",
+          "readTexts": [
+            "{\"id\":\"v16-gap-a\",\"title\":\"校园空间预约界面实习生\",\"city\":\"成都\",\"categoryId\":\"frontend-junior\",\"family\":\"frontend\",\"level\":\"junior\",\"company\":\"合成校园界面组\",\"source\":\"synthetic-integration\",\"updatedAt\":\"2026-11-07\",\"jd\":\"合成岗位：校园空间预约界面实习生。成都，本科应届，Vue、TypeScript、Git，月薪6000元。连续至少3个月，每周至少3天、累计至少21小时。累计时间按每周日程原表核算，占用时段不计入，重叠可用时段只计一次。具体星期和时段不作额外限制。不设其他门槛，其余条件已确认满足。本数据仅用于模拟核定。\",\"salaryMin\":6000,\"salaryMax\":9000,\"educationRank\":3,\"experienceMin\":0,\"weekendsOff\":true,\"skills\":[\"Vue\",\"TypeScript\",\"Git\"]}"
+          ]
+        },
+        {
+          "id": "job:v16-gap-b",
+          "sourceId": "v16-gap-b",
+          "text": "{\"id\":\"v16-gap-b\",\"title\":\"学生服务组件维护实习生\",\"city\":\"成都\",\"categoryId\":\"frontend-junior\",\"family\":\"frontend\",\"level\":\"junior\",\"company\":\"合成校园界面组\",\"source\":\"synthetic-integration\",\"updatedAt\":\"2026-11-07\",\"jd\":\"合成岗位：学生服务组件维护实习生。成都，本科应届，Vue、TypeScript、Git，月薪6000元。连续至少3个月，每周至少2天，至少两天各达到4小时。累计时间按每周日程原表核算，占用时段不计入，重叠可用时段只计一次。具体星期和时段不作额外限制。不设其他门槛，其余条件已确认满足。本数据仅用于模拟核定。\",\"salaryMin\":6000,\"salaryMax\":9000,\"educationRank\":3,\"experienceMin\":0,\"weekendsOff\":true,\"skills\":[\"Vue\",\"TypeScript\",\"Git\"]}",
+          "kind": "job",
+          "version": "db98c36734a950d23a2f15973780799f78b12685fd895761eed818c5e99f2c60",
+          "readTexts": [
+            "{\"id\":\"v16-gap-b\",\"title\":\"学生服务组件维护实习生\",\"city\":\"成都\",\"categoryId\":\"frontend-junior\",\"family\":\"frontend\",\"level\":\"junior\",\"company\":\"合成校园界面组\",\"source\":\"synthetic-integration\",\"updatedAt\":\"2026-11-07\",\"jd\":\"合成岗位：学生服务组件维护实习生。成都，本科应届，Vue、TypeScript、Git，月薪6000元。连续至少3个月，每周至少2天，至少两天各达到4小时。累计时间按每周日程原表核算，占用时段不计入，重叠可用时段只计一次。具体星期和时段不作额外限制。不设其他门槛，其余条件已确认满足。本数据仅用于模拟核定。\",\"salaryMin\":6000,\"salaryMax\":9000,\"educationRank\":3,\"experienceMin\":0,\"weekendsOff\":true,\"skills\":[\"Vue\",\"TypeScript\",\"Git\"]}"
+          ]
+        },
+        {
+          "id": "input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:turn:0:request",
+          "sourceId": "input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:turn:0:request",
+          "text": "仅核定v16-gap-a和v16-gap-b的实习时间条件，给出模拟候选与行动。只有符合的纳入候选，不符或待核定的移出。首次四个专家协作，后续按最小必要范围更新。每个实际执行的专家summary和最终答复均写“周工时=数字”（当前每周有效小时数）；匹配、路径、报告summary与最终答复还需“核定[岗位ID]=符合/不符/待核定”。可沿用未变历史部分，但要检查其是否被新事实取代。路径使用已有前端类别关系，不增加原文之外的岗位门槛。\n我能连续实习6个月。以下是完整的每周重复日程原表，适用于整个实习期间：可用行取并集，再扣除占用行的并集；没有列为可用的时段不可实习。新行追加到原表；只有明确的撤销行才删除对应记录。原表之外没有其他日程限制。\n日程原始记录：\n|记录ID|类型|星期|开始|结束|\n|---|---|---|---|---|\n|base0|可用|周一|10:00|18:00|\n|lunch0|占用|周一|13:00|14:00|\n|base1|可用|周三|10:00|18:00|\n|lunch1|占用|周三|13:00|14:00|\n|base2|可用|周五|10:00|18:00|\n|lunch2|占用|周五|13:00|14:00|",
+          "kind": "request",
+          "version": "a5edddce1a23a358e66eb4f26a6981b4bf6a3d6278dbf245c93d1060be18a078",
+          "readTexts": [
+            "仅核定v16-gap-a和v16-gap-b的实习时间条件，给出模拟候选与行动。只有符合的纳入候选，不符或待核定的移出。首次四个专家协作，后续按最小必要范围更新。每个实际执行的专家summary和最终答复均写“周工时=数字”（当前每周有效小时数）；匹配、路径、报告summary与最终答复还需“核定[岗位ID]=符合/不符/待核定”。可沿用未变历史部分，但要检查其是否被新事实取代。路径使用已有前端类别关系，不增加原文之外的岗位门槛。\n我能连续实习6个月。以下是完整的每周重复日程原表，适用于整个实习期间：可用行取并集，再扣除占用行的并集；没有列为可用的时段不可实习。新行追加到原表；只有明确的撤销行才删除对应记录。原表之外没有其他日程限制。\n日程原始记录：\n|记录ID|类型|星期|开始|结束|\n|---|---|---|---|---|\n|base0|可用|周一|10:00|18:00|\n|lunch0|占用|周一|13:00|14:00|\n|base1|可用|周三|10:00|18:00|\n|lunch1|占用|周三|13:00|14:00|\n|base2|可用|周五|10:00|18:00|\n|lunch2|占用|周五|13:00|14:00|"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7b181f4d-7ea4-4317-ae56-94e457ba34a4:path",
+      "runId": "7b181f4d-7ea4-4317-ae56-94e457ba34a4",
+      "stepId": "path",
+      "expert": "path",
+      "result": {
+        "status": "succeeded",
+        "summary": "周工时=18。核定[job:v16-gap-a]=不符；核定[job:v16-gap-b]=符合。\n\n日程重算（原表+course1，其余不变）：周一10:00-13:00、14:00-18:00=7h；周三10:00-13:00、14:00-15:00=4h（course1 占用15:00-18:00，扣3h）；周五10:00-13:00、14:00-18:00=7h；周二/四/六/日无可用。工作天数=3，周工时=7+4+7=18（旧值21h已被新课取代）。\n\njob:v16-gap-a 门槛逐项：连续≥3个月——用户可连续6个月，达标；每周≥3天——3天，达标；累计≥21小时——仅18h，差3h，不达标。故不符，移出模拟候选。\njob:v16-gap-b 门槛逐项：连续≥3个月——6个月，达标；每周≥2天——3天，达标；至少两天各达4小时——周一7h、周五7h（周三4h），达标；原文无累计小时门槛。故符合，保留为唯一模拟候选。\n\n路径：起点类别 frontend-junior 不变；图快照仍返回两条已验证晋升路线（junior→mid，cost 0.15；junior→mid→senior，cost 0.40），未新增原文之外的岗位门槛。候选变化只影响“到岗安排”节点，不影响路线本身：a 被移出后无需再为凑满21h改课表，只需按 b 的“每周≥2天、至少两天各≥4h”安排周一/周五各7h（周三4h为余量），并保留周三15:00-18:00 课程。中高级类别仅有类别级方向，无实例可锚定。两岗均为合成样本，不可投递。",
+        "evidenceIds": [
+          "rule:path",
+          "input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:request",
+          "input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:resume",
+          "input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:turn:0:request",
+          "job:v16-gap-a",
+          "job:v16-gap-b",
+          "category:frontend-junior",
+          "category:frontend-mid",
+          "category:frontend-senior",
+          "edge:promotion:frontend-junior:frontend-mid",
+          "edge:promotion:frontend-mid:frontend-senior",
+          "calculation:7b181f4d-7ea4-4317-ae56-94e457ba34a4:eb12a3a66c6917daf07b7b686ce5f12fbbe013ce221d7c4d3dcba0984e803576",
+          "calculation:7b181f4d-7ea4-4317-ae56-94e457ba34a4:6394e570fe20f07d1cfd6f5906f33de1524621f25586cbe0399d3e2ecd527f04",
+          "calculation:7b181f4d-7ea4-4317-ae56-94e457ba34a4:ff2c89520cb3ab5e41ad8fc1e8748c3f2a3f575161d29fd8159be450d723c3d8",
+          "calculation:7b181f4d-7ea4-4317-ae56-94e457ba34a4:021d79e1664b3eb94e6de9639a7728669ca8d4001996cf0964a9663333b7653a"
+        ],
+        "unknowns": [
+          "frontend-mid / frontend-senior 在本次 jobs_search 语料中无实例（categoryCoverage 仅 frontend-junior，totalInSelectedCorpus=2），中高级目标只能给类别级方向，不能锚定具体岗位",
+          "用户软能力、实习经历、证书等画像字段材料未写，不等于不具备；本次未用于时间条件核定",
+          "各阶段时间长度为条件性估计，未做校准；图边 score 是排序权重，不是晋升成功概率",
+          "若后续课表再变动（尤其周一/周五），b 的“至少两天各≥4小时”可能失效，需重算"
+        ],
+        "conflicts": [
+          "旧路径产物（ace47f42…:path）称周工时=21、核定[job:v16-gap-a]=符合；本轮 course1 占用周三15:00-18:00 后周工时为18，a 的累计≥21小时门槛不达标，旧结论已被取代，不再沿用",
+          "旧 profile 产物称两岗时间条件“无法核定、按用户规则移出”；本轮已读取 job:v16-gap-a/b 原文，可逐项核定，该限制不再成立"
+        ],
+        "nextActions": [
+          "按 b 的门槛固定到岗安排：周一、周五各7小时为主时段，周三4小时为余量；无需为凑21小时改动课表",
+          "若希望重新具备 a 的资格，需新增每周≥3小时可用时段（例如周三15:00-18:00课程调整或另开可用时段），届时重算周工时并重新核定 a",
+          "在 frontend-junior 阶段积累工程化与性能优化证据（构建配置、性能优化前后对比、组件测试），作为 junior→mid 的前置差距补齐",
+          "下次复盘触发条件：课表变动、可用时段变化、或出现真实（非合成）岗位语料时，重验路径与候选"
+        ],
+        "artifact": {
+          "paths": [
+            {
+              "routeId": "calculation:7b181f4d-7ea4-4317-ae56-94e457ba34a4:eb12a3a66c6917daf07b7b686ce5f12fbbe013ce221d7c4d3dcba0984e803576",
+              "nodes": [
+                "frontend-junior",
+                "frontend-mid"
+              ],
+              "actions": [
+                "起点假设：当前类别 frontend-junior（初级前端开发），能力证据仅来自简历所述 Vue/TypeScript/Git 网页组件项目，属低置信度起点",
+                "到岗安排节点（受本轮核定影响）：仅保留 job:v16-gap-b 作为模拟候选，按“每周≥2天、至少两天各≥4小时”安排周一7h、周五7h，周三4h为余量；job:v16-gap-a 因周工时18<21 不符，移出，不再为凑21h调整课表",
+                "前置差距：frontend-mid 要求工程化、性能优化、复杂应用与测试；当前简历未写这些实践，属本次尚未核验，不作为“不具备”结论",
+                "学习/作品动作：为现有组件项目补构建与工程化配置（Vite/TS 严格模式、代码分割），做一次可量化的性能优化前后对比（首屏/包体积），补组件单元测试",
+                "检验产物：一份含优化前后指标对比的组件库仓库 + 测试报告；复盘条件：完成上述产物后重评是否具备 mid 级工程化证据",
+                "时间安排为条件性估计，不承诺固定月数必然晋升"
+              ]
+            },
+            {
+              "routeId": "calculation:7b181f4d-7ea4-4317-ae56-94e457ba34a4:6394e570fe20f07d1cfd6f5906f33de1524621f25586cbe0399d3e2ecd527f04",
+              "nodes": [
+                "frontend-junior",
+                "frontend-mid",
+                "frontend-senior"
+              ],
+              "actions": [
+                "备选（更长路线）：junior→mid→senior，cost 0.40，仅在首选路线证据积累后再评估",
+                "senior 段前置为架构、性能优化、协作与技术决策；当前无相关证据，仅作类别级方向，不锚定岗位",
+                "动作：在 mid 阶段承担跨组件/跨模块设计与评审记录，形成架构决策文档与协作复盘",
+                "检验产物：架构决策记录（ADR）+ 团队协作复盘；触发重评条件：出现真实 senior 级岗位语料或获得跨模块负责经历"
+              ]
+            }
+          ],
+          "checkpoints": [
+            {
+              "stage": "frontend-junior 到岗",
+              "metric": "每周可用18h，按 b 门槛周一/周五各7h、周三4h；连续≥3个月",
+              "note": "合成样本，仅用于模拟核定，不可投递"
+            },
+            {
+              "stage": "junior→mid 前置",
+              "metric": "完成工程化配置、性能优化前后对比、组件测试三类产物各1份",
+              "note": "条件性估计，未校准"
+            },
+            {
+              "stage": "复盘",
+              "metric": "课表或可用时段变动、或出现真实岗位语料时重算周工时并重验路线"
+            }
+          ],
+          "assumptions": [
+            "起点类别为 frontend-junior，依据用户指定与两岗 categoryId",
+            "用户可连续实习6个月（用户原话）",
+            "原表之外无其他日程限制（用户原话）",
+            "周工时=18 为按原表+course1 的确定性算术结果"
+          ],
+          "instanceAnchors": [
+            {
+              "jobId": "job:v16-gap-b",
+              "categoryId": "frontend-junior",
+              "verdict": "符合",
+              "basis": "连续≥3个月、每周≥2天、至少两天各≥4小时均达标；原文无累计小时门槛",
+              "note": "合成样本，不可投递"
+            },
+            {
+              "jobId": "job:v16-gap-a",
+              "categoryId": "frontend-junior",
+              "verdict": "不符",
+              "basis": "累计≥21小时门槛，实际周工时18，差3小时",
+              "note": "合成样本，已移出模拟候选"
+            }
+          ],
+          "unreachableTargets": [],
+          "fallbacks": [
+            "若周一或周五时段被占用导致不足两天各4小时，则 b 也不符，届时仅保留类别级方向并重排到岗时段",
+            "若希望恢复 a 资格，需新增每周≥3小时可用时段后重新核定"
+          ],
+          "reviewTriggers": [
+            "课表新增/撤销记录（尤其周一、周五、周三）",
+            "用户可用时段或连续实习月数变化",
+            "出现真实（非合成）岗位语料，可锚定 frontend-mid/senior 实例",
+            "完成工程化/性能优化/测试产物后重评 mid 前置差距"
+          ],
+          "openQuestions": {
+            "schemaVersion": "open-questions-v1",
+            "items": [
+              "frontend-mid / frontend-senior 在本次 jobs_search 语料中无实例（categoryCoverage 仅 frontend-junior，totalInSelectedCorpus=2），中高级目标只能给类别级方向，不能锚定具体岗位",
+              "用户软能力、实习经历、证书等画像字段材料未写，不等于不具备；本次未用于时间条件核定",
+              "各阶段时间长度为条件性估计，未做校准；图边 score 是排序权重，不是晋升成功概率",
+              "若后续课表再变动（尤其周一/周五），b 的“至少两天各≥4小时”可能失效，需重算"
+            ]
+          },
+          "clarifications": [
+            {
+              "questionId": "question:b05f7b2c7a67578e11bb5b5af0f3c055624c7df6159614d2b2325dcbd187b16b",
+              "status": "answered",
+              "claims": [
+                {
+                  "subject": "domain",
+                  "text": "job:v16-gap-a 与 job:v16-gap-b 均为合成样本（source=synthetic-integration），无真实招聘生命周期，不可投递，也不代表真实薪资行情。",
+                  "citations": [
+                    {
+                      "evidenceId": "job:v16-gap-a",
+                      "quote": "\"source\":\"synthetic-integration\""
+                    },
+                    {
+                      "evidenceId": "job:v16-gap-b",
+                      "quote": "\"source\":\"synthetic-integration\""
+                    },
+                    {
+                      "evidenceId": "calculation:7b181f4d-7ea4-4317-ae56-94e457ba34a4:021d79e1664b3eb94e6de9639a7728669ca8d4001996cf0964a9663333b7653a",
+                      "quote": "\"recruitmentStatus\":\"not_applicable\",\"actionableVacancies\":false"
+                    }
+                  ]
+                }
+              ],
+              "remaining": [],
+              "reason": "岗位原文与检索回执均声明合成、不可投递，已作为领域事实登记。",
+              "schemaVersion": "clarification-v2",
+              "version": 1,
+              "runId": "7b181f4d-7ea4-4317-ae56-94e457ba34a4",
+              "executionId": "path",
+              "role": "path",
+              "questionText": "两岗均为合成样本（source=synthetic-integration，recruitmentStatus=not_applicable），无真实招聘生命周期，不能作为可投递岗位或真实薪资行情",
+              "snapshotHash": "99858fc00b5fdd647537689ab4f47faf359227e39459ece5c23108c468f99e96"
+            },
+            {
+              "questionId": "question:2b07bc11a0f2bff3b9d38cd7400ddb83076a8b2e7eb1e0deb59939267a5a38bc",
+              "status": "answered",
+              "claims": [
+                {
+                  "subject": "domain",
+                  "text": "本次 jobs_search 语料仅覆盖 frontend-junior（totalInSelectedCorpus=2，成都匹配2、合格2），frontend-mid / frontend-senior 无实例，故中高级目标只能给类别级方向，不能锚定具体岗位。",
+                  "citations": [
+                    {
+                      "evidenceId": "calculation:7b181f4d-7ea4-4317-ae56-94e457ba34a4:021d79e1664b3eb94e6de9639a7728669ca8d4001996cf0964a9663333b7653a",
+                      "quote": "\"categoryCoverage\":[{\"categoryId\":\"frontend-junior\",\"totalInSelectedCorpus\":2,\"matchingCity\":2,\"eligible\":2"
+                    }
+                  ]
+                }
+              ],
+              "remaining": [],
+              "reason": "检索回执的 categoryCoverage 只列 frontend-junior，已登记为语料覆盖事实。",
+              "schemaVersion": "clarification-v2",
+              "version": 1,
+              "runId": "7b181f4d-7ea4-4317-ae56-94e457ba34a4",
+              "executionId": "path",
+              "role": "path",
+              "questionText": "frontend-mid / frontend-senior 类别在本次 jobs_search 语料中无实例（categoryCoverage 仅覆盖 frontend-junior，totalInSelectedCorpus=2），故中高级目标只能给类别级建议，不能锚定具体岗位",
+              "snapshotHash": "99858fc00b5fdd647537689ab4f47faf359227e39459ece5c23108c468f99e96"
+            },
+            {
+              "questionId": "question:db40a5977a2ae0f6966bc8df53af121ea2ae5ba0421197d7e97ae2cb6546c458",
+              "status": "answered",
+              "claims": [
+                {
+                  "subject": "user",
+                  "text": "当前简历原文只写：本科应届、在成都使用 Vue/TypeScript/Git 完成过网页组件项目、其他指定岗位条件已确认满足；未写软能力、实习经历、证书等，属材料未写，不等于不具备。",
+                  "citations": [
+                    {
+                      "evidenceId": "input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:resume",
+                      "quote": "本科应届，在成都使用Vue、TypeScript、Git完成过网页组件项目，其他指定岗位条件已确认满足。"
+                    }
+                  ]
+                }
+              ],
+              "remaining": [],
+              "reason": "已读完整简历（52字，单页），确认材料范围；未用于时间条件核定。",
+              "schemaVersion": "clarification-v2",
+              "version": 1,
+              "runId": "7b181f4d-7ea4-4317-ae56-94e457ba34a4",
+              "executionId": "path",
+              "role": "path",
+              "questionText": "用户软能力、实习经历、证书等画像字段材料未写（null），不等于不具备；本次未用于时间条件核定",
+              "snapshotHash": "99858fc00b5fdd647537689ab4f47faf359227e39459ece5c23108c468f99e96"
+            },
+            {
+              "questionId": "question:de97646141722abd5dbd47fd75f5520544cc484c8f6c71ac7f9d0a163e5a1b77",
+              "status": "answered",
+              "claims": [
+                {
+                  "subject": "domain",
+                  "text": "图边 score（junior→mid 0.85、mid→senior 0.75）是数据排序权重，不是晋升成功概率；阶段时间长度为条件性估计，未校准。",
+                  "citations": [
+                    {
+                      "evidenceId": "edge:promotion:frontend-junior:frontend-mid",
+                      "quote": "\"type\":\"promotion\",\"score\":0.85,\"reason\":\"工程化与性能优化能力进阶\""
+                    },
+                    {
+                      "evidenceId": "edge:promotion:frontend-mid:frontend-senior",
+                      "quote": "\"type\":\"promotion\",\"score\":0.75,\"reason\":\"架构与团队协作要求提升\""
+                    },
+                    {
+                      "evidenceId": "rule:path",
+                      "quote": "图谱分数仅用于排序，不是晋升成功概率。"
+                    }
+                  ]
+                }
+              ],
+              "remaining": [],
+              "reason": "规则与图边原文均支持该限定。",
+              "schemaVersion": "clarification-v2",
+              "version": 1,
+              "runId": "7b181f4d-7ea4-4317-ae56-94e457ba34a4",
+              "executionId": "path",
+              "role": "path",
+              "questionText": "图边 score（0.85/0.75）是数据排序权重，不是晋升成功概率；各阶段时间长度为条件性估计，未做校准",
+              "snapshotHash": "99858fc00b5fdd647537689ab4f47faf359227e39459ece5c23108c468f99e96"
+            }
+          ]
+        }
+      },
+      "version": 1,
+      "attempt": 1,
+      "executionId": "path",
+      "inputArtifactIds": [
+        "ace47f42-e8e5-4d21-b6b4-a9438793711c:profile",
+        "7b181f4d-7ea4-4317-ae56-94e457ba34a4:match@2",
+        "ace47f42-e8e5-4d21-b6b4-a9438793711c:path"
+      ],
+      "publishedEvidence": [
+        {
+          "id": "rule:path",
+          "sourceId": "knowledge/path.md",
+          "text": "# 路径推演规范 v1\n\n图谱节点为岗位类别，图边是可解释候选关系。晋升与横向迁移分开标记。搜索需要防环、最大深度和候选数量限制。\n\nbalanced 以边可靠性和步数为基础；progressive 对非晋升边增加代价；transfer 对非迁移边增加代价。图谱分数仅用于排序，不是晋升成功概率。\n\n每段至少解释前置技能、当前证据差距、可执行学习/项目动作、检验产物和下一次复盘条件。时间是附带假设的估计。无法连接目标时报告断点与可达近邻，不虚构图边。\n\n实例锚定：关键类别检索实际岗位；岗位必须满足用户硬条件，否则只保留类别级建议并明确说明。输入约束变动使旧路线失效，需要重验。\n",
+          "kind": "rule",
+          "version": "db98c36734a950d23a2f15973780799f78b12685fd895761eed818c5e99f2c60",
+          "readTexts": [
+            "# 路径推演规范 v1\n\n图谱节点为岗位类别，图边是可解释候选关系。晋升与横向迁移分开标记。搜索需要防环、最大深度和候选数量限制。\n\nbalanced 以边可靠性和步数为基础；progressive 对非晋升边增加代价；transfer 对非迁移边增加代价。图谱分数仅用于排序，不是晋升成功概率。\n\n每段至少解释前置技能、当前证据差距、可执行学习/项目动作、检验产物和下一次复盘条件。时间是附带假设的估计。无法连接目标时报告断点与可达近邻，不虚构图边。\n\n实例锚定：关键类别检索实际岗位；岗位必须满足用户硬条件，否则只保留类别级建议并明确说明。输入约束变动使旧路线失效，需要重验。\n"
+          ]
+        },
+        {
+          "id": "input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:request",
+          "sourceId": "input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:request",
+          "text": "学校追加了下列每周课程安排，请据此更新原表和核定；其余记录不变。\n日程原始记录：\n|记录ID|类型|星期|开始|结束|\n|---|---|---|---|---|\n|course1|占用|周三|15:00|18:00|\n请保留周工时与核定格式，只运行必要专家。",
+          "kind": "request",
+          "version": "d8ae2712f8a42b41589fc208d1f50227a8b492713639c9fea17ca93647dc7e3b",
+          "readTexts": [
+            "学校追加了下列每周课程安排，请据此更新原表和核定；其余记录不变。\n日程原始记录：\n|记录ID|类型|星期|开始|结束|\n|---|---|---|---|---|\n|course1|占用|周三|15:00|18:00|\n请保留周工时与核定格式，只运行必要专家。"
+          ]
+        },
+        {
+          "id": "input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:resume",
+          "sourceId": "input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:resume",
+          "text": "本科应届，在成都使用Vue、TypeScript、Git完成过网页组件项目，其他指定岗位条件已确认满足。",
+          "kind": "resume",
+          "version": "5641a23c952c30119fabab0048457cedbf8b79f7b8e232a5f3a0283dff73d254",
+          "readTexts": [
+            "本科应届，在成都使用Vue、TypeScript、Git完成过网页组件项目，其他指定岗位条件已确认满足。"
+          ]
+        },
+        {
+          "id": "job:v16-gap-a",
+          "sourceId": "v16-gap-a",
+          "text": "{\"id\":\"v16-gap-a\",\"title\":\"校园空间预约界面实习生\",\"city\":\"成都\",\"categoryId\":\"frontend-junior\",\"family\":\"frontend\",\"level\":\"junior\",\"company\":\"合成校园界面组\",\"source\":\"synthetic-integration\",\"updatedAt\":\"2026-11-07\",\"jd\":\"合成岗位：校园空间预约界面实习生。成都，本科应届，Vue、TypeScript、Git，月薪6000元。连续至少3个月，每周至少3天、累计至少21小时。累计时间按每周日程原表核算，占用时段不计入，重叠可用时段只计一次。具体星期和时段不作额外限制。不设其他门槛，其余条件已确认满足。本数据仅用于模拟核定。\",\"salaryMin\":6000,\"salaryMax\":9000,\"educationRank\":3,\"experienceMin\":0,\"weekendsOff\":true,\"skills\":[\"Vue\",\"TypeScript\",\"Git\"]}",
+          "kind": "job",
+          "version": "db98c36734a950d23a2f15973780799f78b12685fd895761eed818c5e99f2c60",
+          "readTexts": [
+            "{\"id\":\"v16-gap-a\",\"title\":\"校园空间预约界面实习生\",\"city\":\"成都\",\"categoryId\":\"frontend-junior\",\"family\":\"frontend\",\"level\":\"junior\",\"company\":\"合成校园界面组\",\"source\":\"synthetic-integration\",\"updatedAt\":\"2026-11-07\",\"jd\":\"合成岗位：校园空间预约界面实习生。成都，本科应届，Vue、TypeScript、Git，月薪6000元。连续至少3个月，每周至少3天、累计至少21小时。累计时间按每周日程原表核算，占用时段不计入，重叠可用时段只计一次。具体星期和时段不作额外限制。不设其他门槛，其余条件已确认满足。本数据仅用于模拟核定。\",\"salaryMin\":6000,\"salaryMax\":9000,\"educationRank\":3,\"experienceMin\":0,\"weekendsOff\":true,\"skills\":[\"Vue\",\"TypeScript\",\"Git\"]}"
+          ]
+        },
+        {
+          "id": "job:v16-gap-b",
+          "sourceId": "v16-gap-b",
+          "text": "{\"id\":\"v16-gap-b\",\"title\":\"学生服务组件维护实习生\",\"city\":\"成都\",\"categoryId\":\"frontend-junior\",\"family\":\"frontend\",\"level\":\"junior\",\"company\":\"合成校园界面组\",\"source\":\"synthetic-integration\",\"updatedAt\":\"2026-11-07\",\"jd\":\"合成岗位：学生服务组件维护实习生。成都，本科应届，Vue、TypeScript、Git，月薪6000元。连续至少3个月，每周至少2天，至少两天各达到4小时。累计时间按每周日程原表核算，占用时段不计入，重叠可用时段只计一次。具体星期和时段不作额外限制。不设其他门槛，其余条件已确认满足。本数据仅用于模拟核定。\",\"salaryMin\":6000,\"salaryMax\":9000,\"educationRank\":3,\"experienceMin\":0,\"weekendsOff\":true,\"skills\":[\"Vue\",\"TypeScript\",\"Git\"]}",
+          "kind": "job",
+          "version": "db98c36734a950d23a2f15973780799f78b12685fd895761eed818c5e99f2c60",
+          "readTexts": [
+            "{\"id\":\"v16-gap-b\",\"title\":\"学生服务组件维护实习生\",\"city\":\"成都\",\"categoryId\":\"frontend-junior\",\"family\":\"frontend\",\"level\":\"junior\",\"company\":\"合成校园界面组\",\"source\":\"synthetic-integration\",\"updatedAt\":\"2026-11-07\",\"jd\":\"合成岗位：学生服务组件维护实习生。成都，本科应届，Vue、TypeScript、Git，月薪6000元。连续至少3个月，每周至少2天，至少两天各达到4小时。累计时间按每周日程原表核算，占用时段不计入，重叠可用时段只计一次。具体星期和时段不作额外限制。不设其他门槛，其余条件已确认满足。本数据仅用于模拟核定。\",\"salaryMin\":6000,\"salaryMax\":9000,\"educationRank\":3,\"experienceMin\":0,\"weekendsOff\":true,\"skills\":[\"Vue\",\"TypeScript\",\"Git\"]}"
+          ]
+        },
+        {
+          "id": "input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:turn:0:request",
+          "sourceId": "input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:turn:0:request",
+          "text": "仅核定v16-gap-a和v16-gap-b的实习时间条件，给出模拟候选与行动。只有符合的纳入候选，不符或待核定的移出。首次四个专家协作，后续按最小必要范围更新。每个实际执行的专家summary和最终答复均写“周工时=数字”（当前每周有效小时数）；匹配、路径、报告summary与最终答复还需“核定[岗位ID]=符合/不符/待核定”。可沿用未变历史部分，但要检查其是否被新事实取代。路径使用已有前端类别关系，不增加原文之外的岗位门槛。\n我能连续实习6个月。以下是完整的每周重复日程原表，适用于整个实习期间：可用行取并集，再扣除占用行的并集；没有列为可用的时段不可实习。新行追加到原表；只有明确的撤销行才删除对应记录。原表之外没有其他日程限制。\n日程原始记录：\n|记录ID|类型|星期|开始|结束|\n|---|---|---|---|---|\n|base0|可用|周一|10:00|18:00|\n|lunch0|占用|周一|13:00|14:00|\n|base1|可用|周三|10:00|18:00|\n|lunch1|占用|周三|13:00|14:00|\n|base2|可用|周五|10:00|18:00|\n|lunch2|占用|周五|13:00|14:00|",
+          "kind": "request",
+          "version": "a5edddce1a23a358e66eb4f26a6981b4bf6a3d6278dbf245c93d1060be18a078",
+          "readTexts": [
+            "仅核定v16-gap-a和v16-gap-b的实习时间条件，给出模拟候选与行动。只有符合的纳入候选，不符或待核定的移出。首次四个专家协作，后续按最小必要范围更新。每个实际执行的专家summary和最终答复均写“周工时=数字”（当前每周有效小时数）；匹配、路径、报告summary与最终答复还需“核定[岗位ID]=符合/不符/待核定”。可沿用未变历史部分，但要检查其是否被新事实取代。路径使用已有前端类别关系，不增加原文之外的岗位门槛。\n我能连续实习6个月。以下是完整的每周重复日程原表，适用于整个实习期间：可用行取并集，再扣除占用行的并集；没有列为可用的时段不可实习。新行追加到原表；只有明确的撤销行才删除对应记录。原表之外没有其他日程限制。\n日程原始记录：\n|记录ID|类型|星期|开始|结束|\n|---|---|---|---|---|\n|base0|可用|周一|10:00|18:00|\n|lunch0|占用|周一|13:00|14:00|\n|base1|可用|周三|10:00|18:00|\n|lunch1|占用|周三|13:00|14:00|\n|base2|可用|周五|10:00|18:00|\n|lunch2|占用|周五|13:00|14:00|"
+          ]
+        },
+        {
+          "id": "category:frontend-senior",
+          "sourceId": "frontend-senior",
+          "text": "{\"id\":\"frontend-senior\",\"title\":\"高级前端开发\",\"family\":\"frontend\",\"level\":\"senior\",\"summary\":\"前端架构、团队协作、技术决策\",\"skills\":[\"架构\",\"TypeScript\",\"性能优化\",\"协作\"],\"abilities\":{}}",
+          "kind": "category",
+          "version": "db98c36734a950d23a2f15973780799f78b12685fd895761eed818c5e99f2c60",
+          "readTexts": [
+            "{\"id\":\"frontend-senior\",\"title\":\"高级前端开发\",\"family\":\"frontend\",\"level\":\"senior\",\"summary\":\"前端架构、团队协作、技术决策\",\"skills\":[\"架构\",\"TypeScript\",\"性能优化\",\"协作\"],\"abilities\":{}}"
+          ]
+        },
+        {
+          "id": "category:frontend-mid",
+          "sourceId": "frontend-mid",
+          "text": "{\"id\":\"frontend-mid\",\"title\":\"中级前端开发\",\"family\":\"frontend\",\"level\":\"mid\",\"summary\":\"前端工程化、性能优化、复杂应用\",\"skills\":[\"Vue\",\"TypeScript\",\"性能优化\",\"测试\"],\"abilities\":{}}",
+          "kind": "category",
+          "version": "db98c36734a950d23a2f15973780799f78b12685fd895761eed818c5e99f2c60",
+          "readTexts": [
+            "{\"id\":\"frontend-mid\",\"title\":\"中级前端开发\",\"family\":\"frontend\",\"level\":\"mid\",\"summary\":\"前端工程化、性能优化、复杂应用\",\"skills\":[\"Vue\",\"TypeScript\",\"性能优化\",\"测试\"],\"abilities\":{}}"
+          ]
+        },
+        {
+          "id": "category:frontend-junior",
+          "sourceId": "frontend-junior",
+          "text": "{\"id\":\"frontend-junior\",\"title\":\"初级前端开发\",\"family\":\"frontend\",\"level\":\"junior\",\"summary\":\"Vue TypeScript 网页组件开发与测试\",\"skills\":[\"Vue\",\"TypeScript\",\"Git\",\"CSS\"],\"abilities\":{}}",
+          "kind": "category",
+          "version": "db98c36734a950d23a2f15973780799f78b12685fd895761eed818c5e99f2c60",
+          "readTexts": [
+            "{\"id\":\"frontend-junior\",\"title\":\"初级前端开发\",\"family\":\"frontend\",\"level\":\"junior\",\"summary\":\"Vue TypeScript 网页组件开发与测试\",\"skills\":[\"Vue\",\"TypeScript\",\"Git\",\"CSS\"],\"abilities\":{}}"
+          ]
+        },
+        {
+          "id": "edge:promotion:frontend-junior:frontend-mid",
+          "sourceId": "frontend-junior->frontend-mid",
+          "text": "{\"source\":\"frontend-junior\",\"target\":\"frontend-mid\",\"type\":\"promotion\",\"score\":0.85,\"reason\":\"工程化与性能优化能力进阶\"}",
+          "kind": "graph",
+          "version": "db98c36734a950d23a2f15973780799f78b12685fd895761eed818c5e99f2c60",
+          "readTexts": [
+            "{\"source\":\"frontend-junior\",\"target\":\"frontend-mid\",\"type\":\"promotion\",\"score\":0.85,\"reason\":\"工程化与性能优化能力进阶\"}"
+          ]
+        },
+        {
+          "id": "edge:promotion:frontend-mid:frontend-senior",
+          "sourceId": "frontend-mid->frontend-senior",
+          "text": "{\"source\":\"frontend-mid\",\"target\":\"frontend-senior\",\"type\":\"promotion\",\"score\":0.75,\"reason\":\"架构与团队协作要求提升\"}",
+          "kind": "graph",
+          "version": "db98c36734a950d23a2f15973780799f78b12685fd895761eed818c5e99f2c60",
+          "readTexts": [
+            "{\"source\":\"frontend-mid\",\"target\":\"frontend-senior\",\"type\":\"promotion\",\"score\":0.75,\"reason\":\"架构与团队协作要求提升\"}"
+          ]
+        },
+        {
+          "id": "calculation:7b181f4d-7ea4-4317-ae56-94e457ba34a4:eb12a3a66c6917daf07b7b686ce5f12fbbe013ce221d7c4d3dcba0984e803576",
+          "sourceId": "calculation:7b181f4d-7ea4-4317-ae56-94e457ba34a4:eb12a3a66c6917daf07b7b686ce5f12fbbe013ce221d7c4d3dcba0984e803576",
+          "text": "{\"schema\":\"tool-calculation-v1\",\"runId\":\"7b181f4d-7ea4-4317-ae56-94e457ba34a4\",\"executionId\":\"path\",\"role\":\"path\",\"constraintVersion\":1,\"datasetVersion\":\"db98c36734a950d23a2f15973780799f78b12685fd895761eed818c5e99f2c60\",\"knowledgeHash\":\"84343ad1b99a3ebde346f304b279fd5d6d08d29cc4b0143a0332a66454d48b03\",\"tool\":\"graph_route\",\"arguments\":{\"start\":\"frontend-junior\",\"maxDepth\":4},\"result\":{\"nodes\":[\"frontend-junior\",\"frontend-mid\"],\"edges\":[{\"source\":\"frontend-junior\",\"target\":\"frontend-mid\",\"type\":\"promotion\",\"score\":0.85,\"reason\":\"工程化与性能优化能力进阶\"}],\"cost\":0.15000000000000002,\"mode\":\"balanced\"}}",
+          "kind": "calculation",
+          "version": "eb12a3a66c6917daf07b7b686ce5f12fbbe013ce221d7c4d3dcba0984e803576",
+          "readTexts": [
+            "{\"schema\":\"tool-calculation-v1\",\"runId\":\"7b181f4d-7ea4-4317-ae56-94e457ba34a4\",\"executionId\":\"path\",\"role\":\"path\",\"constraintVersion\":1,\"datasetVersion\":\"db98c36734a950d23a2f15973780799f78b12685fd895761eed818c5e99f2c60\",\"knowledgeHash\":\"84343ad1b99a3ebde346f304b279fd5d6d08d29cc4b0143a0332a66454d48b03\",\"tool\":\"graph_route\",\"arguments\":{\"start\":\"frontend-junior\",\"maxDepth\":4},\"result\":{\"nodes\":[\"frontend-junior\",\"frontend-mid\"],\"edges\":[{\"source\":\"frontend-junior\",\"target\":\"frontend-mid\",\"type\":\"promotion\",\"score\":0.85,\"reason\":\"工程化与性能优化能力进阶\"}],\"cost\":0.15000000000000002,\"mode\":\"balanced\"}}"
+          ]
+        },
+        {
+          "id": "calculation:7b181f4d-7ea4-4317-ae56-94e457ba34a4:6394e570fe20f07d1cfd6f5906f33de1524621f25586cbe0399d3e2ecd527f04",
+          "sourceId": "calculation:7b181f4d-7ea4-4317-ae56-94e457ba34a4:6394e570fe20f07d1cfd6f5906f33de1524621f25586cbe0399d3e2ecd527f04",
+          "text": "{\"schema\":\"tool-calculation-v1\",\"runId\":\"7b181f4d-7ea4-4317-ae56-94e457ba34a4\",\"executionId\":\"path\",\"role\":\"path\",\"constraintVersion\":1,\"datasetVersion\":\"db98c36734a950d23a2f15973780799f78b12685fd895761eed818c5e99f2c60\",\"knowledgeHash\":\"84343ad1b99a3ebde346f304b279fd5d6d08d29cc4b0143a0332a66454d48b03\",\"tool\":\"graph_route\",\"arguments\":{\"start\":\"frontend-junior\",\"maxDepth\":4},\"result\":{\"nodes\":[\"frontend-junior\",\"frontend-mid\",\"frontend-senior\"],\"edges\":[{\"source\":\"frontend-junior\",\"target\":\"frontend-mid\",\"type\":\"promotion\",\"score\":0.85,\"reason\":\"工程化与性能优化能力进阶\"},{\"source\":\"frontend-mid\",\"target\":\"frontend-senior\",\"type\":\"promotion\",\"score\":0.75,\"reason\":\"架构与团队协作要求提升\"}],\"cost\":0.3999999999999999,\"mode\":\"balanced\"}}",
+          "kind": "calculation",
+          "version": "6394e570fe20f07d1cfd6f5906f33de1524621f25586cbe0399d3e2ecd527f04",
+          "readTexts": [
+            "{\"schema\":\"tool-calculation-v1\",\"runId\":\"7b181f4d-7ea4-4317-ae56-94e457ba34a4\",\"executionId\":\"path\",\"role\":\"path\",\"constraintVersion\":1,\"datasetVersion\":\"db98c36734a950d23a2f15973780799f78b12685fd895761eed818c5e99f2c60\",\"knowledgeHash\":\"84343ad1b99a3ebde346f304b279fd5d6d08d29cc4b0143a0332a66454d48b03\",\"tool\":\"graph_route\",\"arguments\":{\"start\":\"frontend-junior\",\"maxDepth\":4},\"result\":{\"nodes\":[\"frontend-junior\",\"frontend-mid\",\"frontend-senior\"],\"edges\":[{\"source\":\"frontend-junior\",\"target\":\"frontend-mid\",\"type\":\"promotion\",\"score\":0.85,\"reason\":\"工程化与性能优化能力进阶\"},{\"source\":\"frontend-mid\",\"target\":\"frontend-senior\",\"type\":\"promotion\",\"score\":0.75,\"reason\":\"架构与团队协作要求提升\"}],\"cost\":0.3999999999999999,\"mode\":\"balanced\"}}"
+          ]
+        },
+        {
+          "id": "calculation:7b181f4d-7ea4-4317-ae56-94e457ba34a4:ff2c89520cb3ab5e41ad8fc1e8748c3f2a3f575161d29fd8159be450d723c3d8",
+          "sourceId": "calculation:7b181f4d-7ea4-4317-ae56-94e457ba34a4:ff2c89520cb3ab5e41ad8fc1e8748c3f2a3f575161d29fd8159be450d723c3d8",
+          "text": "{\"schema\":\"tool-calculation-v1\",\"runId\":\"7b181f4d-7ea4-4317-ae56-94e457ba34a4\",\"executionId\":\"path\",\"role\":\"path\",\"constraintVersion\":1,\"datasetVersion\":\"db98c36734a950d23a2f15973780799f78b12685fd895761eed818c5e99f2c60\",\"knowledgeHash\":\"84343ad1b99a3ebde346f304b279fd5d6d08d29cc4b0143a0332a66454d48b03\",\"tool\":\"graph_paths\",\"arguments\":{\"start\":\"frontend-junior\",\"maxDepth\":4},\"result\":{\"mode\":\"balanced\",\"returnedRoutes\":[{\"routeId\":\"calculation:7b181f4d-7ea4-4317-ae56-94e457ba34a4:eb12a3a66c6917daf07b7b686ce5f12fbbe013ce221d7c4d3dcba0984e803576\",\"nodes\":[\"frontend-junior\",\"frontend-mid\"],\"cost\":0.15000000000000002},{\"routeId\":\"calculation:7b181f4d-7ea4-4317-ae56-94e457ba34a4:6394e570fe20f07d1cfd6f5906f33de1524621f25586cbe0399d3e2ecd527f04\",\"nodes\":[\"frontend-junior\",\"frontend-mid\",\"frontend-senior\"],\"cost\":0.3999999999999999}],\"returnedCount\":2,\"scope\":\"Bounded paths in this graph snapshot and requested depth, at most ten ranked routes. No route here does not prove that no career route exists in reality.\"}}",
+          "kind": "calculation",
+          "version": "ff2c89520cb3ab5e41ad8fc1e8748c3f2a3f575161d29fd8159be450d723c3d8",
+          "readTexts": [
+            "{\"schema\":\"tool-calculation-v1\",\"runId\":\"7b181f4d-7ea4-4317-ae56-94e457ba34a4\",\"executionId\":\"path\",\"role\":\"path\",\"constraintVersion\":1,\"datasetVersion\":\"db98c36734a950d23a2f15973780799f78b12685fd895761eed818c5e99f2c60\",\"knowledgeHash\":\"84343ad1b99a3ebde346f304b279fd5d6d08d29cc4b0143a0332a66454d48b03\",\"tool\":\"graph_paths\",\"arguments\":{\"start\":\"frontend-junior\",\"maxDepth\":4},\"result\":{\"mode\":\"balanced\",\"returnedRoutes\":[{\"routeId\":\"calculation:7b181f4d-7ea4-4317-ae56-94e457ba34a4:eb12a3a66c6917daf07b7b686ce5f12fbbe013ce221d7c4d3dcba0984e803576\",\"nodes\":[\"frontend-junior\",\"frontend-mid\"],\"cost\":0.15000000000000002},{\"routeId\":\"calculation:7b181f4d-7ea4-4317-ae56-94e457ba34a4:6394e570fe20f07d1cfd6f5906f33de1524621f25586cbe0399d3e2ecd527f04\",\"nodes\":[\"frontend-junior\",\"frontend-mid\",\"frontend-senior\"],\"cost\":0.3999999999999999}],\"returnedCount\":2,\"scope\":\"Bounded paths in this graph snapshot and requested depth, at most ten ranked routes. No route here does not prove that no career route exists in reality.\"}}"
+          ]
+        },
+        {
+          "id": "calculation:7b181f4d-7ea4-4317-ae56-94e457ba34a4:021d79e1664b3eb94e6de9639a7728669ca8d4001996cf0964a9663333b7653a",
+          "sourceId": "calculation:7b181f4d-7ea4-4317-ae56-94e457ba34a4:021d79e1664b3eb94e6de9639a7728669ca8d4001996cf0964a9663333b7653a",
+          "text": "{\"schema\":\"tool-calculation-v1\",\"runId\":\"7b181f4d-7ea4-4317-ae56-94e457ba34a4\",\"executionId\":\"path\",\"role\":\"path\",\"constraintVersion\":1,\"datasetVersion\":\"db98c36734a950d23a2f15973780799f78b12685fd895761eed818c5e99f2c60\",\"knowledgeHash\":\"84343ad1b99a3ebde346f304b279fd5d6d08d29cc4b0143a0332a66454d48b03\",\"tool\":\"jobs_search\",\"arguments\":{\"query\":\"前端 实习 校园 组件 Vue TypeScript\",\"categoryIds\":[\"frontend-junior\",\"frontend-mid\",\"frontend-senior\"],\"limit\":15},\"result\":{\"appliedConstraints\":{\"cities\":[\"成都\"],\"education\":\"本科\",\"experienceYears\":0,\"skills\":[\"Vue\",\"TypeScript\",\"Git\"],\"pathMode\":\"balanced\"},\"counts\":{\"beforeFilter\":2,\"eligible\":2,\"unknown\":0},\"categoryCoverage\":[{\"categoryId\":\"frontend-junior\",\"totalInSelectedCorpus\":2,\"matchingCity\":2,\"eligible\":2,\"uncertain\":0,\"excludedByHardConditions\":0,\"exclusionCounts\":{\"city\":0,\"salary\":0,\"education\":0,\"experience\":0,\"weekendsOff\":0}}],\"categoryPartition\":{\"scheme\":\"single-category-per-record-v1\",\"recordCount\":2},\"returnedEligibleIds\":[\"v16-gap-b\",\"v16-gap-a\"],\"returnedUncertain\":[],\"dataScope\":{\"source\":\"synthetic\",\"recruitmentStatus\":\"not_applicable\",\"actionableVacancies\":false,\"interpretation\":\"Synthetic fixtures have no real recruitment lifecycle. Do not ask whether they are still hiring or recommend applying.\"},\"interpretation\":\"Counts describe the selected corpus before ranking. Zero eligible hits does not mean no documents exist. Current experience limits also filter future target levels. Never infer whole-corpus absence from a filtered/top-k result.\",\"completion\":\"These aggregate results can support a zero-result partial submission. Do not invent IDs or call jobs_check when both returned candidate lists are empty. Cite this evidence ID; no excluded job is recommended or made readable by these counts.\"}}",
+          "kind": "calculation",
+          "version": "021d79e1664b3eb94e6de9639a7728669ca8d4001996cf0964a9663333b7653a",
+          "readTexts": [
+            "{\"schema\":\"tool-calculation-v1\",\"runId\":\"7b181f4d-7ea4-4317-ae56-94e457ba34a4\",\"executionId\":\"path\",\"role\":\"path\",\"constraintVersion\":1,\"datasetVersion\":\"db98c36734a950d23a2f15973780799f78b12685fd895761eed818c5e99f2c60\",\"knowledgeHash\":\"84343ad1b99a3ebde346f304b279fd5d6d08d29cc4b0143a0332a66454d48b03\",\"tool\":\"jobs_search\",\"arguments\":{\"query\":\"前端 实习 校园 组件 Vue TypeScript\",\"categoryIds\":[\"frontend-junior\",\"frontend-mid\",\"frontend-senior\"],\"limit\":15},\"result\":{\"appliedConstraints\":{\"cities\":[\"成都\"],\"education\":\"本科\",\"experienceYears\":0,\"skills\":[\"Vue\",\"TypeScript\",\"Git\"],\"pathMode\":\"balanced\"},\"counts\":{\"beforeFilter\":2,\"eligible\":2,\"unknown\":0},\"categoryCoverage\":[{\"categoryId\":\"frontend-junior\",\"totalInSelectedCorpus\":2,\"matchingCity\":2,\"eligible\":2,\"uncertain\":0,\"excludedByHardConditions\":0,\"exclusionCounts\":{\"city\":0,\"salary\":0,\"education\":0,\"experience\":0,\"weekendsOff\":0}}],\"categoryPartition\":{\"scheme\":\"single-category-per-record-v1\",\"recordCount\":2},\"returnedEligibleIds\":[\"v16-gap-b\",\"v16-gap-a\"],\"returnedUncertain\":[],\"dataScope\":{\"source\":\"synthetic\",\"recruitmentStatus\":\"not_applicable\",\"actionableVacancies\":false,\"interpretation\":\"Synthetic fixtures have no real recruitment lifecycle. Do not ask whether they are still hiring or recommend applying.\"},\"interpretation\":\"Counts describe the selected corpus before ranking. Zero eligible hits does not mean no documents exist. Current experience limits also filter future target levels. Never infer whole-corpus absence from a filtered/top-k result.\",\"completion\":\"These aggregate results can support a zero-result partial submission. Do not invent IDs or call jobs_check when both returned candidate lists are empty. Cite this evidence ID; no excluded job is recommended or made readable by these counts.\"}}"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7b181f4d-7ea4-4317-ae56-94e457ba34a4:report",
+      "runId": "7b181f4d-7ea4-4317-ae56-94e457ba34a4",
+      "stepId": "report",
+      "expert": "report",
+      "result": {
+        "status": "succeeded",
+        "summary": "周工时=18；核定[job:v16-gap-a]=不符；核定[job:v16-gap-b]=符合。报告已按本轮新课重写：新增 course1（周三15:00-18:00 占用）使周三可用由7h降为4h，周工时21→18，a 的累计≥21小时门槛差3h 故移出候选，b 保留为唯一模拟候选。已列出更新前后差异表（21→18、周三区间变化、候选 a 移出）、移出原因、一致性检查（成都/本科/经验0年 satisfied；薪资与双休 not_requested≠满足）、证据缺口与合成样本不可投递说明。旧报告“21h、a=符合”与 profile“原文不可访问”均已被取代。限制：两岗为合成样本不可投递；画像完整度约17%，实习/证书/项目职责未核验。",
+        "evidenceIds": [
+          "rule:report",
+          "input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:request",
+          "input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:resume",
+          "input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:turn:0:request",
+          "job:v16-gap-a",
+          "job:v16-gap-b",
+          "artifact:7b181f4d-7ea4-4317-ae56-94e457ba34a4:sched",
+          "artifact:7b181f4d-7ea4-4317-ae56-94e457ba34a4:match@2",
+          "artifact:7b181f4d-7ea4-4317-ae56-94e457ba34a4:path"
+        ],
+        "unknowns": [
+          "是否有企业实习经历（简历与两轮原话均未提及，未核验）",
+          "证书与语言成绩（未提及）",
+          "网页组件项目的职责边界、复杂度与结果（未提及）",
+          "团队协作/领导/抗压/学习过程等行为证据（未提及）",
+          "frontend-mid / frontend-senior 本次语料无实例，只能给类别级方向",
+          "各阶段时间长度为条件性估计，未校准",
+          "是否有企业实习经历",
+          "证书与语言成绩",
+          "网页组件项目的职责边界、复杂度与结果"
+        ],
+        "conflicts": [
+          "旧报告称周工时=21、核定[job:v16-gap-a]=符合；本轮 course1 使周工时=18，a 累计小时不达标，旧结论作废",
+          "profile 产物称两岗原文不可访问、按规则移出；match/path 已实际读取两岗原文并逐项核定，该限制不再成立"
+        ],
+        "nextActions": [
+          "按 b 门槛固定到岗：周一、周五各7h为主时段，周三4h为余量，保留周三15:00-18:00课程",
+          "若希望恢复 a 资格，需用户自行新增每周≥3小时可用时段（如周二/周四），系统不放宽门槛",
+          "补齐企业实习、证书/语言成绩、项目职责与结果证据后重评画像",
+          "课表或可用时段变动、或出现真实（非合成）岗位语料时，重算周工时并重验候选与路径"
+        ],
+        "artifact": {
+          "markdown": "# 生涯报告（本轮更新版）\n\n**周工时=18**；核定[job:v16-gap-a]=不符；核定[job:v16-gap-b]=符合。\n\n## 一、个人画像\n- 本科应届，成都，经验0年；技能 Vue / TypeScript / Git，完成过网页组件项目（复杂度、职责边界、结果未说明）。\n- 能力评分：professionalSkill=50、execution=50（锚点2，低置信度）；其余10维为 null——材料未写≠不具备。画像完整度约17%。\n- 可连续实习6个月；原表之外无其他日程限制。\n\n## 二、岗位匹配（含更新前后差异）\n| 项目 | 更新前 | 更新后 |\n|---|---|---|\n| 周工时 | 21 | **18** |\n| 周三可用 | 10:00-13:00、14:00-18:00（7h） | 10:00-13:00、14:00-15:00（4h） |\n| 核定[job:v16-gap-a] | 符合 | **不符** |\n| 核定[job:v16-gap-b] | 符合 | **符合** |\n| 模拟候选 | a、b | **仅 b** |\n\n- 差异原因：新增 course1（周三15:00-18:00 占用）使周三3小时由可用转为占用，21−3=18；周一7h、周五7h、周三4h，工作天数3，其余记录不变。\n- job:v16-gap-a：连续≥3个月（6个月）达标、每周≥3天（3天）达标、累计≥21小时（仅18h，差3h）**不达标** → 移出候选。\n- job:v16-gap-b：连续≥3个月、每周≥2天、至少两天各≥4小时（周一7h、周五7h）均达标，原文无累计小时门槛 → 保留为唯一模拟候选。\n- 移出项：job:v16-gap-a（累计小时差3h）。两岗原文均写明“具体星期和时段不作额外限制”，故周一/三/五安排本身不冲突。\n\n## 三、发展路径\n- 起点类别 frontend-junior 不变；图快照两条已验证路线：junior→mid（cost 0.15）、junior→mid→senior（cost 0.40）。cost 为排序权重，不是晋升概率。\n- 候选变化只影响“到岗安排”节点，不改路线：按 b 安排周一、周五各7h为主时段，周三4h为余量，保留周三15:00-18:00课程；无需为凑21h改课表。\n- frontend-mid / frontend-senior 本次语料无实例，仅给类别级方向。\n\n## 四、行动计划\n1. **到岗安排**：按 b 门槛固定周一/周五各7h、周三4h；交付物=每周到岗时段表；验证=连续≥3个月、每周≥2天且两天各≥4h；触发复盘=课表变动。\n2. **工程化补齐**：为现有组件项目补 Vite/TS 严格模式与代码分割；交付物=组件库仓库；验证=构建配置与产物可运行。\n3. **性能优化**：做一次首屏/包体积优化前后对比；交付物=指标对比记录；验证=前后数据可复现。\n4. **测试**：补组件单元测试；交付物=测试报告；验证=用例通过率。\n5. **若想恢复 a 资格**：需自行新增每周≥3小时可用时段（如周二/周四），系统不放宽门槛；届时重算并重新核定。\n6. 时间长度为条件性估计，未校准，不承诺固定月数晋升。\n\n## 五、限制与待确认\n- **一致性检查**：成都 satisfied；本科 satisfied；经验0年 satisfied；薪资（6000-9000）与双休 **not_requested，不等于满足**。\n- **合成样本边界**：两岗 source=synthetic-integration，JD 写明“本数据仅用于模拟核定”，无真实招聘生命周期，**不可投递**，不构成真实薪资行情；本快照不保证岗位仍在招聘。\n- **证据缺口（未核验，非“不具备”）**：企业实习经历；证书与语言成绩；网页组件项目的职责边界、复杂度与结果；软技能行为证据。\n- **已作废结论**：旧报告“周工时=21、核定[a]=符合”被本轮新课取代；profile 曾称两岗原文不可访问，已被 match/path 实际读取原文的核定取代。\n",
+          "claims": [
+            {
+              "text": "周工时=18：周一7h、周三4h、周五7h，工作天数3",
+              "evidenceIds": [
+                "artifact:7b181f4d-7ea4-4317-ae56-94e457ba34a4:sched",
+                "input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:request"
+              ]
+            },
+            {
+              "text": "新增 course1（周三15:00-18:00 占用）使周三可用由7h降为4h，周工时由21降为18",
+              "evidenceIds": [
+                "input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:request",
+                "artifact:7b181f4d-7ea4-4317-ae56-94e457ba34a4:match@2"
+              ]
+            },
+            {
+              "text": "核定[job:v16-gap-a]=不符：累计≥21小时门槛仅18h，差3h",
+              "evidenceIds": [
+                "job:v16-gap-a",
+                "artifact:7b181f4d-7ea4-4317-ae56-94e457ba34a4:match@2"
+              ]
+            },
+            {
+              "text": "核定[job:v16-gap-b]=符合：连续≥3个月、每周≥2天、至少两天各≥4小时均达标，原文无累计小时门槛",
+              "evidenceIds": [
+                "job:v16-gap-b",
+                "artifact:7b181f4d-7ea4-4317-ae56-94e457ba34a4:match@2"
+              ]
+            },
+            {
+              "text": "两岗原文均写明具体星期和时段不作额外限制",
+              "evidenceIds": [
+                "job:v16-gap-a",
+                "job:v16-gap-b"
+              ]
+            },
+            {
+              "text": "用户可连续实习6个月，原表之外无其他日程限制",
+              "evidenceIds": [
+                "input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:turn:0:request"
+              ]
+            },
+            {
+              "text": "画像：本科应届、成都、经验0年，技能Vue/TypeScript/Git，professionalSkill=50、execution=50（低置信度），其余维度null",
+              "evidenceIds": [
+                "input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:resume",
+                "artifact:7b181f4d-7ea4-4317-ae56-94e457ba34a4:sched"
+              ]
+            },
+            {
+              "text": "路径：起点 frontend-junior，两条已验证路线 junior→mid（0.15）、junior→mid→senior（0.40），cost为排序权重非晋升概率",
+              "evidenceIds": [
+                "artifact:7b181f4d-7ea4-4317-ae56-94e457ba34a4:path"
+              ]
+            },
+            {
+              "text": "中高级类别仅有类别级方向，本次语料无 mid/senior 岗位实例",
+              "evidenceIds": [
+                "artifact:7b181f4d-7ea4-4317-ae56-94e457ba34a4:path"
+              ]
+            },
+            {
+              "text": "薪资6000-9000与双休为 not_requested，不等于满足",
+              "evidenceIds": [
+                "job:v16-gap-a",
+                "job:v16-gap-b",
+                "artifact:7b181f4d-7ea4-4317-ae56-94e457ba34a4:match@2"
+              ]
+            },
+            {
+              "text": "两岗为合成样本（source=synthetic-integration），仅用于模拟核定，不可投递，不构成真实薪资行情",
+              "evidenceIds": [
+                "job:v16-gap-a",
+                "job:v16-gap-b"
+              ]
+            },
+            {
+              "text": "旧结论周工时=21、核定[a]=符合已被本轮新课取代",
+              "evidenceIds": [
+                "artifact:7b181f4d-7ea4-4317-ae56-94e457ba34a4:match@2",
+                "artifact:7b181f4d-7ea4-4317-ae56-94e457ba34a4:path"
+              ]
+            }
+          ],
+          "protectedText": [],
+          "openQuestions": {
+            "schemaVersion": "open-questions-v1",
+            "items": [
+              "是否有企业实习经历（简历与两轮原话均未提及，未核验）",
+              "证书与语言成绩（未提及）",
+              "网页组件项目的职责边界、复杂度与结果（未提及）",
+              "团队协作/领导/抗压/学习过程等行为证据（未提及）",
+              "frontend-mid / frontend-senior 本次语料无实例，只能给类别级方向",
+              "各阶段时间长度为条件性估计，未校准",
+              "是否有企业实习经历",
+              "证书与语言成绩",
+              "网页组件项目的职责边界、复杂度与结果"
+            ]
+          },
+          "clarifications": [
+            {
+              "questionId": "question:c20a5be8c577afe4d2961a5bdcce2291811d2ffa8c99a1e25022a0fb8c841edb",
+              "status": "answered",
+              "claims": [
+                {
+                  "subject": "domain",
+                  "text": "job:v16-gap-a 与 job:v16-gap-b 原文均标注 source=synthetic-integration，JD 写明“本数据仅用于模拟核定”，属合成样本，不可投递、不构成真实薪资行情。",
+                  "citations": [
+                    {
+                      "evidenceId": "job:v16-gap-a",
+                      "quote": "\"source\":\"synthetic-integration\""
+                    },
+                    {
+                      "evidenceId": "job:v16-gap-a",
+                      "quote": "本数据仅用于模拟核定。"
+                    },
+                    {
+                      "evidenceId": "job:v16-gap-b",
+                      "quote": "\"source\":\"synthetic-integration\""
+                    },
+                    {
+                      "evidenceId": "job:v16-gap-b",
+                      "quote": "本数据仅用于模拟核定。"
+                    }
+                  ]
+                }
+              ],
+              "remaining": [],
+              "reason": "已读两岗原文，合成属性与不可投递边界由原文直接确认。",
+              "schemaVersion": "clarification-v2",
+              "version": 1,
+              "runId": "7b181f4d-7ea4-4317-ae56-94e457ba34a4",
+              "executionId": "report",
+              "role": "report",
+              "questionText": "两岗为合成样本（source=synthetic-integration），无真实招聘生命周期，不可投递，不构成真实薪资行情",
+              "snapshotHash": "99858fc00b5fdd647537689ab4f47faf359227e39459ece5c23108c468f99e96"
+            },
+            {
+              "questionId": "question:f5cc1cc862a558f47413eac514f4c3acbfdb39e304d328f5d57bdcc884c2ba03",
+              "status": "unanswered",
+              "claims": [],
+              "remaining": [
+                "是否有企业实习经历",
+                "证书与语言成绩",
+                "网页组件项目的职责边界、复杂度与结果"
+              ],
+              "reason": "已完整读取当前简历（52字）与两轮用户原话，均未提及企业实习、证书/语言成绩或项目职责与结果；材料未写不等于不具备，故保留为未核验缺口，不编造。",
+              "schemaVersion": "clarification-v2",
+              "version": 1,
+              "runId": "7b181f4d-7ea4-4317-ae56-94e457ba34a4",
+              "executionId": "report",
+              "role": "report",
+              "questionText": "是否有企业实习经历、证书/语言成绩、网页组件项目的职责与结果：材料未写，未核验",
+              "snapshotHash": "99858fc00b5fdd647537689ab4f47faf359227e39459ece5c23108c468f99e96"
+            },
+            {
+              "questionId": "question:1194477d755befeb86eb2e7fcf868feae033ab2bd8139cc89c3cfc3992e2625f",
+              "status": "answered",
+              "claims": [
+                {
+                  "subject": "state",
+                  "text": "路径产物仅给出 frontend-junior→frontend-mid（cost 0.15）与 junior→mid→senior（cost 0.40）两条已验证路线，中高级类别只有类别级方向，本次语料无 mid/senior 岗位实例可锚定。",
+                  "citations": [
+                    {
+                      "evidenceId": "artifact:7b181f4d-7ea4-4317-ae56-94e457ba34a4:path",
+                      "quote": "中高级类别仅有类别级方向，无实例可锚定。"
+                    },
+                    {
+                      "evidenceId": "artifact:7b181f4d-7ea4-4317-ae56-94e457ba34a4:path",
+                      "quote": "frontend-mid / frontend-senior 在本次 jobs_search 语料中无实例"
+                    }
+                  ]
+                }
+              ],
+              "remaining": [],
+              "reason": "路径产物已明确中高级仅有类别级方向，报告按此表述，不锚定具体岗位。",
+              "schemaVersion": "clarification-v2",
+              "version": 1,
+              "runId": "7b181f4d-7ea4-4317-ae56-94e457ba34a4",
+              "executionId": "report",
+              "role": "report",
+              "questionText": "frontend-mid / frontend-senior 在本次语料中无实例，只能给类别级方向",
+              "snapshotHash": "99858fc00b5fdd647537689ab4f47faf359227e39459ece5c23108c468f99e96"
+            },
+            {
+              "questionId": "question:9b1644c65d19bb3f3d13bfbaa09626c03a9a3d883a6a9fce2ada45baf87860b1",
+              "status": "answered",
+              "claims": [
+                {
+                  "subject": "domain",
+                  "text": "两岗原文写明月薪6000元（salaryMin 6000/salaryMax 9000）且 weekendsOff=true，但用户约束未设薪资与双休门槛，属 not_requested，不等于满足。",
+                  "citations": [
+                    {
+                      "evidenceId": "job:v16-gap-a",
+                      "quote": "\"salaryMin\":6000,\"salaryMax\":9000,\"educationRank\":3,\"experienceMin\":0,\"weekendsOff\":true"
+                    },
+                    {
+                      "evidenceId": "job:v16-gap-b",
+                      "quote": "\"salaryMin\":6000,\"salaryMax\":9000,\"educationRank\":3,\"experienceMin\":0,\"weekendsOff\":true"
+                    }
+                  ]
+                },
+                {
+                  "subject": "state",
+                  "text": "匹配产物将薪资与双休记为 not_requested，并明确其非“满足”。",
+                  "citations": [
+                    {
+                      "evidenceId": "artifact:7b181f4d-7ea4-4317-ae56-94e457ba34a4:match@2",
+                      "quote": "薪资与双休为 not_requested，非“满足”"
+                    }
+                  ]
+                }
+              ],
+              "remaining": [],
+              "reason": "岗位原文与匹配产物均已确认该口径，报告按 not_requested 表述。",
+              "schemaVersion": "clarification-v2",
+              "version": 1,
+              "runId": "7b181f4d-7ea4-4317-ae56-94e457ba34a4",
+              "executionId": "report",
+              "role": "report",
+              "questionText": "薪资6000-9000与双休为用户未设门槛（not_requested），不等于满足",
+              "snapshotHash": "99858fc00b5fdd647537689ab4f47faf359227e39459ece5c23108c468f99e96"
+            }
+          ]
+        }
+      },
+      "version": 1,
+      "attempt": 1,
+      "executionId": "report",
+      "inputArtifactIds": [
+        "7b181f4d-7ea4-4317-ae56-94e457ba34a4:sched",
+        "7b181f4d-7ea4-4317-ae56-94e457ba34a4:match@2",
+        "7b181f4d-7ea4-4317-ae56-94e457ba34a4:path",
+        "ace47f42-e8e5-4d21-b6b4-a9438793711c:report"
+      ],
+      "publishedEvidence": [
+        {
+          "id": "artifact:7b181f4d-7ea4-4317-ae56-94e457ba34a4:sched",
+          "sourceId": "7b181f4d-7ea4-4317-ae56-94e457ba34a4:sched",
+          "text": "{\"status\":\"partial\",\"summary\":\"周工时=18。按原表（周一/三/五10:00-18:00可用，各扣13:00-14:00）追加 course1（周三15:00-18:00占用）后：周一10:00-13:00、14:00-18:00（7h）；周三10:00-13:00、14:00-15:00（4h）；周五10:00-13:00、14:00-18:00（7h）；周二/四/六/日无可用时段。工作天数=3，周工时=18。与旧值21h的差异：旧值3×(8-1)=21h未含新课；course1 使周三15:00-18:00（3h）由可用转为占用，21-3=18h，其余记录不变。核定[job:v16-gap-a]=待核定；核定[job:v16-gap-b]=待核定——两岗原文在本角色知识视图仍不可访问（knowledge_read 返回 Evidence missing or not accessible，knowledge_search 无命中），按规则不猜测，移出候选。画像沿用历史：本科应届、成都、经验0年，技能Vue/TypeScript/Git，网页组件项目支持 professionalSkill=50、execution=50（锚点2，低置信度）；其余10维为null（材料未写≠不具备），完整度约17%。本轮无新增画像事实，未提出记忆写入。\",\"evidenceIds\":[\"input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:turn:0:request\",\"input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:request\",\"input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:resume\",\"rule:profile\",\"calculation:7b181f4d-7ea4-4317-ae56-94e457ba34a4:d3f3e792826dd090ad19acfa40122029d95523153e6d79faeb165f9284976965\"],\"unknowns\":[\"job:v16-gap-a 的实习时间条件原文不可访问，无法核定\",\"job:v16-gap-b 的实习时间条件原文不可访问，无法核定\",\"是否有企业实习经历（简历与当前陈述均未提及，未确认）\",\"证书与语言成绩（未提及）\",\"团队协作/领导/抗压/学习过程等行为证据（未提及）\",\"job:v16-gap-a 的实习时间条件（每周到岗天数/时长/时段）原文仍不可访问，无法核定\",\"job:v16-gap-b 的实习时间条件原文仍不可访问，无法核定\",\"网页组件项目的复杂度、本人职责边界、结果与时间范围\"],\"conflicts\":[\"旧结论“周工时=21”已被本轮追加的 course1（周三15:00-18:00占用）取代，现为周工时=18；旧值未含该课程，非计算错误而是事实更新。\"],\"nextActions\":[\"请总控/知识库管理员确认 job:v16-gap-a、job:v16-gap-b 原文的访问权限或提供可读来源；在可读前两岗一律标注待核定并移出候选。\",\"下游 match/path/report 使用周工时=18、工作天数=3，并沿用“核定[job:v16-gap-a]=待核定、核定[job:v16-gap-b]=待核定”。\",\"向用户补充：企业实习经历有无、证书与语言成绩、团队协作/领导/抗压/学习过程的具体行为、网页组件项目的复杂度与本人职责及结果时间范围。\"],\"artifact\":{\"scores\":{\"professionalSkill\":50,\"certificate\":null,\"innovation\":null,\"internalMotivation\":null,\"learning\":null,\"stressTolerance\":null,\"communication\":null,\"internship\":null,\"language\":null,\"leadership\":null,\"adaptability\":null,\"execution\":50},\"skills\":[\"Vue\",\"TypeScript\",\"Git\"],\"evidence\":[{\"dimension\":\"professionalSkill\",\"evidenceId\":\"input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:resume\",\"quote\":\"在成都使用Vue、TypeScript、Git完成过网页组件项目\"},{\"dimension\":\"execution\",\"evidenceId\":\"input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:resume\",\"quote\":\"完成过网页组件项目\"}],\"facts\":{\"education\":\"本科应届\",\"city\":\"成都\",\"experienceYears\":0,\"skills\":[\"Vue\",\"TypeScript\",\"Git\"],\"project\":\"网页组件项目（复杂度/职责/结果/时间范围未说明）\",\"availability\":{\"周一\":[[600,780],[840,1080]],\"周二\":[],\"周三\":[[600,780],[840,900]],\"周四\":[],\"周五\":[[600,780],[840,1080]],\"周六\":[],\"周日\":[]},\"dailyHours\":{\"周一\":7,\"周二\":0,\"周三\":4,\"周四\":0,\"周五\":7,\"周六\":0,\"周日\":0},\"weeklyHours\":18,\"workingDays\":3,\"weeklyHoursDelta\":\"旧值21h（3×(8-1)）未含 course1；course1 使周三15:00-18:00（3h）转为占用，21-3=18h\",\"continuousInternshipMonths\":6},\"jobTimeVerdicts\":[{\"jobId\":\"job:v16-gap-a\",\"verdict\":\"待核定\",\"basis\":\"原文在本角色知识视图不可访问（knowledge_read 返回 Evidence missing or not accessible；knowledge_search 无命中），不猜测\"},{\"jobId\":\"job:v16-gap-b\",\"verdict\":\"待核定\",\"basis\":\"原文在本角色知识视图不可访问（knowledge_read 返回 Evidence missing or not accessible；knowledge_search 无命中），不猜测\"}],\"contradictions\":[\"旧结论周工时=21 被本轮 course1 追加取代为18\"],\"questions\":[\"是否有企业实习经历？\",\"证书与语言成绩？\",\"团队协作/领导/抗压/学习过程的具体行为？\",\"网页组件项目的复杂度、本人职责边界、结果与时间范围？\"],\"scoringVersion\":\"anchored-levels-v2-uncalibrated\",\"completeness\":0.17,\"priorities\":[\"补齐企业实习与项目职责/结果证据\",\"补齐证书与语言成绩\",\"补齐软技能行为证据\"],\"openQuestions\":{\"schemaVersion\":\"open-questions-v1\",\"items\":[\"job:v16-gap-a 的实习时间条件原文不可访问，无法核定\",\"job:v16-gap-b 的实习时间条件原文不可访问，无法核定\",\"是否有企业实习经历（简历与当前陈述均未提及，未确认）\",\"证书与语言成绩（未提及）\",\"团队协作/领导/抗压/学习过程等行为证据（未提及）\",\"job:v16-gap-a 的实习时间条件（每周到岗天数/时长/时段）原文仍不可访问，无法核定\",\"job:v16-gap-b 的实习时间条件原文仍不可访问，无法核定\",\"网页组件项目的复杂度、本人职责边界、结果与时间范围\"]},\"clarifications\":[{\"questionId\":\"question:7f4e0931441527aa317718607e981b0489e474f465ee332f13f5373670b880db\",\"status\":\"unanswered\",\"claims\":[],\"remaining\":[\"job:v16-gap-a 的实习时间条件（每周到岗天数/时长/时段）原文仍不可访问，无法核定\"],\"reason\":\"本轮再次以 knowledge_read(job:v16-gap-a) 读取，返回 Evidence missing or not accessible；knowledge_search 亦无该岗位原文。无原文即无法核定，按用户规则标注待核定，不猜测。\",\"schemaVersion\":\"clarification-v2\",\"version\":1,\"runId\":\"7b181f4d-7ea4-4317-ae56-94e457ba34a4\",\"executionId\":\"sched\",\"role\":\"profile\",\"questionText\":\"job:v16-gap-a 的实习时间条件（每周到岗天数/时长/时段）原文未读取到，无法核",
+          "kind": "artifact",
+          "version": "1",
+          "readTexts": [
+            "周工时=18。按原表（周一/三/五10:00-18:00可用，各扣13:00-14:00）追加 course1（周三15:00-18:00占用）后：周一10:00-13:00、14:00-18:00（7h）；周三10:00-13:00、14:00-15:00（4h）；周五10:00-13:00、14:00-18:00（7h）；周二/四/六/日无可用时段。工作天数=3，周工时=18。与旧值21h的差异：旧值3×(8-1)=21h未含新课；course1 使周三15:00-18:00（3h）由可用转为占用，21-3=18h，其余记录不变。核定[job:v16-gap-a]=待核定；核定[job:v16-gap-b]=待核定——两岗原文在本角色知识视图仍不可访问（knowledge_read 返回 Evidence missing or not accessible，knowledge_search 无命中），按规则不猜测，移出候选。画像沿用历史：本科应届、成都、经验0年，技能Vue/TypeScript/Git，网页组件项目支持 professionalSkill=50、execution=50（锚点2，低置信度）；其余10维为null（材料未写≠不具备），完整度约17%。本轮无新增画像事实，未提出记忆写入。",
+            "{\"status\":\"partial\",\"summary\":\"周工时=18。按原表（周一/三/五10:00-18:00可用，各扣13:00-14:00）追加 course1（周三15:00-18:00占用）后：周一10:00-13:00、14:00-18:00（7h）；周三10:00-13:00、14:00-15:00（4h）；周五10:00-13:00、14:00-18:00（7h）；周二/四/六/日无可用时段。工作天数=3，周工时=18。与旧值21h的差异：旧值3×(8-1)=21h未含新课；course1 使周三15:00-18:00（3h）由可用转为占用，21-3=18h，其余记录不变。核定[job:v16-gap-a]=待核定；核定[job:v16-gap-b]=待核定——两岗原文在本角色知识视图仍不可访问（knowledge_read 返回 Evidence missing or not accessible，knowledge_search 无命中），按规则不猜测，移出候选。画像沿用历史：本科应届、成都、经验0年，技能Vue/TypeScript/Git，网页组件项目支持 professionalSkill=50、execution=50（锚点2，低置信度）；其余10维为null（材料未写≠不具备），完整度约17%。本轮无新增画像事实，未提出记忆写入。\",\"evidenceIds\":[\"input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:turn:0:request\",\"input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:request\",\"input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:resume\",\"rule:profile\",\"calculation:7b181f4d-7ea4-4317-ae56-94e457ba34a4:d3f3e792826dd090ad19acfa40122029d95523153e6d79faeb165f9284976965\"],\"unknowns\":[\"job:v16-gap-a 的实习时间条件原文不可访问，无法核定\",\"job:v16-gap-b 的实习时间条件原文不可访问，无法核定\",\"是否有企业实习经历（简历与当前陈述均未提及，未确认）\",\"证书与语言成绩（未提及）\",\"团队协作/领导/抗压/学习过程等行为证据（未提及）\",\"job:v16-gap-a 的实习时间条件（每周到岗天数/时长/时段）原文仍不可访问，无法核定\",\"job:v16-gap-b 的实习时间条件原文仍不可访问，无法核定\",\"网页组件项目的复杂度、本人职责边界、结果与时间范围\"],\"conflicts\":[\"旧结论“周工时=21”已被本轮追加的 course1（周三15:00-18:00占用）取代，现为周工时=18；旧值未含该课程，非计算错误而是事实更新。\"],\"nextActions\":[\"请总控/知识库管理员确认 job:v16-gap-a、job:v16-gap-b 原文的访问权限或提供可读来源；在可读前两岗一律标注待核定并移出候选。\",\"下游 match/path/report 使用周工时=18、工作天数=3，并沿用“核定[job:v16-gap-a]=待核定、核定[job:v16-gap-b]=待核定”。\",\"向用户补充：企业实习经历有无、证书与语言成绩、团队协作/领导/抗压/学习过程的具体行为、网页组件项目的复杂度与本人职责及结果时间范围。\"],\"artifact\":{\"scores\":{\"professionalSkill\":50,\"certificate\":null,\"innovation\":null,\"internalMotivation\":null,\"learning\":null,\"stressTolerance\":null,\"communication\":null,\"internship\":null,\"language\":null,\"leadership\":null,\"adaptability\":null,\"execution\":50},\"skills\":[\"Vue\",\"TypeScript\",\"Git\"],\"evidence\":[{\"dimension\":\"professionalSkill\",\"evidenceId\":\"input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:resume\",\"quote\":\"在成都使用Vue、TypeScript、Git完成过网页组件项目\"},{\"dimension\":\"execution\",\"evidenceId\":\"input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:resume\",\"quote\":\"完成过网页组件项目\"}],\"facts\":{\"education\":\"本科应届\",\"city\":\"成都\",\"experienceYears\":0,\"skills\":[\"Vue\",\"TypeScript\",\"Git\"],\"project\":\"网页组件项目（复杂度/职责/结果/时间范围未说明）\",\"availability\":{\"周一\":[[600,780],[840,1080]],\"周二\":[],\"周三\":[[600,780],[840,900]],\"周四\":[],\"周五\":[[600,780],[840,1080]],\"周六\":[],\"周日\":[]},\"dailyHours\":{\"周一\":7,\"周二\":0,\"周三\":4,\"周四\":0,\"周五\":7,\"周六\":0,\"周日\":0},\"weeklyHours\":18,\"workingDays\":3,\"weeklyHoursDelta\":\"旧值21h（3×(8-1)）未含 course1；course1 使周三15:00-18:00（3h）转为占用，21-3=18h\",\"continuousInternshipMonths\":6},\"jobTimeVerdicts\":[{\"jobId\":\"job:v16-gap-a\",\"verdict\":\"待核定\",\"basis\":\"原文在本角色知识视图不可访问（knowledge_read 返回 Evidence missing or not accessible；knowledge_search 无命中），不猜测\"},{\"jobId\":\"job:v16-gap-b\",\"verdict\":\"待核定\",\"basis\":\"原文在本角色知识视图不可访问（knowledge_read 返回 Evidence missing or not accessible；knowledge_search 无命中），不猜测\"}],\"contradictions\":[\"旧结论周工时=21 被本轮 course1 追加取代为18\"],\"questions\":[\"是否有企业实习经历？\",\"证书与语言成绩？\",\"团队协作/领导/抗压/学习过程的具体行为？\",\"网页组件项目的复杂度、本人职责边界、结果与时间范围？\"],\"scoringVersion\":\"anchored-levels-v2-uncalibrated\",\"completeness\":0.17,\"priorities\":[\"补齐企业实习与项目职责/结果证据\",\"补齐证书与语言成绩\",\"补齐软技能行为证据\"],\"openQuestions\":{\"schemaVersion\":\"open-questions-v1\",\"items\":[\"job:v16-gap-a 的实习时间条件原文不可访问，无法核定\",\"job:v16-gap-b 的实习时间条件原文不可访问，无法核定\",\"是否有企业实习经历（简历与当前陈述均未提及，未确认）\",\"证书与语言成绩（未提及）\",\"团队协作/领导/抗压/学习过程等行为证据（未提及）\",\"job:v16-gap-a 的实习时间条件（每周到岗天数/时长/时段）原文仍不可访问，无法核定\",\"job:v16-gap-b 的实习时间条件原文仍不可访问，无法核定\",\"网页组件项目的复杂度、本人职责边界、结果与时间范围\"]},\"clarifications\":[{\"questionId\":\"question:7f4e0931441527aa317718607e981b0489e474f465ee332f13f5373670b880db\",\"status\":\"unanswered\",\"claims\":[],\"remaining\":[\"job:v16-gap-a 的实习时间条件（每周到岗天数/时长/时段）原文仍不可访问，无法核定\"],\"reason\":\"本轮再次以 knowledge_read(job:v16-gap-a) 读取，返回 Evidence missing or not accessible；knowledge_search 亦无该岗位原文。无原文即无法核定，按用户规则标注待核定，不猜测。\",\"schemaVersion\":\"clarification-v2\",\"version\":1,\"runId\":\"7b181f4d-7ea4-4317-ae56-94e457ba34a4\",\"executionId\":\"sched\",\"role\":\"profile\",\"questionText\":\"job:v16-gap-a 的实习时间条件（每周到岗天数/时长/时段）原文未读取到，无法核"
+          ]
+        },
+        {
+          "id": "artifact:7b181f4d-7ea4-4317-ae56-94e457ba34a4:match@2",
+          "sourceId": "7b181f4d-7ea4-4317-ae56-94e457ba34a4:match@2",
+          "text": "{\"status\":\"succeeded\",\"summary\":\"周工时=18。核定[job:v16-gap-a]=不符；核定[job:v16-gap-b]=符合。\\n\\n日程重算（原表+course1，其余不变）：周一10:00-13:00、14:00-18:00=7h；周三10:00-13:00、14:00-15:00=4h（course1 占用15:00-18:00，扣3h）；周五10:00-13:00、14:00-18:00=7h；周二/四/六/日无可用。工作天数=3，周工时=7+4+7=18（旧值21h已被新课取代）。\\n\\njob:v16-gap-a 门槛逐项：连续月数≥3——用户可连续6个月，达标；每周天数≥3——3天，达标；累计小时≥21——仅18h，不达标（差3h）。故不符，移出模拟候选。\\njob:v16-gap-b 门槛逐项：连续月数≥3——6个月，达标；每周天数≥2——3天，达标；至少两天各达4小时——周一7h、周五7h（周三4h），达标；原文无累计小时门槛。故符合，纳入模拟候选。\\n\\n两岗均为合成样本（source=synthetic-integration，recruitmentStatus=not_applicable），不可投递，不代表真实薪资行情。旧结论“a=符合、周工时21”已被本轮新课取代，不再沿用。\",\"evidenceIds\":[\"rule:match\",\"input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:request\",\"input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:resume\",\"input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:turn:0:request\",\"job:v16-gap-a\",\"job:v16-gap-b\"],\"unknowns\":[\"用户软能力、实习经历、证书等画像字段材料未写（不等于不具备），本次未用于时间条件核定\",\"两岗为合成样本，无真实招聘生命周期，不可投递\"],\"conflicts\":[\"旧产物（ace47f42…:match）称周工时=21、job:v16-gap-a=符合；本轮 course1（周三15:00-18:00占用）使周三可用由7h降为4h，周工时=18，a 的累计21小时门槛不达标，旧结论作废\"],\"nextActions\":[\"以周工时=18 为准更新路径与报告中的时间条件表述，勿沿用21h\",\"若希望重新满足 job:v16-gap-a 的21小时门槛，需用户自行新增可用时段（如周二/周四）或撤销部分占用；不得由系统放宽门槛\",\"模拟候选仅保留 job:v16-gap-b，并注明合成样本不可投递\",\"如需真实岗位，请另行提供真实招聘信息，本快照不能代表实时行情\"],\"artifact\":{\"rankedJobs\":[{\"id\":\"v16-gap-b\",\"reason\":\"周工时=18，工作天数=3。原文门槛逐项：连续至少3个月→用户可连续6个月，达标；每周至少2天→3天，达标；至少两天各达4小时→周一7h、周五7h（周三4h），达标；原文未设累计小时门槛。城市成都、本科、经验0年、Vue/TypeScript/Git 均满足（jobs_check eligible=true，薪资与双休为 not_requested，非“满足”）。合成样本，不可投递。\",\"gaps\":[\"原文未写具体到岗星期/时段，需在模拟中自行约定\",\"合成样本无真实招聘生命周期，不可投递、不代表真实薪资行情\"]}],\"alternatives\":[],\"rejectedReasons\":[{\"id\":\"v16-gap-a\",\"reason\":\"不符：原文要求累计至少21小时，用户新课后可实习仅18小时（周一7+周三4+周五7），差3小时；连续月数（6≥3）与每周天数（3≥3）达标，但累计小时不达标，故移出模拟候选。\"}],\"unknownCandidates\":[],\"retrievalStrategy\":\"本轮为指定两岗的时间条件复核，未做类别召回；直接读取 job:v16-gap-a、job:v16-gap-b 原文（版本与 catalog 一致），并用 jobs_check 复核城市/学历/经验等硬条件。日程按原表（turn:0）+ 本轮 course1 重算，未沿用旧结论。\",\"comparisonAxes\":[\"连续月数门槛\",\"每周天数门槛\",\"累计小时门槛\",\"单日时长门槛\",\"硬条件（城市/学历/经验/技能）\"],\"verificationQuestions\":[\"模拟中约定每周到岗星期与时段（如周一、周五各7小时）\",\"若需满足21小时门槛，是否愿意新增周二或周四可用时段\"],\"openQuestions\":{\"schemaVersion\":\"open-questions-v1\",\"items\":[\"用户软能力、实习经历、证书等画像字段材料未写（不等于不具备），本次未用于时间条件核定\",\"两岗为合成样本，无真实招聘生命周期，不可投递\"]},\"clarifications\":[{\"questionId\":\"question:31ef4ec68d0826999a894fbcf10a25bdec45c8445a296a84611079a2f58a2839\",\"status\":\"answered\",\"claims\":[{\"subject\":\"domain\",\"text\":\"两岗原文均标注 source=synthetic-integration，属合成样本；jobs_check 返回 dataScope.source=synthetic、recruitmentStatus=not_applicable，即无真实招聘生命周期，不可投递、不代表真实薪资行情。\",\"citations\":[{\"evidenceId\":\"job:v16-gap-a\",\"quote\":\"\\\"source\\\":\\\"synthetic-integration\\\"\"},{\"evidenceId\":\"job:v16-gap-b\",\"quote\":\"\\\"source\\\":\\\"synthetic-integration\\\"\"}]}],\"remaining\":[],\"reason\":\"已读两岗原文与 jobs_check 数据范围，确认合成属性与不可投递边界。\",\"schemaVersion\":\"clarification-v2\",\"version\":1,\"runId\":\"7b181f4d-7ea4-4317-ae56-94e457ba34a4\",\"executionId\":\"match@2\",\"role\":\"match\",\"questionText\":\"两岗均为合成样本（source=synthetic-integration），无真实招聘生命周期，不能作为可投递岗位或真实薪资行情\",\"snapshotHash\":\"99858fc00b5fdd647537689ab4f47faf359227e39459ece5c23108c468f99e96\"},{\"questionId\":\"question:80000c0edb11b41dda320d3e6565114bf876152413154313725514b5a2a67861\",\"status\":\"answered\",\"claims\":[{\"subject\":\"domain\",\"text\":\"job:v16-gap-a 原文只给总量与天数门槛（连续至少3个月、每周至少3天、累计至少21小时），并明确“具体星期和时段不作额外限制”。\",\"citations\":[{\"evidenceId\":\"job:v16-gap-a\",\"quote\":\"连续至少3个月，每周至少3天、累计至少21小时\"}]},{\"subject\":\"domain\",\"text\":\"job:v16-gap-b 原文只给连续至少3个月、每周至少2天且至少两天各达4小时，同样“具体星期和时段不作额外限制”。\",\"citations\":[{\"evidenceId\":\"job:v16-gap-b\",\"quote\":\"连续至少3个月，每周至少2天，至少两天各达到4小时\"}]},{\"subject\":\"user\",\"text\":\"用户可连续实习6个月，且原表之外没有其他日程限制。\",\"citations\":[{\"evidenceId\":\"input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:turn:0:request\",\"quote\":\"我能连续实习6个月。\"},{\"evidenceId\":\"input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:turn:0:request\",\"quote\":\"原表之外没有其他日程限制。\"}]}],\"remaining\":[],\"reason\":\"两岗原文均无具体星期/时段限制，用户连续月数与日程边界已由原文确认。\",\"schemaVersion\":\"clarification-v2\",\"version\":1,\"runId\":\"7b181f4d-7ea4-4317-ae56-94e457ba34a4\",\"executionId\":\"match@2\",\"role\":\"match\",\"questionText\":\"岗位原文未写每周具体到岗星期/时段，仅给总量与天数门槛；用户日程已满足，无需进一步核实\",\"sn",
+          "kind": "artifact",
+          "version": "1",
+          "readTexts": [
+            "周工时=18。核定[job:v16-gap-a]=不符；核定[job:v16-gap-b]=符合。\n\n日程重算（原表+course1，其余不变）：周一10:00-13:00、14:00-18:00=7h；周三10:00-13:00、14:00-15:00=4h（course1 占用15:00-18:00，扣3h）；周五10:00-13:00、14:00-18:00=7h；周二/四/六/日无可用。工作天数=3，周工时=7+4+7=18（旧值21h已被新课取代）。\n\njob:v16-gap-a 门槛逐项：连续月数≥3——用户可连续6个月，达标；每周天数≥3——3天，达标；累计小时≥21——仅18h，不达标（差3h）。故不符，移出模拟候选。\njob:v16-gap-b 门槛逐项：连续月数≥3——6个月，达标；每周天数≥2——3天，达标；至少两天各达4小时——周一7h、周五7h（周三4h），达标；原文无累计小时门槛。故符合，纳入模拟候选。\n\n两岗均为合成样本（source=synthetic-integration，recruitmentStatus=not_applicable），不可投递，不代表真实薪资行情。旧结论“a=符合、周工时21”已被本轮新课取代，不再沿用。",
+            "{\"status\":\"succeeded\",\"summary\":\"周工时=18。核定[job:v16-gap-a]=不符；核定[job:v16-gap-b]=符合。\\n\\n日程重算（原表+course1，其余不变）：周一10:00-13:00、14:00-18:00=7h；周三10:00-13:00、14:00-15:00=4h（course1 占用15:00-18:00，扣3h）；周五10:00-13:00、14:00-18:00=7h；周二/四/六/日无可用。工作天数=3，周工时=7+4+7=18（旧值21h已被新课取代）。\\n\\njob:v16-gap-a 门槛逐项：连续月数≥3——用户可连续6个月，达标；每周天数≥3——3天，达标；累计小时≥21——仅18h，不达标（差3h）。故不符，移出模拟候选。\\njob:v16-gap-b 门槛逐项：连续月数≥3——6个月，达标；每周天数≥2——3天，达标；至少两天各达4小时——周一7h、周五7h（周三4h），达标；原文无累计小时门槛。故符合，纳入模拟候选。\\n\\n两岗均为合成样本（source=synthetic-integration，recruitmentStatus=not_applicable），不可投递，不代表真实薪资行情。旧结论“a=符合、周工时21”已被本轮新课取代，不再沿用。\",\"evidenceIds\":[\"rule:match\",\"input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:request\",\"input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:resume\",\"input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:turn:0:request\",\"job:v16-gap-a\",\"job:v16-gap-b\"],\"unknowns\":[\"用户软能力、实习经历、证书等画像字段材料未写（不等于不具备），本次未用于时间条件核定\",\"两岗为合成样本，无真实招聘生命周期，不可投递\"],\"conflicts\":[\"旧产物（ace47f42…:match）称周工时=21、job:v16-gap-a=符合；本轮 course1（周三15:00-18:00占用）使周三可用由7h降为4h，周工时=18，a 的累计21小时门槛不达标，旧结论作废\"],\"nextActions\":[\"以周工时=18 为准更新路径与报告中的时间条件表述，勿沿用21h\",\"若希望重新满足 job:v16-gap-a 的21小时门槛，需用户自行新增可用时段（如周二/周四）或撤销部分占用；不得由系统放宽门槛\",\"模拟候选仅保留 job:v16-gap-b，并注明合成样本不可投递\",\"如需真实岗位，请另行提供真实招聘信息，本快照不能代表实时行情\"],\"artifact\":{\"rankedJobs\":[{\"id\":\"v16-gap-b\",\"reason\":\"周工时=18，工作天数=3。原文门槛逐项：连续至少3个月→用户可连续6个月，达标；每周至少2天→3天，达标；至少两天各达4小时→周一7h、周五7h（周三4h），达标；原文未设累计小时门槛。城市成都、本科、经验0年、Vue/TypeScript/Git 均满足（jobs_check eligible=true，薪资与双休为 not_requested，非“满足”）。合成样本，不可投递。\",\"gaps\":[\"原文未写具体到岗星期/时段，需在模拟中自行约定\",\"合成样本无真实招聘生命周期，不可投递、不代表真实薪资行情\"]}],\"alternatives\":[],\"rejectedReasons\":[{\"id\":\"v16-gap-a\",\"reason\":\"不符：原文要求累计至少21小时，用户新课后可实习仅18小时（周一7+周三4+周五7），差3小时；连续月数（6≥3）与每周天数（3≥3）达标，但累计小时不达标，故移出模拟候选。\"}],\"unknownCandidates\":[],\"retrievalStrategy\":\"本轮为指定两岗的时间条件复核，未做类别召回；直接读取 job:v16-gap-a、job:v16-gap-b 原文（版本与 catalog 一致），并用 jobs_check 复核城市/学历/经验等硬条件。日程按原表（turn:0）+ 本轮 course1 重算，未沿用旧结论。\",\"comparisonAxes\":[\"连续月数门槛\",\"每周天数门槛\",\"累计小时门槛\",\"单日时长门槛\",\"硬条件（城市/学历/经验/技能）\"],\"verificationQuestions\":[\"模拟中约定每周到岗星期与时段（如周一、周五各7小时）\",\"若需满足21小时门槛，是否愿意新增周二或周四可用时段\"],\"openQuestions\":{\"schemaVersion\":\"open-questions-v1\",\"items\":[\"用户软能力、实习经历、证书等画像字段材料未写（不等于不具备），本次未用于时间条件核定\",\"两岗为合成样本，无真实招聘生命周期，不可投递\"]},\"clarifications\":[{\"questionId\":\"question:31ef4ec68d0826999a894fbcf10a25bdec45c8445a296a84611079a2f58a2839\",\"status\":\"answered\",\"claims\":[{\"subject\":\"domain\",\"text\":\"两岗原文均标注 source=synthetic-integration，属合成样本；jobs_check 返回 dataScope.source=synthetic、recruitmentStatus=not_applicable，即无真实招聘生命周期，不可投递、不代表真实薪资行情。\",\"citations\":[{\"evidenceId\":\"job:v16-gap-a\",\"quote\":\"\\\"source\\\":\\\"synthetic-integration\\\"\"},{\"evidenceId\":\"job:v16-gap-b\",\"quote\":\"\\\"source\\\":\\\"synthetic-integration\\\"\"}]}],\"remaining\":[],\"reason\":\"已读两岗原文与 jobs_check 数据范围，确认合成属性与不可投递边界。\",\"schemaVersion\":\"clarification-v2\",\"version\":1,\"runId\":\"7b181f4d-7ea4-4317-ae56-94e457ba34a4\",\"executionId\":\"match@2\",\"role\":\"match\",\"questionText\":\"两岗均为合成样本（source=synthetic-integration），无真实招聘生命周期，不能作为可投递岗位或真实薪资行情\",\"snapshotHash\":\"99858fc00b5fdd647537689ab4f47faf359227e39459ece5c23108c468f99e96\"},{\"questionId\":\"question:80000c0edb11b41dda320d3e6565114bf876152413154313725514b5a2a67861\",\"status\":\"answered\",\"claims\":[{\"subject\":\"domain\",\"text\":\"job:v16-gap-a 原文只给总量与天数门槛（连续至少3个月、每周至少3天、累计至少21小时），并明确“具体星期和时段不作额外限制”。\",\"citations\":[{\"evidenceId\":\"job:v16-gap-a\",\"quote\":\"连续至少3个月，每周至少3天、累计至少21小时\"}]},{\"subject\":\"domain\",\"text\":\"job:v16-gap-b 原文只给连续至少3个月、每周至少2天且至少两天各达4小时，同样“具体星期和时段不作额外限制”。\",\"citations\":[{\"evidenceId\":\"job:v16-gap-b\",\"quote\":\"连续至少3个月，每周至少2天，至少两天各达到4小时\"}]},{\"subject\":\"user\",\"text\":\"用户可连续实习6个月，且原表之外没有其他日程限制。\",\"citations\":[{\"evidenceId\":\"input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:turn:0:request\",\"quote\":\"我能连续实习6个月。\"},{\"evidenceId\":\"input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:turn:0:request\",\"quote\":\"原表之外没有其他日程限制。\"}]}],\"remaining\":[],\"reason\":\"两岗原文均无具体星期/时段限制，用户连续月数与日程边界已由原文确认。\",\"schemaVersion\":\"clarification-v2\",\"version\":1,\"runId\":\"7b181f4d-7ea4-4317-ae56-94e457ba34a4\",\"executionId\":\"match@2\",\"role\":\"match\",\"questionText\":\"岗位原文未写每周具体到岗星期/时段，仅给总量与天数门槛；用户日程已满足，无需进一步核实\",\"sn"
+          ]
+        },
+        {
+          "id": "artifact:7b181f4d-7ea4-4317-ae56-94e457ba34a4:path",
+          "sourceId": "7b181f4d-7ea4-4317-ae56-94e457ba34a4:path",
+          "text": "{\"status\":\"succeeded\",\"summary\":\"周工时=18。核定[job:v16-gap-a]=不符；核定[job:v16-gap-b]=符合。\\n\\n日程重算（原表+course1，其余不变）：周一10:00-13:00、14:00-18:00=7h；周三10:00-13:00、14:00-15:00=4h（course1 占用15:00-18:00，扣3h）；周五10:00-13:00、14:00-18:00=7h；周二/四/六/日无可用。工作天数=3，周工时=7+4+7=18（旧值21h已被新课取代）。\\n\\njob:v16-gap-a 门槛逐项：连续≥3个月——用户可连续6个月，达标；每周≥3天——3天，达标；累计≥21小时——仅18h，差3h，不达标。故不符，移出模拟候选。\\njob:v16-gap-b 门槛逐项：连续≥3个月——6个月，达标；每周≥2天——3天，达标；至少两天各达4小时——周一7h、周五7h（周三4h），达标；原文无累计小时门槛。故符合，保留为唯一模拟候选。\\n\\n路径：起点类别 frontend-junior 不变；图快照仍返回两条已验证晋升路线（junior→mid，cost 0.15；junior→mid→senior，cost 0.40），未新增原文之外的岗位门槛。候选变化只影响“到岗安排”节点，不影响路线本身：a 被移出后无需再为凑满21h改课表，只需按 b 的“每周≥2天、至少两天各≥4h”安排周一/周五各7h（周三4h为余量），并保留周三15:00-18:00 课程。中高级类别仅有类别级方向，无实例可锚定。两岗均为合成样本，不可投递。\",\"evidenceIds\":[\"rule:path\",\"input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:request\",\"input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:resume\",\"input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:turn:0:request\",\"job:v16-gap-a\",\"job:v16-gap-b\",\"category:frontend-junior\",\"category:frontend-mid\",\"category:frontend-senior\",\"edge:promotion:frontend-junior:frontend-mid\",\"edge:promotion:frontend-mid:frontend-senior\",\"calculation:7b181f4d-7ea4-4317-ae56-94e457ba34a4:eb12a3a66c6917daf07b7b686ce5f12fbbe013ce221d7c4d3dcba0984e803576\",\"calculation:7b181f4d-7ea4-4317-ae56-94e457ba34a4:6394e570fe20f07d1cfd6f5906f33de1524621f25586cbe0399d3e2ecd527f04\",\"calculation:7b181f4d-7ea4-4317-ae56-94e457ba34a4:ff2c89520cb3ab5e41ad8fc1e8748c3f2a3f575161d29fd8159be450d723c3d8\",\"calculation:7b181f4d-7ea4-4317-ae56-94e457ba34a4:021d79e1664b3eb94e6de9639a7728669ca8d4001996cf0964a9663333b7653a\"],\"unknowns\":[\"frontend-mid / frontend-senior 在本次 jobs_search 语料中无实例（categoryCoverage 仅 frontend-junior，totalInSelectedCorpus=2），中高级目标只能给类别级方向，不能锚定具体岗位\",\"用户软能力、实习经历、证书等画像字段材料未写，不等于不具备；本次未用于时间条件核定\",\"各阶段时间长度为条件性估计，未做校准；图边 score 是排序权重，不是晋升成功概率\",\"若后续课表再变动（尤其周一/周五），b 的“至少两天各≥4小时”可能失效，需重算\"],\"conflicts\":[\"旧路径产物（ace47f42…:path）称周工时=21、核定[job:v16-gap-a]=符合；本轮 course1 占用周三15:00-18:00 后周工时为18，a 的累计≥21小时门槛不达标，旧结论已被取代，不再沿用\",\"旧 profile 产物称两岗时间条件“无法核定、按用户规则移出”；本轮已读取 job:v16-gap-a/b 原文，可逐项核定，该限制不再成立\"],\"nextActions\":[\"按 b 的门槛固定到岗安排：周一、周五各7小时为主时段，周三4小时为余量；无需为凑21小时改动课表\",\"若希望重新具备 a 的资格，需新增每周≥3小时可用时段（例如周三15:00-18:00课程调整或另开可用时段），届时重算周工时并重新核定 a\",\"在 frontend-junior 阶段积累工程化与性能优化证据（构建配置、性能优化前后对比、组件测试），作为 junior→mid 的前置差距补齐\",\"下次复盘触发条件：课表变动、可用时段变化、或出现真实（非合成）岗位语料时，重验路径与候选\"],\"artifact\":{\"paths\":[{\"routeId\":\"calculation:7b181f4d-7ea4-4317-ae56-94e457ba34a4:eb12a3a66c6917daf07b7b686ce5f12fbbe013ce221d7c4d3dcba0984e803576\",\"nodes\":[\"frontend-junior\",\"frontend-mid\"],\"actions\":[\"起点假设：当前类别 frontend-junior（初级前端开发），能力证据仅来自简历所述 Vue/TypeScript/Git 网页组件项目，属低置信度起点\",\"到岗安排节点（受本轮核定影响）：仅保留 job:v16-gap-b 作为模拟候选，按“每周≥2天、至少两天各≥4小时”安排周一7h、周五7h，周三4h为余量；job:v16-gap-a 因周工时18<21 不符，移出，不再为凑21h调整课表\",\"前置差距：frontend-mid 要求工程化、性能优化、复杂应用与测试；当前简历未写这些实践，属本次尚未核验，不作为“不具备”结论\",\"学习/作品动作：为现有组件项目补构建与工程化配置（Vite/TS 严格模式、代码分割），做一次可量化的性能优化前后对比（首屏/包体积），补组件单元测试\",\"检验产物：一份含优化前后指标对比的组件库仓库 + 测试报告；复盘条件：完成上述产物后重评是否具备 mid 级工程化证据\",\"时间安排为条件性估计，不承诺固定月数必然晋升\"]},{\"routeId\":\"calculation:7b181f4d-7ea4-4317-ae56-94e457ba34a4:6394e570fe20f07d1cfd6f5906f33de1524621f25586cbe0399d3e2ecd527f04\",\"nodes\":[\"frontend-junior\",\"frontend-mid\",\"frontend-senior\"],\"actions\":[\"备选（更长路线）：junior→mid→senior，cost 0.40，仅在首选路线证据积累后再评估\",\"senior 段前置为架构、性能优化、协作与技术决策；当前无相关证据，仅作类别级方向，不锚定岗位\",\"动作：在 mid 阶段承担跨组件/跨模块设计与评审记录，形成架构决策文档与协作复盘\",\"检验产物：架构决策记录（ADR）+ 团队协作复盘；触发重评条件：出现真实 senior 级岗位语料或获得跨模块负责经历\"]}],\"checkpoints\":[{\"stage\":\"frontend-junior 到岗\",\"metric\":\"每周可用18h，按 b 门槛周一/周五各7h、周三4h；连续≥3个月\",\"note\":\"合成样本，仅用于模拟核定，不可投递\"},{\"stage\":\"junior→mid 前置\",\"metric\":\"完成工程化配置、性能优化前后对比、组件测试三类产物各1份\",\"note\":\"条件性估计，未校准\"},{\"stage\":\"复盘\",\"metric\":\"课表或可用时段变动、或出现真实岗位语料时重算周工时并重验路线\"}],\"assumptions\":[\"起点类别为 frontend-junior，依据用户指定与两岗 categoryId\",\"用户可连续实习6个月（用户原话）\",\"原表之外无其他日程限制（用户原话）\",\"周工时=18 为按原表+course1 的确定性算术结果\"],\"instanceAnchors\":[{\"jobId\":\"job:v16-gap-b\",\"categoryId\":\"frontend-junior\",\"verdict\":\"符合\",\"basis\":\"连续≥3个月、每周≥2天、至少两天各≥4小时均达标；原文无累计小时门槛\",\"note\":\"合成样本，不可投递\"},{\"jobId\":\"job:v16-gap-a\",\"categoryId\":\"frontend-junior\",\"verdict\":\"不符\",",
+          "kind": "artifact",
+          "version": "1",
+          "readTexts": [
+            "周工时=18。核定[job:v16-gap-a]=不符；核定[job:v16-gap-b]=符合。\n\n日程重算（原表+course1，其余不变）：周一10:00-13:00、14:00-18:00=7h；周三10:00-13:00、14:00-15:00=4h（course1 占用15:00-18:00，扣3h）；周五10:00-13:00、14:00-18:00=7h；周二/四/六/日无可用。工作天数=3，周工时=7+4+7=18（旧值21h已被新课取代）。\n\njob:v16-gap-a 门槛逐项：连续≥3个月——用户可连续6个月，达标；每周≥3天——3天，达标；累计≥21小时——仅18h，差3h，不达标。故不符，移出模拟候选。\njob:v16-gap-b 门槛逐项：连续≥3个月——6个月，达标；每周≥2天——3天，达标；至少两天各达4小时——周一7h、周五7h（周三4h），达标；原文无累计小时门槛。故符合，保留为唯一模拟候选。\n\n路径：起点类别 frontend-junior 不变；图快照仍返回两条已验证晋升路线（junior→mid，cost 0.15；junior→mid→senior，cost 0.40），未新增原文之外的岗位门槛。候选变化只影响“到岗安排”节点，不影响路线本身：a 被移出后无需再为凑满21h改课表，只需按 b 的“每周≥2天、至少两天各≥4h”安排周一/周五各7h（周三4h为余量），并保留周三15:00-18:00 课程。中高级类别仅有类别级方向，无实例可锚定。两岗均为合成样本，不可投递。",
+            "{\"status\":\"succeeded\",\"summary\":\"周工时=18。核定[job:v16-gap-a]=不符；核定[job:v16-gap-b]=符合。\\n\\n日程重算（原表+course1，其余不变）：周一10:00-13:00、14:00-18:00=7h；周三10:00-13:00、14:00-15:00=4h（course1 占用15:00-18:00，扣3h）；周五10:00-13:00、14:00-18:00=7h；周二/四/六/日无可用。工作天数=3，周工时=7+4+7=18（旧值21h已被新课取代）。\\n\\njob:v16-gap-a 门槛逐项：连续≥3个月——用户可连续6个月，达标；每周≥3天——3天，达标；累计≥21小时——仅18h，差3h，不达标。故不符，移出模拟候选。\\njob:v16-gap-b 门槛逐项：连续≥3个月——6个月，达标；每周≥2天——3天，达标；至少两天各达4小时——周一7h、周五7h（周三4h），达标；原文无累计小时门槛。故符合，保留为唯一模拟候选。\\n\\n路径：起点类别 frontend-junior 不变；图快照仍返回两条已验证晋升路线（junior→mid，cost 0.15；junior→mid→senior，cost 0.40），未新增原文之外的岗位门槛。候选变化只影响“到岗安排”节点，不影响路线本身：a 被移出后无需再为凑满21h改课表，只需按 b 的“每周≥2天、至少两天各≥4h”安排周一/周五各7h（周三4h为余量），并保留周三15:00-18:00 课程。中高级类别仅有类别级方向，无实例可锚定。两岗均为合成样本，不可投递。\",\"evidenceIds\":[\"rule:path\",\"input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:request\",\"input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:resume\",\"input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:turn:0:request\",\"job:v16-gap-a\",\"job:v16-gap-b\",\"category:frontend-junior\",\"category:frontend-mid\",\"category:frontend-senior\",\"edge:promotion:frontend-junior:frontend-mid\",\"edge:promotion:frontend-mid:frontend-senior\",\"calculation:7b181f4d-7ea4-4317-ae56-94e457ba34a4:eb12a3a66c6917daf07b7b686ce5f12fbbe013ce221d7c4d3dcba0984e803576\",\"calculation:7b181f4d-7ea4-4317-ae56-94e457ba34a4:6394e570fe20f07d1cfd6f5906f33de1524621f25586cbe0399d3e2ecd527f04\",\"calculation:7b181f4d-7ea4-4317-ae56-94e457ba34a4:ff2c89520cb3ab5e41ad8fc1e8748c3f2a3f575161d29fd8159be450d723c3d8\",\"calculation:7b181f4d-7ea4-4317-ae56-94e457ba34a4:021d79e1664b3eb94e6de9639a7728669ca8d4001996cf0964a9663333b7653a\"],\"unknowns\":[\"frontend-mid / frontend-senior 在本次 jobs_search 语料中无实例（categoryCoverage 仅 frontend-junior，totalInSelectedCorpus=2），中高级目标只能给类别级方向，不能锚定具体岗位\",\"用户软能力、实习经历、证书等画像字段材料未写，不等于不具备；本次未用于时间条件核定\",\"各阶段时间长度为条件性估计，未做校准；图边 score 是排序权重，不是晋升成功概率\",\"若后续课表再变动（尤其周一/周五），b 的“至少两天各≥4小时”可能失效，需重算\"],\"conflicts\":[\"旧路径产物（ace47f42…:path）称周工时=21、核定[job:v16-gap-a]=符合；本轮 course1 占用周三15:00-18:00 后周工时为18，a 的累计≥21小时门槛不达标，旧结论已被取代，不再沿用\",\"旧 profile 产物称两岗时间条件“无法核定、按用户规则移出”；本轮已读取 job:v16-gap-a/b 原文，可逐项核定，该限制不再成立\"],\"nextActions\":[\"按 b 的门槛固定到岗安排：周一、周五各7小时为主时段，周三4小时为余量；无需为凑21小时改动课表\",\"若希望重新具备 a 的资格，需新增每周≥3小时可用时段（例如周三15:00-18:00课程调整或另开可用时段），届时重算周工时并重新核定 a\",\"在 frontend-junior 阶段积累工程化与性能优化证据（构建配置、性能优化前后对比、组件测试），作为 junior→mid 的前置差距补齐\",\"下次复盘触发条件：课表变动、可用时段变化、或出现真实（非合成）岗位语料时，重验路径与候选\"],\"artifact\":{\"paths\":[{\"routeId\":\"calculation:7b181f4d-7ea4-4317-ae56-94e457ba34a4:eb12a3a66c6917daf07b7b686ce5f12fbbe013ce221d7c4d3dcba0984e803576\",\"nodes\":[\"frontend-junior\",\"frontend-mid\"],\"actions\":[\"起点假设：当前类别 frontend-junior（初级前端开发），能力证据仅来自简历所述 Vue/TypeScript/Git 网页组件项目，属低置信度起点\",\"到岗安排节点（受本轮核定影响）：仅保留 job:v16-gap-b 作为模拟候选，按“每周≥2天、至少两天各≥4小时”安排周一7h、周五7h，周三4h为余量；job:v16-gap-a 因周工时18<21 不符，移出，不再为凑21h调整课表\",\"前置差距：frontend-mid 要求工程化、性能优化、复杂应用与测试；当前简历未写这些实践，属本次尚未核验，不作为“不具备”结论\",\"学习/作品动作：为现有组件项目补构建与工程化配置（Vite/TS 严格模式、代码分割），做一次可量化的性能优化前后对比（首屏/包体积），补组件单元测试\",\"检验产物：一份含优化前后指标对比的组件库仓库 + 测试报告；复盘条件：完成上述产物后重评是否具备 mid 级工程化证据\",\"时间安排为条件性估计，不承诺固定月数必然晋升\"]},{\"routeId\":\"calculation:7b181f4d-7ea4-4317-ae56-94e457ba34a4:6394e570fe20f07d1cfd6f5906f33de1524621f25586cbe0399d3e2ecd527f04\",\"nodes\":[\"frontend-junior\",\"frontend-mid\",\"frontend-senior\"],\"actions\":[\"备选（更长路线）：junior→mid→senior，cost 0.40，仅在首选路线证据积累后再评估\",\"senior 段前置为架构、性能优化、协作与技术决策；当前无相关证据，仅作类别级方向，不锚定岗位\",\"动作：在 mid 阶段承担跨组件/跨模块设计与评审记录，形成架构决策文档与协作复盘\",\"检验产物：架构决策记录（ADR）+ 团队协作复盘；触发重评条件：出现真实 senior 级岗位语料或获得跨模块负责经历\"]}],\"checkpoints\":[{\"stage\":\"frontend-junior 到岗\",\"metric\":\"每周可用18h，按 b 门槛周一/周五各7h、周三4h；连续≥3个月\",\"note\":\"合成样本，仅用于模拟核定，不可投递\"},{\"stage\":\"junior→mid 前置\",\"metric\":\"完成工程化配置、性能优化前后对比、组件测试三类产物各1份\",\"note\":\"条件性估计，未校准\"},{\"stage\":\"复盘\",\"metric\":\"课表或可用时段变动、或出现真实岗位语料时重算周工时并重验路线\"}],\"assumptions\":[\"起点类别为 frontend-junior，依据用户指定与两岗 categoryId\",\"用户可连续实习6个月（用户原话）\",\"原表之外无其他日程限制（用户原话）\",\"周工时=18 为按原表+course1 的确定性算术结果\"],\"instanceAnchors\":[{\"jobId\":\"job:v16-gap-b\",\"categoryId\":\"frontend-junior\",\"verdict\":\"符合\",\"basis\":\"连续≥3个月、每周≥2天、至少两天各≥4小时均达标；原文无累计小时门槛\",\"note\":\"合成样本，不可投递\"},{\"jobId\":\"job:v16-gap-a\",\"categoryId\":\"frontend-junior\",\"verdict\":\"不符\","
+          ]
+        },
+        {
+          "id": "rule:report",
+          "sourceId": "knowledge/report.md",
+          "text": "# 报告结构与一致性规范 v1\n\n必需章节：个人画像、岗位匹配、发展路径、行动计划、限制与待确认。\n\n每项关键事实保留 claim-evidence 关系，引用已读取产物。检查评分、岗位 ID、城市、薪资、时间与用户目标在不同章节是否一致。证据缺失时标记未知，不用写作流畅性掩盖缺口。\n\n行动计划至少包含具体动作、交付物、验证方式和复盘触发条件；未有依据的时间估计必须标注假设。部分完成报告明确说明未完成上游步骤。\n\n人工修改默认保持事实不变。局部润色不能把“参与”变成“负责”、把“了解”变成“熟练”。用户新增事实需要重新确认/分析，不通过报告直接改画像。\n",
+          "kind": "rule",
+          "version": "db98c36734a950d23a2f15973780799f78b12685fd895761eed818c5e99f2c60",
+          "readTexts": [
+            "# 报告结构与一致性规范 v1\n\n必需章节：个人画像、岗位匹配、发展路径、行动计划、限制与待确认。\n\n每项关键事实保留 claim-evidence 关系，引用已读取产物。检查评分、岗位 ID、城市、薪资、时间与用户目标在不同章节是否一致。证据缺失时标记未知，不用写作流畅性掩盖缺口。\n\n行动计划至少包含具体动作、交付物、验证方式和复盘触发条件；未有依据的时间估计必须标注假设。部分完成报告明确说明未完成上游步骤。\n\n人工修改默认保持事实不变。局部润色不能把“参与”变成“负责”、把“了解”变成“熟练”。用户新增事实需要重新确认/分析，不通过报告直接改画像。\n"
+          ]
+        },
+        {
+          "id": "input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:request",
+          "sourceId": "input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:request",
+          "text": "学校追加了下列每周课程安排，请据此更新原表和核定；其余记录不变。\n日程原始记录：\n|记录ID|类型|星期|开始|结束|\n|---|---|---|---|---|\n|course1|占用|周三|15:00|18:00|\n请保留周工时与核定格式，只运行必要专家。",
+          "kind": "request",
+          "version": "d8ae2712f8a42b41589fc208d1f50227a8b492713639c9fea17ca93647dc7e3b",
+          "readTexts": [
+            "学校追加了下列每周课程安排，请据此更新原表和核定；其余记录不变。\n日程原始记录：\n|记录ID|类型|星期|开始|结束|\n|---|---|---|---|---|\n|course1|占用|周三|15:00|18:00|\n请保留周工时与核定格式，只运行必要专家。"
+          ]
+        },
+        {
+          "id": "input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:resume",
+          "sourceId": "input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:resume",
+          "text": "本科应届，在成都使用Vue、TypeScript、Git完成过网页组件项目，其他指定岗位条件已确认满足。",
+          "kind": "resume",
+          "version": "5641a23c952c30119fabab0048457cedbf8b79f7b8e232a5f3a0283dff73d254",
+          "readTexts": [
+            "本科应届，在成都使用Vue、TypeScript、Git完成过网页组件项目，其他指定岗位条件已确认满足。"
+          ]
+        },
+        {
+          "id": "job:v16-gap-a",
+          "sourceId": "v16-gap-a",
+          "text": "{\"id\":\"v16-gap-a\",\"title\":\"校园空间预约界面实习生\",\"city\":\"成都\",\"categoryId\":\"frontend-junior\",\"family\":\"frontend\",\"level\":\"junior\",\"company\":\"合成校园界面组\",\"source\":\"synthetic-integration\",\"updatedAt\":\"2026-11-07\",\"jd\":\"合成岗位：校园空间预约界面实习生。成都，本科应届，Vue、TypeScript、Git，月薪6000元。连续至少3个月，每周至少3天、累计至少21小时。累计时间按每周日程原表核算，占用时段不计入，重叠可用时段只计一次。具体星期和时段不作额外限制。不设其他门槛，其余条件已确认满足。本数据仅用于模拟核定。\",\"salaryMin\":6000,\"salaryMax\":9000,\"educationRank\":3,\"experienceMin\":0,\"weekendsOff\":true,\"skills\":[\"Vue\",\"TypeScript\",\"Git\"]}",
+          "kind": "job",
+          "version": "db98c36734a950d23a2f15973780799f78b12685fd895761eed818c5e99f2c60",
+          "readTexts": [
+            "{\"id\":\"v16-gap-a\",\"title\":\"校园空间预约界面实习生\",\"city\":\"成都\",\"categoryId\":\"frontend-junior\",\"family\":\"frontend\",\"level\":\"junior\",\"company\":\"合成校园界面组\",\"source\":\"synthetic-integration\",\"updatedAt\":\"2026-11-07\",\"jd\":\"合成岗位：校园空间预约界面实习生。成都，本科应届，Vue、TypeScript、Git，月薪6000元。连续至少3个月，每周至少3天、累计至少21小时。累计时间按每周日程原表核算，占用时段不计入，重叠可用时段只计一次。具体星期和时段不作额外限制。不设其他门槛，其余条件已确认满足。本数据仅用于模拟核定。\",\"salaryMin\":6000,\"salaryMax\":9000,\"educationRank\":3,\"experienceMin\":0,\"weekendsOff\":true,\"skills\":[\"Vue\",\"TypeScript\",\"Git\"]}"
+          ]
+        },
+        {
+          "id": "job:v16-gap-b",
+          "sourceId": "v16-gap-b",
+          "text": "{\"id\":\"v16-gap-b\",\"title\":\"学生服务组件维护实习生\",\"city\":\"成都\",\"categoryId\":\"frontend-junior\",\"family\":\"frontend\",\"level\":\"junior\",\"company\":\"合成校园界面组\",\"source\":\"synthetic-integration\",\"updatedAt\":\"2026-11-07\",\"jd\":\"合成岗位：学生服务组件维护实习生。成都，本科应届，Vue、TypeScript、Git，月薪6000元。连续至少3个月，每周至少2天，至少两天各达到4小时。累计时间按每周日程原表核算，占用时段不计入，重叠可用时段只计一次。具体星期和时段不作额外限制。不设其他门槛，其余条件已确认满足。本数据仅用于模拟核定。\",\"salaryMin\":6000,\"salaryMax\":9000,\"educationRank\":3,\"experienceMin\":0,\"weekendsOff\":true,\"skills\":[\"Vue\",\"TypeScript\",\"Git\"]}",
+          "kind": "job",
+          "version": "db98c36734a950d23a2f15973780799f78b12685fd895761eed818c5e99f2c60",
+          "readTexts": [
+            "{\"id\":\"v16-gap-b\",\"title\":\"学生服务组件维护实习生\",\"city\":\"成都\",\"categoryId\":\"frontend-junior\",\"family\":\"frontend\",\"level\":\"junior\",\"company\":\"合成校园界面组\",\"source\":\"synthetic-integration\",\"updatedAt\":\"2026-11-07\",\"jd\":\"合成岗位：学生服务组件维护实习生。成都，本科应届，Vue、TypeScript、Git，月薪6000元。连续至少3个月，每周至少2天，至少两天各达到4小时。累计时间按每周日程原表核算，占用时段不计入，重叠可用时段只计一次。具体星期和时段不作额外限制。不设其他门槛，其余条件已确认满足。本数据仅用于模拟核定。\",\"salaryMin\":6000,\"salaryMax\":9000,\"educationRank\":3,\"experienceMin\":0,\"weekendsOff\":true,\"skills\":[\"Vue\",\"TypeScript\",\"Git\"]}"
+          ]
+        },
+        {
+          "id": "input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:turn:0:request",
+          "sourceId": "input:7b181f4d-7ea4-4317-ae56-94e457ba34a4:turn:0:request",
+          "text": "仅核定v16-gap-a和v16-gap-b的实习时间条件，给出模拟候选与行动。只有符合的纳入候选，不符或待核定的移出。首次四个专家协作，后续按最小必要范围更新。每个实际执行的专家summary和最终答复均写“周工时=数字”（当前每周有效小时数）；匹配、路径、报告summary与最终答复还需“核定[岗位ID]=符合/不符/待核定”。可沿用未变历史部分，但要检查其是否被新事实取代。路径使用已有前端类别关系，不增加原文之外的岗位门槛。\n我能连续实习6个月。以下是完整的每周重复日程原表，适用于整个实习期间：可用行取并集，再扣除占用行的并集；没有列为可用的时段不可实习。新行追加到原表；只有明确的撤销行才删除对应记录。原表之外没有其他日程限制。\n日程原始记录：\n|记录ID|类型|星期|开始|结束|\n|---|---|---|---|---|\n|base0|可用|周一|10:00|18:00|\n|lunch0|占用|周一|13:00|14:00|\n|base1|可用|周三|10:00|18:00|\n|lunch1|占用|周三|13:00|14:00|\n|base2|可用|周五|10:00|18:00|\n|lunch2|占用|周五|13:00|14:00|",
+          "kind": "request",
+          "version": "a5edddce1a23a358e66eb4f26a6981b4bf6a3d6278dbf245c93d1060be18a078",
+          "readTexts": [
+            "仅核定v16-gap-a和v16-gap-b的实习时间条件，给出模拟候选与行动。只有符合的纳入候选，不符或待核定的移出。首次四个专家协作，后续按最小必要范围更新。每个实际执行的专家summary和最终答复均写“周工时=数字”（当前每周有效小时数）；匹配、路径、报告summary与最终答复还需“核定[岗位ID]=符合/不符/待核定”。可沿用未变历史部分，但要检查其是否被新事实取代。路径使用已有前端类别关系，不增加原文之外的岗位门槛。\n我能连续实习6个月。以下是完整的每周重复日程原表，适用于整个实习期间：可用行取并集，再扣除占用行的并集；没有列为可用的时段不可实习。新行追加到原表；只有明确的撤销行才删除对应记录。原表之外没有其他日程限制。\n日程原始记录：\n|记录ID|类型|星期|开始|结束|\n|---|---|---|---|---|\n|base0|可用|周一|10:00|18:00|\n|lunch0|占用|周一|13:00|14:00|\n|base1|可用|周三|10:00|18:00|\n|lunch1|占用|周三|13:00|14:00|\n|base2|可用|周五|10:00|18:00|\n|lunch2|占用|周五|13:00|14:00|"
+          ]
+        }
+      ]
+    }
+  ],
+  "priorTasks": [],
+  "activeTasks": [],
+  "reviewContext": {
+    "schemaVersion": "memory-probe-integration-v1",
+    "historicalArtifactAccess": true,
+    "catalog": [
+      {
+        "id": "job:v16-gap-a",
+        "title": "校园空间预约界面实习生",
+        "version": "49a22d07b01407e35470b444443da842a98c14bc6ea1ca79a3016f29d5b9d5f4"
+      },
+      {
+        "id": "job:v16-gap-b",
+        "title": "学生服务组件维护实习生",
+        "version": "c0567aa1501d3705f9eece5dd531668797f759d3a0d0c16d650866e7ec7ed675"
+      }
+    ],
+    "derivationChecks": [
+      {
+        "id": "schedule:ccddc3d78d6e43a039ba9349",
+        "schemaVersion": "schedule-check-v1",
+        "factsHash": "d56c0e95c6c497b58b0769befe7994f885bf3181dffa303b5c63bac96630d579",
+        "sourceRefs": [
+          "event:v16-gap-0",
+          "event:v16-gap-1"
+        ],
+        "ledger": [
+          {
+            "id": "base0",
+            "kind": "可用",
+            "day": "周一",
+            "start": 600,
+            "end": 1080,
+            "sourceId": "event:v16-gap-0",
+            "turnIndex": 0,
+            "sourceHash": "6b9bafd745d3893de34467cab4d128109e3cc1d506a0d6dd39c8e121dbf38812",
+            "quote": "|base0|可用|周一|10:00|18:00|"
+          },
+          {
+            "id": "lunch0",
+            "kind": "占用",
+            "day": "周一",
+            "start": 780,
+            "end": 840,
+            "sourceId": "event:v16-gap-0",
+            "turnIndex": 0,
+            "sourceHash": "6b9bafd745d3893de34467cab4d128109e3cc1d506a0d6dd39c8e121dbf38812",
+            "quote": "|lunch0|占用|周一|13:00|14:00|"
+          },
+          {
+            "id": "base1",
+            "kind": "可用",
+            "day": "周三",
+            "start": 600,
+            "end": 1080,
+            "sourceId": "event:v16-gap-0",
+            "turnIndex": 0,
+            "sourceHash": "6b9bafd745d3893de34467cab4d128109e3cc1d506a0d6dd39c8e121dbf38812",
+            "quote": "|base1|可用|周三|10:00|18:00|"
+          },
+          {
+            "id": "lunch1",
+            "kind": "占用",
+            "day": "周三",
+            "start": 780,
+            "end": 840,
+            "sourceId": "event:v16-gap-0",
+            "turnIndex": 0,
+            "sourceHash": "6b9bafd745d3893de34467cab4d128109e3cc1d506a0d6dd39c8e121dbf38812",
+            "quote": "|lunch1|占用|周三|13:00|14:00|"
+          },
+          {
+            "id": "base2",
+            "kind": "可用",
+            "day": "周五",
+            "start": 600,
+            "end": 1080,
+            "sourceId": "event:v16-gap-0",
+            "turnIndex": 0,
+            "sourceHash": "6b9bafd745d3893de34467cab4d128109e3cc1d506a0d6dd39c8e121dbf38812",
+            "quote": "|base2|可用|周五|10:00|18:00|"
+          },
+          {
+            "id": "lunch2",
+            "kind": "占用",
+            "day": "周五",
+            "start": 780,
+            "end": 840,
+            "sourceId": "event:v16-gap-0",
+            "turnIndex": 0,
+            "sourceHash": "6b9bafd745d3893de34467cab4d128109e3cc1d506a0d6dd39c8e121dbf38812",
+            "quote": "|lunch2|占用|周五|13:00|14:00|"
+          },
+          {
+            "id": "course1",
+            "kind": "占用",
+            "day": "周三",
+            "start": 900,
+            "end": 1080,
+            "sourceId": "event:v16-gap-1",
+            "turnIndex": 1,
+            "sourceHash": "fef3e5de68446ad83891f5f189e9447dbe5a4d7a00ad408fcd7430935a3a74d7",
+            "quote": "|course1|占用|周三|15:00|18:00|"
+          }
+        ],
+        "intervals": {
+          "周一": [
+            [
+              600,
+              780
+            ],
+            [
+              840,
+              1080
+            ]
+          ],
+          "周二": [],
+          "周三": [
+            [
+              600,
+              780
+            ],
+            [
+              840,
+              900
+            ]
+          ],
+          "周四": [],
+          "周五": [
+            [
+              600,
+              780
+            ],
+            [
+              840,
+              1080
+            ]
+          ],
+          "周六": [],
+          "周日": []
+        },
+        "dailyHours": {
+          "周一": 7,
+          "周二": 0,
+          "周三": 4,
+          "周四": 0,
+          "周五": 7,
+          "周六": 0,
+          "周日": 0
+        },
+        "weeklyHours": 18,
+        "workingDays": 3,
+        "comparisonOrigin": {
+          "receiptId": "schedule:6ea84e29b5c0003374c6144d",
+          "factsHash": "d56c0e95c6c497b58b0769befe7994f885bf3181dffa303b5c63bac96630d579"
+        },
+        "witness": {
+          "omitted": [],
+          "unsupported": []
+        },
+        "scope": "Deterministic arithmetic over quoted calendar records only. sourceId is a review log ID; native experts must use input_history_list/read for the indicated turnIndex, not cite the receipt as a native evidence ID. No job eligibility or completeness outside the declared records is certified."
+      }
+    ],
+    "priorConclusions": [
+      {
+        "id": "7b181f4d-7ea4-4317-ae56-94e457ba34a4:sched",
+        "role": "profile",
+        "version": 1,
+        "summary": "周工时=18。按原表（周一/三/五10:00-18:00可用，各扣13:00-14:00）追加 course1（周三15:00-18:00占用）后：周一10:00-13:00、14:00-18:00（7h）；周三10:00-13:00、14:00-15:00（4h）；周五10:00-13:00、14:00-18:00（7h）；周二/四/六/日无可用时段。工作天数=3，周工时=18。与旧值21h的差异：旧值3×(8-1)=21h未含新课；course1 使周三15:00-18:00（3h）由可用转为占用，21-3=18h，其余记录不变。核定[job:v16-gap-a]=待核定；核定[job:v16-gap-b]=待核定——两岗原文在本角色知识视图仍不可访问（knowledge_read 返回 Evidence missing or not accessible，knowledge_search 无命中），按规则不猜测，移出候选。画像沿用历史：本科应届、成都、经验0年，技能Vue/TypeScript/Git，网页组件项目支持 professionalSkill=50、execution=50（锚点2，低置信度）；其余10维为null（材料未写≠不具备），完整度约17%。本轮无新增画像事实，未提出记忆写入。"
+      },
+      {
+        "id": "7b181f4d-7ea4-4317-ae56-94e457ba34a4:match@2",
+        "role": "match",
+        "version": 1,
+        "summary": "周工时=18。核定[job:v16-gap-a]=不符；核定[job:v16-gap-b]=符合。\n\n日程重算（原表+course1，其余不变）：周一10:00-13:00、14:00-18:00=7h；周三10:00-13:00、14:00-15:00=4h（course1 占用15:00-18:00，扣3h）；周五10:00-13:00、14:00-18:00=7h；周二/四/六/日无可用。工作天数=3，周工时=7+4+7=18（旧值21h已被新课取代）。\n\njob:v16-gap-a 门槛逐项：连续月数≥3——用户可连续6个月，达标；每周天数≥3——3天，达标；累计小时≥21——仅18h，不达标（差3h）。故不符，移出模拟候选。\njob:v16-gap-b 门槛逐项：连续月数≥3——6个月，达标；每周天数≥2——3天，达标；至少两天各达4小时——周一7h、周五7h（周三4h），达标；原文无累计小时门槛。故符合，纳入模拟候选。\n\n两岗均为合成样本（source=synthetic-integration，recruitmentStatus=not_applicable），不可投递，不代表真实薪资行情。旧结论“a=符合、周工时21”已被本轮新课取代，不再沿用。"
+      },
+      {
+        "id": "7b181f4d-7ea4-4317-ae56-94e457ba34a4:path",
+        "role": "path",
+        "version": 1,
+        "summary": "周工时=18。核定[job:v16-gap-a]=不符；核定[job:v16-gap-b]=符合。\n\n日程重算（原表+course1，其余不变）：周一10:00-13:00、14:00-18:00=7h；周三10:00-13:00、14:00-15:00=4h（course1 占用15:00-18:00，扣3h）；周五10:00-13:00、14:00-18:00=7h；周二/四/六/日无可用。工作天数=3，周工时=7+4+7=18（旧值21h已被新课取代）。\n\njob:v16-gap-a 门槛逐项：连续≥3个月——用户可连续6个月，达标；每周≥3天——3天，达标；累计≥21小时——仅18h，差3h，不达标。故不符，移出模拟候选。\njob:v16-gap-b 门槛逐项：连续≥3个月——6个月，达标；每周≥2天——3天，达标；至少两天各达4小时——周一7h、周五7h（周三4h），达标；原文无累计小时门槛。故符合，保留为唯一模拟候选。\n\n路径：起点类别 frontend-junior 不变；图快照仍返回两条已验证晋升路线（junior→mid，cost 0.15；junior→mid→senior，cost 0.40），未新增原文之外的岗位门槛。候选变化只影响“到岗安排”节点，不影响路线本身：a 被移出后无需再为凑满21h改课表，只需按 b 的“每周≥2天、至少两天各≥4h”安排周一/周五各7h（周三4h为余量），并保留周三15:00-18:00 课程。中高级类别仅有类别级方向，无实例可锚定。两岗均为合成样本，不可投递。"
+      },
+      {
+        "id": "7b181f4d-7ea4-4317-ae56-94e457ba34a4:report",
+        "role": "report",
+        "version": 1,
+        "summary": "周工时=18；核定[job:v16-gap-a]=不符；核定[job:v16-gap-b]=符合。报告已按本轮新课重写：新增 course1（周三15:00-18:00 占用）使周三可用由7h降为4h，周工时21→18，a 的累计≥21小时门槛差3h 故移出候选，b 保留为唯一模拟候选。已列出更新前后差异表（21→18、周三区间变化、候选 a 移出）、移出原因、一致性检查（成都/本科/经验0年 satisfied；薪资与双休 not_requested≠满足）、证据缺口与合成样本不可投递说明。旧报告“21h、a=符合”与 profile“原文不可访问”均已被取代。限制：两岗为合成样本不可投递；画像完整度约17%，实习/证书/项目职责未核验。"
+      }
+    ],
+    "tasks": []
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "number": 2,
+  "label": "v17-service/0/structured",
+  "status": "ok",
+  "messages": [
+    {
+      "role": "system",
+      "content": "你是另一位独立上下文的记忆复核代理。最多2次模型响应，每次1个工具；可以先用condition_check核对，最后review_submit。复核当前状态是否可提交并把close设为true/false。对每个hypothesisId×jobId独立提交预测和claimsRefutation；仅实际改变当前判定才是有效反例。完整读取公开岗位规则、真实原表和假设沙箱；至少N天达标不是所有天达标。旧文本、先前警示、作者预测都不是新事实。所有组具有相同核算工具，不因stateProjection格式不同而减少必要检查。"
+    },
+    {
+      "role": "user",
+      "content": "{\"sources\":[{\"id\":\"event:v17-service-0\",\"text\":\"已确认连续实习月数为6。下表是已申报的每周出勤安排；有净可用时段的日计为申报出勤日。可用行取并集，扣占用行并集；新行追加，撤销行移除对应记录。其他岗位条件均已满足。\\n|记录ID|类型|星期|开始|结束|\\n|---|---|---|---|---|\\n|base0|可用|周一|09:00|16:00|\\n|base1|可用|周三|09:00|16:00|\\n|base2|可用|周五|09:00|13:30|\"}],\"userFacts\":{\"sourceId\":\"profile:v17-service\",\"months\":6,\"text\":\"学校确认可连续实习6个月。\"},\"publicRules\":[{\"id\":\"v17-service-a\",\"title\":\"便民服务界面排班实习生\",\"rule\":{\"monthsAtLeast\":3,\"daysAtLeast\":2,\"everyWorkingDayHoursAtLeast\":4},\"sourceId\":\"job:v17-service-a\",\"sourceType\":\"synthetic-public-rule-card\",\"meaning\":\"以下JSON为岗位公开的全部时间条件；qualifyingDays是至少N天达标，everyWorkingDayHoursAtLeast是每个申报出勤日均达标；其余条件已确认满足。\",\"ruleVersion\":\"49ff1d166ba50259ea7e8f9f15b4ba9e57bcc35559fc4b85515fffcac92f0510\"},{\"id\":\"v17-service-b\",\"title\":\"便民服务界面组件实习生\",\"rule\":{\"monthsAtLeast\":3,\"daysAtLeast\":2,\"qualifyingDays\":{\"count\":2,\"hoursAtLeast\":4}},\"sourceId\":\"job:v17-service-b\",\"sourceType\":\"synthetic-public-rule-card\",\"meaning\":\"以下JSON为岗位公开的全部时间条件；qualifyingDays是至少N天达标，everyWorkingDayHoursAtLeast是每个申报出勤日均达标；其余条件已确认满足。\",\"ruleVersion\":\"feefff35e92b66ade72a052d3ff5987e4c136295895a62caaf7d106ba8782b9d\"}],\"hypotheses\":[{\"id\":\"v17-service-0-fri\",\"description\":\"试演周五新增一小时占用；仅是假设，不修改实际日程。\",\"text\":\"|记录ID|类型|星期|开始|结束|\\n|---|---|---|---|---|\\n|hypoFri|占用|周五|12:30|13:30|\"},{\"id\":\"v17-service-0-wed\",\"description\":\"试演周三全部时段被占用；仅是假设，不修改实际日程。\",\"text\":\"|记录ID|类型|星期|开始|结束|\\n|---|---|---|---|---|\\n|hypoWed|占用|周三|00:00|24:00|\"}],\"metadata\":{\"factsVersion\":\"afc80325935f3227eacaf9f7f120b8229be0cda952b3c3b548dced8d123a5ac3\",\"ruleVersions\":{\"v17-service-a\":\"49ff1d166ba50259ea7e8f9f15b4ba9e57bcc35559fc4b85515fffcac92f0510\",\"v17-service-b\":\"feefff35e92b66ade72a052d3ff5987e4c136295895a62caaf7d106ba8782b9d\"},\"evidenceIds\":[\"profile:v17-service\",\"event:v17-service-0\",\"job:v17-service-a\",\"job:v17-service-b\"]},\"authorSummary\":\"当前事实版本 afc80325935f3227eacaf9f7f120b8229be0cda952b3c3b548dced8d123a5ac3：连续实习6个月；申报出勤日为周一7h、周三7h、周五4.5h，周工时18.5h（旧记录“周工时=25”已失效，仅为历史版本数字）。A岗规则要求至少3个月、至少2天达标且每个申报出勤日均≥4h：三天均≥4h，符合。B岗规则要求至少3个月、至少2天达到≥4h（qualifyingDays为计数条件，非每日条件）：周一、周三、周五共3天达标，符合。旧警示“周五再减一小时B岗就一定不符”经复核不成立：周五12:30-13:30被占用后周五净4.5-1=3.5h，仅使周五不再达标，仍有周一、周三两天达标，B岗仍符合；该假设不改变当前判定。周三全天占用假设下周三净0h，仅周一达标（1天<2天），A、B两岗均变为不符，该假设确实推翻当前判定。\",\"authorCases\":[{\"hypothesisId\":\"v17-service-0-fri\",\"jobId\":\"v17-service-a\",\"factsVersion\":\"afc80325935f3227eacaf9f7f120b8229be0cda952b3c3b548dced8d123a5ac3\",\"ruleVersion\":\"49ff1d166ba50259ea7e8f9f15b4ba9e57bcc35559fc4b85515fffcac92f0510\",\"predictedAfter\":\"符合\",\"claimsRefutation\":false},{\"hypothesisId\":\"v17-service-0-fri\",\"jobId\":\"v17-service-b\",\"factsVersion\":\"afc80325935f3227eacaf9f7f120b8229be0cda952b3c3b548dced8d123a5ac3\",\"ruleVersion\":\"feefff35e92b66ade72a052d3ff5987e4c136295895a62caaf7d106ba8782b9d\",\"predictedAfter\":\"符合\",\"claimsRefutation\":false},{\"hypothesisId\":\"v17-service-0-wed\",\"jobId\":\"v17-service-a\",\"factsVersion\":\"afc80325935f3227eacaf9f7f120b8229be0cda952b3c3b548dced8d123a5ac3\",\"ruleVersion\":\"49ff1d166ba50259ea7e8f9f15b4ba9e57bcc35559fc4b85515fffcac92f0510\",\"predictedAfter\":\"不符\",\"claimsRefutation\":true},{\"hypothesisId\":\"v17-service-0-wed\",\"jobId\":\"v17-service-b\",\"factsVersion\":\"afc80325935f3227eacaf9f7f120b8229be0cda952b3c3b548dced8d123a5ac3\",\"ruleVersion\":\"feefff35e92b66ade72a052d3ff5987e4c136295895a62caaf7d106ba8782b9d\",\"predictedAfter\":\"不符\",\"claimsRefutation\":true}],\"stateProjection\":{\"currentAssessment\":{\"schemaVersion\":\"current-assessment-v1\",\"factsVersion\":\"afc80325935f3227eacaf9f7f120b8229be0cda952b3c3b548dced8d123a5ac3\",\"weeklyHours\":18.5,\"judgments\":[{\"jobId\":\"v17-service-a\",\"ruleVersion\":\"49ff1d166ba50259ea7e8f9f15b4ba9e57bcc35559fc4b85515fffcac92f0510\",\"verdict\":\"符合\"},{\"jobId\":\"v17-service-b\",\"ruleVersion\":\"feefff35e92b66ade72a052d3ff5987e4c136295895a62caaf7d106ba8782b9d\",\"verdict\":\"符合\"}],\"evidenceIds\":[\"profile:v17-service\",\"event:v17-service-0\",\"job:v17-service-a\",\"job:v17-service-b\"]}},\"previousWorkflow\":null}"
+    },
+    {
+      "role": "assistant",
+      "content": "I'll verify the current state and each hypothetical against the public rules.",
+      "tool_calls": [
+        {
+          "id": "call_00_FPLpt6s6Ywxsosh0GFup8260",
+          "type": "function",
+          "function": {
+            "name": "condition_check",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_00_FPLpt6s6Ywxsosh0GFup8260",
+      "content": "{\"schemaVersion\":\"business-check-v1\",\"factsVersion\":\"afc80325935f3227eacaf9f7f120b8229be0cda952b3c3b548dced8d123a5ac3\",\"weeklyHours\":18.5,\"dailyHours\":{\"周一\":7,\"周二\":0,\"周三\":7,\"周四\":0,\"周五\":4.5,\"周六\":0,\"周日\":0},\"judgments\":[{\"jobId\":\"v17-service-a\",\"ruleVersion\":\"49ff1d166ba50259ea7e8f9f15b4ba9e57bcc35559fc4b85515fffcac92f0510\",\"verdict\":\"符合\",\"checks\":[{\"predicate\":\"monthsAtLeast\",\"actual\":6,\"required\":3,\"satisfied\":true},{\"predicate\":\"daysAtLeast\",\"actual\":3,\"required\":2,\"satisfied\":true},{\"predicate\":\"everyWorkingDayHoursAtLeast\",\"actual\":4.5,\"required\":4,\"satisfied\":true}],\"weeklyHours\":18.5},{\"jobId\":\"v17-service-b\",\"ruleVersion\":\"feefff35e92b66ade72a052d3ff5987e4c136295895a62caaf7d106ba8782b9d\",\"verdict\":\"符合\",\"checks\":[{\"predicate\":\"monthsAtLeast\",\"actual\":6,\"required\":3,\"satisfied\":true},{\"predicate\":\"daysAtLeast\",\"actual\":3,\"required\":2,\"satisfied\":true},{\"predicate\":\"count(workingDayHours>=4)\",\"actual\":3,\"required\":2,\"satisfied\":true}],\"weeklyHours\":18.5}],\"cases\":[{\"hypothesisId\":\"v17-service-0-fri\",\"jobId\":\"v17-service-a\",\"factsVersion\":\"afc80325935f3227eacaf9f7f120b8229be0cda952b3c3b548dced8d123a5ac3\",\"ruleVersion\":\"49ff1d166ba50259ea7e8f9f15b4ba9e57bcc35559fc4b85515fffcac92f0510\",\"before\":\"符合\",\"predictedAfter\":\"不符\",\"claimsRefutation\":true,\"beforeChecks\":[{\"predicate\":\"monthsAtLeast\",\"actual\":6,\"required\":3,\"satisfied\":true},{\"predicate\":\"daysAtLeast\",\"actual\":3,\"required\":2,\"satisfied\":true},{\"predicate\":\"everyWorkingDayHoursAtLeast\",\"actual\":4.5,\"required\":4,\"satisfied\":true}],\"afterChecks\":[{\"predicate\":\"monthsAtLeast\",\"actual\":6,\"required\":3,\"satisfied\":true},{\"predicate\":\"daysAtLeast\",\"actual\":3,\"required\":2,\"satisfied\":true},{\"predicate\":\"everyWorkingDayHoursAtLeast\",\"actual\":3.5,\"required\":4,\"satisfied\":false}]},{\"hypothesisId\":\"v17-service-0-fri\",\"jobId\":\"v17-service-b\",\"factsVersion\":\"afc80325935f3227eacaf9f7f120b8229be0cda952b3c3b548dced8d123a5ac3\",\"ruleVersion\":\"feefff35e92b66ade72a052d3ff5987e4c136295895a62caaf7d106ba8782b9d\",\"before\":\"符合\",\"predictedAfter\":\"符合\",\"claimsRefutation\":false,\"beforeChecks\":[{\"predicate\":\"monthsAtLeast\",\"actual\":6,\"required\":3,\"satisfied\":true},{\"predicate\":\"daysAtLeast\",\"actual\":3,\"required\":2,\"satisfied\":true},{\"predicate\":\"count(workingDayHours>=4)\",\"actual\":3,\"required\":2,\"satisfied\":true}],\"afterChecks\":[{\"predicate\":\"monthsAtLeast\",\"actual\":6,\"required\":3,\"satisfied\":true},{\"predicate\":\"daysAtLeast\",\"actual\":3,\"required\":2,\"satisfied\":true},{\"predicate\":\"count(workingDayHours>=4)\",\"actual\":2,\"required\":2,\"satisfied\":true}]},{\"hypothesisId\":\"v17-service-0-wed\",\"jobId\":\"v17-service-a\",\"factsVersion\":\"afc80325935f3227eacaf9f7f120b8229be0cda952b3c3b548dced8d123a5ac3\",\"ruleVersion\":\"49ff1d166ba50259ea7e8f9f15b4ba9e57bcc35559fc4b85515fffcac92f0510\",\"before\":\"符合\",\"predictedAfter\":\"符合\",\"claimsRefutation\":false,\"beforeChecks\":[{\"predicate\":\"monthsAtLeast\",\"actual\":6,\"required\":3,\"satisfied\":true},{\"predicate\":\"daysAtLeast\",\"actual\":3,\"required\":2,\"satisfied\":true},{\"predicate\":\"everyWorkingDayHoursAtLeast\",\"actual\":4.5,\"required\":4,\"satisfied\":true}],\"afterChecks\":[{\"predicate\":\"monthsAtLeast\",\"actual\":6,\"required\":3,\"satisfied\":true},{\"predicate\":\"daysAtLeast\",\"actual\":2,\"required\":2,\"satisfied\":true},{\"predicate\":\"everyWorkingDayHoursAtLeast\",\"actual\":4.5,\"required\":4,\"satisfied\":true}]},{\"hypothesisId\":\"v17-service-0-wed\",\"jobId\":\"v17-service-b\",\"factsVersion\":\"afc80325935f3227eacaf9f7f120b8229be0cda952b3c3b548dced8d123a5ac3\",\"ruleVersion\":\"feefff35e92b66ade72a052d3ff5987e4c136295895a62caaf7d106ba8782b9d\",\"before\":\"符合\",\"predictedAfter\":\"符合\",\"claimsRefutation\":false,\"beforeChecks\":[{\"predicate\":\"monthsAtLeast\",\"actual\":6,\"required\":3,\"satisfied\":true},{\"predicate\":\"daysAtLeast\",\"actual\":3,\"required\":2,\"satisfied\":true},{\"predicate\":\"count(workingDayHours>=4)\",\"actual\":3,\"required\":2,\"satisfied\":true}],\"afterChecks\":[{\"predicate\":\"monthsAtLeast\",\"actual\":6,\"required\":3,\"satisfied\":true},{\"predicate\":\"daysAtLeast\",\"actual\":2,\"required\":2,\"satisfied\":true},{\"predicate\":\"count(workingDayHours>=4)\",\"actual\":2,\"required\":2,\"satisfied\":true}]}],\"scope\":\"Public structured time-rule cards only. Hypotheses are isolated simulations, never actual user facts.\"}"
+    }
+  ],
+  "tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "review_submit",
+        "description": "Submit a complete source-bound result.",
+        "parameters": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "type": "object",
+          "properties": {
+            "close": {
+              "type": "boolean"
+            },
+            "cases": {
+              "maxItems": 12,
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "hypothesisId": {
+                    "type": "string"
+                  },
+                  "jobId": {
+                    "type": "string"
+                  },
+                  "factsVersion": {
+                    "type": "string"
+                  },
+                  "ruleVersion": {
+                    "type": "string"
+                  },
+                  "predictedAfter": {
+                    "type": "string",
+                    "enum": [
+                      "符合",
+                      "不符",
+                      "待核定"
+                    ]
+                  },
+                  "claimsRefutation": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "hypothesisId",
+                  "jobId",
+                  "factsVersion",
+                  "ruleVersion",
+                  "predictedAfter",
+                  "claimsRefutation"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "note": {
+              "type": "string",
+              "maxLength": 3000
+            }
+          },
+          "required": [
+            "close",
+            "cases",
+            "note"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  ],
+  "elapsedMs": 3849,
+  "response": {
+    "message": {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_00_w4AeNwriFcM88q78Bq8o2487",
+          "type": "function",
+          "function": {
+            "name": "review_submit",
+            "arguments": "{\"close\": true, \"cases\": [{\"hypothesisId\": \"v17-service-0-fri\", \"jobId\": \"v17-service-a\", \"factsVersion\": \"afc80325935f3227eacaf9f7f120b8229be0cda952b3c3b548dced8d123a5ac3\", \"ruleVersion\": \"49ff1d166ba50259ea7e8f9f15b4ba9e57bcc35559fc4b85515fffcac92f0510\", \"predictedAfter\": \"不符\", \"claimsRefutation\": true}, {\"hypothesisId\": \"v17-service-0-fri\", \"jobId\": \"v17-service-b\", \"factsVersion\": \"afc80325935f3227eacaf9f7f120b8229be0cda952b3c3b548dced8d123a5ac3\", \"ruleVersion\": \"feefff35e92b66ade72a052d3ff5987e4c136295895a62caaf7d106ba8782b9d\", \"predictedAfter\": \"符合\", \"claimsRefutation\": false}, {\"hypothesisId\": \"v17-service-0-wed\", \"jobId\": \"v17-service-a\", \"factsVersion\": \"afc80325935f3227eacaf9f7f120b8229be0cda952b3c3b548dced8d123a5ac3\", \"ruleVersion\": \"49ff1d166ba50259ea7e8f9f15b4ba9e57bcc35559fc4b85515fffcac92f0510\", \"predictedAfter\": \"符合\", \"claimsRefutation\": false}, {\"hypothesisId\": \"v17-service-0-wed\", \"jobId\": \"v17-service-b\", \"factsVersion\": \"afc80325935f3227eacaf9f7f120b8229be0cda952b3c3b548dced8d123a5ac3\", \"ruleVersion\": \"feefff35e92b66ade72a052d3ff5987e4c136295895a62caaf7d106ba8782b9d\", \"predictedAfter\": \"符合\", \"claimsRefutation\": false}], \"note\": \"当前事实：周一7h、周三7h、周五4.5h，周18.5h，连续6个月。A岗（每日均≥4h）：三天均≥4h，符合；B岗（≥2天达4h）：3天达标，符合。假设1（周五12:30-13:30占用）：周五净3.5h，A岗everyWorkingDayHoursAtLeast被破坏→不符（作者预测“符合”错误，claimsRefutation=true）；B岗仍有周一、周三2天达标→仍符合（作者正确）。假设2（周三全天占用）：周三净0h，但周三不再是申报出勤日，剩余周一7h、周五4.5h两天均≥4h，A岗daysAtLeast=2、每日≥4h均满足→仍符合；B岗2天达标→仍符合。作者称周三假设使两岗均不符，属错误（把0h日仍计为出勤日），故两岗claimsRefutation=false。close=true。\"}"
+          }
+        }
+      ]
+    },
+    "usage": {
+      "input": 3797,
+      "output": 793,
+      "cachedInput": 1920
+    },
+    "finishReason": "tool_calls"
+  }
+}

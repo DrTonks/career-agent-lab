@@ -1,0 +1,261 @@
+{
+  "method": "Post-run source-linked content inspection by Codex; supplementary to the unchanged frozen metrics, not a replacement. Current-number context, source arithmetic and the saved final statements were inspected.",
+  "rows": [
+    {
+      "trajectory": "v16-gap",
+      "arm": "direct",
+      "event": 1,
+      "reviewedCurrentHours": 18.0,
+      "expectedHours": 18,
+      "currentHoursCorrect": true,
+      "supportingExcerpt": "# 日程更新与核定结果\n\n周工时=18；核定[job:v16-gap-a]=不符；核定[job:v16-gap-b]=符合。\n\n## 一、更新后的每周日程\n\n| 星期 | 可用时段 | 小时 |\n|---|---|---|\n| 周一 | ",
+      "rawResult": "v16-gap/direct/event-1/result.json",
+      "rawSha256": "217d6e894eeec614243a30819df40dba52c9abe6c8ed3ed541a794fb03a02966",
+      "note": "Current declaration distinguished from explicitly invalidated historical values and calculation chains. This does not assert that every ancillary recommendation is correct."
+    },
+    {
+      "trajectory": "v16-gap",
+      "arm": "direct",
+      "event": 2,
+      "reviewedCurrentHours": 18.0,
+      "expectedHours": 18,
+      "currentHoursCorrect": true,
+      "supportingExcerpt": "# 生涯报告（局部修改版：封面配色）\n\n周工时=18；核定[job:v16-gap-a]=不符；核定[job:v16-gap-b]=符合。\n\n> 本次仅改呈现层：作品封面配色改为绿色。日程原表、区间、工时计算、岗位核定、候选与路径结论一律不变。\n\n##",
+      "rawResult": "v16-gap/direct/event-2/result.json",
+      "rawSha256": "5c73fd40a22781b21237b3699aea288301d9a3287f0708e127de0df6e8788da4",
+      "note": "Current declaration distinguished from explicitly invalidated historical values and calculation chains. This does not assert that every ancillary recommendation is correct."
+    },
+    {
+      "trajectory": "v16-gap",
+      "arm": "direct",
+      "event": 3,
+      "reviewedCurrentHours": 21.0,
+      "expectedHours": 21,
+      "currentHoursCorrect": true,
+      "supportingExcerpt": "# 日程追加与核定更新结果\n\n周工时=21；核定[job:v16-gap-a]=符合；核定[job:v16-gap-b]=符合。\n\n## 一、日程表（已追加 extra1，原有记录保留）\n\n| 星期 | 可用时段 | 小时 |\n|---|--",
+      "rawResult": "v16-gap/direct/event-3/result.json",
+      "rawSha256": "32d152d80934a9ef1349512aecbc4113426f9923f6e33dd751d50a175af75661",
+      "note": "Current declaration distinguished from explicitly invalidated historical values and calculation chains. This does not assert that every ancillary recommendation is correct."
+    },
+    {
+      "trajectory": "v16-gap",
+      "arm": "natural",
+      "event": 1,
+      "reviewedCurrentHours": 18.0,
+      "expectedHours": 18,
+      "currentHoursCorrect": true,
+      "supportingExcerpt": ":00|14:00|\n|course1|占用|周三|15:00|18:00|\n\n## 二、周工时=18（计算过程）\n\n规则：可用行取并集，再扣除占用行并集；未列为可用的时段不可实习。\n\n- 周一：10:00-18:00 扣 13:00-14:00 → 10:00-13:00、14:00-18:00 =",
+      "rawResult": "v16-gap/natural/event-1/result.json",
+      "rawSha256": "ca1a8c9eb59b509b7f537f7a83de985c9b71a913691bc82d554faff97f20bbd3",
+      "note": "Current declaration distinguished from explicitly invalidated historical values and calculation chains. This does not assert that every ancillary recommendation is correct."
+    },
+    {
+      "trajectory": "v16-gap",
+      "arm": "natural",
+      "event": 2,
+      "reviewedCurrentHours": 18.0,
+      "expectedHours": 18,
+      "currentHoursCorrect": true,
+      "supportingExcerpt": "验（材料未写≠不具备）。能力评分为低置信度描述性估计，非录用概率。\n\n## 二、岗位匹配\n周工时＝18（周一 7h、周三 4h、周五 7h，共 3 天；course1 周三 15:00–18:00 占用已计入，旧值 21h 作废）。\n\n- 核定[job:v16-gap-a]＝不符：需每周≥3 天且累计",
+      "rawResult": "v16-gap/natural/event-2/result.json",
+      "rawSha256": "0e800e5d31600cc19295b32eded929f86c3c2bdd45f1725dd2865e645a4e6940",
+      "note": "Current declaration distinguished from explicitly invalidated historical values and calculation chains. This does not assert that every ancillary recommendation is correct."
+    },
+    {
+      "trajectory": "v16-gap",
+      "arm": "natural",
+      "event": 3,
+      "reviewedCurrentHours": 21.0,
+      "expectedHours": 21,
+      "currentHoursCorrect": true,
+      "supportingExcerpt": "# 日程核定更新（v3 · 追加 extra1）\n\n## 一、日程核定结果\n\n周工时=21（原 18h 作废）。原表记录全部保留，仅追加 extra1 可用 周五 18:00-21:00：\n\n| 星期 | 可用时段（并集） | 工时 | 说明 |\n|---|---|---|---|\n| 周",
+      "rawResult": "v16-gap/natural/event-3/result.json",
+      "rawSha256": "4e4c6cbd38b63b3acc83040fb0a51976f8d4431cdedbd4d77e420e8f483b3ec5",
+      "note": "Current declaration distinguished from explicitly invalidated historical values and calculation chains. This does not assert that every ancillary recommendation is correct."
+    },
+    {
+      "trajectory": "v16-gap",
+      "arm": "counterexample",
+      "event": 1,
+      "reviewedCurrentHours": 18.0,
+      "expectedHours": 18,
+      "currentHoursCorrect": true,
+      "supportingExcerpt": "# 更新结果：周工时=18，gap-a 不符，gap-b 符合\n\n已按本轮追加记录 course1（周三 15:00-18:00 占用）重算日程并重做核定，其余记录不变。\n\n## 一、更新后的日程表\n\n| 星期 | 可用时段 ",
+      "rawResult": "v16-gap/counterexample/event-1/result.json",
+      "rawSha256": "068696d6b3607d8425dbfe3ce433d3743f7f29d2fe5327ea3c543d7af7ae7b96",
+      "note": "Current declaration distinguished from explicitly invalidated historical values and calculation chains. This does not assert that every ancillary recommendation is correct."
+    },
+    {
+      "trajectory": "v16-gap",
+      "arm": "counterexample",
+      "event": 2,
+      "reviewedCurrentHours": 18.0,
+      "expectedHours": 18,
+      "currentHoursCorrect": true,
+      "supportingExcerpt": "# 生涯报告（局部更新 v3：仅封面配色）\n\n周工时=18；核定[job:v16-gap-a]=不符；核定[job:v16-gap-b]=符合。\n数据性质：两岗均为合成样本（source=synthetic-integration），不可投递，不构成真实薪资",
+      "rawResult": "v16-gap/counterexample/event-2/result.json",
+      "rawSha256": "7a4e3d886c7ceb0439d9df2d7c98847a422727dbc32ce049945f12120a27aa4c",
+      "note": "Current declaration distinguished from explicitly invalidated historical values and calculation chains. This does not assert that every ancillary recommendation is correct."
+    },
+    {
+      "trajectory": "v16-gap",
+      "arm": "counterexample",
+      "event": 3,
+      "reviewedCurrentHours": 21.0,
+      "expectedHours": 21,
+      "currentHoursCorrect": true,
+      "supportingExcerpt": "# 日程核定更新（追加 extra1）\n\n周工时=21；核定[job:v16-gap-a]=符合；核定[job:v16-gap-b]=符合。\n\n## 一、更新后的每周日程表\n\n| 星期 | 可用时段 | 小时 |\n|---|---|---|\n| 周一 |",
+      "rawResult": "v16-gap/counterexample/event-3/result.json",
+      "rawSha256": "d6fad186067bc23376d07167d0cd8017987ab9ef5d9c974cf98c70cbfac481e6",
+      "note": "Current declaration distinguished from explicitly invalidated historical values and calculation chains. This does not assert that every ancillary recommendation is correct."
+    },
+    {
+      "trajectory": "v16-overlap",
+      "arm": "direct",
+      "event": 1,
+      "reviewedCurrentHours": 18.5,
+      "expectedHours": 18.5,
+      "currentHoursCorrect": true,
+      "supportingExcerpt": "# 更新结果（基于新增 course1）\n\n周工时=18.5。核定[job:v16-overlap-a]=不符；核定[job:v16-overlap-b]=符合。\n\n## 一、日程与工时变化\n\n新增占用行 course1（周五 12:30–15:30），其余记",
+      "rawResult": "v16-overlap/direct/event-1/result.json",
+      "rawSha256": "47792eb11cc85515278b8d6f64a5d4bb3f84e1bfe135f86df323be8d13a7fe11",
+      "note": "Current declaration distinguished from explicitly invalidated historical values and calculation chains. This does not assert that every ancillary recommendation is correct."
+    },
+    {
+      "trajectory": "v16-overlap",
+      "arm": "direct",
+      "event": 2,
+      "reviewedCurrentHours": 18.5,
+      "expectedHours": 18.5,
+      "currentHoursCorrect": true,
+      "supportingExcerpt": "\n- 作品封面配色：绿色（用户本轮指定，仅记录，不推断设计理由）。\n\n## 二、岗位匹配\n周工时=18.5（周一 7h、周三 7h、周五 4.5h，可用 3 天；周五可用 09:00-12:00、15:30-17:00）。\n- 核定[job:v16-overlap-a]=不符：18.5h < 原文每周≥2",
+      "rawResult": "v16-overlap/direct/event-2/result.json",
+      "rawSha256": "fa5093d90ee14e824a8586d07df30409826cc738528a659f0f82c5d236db27f6",
+      "note": "Current declaration distinguished from explicitly invalidated historical values and calculation chains. This does not assert that every ancillary recommendation is correct."
+    },
+    {
+      "trajectory": "v16-overlap",
+      "arm": "direct",
+      "event": 3,
+      "reviewedCurrentHours": 20.5,
+      "expectedHours": 20.5,
+      "currentHoursCorrect": true,
+      "supportingExcerpt": "# 日程核定更新（已追加 extra1）\n\n周工时=20.5。核定[job:v16-overlap-a]=不符；核定[job:v16-overlap-b]=符合。\n\n## 一、更新后的可用时段（原表、course1、午休均保留）\n\n| 星期 | 可用时段 | ",
+      "rawResult": "v16-overlap/direct/event-3/result.json",
+      "rawSha256": "425d9773ef80f209a000d013e123b6580376fc6bd1d3318c88876fd95cb6327a",
+      "note": "Current declaration distinguished from explicitly invalidated historical values and calculation chains. This does not assert that every ancillary recommendation is correct."
+    },
+    {
+      "trajectory": "v16-overlap",
+      "arm": "natural",
+      "event": 1,
+      "reviewedCurrentHours": 18.5,
+      "expectedHours": 18.5,
+      "currentHoursCorrect": true,
+      "supportingExcerpt": "# 更新结果：日程追加 course1 后的重算与核定\n\n周工时=18.5。核定[job:v16-overlap-a]=不符；核定[job:v16-overlap-b]=符合。\n\n## 一、更新后的日程与可用时段\n\n原表可用行（周一/周三/周五 09:00-17:00）与占",
+      "rawResult": "v16-overlap/natural/event-1/result.json",
+      "rawSha256": "058e2d42f1f6e72665e34f8d849899e4c794555959290f66011edb2cfc222ea6",
+      "note": "Current declaration distinguished from explicitly invalidated historical values and calculation chains. This does not assert that every ancillary recommendation is correct."
+    },
+    {
+      "trajectory": "v16-overlap",
+      "arm": "natural",
+      "event": 2,
+      "reviewedCurrentHours": 18.5,
+      "expectedHours": 18.5,
+      "currentHoursCorrect": true,
+      "supportingExcerpt": "# 生涯报告（局部修改版 v3）\n\n周工时=18.5。核定 [job:v16-overlap-a]=不符；核定 [job:v16-overlap-b]=符合。\n\n本轮变更仅一项：作品封面颜色改为绿色。原文无任何颜色记录，此项来源为本轮用户指示，非既有事",
+      "rawResult": "v16-overlap/natural/event-2/result.json",
+      "rawSha256": "191f0f4eee4d43e5c1403e55c52c645403c76aa05754e6d8e1c94bbeed3286af",
+      "note": "Current declaration distinguished from explicitly invalidated historical values and calculation chains. This does not assert that every ancillary recommendation is correct."
+    },
+    {
+      "trajectory": "v16-overlap",
+      "arm": "natural",
+      "event": 3,
+      "reviewedCurrentHours": 20.5,
+      "expectedHours": 20.5,
+      "currentHoursCorrect": true,
+      "supportingExcerpt": "# 日程更新核定结果\n\n周工时=20.5\n核定[job:v16-overlap-a]=不符\n核定[job:v16-overlap-b]=符合\n\n## 一、日程更新（已追加 extra1，原表保留）\n\n新增：周五 16:00-19:00（可用",
+      "rawResult": "v16-overlap/natural/event-3/result.json",
+      "rawSha256": "01f269a7d148b9f223737f02b287d18d11b67fed086031c0099c8a3a97fa5e1c",
+      "note": "Current declaration distinguished from explicitly invalidated historical values and calculation chains. This does not assert that every ancillary recommendation is correct."
+    },
+    {
+      "trajectory": "v16-overlap",
+      "arm": "counterexample",
+      "event": 1,
+      "reviewedCurrentHours": 18.5,
+      "expectedHours": 18.5,
+      "currentHoursCorrect": true,
+      "supportingExcerpt": "# 更新结果（含 course1）\n\n周工时=18.5　核定[job:v16-overlap-a]=不符　核定[job:v16-overlap-b]=符合\n\n## 一、日程重算\n\n本轮唯一新事实：course1 占用 周五 12:30-15:30，其余记",
+      "rawResult": "v16-overlap/counterexample/event-1/result.json",
+      "rawSha256": "3642b8325760d7028239064d1e016f6e8bfc5675e2fad16fc324f482a43dfd77",
+      "note": "Current declaration distinguished from explicitly invalidated historical values and calculation chains. This does not assert that every ancillary recommendation is correct."
+    },
+    {
+      "trajectory": "v16-overlap",
+      "arm": "counterexample",
+      "event": 2,
+      "reviewedCurrentHours": 18.5,
+      "expectedHours": 18.5,
+      "currentHoursCorrect": true,
+      "supportingExcerpt": "定与发展路径均保持不变。\n\n## 本次更新\n- 作品封面主色：绿色；版式与信息不变。\n- 周工时仍为 18.5 小时/周，可用 3 天：周一 7h、周三 7h、周五 4.5h，其余 0h。\n- 核定格式保留：核定[job:v16-overlap-a]=不符；核定[job:v16-overlap-b]=符合。\n",
+      "rawResult": "v16-overlap/counterexample/event-2/result.json",
+      "rawSha256": "47c9614c0a3cef7206bdfe7f859fa352a4da0ba4a31099e62b6c978dc9047500",
+      "note": "Current declaration distinguished from explicitly invalidated historical values and calculation chains. This does not assert that every ancillary recommendation is correct."
+    },
+    {
+      "trajectory": "v16-overlap",
+      "arm": "counterexample",
+      "event": 3,
+      "reviewedCurrentHours": 20.5,
+      "expectedHours": 20.5,
+      "currentHoursCorrect": true,
+      "supportingExcerpt": "# 日程核定更新（追加 extra1）\n\n周工时=20.5　核定[job:v16-overlap-a]=不符　核定[job:v16-overlap-b]=符合\n\n## 一、日程原表（已追加 extra1，原有内容全部保留）\n\n| 记录ID | 类型 | 星期",
+      "rawResult": "v16-overlap/counterexample/event-3/result.json",
+      "rawSha256": "969cdca141274ac4c36bc99adbe27fa39ab8d94f42aec7f16e2ccafb95248b04",
+      "note": "Current declaration distinguished from explicitly invalidated historical values and calculation chains. This does not assert that every ancillary recommendation is correct."
+    }
+  ],
+  "currentHoursCorrectByArm": {
+    "direct": 6,
+    "natural": 6,
+    "counterexample": 6
+  },
+  "ancillaryReasoningIssues": [
+    {
+      "kind": "false-counterfactual-business-consequence",
+      "rawResult": "v16-overlap/counterexample/event-2/result.json",
+      "exactQuote": "2. 按 b 做时间演练：周一、周三整段到岗，周五只用 09:00–12:00；周五缓冲仅 0.5h，若再被占用，b 将转不符。",
+      "rule": "连续至少3个月，每周至少2天，至少两天各达到4小时。",
+      "counterexampleToWarning": {
+        "monHours": 7,
+        "wedHours": 7,
+        "friHours": 3.5,
+        "daysAtLeast4Hours": 2,
+        "minimumRequiredDaysAtLeast4Hours": 2,
+        "qualifies": true
+      },
+      "finding": "Losing one Friday hour does not invalidate B, because Monday and Wednesday already satisfy the two-day requirement."
+    }
+  ],
+  "extractionIssues": [
+    {
+      "type": "equation",
+      "example": "周工时=7+4+7=18",
+      "effect": "Frozen scalar parser reads the first operand 7 as a second conflicting value."
+    },
+    {
+      "type": "historical-quote",
+      "example": "历史报告（周工时=25）已作废",
+      "effect": "Frozen parser treats an explicitly obsolete value as current, also causing conservative closure rejection."
+    },
+    {
+      "type": "prose-current-value",
+      "example": "周工时仍为18.5小时/周",
+      "effect": "Current value is stated correctly in prose while the only equals-style marker can refer to history."
+    }
+  ],
+  "recommendation": "Separate current numeric assessment from history; verify the actual business predicate before calling a changed segment a refutation of eligibility."
+}

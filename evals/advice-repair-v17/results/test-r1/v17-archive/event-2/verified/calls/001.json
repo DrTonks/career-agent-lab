@@ -1,0 +1,119 @@
+{
+  "number": 1,
+  "label": "v17-archive/2/verified",
+  "status": "ok",
+  "messages": [
+    {
+      "role": "system",
+      "content": "你是另一位独立上下文的记忆复核代理。最多2次模型响应，每次1个工具；可以先用condition_check核对，最后review_submit。复核当前状态是否可提交并把close设为true/false。对每个hypothesisId×jobId独立提交预测和claimsRefutation；仅实际改变当前判定才是有效反例。完整读取公开岗位规则、真实原表和假设沙箱；至少N天达标不是所有天达标。旧文本、先前警示、作者预测都不是新事实。所有组具有相同核算工具，不因stateProjection格式不同而减少必要检查。"
+    },
+    {
+      "role": "user",
+      "content": "{\"sources\":[{\"id\":\"event:v17-archive-0\",\"text\":\"已确认连续实习月数为6。下表是已申报的每周出勤安排；有净可用时段的日计为申报出勤日。可用行取并集，扣占用行并集；新行追加，撤销行移除对应记录。其他岗位条件均已满足。\\n|记录ID|类型|星期|开始|结束|\\n|---|---|---|---|---|\\n|base0|可用|周一|09:00|15:00|\\n|base1|可用|周三|09:00|15:00|\\n|base2|可用|周五|09:00|15:00|\"},{\"id\":\"event:v17-archive-1\",\"text\":\"学校调整安排，追加下列记录，其他记录不变。\\n|记录ID|类型|星期|开始|结束|\\n|---|---|---|---|---|\\n|friClass|占用|周五|13:00|15:00|\"},{\"id\":\"event:v17-archive-2\",\"text\":\"追加周三课程，其他不变。\\n|记录ID|类型|星期|开始|结束|\\n|---|---|---|---|---|\\n|wedClass|占用|周三|13:00|15:00|\"}],\"userFacts\":{\"sourceId\":\"profile:v17-archive\",\"months\":6,\"text\":\"学校确认可连续实习6个月。\"},\"publicRules\":[{\"id\":\"v17-archive-a\",\"title\":\"档案检索界面排班实习生\",\"rule\":{\"monthsAtLeast\":3,\"daysAtLeast\":2,\"weeklyHoursAtLeast\":18},\"sourceId\":\"job:v17-archive-a\",\"sourceType\":\"synthetic-public-rule-card\",\"meaning\":\"以下JSON为岗位公开的全部时间条件；qualifyingDays是至少N天达标，everyWorkingDayHoursAtLeast是每个申报出勤日均达标；其余条件已确认满足。\",\"ruleVersion\":\"df5f70bf712ff4c622c30801244538f6e7972a6e7a3754e9594c3a772e79760c\"},{\"id\":\"v17-archive-b\",\"title\":\"档案检索界面组件实习生\",\"rule\":{\"monthsAtLeast\":3,\"daysAtLeast\":2,\"qualifyingDays\":{\"count\":2,\"hoursAtLeast\":5}},\"sourceId\":\"job:v17-archive-b\",\"sourceType\":\"synthetic-public-rule-card\",\"meaning\":\"以下JSON为岗位公开的全部时间条件；qualifyingDays是至少N天达标，everyWorkingDayHoursAtLeast是每个申报出勤日均达标；其余条件已确认满足。\",\"ruleVersion\":\"049dabcacab2d91f5263b923f9874647143a73c532c65d77d9f4f7501afd69f3\"}],\"hypotheses\":[{\"id\":\"v17-archive-2-fri\",\"description\":\"试演周五新增一小时占用；仅是假设，不修改实际日程。\",\"text\":\"|记录ID|类型|星期|开始|结束|\\n|---|---|---|---|---|\\n|hypoFri|占用|周五|14:00|15:00|\"},{\"id\":\"v17-archive-2-wed\",\"description\":\"试演周三全部时段被占用；仅是假设，不修改实际日程。\",\"text\":\"|记录ID|类型|星期|开始|结束|\\n|---|---|---|---|---|\\n|hypoWed|占用|周三|00:00|24:00|\"}],\"metadata\":{\"factsVersion\":\"a4a10bb364f86234fd5e75326fdd977a8b43a02c30ce0534797df4f1f0acc1eb\",\"ruleVersions\":{\"v17-archive-a\":\"df5f70bf712ff4c622c30801244538f6e7972a6e7a3754e9594c3a772e79760c\",\"v17-archive-b\":\"049dabcacab2d91f5263b923f9874647143a73c532c65d77d9f4f7501afd69f3\"},\"evidenceIds\":[\"profile:v17-archive\",\"event:v17-archive-0\",\"event:v17-archive-1\",\"event:v17-archive-2\",\"job:v17-archive-a\",\"job:v17-archive-b\"]},\"authorSummary\":\"当前事实版本a4a10bb3：连续实习6个月（≥3个月，两岗月数条件均满足）。实际日程：周一09:00-15:00（6小时）、周三09:00-15:00扣占用13:00-15:00后净09:00-13:00（4小时）、周五09:00-15:00扣占用13:00-15:00后净09:00-13:00（4小时）；申报出勤日3天，周工时14小时。旧版本a600013e的“周三6小时、周工时16小时、B岗符合”结论已失效，不是当前值（更早版本78999689的“周五6小时、周工时18小时、A岗符合”亦已失效）。A岗（档案检索界面排班实习生，月数≥3、达标天数≥2、周工时≥18）：月数6≥3、达标天数3≥2，但周工时14<18，判定不符。B岗（档案检索界面组件实习生，月数≥3、达标天数≥2、至少2天达到5小时）：周一6≥5，周三4<5，周五4<5，达标天数1<2，判定不符。假设复核（不修改真实日程）：周五再增14:00-15:00占用后，周五净09:00-13:00仍4小时，周工时仍14小时，A岗仍不符、B岗仍不符，均不改变当前判定，claimsRefutation为false。周三全天占用后，周三净0不计为申报出勤日，仅周一6小时达标，达标天数1<2，周工时6小时；A岗不符（周工时6<18且达标天数1<2），B岗不符（达标天数1<2），两者判定与当前一致，不改变当前判定，claimsRefutation为false。\",\"authorCases\":[{\"hypothesisId\":\"v17-archive-2-fri\",\"jobId\":\"v17-archive-a\",\"factsVersion\":\"a4a10bb364f86234fd5e75326fdd977a8b43a02c30ce0534797df4f1f0acc1eb\",\"ruleVersion\":\"df5f70bf712ff4c622c30801244538f6e7972a6e7a3754e9594c3a772e79760c\",\"predictedAfter\":\"不符\",\"claimsRefutation\":false},{\"hypothesisId\":\"v17-archive-2-fri\",\"jobId\":\"v17-archive-b\",\"factsVersion\":\"a4a10bb364f86234fd5e75326fdd977a8b43a02c30ce0534797df4f1f0acc1eb\",\"ruleVersion\":\"049dabcacab2d91f5263b923f9874647143a73c532c65d77d9f4f7501afd69f3\",\"predictedAfter\":\"不符\",\"claimsRefutation\":false},{\"hypothesisId\":\"v17-archive-2-wed\",\"jobId\":\"v17-archive-a\",\"factsVersion\":\"a4a10bb364f86234fd5e75326fdd977a8b43a02c30ce0534797df4f1f0acc1eb\",\"ruleVersion\":\"df5f70bf712ff4c622c30801244538f6e7972a6e7a3754e9594c3a772e79760c\",\"predictedAfter\":\"不符\",\"claimsRefutation\":false},{\"hypothesisId\":\"v17-archive-2-wed\",\"jobId\":\"v17-archive-b\",\"factsVersion\":\"a4a10bb364f86234fd5e75326fdd977a8b43a02c30ce0534797df4f1f0acc1eb\",\"ruleVersion\":\"049dabcacab2d91f5263b923f9874647143a73c532c65d77d9f4f7501afd69f3\",\"predictedAfter\":\"不符\",\"claimsRefutation\":false}],\"stateProjection\":{\"currentAssessment\":{\"schemaVersion\":\"current-assessment-v1\",\"factsVersion\":\"a4a10bb364f86234fd5e75326fdd977a8b43a02c30ce0534797df4f1f0acc1eb\",\"weeklyHours\":14,\"judgments\":[{\"jobId\":\"v17-archive-a\",\"ruleVersion\":\"df5f70bf712ff4c622c30801244538f6e7972a6e7a3754e9594c3a772e79760c\",\"verdict\":\"不符\"},{\"jobId\":\"v17-archive-b\",\"ruleVersion\":\"049dabcacab2d91f5263b923f9874647143a73c532c65d77d9f4f7501afd69f3\",\"verdict\":\"不符\"}],\"evidenceIds\":[\"profile:v17-archive\",\"event:v17-archive-0\",\"event:v17-archive-1\",\"event:v17-archive-2\",\"job:v17-archive-a\",\"job:v17-archive-b\"]}},\"previousWorkflow\":{\"currentStateCommitted\":true,\"fullyResolved\":true,\"closureReason\":null}}"
+    }
+  ],
+  "tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "review_submit",
+        "description": "Submit a complete source-bound result.",
+        "parameters": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "type": "object",
+          "properties": {
+            "close": {
+              "type": "boolean"
+            },
+            "cases": {
+              "maxItems": 12,
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "hypothesisId": {
+                    "type": "string"
+                  },
+                  "jobId": {
+                    "type": "string"
+                  },
+                  "factsVersion": {
+                    "type": "string"
+                  },
+                  "ruleVersion": {
+                    "type": "string"
+                  },
+                  "predictedAfter": {
+                    "type": "string",
+                    "enum": [
+                      "符合",
+                      "不符",
+                      "待核定"
+                    ]
+                  },
+                  "claimsRefutation": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "hypothesisId",
+                  "jobId",
+                  "factsVersion",
+                  "ruleVersion",
+                  "predictedAfter",
+                  "claimsRefutation"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "note": {
+              "type": "string",
+              "maxLength": 3000
+            }
+          },
+          "required": [
+            "close",
+            "cases",
+            "note"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "condition_check",
+        "description": "Read a deterministic receipt for the current calendar and every listed hypothetical case against the public time-rule cards. The hypothetical cases do not change real facts.",
+        "parameters": {
+          "type": "object",
+          "properties": {},
+          "additionalProperties": false
+        }
+      }
+    }
+  ],
+  "elapsedMs": 706,
+  "response": {
+    "message": {
+      "role": "assistant",
+      "content": "I'll verify the current state with the deterministic receipt before submitting.",
+      "tool_calls": [
+        {
+          "id": "call_00_MS6MRySMzI3UdsUoEunn7335",
+          "type": "function",
+          "function": {
+            "name": "condition_check",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    "usage": {
+      "input": 2695,
+      "output": 33,
+      "cachedInput": 2560
+    },
+    "finishReason": "tool_calls"
+  }
+}

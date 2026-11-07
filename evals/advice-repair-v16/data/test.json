@@ -1,0 +1,982 @@
+[
+  {
+    "id": "v16-gap",
+    "split": "test",
+    "jobIds": [
+      "v16-gap-a",
+      "v16-gap-b"
+    ],
+    "resume": "本科应届，在成都使用Vue、TypeScript、Git完成过网页组件项目，其他指定岗位条件已确认满足。",
+    "constraints": {
+      "cities": [
+        "成都"
+      ],
+      "education": "本科",
+      "experienceYears": 0,
+      "skills": [
+        "Vue",
+        "TypeScript",
+        "Git"
+      ],
+      "pathMode": "balanced"
+    },
+    "events": [
+      {
+        "id": "v16-gap-0",
+        "text": "仅核定v16-gap-a和v16-gap-b的实习时间条件，给出模拟候选与行动。只有符合的纳入候选，不符或待核定的移出。首次四个专家协作，后续按最小必要范围更新。每个实际执行的专家summary和最终答复均写“周工时=数字”（当前每周有效小时数）；匹配、路径、报告summary与最终答复还需“核定[岗位ID]=符合/不符/待核定”。可沿用未变历史部分，但要检查其是否被新事实取代。路径使用已有前端类别关系，不增加原文之外的岗位门槛。\n我能连续实习6个月。以下是完整的每周重复日程原表，适用于整个实习期间：可用行取并集，再扣除占用行的并集；没有列为可用的时段不可实习。新行追加到原表；只有明确的撤销行才删除对应记录。原表之外没有其他日程限制。\n日程原始记录：\n|记录ID|类型|星期|开始|结束|\n|---|---|---|---|---|\n|base0|可用|周一|10:00|18:00|\n|lunch0|占用|周一|13:00|14:00|\n|base1|可用|周三|10:00|18:00|\n|lunch1|占用|周三|13:00|14:00|\n|base2|可用|周五|10:00|18:00|\n|lunch2|占用|周五|13:00|14:00|"
+      },
+      {
+        "id": "v16-gap-1",
+        "text": "学校追加了下列每周课程安排，请据此更新原表和核定；其余记录不变。\n日程原始记录：\n|记录ID|类型|星期|开始|结束|\n|---|---|---|---|---|\n|course1|占用|周三|15:00|18:00|\n请保留周工时与核定格式，只运行必要专家。"
+      },
+      {
+        "id": "v16-gap-2",
+        "text": "作品封面改为绿色，其他信息及日程原表不变。请沿用当前核定，保留周工时和核定格式，只运行必要专家。"
+      },
+      {
+        "id": "v16-gap-3",
+        "text": "学校新批准了下列可实习时段，请追加到原表；原有可用时段、课程和午休仍保留。\n日程原始记录：\n|记录ID|类型|星期|开始|结束|\n|---|---|---|---|---|\n|extra1|可用|周五|18:00|21:00|\n请更新核定，保留周工时和核定格式，只运行必要专家。"
+      }
+    ],
+    "snapshots": [
+      {
+        "version": "db98c36734a950d23a2f15973780799f78b12685fd895761eed818c5e99f2c60",
+        "label": "Synthetic v16 gap",
+        "source": "synthetic",
+        "categories": [
+          {
+            "id": "frontend-junior",
+            "title": "初级前端开发",
+            "family": "frontend",
+            "level": "junior",
+            "summary": "Vue TypeScript 网页组件开发与测试",
+            "skills": [
+              "Vue",
+              "TypeScript",
+              "Git",
+              "CSS"
+            ],
+            "abilities": {}
+          },
+          {
+            "id": "frontend-mid",
+            "title": "中级前端开发",
+            "family": "frontend",
+            "level": "mid",
+            "summary": "前端工程化、性能优化、复杂应用",
+            "skills": [
+              "Vue",
+              "TypeScript",
+              "性能优化",
+              "测试"
+            ],
+            "abilities": {}
+          },
+          {
+            "id": "frontend-senior",
+            "title": "高级前端开发",
+            "family": "frontend",
+            "level": "senior",
+            "summary": "前端架构、团队协作、技术决策",
+            "skills": [
+              "架构",
+              "TypeScript",
+              "性能优化",
+              "协作"
+            ],
+            "abilities": {}
+          }
+        ],
+        "edges": [
+          {
+            "source": "frontend-junior",
+            "target": "frontend-mid",
+            "type": "promotion",
+            "score": 0.85,
+            "reason": "工程化与性能优化能力进阶"
+          },
+          {
+            "source": "frontend-mid",
+            "target": "frontend-senior",
+            "type": "promotion",
+            "score": 0.75,
+            "reason": "架构与团队协作要求提升"
+          }
+        ],
+        "documents": [],
+        "jobs": [
+          {
+            "id": "v16-gap-a",
+            "title": "校园空间预约界面实习生",
+            "city": "成都",
+            "categoryId": "frontend-junior",
+            "family": "frontend",
+            "level": "junior",
+            "company": "合成校园界面组",
+            "source": "synthetic-integration",
+            "updatedAt": "2026-11-07",
+            "jd": "合成岗位：校园空间预约界面实习生。成都，本科应届，Vue、TypeScript、Git，月薪6000元。连续至少3个月，每周至少3天、累计至少21小时。累计时间按每周日程原表核算，占用时段不计入，重叠可用时段只计一次。具体星期和时段不作额外限制。不设其他门槛，其余条件已确认满足。本数据仅用于模拟核定。",
+            "salaryMin": 6000,
+            "salaryMax": 9000,
+            "educationRank": 3,
+            "experienceMin": 0,
+            "weekendsOff": true,
+            "skills": [
+              "Vue",
+              "TypeScript",
+              "Git"
+            ]
+          },
+          {
+            "id": "v16-gap-b",
+            "title": "学生服务组件维护实习生",
+            "city": "成都",
+            "categoryId": "frontend-junior",
+            "family": "frontend",
+            "level": "junior",
+            "company": "合成校园界面组",
+            "source": "synthetic-integration",
+            "updatedAt": "2026-11-07",
+            "jd": "合成岗位：学生服务组件维护实习生。成都，本科应届，Vue、TypeScript、Git，月薪6000元。连续至少3个月，每周至少2天，至少两天各达到4小时。累计时间按每周日程原表核算，占用时段不计入，重叠可用时段只计一次。具体星期和时段不作额外限制。不设其他门槛，其余条件已确认满足。本数据仅用于模拟核定。",
+            "salaryMin": 6000,
+            "salaryMax": 9000,
+            "educationRank": 3,
+            "experienceMin": 0,
+            "weekendsOff": true,
+            "skills": [
+              "Vue",
+              "TypeScript",
+              "Git"
+            ]
+          }
+        ]
+      },
+      {
+        "version": "db98c36734a950d23a2f15973780799f78b12685fd895761eed818c5e99f2c60",
+        "label": "Synthetic v16 gap",
+        "source": "synthetic",
+        "categories": [
+          {
+            "id": "frontend-junior",
+            "title": "初级前端开发",
+            "family": "frontend",
+            "level": "junior",
+            "summary": "Vue TypeScript 网页组件开发与测试",
+            "skills": [
+              "Vue",
+              "TypeScript",
+              "Git",
+              "CSS"
+            ],
+            "abilities": {}
+          },
+          {
+            "id": "frontend-mid",
+            "title": "中级前端开发",
+            "family": "frontend",
+            "level": "mid",
+            "summary": "前端工程化、性能优化、复杂应用",
+            "skills": [
+              "Vue",
+              "TypeScript",
+              "性能优化",
+              "测试"
+            ],
+            "abilities": {}
+          },
+          {
+            "id": "frontend-senior",
+            "title": "高级前端开发",
+            "family": "frontend",
+            "level": "senior",
+            "summary": "前端架构、团队协作、技术决策",
+            "skills": [
+              "架构",
+              "TypeScript",
+              "性能优化",
+              "协作"
+            ],
+            "abilities": {}
+          }
+        ],
+        "edges": [
+          {
+            "source": "frontend-junior",
+            "target": "frontend-mid",
+            "type": "promotion",
+            "score": 0.85,
+            "reason": "工程化与性能优化能力进阶"
+          },
+          {
+            "source": "frontend-mid",
+            "target": "frontend-senior",
+            "type": "promotion",
+            "score": 0.75,
+            "reason": "架构与团队协作要求提升"
+          }
+        ],
+        "documents": [],
+        "jobs": [
+          {
+            "id": "v16-gap-a",
+            "title": "校园空间预约界面实习生",
+            "city": "成都",
+            "categoryId": "frontend-junior",
+            "family": "frontend",
+            "level": "junior",
+            "company": "合成校园界面组",
+            "source": "synthetic-integration",
+            "updatedAt": "2026-11-07",
+            "jd": "合成岗位：校园空间预约界面实习生。成都，本科应届，Vue、TypeScript、Git，月薪6000元。连续至少3个月，每周至少3天、累计至少21小时。累计时间按每周日程原表核算，占用时段不计入，重叠可用时段只计一次。具体星期和时段不作额外限制。不设其他门槛，其余条件已确认满足。本数据仅用于模拟核定。",
+            "salaryMin": 6000,
+            "salaryMax": 9000,
+            "educationRank": 3,
+            "experienceMin": 0,
+            "weekendsOff": true,
+            "skills": [
+              "Vue",
+              "TypeScript",
+              "Git"
+            ]
+          },
+          {
+            "id": "v16-gap-b",
+            "title": "学生服务组件维护实习生",
+            "city": "成都",
+            "categoryId": "frontend-junior",
+            "family": "frontend",
+            "level": "junior",
+            "company": "合成校园界面组",
+            "source": "synthetic-integration",
+            "updatedAt": "2026-11-07",
+            "jd": "合成岗位：学生服务组件维护实习生。成都，本科应届，Vue、TypeScript、Git，月薪6000元。连续至少3个月，每周至少2天，至少两天各达到4小时。累计时间按每周日程原表核算，占用时段不计入，重叠可用时段只计一次。具体星期和时段不作额外限制。不设其他门槛，其余条件已确认满足。本数据仅用于模拟核定。",
+            "salaryMin": 6000,
+            "salaryMax": 9000,
+            "educationRank": 3,
+            "experienceMin": 0,
+            "weekendsOff": true,
+            "skills": [
+              "Vue",
+              "TypeScript",
+              "Git"
+            ]
+          }
+        ]
+      },
+      {
+        "version": "db98c36734a950d23a2f15973780799f78b12685fd895761eed818c5e99f2c60",
+        "label": "Synthetic v16 gap",
+        "source": "synthetic",
+        "categories": [
+          {
+            "id": "frontend-junior",
+            "title": "初级前端开发",
+            "family": "frontend",
+            "level": "junior",
+            "summary": "Vue TypeScript 网页组件开发与测试",
+            "skills": [
+              "Vue",
+              "TypeScript",
+              "Git",
+              "CSS"
+            ],
+            "abilities": {}
+          },
+          {
+            "id": "frontend-mid",
+            "title": "中级前端开发",
+            "family": "frontend",
+            "level": "mid",
+            "summary": "前端工程化、性能优化、复杂应用",
+            "skills": [
+              "Vue",
+              "TypeScript",
+              "性能优化",
+              "测试"
+            ],
+            "abilities": {}
+          },
+          {
+            "id": "frontend-senior",
+            "title": "高级前端开发",
+            "family": "frontend",
+            "level": "senior",
+            "summary": "前端架构、团队协作、技术决策",
+            "skills": [
+              "架构",
+              "TypeScript",
+              "性能优化",
+              "协作"
+            ],
+            "abilities": {}
+          }
+        ],
+        "edges": [
+          {
+            "source": "frontend-junior",
+            "target": "frontend-mid",
+            "type": "promotion",
+            "score": 0.85,
+            "reason": "工程化与性能优化能力进阶"
+          },
+          {
+            "source": "frontend-mid",
+            "target": "frontend-senior",
+            "type": "promotion",
+            "score": 0.75,
+            "reason": "架构与团队协作要求提升"
+          }
+        ],
+        "documents": [],
+        "jobs": [
+          {
+            "id": "v16-gap-a",
+            "title": "校园空间预约界面实习生",
+            "city": "成都",
+            "categoryId": "frontend-junior",
+            "family": "frontend",
+            "level": "junior",
+            "company": "合成校园界面组",
+            "source": "synthetic-integration",
+            "updatedAt": "2026-11-07",
+            "jd": "合成岗位：校园空间预约界面实习生。成都，本科应届，Vue、TypeScript、Git，月薪6000元。连续至少3个月，每周至少3天、累计至少21小时。累计时间按每周日程原表核算，占用时段不计入，重叠可用时段只计一次。具体星期和时段不作额外限制。不设其他门槛，其余条件已确认满足。本数据仅用于模拟核定。",
+            "salaryMin": 6000,
+            "salaryMax": 9000,
+            "educationRank": 3,
+            "experienceMin": 0,
+            "weekendsOff": true,
+            "skills": [
+              "Vue",
+              "TypeScript",
+              "Git"
+            ]
+          },
+          {
+            "id": "v16-gap-b",
+            "title": "学生服务组件维护实习生",
+            "city": "成都",
+            "categoryId": "frontend-junior",
+            "family": "frontend",
+            "level": "junior",
+            "company": "合成校园界面组",
+            "source": "synthetic-integration",
+            "updatedAt": "2026-11-07",
+            "jd": "合成岗位：学生服务组件维护实习生。成都，本科应届，Vue、TypeScript、Git，月薪6000元。连续至少3个月，每周至少2天，至少两天各达到4小时。累计时间按每周日程原表核算，占用时段不计入，重叠可用时段只计一次。具体星期和时段不作额外限制。不设其他门槛，其余条件已确认满足。本数据仅用于模拟核定。",
+            "salaryMin": 6000,
+            "salaryMax": 9000,
+            "educationRank": 3,
+            "experienceMin": 0,
+            "weekendsOff": true,
+            "skills": [
+              "Vue",
+              "TypeScript",
+              "Git"
+            ]
+          }
+        ]
+      },
+      {
+        "version": "db98c36734a950d23a2f15973780799f78b12685fd895761eed818c5e99f2c60",
+        "label": "Synthetic v16 gap",
+        "source": "synthetic",
+        "categories": [
+          {
+            "id": "frontend-junior",
+            "title": "初级前端开发",
+            "family": "frontend",
+            "level": "junior",
+            "summary": "Vue TypeScript 网页组件开发与测试",
+            "skills": [
+              "Vue",
+              "TypeScript",
+              "Git",
+              "CSS"
+            ],
+            "abilities": {}
+          },
+          {
+            "id": "frontend-mid",
+            "title": "中级前端开发",
+            "family": "frontend",
+            "level": "mid",
+            "summary": "前端工程化、性能优化、复杂应用",
+            "skills": [
+              "Vue",
+              "TypeScript",
+              "性能优化",
+              "测试"
+            ],
+            "abilities": {}
+          },
+          {
+            "id": "frontend-senior",
+            "title": "高级前端开发",
+            "family": "frontend",
+            "level": "senior",
+            "summary": "前端架构、团队协作、技术决策",
+            "skills": [
+              "架构",
+              "TypeScript",
+              "性能优化",
+              "协作"
+            ],
+            "abilities": {}
+          }
+        ],
+        "edges": [
+          {
+            "source": "frontend-junior",
+            "target": "frontend-mid",
+            "type": "promotion",
+            "score": 0.85,
+            "reason": "工程化与性能优化能力进阶"
+          },
+          {
+            "source": "frontend-mid",
+            "target": "frontend-senior",
+            "type": "promotion",
+            "score": 0.75,
+            "reason": "架构与团队协作要求提升"
+          }
+        ],
+        "documents": [],
+        "jobs": [
+          {
+            "id": "v16-gap-a",
+            "title": "校园空间预约界面实习生",
+            "city": "成都",
+            "categoryId": "frontend-junior",
+            "family": "frontend",
+            "level": "junior",
+            "company": "合成校园界面组",
+            "source": "synthetic-integration",
+            "updatedAt": "2026-11-07",
+            "jd": "合成岗位：校园空间预约界面实习生。成都，本科应届，Vue、TypeScript、Git，月薪6000元。连续至少3个月，每周至少3天、累计至少21小时。累计时间按每周日程原表核算，占用时段不计入，重叠可用时段只计一次。具体星期和时段不作额外限制。不设其他门槛，其余条件已确认满足。本数据仅用于模拟核定。",
+            "salaryMin": 6000,
+            "salaryMax": 9000,
+            "educationRank": 3,
+            "experienceMin": 0,
+            "weekendsOff": true,
+            "skills": [
+              "Vue",
+              "TypeScript",
+              "Git"
+            ]
+          },
+          {
+            "id": "v16-gap-b",
+            "title": "学生服务组件维护实习生",
+            "city": "成都",
+            "categoryId": "frontend-junior",
+            "family": "frontend",
+            "level": "junior",
+            "company": "合成校园界面组",
+            "source": "synthetic-integration",
+            "updatedAt": "2026-11-07",
+            "jd": "合成岗位：学生服务组件维护实习生。成都，本科应届，Vue、TypeScript、Git，月薪6000元。连续至少3个月，每周至少2天，至少两天各达到4小时。累计时间按每周日程原表核算，占用时段不计入，重叠可用时段只计一次。具体星期和时段不作额外限制。不设其他门槛，其余条件已确认满足。本数据仅用于模拟核定。",
+            "salaryMin": 6000,
+            "salaryMax": 9000,
+            "educationRank": 3,
+            "experienceMin": 0,
+            "weekendsOff": true,
+            "skills": [
+              "Vue",
+              "TypeScript",
+              "Git"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "v16-overlap",
+    "split": "test",
+    "jobIds": [
+      "v16-overlap-a",
+      "v16-overlap-b"
+    ],
+    "resume": "本科应届，在成都使用Vue、TypeScript、Git完成过网页组件项目，其他指定岗位条件已确认满足。",
+    "constraints": {
+      "cities": [
+        "成都"
+      ],
+      "education": "本科",
+      "experienceYears": 0,
+      "skills": [
+        "Vue",
+        "TypeScript",
+        "Git"
+      ],
+      "pathMode": "balanced"
+    },
+    "events": [
+      {
+        "id": "v16-overlap-0",
+        "text": "仅核定v16-overlap-a和v16-overlap-b的实习时间条件，给出模拟候选与行动。只有符合的纳入候选，不符或待核定的移出。首次四个专家协作，后续按最小必要范围更新。每个实际执行的专家summary和最终答复均写“周工时=数字”（当前每周有效小时数）；匹配、路径、报告summary与最终答复还需“核定[岗位ID]=符合/不符/待核定”。可沿用未变历史部分，但要检查其是否被新事实取代。路径使用已有前端类别关系，不增加原文之外的岗位门槛。\n我能连续实习6个月。以下是完整的每周重复日程原表，适用于整个实习期间：可用行取并集，再扣除占用行的并集；没有列为可用的时段不可实习。新行追加到原表；只有明确的撤销行才删除对应记录。原表之外没有其他日程限制。\n日程原始记录：\n|记录ID|类型|星期|开始|结束|\n|---|---|---|---|---|\n|base0|可用|周一|09:00|17:00|\n|lunch0|占用|周一|12:00|13:00|\n|base1|可用|周三|09:00|17:00|\n|lunch1|占用|周三|12:00|13:00|\n|base2|可用|周五|09:00|17:00|\n|lunch2|占用|周五|12:00|13:00|"
+      },
+      {
+        "id": "v16-overlap-1",
+        "text": "学校追加了下列每周课程安排，请据此更新原表和核定；其余记录不变。\n日程原始记录：\n|记录ID|类型|星期|开始|结束|\n|---|---|---|---|---|\n|course1|占用|周五|12:30|15:30|\n请保留周工时与核定格式，只运行必要专家。"
+      },
+      {
+        "id": "v16-overlap-2",
+        "text": "作品封面改为绿色，其他信息及日程原表不变。请沿用当前核定，保留周工时和核定格式，只运行必要专家。"
+      },
+      {
+        "id": "v16-overlap-3",
+        "text": "学校新批准了下列可实习时段，请追加到原表；原有可用时段、课程和午休仍保留。\n日程原始记录：\n|记录ID|类型|星期|开始|结束|\n|---|---|---|---|---|\n|extra1|可用|周五|16:00|19:00|\n请更新核定，保留周工时和核定格式，只运行必要专家。"
+      }
+    ],
+    "snapshots": [
+      {
+        "version": "fc4eb7805289be3a4d01b8088bb98a15d39b7cf43280faf39f4edd26e2fecb49",
+        "label": "Synthetic v16 overlap",
+        "source": "synthetic",
+        "categories": [
+          {
+            "id": "frontend-junior",
+            "title": "初级前端开发",
+            "family": "frontend",
+            "level": "junior",
+            "summary": "Vue TypeScript 网页组件开发与测试",
+            "skills": [
+              "Vue",
+              "TypeScript",
+              "Git",
+              "CSS"
+            ],
+            "abilities": {}
+          },
+          {
+            "id": "frontend-mid",
+            "title": "中级前端开发",
+            "family": "frontend",
+            "level": "mid",
+            "summary": "前端工程化、性能优化、复杂应用",
+            "skills": [
+              "Vue",
+              "TypeScript",
+              "性能优化",
+              "测试"
+            ],
+            "abilities": {}
+          },
+          {
+            "id": "frontend-senior",
+            "title": "高级前端开发",
+            "family": "frontend",
+            "level": "senior",
+            "summary": "前端架构、团队协作、技术决策",
+            "skills": [
+              "架构",
+              "TypeScript",
+              "性能优化",
+              "协作"
+            ],
+            "abilities": {}
+          }
+        ],
+        "edges": [
+          {
+            "source": "frontend-junior",
+            "target": "frontend-mid",
+            "type": "promotion",
+            "score": 0.85,
+            "reason": "工程化与性能优化能力进阶"
+          },
+          {
+            "source": "frontend-mid",
+            "target": "frontend-senior",
+            "type": "promotion",
+            "score": 0.75,
+            "reason": "架构与团队协作要求提升"
+          }
+        ],
+        "documents": [],
+        "jobs": [
+          {
+            "id": "v16-overlap-a",
+            "title": "校园物资流转界面实习生",
+            "city": "成都",
+            "categoryId": "frontend-junior",
+            "family": "frontend",
+            "level": "junior",
+            "company": "合成校园界面组",
+            "source": "synthetic-integration",
+            "updatedAt": "2026-11-07",
+            "jd": "合成岗位：校园物资流转界面实习生。成都，本科应届，Vue、TypeScript、Git，月薪6000元。连续至少3个月，每周至少3天、累计至少21小时。累计时间按每周日程原表核算，占用时段不计入，重叠可用时段只计一次。具体星期和时段不作额外限制。不设其他门槛，其余条件已确认满足。本数据仅用于模拟核定。",
+            "salaryMin": 6000,
+            "salaryMax": 9000,
+            "educationRank": 3,
+            "experienceMin": 0,
+            "weekendsOff": true,
+            "skills": [
+              "Vue",
+              "TypeScript",
+              "Git"
+            ]
+          },
+          {
+            "id": "v16-overlap-b",
+            "title": "学生服务组件维护实习生",
+            "city": "成都",
+            "categoryId": "frontend-junior",
+            "family": "frontend",
+            "level": "junior",
+            "company": "合成校园界面组",
+            "source": "synthetic-integration",
+            "updatedAt": "2026-11-07",
+            "jd": "合成岗位：学生服务组件维护实习生。成都，本科应届，Vue、TypeScript、Git，月薪6000元。连续至少3个月，每周至少2天，至少两天各达到4小时。累计时间按每周日程原表核算，占用时段不计入，重叠可用时段只计一次。具体星期和时段不作额外限制。不设其他门槛，其余条件已确认满足。本数据仅用于模拟核定。",
+            "salaryMin": 6000,
+            "salaryMax": 9000,
+            "educationRank": 3,
+            "experienceMin": 0,
+            "weekendsOff": true,
+            "skills": [
+              "Vue",
+              "TypeScript",
+              "Git"
+            ]
+          }
+        ]
+      },
+      {
+        "version": "fc4eb7805289be3a4d01b8088bb98a15d39b7cf43280faf39f4edd26e2fecb49",
+        "label": "Synthetic v16 overlap",
+        "source": "synthetic",
+        "categories": [
+          {
+            "id": "frontend-junior",
+            "title": "初级前端开发",
+            "family": "frontend",
+            "level": "junior",
+            "summary": "Vue TypeScript 网页组件开发与测试",
+            "skills": [
+              "Vue",
+              "TypeScript",
+              "Git",
+              "CSS"
+            ],
+            "abilities": {}
+          },
+          {
+            "id": "frontend-mid",
+            "title": "中级前端开发",
+            "family": "frontend",
+            "level": "mid",
+            "summary": "前端工程化、性能优化、复杂应用",
+            "skills": [
+              "Vue",
+              "TypeScript",
+              "性能优化",
+              "测试"
+            ],
+            "abilities": {}
+          },
+          {
+            "id": "frontend-senior",
+            "title": "高级前端开发",
+            "family": "frontend",
+            "level": "senior",
+            "summary": "前端架构、团队协作、技术决策",
+            "skills": [
+              "架构",
+              "TypeScript",
+              "性能优化",
+              "协作"
+            ],
+            "abilities": {}
+          }
+        ],
+        "edges": [
+          {
+            "source": "frontend-junior",
+            "target": "frontend-mid",
+            "type": "promotion",
+            "score": 0.85,
+            "reason": "工程化与性能优化能力进阶"
+          },
+          {
+            "source": "frontend-mid",
+            "target": "frontend-senior",
+            "type": "promotion",
+            "score": 0.75,
+            "reason": "架构与团队协作要求提升"
+          }
+        ],
+        "documents": [],
+        "jobs": [
+          {
+            "id": "v16-overlap-a",
+            "title": "校园物资流转界面实习生",
+            "city": "成都",
+            "categoryId": "frontend-junior",
+            "family": "frontend",
+            "level": "junior",
+            "company": "合成校园界面组",
+            "source": "synthetic-integration",
+            "updatedAt": "2026-11-07",
+            "jd": "合成岗位：校园物资流转界面实习生。成都，本科应届，Vue、TypeScript、Git，月薪6000元。连续至少3个月，每周至少3天、累计至少21小时。累计时间按每周日程原表核算，占用时段不计入，重叠可用时段只计一次。具体星期和时段不作额外限制。不设其他门槛，其余条件已确认满足。本数据仅用于模拟核定。",
+            "salaryMin": 6000,
+            "salaryMax": 9000,
+            "educationRank": 3,
+            "experienceMin": 0,
+            "weekendsOff": true,
+            "skills": [
+              "Vue",
+              "TypeScript",
+              "Git"
+            ]
+          },
+          {
+            "id": "v16-overlap-b",
+            "title": "学生服务组件维护实习生",
+            "city": "成都",
+            "categoryId": "frontend-junior",
+            "family": "frontend",
+            "level": "junior",
+            "company": "合成校园界面组",
+            "source": "synthetic-integration",
+            "updatedAt": "2026-11-07",
+            "jd": "合成岗位：学生服务组件维护实习生。成都，本科应届，Vue、TypeScript、Git，月薪6000元。连续至少3个月，每周至少2天，至少两天各达到4小时。累计时间按每周日程原表核算，占用时段不计入，重叠可用时段只计一次。具体星期和时段不作额外限制。不设其他门槛，其余条件已确认满足。本数据仅用于模拟核定。",
+            "salaryMin": 6000,
+            "salaryMax": 9000,
+            "educationRank": 3,
+            "experienceMin": 0,
+            "weekendsOff": true,
+            "skills": [
+              "Vue",
+              "TypeScript",
+              "Git"
+            ]
+          }
+        ]
+      },
+      {
+        "version": "fc4eb7805289be3a4d01b8088bb98a15d39b7cf43280faf39f4edd26e2fecb49",
+        "label": "Synthetic v16 overlap",
+        "source": "synthetic",
+        "categories": [
+          {
+            "id": "frontend-junior",
+            "title": "初级前端开发",
+            "family": "frontend",
+            "level": "junior",
+            "summary": "Vue TypeScript 网页组件开发与测试",
+            "skills": [
+              "Vue",
+              "TypeScript",
+              "Git",
+              "CSS"
+            ],
+            "abilities": {}
+          },
+          {
+            "id": "frontend-mid",
+            "title": "中级前端开发",
+            "family": "frontend",
+            "level": "mid",
+            "summary": "前端工程化、性能优化、复杂应用",
+            "skills": [
+              "Vue",
+              "TypeScript",
+              "性能优化",
+              "测试"
+            ],
+            "abilities": {}
+          },
+          {
+            "id": "frontend-senior",
+            "title": "高级前端开发",
+            "family": "frontend",
+            "level": "senior",
+            "summary": "前端架构、团队协作、技术决策",
+            "skills": [
+              "架构",
+              "TypeScript",
+              "性能优化",
+              "协作"
+            ],
+            "abilities": {}
+          }
+        ],
+        "edges": [
+          {
+            "source": "frontend-junior",
+            "target": "frontend-mid",
+            "type": "promotion",
+            "score": 0.85,
+            "reason": "工程化与性能优化能力进阶"
+          },
+          {
+            "source": "frontend-mid",
+            "target": "frontend-senior",
+            "type": "promotion",
+            "score": 0.75,
+            "reason": "架构与团队协作要求提升"
+          }
+        ],
+        "documents": [],
+        "jobs": [
+          {
+            "id": "v16-overlap-a",
+            "title": "校园物资流转界面实习生",
+            "city": "成都",
+            "categoryId": "frontend-junior",
+            "family": "frontend",
+            "level": "junior",
+            "company": "合成校园界面组",
+            "source": "synthetic-integration",
+            "updatedAt": "2026-11-07",
+            "jd": "合成岗位：校园物资流转界面实习生。成都，本科应届，Vue、TypeScript、Git，月薪6000元。连续至少3个月，每周至少3天、累计至少21小时。累计时间按每周日程原表核算，占用时段不计入，重叠可用时段只计一次。具体星期和时段不作额外限制。不设其他门槛，其余条件已确认满足。本数据仅用于模拟核定。",
+            "salaryMin": 6000,
+            "salaryMax": 9000,
+            "educationRank": 3,
+            "experienceMin": 0,
+            "weekendsOff": true,
+            "skills": [
+              "Vue",
+              "TypeScript",
+              "Git"
+            ]
+          },
+          {
+            "id": "v16-overlap-b",
+            "title": "学生服务组件维护实习生",
+            "city": "成都",
+            "categoryId": "frontend-junior",
+            "family": "frontend",
+            "level": "junior",
+            "company": "合成校园界面组",
+            "source": "synthetic-integration",
+            "updatedAt": "2026-11-07",
+            "jd": "合成岗位：学生服务组件维护实习生。成都，本科应届，Vue、TypeScript、Git，月薪6000元。连续至少3个月，每周至少2天，至少两天各达到4小时。累计时间按每周日程原表核算，占用时段不计入，重叠可用时段只计一次。具体星期和时段不作额外限制。不设其他门槛，其余条件已确认满足。本数据仅用于模拟核定。",
+            "salaryMin": 6000,
+            "salaryMax": 9000,
+            "educationRank": 3,
+            "experienceMin": 0,
+            "weekendsOff": true,
+            "skills": [
+              "Vue",
+              "TypeScript",
+              "Git"
+            ]
+          }
+        ]
+      },
+      {
+        "version": "fc4eb7805289be3a4d01b8088bb98a15d39b7cf43280faf39f4edd26e2fecb49",
+        "label": "Synthetic v16 overlap",
+        "source": "synthetic",
+        "categories": [
+          {
+            "id": "frontend-junior",
+            "title": "初级前端开发",
+            "family": "frontend",
+            "level": "junior",
+            "summary": "Vue TypeScript 网页组件开发与测试",
+            "skills": [
+              "Vue",
+              "TypeScript",
+              "Git",
+              "CSS"
+            ],
+            "abilities": {}
+          },
+          {
+            "id": "frontend-mid",
+            "title": "中级前端开发",
+            "family": "frontend",
+            "level": "mid",
+            "summary": "前端工程化、性能优化、复杂应用",
+            "skills": [
+              "Vue",
+              "TypeScript",
+              "性能优化",
+              "测试"
+            ],
+            "abilities": {}
+          },
+          {
+            "id": "frontend-senior",
+            "title": "高级前端开发",
+            "family": "frontend",
+            "level": "senior",
+            "summary": "前端架构、团队协作、技术决策",
+            "skills": [
+              "架构",
+              "TypeScript",
+              "性能优化",
+              "协作"
+            ],
+            "abilities": {}
+          }
+        ],
+        "edges": [
+          {
+            "source": "frontend-junior",
+            "target": "frontend-mid",
+            "type": "promotion",
+            "score": 0.85,
+            "reason": "工程化与性能优化能力进阶"
+          },
+          {
+            "source": "frontend-mid",
+            "target": "frontend-senior",
+            "type": "promotion",
+            "score": 0.75,
+            "reason": "架构与团队协作要求提升"
+          }
+        ],
+        "documents": [],
+        "jobs": [
+          {
+            "id": "v16-overlap-a",
+            "title": "校园物资流转界面实习生",
+            "city": "成都",
+            "categoryId": "frontend-junior",
+            "family": "frontend",
+            "level": "junior",
+            "company": "合成校园界面组",
+            "source": "synthetic-integration",
+            "updatedAt": "2026-11-07",
+            "jd": "合成岗位：校园物资流转界面实习生。成都，本科应届，Vue、TypeScript、Git，月薪6000元。连续至少3个月，每周至少3天、累计至少21小时。累计时间按每周日程原表核算，占用时段不计入，重叠可用时段只计一次。具体星期和时段不作额外限制。不设其他门槛，其余条件已确认满足。本数据仅用于模拟核定。",
+            "salaryMin": 6000,
+            "salaryMax": 9000,
+            "educationRank": 3,
+            "experienceMin": 0,
+            "weekendsOff": true,
+            "skills": [
+              "Vue",
+              "TypeScript",
+              "Git"
+            ]
+          },
+          {
+            "id": "v16-overlap-b",
+            "title": "学生服务组件维护实习生",
+            "city": "成都",
+            "categoryId": "frontend-junior",
+            "family": "frontend",
+            "level": "junior",
+            "company": "合成校园界面组",
+            "source": "synthetic-integration",
+            "updatedAt": "2026-11-07",
+            "jd": "合成岗位：学生服务组件维护实习生。成都，本科应届，Vue、TypeScript、Git，月薪6000元。连续至少3个月，每周至少2天，至少两天各达到4小时。累计时间按每周日程原表核算，占用时段不计入，重叠可用时段只计一次。具体星期和时段不作额外限制。不设其他门槛，其余条件已确认满足。本数据仅用于模拟核定。",
+            "salaryMin": 6000,
+            "salaryMax": 9000,
+            "educationRank": 3,
+            "experienceMin": 0,
+            "weekendsOff": true,
+            "skills": [
+              "Vue",
+              "TypeScript",
+              "Git"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

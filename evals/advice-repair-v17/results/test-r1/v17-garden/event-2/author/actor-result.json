@@ -1,0 +1,92 @@
+{
+  "parsed": {
+    "summary": "当前事实版本c4429fc7：学校确认可连续实习6个月。申报出勤：周一09:00-16:00（7小时）、周三09:00-16:00扣占用11:30-16:00后净2.5小时（v17-garden-2新增周三课程）、周五09:00-11:00（2小时，v17-garden-1新增），共3个出勤日，周工时合计11.5小时。旧版本15f82905的“周三7小时、周工时16、A岗符合”已失效，不是当前值（更早的“周工时=14、出勤日2天”及“周工时=25”亦已失效）。A岗（v17-garden-a）条件为月数≥3、天数≥2、周工时≥16：月数6、出勤日3天，但周工时11.5<16，判定不符（旧结论“符合”已失效）。B岗（v17-garden-b）条件为月数≥3、天数≥2、且至少2天每天≥4小时（qualifyingDays）：仅周一7小时达标，周三2.5、周五2均不足4小时，达标天数1<2，判定不符。假设试演（不修改真实日程）：周五新增10:00-11:00占用使周五净时段为0，周五不再计为出勤日，周工时降为9.5、出勤日2天，A岗仍不符（不改变判定，不构成反驳）；B岗仍仅周一1天≥4小时，仍不符（不构成反驳）。周三全天占用移除周三2.5小时，仅剩周一7与周五2，周工时9、出勤日2天，A岗仍不符（不构成反驳）；B岗仍仅周一1天达标，仍不符（不构成反驳）。",
+    "currentAssessment": {
+      "schemaVersion": "current-assessment-v1",
+      "factsVersion": "c4429fc7321760ae8bb4e429d7cab17c4bd55b3dacb32bd06bfea927f2950980",
+      "weeklyHours": 11.5,
+      "judgments": [
+        {
+          "jobId": "v17-garden-a",
+          "ruleVersion": "e7aac000dc978e4a2fc61c3f212f1bd84c8c2ebbd0da5772c393b0606f1d1bd4",
+          "verdict": "不符"
+        },
+        {
+          "jobId": "v17-garden-b",
+          "ruleVersion": "feefff35e92b66ade72a052d3ff5987e4c136295895a62caaf7d106ba8782b9d",
+          "verdict": "不符"
+        }
+      ],
+      "evidenceIds": [
+        "profile:v17-garden",
+        "event:v17-garden-0",
+        "event:v17-garden-1",
+        "event:v17-garden-2",
+        "job:v17-garden-a",
+        "job:v17-garden-b"
+      ]
+    },
+    "cases": [
+      {
+        "hypothesisId": "v17-garden-2-fri",
+        "jobId": "v17-garden-a",
+        "factsVersion": "c4429fc7321760ae8bb4e429d7cab17c4bd55b3dacb32bd06bfea927f2950980",
+        "ruleVersion": "e7aac000dc978e4a2fc61c3f212f1bd84c8c2ebbd0da5772c393b0606f1d1bd4",
+        "predictedAfter": "不符",
+        "claimsRefutation": false
+      },
+      {
+        "hypothesisId": "v17-garden-2-fri",
+        "jobId": "v17-garden-b",
+        "factsVersion": "c4429fc7321760ae8bb4e429d7cab17c4bd55b3dacb32bd06bfea927f2950980",
+        "ruleVersion": "feefff35e92b66ade72a052d3ff5987e4c136295895a62caaf7d106ba8782b9d",
+        "predictedAfter": "不符",
+        "claimsRefutation": false
+      },
+      {
+        "hypothesisId": "v17-garden-2-wed",
+        "jobId": "v17-garden-a",
+        "factsVersion": "c4429fc7321760ae8bb4e429d7cab17c4bd55b3dacb32bd06bfea927f2950980",
+        "ruleVersion": "e7aac000dc978e4a2fc61c3f212f1bd84c8c2ebbd0da5772c393b0606f1d1bd4",
+        "predictedAfter": "不符",
+        "claimsRefutation": false
+      },
+      {
+        "hypothesisId": "v17-garden-2-wed",
+        "jobId": "v17-garden-b",
+        "factsVersion": "c4429fc7321760ae8bb4e429d7cab17c4bd55b3dacb32bd06bfea927f2950980",
+        "ruleVersion": "feefff35e92b66ade72a052d3ff5987e4c136295895a62caaf7d106ba8782b9d",
+        "predictedAfter": "不符",
+        "claimsRefutation": false
+      }
+    ]
+  },
+  "toolLog": [
+    {
+      "name": "calendar_check",
+      "result": {
+        "factsVersion": "c4429fc7321760ae8bb4e429d7cab17c4bd55b3dacb32bd06bfea927f2950980",
+        "weeklyHours": 11.5,
+        "dailyHours": {
+          "周一": 7,
+          "周二": 0,
+          "周三": 2.5,
+          "周四": 0,
+          "周五": 2,
+          "周六": 0,
+          "周日": 0
+        },
+        "sourceRefs": [
+          "profile:v17-garden",
+          "event:v17-garden-0",
+          "event:v17-garden-1",
+          "event:v17-garden-2",
+          "job:v17-garden-a",
+          "job:v17-garden-b"
+        ]
+      }
+    }
+  ],
+  "error": null,
+  "inputHash": "a701b679d90c1f0f41855cf7834fdfca80804a0e4ca9c2f1eca69dbff0116d3b"
+}

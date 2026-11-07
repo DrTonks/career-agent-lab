@@ -1,0 +1,305 @@
+{
+  "trajectory": "v17-service",
+  "event": 3,
+  "policy": "verified",
+  "status": "completed",
+  "review": {
+    "close": true,
+    "cases": [
+      {
+        "hypothesisId": "v17-service-3-fri",
+        "jobId": "v17-service-a",
+        "factsVersion": "9b235f6c49e4da288c5e4634fa8b53687982c8a2c51934fe5545e6ed2fb3e65b",
+        "ruleVersion": "49ff1d166ba50259ea7e8f9f15b4ba9e57bcc35559fc4b85515fffcac92f0510",
+        "predictedAfter": "不符",
+        "claimsRefutation": false
+      },
+      {
+        "hypothesisId": "v17-service-3-fri",
+        "jobId": "v17-service-b",
+        "factsVersion": "9b235f6c49e4da288c5e4634fa8b53687982c8a2c51934fe5545e6ed2fb3e65b",
+        "ruleVersion": "feefff35e92b66ade72a052d3ff5987e4c136295895a62caaf7d106ba8782b9d",
+        "predictedAfter": "符合",
+        "claimsRefutation": false
+      },
+      {
+        "hypothesisId": "v17-service-3-wed",
+        "jobId": "v17-service-a",
+        "factsVersion": "9b235f6c49e4da288c5e4634fa8b53687982c8a2c51934fe5545e6ed2fb3e65b",
+        "ruleVersion": "49ff1d166ba50259ea7e8f9f15b4ba9e57bcc35559fc4b85515fffcac92f0510",
+        "predictedAfter": "不符",
+        "claimsRefutation": false
+      },
+      {
+        "hypothesisId": "v17-service-3-wed",
+        "jobId": "v17-service-b",
+        "factsVersion": "9b235f6c49e4da288c5e4634fa8b53687982c8a2c51934fe5545e6ed2fb3e65b",
+        "ruleVersion": "feefff35e92b66ade72a052d3ff5987e4c136295895a62caaf7d106ba8782b9d",
+        "predictedAfter": "不符",
+        "claimsRefutation": true
+      }
+    ],
+    "note": "核对当前事实版本 9b235f6c：周三 wedClass 已撤销，周三净 7h；周五 09:00-13:30 扣 12:30-13:30 占用后净 3.5h；周一 7h；周工时 17.5h。A岗（everyWorkingDayHoursAtLeast=4）：周五 3.5h<4h → 不符。B岗（qualifyingDays count=2, ≥4h）：周一、周三共 2 天达标 → 符合。假设复核：周五再增 12:30-13:30 占用与现有占用重合，净时不变，A 仍不符、B 仍符合，不构成反例；周三全天占用使周三净 0h，仅周一达标（1<2），B 由符合变不符，构成有效反例（claimsRefutation=true），A 仍不符（每日条件本就未满足，判定未变，故非反例）。作者四组预测与核算回执一致，当前状态可提交。"
+  },
+  "outcome": {
+    "policy": "verified",
+    "currentStateCommitted": true,
+    "closureReason": null,
+    "acceptedCases": [
+      {
+        "hypothesisId": "v17-service-3-fri",
+        "jobId": "v17-service-a",
+        "factsVersion": "9b235f6c49e4da288c5e4634fa8b53687982c8a2c51934fe5545e6ed2fb3e65b",
+        "ruleVersion": "49ff1d166ba50259ea7e8f9f15b4ba9e57bcc35559fc4b85515fffcac92f0510",
+        "predictedAfter": "不符",
+        "claimsRefutation": false,
+        "validation": {
+          "status": "verified-non-refutation",
+          "valid": true,
+          "before": {
+            "verdict": "不符",
+            "checks": [
+              {
+                "predicate": "monthsAtLeast",
+                "actual": 6,
+                "required": 3,
+                "satisfied": true
+              },
+              {
+                "predicate": "daysAtLeast",
+                "actual": 3,
+                "required": 2,
+                "satisfied": true
+              },
+              {
+                "predicate": "everyWorkingDayHoursAtLeast",
+                "actual": 3.5,
+                "required": 4,
+                "satisfied": false
+              }
+            ],
+            "weeklyHours": 17.5
+          },
+          "after": {
+            "verdict": "不符",
+            "checks": [
+              {
+                "predicate": "monthsAtLeast",
+                "actual": 6,
+                "required": 3,
+                "satisfied": true
+              },
+              {
+                "predicate": "daysAtLeast",
+                "actual": 3,
+                "required": 2,
+                "satisfied": true
+              },
+              {
+                "predicate": "everyWorkingDayHoursAtLeast",
+                "actual": 3.5,
+                "required": 4,
+                "satisfied": false
+              }
+            ],
+            "weeklyHours": 17.5
+          },
+          "changesDecision": false,
+          "scope": "These public time rules only; hypothetical changes do not modify actual memory facts."
+        }
+      },
+      {
+        "hypothesisId": "v17-service-3-fri",
+        "jobId": "v17-service-b",
+        "factsVersion": "9b235f6c49e4da288c5e4634fa8b53687982c8a2c51934fe5545e6ed2fb3e65b",
+        "ruleVersion": "feefff35e92b66ade72a052d3ff5987e4c136295895a62caaf7d106ba8782b9d",
+        "predictedAfter": "符合",
+        "claimsRefutation": false,
+        "validation": {
+          "status": "verified-non-refutation",
+          "valid": true,
+          "before": {
+            "verdict": "符合",
+            "checks": [
+              {
+                "predicate": "monthsAtLeast",
+                "actual": 6,
+                "required": 3,
+                "satisfied": true
+              },
+              {
+                "predicate": "daysAtLeast",
+                "actual": 3,
+                "required": 2,
+                "satisfied": true
+              },
+              {
+                "predicate": "count(workingDayHours>=4)",
+                "actual": 2,
+                "required": 2,
+                "satisfied": true
+              }
+            ],
+            "weeklyHours": 17.5
+          },
+          "after": {
+            "verdict": "符合",
+            "checks": [
+              {
+                "predicate": "monthsAtLeast",
+                "actual": 6,
+                "required": 3,
+                "satisfied": true
+              },
+              {
+                "predicate": "daysAtLeast",
+                "actual": 3,
+                "required": 2,
+                "satisfied": true
+              },
+              {
+                "predicate": "count(workingDayHours>=4)",
+                "actual": 2,
+                "required": 2,
+                "satisfied": true
+              }
+            ],
+            "weeklyHours": 17.5
+          },
+          "changesDecision": false,
+          "scope": "These public time rules only; hypothetical changes do not modify actual memory facts."
+        }
+      },
+      {
+        "hypothesisId": "v17-service-3-wed",
+        "jobId": "v17-service-a",
+        "factsVersion": "9b235f6c49e4da288c5e4634fa8b53687982c8a2c51934fe5545e6ed2fb3e65b",
+        "ruleVersion": "49ff1d166ba50259ea7e8f9f15b4ba9e57bcc35559fc4b85515fffcac92f0510",
+        "predictedAfter": "不符",
+        "claimsRefutation": false,
+        "validation": {
+          "status": "verified-non-refutation",
+          "valid": true,
+          "before": {
+            "verdict": "不符",
+            "checks": [
+              {
+                "predicate": "monthsAtLeast",
+                "actual": 6,
+                "required": 3,
+                "satisfied": true
+              },
+              {
+                "predicate": "daysAtLeast",
+                "actual": 3,
+                "required": 2,
+                "satisfied": true
+              },
+              {
+                "predicate": "everyWorkingDayHoursAtLeast",
+                "actual": 3.5,
+                "required": 4,
+                "satisfied": false
+              }
+            ],
+            "weeklyHours": 17.5
+          },
+          "after": {
+            "verdict": "不符",
+            "checks": [
+              {
+                "predicate": "monthsAtLeast",
+                "actual": 6,
+                "required": 3,
+                "satisfied": true
+              },
+              {
+                "predicate": "daysAtLeast",
+                "actual": 2,
+                "required": 2,
+                "satisfied": true
+              },
+              {
+                "predicate": "everyWorkingDayHoursAtLeast",
+                "actual": 3.5,
+                "required": 4,
+                "satisfied": false
+              }
+            ],
+            "weeklyHours": 10.5
+          },
+          "changesDecision": false,
+          "scope": "These public time rules only; hypothetical changes do not modify actual memory facts."
+        }
+      },
+      {
+        "hypothesisId": "v17-service-3-wed",
+        "jobId": "v17-service-b",
+        "factsVersion": "9b235f6c49e4da288c5e4634fa8b53687982c8a2c51934fe5545e6ed2fb3e65b",
+        "ruleVersion": "feefff35e92b66ade72a052d3ff5987e4c136295895a62caaf7d106ba8782b9d",
+        "predictedAfter": "不符",
+        "claimsRefutation": true,
+        "validation": {
+          "status": "verified-refutation",
+          "valid": true,
+          "before": {
+            "verdict": "符合",
+            "checks": [
+              {
+                "predicate": "monthsAtLeast",
+                "actual": 6,
+                "required": 3,
+                "satisfied": true
+              },
+              {
+                "predicate": "daysAtLeast",
+                "actual": 3,
+                "required": 2,
+                "satisfied": true
+              },
+              {
+                "predicate": "count(workingDayHours>=4)",
+                "actual": 2,
+                "required": 2,
+                "satisfied": true
+              }
+            ],
+            "weeklyHours": 17.5
+          },
+          "after": {
+            "verdict": "不符",
+            "checks": [
+              {
+                "predicate": "monthsAtLeast",
+                "actual": 6,
+                "required": 3,
+                "satisfied": true
+              },
+              {
+                "predicate": "daysAtLeast",
+                "actual": 2,
+                "required": 2,
+                "satisfied": true
+              },
+              {
+                "predicate": "count(workingDayHours>=4)",
+                "actual": 1,
+                "required": 2,
+                "satisfied": false
+              }
+            ],
+            "weeklyHours": 10.5
+          },
+          "changesDecision": true,
+          "scope": "These public time rules only; hypothetical changes do not modify actual memory facts."
+        }
+      }
+    ],
+    "unresolvedCases": [],
+    "allCasesResolved": true,
+    "fullyResolved": true,
+    "actualCalendarUnchanged": true,
+    "validationScope": "structured-current+business-predicate"
+  },
+  "actorError": null
+}

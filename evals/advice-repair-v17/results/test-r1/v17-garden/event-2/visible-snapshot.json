@@ -1,0 +1,75 @@
+{
+  "trajectory": "v17-garden",
+  "event": 2,
+  "sources": [
+    {
+      "id": "event:v17-garden-0",
+      "text": "已确认连续实习月数为6。下表是已申报的每周出勤安排；有净可用时段的日计为申报出勤日。可用行取并集，扣占用行并集；新行追加，撤销行移除对应记录。其他岗位条件均已满足。\n|记录ID|类型|星期|开始|结束|\n|---|---|---|---|---|\n|base0|可用|周一|09:00|16:00|\n|base1|可用|周三|09:00|16:00|"
+    },
+    {
+      "id": "event:v17-garden-1",
+      "text": "学校调整安排，追加下列记录，其他记录不变。\n|记录ID|类型|星期|开始|结束|\n|---|---|---|---|---|\n|extra|可用|周五|09:00|11:00|"
+    },
+    {
+      "id": "event:v17-garden-2",
+      "text": "追加周三课程，其他不变。\n|记录ID|类型|星期|开始|结束|\n|---|---|---|---|---|\n|wedClass|占用|周三|11:30|16:00|"
+    }
+  ],
+  "rules": [
+    {
+      "id": "v17-garden-a",
+      "title": "社区花园界面排班实习生",
+      "rule": {
+        "monthsAtLeast": 3,
+        "daysAtLeast": 2,
+        "weeklyHoursAtLeast": 16
+      },
+      "sourceId": "job:v17-garden-a",
+      "sourceType": "synthetic-public-rule-card",
+      "meaning": "以下JSON为岗位公开的全部时间条件；qualifyingDays是至少N天达标，everyWorkingDayHoursAtLeast是每个申报出勤日均达标；其余条件已确认满足。",
+      "ruleVersion": "e7aac000dc978e4a2fc61c3f212f1bd84c8c2ebbd0da5772c393b0606f1d1bd4"
+    },
+    {
+      "id": "v17-garden-b",
+      "title": "社区花园界面组件实习生",
+      "rule": {
+        "monthsAtLeast": 3,
+        "daysAtLeast": 2,
+        "qualifyingDays": {
+          "count": 2,
+          "hoursAtLeast": 4
+        }
+      },
+      "sourceId": "job:v17-garden-b",
+      "sourceType": "synthetic-public-rule-card",
+      "meaning": "以下JSON为岗位公开的全部时间条件；qualifyingDays是至少N天达标，everyWorkingDayHoursAtLeast是每个申报出勤日均达标；其余条件已确认满足。",
+      "ruleVersion": "feefff35e92b66ade72a052d3ff5987e4c136295895a62caaf7d106ba8782b9d"
+    }
+  ],
+  "userFacts": {
+    "sourceId": "profile:v17-garden",
+    "months": 6,
+    "text": "学校确认可连续实习6个月。"
+  },
+  "hypotheses": [
+    {
+      "id": "v17-garden-2-fri",
+      "description": "试演周五新增一小时占用；仅是假设，不修改实际日程。",
+      "text": "|记录ID|类型|星期|开始|结束|\n|---|---|---|---|---|\n|hypoFri|占用|周五|10:00|11:00|"
+    },
+    {
+      "id": "v17-garden-2-wed",
+      "description": "试演周三全部时段被占用；仅是假设，不修改实际日程。",
+      "text": "|记录ID|类型|星期|开始|结束|\n|---|---|---|---|---|\n|hypoWed|占用|周三|00:00|24:00|"
+    }
+  ],
+  "factsVersion": "c4429fc7321760ae8bb4e429d7cab17c4bd55b3dacb32bd06bfea927f2950980",
+  "evidenceIds": [
+    "profile:v17-garden",
+    "event:v17-garden-0",
+    "event:v17-garden-1",
+    "event:v17-garden-2",
+    "job:v17-garden-a",
+    "job:v17-garden-b"
+  ]
+}
